@@ -1,20 +1,19 @@
-//Fri Sep 06 2024 09:23:28 GMT+0000 (Coordinated Universal Time)
+//Sat Sep 07 2024 16:26:28 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
-var _0x59e2b4;
-var _0x53a854 = $response.body;
-_0x59e2b4 = 9;
-var _0x24fe38;
-var _0x3a6760 = $request.url;
-_0x24fe38 = 8;
-const _0x1b9246 = "https://display-sc.miguvideo.com/display/v3/static/";
-var _0x53a854 = $response.body.replace(/"toast":"[^"]+/g, "\"toast\": \"作者Telegram频道:https://t.me/GieGie777");
-var _0x5dfe3d = JSON.parse(_0x53a854);
-if (_0x3a6760.indexOf(_0x1b9246) != -1) {
-  _0x5dfe3d.body.data[0].subTitle = "t.me/GieGie777";
-  _0x5dfe3d.body.data[0].title = "已是永久会员";
-  _0x53a854 = JSON.stringify(_0x5dfe3d);
+let body = $response.body;
+const replacements = {
+  "\"free\"\\s*:\\s*[^,}]": "\"free\":1",
+  "\"isSVip\"\\s*:\\s*[^,}]": "\"isSVip\":\"1\"",
+  "\"validTimne\"\\s*:\\s*null": "\"validTimne\":\"2099-09-09\"",
+  "\"validTimne\"\\s*:\\s*[^,}]": "\"validTimne\":\"2099-09-09\"",
+  "\"memType\"\\s*:\\s*[^,}]": "\"memType\":3",
+  "\"isXiaoduMember\"\\s*:\\s*\"0\"": "\"isXiaoduMember\":\"1\""
+};
+for (const [pattern, replacement] of Object.entries(replacements)) {
+  const regex = new RegExp(pattern, "g");
+  body = body.replace(regex, replacement);
 }
 $done({
-  body: _0x53a854
+  "body": body
 });
