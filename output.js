@@ -1,2135 +1,4250 @@
-//Mon Aug 04 2025 09:29:53 GMT+0000 (Coordinated Universal Time)
+//Tue Aug 12 2025 07:17:30 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
-let bg = require("https");
-function bh() {
-  ["ks200.json"].forEach(j => {
-    require("fs").existsSync(j);
-  });
-}
-bh();
-let bi = require("fs"),
-  bj = bi.writeFileSync;
-function bk(a, b) {
-  var g = require("fs");
-  if (g.existsSync(a)) return console.log("⚠️  文件 " + a + " 已存在，跳过写入操作"), !1;
-  try {
-    return g.writeFileSync(a, b), console.log("✅  文件 " + a + " 创建成功"), !0;
-  } catch (j) {
-    return console.log("❌  写入文件 " + a + " 失败: " + j.message), !1;
-  }
-}
-function bl() {
-  return new Promise(b => {
-    bg.get("https://blog.qzhiwl.com/proxy.php", g => {
-      let k = "";
-      g.on("data", l => k += l);
-      g.on("end", () => {
-        (k = k.trim()) && /^\d+\.\d+\.\d+\.\d+(?::\d+)?$/.test(k) ? b(k) : b("210.16.163.50:1999");
-      });
-    }).on("error", () => {
-      b("210.16.163.50:1999");
+const _0x4fb986 = function () {
+  let _0x2d69bc = true;
+  return function (_0x49c7e6, _0x2ba3b1) {
+    const _0x221659 = _0x2d69bc ? function () {
+      if (_0x2ba3b1) {
+        const _0xc64edd = _0x2ba3b1.apply(_0x49c7e6, arguments);
+        return _0x2ba3b1 = null, _0xc64edd;
+      }
+    } : function () {};
+    return _0x2d69bc = false, _0x221659;
+  };
+}();
+(function () {
+  _0x4fb986(this, function () {
+    const _0x3d9743 = new RegExp("function *\\( *\\)"),
+      _0x57f808 = new RegExp("\\+\\+ *(?:[a-zA-Z_$][0-9a-zA-Z_$]*)", "i"),
+      _0x553760 = _0x21d63f("init");
+    if (!_0x3d9743.test(_0x553760 + "chain") || !_0x57f808.test(_0x553760 + "input")) {
+      _0x553760("0");
+    } else _0x21d63f();
+  })();
+})();
+"use strict";
+var _0x4d31cc = Object.create,
+  _0x586de2 = Object.defineProperty,
+  _0x4f2253 = Object.getOwnPropertyDescriptor,
+  _0x1afce2 = Object.getOwnPropertyNames,
+  _0x5e86ec = Object.getPrototypeOf,
+  _0x4f0bb9 = Object.prototype.hasOwnProperty,
+  _0x53db4f = (_0x40f4c0, _0x41edba) => () => (_0x40f4c0 && (_0x41edba = _0x40f4c0(_0x40f4c0 = 0)), _0x41edba),
+  _0x9ff207 = (_0x2ed6fe, _0x14b469) => () => (_0x14b469 || _0x2ed6fe((_0x14b469 = {
+    "exports": {}
+  }).exports, _0x14b469), _0x14b469.exports),
+  _0x296a73 = (_0xfd7de0, _0xbbb513) => {
+    for (var _0x23f2ff in _0xbbb513) _0x586de2(_0xfd7de0, _0x23f2ff, {
+      "get": _0xbbb513[_0x23f2ff],
+      "enumerable": !0
     });
-  });
-}
-bi.writeFileSync = function (a, b) {
-  if (!bi.existsSync(a)) try {
-    bj.call(bi, a, b);
-    console.log("✅  文件 " + a + " 创建成功");
-  } catch (g) {
-    console.log("❌  写入文件 " + a + " 失败: " + g.message);
-  }
-};
-try {
-  let cg = process.env.ks200,
-    ch = process.env.jinbi;
-  if (cg) {
-    let ci = cg.split("\n").filter(a => a.trim());
-    for (let cj = 0; cj < ci.length; cj++) {
-      let ck = ci[cj].trim();
-      if (ck) {
-        let cl = ck.split("#");
-        if (cl.length < 3) console.log("账号 " + (cj + 1) + " 格式错误，跳过");else {
-          let cm = cl[1],
-            co = {
-              "Host": "nebula.kuaishou.com",
-              "Connection": "keep-alive",
-              "User-Agent": "Mozilla/5.0 (Linux; Android 10; MI 8 Lite Build/QKQ1.190910.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/87.0.4280.101 Mobile Safari/537.36 Yoda/3.0.8-rc5 ksNebula/10.11.30.4945 OS_PRO_BIT/64 MAX_PHY_MEM/5724 AZPREFIX/az4 ICFO/0 StatusHT/29 TitleHT/44 NetType/LTE ISLP/0 ISDM/0 ISLB/0 locale/zh-cn evaSupported/false CT/0 ISLM/-1",
-              "Cookie": "kuaishou.api_st=" + cm + ";client_key=2ac2a76d;",
-              "content-type": "application/json"
-            },
-            cp = {
-              "method": "GET",
-              "url": "https://nebula.kuaishou.com/rest/n/nebula/activity/earn/overview/basicInfo",
-              "headers": co
-            },
-            cq = require("https"),
-            cr = require("url"),
-            cs = cr.parse(cp.url),
-            ct = {
-              "hostname": cs.hostname,
-              "port": cs.port || 443,
-              "path": cs.path,
-              "method": cp.method,
-              "headers": cp.headers
-            },
-            cu = cq.request(ct, a => {
-              let f = "";
-              a.on("data", g => {
-                f += g;
-              });
-              a.on("end", () => {
-                try {
-                  var g,
-                    h,
-                    j,
-                    k = JSON.parse(f);
-                  1 == k.result ? (g = k.data.totalCoin, h = k.data.allCash, console.log("账号[" + (cj + 1) + "]  小主您的金币: " + g + " 余额: " + h), ch ? (j = parseInt(ch)) < g ? (console.log("账号[" + (cj + 1) + "]  金币(" + g + ")大于(" + j + ")，今天任务已完成"), process.exit(0)) : console.log("账号[" + (cj + 1) + "]  金币(" + g + ")小于等于(" + j + ")，继续执行任务") : console.log("账号[" + (cj + 1) + "]  防黑号小技巧:小主可创建jinbi变量,设置每天的获取金币数量！")) : console.log("账号[" + (cj + 1) + "]  查询失败 ❌，原因: " + k.error_msg);
-                } catch (m) {
-                  console.log("账号[" + (cj + 1) + "]  解析响应失败: " + m);
+  },
+  _0x189c1 = (_0x40e3f5, _0x3f18a9, _0x18ace4, _0x2a599c) => {
+    if (_0x3f18a9 && typeof _0x3f18a9 == "object" || typeof _0x3f18a9 == "function") {
+      for (let _0x58c4b2 of _0x1afce2(_0x3f18a9)) !_0x4f0bb9.call(_0x40e3f5, _0x58c4b2) && _0x58c4b2 !== _0x18ace4 && _0x586de2(_0x40e3f5, _0x58c4b2, {
+        "get": () => _0x3f18a9[_0x58c4b2],
+        "enumerable": !(_0x2a599c = _0x4f2253(_0x3f18a9, _0x58c4b2)) || _0x2a599c.enumerable
+      });
+    }
+    return _0x40e3f5;
+  },
+  _0x4ba637 = (_0x2d46fc, _0x3cf4a7, _0x2c8028) => (_0x2c8028 = _0x2d46fc != null ? _0x4d31cc(_0x5e86ec(_0x2d46fc)) : {}, _0x189c1(_0x3cf4a7 || !_0x2d46fc || !_0x2d46fc.__esModule ? _0x586de2(_0x2c8028, "default", {
+    "value": _0x2d46fc,
+    "enumerable": !0
+  }) : _0x2c8028, _0x2d46fc)),
+  _0x42fbfd = _0x3a24ec => _0x189c1(_0x586de2({}, "__esModule", {
+    "value": !0
+  }), _0x3a24ec),
+  _0x24fe29 = _0x9ff207((_0x46bb66, _0x1e501c) => {
+    (function (_0x5ebe99, _0x18206c) {
+      typeof _0x46bb66 == "object" && typeof _0x1e501c == "object" ? _0x1e501c.exports = _0x18206c(require("child_process"), require("crypto")) : typeof define == "function" && define.amd ? define(["child_process", "crypto"], _0x18206c) : typeof _0x46bb66 == "object" ? _0x46bb66["electron-machine-id"] = _0x18206c(require("child_process"), require("crypto")) : _0x5ebe99["electron-machine-id"] = _0x18206c(_0x5ebe99.child_process, _0x5ebe99.crypto);
+    })(_0x46bb66, function (_0x277978, _0x160829) {
+      return function (_0x2d0f2b) {
+        function _0x558496(_0x54b0a3) {
+          if (_0x3a0377[_0x54b0a3]) return _0x3a0377[_0x54b0a3].exports;
+          var _0x14010d = _0x3a0377[_0x54b0a3] = {
+            "exports": {},
+            "id": _0x54b0a3,
+            "loaded": !1
+          };
+          return _0x2d0f2b[_0x54b0a3].call(_0x14010d.exports, _0x14010d, _0x14010d.exports, _0x558496), _0x14010d.loaded = !0, _0x14010d.exports;
+        }
+        var _0x3a0377 = {};
+        return _0x558496.m = _0x2d0f2b, _0x558496.c = _0x3a0377, _0x558496.p = "", _0x558496(0);
+      }([function (_0x4335ee, _0x20c7ab, _0x575eb8) {
+        _0x4335ee.exports = _0x575eb8(34);
+      }, function (_0x54c4c4, _0x1afa28, _0xf868b7) {
+        var _0x16016e = _0xf868b7(29)("wks"),
+          _0x4826dc = _0xf868b7(33),
+          _0x31bf28 = _0xf868b7(2).Symbol,
+          _0x5e0018 = typeof _0x31bf28 == "function",
+          _0x42f087 = _0x54c4c4.exports = function (_0x51777c) {
+            return _0x16016e[_0x51777c] || (_0x16016e[_0x51777c] = _0x5e0018 && _0x31bf28[_0x51777c] || (_0x5e0018 ? _0x31bf28 : _0x4826dc)("Symbol." + _0x51777c));
+          };
+        _0x42f087.store = _0x16016e;
+      }, function (_0x37bef3, _0x291ac6) {
+        var _0x14833a = _0x37bef3.exports = typeof window < "u" && window.Math == Math ? window : typeof self < "u" && self.Math == Math ? self : Function("return this")();
+        typeof __g == "number" && (__g = _0x14833a);
+      }, function (_0x10748c, _0x1237e0, _0x4a8ed6) {
+        var _0x48b4df = _0x4a8ed6(9);
+        _0x10748c.exports = function (_0x1539f6) {
+          if (!_0x48b4df(_0x1539f6)) throw TypeError(_0x1539f6 + " is not an object!");
+          return _0x1539f6;
+        };
+      }, function (_0x12e182, _0x50afe7, _0x33343f) {
+        _0x12e182.exports = !_0x33343f(24)(function () {
+          return Object.defineProperty({}, "a", {
+            "get": function () {
+              return 7;
+            }
+          }).a != 7;
+        });
+      }, function (_0x5458cf, _0x511ca9, _0x5e4e37) {
+        var _0x435d1c = _0x5e4e37(12),
+          _0x451b61 = _0x5e4e37(17);
+        _0x5458cf.exports = _0x5e4e37(4) ? function (_0x429c1a, _0x3c266b, _0x5f59c0) {
+          return _0x435d1c.f(_0x429c1a, _0x3c266b, _0x451b61(1, _0x5f59c0));
+        } : function (_0xad8c46, _0x4806ec, _0x1d83f1) {
+          return _0xad8c46[_0x4806ec] = _0x1d83f1, _0xad8c46;
+        };
+      }, function (_0x57a79c, _0x485368) {
+        var _0x2a1041 = _0x57a79c.exports = {
+          "version": "2.4.0"
+        };
+        typeof __e == "number" && (__e = _0x2a1041);
+      }, function (_0x48c5ec, _0x4b37a1, _0x240771) {
+        var _0x16de7f = _0x240771(14);
+        _0x48c5ec.exports = function (_0x3f52b5, _0x1352f4, _0x554e89) {
+          if (_0x16de7f(_0x3f52b5), _0x1352f4 === void 0) return _0x3f52b5;
+          switch (_0x554e89) {
+            case 1:
+              return function (_0x1d44dc) {
+                return _0x3f52b5.call(_0x1352f4, _0x1d44dc);
+              };
+            case 2:
+              return function (_0x3ada0e, _0x4d10dc) {
+                return _0x3f52b5.call(_0x1352f4, _0x3ada0e, _0x4d10dc);
+              };
+            case 3:
+              return function (_0x41863a, _0x1544de, _0x24a988) {
+                return _0x3f52b5.call(_0x1352f4, _0x41863a, _0x1544de, _0x24a988);
+              };
+          }
+          return function () {
+            return _0x3f52b5.apply(_0x1352f4, arguments);
+          };
+        };
+      }, function (_0x3209e1, _0x52ac05) {
+        var _0x299fe7 = {}.hasOwnProperty;
+        _0x3209e1.exports = function (_0xf03593, _0x51c0ab) {
+          return _0x299fe7.call(_0xf03593, _0x51c0ab);
+        };
+      }, function (_0x1c8b38, _0xc08299) {
+        _0x1c8b38.exports = function (_0x27431e) {
+          return typeof _0x27431e == "object" ? _0x27431e !== null : typeof _0x27431e == "function";
+        };
+      }, function (_0x585e9a, _0x2e9554) {
+        _0x585e9a.exports = {};
+      }, function (_0x2d90e7, _0x1283d4) {
+        var _0x5a2f4c = {}.toString;
+        _0x2d90e7.exports = function (_0x3e7fa9) {
+          return _0x5a2f4c.call(_0x3e7fa9).slice(8, -1);
+        };
+      }, function (_0x1b2957, _0x563702, _0x340256) {
+        var _0x44d3ca = _0x340256(3),
+          _0x5686b0 = _0x340256(26),
+          _0x3eff68 = _0x340256(32),
+          _0x19f62c = Object.defineProperty;
+        _0x563702.f = _0x340256(4) ? Object.defineProperty : function (_0x3a6552, _0x3e2602, _0xa66489) {
+          if (_0x44d3ca(_0x3a6552), _0x3e2602 = _0x3eff68(_0x3e2602, !0), _0x44d3ca(_0xa66489), _0x5686b0) try {
+            return _0x19f62c(_0x3a6552, _0x3e2602, _0xa66489);
+          } catch {}
+          if ("get" in _0xa66489 || "set" in _0xa66489) throw TypeError("Accessors not supported!");
+          return "value" in _0xa66489 && (_0x3a6552[_0x3e2602] = _0xa66489.value), _0x3a6552;
+        };
+      }, function (_0x4e7bc3, _0x217453, _0x369ccf) {
+        var _0x3ff151 = _0x369ccf(42),
+          _0x3d251f = _0x369ccf(15);
+        _0x4e7bc3.exports = function (_0x5023f2) {
+          return _0x3ff151(_0x3d251f(_0x5023f2));
+        };
+      }, function (_0x25dbfc, _0x2ec1a7) {
+        _0x25dbfc.exports = function (_0x1a1d80) {
+          if (typeof _0x1a1d80 != "function") throw TypeError(_0x1a1d80 + " is not a function!");
+          return _0x1a1d80;
+        };
+      }, function (_0x4f703e, _0x5a70b9) {
+        _0x4f703e.exports = function (_0x5e79ff) {
+          if (_0x5e79ff == null) throw TypeError("Can't call method on  " + _0x5e79ff);
+          return _0x5e79ff;
+        };
+      }, function (_0x4e213b, _0x3c6db2, _0x39ba10) {
+        var _0xf827cb = _0x39ba10(9),
+          _0x5966e2 = _0x39ba10(2).document,
+          _0x13228f = _0xf827cb(_0x5966e2) && _0xf827cb(_0x5966e2.createElement);
+        _0x4e213b.exports = function (_0x1d62ba) {
+          return _0x13228f ? _0x5966e2.createElement(_0x1d62ba) : {};
+        };
+      }, function (_0x35de26, _0x23c899) {
+        _0x35de26.exports = function (_0x2d2df7, _0x32ab02) {
+          return {
+            "enumerable": !(1 & _0x2d2df7),
+            "configurable": !(2 & _0x2d2df7),
+            "writable": !(4 & _0x2d2df7),
+            "value": _0x32ab02
+          };
+        };
+      }, function (_0x101050, _0x1111f7, _0x153a88) {
+        var _0x367457 = _0x153a88(12).f,
+          _0x55991c = _0x153a88(8),
+          _0x199b62 = _0x153a88(1)("toStringTag");
+        _0x101050.exports = function (_0x41f4f, _0x142a52, _0x4d48bb) {
+          _0x41f4f && !_0x55991c(_0x41f4f = _0x4d48bb ? _0x41f4f : _0x41f4f.prototype, _0x199b62) && _0x367457(_0x41f4f, _0x199b62, {
+            "configurable": !0,
+            "value": _0x142a52
+          });
+        };
+      }, function (_0x2a76e5, _0x3c0522, _0x405914) {
+        var _0x17db15 = _0x405914(29)("keys"),
+          _0x309582 = _0x405914(33);
+        _0x2a76e5.exports = function (_0x3119ad) {
+          return _0x17db15[_0x3119ad] || (_0x17db15[_0x3119ad] = _0x309582(_0x3119ad));
+        };
+      }, function (_0x204f49, _0x5b3a98) {
+        var _0x5f3ba6 = Math.ceil,
+          _0x3ea52a = Math.floor;
+        _0x204f49.exports = function (_0x275631) {
+          return isNaN(_0x275631 = +_0x275631) ? 0 : (_0x275631 > 0 ? _0x3ea52a : _0x5f3ba6)(_0x275631);
+        };
+      }, function (_0x3fe4c0, _0x39cf79, _0x5d695f) {
+        var _0x39bc25 = _0x5d695f(11),
+          _0x3d9a43 = _0x5d695f(1)("toStringTag"),
+          _0x21d92c = _0x39bc25(function () {
+            return arguments;
+          }()) == "Arguments",
+          _0x94f8a = function (_0x29cd11, _0x351fd9) {
+            try {
+              return _0x29cd11[_0x351fd9];
+            } catch {}
+          };
+        _0x3fe4c0.exports = function (_0x4ac03f) {
+          var _0x45ef9c, _0x18031c, _0x4f689a;
+          return _0x4ac03f === void 0 ? "Undefined" : _0x4ac03f === null ? "Null" : typeof (_0x18031c = _0x94f8a(_0x45ef9c = Object(_0x4ac03f), _0x3d9a43)) == "string" ? _0x18031c : _0x21d92c ? _0x39bc25(_0x45ef9c) : (_0x4f689a = _0x39bc25(_0x45ef9c)) == "Object" && typeof _0x45ef9c.callee == "function" ? "Arguments" : _0x4f689a;
+        };
+      }, function (_0x552ab3, _0x46b105) {
+        _0x552ab3.exports = "constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",");
+      }, function (_0x208235, _0x4d26e8, _0xae5db5) {
+        var _0x3a1189 = _0xae5db5(2),
+          _0x2c44f7 = _0xae5db5(6),
+          _0x5e0938 = _0xae5db5(7),
+          _0x7911b3 = _0xae5db5(5),
+          _0x2b17f8 = "prototype",
+          _0x369355 = function (_0x3ba225, _0x339e4e, _0x258dc6) {
+            var _0x55c429,
+              _0x3d3ee4,
+              _0x57572b,
+              _0x3553f3 = _0x3ba225 & _0x369355.F,
+              _0x16ad74 = _0x3ba225 & _0x369355.G,
+              _0x6e5615 = _0x3ba225 & _0x369355.S,
+              _0x436a36 = _0x3ba225 & _0x369355.P,
+              _0x437629 = _0x3ba225 & _0x369355.B,
+              _0x4a984f = _0x3ba225 & _0x369355.W,
+              _0x212708 = _0x16ad74 ? _0x2c44f7 : _0x2c44f7[_0x339e4e] || (_0x2c44f7[_0x339e4e] = {}),
+              _0x16f6f8 = _0x212708[_0x2b17f8],
+              _0x35f8f1 = _0x16ad74 ? _0x3a1189 : _0x6e5615 ? _0x3a1189[_0x339e4e] : (_0x3a1189[_0x339e4e] || {})[_0x2b17f8];
+            _0x16ad74 && (_0x258dc6 = _0x339e4e);
+            for (_0x55c429 in _0x258dc6) _0x3d3ee4 = !_0x3553f3 && _0x35f8f1 && _0x35f8f1[_0x55c429] !== void 0, _0x3d3ee4 && _0x55c429 in _0x212708 || (_0x57572b = _0x3d3ee4 ? _0x35f8f1[_0x55c429] : _0x258dc6[_0x55c429], _0x212708[_0x55c429] = _0x16ad74 && typeof _0x35f8f1[_0x55c429] != "function" ? _0x258dc6[_0x55c429] : _0x437629 && _0x3d3ee4 ? _0x5e0938(_0x57572b, _0x3a1189) : _0x4a984f && _0x35f8f1[_0x55c429] == _0x57572b ? function (_0x590e25) {
+              var _0x2a991c = function (_0x35dd62, _0x10fff9, _0x4bcf17) {
+                if (this instanceof _0x590e25) {
+                  switch (arguments.length) {
+                    case 0:
+                      return new _0x590e25();
+                    case 1:
+                      return new _0x590e25(_0x35dd62);
+                    case 2:
+                      return new _0x590e25(_0x35dd62, _0x10fff9);
+                  }
+                  return new _0x590e25(_0x35dd62, _0x10fff9, _0x4bcf17);
                 }
+                return _0x590e25.apply(this, arguments);
+              };
+              return _0x2a991c[_0x2b17f8] = _0x590e25[_0x2b17f8], _0x2a991c;
+            }(_0x57572b) : _0x436a36 && typeof _0x57572b == "function" ? _0x5e0938(Function.call, _0x57572b) : _0x57572b, _0x436a36 && ((_0x212708.virtual || (_0x212708.virtual = {}))[_0x55c429] = _0x57572b, _0x3ba225 & _0x369355.R && _0x16f6f8 && !_0x16f6f8[_0x55c429] && _0x7911b3(_0x16f6f8, _0x55c429, _0x57572b)));
+          };
+        _0x369355.F = 1;
+        _0x369355.G = 2;
+        _0x369355.S = 4;
+        _0x369355.P = 8;
+        _0x369355.B = 16;
+        _0x369355.W = 32;
+        _0x369355.U = 64;
+        _0x369355.R = 128;
+        _0x208235.exports = _0x369355;
+      }, function (_0x3efb15, _0x15a90b) {
+        _0x3efb15.exports = function (_0x4c1e2f) {
+          try {
+            return !!_0x4c1e2f();
+          } catch {
+            return !0;
+          }
+        };
+      }, function (_0x44f6eb, _0x42cd58, _0x4e78e6) {
+        _0x44f6eb.exports = _0x4e78e6(2).document && document.documentElement;
+      }, function (_0x10ec5a, _0x1cd3dc, _0x27308d) {
+        _0x10ec5a.exports = !_0x27308d(4) && !_0x27308d(24)(function () {
+          return Object.defineProperty(_0x27308d(16)("div"), "a", {
+            "get": function () {
+              return 7;
+            }
+          }).a != 7;
+        });
+      }, function (_0x4e9e4e, _0x23e3cf, _0x2e7a8c) {
+        'use strict';
+
+        var _0x54015b = _0x2e7a8c(28),
+          _0x1680e1 = _0x2e7a8c(23),
+          _0x29057f = _0x2e7a8c(57),
+          _0x35a803 = _0x2e7a8c(5),
+          _0x3b68f8 = _0x2e7a8c(8),
+          _0x3d9357 = _0x2e7a8c(10),
+          _0xd58791 = _0x2e7a8c(45),
+          _0x5b77e9 = _0x2e7a8c(18),
+          _0x145326 = _0x2e7a8c(52),
+          _0x225618 = _0x2e7a8c(1)("iterator"),
+          _0x56381d = !([].keys && "next" in [].keys()),
+          _0x6296d7 = "@@iterator",
+          _0x1fccfa = "keys",
+          _0x537b8d = "values",
+          _0x344444 = function () {
+            return this;
+          };
+        _0x4e9e4e.exports = function (_0x4c1ae0, _0x2c8795, _0x56a654, _0x50ed79, _0x3baf69, _0x49f832, _0x573cc9) {
+          _0xd58791(_0x56a654, _0x2c8795, _0x50ed79);
+          var _0x175664,
+            _0x54f539,
+            _0x52c46c,
+            _0x75ea27 = function (_0x1bfedd) {
+              if (!_0x56381d && _0x1bfedd in _0x1c3173) return _0x1c3173[_0x1bfedd];
+              switch (_0x1bfedd) {
+                case _0x1fccfa:
+                  return function () {
+                    return new _0x56a654(this, _0x1bfedd);
+                  };
+                case _0x537b8d:
+                  return function () {
+                    return new _0x56a654(this, _0x1bfedd);
+                  };
+              }
+              return function () {
+                return new _0x56a654(this, _0x1bfedd);
+              };
+            },
+            _0x577905 = _0x2c8795 + " Iterator",
+            _0x2457e5 = _0x3baf69 == _0x537b8d,
+            _0x5e4465 = false,
+            _0x1c3173 = _0x4c1ae0.prototype,
+            _0x10216f = _0x1c3173[_0x225618] || _0x1c3173[_0x6296d7] || _0x3baf69 && _0x1c3173[_0x3baf69],
+            _0x4e658f = _0x10216f || _0x75ea27(_0x3baf69),
+            _0x470be0 = _0x3baf69 ? _0x2457e5 ? _0x75ea27("entries") : _0x4e658f : void 0,
+            _0x6bbd85 = _0x2c8795 == "Array" && _0x1c3173.entries || _0x10216f;
+          if (_0x6bbd85 && (_0x52c46c = _0x145326(_0x6bbd85.call(new _0x4c1ae0())), _0x52c46c !== Object.prototype && (_0x5b77e9(_0x52c46c, _0x577905, !0), _0x54015b || _0x3b68f8(_0x52c46c, _0x225618) || _0x35a803(_0x52c46c, _0x225618, _0x344444))), _0x2457e5 && _0x10216f && _0x10216f.name !== _0x537b8d && (_0x5e4465 = !0, _0x4e658f = function () {
+            return _0x10216f.call(this);
+          }), _0x54015b && !_0x573cc9 || !_0x56381d && !_0x5e4465 && _0x1c3173[_0x225618] || _0x35a803(_0x1c3173, _0x225618, _0x4e658f), _0x3d9357[_0x2c8795] = _0x4e658f, _0x3d9357[_0x577905] = _0x344444, _0x3baf69) {
+            if (_0x175664 = {
+              "values": _0x2457e5 ? _0x4e658f : _0x75ea27(_0x537b8d),
+              "keys": _0x49f832 ? _0x4e658f : _0x75ea27(_0x1fccfa),
+              "entries": _0x470be0
+            }, _0x573cc9) {
+              for (_0x54f539 in _0x175664) _0x54f539 in _0x1c3173 || _0x29057f(_0x1c3173, _0x54f539, _0x175664[_0x54f539]);
+            } else _0x1680e1(_0x1680e1.P + _0x1680e1.F * (_0x56381d || _0x5e4465), _0x2c8795, _0x175664);
+          }
+          return _0x175664;
+        };
+      }, function (_0x982c2b, _0xbced0b) {
+        _0x982c2b.exports = !0;
+      }, function (_0x1af615, _0x5749ee, _0x27a7dc) {
+        var _0x326342 = _0x27a7dc(2),
+          _0xe51b4a = "__core-js_shared__",
+          _0xc3cbe6 = _0x326342[_0xe51b4a] || (_0x326342[_0xe51b4a] = {});
+        _0x1af615.exports = function (_0x5b30dd) {
+          return _0xc3cbe6[_0x5b30dd] || (_0xc3cbe6[_0x5b30dd] = {});
+        };
+      }, function (_0x245609, _0x1b5718, _0xa35aa5) {
+        var _0x15083e,
+          _0x379470,
+          _0x299665,
+          _0x23f1ba = _0xa35aa5(7),
+          _0x23e983 = _0xa35aa5(41),
+          _0x54a88a = _0xa35aa5(25),
+          _0x8d795a = _0xa35aa5(16),
+          _0x257a07 = _0xa35aa5(2),
+          _0x3f7df1 = _0x257a07.process,
+          _0x441872 = _0x257a07.setImmediate,
+          _0x3b0f9e = _0x257a07.clearImmediate,
+          _0x5b23a8 = _0x257a07.MessageChannel,
+          _0x329926 = 0,
+          _0xc54dda = {},
+          _0x35669b = "onreadystatechange",
+          _0x2e4159 = function () {
+            var _0x3fc6be = +this;
+            if (_0xc54dda.hasOwnProperty(_0x3fc6be)) {
+              var _0x208903 = _0xc54dda[_0x3fc6be];
+              delete _0xc54dda[_0x3fc6be];
+              _0x208903();
+            }
+          },
+          _0x1e1797 = function (_0x1c3b32) {
+            _0x2e4159.call(_0x1c3b32.data);
+          };
+        _0x441872 && _0x3b0f9e || (_0x441872 = function (_0x46bc10) {
+          for (var _0x3d1bdc = [], _0x22423c = 1; arguments.length > _0x22423c;) _0x3d1bdc.push(arguments[_0x22423c++]);
+          return _0xc54dda[++_0x329926] = function () {
+            _0x23e983(typeof _0x46bc10 == "function" ? _0x46bc10 : Function(_0x46bc10), _0x3d1bdc);
+          }, _0x15083e(_0x329926), _0x329926;
+        }, _0x3b0f9e = function (_0x60ebbf) {
+          delete _0xc54dda[_0x60ebbf];
+        }, _0xa35aa5(11)(_0x3f7df1) == "process" ? _0x15083e = function (_0x277e4f) {
+          _0x3f7df1.nextTick(_0x23f1ba(_0x2e4159, _0x277e4f, 1));
+        } : _0x5b23a8 ? (_0x379470 = new _0x5b23a8(), _0x299665 = _0x379470.port2, _0x379470.port1.onmessage = _0x1e1797, _0x15083e = _0x23f1ba(_0x299665.postMessage, _0x299665, 1)) : _0x257a07.addEventListener && typeof postMessage == "function" && !_0x257a07.importScripts ? (_0x15083e = function (_0x36b572) {
+          _0x257a07.postMessage(_0x36b572 + "", "*");
+        }, _0x257a07.addEventListener("message", _0x1e1797, !1)) : _0x15083e = _0x35669b in _0x8d795a("script") ? function (_0x1895fe) {
+          _0x54a88a.appendChild(_0x8d795a("script"))[_0x35669b] = function () {
+            _0x54a88a.removeChild(this);
+            _0x2e4159.call(_0x1895fe);
+          };
+        } : function (_0xad3f0a) {
+          setTimeout(_0x23f1ba(_0x2e4159, _0xad3f0a, 1), 0);
+        });
+        _0x245609.exports = {
+          "set": _0x441872,
+          "clear": _0x3b0f9e
+        };
+      }, function (_0x10b62e, _0x22ddd9, _0x543efa) {
+        var _0x2ef939 = _0x543efa(20),
+          _0x4da7aa = Math.min;
+        _0x10b62e.exports = function (_0x52ff58) {
+          return _0x52ff58 > 0 ? _0x4da7aa(_0x2ef939(_0x52ff58), 9007199254740991) : 0;
+        };
+      }, function (_0x27dc75, _0x177f9c, _0x482928) {
+        var _0x10012a = _0x482928(9);
+        _0x27dc75.exports = function (_0x1d81c9, _0xc5cd7c) {
+          if (!_0x10012a(_0x1d81c9)) return _0x1d81c9;
+          var _0x5254cc, _0x1e1b1e;
+          if (_0xc5cd7c && typeof (_0x5254cc = _0x1d81c9.toString) == "function" && !_0x10012a(_0x1e1b1e = _0x5254cc.call(_0x1d81c9)) || typeof (_0x5254cc = _0x1d81c9.valueOf) == "function" && !_0x10012a(_0x1e1b1e = _0x5254cc.call(_0x1d81c9)) || !_0xc5cd7c && typeof (_0x5254cc = _0x1d81c9.toString) == "function" && !_0x10012a(_0x1e1b1e = _0x5254cc.call(_0x1d81c9))) return _0x1e1b1e;
+          throw TypeError("Can't convert object to primitive value");
+        };
+      }, function (_0x43b976, _0x47004a) {
+        var _0x34182e = 0,
+          _0xf6f586 = Math.random();
+        _0x43b976.exports = function (_0x44ac9f) {
+          return "Symbol(".concat(_0x44ac9f === void 0 ? "" : _0x44ac9f, ")_", (++_0x34182e + _0xf6f586).toString(36));
+        };
+      }, function (_0x379ed3, _0x4fdfbe, _0x39cb39) {
+        'use strict';
+
+        function _0x44ca80(_0x8d649c) {
+          return _0x8d649c && _0x8d649c.__esModule ? _0x8d649c : {
+            "default": _0x8d649c
+          };
+        }
+        function _0x2ed702() {
+          return process.platform !== "win32" ? "" : process.arch === "ia32" && process.env.hasOwnProperty("PROCESSOR_ARCHITEW6432") ? "mixed" : "native";
+        }
+        function _0xd9410f(_0x24de5c) {
+          return (0, _0x3b9ff4.createHash)("sha256").update(_0x24de5c).digest("hex");
+        }
+        function _0x5dc210(_0x3974a9) {
+          switch (_0x495ab9) {
+            case "darwin":
+              return _0x3974a9.split("IOPlatformUUID")[1].split("\n")[0].replace(/\=|\s+|\"/gi, "").toLowerCase();
+            case "win32":
+              return _0x3974a9.toString().split("REG_SZ")[1].replace(/\r+|\n+|\s+/gi, "").toLowerCase();
+            case "linux":
+              return _0x3974a9.toString().replace(/\r+|\n+|\s+/gi, "").toLowerCase();
+            case "freebsd":
+              return _0x3974a9.toString().replace(/\r+|\n+|\s+/gi, "").toLowerCase();
+            default:
+              throw new Error("Unsupported platform: " + process.platform);
+          }
+        }
+        function _0x8e1125(_0x26f2ec) {
+          var _0x114d7d = _0x5dc210((0, _0x68888b.execSync)(_0x8449a3[_0x495ab9]).toString());
+          return _0x26f2ec ? _0x114d7d : _0xd9410f(_0x114d7d);
+        }
+        function _0x2025f3(_0x1c6cd0) {
+          return new _0x5eb73a.default(function (_0x2e78dc, _0x57f6ac) {
+            return (0, _0x68888b.exec)(_0x8449a3[_0x495ab9], {}, function (_0x4b77c1, _0x5bfc6d, _0x2dddea) {
+              if (_0x4b77c1) return _0x57f6ac(new Error("Error while obtaining machine id: " + _0x4b77c1.stack));
+              var _0x162f81 = _0x5dc210(_0x5bfc6d.toString());
+              return _0x2e78dc(_0x1c6cd0 ? _0x162f81 : _0xd9410f(_0x162f81));
+            });
+          });
+        }
+        Object.defineProperty(_0x4fdfbe, "__esModule", {
+          "value": !0
+        });
+        var _0x5ce5a5 = _0x39cb39(35),
+          _0x5eb73a = _0x44ca80(_0x5ce5a5);
+        _0x4fdfbe.machineIdSync = _0x8e1125;
+        _0x4fdfbe.machineId = _0x2025f3;
+        var _0x68888b = _0x39cb39(70),
+          _0x3b9ff4 = _0x39cb39(71),
+          _0x2abe7a = process,
+          _0x495ab9 = _0x2abe7a.platform,
+          _0x411b03 = {
+            "native": "%windir%\\System32",
+            "mixed": "%windir%\\sysnative\\cmd.exe /c %windir%\\System32"
+          },
+          _0x8449a3 = {
+            "darwin": "ioreg -rd1 -c IOPlatformExpertDevice",
+            "win32": _0x411b03[_0x2ed702()] + "\\REG.exe QUERY HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography /v MachineGuid",
+            "linux": "( cat /var/lib/dbus/machine-id /etc/machine-id 2> /dev/null || hostname ) | head -n 1 || :",
+            "freebsd": "kenv -q smbios.system.uuid || sysctl -n kern.hostuuid"
+          };
+      }, function (_0x535d4c, _0x1b0f3a, _0x2724ab) {
+        _0x535d4c.exports = {
+          "default": _0x2724ab(36),
+          "__esModule": !0
+        };
+      }, function (_0x198400, _0x44a428, _0x5f3e64) {
+        _0x5f3e64(66);
+        _0x5f3e64(68);
+        _0x5f3e64(69);
+        _0x5f3e64(67);
+        _0x198400.exports = _0x5f3e64(6).Promise;
+      }, function (_0x29eb3c, _0x5d9fa5) {
+        _0x29eb3c.exports = function () {};
+      }, function (_0x2ec5b4, _0x64cbe) {
+        _0x2ec5b4.exports = function (_0xc6211e, _0x15af7a, _0x53f091, _0x642c29) {
+          if (!(_0xc6211e instanceof _0x15af7a) || _0x642c29 !== void 0 && _0x642c29 in _0xc6211e) throw TypeError(_0x53f091 + ": incorrect invocation!");
+          return _0xc6211e;
+        };
+      }, function (_0x2cbfd1, _0x5cb6b9, _0x4a1f45) {
+        var _0xfef94c = _0x4a1f45(13),
+          _0x433836 = _0x4a1f45(31),
+          _0x18ae18 = _0x4a1f45(62);
+        _0x2cbfd1.exports = function (_0x1d7539) {
+          return function (_0x83a71, _0x55f689, _0x131563) {
+            var _0x1d1143,
+              _0x5ed593 = _0xfef94c(_0x83a71),
+              _0x1a6bf0 = _0x433836(_0x5ed593.length),
+              _0x156203 = _0x18ae18(_0x131563, _0x1a6bf0);
+            if (_0x1d7539 && _0x55f689 != _0x55f689) {
+              for (; _0x1a6bf0 > _0x156203;) if (_0x1d1143 = _0x5ed593[_0x156203++], _0x1d1143 != _0x1d1143) return !0;
+            } else {
+              for (; _0x1a6bf0 > _0x156203; _0x156203++) if ((_0x1d7539 || _0x156203 in _0x5ed593) && _0x5ed593[_0x156203] === _0x55f689) return _0x1d7539 || _0x156203 || 0;
+            }
+            return !_0x1d7539 && -1;
+          };
+        };
+      }, function (_0x1f4681, _0x7edf6e, _0x554847) {
+        var _0x171f79 = _0x554847(7),
+          _0x304687 = _0x554847(44),
+          _0x3226d8 = _0x554847(43),
+          _0x593be2 = _0x554847(3),
+          _0x3e4573 = _0x554847(31),
+          _0x117c38 = _0x554847(64),
+          _0x15d6e5 = {},
+          _0x3f510b = {},
+          _0x7edf6e = _0x1f4681.exports = function (_0x526181, _0x19fb82, _0x324593, _0x4987e2, _0x23daba) {
+            var _0x3a4178,
+              _0x280c13,
+              _0x1d7306,
+              _0x1ebcd1,
+              _0x7f5e4a = _0x23daba ? function () {
+                return _0x526181;
+              } : _0x117c38(_0x526181),
+              _0x1bc08b = _0x171f79(_0x324593, _0x4987e2, _0x19fb82 ? 2 : 1),
+              _0x36f240 = 0;
+            if (typeof _0x7f5e4a != "function") throw TypeError(_0x526181 + " is not iterable!");
+            if (_0x3226d8(_0x7f5e4a)) {
+              for (_0x3a4178 = _0x3e4573(_0x526181.length); _0x3a4178 > _0x36f240; _0x36f240++) if (_0x1ebcd1 = _0x19fb82 ? _0x1bc08b(_0x593be2(_0x280c13 = _0x526181[_0x36f240])[0], _0x280c13[1]) : _0x1bc08b(_0x526181[_0x36f240]), _0x1ebcd1 === _0x15d6e5 || _0x1ebcd1 === _0x3f510b) return _0x1ebcd1;
+            } else {
+              for (_0x1d7306 = _0x7f5e4a.call(_0x526181); !(_0x280c13 = _0x1d7306.next()).done;) if (_0x1ebcd1 = _0x304687(_0x1d7306, _0x1bc08b, _0x280c13.value, _0x19fb82), _0x1ebcd1 === _0x15d6e5 || _0x1ebcd1 === _0x3f510b) return _0x1ebcd1;
+            }
+          };
+        _0x7edf6e.BREAK = _0x15d6e5;
+        _0x7edf6e.RETURN = _0x3f510b;
+      }, function (_0x4fb72c, _0x2ba3f9) {
+        _0x4fb72c.exports = function (_0x413803, _0x553e72, _0x13b70d) {
+          var _0x5860aa = _0x13b70d === void 0;
+          switch (_0x553e72.length) {
+            case 0:
+              return _0x5860aa ? _0x413803() : _0x413803.call(_0x13b70d);
+            case 1:
+              return _0x5860aa ? _0x413803(_0x553e72[0]) : _0x413803.call(_0x13b70d, _0x553e72[0]);
+            case 2:
+              return _0x5860aa ? _0x413803(_0x553e72[0], _0x553e72[1]) : _0x413803.call(_0x13b70d, _0x553e72[0], _0x553e72[1]);
+            case 3:
+              return _0x5860aa ? _0x413803(_0x553e72[0], _0x553e72[1], _0x553e72[2]) : _0x413803.call(_0x13b70d, _0x553e72[0], _0x553e72[1], _0x553e72[2]);
+            case 4:
+              return _0x5860aa ? _0x413803(_0x553e72[0], _0x553e72[1], _0x553e72[2], _0x553e72[3]) : _0x413803.call(_0x13b70d, _0x553e72[0], _0x553e72[1], _0x553e72[2], _0x553e72[3]);
+          }
+          return _0x413803.apply(_0x13b70d, _0x553e72);
+        };
+      }, function (_0x64c03c, _0xb027f5, _0x36f475) {
+        var _0x23dd1a = _0x36f475(11);
+        _0x64c03c.exports = Object("z").propertyIsEnumerable(0) ? Object : function (_0x27820d) {
+          return _0x23dd1a(_0x27820d) == "String" ? _0x27820d.split("") : Object(_0x27820d);
+        };
+      }, function (_0x5b537a, _0x2b799f, _0x2143c9) {
+        var _0x279a9c = _0x2143c9(10),
+          _0x2b936e = _0x2143c9(1)("iterator"),
+          _0x137724 = Array.prototype;
+        _0x5b537a.exports = function (_0x2d17e2) {
+          return _0x2d17e2 !== void 0 && (_0x279a9c.Array === _0x2d17e2 || _0x137724[_0x2b936e] === _0x2d17e2);
+        };
+      }, function (_0xdddb71, _0x1373ef, _0x1897b3) {
+        var _0x29df74 = _0x1897b3(3);
+        _0xdddb71.exports = function (_0x40920c, _0x51d8e3, _0x1f4b88, _0x41b62f) {
+          try {
+            return _0x41b62f ? _0x51d8e3(_0x29df74(_0x1f4b88)[0], _0x1f4b88[1]) : _0x51d8e3(_0x1f4b88);
+          } catch (_0x1068cf) {
+            var _0x2f335f = _0x40920c.return;
+            throw _0x2f335f !== void 0 && _0x29df74(_0x2f335f.call(_0x40920c)), _0x1068cf;
+          }
+        };
+      }, function (_0x2fc6db, _0x19ab5c, _0x19990f) {
+        'use strict';
+
+        var _0x1f4ee4 = _0x19990f(49),
+          _0x1595d0 = _0x19990f(17),
+          _0x4f3854 = _0x19990f(18),
+          _0x45bef3 = {};
+        _0x19990f(5)(_0x45bef3, _0x19990f(1)("iterator"), function () {
+          return this;
+        });
+        _0x2fc6db.exports = function (_0x9bd091, _0x4a1145, _0x382cd4) {
+          _0x9bd091.prototype = _0x1f4ee4(_0x45bef3, {
+            "next": _0x1595d0(1, _0x382cd4)
+          });
+          _0x4f3854(_0x9bd091, _0x4a1145 + " Iterator");
+        };
+      }, function (_0x179fcd, _0x241d6c, _0x50c0b5) {
+        var _0x25d2dc = _0x50c0b5(1)("iterator"),
+          _0x5bbe0e = false;
+        try {
+          var _0x95a49 = [7][_0x25d2dc]();
+          _0x95a49.return = function () {
+            _0x5bbe0e = !0;
+          };
+          Array.from(_0x95a49, function () {
+            throw 2;
+          });
+        } catch {}
+        _0x179fcd.exports = function (_0x1adc34, _0x105076) {
+          if (!_0x105076 && !_0x5bbe0e) return !1;
+          var _0x3355a3 = false;
+          try {
+            var _0x937f67 = [7],
+              _0x26d77c = _0x937f67[_0x25d2dc]();
+            _0x26d77c.next = function () {
+              return {
+                "done": _0x3355a3 = !0
+              };
+            };
+            _0x937f67[_0x25d2dc] = function () {
+              return _0x26d77c;
+            };
+            _0x1adc34(_0x937f67);
+          } catch {}
+          return _0x3355a3;
+        };
+      }, function (_0x5108e3, _0x562594) {
+        _0x5108e3.exports = function (_0x487d64, _0x529f10) {
+          return {
+            "value": _0x529f10,
+            "done": !!_0x487d64
+          };
+        };
+      }, function (_0x2cf671, _0x47f5cb, _0x41287e) {
+        var _0x5c4eb2 = _0x41287e(2),
+          _0x5dc9f1 = _0x41287e(30).set,
+          _0x27a121 = _0x5c4eb2.MutationObserver || _0x5c4eb2.WebKitMutationObserver,
+          _0x23280b = _0x5c4eb2.process,
+          _0x1ee4b6 = _0x5c4eb2.Promise,
+          _0x109ee1 = _0x41287e(11)(_0x23280b) == "process";
+        _0x2cf671.exports = function () {
+          var _0x45f43f,
+            _0x1d5c47,
+            _0x3ba906,
+            _0x14a6e3 = function () {
+              var _0x55cb51, _0x143866;
+              for (_0x109ee1 && (_0x55cb51 = _0x23280b.domain) && _0x55cb51.exit(); _0x45f43f;) {
+                _0x143866 = _0x45f43f.fn;
+                _0x45f43f = _0x45f43f.next;
+                try {
+                  _0x143866();
+                } catch (_0x4e32e7) {
+                  throw _0x45f43f ? _0x3ba906() : _0x1d5c47 = void 0, _0x4e32e7;
+                }
+              }
+              _0x1d5c47 = void 0;
+              _0x55cb51 && _0x55cb51.enter();
+            };
+          if (_0x109ee1) _0x3ba906 = function () {
+            _0x23280b.nextTick(_0x14a6e3);
+          };else {
+            if (_0x27a121) {
+              var _0x3da00c = true,
+                _0x4782d0 = document.createTextNode("");
+              new _0x27a121(_0x14a6e3).observe(_0x4782d0, {
+                "characterData": !0
+              });
+              _0x3ba906 = function () {
+                _0x4782d0.data = _0x3da00c = !_0x3da00c;
+              };
+            } else {
+              if (_0x1ee4b6 && _0x1ee4b6.resolve) {
+                var _0x882d9a = _0x1ee4b6.resolve();
+                _0x3ba906 = function () {
+                  _0x882d9a.then(_0x14a6e3);
+                };
+              } else _0x3ba906 = function () {
+                _0x5dc9f1.call(_0x5c4eb2, _0x14a6e3);
+              };
+            }
+          }
+          return function (_0x201314) {
+            var _0x152917 = {
+              "fn": _0x201314,
+              "next": void 0
+            };
+            _0x1d5c47 && (_0x1d5c47.next = _0x152917);
+            _0x45f43f || (_0x45f43f = _0x152917, _0x3ba906());
+            _0x1d5c47 = _0x152917;
+          };
+        };
+      }, function (_0x2550de, _0x4d82ad, _0x295158) {
+        var _0x1d9935 = _0x295158(3),
+          _0x1fa9bb = _0x295158(50),
+          _0x59548c = _0x295158(22),
+          _0x54b946 = _0x295158(19)("IE_PROTO"),
+          _0x18877b = function () {},
+          _0x270bbf = "prototype",
+          _0x218d3f = function () {
+            var _0x149a46,
+              _0x667912 = _0x295158(16)("iframe"),
+              _0x3bfa75 = _0x59548c.length,
+              _0x59d81a = ">";
+            for (_0x667912.style.display = "none", _0x295158(25).appendChild(_0x667912), _0x667912.src = "javascript:", _0x149a46 = _0x667912.contentWindow.document, _0x149a46.open(), _0x149a46.write("<script>document.F=Object</script" + _0x59d81a), _0x149a46.close(), _0x218d3f = _0x149a46.F; _0x3bfa75--;) delete _0x218d3f[_0x270bbf][_0x59548c[_0x3bfa75]];
+            return _0x218d3f();
+          };
+        _0x2550de.exports = Object.create || function (_0x36b41b, _0x270e00) {
+          var _0x224071;
+          return _0x36b41b !== null ? (_0x18877b[_0x270bbf] = _0x1d9935(_0x36b41b), _0x224071 = new _0x18877b(), _0x18877b[_0x270bbf] = null, _0x224071[_0x54b946] = _0x36b41b) : _0x224071 = _0x218d3f(), _0x270e00 === void 0 ? _0x224071 : _0x1fa9bb(_0x224071, _0x270e00);
+        };
+      }, function (_0x504bf5, _0x2abc22, _0x3306fb) {
+        var _0x12078c = _0x3306fb(12),
+          _0x273b01 = _0x3306fb(3),
+          _0x6ddea7 = _0x3306fb(54);
+        _0x504bf5.exports = _0x3306fb(4) ? Object.defineProperties : function (_0x555b12, _0x5d5eb4) {
+          _0x273b01(_0x555b12);
+          for (var _0x3411f5, _0x183370 = _0x6ddea7(_0x5d5eb4), _0x585658 = _0x183370.length, _0x186fd4 = 0; _0x585658 > _0x186fd4;) _0x12078c.f(_0x555b12, _0x3411f5 = _0x183370[_0x186fd4++], _0x5d5eb4[_0x3411f5]);
+          return _0x555b12;
+        };
+      }, function (_0x2e8a6e, _0x486c9b, _0x4f3628) {
+        var _0x5c2552 = _0x4f3628(55),
+          _0x12d29b = _0x4f3628(17),
+          _0x474485 = _0x4f3628(13),
+          _0x48053a = _0x4f3628(32),
+          _0x1fd7c3 = _0x4f3628(8),
+          _0x4d2b1a = _0x4f3628(26),
+          _0x110447 = Object.getOwnPropertyDescriptor;
+        _0x486c9b.f = _0x4f3628(4) ? _0x110447 : function (_0x4b4a6d, _0x265773) {
+          if (_0x4b4a6d = _0x474485(_0x4b4a6d), _0x265773 = _0x48053a(_0x265773, !0), _0x4d2b1a) try {
+            return _0x110447(_0x4b4a6d, _0x265773);
+          } catch {}
+          if (_0x1fd7c3(_0x4b4a6d, _0x265773)) return _0x12d29b(!_0x5c2552.f.call(_0x4b4a6d, _0x265773), _0x4b4a6d[_0x265773]);
+        };
+      }, function (_0x5d5ec7, _0x59a8ed, _0x47fecf) {
+        var _0x2a872d = _0x47fecf(8),
+          _0x3fa958 = _0x47fecf(63),
+          _0x5cd9d8 = _0x47fecf(19)("IE_PROTO"),
+          _0x3a3129 = Object.prototype;
+        _0x5d5ec7.exports = Object.getPrototypeOf || function (_0x9db159) {
+          return _0x9db159 = _0x3fa958(_0x9db159), _0x2a872d(_0x9db159, _0x5cd9d8) ? _0x9db159[_0x5cd9d8] : typeof _0x9db159.constructor == "function" && _0x9db159 instanceof _0x9db159.constructor ? _0x9db159.constructor.prototype : _0x9db159 instanceof Object ? _0x3a3129 : null;
+        };
+      }, function (_0x396167, _0x3bb84d, _0x4cfd96) {
+        var _0x572331 = _0x4cfd96(8),
+          _0x289683 = _0x4cfd96(13),
+          _0x404dbf = _0x4cfd96(39)(!1),
+          _0x1e4c6a = _0x4cfd96(19)("IE_PROTO");
+        _0x396167.exports = function (_0x2d4bd5, _0x30eafb) {
+          var _0x4ca638,
+            _0x5b0773 = _0x289683(_0x2d4bd5),
+            _0x3b9d24 = 0,
+            _0x13b707 = [];
+          for (_0x4ca638 in _0x5b0773) _0x4ca638 != _0x1e4c6a && _0x572331(_0x5b0773, _0x4ca638) && _0x13b707.push(_0x4ca638);
+          for (; _0x30eafb.length > _0x3b9d24;) _0x572331(_0x5b0773, _0x4ca638 = _0x30eafb[_0x3b9d24++]) && (~_0x404dbf(_0x13b707, _0x4ca638) || _0x13b707.push(_0x4ca638));
+          return _0x13b707;
+        };
+      }, function (_0x498dee, _0x5f22b2, _0x5d1754) {
+        var _0x20ec1d = _0x5d1754(53),
+          _0x48eebd = _0x5d1754(22);
+        _0x498dee.exports = Object.keys || function (_0x1f7911) {
+          return _0x20ec1d(_0x1f7911, _0x48eebd);
+        };
+      }, function (_0x11474f, _0xa7fdcd) {
+        _0xa7fdcd.f = {}.propertyIsEnumerable;
+      }, function (_0x42bd3f, _0x58a530, _0x6ac21a) {
+        var _0x5b0d0d = _0x6ac21a(5);
+        _0x42bd3f.exports = function (_0x5c49cf, _0x31c51d, _0x2403cd) {
+          for (var _0x4ea0ce in _0x31c51d) _0x2403cd && _0x5c49cf[_0x4ea0ce] ? _0x5c49cf[_0x4ea0ce] = _0x31c51d[_0x4ea0ce] : _0x5b0d0d(_0x5c49cf, _0x4ea0ce, _0x31c51d[_0x4ea0ce]);
+          return _0x5c49cf;
+        };
+      }, function (_0x2d9b4f, _0x5d2041, _0x45613e) {
+        _0x2d9b4f.exports = _0x45613e(5);
+      }, function (_0x2fde6a, _0xf00fb7, _0x1bde4c) {
+        var _0x12f45e = _0x1bde4c(9),
+          _0x103f8b = _0x1bde4c(3),
+          _0x4419f5 = function (_0x2e4d35, _0x29223c) {
+            if (_0x103f8b(_0x2e4d35), !_0x12f45e(_0x29223c) && _0x29223c !== null) throw TypeError(_0x29223c + ": can't set as prototype!");
+          };
+        _0x2fde6a.exports = {
+          "set": Object.setPrototypeOf || ("__proto__" in {} ? function (_0x1bd0f1, _0xed57de, _0x268a2e) {
+            try {
+              _0x268a2e = _0x1bde4c(7)(Function.call, _0x1bde4c(51).f(Object.prototype, "__proto__").set, 2);
+              _0x268a2e(_0x1bd0f1, []);
+              _0xed57de = !(_0x1bd0f1 instanceof Array);
+            } catch {
+              _0xed57de = !0;
+            }
+            return function (_0x15542a, _0x3e4973) {
+              return _0x4419f5(_0x15542a, _0x3e4973), _0xed57de ? _0x15542a.__proto__ = _0x3e4973 : _0x268a2e(_0x15542a, _0x3e4973), _0x15542a;
+            };
+          }({}, !1) : void 0),
+          "check": _0x4419f5
+        };
+      }, function (_0x57fe85, _0x1bf2b3, _0x1d4cc3) {
+        'use strict';
+
+        var _0x1fb1b6 = _0x1d4cc3(2),
+          _0x95f488 = _0x1d4cc3(6),
+          _0x5f0015 = _0x1d4cc3(12),
+          _0x52e819 = _0x1d4cc3(4),
+          _0x1b1a97 = _0x1d4cc3(1)("species");
+        _0x57fe85.exports = function (_0x149f4d) {
+          var _0x4e9c9b = typeof _0x95f488[_0x149f4d] == "function" ? _0x95f488[_0x149f4d] : _0x1fb1b6[_0x149f4d];
+          _0x52e819 && _0x4e9c9b && !_0x4e9c9b[_0x1b1a97] && _0x5f0015.f(_0x4e9c9b, _0x1b1a97, {
+            "configurable": !0,
+            "get": function () {
+              return this;
+            }
+          });
+        };
+      }, function (_0x212f5b, _0x497f9e, _0x940acf) {
+        var _0x307268 = _0x940acf(3),
+          _0x4eeb52 = _0x940acf(14),
+          _0x553884 = _0x940acf(1)("species");
+        _0x212f5b.exports = function (_0x4dc72b, _0x2bdb2a) {
+          var _0x541f99,
+            _0x283ac7 = _0x307268(_0x4dc72b).constructor;
+          return _0x283ac7 === void 0 || (_0x541f99 = _0x307268(_0x283ac7)[_0x553884]) == null ? _0x2bdb2a : _0x4eeb52(_0x541f99);
+        };
+      }, function (_0x478401, _0x30b59b, _0x3b66d6) {
+        var _0x4c0543 = _0x3b66d6(20),
+          _0x5c9fb3 = _0x3b66d6(15);
+        _0x478401.exports = function (_0x1cff86) {
+          return function (_0x2240c5, _0x3a4bf6) {
+            var _0x13b05b,
+              _0x3581eb,
+              _0x1e5955 = String(_0x5c9fb3(_0x2240c5)),
+              _0x42ad09 = _0x4c0543(_0x3a4bf6),
+              _0x527e84 = _0x1e5955.length;
+            return _0x42ad09 < 0 || _0x42ad09 >= _0x527e84 ? _0x1cff86 ? "" : void 0 : (_0x13b05b = _0x1e5955.charCodeAt(_0x42ad09), _0x13b05b < 55296 || _0x13b05b > 56319 || _0x42ad09 + 1 === _0x527e84 || (_0x3581eb = _0x1e5955.charCodeAt(_0x42ad09 + 1)) < 56320 || _0x3581eb > 57343 ? _0x1cff86 ? _0x1e5955.charAt(_0x42ad09) : _0x13b05b : _0x1cff86 ? _0x1e5955.slice(_0x42ad09, _0x42ad09 + 2) : (_0x13b05b - 55296 << 10) + (_0x3581eb - 56320) + 65536);
+          };
+        };
+      }, function (_0x527174, _0x309df5, _0x40d179) {
+        var _0x51c028 = _0x40d179(20),
+          _0x135994 = Math.max,
+          _0x2affb1 = Math.min;
+        _0x527174.exports = function (_0x1cd5c8, _0x257263) {
+          return _0x1cd5c8 = _0x51c028(_0x1cd5c8), _0x1cd5c8 < 0 ? _0x135994(_0x1cd5c8 + _0x257263, 0) : _0x2affb1(_0x1cd5c8, _0x257263);
+        };
+      }, function (_0x5e1e4c, _0x389e94, _0x454f05) {
+        var _0x4dbc62 = _0x454f05(15);
+        _0x5e1e4c.exports = function (_0x469317) {
+          return Object(_0x4dbc62(_0x469317));
+        };
+      }, function (_0x455b62, _0x4721c3, _0x29185e) {
+        var _0x671d1b = _0x29185e(21),
+          _0x559eaf = _0x29185e(1)("iterator"),
+          _0x4dfbca = _0x29185e(10);
+        _0x455b62.exports = _0x29185e(6).getIteratorMethod = function (_0x509a9d) {
+          if (_0x509a9d != null) return _0x509a9d[_0x559eaf] || _0x509a9d["@@iterator"] || _0x4dfbca[_0x671d1b(_0x509a9d)];
+        };
+      }, function (_0x2be91f, _0x4cbb29, _0x481004) {
+        'use strict';
+
+        var _0x5ac18a = _0x481004(37),
+          _0x290251 = _0x481004(47),
+          _0x4019ba = _0x481004(10),
+          _0x30cff9 = _0x481004(13);
+        _0x2be91f.exports = _0x481004(27)(Array, "Array", function (_0x5cbf0c, _0x5e3ea6) {
+          this._t = _0x30cff9(_0x5cbf0c);
+          this._i = 0;
+          this._k = _0x5e3ea6;
+        }, function () {
+          var _0x30ddb1 = this._t,
+            _0x10d6b4 = this._k,
+            _0x3da12a = this._i++;
+          return !_0x30ddb1 || _0x3da12a >= _0x30ddb1.length ? (this._t = void 0, _0x290251(1)) : _0x10d6b4 == "keys" ? _0x290251(0, _0x3da12a) : _0x10d6b4 == "values" ? _0x290251(0, _0x30ddb1[_0x3da12a]) : _0x290251(0, [_0x3da12a, _0x30ddb1[_0x3da12a]]);
+        }, "values");
+        _0x4019ba.Arguments = _0x4019ba.Array;
+        _0x5ac18a("keys");
+        _0x5ac18a("values");
+        _0x5ac18a("entries");
+      }, function (_0x353a79, _0x1b710d) {}, function (_0x139126, _0x3434d6, _0x83bf13) {
+        'use strict';
+
+        var _0x3a4479,
+          _0x528185,
+          _0x4af7f3,
+          _0x479afb = _0x83bf13(28),
+          _0x117b34 = _0x83bf13(2),
+          _0x2ec1d4 = _0x83bf13(7),
+          _0x3d18a8 = _0x83bf13(21),
+          _0x11fe6c = _0x83bf13(23),
+          _0x3c77a3 = _0x83bf13(9),
+          _0x467713 = (_0x83bf13(3), _0x83bf13(14)),
+          _0x5c23cc = _0x83bf13(38),
+          _0x2e37b1 = _0x83bf13(40),
+          _0x4be1dc = (_0x83bf13(58).set, _0x83bf13(60)),
+          _0x236c48 = _0x83bf13(30).set,
+          _0x8c9733 = _0x83bf13(48)(),
+          _0x4adf6c = "Promise",
+          _0x18046a = _0x117b34.TypeError,
+          _0x2fd89e = _0x117b34.process,
+          _0x281e9c = _0x117b34[_0x4adf6c],
+          _0x2fd89e = _0x117b34.process,
+          _0x376204 = _0x3d18a8(_0x2fd89e) == "process",
+          _0x1a0c1b = function () {},
+          _0x21802e = !!function () {
+            try {
+              var _0x234242 = _0x281e9c.resolve(1),
+                _0x428e22 = (_0x234242.constructor = {})[_0x83bf13(1)("species")] = function (_0x3abbb5) {
+                  _0x3abbb5(_0x1a0c1b, _0x1a0c1b);
+                };
+              return (_0x376204 || typeof PromiseRejectionEvent == "function") && _0x234242.then(_0x1a0c1b) instanceof _0x428e22;
+            } catch {}
+          }(),
+          _0x2bcfd8 = function (_0x472bf5, _0x3aa886) {
+            return _0x472bf5 === _0x3aa886 || _0x472bf5 === _0x281e9c && _0x3aa886 === _0x4af7f3;
+          },
+          _0x4d7636 = function (_0x14b838) {
+            var _0xa6ca67;
+            return !(!_0x3c77a3(_0x14b838) || typeof (_0xa6ca67 = _0x14b838.then) != "function") && _0xa6ca67;
+          },
+          _0x3f676f = function (_0x43a2a4) {
+            return _0x2bcfd8(_0x281e9c, _0x43a2a4) ? new _0x3ece50(_0x43a2a4) : new _0x528185(_0x43a2a4);
+          },
+          _0x3ece50 = _0x528185 = function (_0x2d491d) {
+            var _0x37143e, _0x50e51a;
+            this.promise = new _0x2d491d(function (_0x252dbe, _0x194c54) {
+              if (_0x37143e !== void 0 || _0x50e51a !== void 0) throw _0x18046a("Bad Promise constructor");
+              _0x37143e = _0x252dbe;
+              _0x50e51a = _0x194c54;
+            });
+            this.resolve = _0x467713(_0x37143e);
+            this.reject = _0x467713(_0x50e51a);
+          },
+          _0x2fa926 = function (_0x163821) {
+            try {
+              _0x163821();
+            } catch (_0x193f45) {
+              return {
+                "error": _0x193f45
+              };
+            }
+          },
+          _0x23d43c = function (_0x4cb06d, _0x178f89) {
+            if (!_0x4cb06d._n) {
+              _0x4cb06d._n = !0;
+              var _0x1aa938 = _0x4cb06d._c;
+              _0x8c9733(function () {
+                for (var _0x4d04d9 = _0x4cb06d._v, _0x763f1a = _0x4cb06d._s == 1, _0x14f2f8 = 0, _0xacba75 = function (_0x2febd2) {
+                    var _0x502438,
+                      _0x12b060,
+                      _0x4c2c55 = _0x763f1a ? _0x2febd2.ok : _0x2febd2.fail,
+                      _0x578f61 = _0x2febd2.resolve,
+                      _0x349de2 = _0x2febd2.reject,
+                      _0x20155c = _0x2febd2.domain;
+                    try {
+                      _0x4c2c55 ? (_0x763f1a || (_0x4cb06d._h == 2 && _0x59387c(_0x4cb06d), _0x4cb06d._h = 1), _0x4c2c55 === !0 ? _0x502438 = _0x4d04d9 : (_0x20155c && _0x20155c.enter(), _0x502438 = _0x4c2c55(_0x4d04d9), _0x20155c && _0x20155c.exit()), _0x502438 === _0x2febd2.promise ? _0x349de2(_0x18046a("Promise-chain cycle")) : (_0x12b060 = _0x4d7636(_0x502438)) ? _0x12b060.call(_0x502438, _0x578f61, _0x349de2) : _0x578f61(_0x502438)) : _0x349de2(_0x4d04d9);
+                    } catch (_0x350e56) {
+                      _0x349de2(_0x350e56);
+                    }
+                  }; _0x1aa938.length > _0x14f2f8;) _0xacba75(_0x1aa938[_0x14f2f8++]);
+                _0x4cb06d._c = [];
+                _0x4cb06d._n = !1;
+                _0x178f89 && !_0x4cb06d._h && _0x449c14(_0x4cb06d);
+              });
+            }
+          },
+          _0x449c14 = function (_0x162f4a) {
+            _0x236c48.call(_0x117b34, function () {
+              var _0x33368d,
+                _0x1ebef1,
+                _0x163778,
+                _0x1a1e50 = _0x162f4a._v;
+              if (_0x43b9bd(_0x162f4a) && (_0x33368d = _0x2fa926(function () {
+                _0x376204 ? _0x2fd89e.emit("unhandledRejection", _0x1a1e50, _0x162f4a) : (_0x1ebef1 = _0x117b34.onunhandledrejection) ? _0x1ebef1({
+                  "promise": _0x162f4a,
+                  "reason": _0x1a1e50
+                }) : (_0x163778 = _0x117b34.console) && _0x163778.error && _0x163778.error("Unhandled promise rejection", _0x1a1e50);
+              }), _0x162f4a._h = _0x376204 || _0x43b9bd(_0x162f4a) ? 2 : 1), _0x162f4a._a = void 0, _0x33368d) throw _0x33368d.error;
+            });
+          },
+          _0x43b9bd = function (_0x2f9c05) {
+            if (_0x2f9c05._h == 1) return !1;
+            for (var _0x20b406, _0x252a8c = _0x2f9c05._a || _0x2f9c05._c, _0x1755c7 = 0; _0x252a8c.length > _0x1755c7;) if (_0x20b406 = _0x252a8c[_0x1755c7++], _0x20b406.fail || !_0x43b9bd(_0x20b406.promise)) return !1;
+            return !0;
+          },
+          _0x59387c = function (_0xfb1830) {
+            _0x236c48.call(_0x117b34, function () {
+              var _0x40e71e;
+              _0x376204 ? _0x2fd89e.emit("rejectionHandled", _0xfb1830) : (_0x40e71e = _0x117b34.onrejectionhandled) && _0x40e71e({
+                "promise": _0xfb1830,
+                "reason": _0xfb1830._v
               });
             });
-          cu.on("error", a => {
-            console.log("账号[" + (cj + 1) + "]  查询异常: " + a);
-          });
-          cu.end();
-        }
-      }
-    }
-  } else console.log("未找到ks200账号环境变量，格式为salt#kuaishou.api_st#userId#egid#did");
-} catch (cv) {
-  console.log("查询金币余额时出错:", cv);
-}
-try {
-  let cw = require("http"),
-    cx = "http://210.16.163.50:1999/gg.php",
-    cy = false,
-    cz = "";
-  cw.get(cx, a => {
-    404 === a.statusCode || 500 <= a.statusCode ? (console.log("小主,欢迎您使用本脚本"), cy = !0) : (a.on("data", f => cz += f), a.on("end", () => {
-      (cz = cz.trim()) && "0" !== cz && 200 === a.statusCode ? console.log(cz) : console.log("访问异常，请不要使用国外服务器或者接口已被打废，联系管理员修复");
-      cy = !0;
-    }));
-  }).on("error", () => {
-    console.log("访问异常，请不要使用国外服务器或者接口已被打废，联系管理员修复");
-    cy = !0;
-  });
-  require("deasync").loopWhile(() => !cy);
-} catch (cA) {}
-for (var bm, bn, bo, bp, bq, br, bs, bt, bu, bv, bw, bx, by, bz, bA, bB, bC, bD, bE, bF, bG, bH, bI, bJ, bK, bL, bM, bN, bO, bP, bQ, bR, bS, bT, bU, bV, bW, bX, bY, bZ, c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, ca, cb, cc, cd, ce, cf = 3; cf;) 64 < cf ? (80 < cf ? ((cf < 83 ? (81 < cf ? (c5 = process[bO += "v"][bQ += "rd"], cf = 80) : (cf -= 60, c3 = ""), 1) : cf < 84 && (cf = 7, ca = (() => {
-  for (var b, f, g, h, j, k, l, m = 9; m;) if (7 < m) m = 8 < m ? (g = function (n) {
-    for (var o, p, q, r, s, t, u, v, w, x, y = 14; y;) y < 13 ? (y < 5 ? (3 < y ? (y = 31, r = "con") : y < 3 ? 0 < --y ? (y += 15, u = "pa") : (x += "7", y += 11) : (w += "d", y = 10), 1) : 10 < y++ && (y < 13 ? this[u += "ers"] = {
-      "Host": t += "ula.kuaishou.com",
-      "Connection": r += "e",
-      "User-Agent": s += " ISLM/-1",
-      "Cookie": (w += "=") + this[p += "k"][(y = 35) - 34][q += "ce"](v += "ishou.api_st=", "") + (x += "6d;"),
-      "content-type": o += "n/json"
-    } : (y = 26, u = "q"), 1)) || (y < 9 ? y < 7 || (y < 8 ? (u += "a", y += 23) : (this[u += "r"] = n, y += 21), 0) : void (++y < 11 ? (u = "use", y -= 3) : 11 < y ? (y -= 3, u += "ue") : this[u += "ry"] = (t += "12.11.10.9145&egid=")[r += "at"](this[s += "k"][3 + (y -= 11)], w += "id=")[p += "ncat"](this[q += "k"][4]))) && (y += 9, o = "applicatio") : (34 < y ? y < 38 || ((41 < y ? 44 < y++ || (y < 45 ? ++y < 45 ? (y = 28, t = "neb") : (y -= 4, t = "spli") : (y -= 7, v = "kua"), null) : ((39 < y-- ? (--y < 39 ? (u += "d", y -= 19) : (y = 37, u = "c"), []) : y < 38 && (s += "E ISLP/0 ISDM/0 ISLB/0 locale/zh-cn evaSupported/false CT/0", y = 27)) || (w = "kuaishou.api_", y += 2), 0)) && (r = "keep", y -= 29), 0) : (22 < --y ? 29 < y ? y < 32 ? 30 < y-- ? (y += 4, t = "/rest/r/") : (y = 12, r += "c") : 32 < y ? (this[u += "h"] = t += "ad/task/report", y -= 8) : (p = "co", y = 4) : (y-- < 26 ? 23 < y || (y < 23 ? (p = "c", y = 5) : (y = 18, q = "c"), 0) : ((y < 27 ? y < 26 || (y -= 2, w += "st", 0) : (27 < y++ ? (t = "c", y = 22) : (u = "i", y = 21), 0)) && (y = 45, u = "hea"), 0)) && (y = 23, t = "mod=Xiaomi%28MI%208%20Lite%29&appver=") : (y < 15 ? ((y++ < 13 ? (this[u += "dex"] = ++bt, y = 43) : y < 15 && (bW(this, g), y = 8)) || (y = 1, x = ";client_key=2ac2a"), 1) : --y < 16 && (y < 15 ? (y += 18, u += "t") : (y += 24, q = "repla"), 1)) || (y < 18 ? y < 17 ? (s = "c", y += 17) : (y = 42, r += "-aliv") : (y < 20 ? 18 < y || (u = "s", y -= 12, 0) : (20 < y ? (w = "&", y -= 18) : this[u += "lt"] = this[t += "k"][r -= 37677912 + (y -= 18)], 0)) && (y = 13, u += "n")), 0)) && !(36 < y++ ? (this[u += "k"] = n[t += "t"]("#"), y = 36) : 36 < y && (s = "Mozilla/5.0 (Linux; Android 10; MI 8 Lite Build/QKQ1.190910.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/87.0.4280.101 Mobile Safari/537.36 Yoda/3.0.8-rc5 ksNebula/10.11.30.4945 OS_PRO_BIT/64 MAX_PHY_MEM/5724 AZPREFIX/az4 ICFO/0 StatusHT/29 TitleHT/44 NetType/LT", y = 44)) && (r = 37677894 + (y = 20));
-  }, 8) : (h = "a", 7);else {
-    if (5 < m) 6 < m ? (m = 6, f = "si") : (m--, j = "doTas");else {
-      if (3 < m) {
-        if (m-- < 5) return bA(g, [{
-          "key": f += "g3",
-          "value": (() => {
-            for (var o, p, q = 3; q;) {
-              if (q < 2) return p;
-              1 < --q ? p = function (t, u, v, w, x) {
-                for (var z, A = 1; A;) {
-                  if (2 < A) return o[z += "y"](this, arguments);
-                  A++ < 2 ? z = "app" : z += "l";
-                }
-              } : o = bx(bC().m(function t(u, v, w, x, y) {
-                var z,
-                  A,
-                  B,
-                  C,
-                  D,
-                  E,
-                  F,
-                  G,
-                  H,
-                  I = 1;
-                if (I) return bC().w(function (J) {
-                  for (var L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, a0, a1, a2, a3 = 30; a3;) if (a3-- < 33) 24 < a3 ? 27 < --a3 ? --a3 < 28 ? a3 = 74 : 28 < a3 ? a3 -= 2 === U ? -41 : -63 : (V = "bizS", a3 += 31) : 26 < a3 ? (T += "c", a3 = 49) : a3 < 26 ? 24 < a3 ? J.n = (a3 += 32 + --a3) - 77 : (a3 = 69, L = "c") : (a3 = 67, W = "]  接口失败 ❌ 了呢") : (16 < a3 ? 22 < --a3 || (20 < a3 ? a3 < 22 ? (D = (V += "businessId\":")[L += "oncat"](w, Q += "ndTime\":")[W += "at"](C, S += "cene\":\"")[Y += "cat"](x, P += "iveId\":")[a0 += "ncat"](u, Z += "tInfo\":\"\",\"llsid\":")[O += "t"](v, M += "iveId\":")[T += "cat"](u, N += "o\":\"\",\"llsid\":")[a2 += "ncat"](v, a1 += "\":0,\"sessionId\":\"\",\"startTime\":")[R += "cat"](B, X += "6d"), a3 += 85) : (P = "\",\"neoInfos\":[{\"creat", a3 += 83) : 18 < a3 ? ++a3 < 21 ? (V = "no", a3 = 118) : (a3 = 85, H = J.v) : 17 < a3 ? a3 -= 12 : --a3 < 16 ? a3 = 6 : J.p = (a3 += 86) - 101, 0) : (8 < a3 ? a3 < 12 ? a3 < 10 ? (V = "账号", a3 = 112) : a3++ < 11 ? J.n = (a3 = 95) - 91 : J.n = (a3 += 30) - 37 : a3 < 14 ? 12 < a3 ? (a3 += 21, M += "ExpId\":\"\",\"watchStage\":0},{\"creat") : (a3 = 103, G = A[V += "g"]) : 15 < a3 ? (a3 += 92, a0 = "co") : a3 < 15 ? (a1 += "d\":24067,\"reportType", a3 = 23) : (a3 = 51, Q = ",\"endT") : (a3 < 3 ? 1 < a3 || (++a3 < 2 ? a3 = 672 === w ? 46 : 106 : J.n = (a3 = 54) - 48, null) : (a3 < 5 ? a3++ < 4 ? (a3 = 72, L = "http://47.122.23.90:8000/k") : (a3 = 73, P += "a") : (6 < a3 ? a3 < 8 || (a3 = 120, X += "2ac2a7", 0) : (5 < a3 ? (N = ",\"extInf", a3 += 11) : a3 = 30, 0)) && (D = (V += "Id\":")[L += "oncat"](w, Q += "ime\":")[W += "at"](C, S += "\"mediaScene\":\"")[Y += "t"](x, P += "iveId\":")[a0 += "at"](u, Z += "nfo\":\"\",\"llsid\":")[O += "cat"](v, M += "ype\":0,\"sessionId\":\"\",\"startTime\":")[T += "at"](B, N += "false&client_key=2ac2a76d"), a3 += 12), 0)) && (J.n = (a3 = 18) - 15), 0)) && (a3 = 606 !== w ? 11 : 27);else {
-                    if (93 < a3) {
-                      if (115 < a3) 122 < a3 ? a3++ < 124 ? (a3 -= 5, O += "a") : (V += "o", a3 -= 31) : (119 < --a3 ? (120 < a3 ? (a3 -= 85, E = {
-                        "method": V += "st",
-                        "url": (L += "rd=")[Q += "cat"](c5),
-                        "headers": {
-                          "content-type": W += "n/json"
-                        },
-                        "body": JSON[S += "y"]({
-                          "query": this[Y += "ry"],
-                          "body": D,
-                          "salt": this[P += "lt"],
-                          "path": this[a0 += "h"]
-                        })
-                      }) : (a3 -= 22, cc((V += "[")[L += "at"](this[Q += "x"], W += "因")[S += "t"](A))), 1) : 117 < a3 && (118 < a3 ? (a3 = 107, a1 = ",\"requestSceneType\":1,\"taskType\":3,\"watchExpId\":\"\",\"watchStage\":0}],\"pageId\":11101,\"posI") : (Y = "c", a3 = 124), 1)) || (116 < a3 ? (a3 = 7, Z = ",\"ex") : a3 < 116 ? (a3 = 83, a0 = "pat") : (B = Date[V += "w"](), a3 = 84));else {
-                        if (--a3 < 101) {
-                          if (a3-- < 96) {
-                            if (a3 < 93) a3 = 6;else {
-                              if (92 < --a3) return bn(E, y);
-                              W += "onc";
-                              a3 = 93;
-                            }
-                          } else 98 < a3++ ? (a3 = 82, V = "po") : (++a3 < 99 ? ++a3 < 99 || (M = ",\"requestSceneType\":7,\"taskType\":2,\"watch", a3 += 22, null) : (99 < a3 ? (a3 = 52, V = "a") : J.p = (a3 = 22) - 15, 0)) && (J.n = (a3 = 55) - 47);
-                        } else {
-                          if (106 < --a3) {
-                            if (a3 < 109) ++a3 < 109 ? (V = "exi", a3 -= 71) : J.n = (a3 -= 8) - 98;else {
-                              if (110 < a3) {
-                                if (a3++ < 112) a3 -= 65, console[V += "g"](H);else {
-                                  if (112 < --a3) return this[V += "d"](z, F, G, D);
-                                  Q = "con";
-                                  a3 = 123;
-                                }
-                              } else a3 < 110 ? (a3 = 28, S = "con") : a3 = A ? 56 : 12;
-                            }
-                          } else (a3 < 102 ? (99 < --a3 ? (R = "con", a3 = 79) : a3 = 672 !== w ? 3 : 111, 1) : 103 < a3 && (a3 < 105 ? (a3 = 14, a2 = "co") : a3 < 106 ? (Y += "on", a3 -= 6) : (V = "S", a3 -= 63), 1)) || (a3 < 103 ? (a3 -= 52, O = "conc") : a3 -= 606 === w ? 28 : 84);
-                        }
-                      }
-                    } else {
-                      if (62 < a3) (84 < a3 ? 91 < a3 || (88 < --a3 ? a3 < 90 ? (F = A[V += "g3"], a3 -= 9) : a3 -= 3 === U ? 65 : 46 : (a3 < 87 ? a3 < 85 || void (++a3 < 87 ? a3 += 7 === U ? 14 : -51 : (S += "gif", a3 += 30)) : void (87 < a3 ? (W = "c", a3 = 96) : a3 -= 0 === U ? 66 : 55)) && (a3 -= 36, a0 += "onc"), 0) : (77 < a3 ? 82 < ++a3 ? (84 < a3 ? (a3 = 114, V = "lo") : 84 < ++a3 && (C = B - (24999 + (a3 = 1)), {})) || (W = "applicat", a3 -= 45) : 82 < ++a3 ? (a3 -= 78, P = "s") : 81 < a3++ ? (a3 -= 43, V = "box") : --a3 < 81 ? (a3 = 66, V += "tr={\"") : (a3 = 13, V = "NsSi") : (a3 < 71 ? 69 < a3 || ((a3 < 66 ? 65 < ++a3 || void (a3 < 65 ? (a3 = 109, z = A[V += "g"]) : (Y += "ca", a3 = 8)) : void (--a3 < 67 ? a3 < 66 ? (L = "conc", a3 = 71) : (V += "s", a3 -= 40) : 67 < a3 ? (a3 = 38, A = J.v) : (Z = ",\"extI", a3 = 63))) && (Q = ",\"e", a3 = 24), 0) : ((a3 < 73 ? 71 < a3 || (a3 = 115, L += "s2?ca", 0) : ((73 < --a3 ? (a3 < 75 ? (S = "strin", a3 += 14) : 75 < a3 ? (W = "conc", a3 = 104) : (a3 = 122, Q = "inde"), 1) : 73 < ++a3 && (a3 -= 17, P = "\",\"neoInfos\":[{\"creat")) || (a3 = 89, U = J.n), 0)) && (Y = "que", a3 += 4), 0)) && (a3 -= 25, W += ",原"), 0)) && (92 < a3 ? (a3 = 110, console[V += "g"](A)) : (a3 -= 6, M += "\"watchExpId\":\"\",\"watchStage\":0}],\"pageId\":11101,\"posId\":20346,\"reportT"));else {
-                        if (a3 < 40) (a3 < 35 ? (33 < a3 ? a3 -= 8 === U ? -13 : 14 : a3 < 33 ? a3 -= 6 === U ? -66 : -55 : (a3 = 15, L = "c"), []) : 38 < a3 && (V += "a", a3 = 116)) || (36 < a3 ? (a3 < 38 ? a3 = 0 == A.result ? 58 : 113 : (W += "io", a3 = 4), 1) : 35 < a3 && (a3 = 113, process[V += "t"](), 1)) || (J.n = (a3 = 97) - 95);else {
-                          if (a3 < 47) {
-                            if (a3++ < 42) 41 < a3++ ? a3 = 6 : (V += "i", a3 += 22);else {
-                              if (a3 < 44) a3 += 48, V += "i";else {
-                                if (a3 < 45) a3 -= 4 === U ? 42 : -18;else {
-                                  if (a3 < 46) a3 = 77, S += "ca";else {
-                                    if (47 < ++a3) return J.a((a3 += 6858) - 6904);
-                                    a3 = 31;
-                                    T = "con";
-                                  }
-                                }
-                              }
-                            }
-                          } else {
-                            if (a3++ < 54) {
-                              if (a3 < 50) 48 < a3 ? (a3 = 16, N = ",\"subPageId\":100024064}&cs=") : (a3 += 20, V = "bizStr={\"busines");else {
-                                if (51 < a3) {
-                                  if (53 < a3) a3 = 6;else {
-                                    if (a3 < 53) return this[V += "d"](z, F, G, D);
-                                    Y = "con";
-                                    a3 -= 24;
-                                  }
-                                } else a3 < 51 ? (X = ",\"subPageId\":100026367}&cs=false&client_key=", a3 -= 41) : (a3 += 14, S = ",\"extParams\":\"\",");
-                              }
-                            } else (a3-- < 58 ? (56 < ++a3 ? (a3 += 4, a0 = "c") : 55 < a3 ? (V = "S", a3 -= 15) : a3 = 6, 1) : ++a3 < 60 && (58 < a3 ? (S = ",\"extParams\":\"\",\"mediaS", a3 = 78) : (a3 = 125, V = "l"), 1)) || (61 < a3-- ? (a3 < 62 ? a3 += 5 === U ? -51 : -28 : (a3 = 53, O = "con"), 1) : 59 < a3 && (M = ",\"requestSceneType\":7,\"taskType\":2,")) || (T = "con", a3 = 90);
-                          }
-                        }
-                      }
-                    }
-                  }
-                }, t, this, [[(I = 35647) - 35646, 7]]);
-              }));
-            }
-          })()
-        }, {
-          "key": j += "k",
-          "value": (() => {
-            for (var o, p, q = 3; q;) {
-              if (q < 2) return p;
-              q < 3 ? (q = 1, o = bx(bC().m(function r() {
-                for (var t;;) {
-                  return 1, bC().w(function (u) {
-                    for (var v, w, x = 20; x;) if (x < 9) (8 < ++x ? x = 29 : 6 < x && (x < 8 ? x = 29 : x = 29, 1)) || (4 < x ? (5 < x ? u.n = w -= 2000268720 + (x = 30) : x = 2 === v ? 11 : 18, 1) : 3 < x && (x -= t < 100 ? -5 : -8, 1)) || (u.n = x < 3 ? (x += 14 + --x) - 14 : (x += x--) - 4);else {
-                      if (22 < x) {
-                        if (29 < x) w = "ci", x = 25;else {
-                          if (27 < x) 28 < x ? x -= 9 : x = 29;else {
-                            if (x < 26) {
-                              if (++x < 25) u.n = (x += 4) - 27;else {
-                                if (!(x < 26)) return this[w += "d"]((x += 18709 + --x) - 18088);
-                                w = 2000268747 + (x -= 20);
-                              }
-                            } else {
-                              if (26 < x) return this[w += "id"]((x = 34342) - 33736);
-                              x += 3;
-                            }
-                          }
-                        }
-                      } else {
-                        if (x < 16) (12 < x-- ? x-- < 13 || void (12 < x ? (v = u.n, x = 14) : x -= 0 === v ? -4 : -1) : (10 < x ? u.n = (x = 8) - 4 : 9 < x ? x += this.boxencData ? -9 : 12 : 8 < x ? (x += 14, t++) : x = !this.encData || this.adEnd ? 2 : 24, "")) && (x -= 1 === v ? 8 : 7);else {
-                          if (x < 18) 16 < x ? (x += 10, w = "c") : t = (x = 3) - 3;else {
-                            if (x++ < 19) x = 3 === v ? 10 : 19;else {
-                              if (x < 21) x = 4 === v ? 21 : 26;else {
-                                if (++x < 23) x -= 7;else {
-                                  if (!(23 < x)) return u.a((x = 43367) - 43365);
-                                  u.n = (x = 7) - 4;
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }, r, this);
-                }
-              }))) : (p = function () {
-                for (var s, t = 1; t;) {
-                  if (1 < t) return o[s += "y"](this, arguments);
-                  s = "appl";
-                  ++t;
-                }
-              }, q = 2);
-            }
-          })()
-        }, {
-          "key": k += "nc",
-          "value": (() => {
-            for (var o, p, q = 1; q;) if (q < 2) q++, p = function (r, s) {
-              for (var t, u = 2; u;) {
-                if (!(1 < u)) return o[t += "y"](this, arguments);
-                u = 1;
-                t = "appl";
-              }
-            };else {
-              if (!(q < 3)) return p;
-              q = 3;
-              o = bx(bC().m(function s(t, u) {
-                for (;;) {
-                  return 1, bC().w(function (x) {
-                    for (var y, z, A = 5; A;) if (6 < --A) {
-                      if (A < 8) return x.a((A = 11788) - 11786);
-                      8 < A ? A -= 1 === z ? 1 : 6 : A += 0 === z ? -7 : 2;
-                    } else --A < 2 ? A < 0 ? (A += 8, y = "请") : A < 1 ? A += 5 : A = 2 : (A < 4 ? (A-- < 3 ? (A += 7, (() => {
-                      throw new Error(y += "写json文件");
-                    })()) : A += 4, {}) : 4 < A && (y += "先填", A = 4)) || (A = 9, z = x.n);
-                  }, s);
-                }
-              }));
-            }
-          })()
-        }, {
-          "key": b += "d",
-          "value": (() => {
-            for (var o, p, q = 3; q;) {
-              if (q < 2) return o;
-              q < 3 ? (p = bx(bC().m(function s(t, u) {
-                var w,
-                  x,
-                  y,
-                  z,
-                  A,
-                  B,
-                  C,
-                  D,
-                  E,
-                  F,
-                  G,
-                  H,
-                  I,
-                  J,
-                  K,
-                  L = 1;
-                if (L) return bC().w(function (M) {
-                  for (var O, P, Q, R, S, T, U, V, W, X, Y, Z, a0 = 58; a0;) if (a0 < 42) {
-                    if (a0 < 12) {
-                      if (a0 < 4) 2 < a0 ? a0 = 71 : a0 < 2 ? (T = "spli", a0 = 139) : B = I[(a0 = 144) - 143];else {
-                        if (7 < a0) {
-                          if (10 < a0) a0 = 23, U = "err";else {
-                            if (--a0 < 9) {
-                              if (a0++ < 8) return M.a((a0 += 62217 + --a0) - 62230);
-                              S = "kuaishou.api_";
-                              a0 = 57;
-                            } else a0 += 84, Q = "2ac2a76";
-                          }
-                        } else (a0 < 6 ? 4 < a0 || (a0 = 3 === V ? 114 : 41, 0) : (a0-- < 7 ? (a0 = 70, U = "error") : a0 = 0 === V ? 45 : 32, 0)) && (a0 = 158, W += "ett");
-                      }
-                    } else {
-                      if (31 < a0) (38 < a0 ? (a0 < 40 ? M.n = (a0 = 50) - 42 : --a0 < 40 ? (a0 = 113, U = "fe") : a0 = 4 === V ? 39 : 75, 1) : a0 < 35 && (a0 < 33 ? a0 -= 2 === V ? -83 : 28 : a0 < 34 ? (a0 += 92, P = "c") : a0 -= 7 === V ? -95 : -49, 1)) || (36 < a0 ? 37 < a0 ? a0 = "OK" != E.errorMsg ? 110 : 49 : (a0 = 36, W = "vid") : a0 = 35 < a0 ? (W += "e", 132) : 71);else {
-                        if (a0 < 22) a0 < 15 ? a0 < 13 ? (a0 += 84, P += "-") : 12 < --a0 ? (a0 = 7, V = M.n) : (a0 = 95, U = "kuaishou.api") : (19 < ++a0 ? a0-- < 21 || (21 < ++a0 ? (a0 += 47, W = "er") : (a0 = 44, G = this[W += "a"]), 0) : (17 < a0 ? a0 < 19 ? R += "6" : (W = "p", a0 = 60) : a0 < 17 ? (W += "g", a0 += 9) : (Z = "账号需要", a0 += 134), null)) && (a0 += 6 === V ? 137 : 15);else {
-                          if (28 < a0) 30 < a0 ? A = B[W += "it"]("_")[(a0 += 86) - 117] : a0 < 30 ? (a0 += 79, X = "i") : M.n = (a0 += 90 + --a0) - 142;else {
-                            if (26 < a0++) 28 < a0 ? (a0 += 97, W = "lo") : (F = this[W += "gn"], a0 = 78);else {
-                              if (a0 < 26) (a0 < 24 ? (console[W += "g"]((T += "[")[X += "t"](this[Y += "x"], R += " 了呢,原因")[P += "ncat"](E[U += "orMsg"], Z += "了")), a0 -= 2, 1) : a0 < 25 && (X = "conca", a0 = 134)) || (Z += "激", a0 = 131);else {
-                                if (26 < a0) return this[W += "ig3"](z, J, t, K);
-                                F = this[W += "n"];
-                                a0 = 105;
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  } else {
-                    if (122 < ++a0) {
-                      if (a0 < 133) 129 < a0 ? 131 < a0 ? (a0 -= 35, T = "conc") : a0 < 131 ? (a0 = 152, W = "l") : (a0 = 33, T = "账号") : (127 < a0 ? 128 < a0 || (a0 += 20, P += "o", 0) : ((a0-- < 126 ? 123 < a0 || (a0 < 123 ? (W += "o", a0 -= 100) : (a0 += 17, Y = "]  随机延迟"), 0) : (a0 < 126 ? (a0 -= 45, R = "]  获取cid失败 ❌") : (T = "账", a0 = 40), 0)) && (a0 = 87, W = "sp"), 0)) && (M.n = (a0 = 160) - 158);else {
-                        if (a0++ < 142) (140 < a0 ? 141 < a0 || (W = "spl", a0 -= 62, 0) : ((138 < a0 ? (139 < a0 ? z = E[W += "ds"][(a0 += 19) - 159][T += "d"][X += "eId"] : (a0 -= 97, W = "f"), 1) : a0 < 137 && (a0 < 135 ? (a0 = 109, K = W += "o") : a0 < 136 ? M.n = (a0 = 35) - 25 : (a0 -= 6, W = "l"), {})) || (137 < a0 ? W = "fee" : C = E[W += "ds"][(a0 -= 13) - 124][T += "p_tag"]), "")) && (a0 = 104, cc((W += "[")[T += "t"](this[X += "ndex"], Y += " ")[R += "oncat"](D, "秒")));else {
-                          if (151 < a0) {
-                            if (157 < --a0) {
-                              if (a0 < 160) {
-                                if (!(a0 < 159)) return this[W += "oken"](x);
-                                a0 -= 5;
-                                x = E[W += "orMsg"];
-                              } else {
-                                if (160 < a0) return bn(H, u);
-                                a0 -= 14;
-                                J = A;
-                              }
-                            } else (a0 < 154 ? (152 < a0 ? (console[W += "og"](E), a0 -= 20) : 151 < a0-- ? (a0 = 24, R = "conc") : (a0 -= 94, W = "gettoke"), 1) : 155 < a0++ && (157 < a0++ ? a0 = "INVALID_REQUEST" !== x ? 120 : 6 : (R += "a", a0 -= 94), {})) || (155 < a0 ? (X = "i", a0 = 155) : a0 += 6001 !== x ? -71 : -57);
-                          } else 149 < a0-- ? ++a0 < 151 ? (a0 = 101, X += "n") : (a0 -= 146, W = "g") : 146 < a0 ? a0 < 148 ? (W = "fe", a0 -= 88) : a0 -= 10 === V ? 140 : 45 : 144 < a0++ ? 146 < a0 ? M.p = (a0 = 74) - 65 : (W = "spl", a0 = 67) : 144 < a0-- ? (Z = "capt", a0 -= 33) : a0 = 143 < ++a0 ? (O = "rep", 61) : (X += "onc", 63);
-                        }
-                      }
-                    } else {
-                      if (a0 < 83) {
-                        if (73 < a0) a0 < 77 ? (a0 < 75 ? (a0 -= 19, Y = "k") : a0 < 76 && (w = M.v, a0 = 118)) || (a0 += 5 === V ? 31 : -57) : a0++ < 79 ? a0 = a0 < 79 ? (W += "ncDa", 89) : 71 : 81 < a0 ? a0 < 83 ? (Z = "账号需要激活", a0 = 100) : (a0 = 29, T += "onca") : a0++ < 81 ? M.p = (a0 -= ++a0 - 14) - 12 : (a0 = 46, W += "i");else {
-                          if (a0 < 54) {
-                            if (49 < a0) a0 < 52 ? 50 < a0 ? a0 += 20 : (a0 += 87, T = "ex") : 52 < a0++ ? A = B[W += "t"]("_")[a0 -= --a0] : (a0 -= 6, W = "wa");else {
-                              if (a0-- < 46) 43 < a0 ? (a0 = 27, W = "boxsi") : 42 < a0 ? (a0 = 9, X = "api.e.kuaishou.co") : (a0 += 93, W += "ee");else {
-                                if (++a0 < 48) 46 < a0 ? A = B[W += "t"]("_")[(a0 = 53) - 53][T += "t"]("/")[1] : a0 = 672 === t ? 88 : 105;else {
-                                  if (!(a0-- < 49)) return bw[W += "t"](D * ((a0 = 16444) - 15444));
-                                  W += "i";
-                                  a0++;
-                                }
-                              }
-                            }
-                          } else {
-                            if (a0 < 64) {
-                              if (60 < a0) a0 < 62 ? (W += "os", a0 = 68) : 62 < a0 ? (a0 -= 9, X = "creati") : H = {
-                                "method": W += "t",
-                                "url": T += "ttps://api.e.kuaishou.cn/rest/e/reward/mixed/ad",
-                                "headers": {
-                                  "Host": X += "m",
-                                  "Connection": Y += "alive",
-                                  "User-Agent": R += ".0",
-                                  "Accept-Language": P += "cn",
-                                  "Cookie": (U += "_st=") + this[Z += "k"][(a0 = 128) - 127][O += "lace"](S += "=", "")
-                                },
-                                "form": {
-                                  "encData": G,
-                                  "sign": F,
-                                  "client_key": Q += "d"
-                                }
-                              };else {
-                                if (a0 < 57) 55 < a0 ? (P = "zh", a0 -= 44) : a0-- < 55 ? (W = "spl", a0 -= 22) : (X += "v", a0 = 136);else {
-                                  if (a0 < 59) {
-                                    if (--a0 < 57) return this[W += "n"](x);
-                                    R = "kwai-android aegon/3.5";
-                                    a0 = 10;
-                                  } else 59 < a0 ? (y = E[W += "edType"], a0 += 39) : a0 = 14;
-                                }
-                              }
-                            } else 70 < a0 ? a0 < 72 ? (W = "账号", a0 = 16) : a0 < 73 ? a0 = 58 : (W += "cDat", a0 -= 53) : 68 < a0 ? --a0 < 69 ? (Y += "eep-", a0 = 142) : (a0 = 157, W += "r") : 66 < a0-- ? a0 < 67 ? a0 -= 9 === V ? -79 : -81 : (W += "i", a0 -= 15) : 64 < a0++ ? a0 += 5 : 65 < ++a0 ? (a0 += 61, Y = "]  获取cid失败 ❌ 了呢,原") : (a0 = 116, P += "c");
-                          }
-                        }
-                      } else 114 < ++a0 ? a0 < 118 ? (116 < a0 ? (a0 += 4, E = M.v, 1) : a0++ < 116 && (a0 += 3, Y = "ind")) || (P = "con", a0 -= 89) : (a0 < 120 ? (a0 < 119 ? console[W += "g"]((T += "[")[X += "at"](this[Y += "ex"], R += " ")[P += "at"](E[U += "eds"][(a0 -= 80) - 38][Z += "ion"])) : (T = "a", a0 -= 57), 1) : a0 < 122 && (++a0 < 122 ? (a0 = 94, W = "lo") : (a0 = 92, R = "]"), 1)) || (122 < a0 ? D = c6((a0 -= a0-- - 91) - 61, 60) : M.n = (a0 = 77) - 70) : (104 < a0 ? 111 < a0 || (a0 < 108 ? a0 < 106 ? a0 = 71 : a0 < 107 ? M.n = (a0 -= 55) - 48 : a0 -= 606 === t ? 22 : 29 : 110 < ++a0 ? a0-- < 112 ? (a0 = 123, R = "c") : M.n = (a0 = 86) - 82 : 109 < a0 ? (a0 = 11, Y = "inde") : (a0 -= 28, T = "c"), 0) : ((94 < a0 ? (a0 < 98 ? a0 < 96 ? (a0 -= 22, S += "st") : 97 < ++a0 ? (T = "h", a0 -= 55) : (a0 -= 89, console[W += "g"](w)) : (a0 < 100 ? 98 < a0 || (a0 = 17, Z = "c", 0) : void (++a0 < 103 ? a0 < 102 ? M.n = (a0 = 150) - 144 : a0 += 0 !== y ? 0 : -65 : (104 < a0-- ? (M.n = (a0 = 65) - 61, []) : 102 < a0-- && (a0 = 30, cc((W += "[")[T += "at"](this[X += "dex"], Y += "因")[R += "t"](bZ)[P += "ncat"](E[U += "Msg"], Z += "活了")), 1)) || (P += "o", a0 += 21))) && (P = "c", a0 = 154), 1) : a0++ < 87 && (86 < a0 ? M.n = 3 + (a0 = 3) : a0 < 86 ? (W += "号", a0 = 106) : a0 -= 8 === V ? -47 : 20, {})) || (a0 < 90 ? 88 < a0 ? (W = "s", a0 = 26) : (W = "boxen", a0 = 72) : a0 < 92 ? 90 < a0++ ? (W = "e", a0 = 76) : (a0 -= 89, I = C[W += "lit"]("/")) : a0 < 94 ? a0 < 93 ? (G = this[W += "ta"], a0 -= 2) : (W = "si", a0 = 15) : a0 < 95 ? (W = "账", a0 = 82) : (a0 += 48, X = "c")), 0)) && (a0++ < 113 ? M.n = (a0 = 112) - 107 : a0 < 115 ? (a0 += 27, T += "号") : a0 -= 44);
-                    }
-                  }
-                }, s, this, [[(L = 30154) - 30153, 9]]);
-              })), q = 1) : (o = function (t, u) {
-                for (var w, x = 1; x;) if (x < 2) x++, w = "app";else {
-                  if (!(x < 3)) return p[w += "y"](this, arguments);
-                  x++;
-                  w += "l";
-                }
-              }, q--);
-            }
-          })()
-        }, {
-          "key": l += "ad",
-          "value": (() => {
-            for (var o, p, q = 3; q;) if (2 < q) q--, o = function (r, s, t, u, v) {
-              for (var w, x = 3; x;) {
-                if (x < 2) return p[w += "y"](this, arguments);
-                x < 3 ? (x = 1, w += "l") : (x = 2, w = "app");
-              }
-            };else {
-              if (q-- < 2) return o;
-              p = bx(bC().m(function r(s, t, u, v, w) {
-                var y,
-                  z,
-                  A,
-                  B,
-                  C,
-                  D = 1;
-                if (D) return bC().w(function (F) {
-                  for (var H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, a0, a1 = 31; a1;) if (a1 < 27) {
-                    if (19 < a1--) {
-                      if (a1++ < 21) 20 < a1 ? F.n = (a1 += 36) - 52 : (console[S += "og"]((X += "[")[J += "cat"](this[R += "x"], I += "宝箱获得金币:")[H += "t"](B[V += "a"][U += "unt"])), a1 -= 8);else {
-                        if (a1 < 23) console[S += "g"](y), a1 = 24;else {
-                          if (a1 < 24) a1 += 20, I += "s";else {
-                            if (25 < a1) C = {
-                              "method": S += "t",
-                              "url": (X += "uaishou.com/rest/r/ad/task/report?")[J += "t"](this[R += "ry"], I += "ig=")[H += "ncat"](s, V += "_NS_sig3=")[U += "at"](t, W += "okensig=")[Z += "at"](u),
-                              "headers": {
-                                "Host": K += "n",
-                                "User-Agent": M += "6.0",
-                                "Cookie": (P += "ou.api_st=") + this[O += "k"][(a1 = 11) - 10][N += "ace"](Y += "u.api_st=", ""),
-                                "page-code": L += "NTER",
-                                "Content-Type": Q += "tion/x-www-form-urlencoded",
-                                "X-Client-Info": a0 += "-score=33;network=WIFI;"
-                              },
-                              "body": v
-                            };else {
-                              if (a1 < 25) return F.a((a1 = 39225) - 39223);
-                              H += "nca";
-                              a1 = 20;
-                            }
-                          }
-                        }
-                      }
-                    } else (++a1 < 8 ? a1 < 3 || (4 < a1 ? 6 < a1 ? a1 -= 6 === T ? 1 : -56 : a1 < 6 ? a1 = 5 === T ? 48 : 7 : F.p = (a1 += 89) - 89 : 3 < a1 ? (N = "repl", a1 = 1) : (a1 += 76, R = "]  奖"), 0) : (13 < a1 ? (a1 < 16 ? (a1 < 15 ? (a1 += 36, a0 += "ndroid;nqe") : a1 += 50, {}) : a1-- < 17 && (U = "con", a1 = 45)) || (16 < a1 ? 17 < a1 ? (a1--, B = F.v) : (S = "pos", a1 = 37) : a1 -= 1 != B.result ? -58 : -35) : (a1 < 10 ? 9 < ++a1 || (V = "&_", a1 += 26, 0) : (11 < a1 ? --a1 < 12 ? a1 -= B.data.neoAmount < 100 ? -65 : -28 : (H = "co", a1 = 23) : 10 < a1 ? F.n = (a1 = 49) - 48 : (a1 = 16, P = "kuaish"), 0)) && (M += "ndroid aegon/3.5", a1 += 49), null)) && (1 < a1 ? F.p = (a1 += 16) - 18 : (U += "c", a1 += 70));
-                  } else {
-                    if (a1 < 52) {
-                      if (a1-- < 34) (a1 < 28 ? a1 < 27 || void (a1 = 2 === T ? 21 : 60) : (29 < a1 ? (31 < a1 ? (a1 -= 1 === T ? 13 : 4, []) : --a1 < 30 && (a1 += 12, 1)) || (a1 -= 4, J += "ca") : 28 < a1 ? a1 += 500 != B.result ? 35 : 63 : (I = "]  开", a1 += 61), 0)) && (a1 = 73, H = "resu");else {
-                        if (44 < a1) {
-                          if (48 < a1) a1 < 50 ? (I = "&", a1 = 13) : (V = "da", a1 += 11);else {
-                            if (47 < a1) return bn(C, w);
-                            a1 < 47 ? ++a1 < 47 ? (a1 += 54, S = "get") : (a1 += 8, J = "con") : F.n = (a1 += 9 + --a1) - 95;
-                          }
-                        } else 38 < a1 ? (--a1 < 40 ? a1 < 39 || (T = F.n, a1 = 52, 0) : (41 < a1 ? a1 < 43 ? (a1 += 51, S += "号") : (O = "c", a1 -= 39) : 40 < a1 ? (a1 = 32, K += "hou.c") : (a1 = 101, J = "con"), 0)) && (K = "api.e.kuais", a1 += 31) : 36 < a1-- ? a1 < 37 ? (a1 = 99, J = "in") : (S = "d", a1 += 31) : (++a1 < 35 ? (33 < a1 ? (a1 = 9, W = "&__NS_xfalcon=&__NSt") : (a1 = 86, S = "ge"), 1) : a1 < 36 && (a1 += 12, Y += "o", 1)) || (a1 = 66, R = "que");
-                      }
-                    } else {
-                      if (76 < a1) {
-                        if (a1 < 84) (80 < a1 ? 82 < a1 || void (81 < a1 ? (R = "inde", a1 -= 57) : (S = "账", a1 = 44)) : (--a1 < 78 ? a1 < 77 ? (a1 = 48, console[S += "og"](B)) : a1 = 0 !== this.j || 0 !== B.data.neoAmount ? 94 : 87 : ++a1 < 80 ? (a1 -= 21, J += "de") : (a1 += 3, X += "mo"), "")) && (A = B[S += "ata"][X += "unt"], a1 -= 5);else {
-                          if (95 < a1) {
-                            if (99 < a1) {
-                              if (a1 < 101) return this[S += "token1"](A);
-                              101 < a1 ? a1 = 65 : (a1 -= 48, V += "t");
-                            } else (a1 < 98 ? a1 < 97 || (X += "ca", void (a1 -= 70)) : (98 < a1 ? (a1 -= 2, X = "con") : (S = "lo", a1 = 22), null)) && (I += "nca", a1 -= 58);
-                          } else {
-                            if (89 < a1) (a1 < 92 ? (--a1 < 90 ? (S = "l", a1 -= 12) : a1 = 65, 1) : 93 < a1 && (a1 < 95 ? F.n = (a1 = 72) - 70 : (y = F.v, a1 = 98), [])) || (92 < a1 ? (a1 += 3, I = "co") : F.n = (a1 -= ++a1 - 35) - 30);else {
-                              if (87 < a1) a1 = 88 < a1 ? (H = "co", 84) : (process[S += "it"](), 39);else {
-                                if (86 < a1--) F.n = (a1 = 46) - 44;else {
-                                  if (a1 < 85) {
-                                    if (83 < a1) return this[S += "token"](z);
-                                    a1 = 82;
-                                    U = "neoAmo";
-                                  } else S += "t";
-                                }
-                              }
-                            }
-                          }
-                        }
-                      } else (70 < a1 ? ((74 < a1 ? (75 < a1 ? (S = "ex", a1 += 12) : (a1 -= 45, z = B[S += "sult"]), 1) : a1 < 73 && (++a1 < 73 ? (a1 = 56, M = "kwai-a") : a1 = 65, 1)) || (73 < a1 ? F.n = (a1 = 15) - 12 : (H += "l", a1 = 3)), 1) : a1 < 59 && ((55 < a1 ? ((a1 < 57 ? (a1 -= 48, L = "NEW_TASK_CE") : a1 < 58 && (a1 = 65)) || (a1 = 62, cc((S += "[")[X += "t"](this[J += "x"], R += "励失败 ❌ 了呢,原因")[I += "t"](B[H += "t"]))), {}) : a1-- < 54 && (51 < a1 ? (a1 -= 23, X = "账号") : a1 = 0 === T ? 2 : 33, 1)) || (53 < a1++ ? (Z = "conc", a1--) : (a0 = "model=V2049A;os=A", a1 -= 40)), 1)) || (64 < a1-- ? a1 < 66 || ((66 < --a1 ? (66 < --a1 ? a1 = 65 : (Y = "kuaish", a1 -= 30), {}) : a1 < 66 && (a1 = 4 === T ? 90 : 5, 1)) || (X = "neoA", a1 = 80), 0) : ((a1 < 60 ? 58 < a1 || (a1 = 40, X = "https://api.e.k", 0) : ((a1 < 61 ? (a1 = 42, S = "l") : 62 < ++a1 && (a1 < 64 ? a1 += 7 === T ? -39 : 7 : F.n = (a1 += a1-- - 37) - 87, {})) || (a1 = 75, S = "re"), null)) && (a1 -= 3 === T ? -22 : -8), "")) && (a1 < 65 ? a1 -= 33 : (Q = "applica", a1 -= 55));
-                    }
-                  }
-                }, r, this, [[(D = 61475) - 61475, 6]]);
-              }));
-            }
-          })()
-        }, {
-          "key": h += "d",
-          "value": (() => {
-            for (var o, p, q = 3; q;) {
-              if (q < 2) return p;
-              2 < q ? (q = 2, p = function (r, s, t, u, v) {
-                for (var x, y = 1; y;) {
-                  if (1 < y) return o[x += "ly"](this, arguments);
-                  y = 2;
-                  x = "app";
-                }
-              }) : (q = 1, o = bx(bC().m(function r(s, t, u, v, w) {
-                var x,
-                  y,
-                  z,
-                  A,
-                  B = 1;
-                if (B) return bC().w(function (C) {
-                  for (var E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y = 1; Y;) if (74 < ++Y) {
-                    if (93 < Y) {
-                      if (97 < Y) T = "ku", Y -= 90;else {
-                        if (96 < Y) Q = "lo", Y -= 62;else {
-                          if (!(Y < 96)) return C.a((Y = 12498) - 12496);
-                          94 < Y ? (Q += "l", Y -= 18) : (cc((Q += "号[")[S += "at"](this[M += "x"], R += "因")[U += "t"](z[O += "t"])), Y -= 16);
-                        }
-                      }
-                    } else (87 < Y ? 91 < Y || void ((90 < Y ? (Y -= 33, S += "号", 1) : 89 < Y++ && (R += ",原", Y -= 10, 1)) || (89 < Y ? y = {
-                      "method": Q += "t",
-                      "url": (S += "sk/report?")[M += "at"](this[R += "ery"], U += "sig=")[O += "t"](s, W += "_NS_sig3=")[H += "at"](t, L += "NStokensig=")[X += "cat"](u),
-                      "headers": {
-                        "Host": I += "ishou.cn",
-                        "User-Agent": J += "56.0",
-                        "Cookie": (E += "st=") + this[K += "k"][(Y = 84) - 83][F += "ace"](T += "aishou.api_st=", ""),
-                        "page-code": V += "NTER",
-                        "Content-Type": G += "w-form-urlencoded",
-                        "X-Client-Info": P += "=WIFI;"
-                      },
-                      "body": v
-                    } : R = "]  奖励失败 ❌ 了呢")) : (81 < Y ? 85 < Y ? 86 < Y ? (O = "conca", Y = 62) : Y += 1 === N ? -15 : -47 : 84 < Y ? C.n = (Y = 60) - 59 : 83 < Y ? (this[Q += "dEnd"] = !0, Y = 91) : 82 < Y ? (console[Q += "g"]((S += "[")[M += "oncat"](this[R += "ex"], U += ":")[O += "ncat"](z[W += "a"][H += "t"])), Y = 34) : (Y += 11, M += "nde") : 78 < Y ? (80 < Y ? (L += "&__", Y = 59) : Y < 80 && (Q = "resu", Y = 94)) || (Y -= 42, O = "res") : Y < 77 ? 75 < Y ? (Y = 96, x = C.v) : (Y += 13, E = "kuaishou.api_") : 77 < Y ? (Y -= 37, A = z[Q += "t"]) : Y += 4 === N ? -13 : -22, null)) && (Y < 93 ? (Q = "lo", Y -= 79) : (Y -= 23, Q += "ttok"));
-                  } else {
-                    if (50 < Y) {
-                      if (69 < Y) {
-                        if (73 < Y) Y = 5, L = "&__NS_xfalcon=";else {
-                          if (72 < Y) Y = 32, Q = "ex";else {
-                            if (71 < Y) z = C.v, Y -= 61;else {
-                              if (!(Y++ < 71)) return this[Q += "en"](A);
-                              C.n = (Y -= 42) - 26;
-                            }
-                          }
-                        }
-                      } else {
-                        if (63 < Y) (67 < Y ? (68 < Y ? (Y += 14, Q = "a") : (Q = "dat", Y = 56), 1) : 67 < ++Y && (Q += "s", Y = 80)) || (Y < 67 ? 65 < Y ? C.n = (Y -= Y++ - 49) - 43 : (Y += 32, S = "https://api.e.kuaishou.com/rest/r/ad/ta") : Y -= 6 === N ? -28 : 20);else {
-                          if (--Y < 57) (53 < Y ? (54 < --Y ? (Y -= 5, S = "awardAm") : 53 < Y ? Y -= 5 === N ? 37 : -11 : (U += "广告获得金额", Y -= 31), 1) : 52 < Y && (O += "ul", Y = 87)) || (Y < 52 ? Y < 51 || (Y = 28, O = "c", null) : (Y = 3 === N ? 33 : 76, "")) && (Y = 42, this.j = z[Q += "a"][S += "ount"]);else {
-                            if (60 < Y++) 62 < Y-- ? (Y -= 37, P = "model=V2049A;os=Android;nqe-score=33;network") : Y = 57;else {
-                              if (60 < Y) return bn(y, w);
-                              Y < 60 ? 58 < Y-- ? (Y -= 7, W += "at") : Y -= 56 : (Y = 15, G = "application/x-ww");
-                            }
-                          }
-                        }
-                      }
-                    } else ++Y < 28 ? 21 < Y ? (25 < Y ? (26 < Y ? (M = "conc", Y = 16) : (++Y, V = "NEW_TASK_CE"), 1) : Y < 24 && (23 < ++Y ? (Y = 30, U = "]  看") : (I += ".e.kua", Y -= 14), 1)) || (Y < 25 ? (Y += 58, O += "o") : (Y = 7, R = "in")) : 15 < Y ? --Y < 17 ? Y < 16 ? C.n = (Y += 4) - 16 : (Y += 28, F = "repl") : Y++ < 18 ? (Q = "po", Y = 12) : 19 < Y ? 20 < Y ? (Y += 71, Q = "ge") : Y = 57 : C.p = (Y = 75) - 70 : (9 < Y ? ((13 < Y ? (Y < 15 ? (R = "qu", Y = 63) : (console[Q += "g"](z), Y += 49), {}) : 12 < Y && (Y -= 1 != z.result ? -35 : -18, 1)) || (--Y < 11 ? 9 < Y++ ? (H = "con", Y += 55) : (Y += 63, U = "&") : (J = "kwai-android aegon/3.", Y += 26)), 1) : --Y < 4 && (Y < 3 ? Y -= 0 : (Y = 6, N = C.n), 1)) || (Y < 5 ? (Y = 90, Q = "lo") : Y < 6 && (X = "c", Y = 40)) || (Y < 7 ? (K = "c", Y = 24) : Y < 8 ? Y -= 0 === N ? -38 : -78 : (S = "账", Y -= 5)) : (Y-- < 35 ? Y < 29 || ((Y < 30 ? (M = "c", Y = 21) : Y < 31 && (Y += 27, 1)) || (32 < Y ? (Y += 34, process[Q += "it"]()) : 31 < Y ? (Y -= 9, W = "d") : (Y = 46, R += "d")), null) : ((Y < 40 ? Y < 36 || ((37 < Y ? 38 < Y || (I = "api", void (Y = 20)) : (36 < Y ? (Y = 26, Q = "账") : (Y += 59, console[Q += "g"](x)), 0)) && (Y += 4, S = "conc"), 0) : ((Y < 46 ? ((Y < 42 ? (40 < Y ? (X += "on", Y = 10) : Y -= 2 === N ? 4 : -12, 1) : 43 < Y && (44 < Y ? (H += "c", Y += 29) : (U = "conca", Y = 53), 1)) || (Y < 43 ? Y -= 500 != z.result ? -27 : 28 : C.n = (Y = 18) - 14), {}) : Y < 48 && (46 < Y++ ? (Y = 54, H = "neoAmoun") : C.p = (Y = 86) - 86, 1)) || (Y < 49 ? Y += 9 : 49 < Y ? Y += 7 : C.n = (Y += --Y - 36) - 59), 0)) && (34 < Y ? Y -= z.data.neoAmount < 500 ? -37 : -32 : Y = 1003 === z.result ? 68 : 91), 0)) && (27 < Y ? (W = "&_", Y -= 24) : (Y = 79, M = "i"));
-                  }
-                }, r, this, [[(B = 19495) - 19495, 5]]);
-              })));
-            }
-          })()
-        }]);
-        m = 3;
-        k = "e";
-      } else 2 < m ? (l = "bo", m = 2) : 1 < m ? (b = "ci", m--) : (l += "x", m = 4);
-    }
-  }
-})(), 1)) || (--cf < 84 ? (cf = 79, bO = "e") : cf < 85 ? (bs = void 0, cf -= 7) : (bC = (a => {
-  for (var f, g, h = 3; h;) if (3 < --h) g += "Str", h = 1;else {
-    if (2 < h) return f;
-    2 < ++h ? (--h, f = function () {
-      for (var l, m = 1; m;) if (2 < m) --m, l += "pp";else {
-        if (1 < m) return a[l += "ly"](this, arguments);
-        l = "a";
-        m = 3;
-      }
-    }) : 1 < h ? (h = 5, g = "to") : (h += 3, f[g += "ing"] = function () {
-      for (var l, m = 1; m;) {
-        if (!(m < 2)) return a[l += "ng"]();
-        l = "toStri";
-        m = 2;
-      }
-    });
-  }
-})(function () {
-  for (var b, f, g, h, j, k, l, m, n, o, p, q, r, s, t, u, v, w = 10; w;) if (31 < w--) {
-    if (37 < w++) w < 41 ? 40 < ++w ? (w = 20, p += "o") : (n = "toStringT", w = 19) : 41 < w ? (w -= 30, o = "@@to") : (w = 9, bB(f, k, p += "or"));else {
-      if (w < 35) {
-        if (w < 33) return (bC = function () {
-          for (;;) {
-            return 1, {
-              "w": j,
-              "m": b
-            };
-          }
-        })();
-        33 < w ? (bB(f, p += "g", function () {
-          for (var y, z = 3; z;) if (2 < z) --z, y = "[obje";else {
-            if (z < 2) return y + "nerator]";
-            z = 1;
-            y += "ct Ge";
-          }
-        }), w -= 2) : (p += "o", w = 31);
-      } else 36 < w ? w < 38 ? (w -= 7, p = "construct") : (p = "proto", w = 22) : 35 < w ? (g[p += "ype"] = u, w++) : (w = 29, l = (v = (p += "tion") == typeof Symbol ? Symbol : {})[q += "r"] || (m += "ator"), k = v[n += "ag"] || (o += "StringTag"));
-    }
-  } else (20 < w ? ((26 < --w ? ((w < 28 ? (w = 11, h = {}) : w < 29 && (w -= 23, bB(f, p += "or", u), {})) || (bB(u, k, p += "n"), w -= 11), 1) : w < 23 && (w-- < 21 ? (w += 17, p += "t") : 20 < w ? q = "GeneratorFunct" : (w += 6, m = "crea"), 1)) || (w < 25 ? w < 24 ? (p = "prototyp", w = 17) : (q += "totyp", w++) : 24 < --w ? (q = "pro", w = 23) : (t = function () {}, w = 7)), []) : 10 < w && ((w < 14 ? 11 < --w || (w++ < 11 ? (w += 28, p = "func") : (w += 23, m += "r"), 0) : (17 < w ? w < 19 ? (m = "@@ite", w -= 3) : 19 < w ? (p = "displayNam", w = 8) : (bB(u, p += "r", g), w = 24) : (w < 16 ? w < 15 || (p = "GeneratorFuncti", void (w += 18)) : (16 < w ? (w -= 13, bB(f)) : (v = [][l] ? s(s([][l]())) : (bB(s = {}, l, function () {
-    for (;;) {
-      return 1, this;
-    }
-  }), s), f = u[p += "e"] = t[q += "e"] = Object[m += "te"](v), w += 22), 0)) && (w = 13, q = "iterato"), 0)) && (p = "toStrin", w += 22), [])) || (++w < 4 ? (2 < w-- ? (w = 28, s = Object[p += "f"]) : 0 < w ? (g = function () {}, w = 27) : (p += "O", w += 3), 1) : 7 < w && ((w-- < 10 ? w < 8 || (w = 14, bB(f, l, function () {
-    for (;;) {
-      return 1, this;
-    }
-  }), 0) : (9 < w ? (p = "getPrototype", w = 1) : (b = function (y) {
-    for (var A, B, C, D, E = 4; E;) if (10 < E) 13 < E ? (A = "setPrototype", E -= 8) : E-- < 13 ? E++ < 11 ? (E = 5, y[D += "totype"] = Object[A += "reate"](f)) : E -= 10 : (E = 1, B = "__pr");else {
-      if (E < 5) E < 3 ? 1 < E ? (E += 7, A = "c") : (E = 14, D = "setPr") : E < 4 ? (Object[A += "Of"](y, u), E += 9) : (E += 3, C = "Ge");else {
-        if (7 < E) (9 < E ? (E = 8, y[B += "oto__"] = u, 1) : E < 9 && (bB(y, k, C += "ratorFunction"), E = 2)) || (D = "pro", E += 2);else {
-          if (E < 6) return y;
-          E < 7 ? E = Object[D += "ototypeOf"] ? 3 : 10 : (E += 6, C += "ne");
-        }
-      }
-    }
-  }, w -= 3), 0)) && (g[p += "e"] = q += "ion", w = 16), [])) || (5 < w ? (w < 7 ? (w -= 4, u = function () {}) : (w += 35, j = function (y, z, A, B) {
-    for (var D, E, F, G, H = 6; H;) if (++H < 5) (H < 3 ? (H += 5, D = "_i") : --H < 3 && (H += 3, D = "pro")) || (G = z && z[D += "ype"] instanceof t ? z : t, G = Object[F += "e"](G[E += "e"]), H = 1);else {
-      if (8 < H) return G;
-      (H < 7 ? 6 < ++H || (F = "creat", H = 3, 0) : (H < 8 ? (H -= 5, E = "prototyp") : bB(G, D += "nvoke", ((K, L, M) => {
-        for (var O, P, Q, R, S, T, U, V, W, X = 4; X;) if (4 < ++X) X = 3, W = function (Y, Z) {
-          for (var a1, a2, a3, a4, a5 = 11; a5;) if (a5 < 5) (a5 < 3 ? (1 < a5 ? a5 = 6 : a5 = 3 < Y ? 7 : 5, 1) : 3 < a5 && (a5 = 14)) || (a5 -= 2, a2 = O[s], a1 = V.p, a4 = a2[2]);else {
-            if (10 < a5) {
-              if (13 < a5) a5 = 2, s++;else {
-                if (12 < a5) a5 += a3 || 1 < Y ? -1 : -4;else {
-                  if (!(a5++ < 12)) return h;
-                  P = Y;
-                  a5 -= 2;
-                }
-              }
-            } else (a5 < 8 ? 6 < a5 || ((a5 < 6 ? (a5 = 14, a2[0] <= a1) : (a5 += !U && T && !a3 && s < O.length ? -3 : 7, "")) && ((a3 = Y < 2 && a1 < a2[1]) ? (P = 0, V.v = Z, V.n = a2[1]) : a1 < a4 && (a3 = Y < 3 || a2[0] > Z || a4 < Z) && (a2[4] = Y, a2[5] = Z, V.n = a4, P = 0)), 0) : void (a5 < 9 ? s = (a5 = 6) - 6 : ++a5 < 11 ? (a5 = 0, (() => {
-              throw U = !0, Z;
-            })()) : (S = Z, a5 -= 3))) && (a5 -= 3, a3 = a4 === Z) && (P = a2[4] || 3, S = a2[5] === r ? a2[3] : a2[5], a2[4] = 3, a2[5] = r);
-          }
-        };else {
-          if (X < 4) {
-            if (!(X < 3)) return function (Y, Z, a0) {
-              for (var a2, a3, a4 = 2; a4;) if (a4++ < 4) {
-                if (a4 < 3) {
+          },
+          _0x4e61a4 = function (_0x4912be) {
+            var _0x42e02d = this;
+            _0x42e02d._d || (_0x42e02d._d = !0, _0x42e02d = _0x42e02d._w || _0x42e02d, _0x42e02d._v = _0x4912be, _0x42e02d._s = 2, _0x42e02d._a || (_0x42e02d._a = _0x42e02d._c.slice()), _0x23d43c(_0x42e02d, !0));
+          },
+          _0x932a8d = function (_0x57673f) {
+            var _0x271ddf,
+              _0x2a8671 = this;
+            if (!_0x2a8671._d) {
+              _0x2a8671._d = !0;
+              _0x2a8671 = _0x2a8671._w || _0x2a8671;
+              try {
+                if (_0x2a8671 === _0x57673f) throw _0x18046a("Promise can't be resolved itself");
+                (_0x271ddf = _0x4d7636(_0x57673f)) ? _0x8c9733(function () {
+                  var _0x2eec3c = {
+                    "_w": _0x2a8671,
+                    "_d": !1
+                  };
                   try {
-                    for (var a4 = 11, a5 = 3; a4;) if (17 < ++a4) {
-                      if (21 < a4) (a4 < 23 ? (a4 = 0, a5 = 11) : 23 < a4 && (a2 += "a ", a4 = 17)) || (a4 -= 3, Q = r);else {
-                        if (20 < a4) a4 -= 21;else {
-                          if (18 < --a4) return s;
-                          a4-- < 18 ? a3 = "'" : (a2 += " result is not an objec", a4 -= 4);
-                        }
-                      }
-                    } else {
-                      if (12 < a4 ? a4 < 15 || void ((a4 < 16 ? (a4 = 12, 1 === P) : ((a4 < 17 ? (a4 -= 12, P < 2) : (P < 2 && (S = TypeError((a2 += "'") + Y + (a3 += " method")), P = 1), a4 = 22, 0)) && (P = 0), 0)) && (s = Q[a2 += "n"]) && s[a3 += "all"](Q)) : void (a4 < 8 ? (a4 < 4 ? a4 < 3 || (S = s[a2 += "e"], a4 += 12, 0) : void (6 < ++a4 ? ++a4 < 9 ? a4 -= (s = (U = V.n < 0) ? S : K.call(L, V)) !== h ? -13 : 8 : (a2 = "iterator", a4 += 9) : a4 < 6 ? (a2 = "valu", a4 -= 3) : a4 = 22)) && (a3 = "c", a4 = 14) : 11 < a4 ? (T = 2, a4 = Q ? 8 : 5) : a4 < 10 ? 8 < a4++ ? a4 -= (s = Q[Y = P ? Y : "next"]) ? 3 : 0 : a4 -= (s = s.call(Q, S)) ? 0 : 3 : 10 < a4 ? (a2 = "retur", a4 = 1) : a4 += s.done ? -7 : 9)) {
-                        if (a4 < 14) a2 = "The iterator does not provide ", a4 = 23;else {
-                          a4 = 9;
-                          throw TypeError(a2 += "t");
-                        }
-                      }
-                    }
-                  } catch (a8) {
-                    for (a4 = 3; a4;) 2 < a4 ? (a4--, Q = r) : a4 < 2 ? (S = a8, --a4) : P = --a4;
-                  } finally {
-                    for (a4 = 1; a4;) T = 1 + --a4;
+                    _0x271ddf.call(_0x57673f, _0x2ec1d4(_0x932a8d, _0x2eec3c, 1), _0x2ec1d4(_0x4e61a4, _0x2eec3c, 1));
+                  } catch (_0x50e272) {
+                    _0x4e61a4.call(_0x2eec3c, _0x50e272);
                   }
-                  a4 = a5;
-                } else a4 < 4 ? a4 -= 1 < T ? -1 : -3 : a4 += 6;
-              } else {
-                if (a4-- < 7) a4 = 4 < a4 ? (P = Z, 7) : (a2 = "Generator is al", 8);else {
-                  if (7 < a4) {
-                    if (a4 < 10) {
-                      if (8 < a4) Q || (P ? P < 3 ? (1 < P && (V.n = -1), W(P, S)) : V.n = S : V.v = S), a4 -= 8;else {
-                        throw TypeError(a2 += "ready running");
-                        a4 = 6;
-                      }
-                    } else {
-                      if (10 < a4) return {
-                        "value": s,
-                        "done": U
-                      };
-                      a4 = (s = P < 2 ? r : S) || !U ? 9 : 11;
-                    }
-                  } else ++a4 < 8 ? (U && 1 === Z && W(Z, a0), a4 = 5) : (a4 = 10, S = a0);
-                }
-              }
-            };
-            O = M || [];
-            U = !1;
-            V = {
-              "p": T = 0,
-              "n": 0,
-              "v": r,
-              "a": W,
-              "f": W[R += "d"](r, 4),
-              "d": function (Y, Z) {
-                for (var a1 = 5; a1;) if (a1 < 3) {
-                  if (a1 < 2) return h;
-                  V.n = Z;
-                  a1--;
-                } else a1 < 4 ? (S = r, a1--) : 4 < a1 ? (Q = Y, a1--) : P = (a1 = 3) - 3;
-              }
-            };
-          } else X = 1, R = "bin";
-        }
-      })(y, A, B), !0), "")) && (H = 4, D += "tot");
-    }
-  }), 1) : 4 < w && (p = "construct", w = 40)) || (p = "Generat", w += 37);
-}), cf = 35)), {}) : 75 < cf-- && ((78 < cf ? (bu = void 0, --cf, 1) : 77 < cf && (cf = 36, bQ = "ca")) || (76 < cf ? (bu = [], cf = 75) : 76 < ++cf ? bs = (cf = 12) - 12 : (c2 = void 0, cf -= 14)), [])) || (68 < --cf ? cf < 71 || (72 < cf ? (cf -= 36, bt = void 0) : cf++ < 72 ? (c0 = require(bO += "s"), cf = 57) : c1 = (cf = 43) - 43, 0) : ((cf < 65 ? 63 < cf || (bE = function (a, b) {
-  for (var g, h, j, k, l, m, n, o, p, q, r, s = 2; s;) if (7 < s) {
-    if (!(8 < s)) return h;
-    s += null != m ? -2 : -9;
-  } else {
-    if (s < 4) (s < 2 ? (s = 6, p = "i") : 2 < s && (s -= 2, o = "@@iterato")) || (s = 3, n = "und");else {
-      if (s < 6) {
-        if (s < 5) m = null == a ? null : (n += "efined") != typeof Symbol && a[Symbol[p += "or"]] || a[o += "r"], s += 5;else {
-          try {
-            for (var s = 8, t = 8; s;) if (7 < s++) s -= (j = (m = m.call(a)).next, 0 === b ? 3 : 5);else {
-              if (6 < s++) s = s < 9 ? Object(m) !== m ? 2 : 1 : 0;else {
-                if (5 < s) s -= !(6 < s) && ((g = (l = j.call(m)).done) || (h.push(l.value), h.length === b)) ? 6 : 3;else {
-                  if (s-- < 4) g = !((s += 5) - 6);else {
-                    if (s < 4) return;
-                    g = !0;
-                    s = 5;
-                  }
-                }
-              }
-            }
-          } catch (v) {
-            for (s = 1; s;) 1 < s ? (s -= 2, k = v) : r = !(++s - 2);
-          } finally {
-            for (s = 1; s;) {
-              try {
-                for (var s = 1, u = 0; s;) {
-                  if (1 < s) return;
-                  s = g || null == m.return || (q = m.return(), Object(q) === q) ? 0 : 2;
-                }
-              } finally {
-                for (s = 2; s;) if (s < 2) throw k;else s += r ? -1 : -2;
-              }
-              s = u;
-            }
-          }
-          s = t;
-        }
-      } else 6 < s ? (h = [], r = !(g = !0)) : p += "terat", s -= 2;
-    }
-  }
-}, cf -= 3, 0) : ((cf < 66 ? (cf -= 10, bT = function (a, b) {
-  for (var g, h, j, k, l, m, n, o = 3; o;) if (o++ < 6) {
-    if (o < 4) {
-      if (!(1 < --o)) return {};
-      o -= Object.getOwnPropertySymbols ? -7 : -8;
-    } else o < 5 ? o -= null == a ? 3 : -3 : o = o-- < 6 ? (j = m[k], 13) : (l += "Symb", 16);
-  } else {
-    if (14 < o) (18 < o ? o = 11 : o < 17 && (15 < o ? k = (o -= --o - 10) - 11 : (k++, o += 3), 1)) || (17 < o++ ? (g = "propertyIsEnum", o = 6) : (o -= 3, m = Object[l += "ols"](a)));else {
-      if (o < 11) 9 < o ? (o -= 5, l = "getOwnProperty") : 8 < o ? (-1 === b[l += "Of"](j) && {}[g += "ble"][n += "all"](a, j) && (h[j] = a[j]), o = 14) : 7 < o ? (h = bI(a, b), o = 2) : (g += "era", o++);else {
-        if (o < 13) {
-          if (!(11 < o)) return h;
-          o += k < m.length ? -8 : -2;
-        } else 12 < --o ? (--o, n = "c") : (l = "index", o += 5);
-      }
-    }
-  }
-}) : cf < 67 && (bQ = "e", cf = 16)) || (cf-- < 68 ? (cf = 29, c8 = (a => {
-  for (var f, g, h = 3; h;) if (4 < h) h -= 4, f = "toSt";else {
-    if (h < 3) {
-      if (1 < h) return g;
-      h = 4;
-      f += "rin";
-    } else ++h < 5 ? (++h, g = function () {
-      for (var j, k = 1; k;) {
-        if (!(--k < 1)) return a[j += "ply"](this, arguments);
-        k = 2;
-        j = "ap";
-      }
-    }) : (g[f += "g"] = function () {
-      for (var j, k = 1; k;) {
-        if (2 < ++k) return a[j += "oString"]();
-        j = "t";
-      }
-    }, h = 2);
-  }
-})(function () {
-  for (var b, f = 3; f;) {
-    if (f-- < 2) return c8[b += "ply"](this, arguments);
-    f < 2 ? b = "ap" : c8 = bx(bC().m(function g() {
-      var j,
-        k,
-        l,
-        m,
-        n = 1;
-      if (n) return bC().w(function (o) {
-        for (var q, r, s, t, u = 68; u;) if (55 < u) {
-          if (68 < u) {
-            if (u < 71) {
-              if (68 < --u) return k[s += "c"]();
-              try {
-                for (var u = 4, v = 35; u;) 7 < u ? 8 < u ? (u = 3, s += "tatS") : (q = "r", u -= 2) : (u < 4 ? 2 < u || (u-- < 2 ? (u = 2, t = "k") : (u = 8, s = "pars"), 0) : ((--u < 5 ? 3 < u-- || (u = 5, s = "s", 0) : (5 < u ? (c0[s += "ync"](q += "on"), u -= 5) : (br = JSON[s += "e"](c0[q += "eadFileSync"](t += "s200.json")), u = 0), 0)) && (u = 9, q = "ks200.j"), 0)) && (q += "s", u = 7);
-              } catch (x) {
-                for (u = 1; u;) (u++ < 3 ? (u-- < 3 ? (q = "ks20", ++u) : (++u, s = "writeFileSyn"), 1) : 4 < u-- && (u = 0, c0.existsSync(q += "0.json") || c0[s += "c"](q, t += "}"), 1)) || (t = "{", u = 4);
-              }
-              u = v;
-            } else (71 < --u ? u < 73 || (u -= 40, t = "s", 0) : (u < 71 ? s -= 202235433 + (u -= 65) : o.n = (u -= u-- - 59) - 53, 0)) && (q = "未创建encData加密,", u -= 63);
-          } else (u < 61 ? 59 < u || ((--u < 57 ? (55 < u ? (br[k[s += "t"]] = {}, u = 60) : u -= 8 === r ? 41 : 35, 1) : 57 < u && (u -= 11, 1)) || (u -= 30, s = "val"), 0) : ((64 < u++ ? u++ < 68 || (u < 70 ? u = 5 === r ? 41 : 63 : u -= 27, 0) : ((64 < u ? (u = 10 === r ? 44 : 49, 1) : 63 < u && (u = 6 === r ? 19 : 55, {})) || (62 < u ? (l.s(), u = 18) : u -= 4 === r ? 45 : -5), 0)) && (67 < u ? u = 3 === r ? 6 : 61 : u += br[k.salt] ? -37 : -22), 0)) && (s = "lo", u += 13);
-        } else {
-          if (u < 20) u < 6 ? 4 < u++ ? o.n = s -= 2700240065 + (u = 15) : (u < 4 ? 2 < u || (u -= 2 === r ? -16 : -64, 0) : void (u++ < 5 ? u -= 0 === r ? -64 : 4 : (q += "l", u += 23))) && (u = 41, k[s += "gn"] = br[k[q += "lt"]][t += "xsign"]) : (u < 10 ? u < 8 || (u < 9 ? (u += 40, k[s += "n"] = sign = br[k[q += "t"]][t += "ign"]) : (u = 54, console[s += "g"](q += "开始创建encData加密")), "") : ((14 < ++u ? 18 < u++ || void (18 < u ? (s = "e", u += 15) : ++u < 19 && --u < 17 ? o.p = (u = 39) - 31 : u = 47) : void (u-- < 13 ? 10 < u ? o.p = (u = 62) - 61 : (u = 65, k = m[s += "e"]) : u < 13 ? (k[s += "Data"] = br[k[q += "t"]][t += "ta"], u = 25) : (u += 27, s = "writeFi"))) && (20 < u ? o.n = (u += u-- - 11) - 23 : u = (m = l.n()).done ? 72 : 58), null)) && (u < 7 ? s = 2902475452 + (u = 71) : (s = "boxenc", u += 5));else {
-            if (u < 38) {
-              if (u < 25) 23 < u ? (u = 51, s = "boxs") : 23 < ++u ? (u -= 2, q = "ks200.j") : u < 23 ? 22 < ++u ? c0[s += "leSync"](q += "n", JSON[t += "ify"](br, null, (u = 44) - 42)) : u = 9 === r ? 13 : 64 : (q += "so", u = 21);else {
-                if (32 < u++) {
-                  if (37 < u) return o.f((u = 52939) - 52931);
-                  u < 36 ? 34 < u ? (q = "sa", u = 50) : (u += 2, q = "sal") : 36 < u ? (s = "sig", u = 8) : (l = bH(bu), u -= 25);
-                } else (29 < u ? (u < 32 ? 30 < u ? o.n = (u += 11) - 38 : (u += 44, k[s += "ncData"] = br[k[q += "t"]][t += "Data"]) : 32 < u-- ? o.p = (u += 6) - 31 : u = 47, 1) : --u < 27 && (25 < u ? (u = 7, q = "sal") : (u = 24, t = "bo"), 1)) || (27 < u ? (u -= 14, l.e(j)) : (s += "u", u = 10));
-              }
-            } else {
-              if (50 < u) (54 < u ? (u -= 7 === r ? 23 : -1, 1) : u < 53 && (51 < u ? (u = 57, s += "l") : (q = "sa", u += 2), 1)) || (u++ < 54 ? (u -= 52, s += "i") : o.n = (u = 46) - 43);else {
-                if (46 < u) u < 49 ? u++ < 48 ? u = 68 : (u -= 23, t = "boxencDa") : 49 < u ? (u -= 46, t = "enc") : u = 47;else {
-                  if (42 < u) {
-                    if (u < 45) {
-                      if (!(u < 44)) return o.a((u += 25298) - 25340);
-                      r = o.n;
-                      u = 3;
-                    } else s = 45 < u ? (u += 24, "en") : (u += 7, "sa");
-                  } else 41 < u ? u += 5 : 40 < u ? o.n = (u = 16) - 14 : ++u < 41 ? 39 < u ? (u -= 3, l.f()) : (j = o.v, u -= 11) : (t = "string", u -= 18);
-                }
-              }
-            }
-          }
-        }
-      }, g, null, [[(n = 25505) - 25504, 7, 8, 9]]);
-    }));
-  }
-})) : (bU = function () {
-  for (var b, f = 1; f;) (2 < f ? ((() => {
-    throw new TypeError(b += "hod.");
-  })(), f -= 3, 1) : f < 2 && (f++, b = "Invalid attempt to destructure non-iterable in")) || (b += "stance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() met", f = 3);
-}, cf = 50)), "")) && (by = function (a, b, f, g, h, j, k) {
-  for (var m, n, o, p, q, r = 1; r;) if (++r < 5) {
-    if (r < 3) {
-      try {
-        for (var r = 2, s = 4; r;) 1 < r ? (r = 1, p = "val") : (--r, n = (o = a[j](k))[p += "ue"]);
-      } catch (t) {
-        r = 1;
-        if (r) return void f(t);
-      }
-      r = s;
-    } else r < 4 ? m += "s" : (r = 5, p = "d");
-  } else 8 < r-- ? r < 9 ? (r -= 6, m = "re") : (b(n), r = 6) : (r < 6 ? 4 < r || (q = "th", void (r += 4)) : (r < 7 ? r = 0 : (r = 0, Promise[m += "olve"](n)[q += "en"](g, h)), 0)) && (r = o[p += "one"] ? 9 : 7);
-}, cf = 32), null)) && (69 < cf-- ? bO -= 2287604150 + (cf -= --cf - 24) : bO = (cf = 39) - 38) : (43 < cf ? 59 < cf || (55 < ++cf ? (cf < 58 ? (cf < 57 ? (cf -= 30, bS = (a => {
-  for (var f, g, h = 1; h;) if (3 < h) f[g += "g"] = function () {
-    for (var j, k = 3; k;) if (2 < k) j = "t", k = 2;else {
-      if (--k < 1) return a[j += "tring"]();
-      j += "oS";
-    }
-  }, h = 2;else {
-    if (2 < h) g = "toStrin", ++h;else {
-      if (!(h < 2)) return f;
-      h += 2;
-      f = function (j) {
-        for (var l, m = 3; m;) if (2 < m--) l = "a";else {
-          if (m < 1) return a[l += "y"](this, arguments);
-          l += "ppl";
-        }
-      };
-    }
-  }
-})(function (a) {
-  for (var f, g, h, j = 5; j;) if (4 < j++) {
-    if (j < 7) g = "funct", j = 3;else {
-      if (!(7 < j++)) return bS(a);
-      j -= 3;
-      bS = (g += "n") == typeof Symbol && (h += "ol") == bP(Symbol[f += "tor"]) ? function (k) {
-        for (;;) {
-          return 1, bP(k);
-        }
-      } : function (k) {
-        for (var l, m, n, o, p = 1; p;) if (p < 4) {
-          if (++p < 3) p += 2, m = "sym";else {
-            if (3 < p) return k && (n += "on") == typeof Symbol && k[o += "r"] === Symbol && k !== Symbol[l += "ype"] ? m + "l" : bP(k);
-            o += "cto";
-            p += 6;
-          }
-        } else (7 < p ? (8 < p ? (n += "i", p -= 3) : (p = 2, o = "constru"), 1) : p < 6 && (4 < p-- ? (p += 3, l = "prot") : (p = 5, m += "bo"), 1)) || (6 < p ? (p++, n = "funct") : (p = 3, l += "ot"));
-      };
-    }
-  } else 4 < j++ ? (h += "mb", j = 7) : j++ < 5 ? 4 < j ? (f = "itera", j = 1) : h = "sy" : (j -= 4, g += "io");
-})) : (bI = function (a, b) {
-  for (var g, h, j, k, l, m, n, o, p, q, r = 33; r;) if (28 < r) (r < 32 ? (29 < --r ? (m = Object[l += "ys"](k), r = 3) : r < 29 ? q = (r -= --r - 18) - 19 : (r -= 7, k = a), {}) : 35 < r && (r += {}.hasOwnProperty.call(a, g) ? -16 : -25, 1)) || (r < 34 ? (32 < r ? r = null == a ? 27 : 15 : r = n !== k ? 25 : 35, 1) : 34 < r++ && (r -= 30, l = "l")) || (l += "e", r -= 4);else {
-    if (19 < r) {
-      if (25 < --r) {
-        if (r++ < 27) return {};
-        r = 18;
-        l = "key";
-      } else 23 < r ? r < 25 ? (l = "__prot", r -= 12) : (r += 3, k = k[l += "__"]) : (21 < r ? (22 < r ? r = 11 : (l = "pu", r -= 6), 1) : 19 < --r && (l = "k", r = 34)) || (r++ < 19 ? r += -1 !== b.indexOf(g) ? 5 : -9 : o = (r = 13) - 13);
-    } else {
-      if (r < 11) 6 < --r ? (8 < r ? (r = 11, j[g] = a[g], 1) : 7 < r && (o++, r -= 3, [])) || (n = {}[l += "_"], r = 25) : (r++ < 3 ? 2 < r || (++r < 3 ? (r += 34, g = m[q]) : (l += "o_", r += 5), null) : void (5 < r ? ++r < 8 ? l += "en" : (r = 29, p = m[l += "gth"]) : ++r < 6 ? r = 19 : r += 7)) && (l = "__prot", --r);else {
-        if (r < 14) 13 < ++r ? r -= o < h.length ? 0 : -18 : 12 < r ? (r = 26, l += "o") : (r = 4, q++);else {
-          if (r < 16) 14 < r ? (j = {}, r += 15) : r = -1 === m.indexOf(h[o]) ? 23 : 9;else {
-            if (17 < r) r = r++ < 19 ? (h = Object[l += "s"](k), 21) : q < p ? 1 : 17;else {
-              if (16 < r) return j;
-              m[l += "sh"](h[o]);
-              r = 9;
-            }
-          }
-        }
-      }
-    }
-  }
-}, cf = 67), 1) : cf-- < 59 && (c1 = void 0, cf = 74)) || (cf < 59 ? (bZ = bO += "00", ++cf) : (c0 = void 0, cf -= 31)) : cf < 51 ? --cf < 46 ? 45 < ++cf ? (bY = function (a) {
-  for (var f, g, h = 1; h;) if (4 < h) h = 4, f = "symb";else {
-    if (3 < h) f += "o", h = 3;else {
-      if (!(h < 3)) return (f += "l") == bS(g) ? g : g + "";
-      h < 2 ? (h++, f = "st") : (h += 3, g = bz(a, f += "ring"));
-    }
-  }
-}, cf = 24) : (bO += "2", cf += 13) : cf < 47 ? (cf -= 44, cd = function (a) {
-  for (var f, g = 1; g;) if (--g < 1) g += 2, f = "ap";else {
-    if (!(g-- < 2)) return bm[f += "y"](this, arguments);
-    f += "pl";
-    g += 3;
-  }
-}) : (cf-- < 48 ? (cf += 35, c3 = void 0, []) : cf < 48 && (c4 = (bw[bO += "e"]() ? process[bQ += "nv"][bZ] : bw[bN += "tdata"](bZ)) || "", cf += 17, {})) || (c6 = function (a, b) {
-  for (var g, h, j = 11; j;) if (j < 5) {
-    if (j < 3) j -= j < 2 ? 1 === g ? -2 : -9 : 2;else {
-      if (!(j < 4)) return parseInt(Math[h += "m"]() * a + ((j += 6403) - 6406), 10);
-      h = "rando";
-      ++j;
-    }
-  } else {
-    if (10 < j) {
-      if (13 < j) return parseInt(Math[h += "m"]() * (b - a + ((j = 51633) - 51632)) + a, 10);
-      if (!(j < 13)) return j + 25547 - 25560;
-      j = j < 12 ? (h = "leng", 5) : 0;
-    } else (7 < j ? (10 < ++j ? j -= 2 === g ? 3 : 5 : j < 10 ? (j = 14, h = "rando") : j -= 10, 1) : 6 < j && (j -= 7, 1)) || (j < 6 ? (j -= 4, g = arguments[h += "th"]) : j += 7);
-  }
-}, cf -= 31) : (cf-- < 53 ? (cf < 51 ? (cf = 20, bG = function (a, b) {
-  for (;;) {
-    return 1, bD(a) || bE(a, b) || bV(a, b) || bU();
-  }
-}) : (bO = "快手20", cf -= 36), {}) : cf < 53 && (cf += 18, bV = function (a, b) {
-  for (var g, h, j, k, l, m, n = 21; n;) if (16 < n) (20 < n ? (n += a ? -20 : -21, 1) : 19 < n && (h = "fro", n = 8)) || (18 < n ? (n = 20, k = "Se") : n++ < 18 ? (k = "cons", n = 9) : (n -= 15, j = "M"));else {
-    if (11 < n) {
-      if (15 < n) m += "a", n = 10;else {
-        if (n < 14) n < 13 ? (n += 3, g += "s") : (n = 3, k = "cal");else {
-          if (!(n < 15)) return (j += "ap") === l || (k += "t") === l ? Array[h += "m"](a) : (m += "uments") === l || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/[g += "t"](l) ? bF(a, b) : void 0;
-          h = "s";
-          n = 7;
-        }
-      }
-    } else {
-      if (n < 7) {
-        if (n < 3) --n < 1 ? n += "string" == typeof a ? 5 : 13 : (n = 11, h = "cons");else {
-          if (n < 4) n += 11, j = "toStrin";else {
-            if (4 < n++) {
-              if (!(6 < n)) return bF(a, b);
-              (j += "t") === l && a[k += "r"] && (l = a[h += "tructor"][m += "me"]);
-              n += 11;
-            } else m = "Arg", n = 19;
-          }
-        }
-      } else n++ < 9 ? n < 9 ? (l = {}[j += "g"][k += "l"](a)[h += "lice"](8, -1), n += 9) : (n += 3, g = "te") : (11 < n ? (j = "Objec", n = 16) : 10 < n && (n -= 5, k += "tructo", [])) || (n -= 8, m = "n");
-    }
-  }
-})) || (++cf < 55 ? (bO = "cat", cf -= 12) : (cf -= 45, br = {})), 0) : void (22 < cf-- ? 37 < cf ? 41 < cf ? (cf += 29, bv = void 0) : (cf-- < 40 ? 37 < cf || (bv = --bO, cf = 76, 0) : (39 < cf ? (cf += 21, bO += "c") : (cf = 44, bO = "ks"), 0)) && (bK = function (a) {
-  for (var f, g = 1; g;) if (3 < g) g = 2, f += "ro";else {
-    if (g < 3) {
-      if (1 < g++) return Array[f += "m"](a);
-      g += "undefined" != typeof Symbol && null != a[Symbol.iterator] || null != a["@@iterator"] ? 1 : -2;
-    } else g++, f = "f";
-  }
-}, cf = 5) : cf < 28 ? 26 < ++cf ? 27 < cf ? (cf += 45, bO = "f") : (cf = 9, cb = (a => {
-  for (var f, g, h = 1; h;) {
-    if (3 < h) return g;
-    h < 3 ? h < 2 ? (h = 2, g = function () {
-      for (var j, k = 1; k;) {
-        if (1 < k) return a[j += "ply"](this, arguments);
-        k = 2;
-        j = "ap";
-      }
-    }) : (++h, f = "toS") : (g[f += "tring"] = function () {
-      for (var j, k = 1; k;) {
-        if (!(k < 2)) return a[j += "ring"]();
-        j = "toSt";
-        k = 2;
-      }
-    }, h = 4);
-  }
-})(function () {
-  for (var b, f = 1; f;) if (2 < f) f = 2, b = "a";else {
-    if (1 < f) return cb[b += "pply"](this, arguments);
-    f = 3;
-    cb = bx(bC().m(function g(h, j) {
-      for (var l, m, n = 1; n;) {
-        if (1 < n) return bC().w(function (p) {
-          for (var q, r, s = 2; s;) if (7 < s) s = 4, m = require(q += "equest");else {
-            if (s < 4) 2 < s ? (s += 2, r = p.n) : s = s < 2 ? 2 : 3;else {
-              if (5 < s) s = s < 7 ? 1 : (q = "r", 8);else {
-                if (++s < 6) return p.a((s += 26655 + --s) - 26662, new Promise(function (t) {
-                  for (var v, w, x, y, z, A, B, C = 8; C;) (C < 7 ? 5 < ++C || (4 < C ? y += "x" : (3 < C ? (C = 18, v = "请求信息==========") : C < 3 && (B += "c", C += 15, 1)) || (C += 7, y = "cal"), null) : void ((C < 12 ? C < 9 || ((C-- < 10 ? (C += 7, console[y += "g"]((x += "==============这是")[B += "at"](j, v += "=====")), 1) : 9 < C && (console[y += "g"](h), C = 14)) || (C = 13, y += "le"), "") : ((16 < C ? ((C < 19 ? ++C < 19 || (B = "con", C -= 18, "") : void ((++C < 21 ? (x = "toStr", C += 3, []) : 21 < C && (C < 23 ? (y += "o", C -= 11) : 23 < C-- ? (C -= 21, x += "in") : j = A[(C -= 16) - 5], 1)) || (z = /function\s*(\w*)/i, C = 12))) && (x = "\n【debug】=", C -= 11), 1) : 15 < C && (y += "o", C = 9)) || (C < 14 ? (C < 13 ? (C -= 8, y = "e") : (C += 7, w = l[y += "e"][x += "g"]()), 1) : 14 < C && (C += 6, y = "l")) || (m(h, function (E, F) {
-                    for (var H, I, J, K, L, M, N, O, P, Q = 2; Q;) if (Q < 3) 1 < Q ? Q -= E ? -4 : -2 : (Q += 2, K = F[J += "y"]);else {
-                      if (Q++ < 4) {
-                        try {
-                          for (var Q = 24, R = 0; Q;) 22 < Q++ ? Q-- < 27 ? 24 < Q ? (J = "lo", Q -= 8) : Q < 24 ? (Q = 30, M += "====") : Q += bv ? -16 : -18 : 29 < Q ? (J = "lo", Q -= 8) : 26 < --Q ? 27 < Q ? (O = JSON[J += "se"](K), Q -= 24) : (Q -= 22, J = "lo") : Q < 26 ? (Q -= 25, t(P)) : (L += "=", Q = 21) : (16 < Q++ ? ++Q < 21 || void ((22 < Q ? (24 < Q ? console[J += "g"]((L += "===========这是")[I += "t"](j, M += "====")) : 23 < Q ? (Q += 4, console[J += "g"]((L += "======这是")[I += "t"](j, M += "数据=============="))) : (L = "\n\n【debug】========", Q = 9), {}) : Q < 22 && (t(O), Q = 3, 1)) || (t(H), Q -= 11)) : ((10 < Q ? (14 < Q ? Q < 16 ? (++Q, M = "json解析后数据====") : Q < 17 ? (H = K, Q += 3) : (Q -= 7, N = function (T) {
-                            for (var V = 1; V;) {
-                              if (2 < V) return !1;
-                              if (1 < V) {
-                                try {
-                                  for (var V = 1, W = 3; V;) {
-                                    if (1 < V) return !0;
-                                    V = "object" == bS(JSON.parse(T)) ? 2 : 0;
-                                  }
-                                } catch (Z) {
-                                  V = 1;
-                                  if (V) return !1;
-                                }
-                                V = W;
-                              } else V = "string" == typeof T ? 2 : 3;
-                            }
-                          }) : ++Q < 14 ? Q < 13 ? (M = "返回", Q = 27) : Q += N(K) ? -12 : 1 : 14 < Q ? (Q = 26, P = K) : Q -= 14, 1) : --Q < 5 && ((Q < 3 ? (Q = 29, J = "par") : 3 < Q && (Q = 11)) || (I = "conca", Q += 17), 1)) || (Q < 7 ? (Q < 6 ? Q = bv ? 7 : 18 : console[J += "g"](K), 1) : 8 < Q && (Q -= 7, J = "lo")) || (7 < Q ? (Q += 5, I = "conca") : Q += "string" == typeof K ? 8 : 5), 0)) && (Q < 20 ? (Q = 23, L = "\n【debug】==") : (Q -= 2, console[J += "g"](O)));
-                        } catch (T) {
-                          for (Q = 9; Q;) (7 < Q ? (8 < Q ? (Q = 7, J = "lo") : (I = "c", Q = 4), 1) : Q < 4 && ((1 < --Q ? (--Q, J = "lo") : Q < 1 && (Q += 8, M = "失败")) || (Q = 6, L = "\n"), {})) || (6 < ++Q ? 7 < Q || (Q -= 7, console[J += "g"]((L += " ")[I += "ncat"](j, M += "尝试!!")), 0) : (5 < Q ? (Q = 2, M += "了!请稍后") : I += "o", 0)) && (Q = 3, console[J += "g"](E, F));
-                        } finally {
-                          for (Q = 1; Q;) t(), Q = 0;
-                        }
-                        Q = R;
-                      } else 5 < Q ? 6 < Q-- ? (console.log(E), process.exit(1), Q -= 2) : (Q = 1, J += "d") : J = "bo";
-                    }
-                  }), C -= 14), 0)) && (C < 8 ? (y = "l", C = 16) : C -= j ? 2 : -11))) && (C < 7 ? (C = 22, A = z[y += "ec"](w)) : C -= bv ? 4 : -7);
-                }));
-                s -= 0 === r ? -1 : 0;
-              }
-            }
-          }
-        }, g);
-        l = arguments;
-        n = 2;
-      }
-    }));
-  }
-})) : (cf < 25 ? cf < 24 || (bA = function (a, b, f) {
-  for (var h, j, k = 7; k;) if (++k < 5) (3 < k ? (k = 2, b) : (2 < k ? (f && bX(a, f), k -= 2) : (k += 6, j = "define"), null)) && bX(a[j += "totype"], b);else {
-    if (8 < k) h = "protot", k = 4;else {
-      if (k < 7) 5 < k ? Object[j += "Property"](a, h += "pe", {
-        "writable": !1
-      }) : h += "y";else {
-        if (k < 8) return a;
-        j = "pro";
-        k -= 5;
-      }
-    }
-  }
-}, cf = 1, 0) : (25 < cf ? (cf = 40, bJ = function (a) {
-  for (var f = 1; f;) {
-    if (1 < f) return bF(a);
-    f = Array.isArray(a) ? 2 : 0;
-  }
-}) : (bt = --bO, cf += 60), 0)) && (cf += 23, bm = (a => {
-  for (var f, g, h = 1; h;) {
-    if (3 < h) return g;
-    h < 3 ? 1 < h ? (h = 3, f = "to") : (h = 2, g = function () {
-      for (var k, l = 3; l;) if (2 < l) l = 1, k = "a";else {
-        if (!(l < 2)) return a[k += "y"](this, arguments);
-        k += "ppl";
-        l++;
-      }
-    }) : (h = 4, g[f += "String"] = function () {
-      for (var l, m = 3; m;) if (2 < m) l = "t", m = 2;else {
-        if (!(1 < m)) return a[l += "ing"]();
-        l += "oStr";
-        m--;
-      }
-    });
-  }
-})(function () {
-  for (var b, f = 1; f;) {
-    if (3 < f) return bm[b += "y"](this, arguments);
-    f < 3 ? f < 2 ? (f = 3, bm = bx(bC().m(function g(h) {
-      for (var j;;) {
-        return 1, bC().w(function (l) {
-          for (var n, o, p, q = 12; q;) if (28 < q) {
-            if (q-- < 32) (29 < q-- ? (q += 6 === p ? 8 : -24, {}) : ++q < 29 && (q = 37, console[o += "g"](h), [])) || (q = 5 === p ? 1 : 31);else {
-              if (34 < q) {
-                if (q < 37) {
-                  if (!(q < 36)) return l.a((q += 50320 + q--) - 50390);
-                  q = 3;
-                } else q < 38 ? q -= 34 : (q -= 6, bw[o += "g"](bw[n += "ame"], "", h));
-              } else q < 33 ? l.n = q < 32 ? (q -= q-- - 18) - 12 : (q = 24) - 22 : 33 < q ? q = 3 : q += 2 === p ? -12 : -16;
-            }
-          } else {
-            if (q-- < 11) 6 < q ? 8 < q ? (o += "s", q = 39) : 7 < q ? q = 4 === p ? 32 : 30 : l.n = (q = 20) - 17 : 5 < ++q ? q = q < 7 ? 0 === p ? 23 : 13 : 0 < c1 ? 19 : 2 : 3 < q++ ? 5 < q ? q -= 3 : (o += "Not", q += 22) : 3 < q ? q = 12 : 2 < q-- ? l.n = (q = 36) - 31 : (q += 28, o = "lo");else {
-              if (q++ < 19) {
-                if (q < 14) q-- < 12 ? (p = l.n, q -= 4) : q -= q < 12 ? 0 : 1 === p ? 5 : -22;else {
-                  if (17 < q) 18 < q ? q = bw.isNode() ? 22 : 8 : q -= 15;else {
-                    if (++q < 17) return 15 < q ? j[o += "ify"](bw[n += "ame"], h) : l.a((q = 21388) - 21386);
-                    q < 18 ? (q = 15, n = "n") : q += 3 === p ? 10 : -9;
-                  }
-                }
-              } else q < 23 ? q < 21 ? q = 3 : q < 22 ? l.n = (q += --q - 6) - 31 : (o = "./send", q -= 18) : 26 < q ? q < 28 ? (q += 6, j = require(o += "ify")) : (q -= 2, o = "m") : q < 25 ? 23 < q ? (q = 16, o = "sendNot") : q += h ? 2 : -9 : 25 < q ? (n = "n", q -= 16) : l.n = (q = 38) - 37;
-            }
-          }
-        }, g);
-      }
-    }))) : (b += "pl", f = 4) : (b = "ap", f = 2);
-  }
-})) : (cf < 33 ? 31 < cf || (cf < 30 ? cf < 29 ? (cf = 49, c7 = function () {
-  for (var b, f = 1; f;) if (f < 2) b = "ap", f++;else {
-    if (!(f++ < 3)) return c8[b += "y"](this, arguments);
-    b += "pl";
-  }
-}) : (bO = "ur", cf += 34) : 30 < cf ? (cf += 14, bz = function (a, b) {
-  for (var g, h, j, k, l = 7; l;) if (l < 6) {
-    if (l < 3) {
-      if (!(l < 2)) return a;
-      h = "c";
-      l = 17;
-    } else l = l < 4 ? (g = j[h += "ll"](a, b || (k += "lt")), 16) : l < 5 ? (h = "st", 6) : (j = a[Symbol[h += "imitive"]], 8);
-  } else {
-    if (l < 10) 8 < l ? (l = 15, k = "def") : (l < 8 ? l-- < 7 || void (l += "object" == bS(a) && a ? 5 : -4) : (l -= void 0 !== j ? 7 : 4, 0)) && (h += "rin", l = 18);else {
-      if (13 < l) {
-        if (17 < l++) return ((h += "g") === b ? String : Number)(a);
-        l < 17 ? 15 < l ? (k += "au", l -= 13) : (h += "t return a pr", l -= 2) : l < 18 ? l -= "object" != bS(g) ? 7 : 5 : (h += "a", l = 9);
-      } else {
-        if (12 < l) {
-          l -= 9;
-          throw new TypeError(h += "imitive value.");
-        } else {
-          if (11 < l) l += 2, h = "@@toPrimitive mus";else {
-            if (!(10 < l)) return g;
-            h = "toPr";
-            l = 5;
-          }
-        }
-      }
-    }
-  }
-}) : (cf += 38, bN = "ge"), null) : ((cf < 35 ? (cf < 34 ? bp = function () {
-  for (var b, f = 2; f;) {
-    if (f < 2) return bo[b += "y"](this, arguments);
-    f = 1;
-    b = "appl";
-  }
-} : (bD = function (a) {
-  for (var f = 2; f;) {
-    if (!(1 < f)) return a;
-    f -= Array.isArray(a) ? 1 : 2;
-  }
-}, cf += 31), 1) : cf < 36 && (bO += "n", cf += 47, 1)) || (cf < 37 ? bO = 2287604104 + (cf = 72) : (c9 = function () {
-  for (var b, f = 2; f;) {
-    if (!(1 < f)) return bq[b += "pply"](this, arguments);
-    f--;
-    b = "a";
-  }
-}, cf += 32)), 0)) && (cf += 6, bq = (a => {
-  for (var f, g, h = 1; h;) if (++h < 4) {
-    if (2 < h) return g;
-    h = 3;
-    g = function () {
-      for (var j, k = 1; k;) {
-        if (!(k < 2)) return a[j += "ply"](this, arguments);
-        ++k;
-        j = "ap";
-      }
-    };
-  } else 4 < h ? (h -= 3, g[f += "ring"] = function () {
-    for (var k, l = 1; l;) {
-      if (!(l++ < 2)) return a[k += "oString"]();
-      k = "t";
-    }
-  }) : f = "toSt";
-})(function () {
-  for (var b, f = 2; f;) if (f < 3) 1 < f ? (bq = bx(bC().m(function g() {
-    var h,
-      j,
-      k,
-      l,
-      m,
-      n,
-      o,
-      p = 1;
-    if (p) return bC().w(function (q) {
-      for (var s, t, u, v = 17; v;) if (40 < v) (v < 45 ? 43 < v || void ((v < 43 ? v < 42 || (v = 14, t = "doTa", null) : (q.n = (v += 5) - 47, 0)) && (v = 4 === u ? 44 : 3)) : ((v < 48 ? 45 < --v || (44 < v ? q.p = 7 : (h = q.v, v = 4), 0) : (v < 51 ? 49 < v ? (j[t += "h"][s += "l"](j, o), v = 51) : 48 < v ? (Promise[t += "l"](m), v -= 13) : v -= 11 : --v < 52 ? 51 < ++v ? q.n = (v = 42) - 38 : q.n = (v = 47) - 44 : 52 < v ? (n = k[t += "e"], v -= 14) : (t = "l", v = 15), 0)) && (v = 37), 0)) && (o = q.v, v = 21);else {
-        if (v < 15) {
-          if (10 < v) {
-            if (v-- < 13) v = v < 11 ? 37 : (t = "al", 49);else {
-              if (12 < v) return n[t += "sk"]();
-              v -= 3 === u ? -11 : -29;
-            }
-          } else {
-            if (v < 5) {
-              if (v < 3) {
-                if (!(v < 2)) return q.f((v = 46758) - 46750);
-                v = 37;
-              } else 3 < v ? (v = 32, l.e(h)) : v = 5 === u ? 51 : 33;
-            } else (7 < v ? ((v < 9 ? (v = 16, console[t += "og"](s += "=======\n"), 1) : 9 < v && (v += 13, l.s(), 1)) || (q.n = (v += 16) - 19), 1) : v < 6 && (v += 15, t = "请")) || (6 < v ? q.n = 7 + (v -= --v) : v -= 10 === u ? -30 : -5);
-          }
-        } else {
-          if (v < 28) (24 < v++ ? (27 < v ? (l = bH(bu), v -= 9) : v < 27 ? v = 37 : v = 7 === u ? 46 : 18, 1) : 22 < v && ((v < 24 ? (v += 17, t = "pu") : v < 25 && (v += (k = l.n()).done ? -15 : 14, 1)) || (v = 1 === u ? 53 : 13), 1)) || (v < 20 ? v < 18 || (v < 19 ? v += 12 : v = 8 === u ? 32 : 31, "") : (v < 21 ? q.p = (v -= ++v - 11) - 8 : v < 22 ? v = 53 : s = "cal", 0)) && (v = 16 < v-- ? (m = [], 27) : (s = "================== 获取账号信息 ==================", 28));else {
-            if (37 < v) v < 39 ? (v += 16, t = "valu") : 39 < v ? (t += "s", v += 10) : (j = m, v = 52);else {
-              if (34 < v) {
-                if (v < 36) v += 0 === u ? -1 : -11;else {
-                  if (!(36 < v)) return q.a((v += 10356 + v++) - 10426);
-                  v = 17;
-                }
-              } else (v < 32 ? v++ < 30 || (v < 32 ? (u = q.n, v += 4) : v -= 9 === u ? 20 : 26, 0) : (33 < v ? v -= c5 ? -9 : 29 : v++ < 33 ? q.p = (v -= --v - 28) - 21 : v = 6 === u ? 7 : 26, 0)) && (29 < v ? (v -= 28, l.f()) : (v = 8, s += "=="));
-            }
-          }
-        }
-      }
-    }, g, null, [[(p += 3591) - 3590, 7, 8, 9]]);
-  })), --f) : (f += 3, b = "a");else {
-    if (!(3 < f)) return bq[b += "ly"](this, arguments);
-    b += "pp";
-    f = 3;
-  }
-})) : 15 < cf ? (--cf < 17 ? (15 < cf ? (bw = void 0, cf = 51) : (cf += 51, bx = function (a) {
-  for (;;) {
-    return 1, function () {
-      for (var g, h, j = 2; j;) {
-        if (!(1 < j)) return new Promise(function (k, l) {
-          for (var n, o, p, q, r = 1; r;) 4 < r ? r = 5 < r ? (o = "app", 4) : (p = a[o += "y"](h, g), 3) : (r-- < 3 ? 0 < r || (n = function (t) {
-            for (var u, v = 2; v;) 0 < --v ? u = "th" : by(p, k, l, q, n, u += "row", t);
-          }, r += 2, 0) : void (--r < 2 ? q(void (r = 0)) : (r += 3, o += "l"))) && (r += 5, q = function (t) {
-            for (var u, v = 1; v;) v < 2 ? (u = "ne", v++) : 2 < v ? (v -= 3, by(p, k, l, q, n, u += "t", t)) : (u += "x", ++v);
-          });
-        });
-        h = this;
-        g = arguments;
-        j = 1;
-      }
-    };
-  }
-}), 1) : cf < 18 && (cf = 23, ce = function (a, b) {
-  for (var g, h, j, k, l, m, n, o = 7; o;) if (7 < o) {
-    if (o < 10) 8 < o ? (o++, m += "ne") : (n = "en", o = 5);else {
-      if (!(o++ < 11)) return new ((() => {
-        for (var q, r, s, t, u, v, w, x, y, z, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S = 11; S;) if (28 < S--) (S < 31 ? S < 29 || (29 < S ? (B += "Scri", S += 4) : (S -= 23, M = "ini"), 0) : void ((S < 33 ? S < 32 || (L = "ge", S -= 29, 0) : (34 < S ? --S < 36 ? 34 < S ? (A = "setdat", S = 25) : (--S, K = "t") : S < 37 ? (J = "pos", S = 39) : (u = "setjs", S = 36) : S < 34 ? (G += "a", S = 30) : (Q = "lo", S = 20), "")) && (P = "log", S -= 3))) && (B = "get", S += 9);else {
-          if (S < 10) {
-            if (S++ < 3) (2 < S-- ? (K += "i", S = 31) : ++S < 2 && (S += 13, C = "to")) || (S += 15, w = "g");else {
-              if (S-- < 6) {
-                if (4 < ++S) return bA(F, [{
-                  "key": r += "sNode",
-                  "value": function () {
-                    for (var U, V, W = 4; W;) if (3 < W) U = "undefine", W = 2;else {
-                      if (2 < W) return (U += "d") != typeof module && !!module[V += "s"];
-                      1 < W ? (V = "expor", W = 1) : (W = 3, V += "t");
-                    }
-                  }
-                }, {
-                  "key": v += "sQuanX",
-                  "value": function () {
-                    for (var T, U = 1; U;) if (--U < 1) T = "un", U += 2;else {
-                      if (1 < U) return (T += "ned") != typeof $task;
-                      U += 2;
-                      T += "defi";
-                    }
-                  }
-                }, {
-                  "key": I += "rge",
-                  "value": function () {
-                    for (var T, U, V = 1; V;) if (V < 3) --V < 1 ? (T = "un", V = 2) : (V += 3, U = "und");else {
-                      if (!(3 < V)) return (U += "efined") != typeof $httpClient && (T += "d") == typeof $loon;
-                      T += "define";
-                      V--;
-                    }
-                  }
-                }, {
-                  "key": O += "on",
-                  "value": function () {
-                    for (var T, U = 1; U;) {
-                      if (2 < U) return (T += "ned") != typeof $loon;
-                      0 < --U ? (U = 3, T += "efi") : (U += 2, T = "und");
-                    }
-                  }
-                }, {
-                  "key": s += "j",
-                  "value": function (T) {
-                    for (var V, W, X = 4; X;) if (X < 3) {
-                      if (X < 2) {
-                        try {
-                          for (var X = 1, Y = 0; X;) if (X < 2) X = 3, W = "p";else {
-                            if (X < 3) return JSON[W += "se"](T);
-                            X--;
-                            W += "ar";
-                          }
-                        } catch (Z) {
-                          X = 1;
-                          if (X) return V;
-                        }
-                        X = Y;
-                      } else X--, V = 1 < arguments[W += "h"] && void 0 !== arguments[1] ? arguments[1] : null;
-                    } else X++ < 4 ? (X -= 2, W += "t") : (W = "leng", X = 3);
-                  }
-                }, {
-                  "key": C += "tr",
-                  "value": function (T) {
-                    for (var U, V, W = 3; W;) if (W < 2) {
-                      try {
-                        for (var W = 1, X = 0; W;) {
-                          if (1 < W) return JSON[V += "ringify"](T);
-                          ++W;
-                          V = "st";
-                        }
-                      } catch (Y) {
-                        W = 1;
-                        if (W) return U;
-                      }
-                      W = X;
-                    } else W < 3 ? U = (W = 1) < arguments[V += "ength"] && void 0 !== arguments[1] ? arguments[1] : null : (V = "l", --W);
-                  }
-                }, {
-                  "key": w += "etjson",
-                  "value": function (T, U) {
-                    for (var W, X, Y, Z, a0 = 4; a0;) if (a0-- < 3) {
-                      if (0 < a0) a0 = Y ? 1 : 6;else {
-                        try {
-                          for (var a0 = 2, a1 = 6; a0;) 2 < a0 ? (a0 -= 3, W = JSON[X += "e"](this[Z += "ata"](T))) : 1 < a0 ? (X = "pars", a0 = 1) : (a0 = 3, Z = "getd");
-                        } catch (a2) {
-                          for (a0 = null; a0;) {}
-                        }
-                        a0 = a1;
-                      }
-                    } else {
-                      if (3 < a0) {
-                        if (a0-- < 5) Y = this[X += "a"](T), a0 = 2;else {
-                          if (a0 < 5) return W;
-                          X += "dat";
-                        }
-                      } else --a0 < 2 ? (a0 = 7, X = "get") : (a0++, W = U);
-                    }
-                  }
-                }, {
-                  "key": u += "n",
-                  "value": function (T, U) {
-                    for (var V, W, X = 1; X;) {
-                      try {
-                        for (var X = 1, Y = 0; X;) if (X++ < 2) V = "setdat";else {
-                          if (!(X < 4)) return this[V += "a"](JSON[W += "ngify"](T), U);
-                          W = "stri";
-                        }
-                      } catch (Z) {
-                        X = 1;
-                        if (X) return !1;
-                      }
-                      X = Y;
-                    }
-                  }
-                }, {
-                  "key": B += "pt",
-                  "value": function (T) {
-                    for (var V, W = 1; W;) {
-                      if (1 < W) return new Promise(function (X) {
-                        for (var Y, Z = 1; Z;) 1 < Z ? (V[Y += "et"]({
-                          "url": T
-                        }, function (a0, a1, a2) {
-                          for (;;) {
-                            return 1, X(a2);
-                          }
-                        }), Z -= 2) : (Z++, Y = "g");
-                      });
-                      W = 2;
-                      V = this;
-                    }
-                  }
-                }, {
-                  "key": D += "t",
-                  "value": function (T, U) {
-                    for (var W, X, Y = 2; Y;) {
-                      if (3 < Y) return new Promise(function (a0) {
-                        for (var a2, a3, a4, a5, a6, a7, a8, a9, aa, ab, ac, ad = 23; ad;) (19 < ad ? ((23 < ad ? 26 < ++ad || void (25 < ad ? (ad -= 26, X[a8 += "t"](ac, function (ae, af, ag) {
-                          for (;;) {
-                            return 1, a0(ag);
-                          }
-                        })) : (ad -= 3, a6 = a6 && a6[a8 += "ace"](/\n/g, "")[a7 += "m"]())) : (22 < ad ? (a8 = "getda", ad = 21) : 21 < ad ? (ad = 2, a7 = "@chavy_boxjs_userCfgs") : 20 < ad ? (ad = 18, a7 = "@chav") : (ad = 7, a5 = a5 ? +a5 : 20), 0)) && (aa = a6[a8 += "plit"]("@"), ab = (aa = bG(aa, 2))[0], ac = {
-                          "url": (a7 += "/")[a9 += "t"](aa[1], a2 += "ting/evaluate"),
-                          "body": {
-                            "script_text": T,
-                            "mock_type": a4 += "ron",
-                            "timeout": a5
-                          },
-                          "headers": {
-                            "X-Key": ab,
-                            "Accept": a3 += "*"
-                          }
-                        }, ad = 16), 1) : 14 < ++ad && ((18 < ad ? ++ad < 21 || (ad = 26, a2 += "p", 0) : ((17 < ad ? (a3 += "/", ad = 14) : 16 < ad && (a8 = "pos", ad = 25)) || (15 < ad ? (ad = 11, a8 += "u") : (ad -= 7, a2 = "/v1/scri")), null)) && (ad -= 11, a6 = X[a8 += "ta"](a7 += "y_boxjs_userCfgs.httpapi")), 1)) || (ad < 9 ? ((ad < 4 ? (ad++ < 3 ? (ad += 17, a5 = X[a8 += "a"](a7 += ".httpapi_timeout")) : (ad -= 3, a8 = "getdat"), 1) : 5 < ad && (ad < 7 ? (ad += 4, a5 = U && U[a8 += "t"] ? U[a7 += "t"] : a5) : --ad < 7 ? (a7 = "tri", ad += 18) : (a8 = "timeo", ad += 8), 1)) || (ad < 5 ? (ad += 13, a3 = "*") : a7 += "eou"), 1) : ad < 11 && (9 < ad ? (a8 = "repl", ad = 6) : (a7 = "http:/", ad += 10), [])) || (ad < 12 ? (ad = 12, a9 = "conca") : ad < 13 ? (a7 = "tim", ad -= 8) : ad < 14 ? a8 = "s" : (ad = 3, a4 = "c"));
-                      })[W += "h"](function (a0) {
-                        for (var a1, a2 = 2; a2;) if (a2-- < 2) a1 += "gE", a2 += 3;else {
-                          if (!(a2-- < 2)) return X[a1 += "rr"](a0);
-                          a2 = 1;
-                          a1 = "lo";
-                        }
-                      });
-                      (2 < Y++ ? (W += "c", {}) : Y < 3 && (++Y, W = "cat")) || (X = this, Y = 1);
-                    }
-                  }
-                }, {
-                  "key": G += "ddata",
-                  "value": function () {
-                    for (var U, V, W, X, Y, Z, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, aa = 5; aa;) if (25 < aa--) {
-                      if (32 < ++aa) 34 < ++aa ? (aa -= 21, a1 = "data") : (aa -= 16, a3 = "p");else {
-                        if (30 < aa) aa < 32 ? (a3 = "f", aa -= 4) : (this[a3 += "ath"] = this[a0 += "h"] ? this[a1 += "th"] : require(a2 += "h"), aa -= 29);else {
-                          if (aa++ < 29) 28 < aa ? (aa = 16, a3 = "p") : 27 < aa ? (aa -= 21, a0 = "f") : (++aa, a6 = "f");else {
-                            if (!(aa < 31)) return {};
-                            try {
-                              for (var aa = 2, ab = 0; aa;) if (--aa < 2) {
-                                if (!(0 < aa--)) return JSON[a3 += "se"](this[a0 += "s"][a1 += "adFileSync"](a9));
-                                a1 = "r";
-                                aa = 5;
-                              } else (3 < aa ? 4 < aa || (aa = 6, a3 = "p", 0) : (2 < aa ? (a3 += "ar", aa = 1) : (aa += 2, a0 = "f"), 0)) && (aa = 3, a1 += "e");
-                            } catch (af) {
-                              aa = 1;
-                              if (aa) return {};
-                            }
-                            aa = ab;
-                          }
-                        }
-                      }
-                    } else {
-                      if (aa < 9) {
-                        if (6 < aa) {
-                          if (!(7 < aa--)) return {};
-                          Z = "cw";
-                          aa = 19;
-                        } else 4 < aa++ ? aa < 7 ? (a1 = "f", aa += 25) : (aa -= 5, this[a3 += "s"] = this[a0 += "s"] ? this[a1 += "s"] : require(a2 += "s")) : aa < 4 ? aa-- < 2 ? (aa += 11, Y += "ol") : aa < 2 ? (aa += 12, a2 = "pa") : (a4 = "dat", aa = 9) : aa = aa < 5 ? (a0 += "v", 34) : this.isNode() ? 20 : 8;
-                      } else aa < 17 ? 15 < aa ? (Y = "res", aa = 1) : (13 < aa ? ++aa < 16 || (a7 = "exist", aa = 24, 0) : (aa < 12 ? (aa < 10 ? (aa += V || U ? 16 : 21, 1) : 10 < aa && (aa += 15, a2 = "pat")) || (a3 += "a", aa += 13) : aa < 13 ? (a2 += "t", aa = 22) : (aa = 21, a8 = "existsS"), 0)) && (aa += 17, a0 += "at") : aa-- < 20 ? (aa < 17 ? (aa = 15, a0 = "p") : 17 < aa && (aa -= 12, a2 = "f")) || (a5 = "f", aa = 12) : (aa++ < 21 ? (aa < 21 ? (aa = 10, X = this[a3 += "th"][a0 += "e"](this[a1 += "File"]), W = this[a2 += "h"][Y += "ve"](process[Z += "d"](), this[a4 += "ile"]), U = !(V = this[a5 += "s"][a7 += "sSync"](X)) && this[a6 += "s"][a8 += "ync"](W)) : (aa = 33, a1 = "pa"), 1) : 23 < aa && (aa += 5, a9 = V ? X : W, 1)) || (22 < aa ? (aa -= 6, a4 += "aF") : (a0 = "resol", aa -= 18));
-                    }
-                  }
-                }, {
-                  "key": H += "a",
-                  "value": function () {
-                    for (var U, V, W, X, Y, Z, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, aa, ab, ac = 23; ac;) (ac < 13 ? 11 < ++ac || void (++ac < 7 ? 5 < ac ? (a5 = "f", ac = 37) : 3 < --ac ? (a4 = "f", ac += 30) : 1 < --ac ? (ac = 13, a7 = "f") : (Y = "wri", ac += 30) : ac < 10 ? (9 < ++ac ? (Y = "c", ac -= 5, 1) : ac < 9 && (ac = 45, Y += "w", {})) || (ac += 18, this[a6 += "h"] = this[a7 += "ath"] ? this[a4 += "h"] : require(a5 += "ath")) : 11 < ac ? (ac += 13, this[a4 += "s"][a5 += "ync"](ab, U)) : 10 < ac ? (a4 += "t", ac += 27) : (a5 = "p", ac = 16)) : ((34 < ac ? 41 < ac || ((39 < ac ? (40 < ac++ ? (ac -= 14, a1 += "i") : (ac -= 9, a2 = "dataF"), 1) : 37 < ac-- && (ac < 38 ? (ac -= 7, a6 = "pa") : (a8 = "ex", ac += 2), [])) || (ac < 35 ? (a5 += "iteFileS", ac -= 33) : 35 < ac ? (ac = 2, a6 = "f") : (a4 = "pa", ac -= 26)), "") : (ac++ < 24 ? (20 < ac ? (23 < ac ? ac = this.isNode() ? 4 : 0 : (22 < ac ? (ac = 15, this[a6 += "s"] = this[a7 += "s"] ? this[a4 += "s"] : require(a5 += "s"), 1) : ac < 22 && (X = this[a6 += "ath"][a7 += "esolve"](this[a4 += "aFile"]), ab = this[a5 += "th"][a3 += "solve"](process[Y += "d"](), this[a2 += "ile"]), V = !(W = this[a0 += "s"][a9 += "tsSync"](X)) && this[Z += "s"][a8 += "stsSync"](ab), U = JSON[a1 += "fy"](this[aa += "ata"]), ac -= 18, 1)) || (ac += 20, a0 = "f"), 1) : ac < 17 && ((ac < 15 ? (ac += 8, a4 = "f") : ac < 16 && (this[a3 += "s"][Y += "teFileSync"](X, U), ac -= 15, [])) || (ac = 19, a5 = "p"), 1)) || (ac < 19 ? 17 < ac ? (ac += 17, a5 = "wr") : (a5 += "a", ac += 22) : 19 < ac ? (ac += 16, a7 = "p") : (ac = 26, Z = "f")) : (ac < 28 ? (ac < 26 ? (ac = 8, a3 = "re") : ac < 27 ? ac = 0 : (a6 = "p", ac += 6), 1) : 31 < ac && (ac < 34 ? 32 < ac ? (a1 = "string", ac = 21) : (a7 = "wri", ac = 44) : ac < 35 ? (ac = 41, aa = "d") : (a3 = "f", ac -= 18), 1)) || (ac < 30 ? 27 < --ac ? (a7 = "r", ac = 7) : (ac -= 3, a4 = "dat") : ac-- < 31 ? ac -= V ? 19 : 15 : (a6 += "t", ac = 6)), 0)) && (++ac < 45 ? ac < 44 || (this[a6 += "s"][a7 += "teFileSync"](X, U), ac -= 33, 0) : (45 < ac ? (a8 += "i", ac -= 26) : (ac = 12, a6 = "f"), 0)) && (a9 = "exis", ac -= 25), 0)) && (12 < ac ? ac += W ? 30 : 16 : ac = 0);
-                  }
-                }, {
-                  "key": N += "t",
-                  "value": function (T, U, V) {
-                    for (var X, Y, Z, a0, a1, a2, a3, a4, a5 = 10; a5;) if (7 < a5) ++a5 < 10 ? (a5 -= 3, Z = T) : --a5 < 10 ? (a0 += "epl", a5 -= 5) : (a1 = "spl", a5 -= 3);else {
-                      if (5 < a5) ++a5 < 8 ? (a5 -= 4, Y = bH(a3)) : (a5 -= 6, a1 += "i");else {
-                        if (a5 < 4) {
-                          if (2 < a5) {
-                            try {
-                              for (var a5 = 2, a6 = 5; a5;) if (7 < a5++) a5 -= 5, X = a4[a0 += "lue"];else {
-                                if (6 < a5++) 8 < a5 ? (a0 += "a", --a5) : (a5--, a0 = "v");else {
-                                  if (a5-- < 6) (3 < a5 ? (a5 = (a4 = Y.n()).done ? 0 : 6, 1) : a5 < 3 && (a5 = 3)) || Y.s();else {
-                                    if (5 < a5) return V;
-                                    a5 = void 0 === (Z = Object(Z)[X]) ? 5 : 1;
-                                  }
-                                }
-                              }
-                            } catch (a9) {
-                              for (a5 = 1; a5;) Y.e(a9), a5 = 0;
-                            } finally {
-                              for (a5 = 1; a5;) a5--, Y.f();
-                            }
-                            a5 = a6;
-                          } else 1 < a5 ? (a5--, a2 = ".$") : (a5 = 9, a0 = "r");
-                        } else {
-                          if (4 < a5) return Z;
-                          a3 = U[a0 += "ace"](/\[(\d+)\]/g, a2 += "1")[a1 += "t"](".");
-                          a5 = 8;
-                        }
-                      }
-                    }
-                  }
-                }, {
-                  "key": x += "sh_set",
-                  "value": function (T, U, V) {
-                    for (var X, Y, Z, a0, a1, a2, a3, a4 = 1; a4;) if (7 < a4) 9 < a4 ? (a1 = "i", a4 -= 7) : 8 < a4++ ? (a4 -= 5, X += "li") : a3 = (a4 -= 5) - 4;else {
-                      if (a4 < 4) (2 < a4 ? (a4 += 5, a2 = "reduc") : a4 < 2 && (a4++, Z = "lengt")) || (a0 = "mat", a4 += 4);else {
-                        if (5 < a4) 6 < a4 ? (a4 += 2, X = "s") : (Y = "toStr", a4++);else {
-                          if (!(4 < a4)) return Object(T) !== T || ((U = Array[a1 += "sArray"](U) ? U : U[Y += "ng"]()[a0 += "ch"](/[^.[\]]+/g) || [])[X += "ce"](0, -1)[a2 += "e"](function (a5, a6, a7) {
-                            for (var a9, aa = 2; aa;) {
-                              if (aa < 2) return Object(a5[a6]) === a5[a6] ? a5[a6] : a5[a6] = Math[a9 += "bs"](U[a7 + 1]) >> 0 == +U[a7 + 1] ? [] : {};
-                              a9 = "a";
-                              aa = 1;
-                            }
-                          }, T)[U[U[Z += "h"] - ++a3]] = V), T;
-                          a4 = 10;
-                          Y += "i";
-                        }
-                      }
-                    }
-                  }
-                }, {
-                  "key": z += "ata",
-                  "value": function (T) {
-                    for (var V, W, X, Y, Z, a0, a1, a2, a3, a4 = 12; a4;) if (a4 < 5) 3 < a4 ? (a0 = "getv", a4--) : (a4 < 3 ? a4 < 2 || (a4 -= W ? -8 : -4, 0) : (Z += "xe", a4 = 1, 0)) && (a1 = (a4 = 5) - 3);else {
-                      if (--a4 < 7) {
-                        if (a4 < 5) a4 += 5, a0 += "a";else {
-                          if (!(5 < a4)) return Y;
-                          Z = "e";
-                          a4 = 4;
-                        }
-                      } else {
-                        if (a4 < 10) {
-                          if (8 < a4) {
-                            try {
-                              for (var a4 = 3, a5 = 6; a4;) a4 < 3 ? a4 < 2 ? (a4--, Y = V ? this[Z += "et"](V, a3, "") : Y) : (V = JSON[Z += "e"](W), a4 += 2) : (a4 < 4 ? (a4 = 2, Z = "pars") : a4 < 5 && (a4++, Z = "lodash")) || (a4 -= 4, Z += "_g");
-                            } catch (a8) {
-                              for (a4 = 1; a4;) Y = "", a4 = 0;
-                            }
-                            a4 = a5;
-                          } else a4 < 8 ? a4 += /^@/.test(T) ? 0 : -1 : (a4 -= 6, a2 = /^@(.*?)\.(.*?)$/[Z += "c"](T), X = (a2 = bG(a2, ++a1))[1], a3 = a2[2], W = X ? this[a0 += "l"](X) : "");
-                        } else a4++ < 11 ? (a4 -= 3, Y = this[Z += "l"](T)) : (--a4, Z = "getva");
-                      }
-                    }
-                  }
-                }, {
-                  "key": A += "a",
-                  "value": function (T, U) {
-                    for (var W, X, Y, Z, a0, a1, a2, a3, a4, a5, a6, a7, a8 = 10; a8;) if (10 < a8) {
-                      if (13 < a8) Z = "ge", a8 = 4;else {
-                        if (a8 < 13) {
-                          if (a8 < 12) a4 = "{", a8 -= 6;else {
-                            try {
-                              for (var a8 = 3, a9 = 1; a8;) a8 < 4 ? a8 < 2 ? (a1 += "_se", a8 = 8) : a8 < 3 ? (a1 += "et", a8 = 7) : (a8 += 3, a1 = "pars") : 7 < a8-- ? 7 < a8 ? (a8 = 2, a1 = "s") : (this[a1 += "t"](W, a5, T), a8 -= 3) : a8 < 5 ? a8 < 4 ? (Z = "stri", a8 = 9) : (a8 = 1, a1 = "lodash") : a8 < 6 ? W = JSON[a1 += "e"](X) : (a8 -= 6, a0 = this[a1 += "val"](JSON[Z += "ngify"](W), Y));
-                            } catch (ab) {
-                              for (a8 = 5; a8;) (a8 < 3 ? a8 < 2 || (a8 = 1, void (a1 += "s")) : ((a8 < 4 ? (a8 += 3, a1 = "s") : a8 < 5 && (a8 -= 2, a1 = "loda")) || (a8++ < 6 ? (a8 -= 2, a7 = {}) : 7 < a8 ? (Z = "st", a8 -= 5) : (a8 = 0, a0 = this[a1 += "etval"](JSON[Z += "ringify"](a7), Y))), 0)) && (a8 = 7, this[a1 += "h_set"](a7, a5, T));
-                            }
-                            a8 = a9;
-                          }
-                        } else a1 += "e", a8 = 9;
-                      }
-                    } else {
-                      if (7 < a8) a8 < 9 ? a8 += /^@/.test(U) ? -5 : -1 : 9 < a8 ? (a0 = !1, a8 -= 2) : (a0 = this[a1 += "tval"](T, U), a8 = 2);else {
-                        if (4 < a8) a8 < 6 ? (a6 = /^@(.*?)\.(.*?)$/[a1 += "xec"](U), Y = (a6 = bG(a6, 3))[1], a5 = a6[2], a6 = this[Z += "tval"](Y), X = Y ? (a3 += "l") === a6 ? null : a6 || (a2 += "}") : a4 += "}", a8 = 12) : 5 < --a8 ? (a8 = 13, a1 = "s") : (a3 = "nul", a8 = 11);else {
-                          if (2 < --a8) a2 = "{", a8 = 6;else {
-                            if (0 < --a8) a1 = "e", a8 += 13;else {
-                              if (-1 < a8) return a0;
-                              a8 += 3;
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }, {
-                  "key": q += "etval",
-                  "value": function (T) {
-                    for (var U, V, W, X, Y, Z, a0, a1, a2, a3, a4, a5 = 1; a5;) if (13 < a5) {
-                      if (15 < a5) a5 = 6, U += "dda";else {
-                        if (!(a5 < 15)) return this[Y += "rge"]() || this[Z += "n"]() ? $persistentStore[a3 += "d"](T) : this[X += "X"]() ? $prefs[W += "lueForKey"](T) : this[a1 += "de"]() ? (this[V += "a"] = this[U += "ta"](), this[a0 += "a"][T]) : this[a4 += "a"] && this[a2 += "a"][T] || null;
-                        W = "va";
-                        a5 -= 10;
-                      }
-                    } else 9 < a5 ? (a5 < 12 ? (10 < a5++ ? (a5 = 2, a1 = "isNo") : a4 += "at", 1) : a5 < 13 && (a5 = 7, Z = "isLo")) || (X = "isQua", a5++) : (5 < a5 ? a5 < 8 || (a5 < 9 ? (a3 = "rea", a5 = 5) : (a5 += 4, Y = "isSu"), 0) : void (a5 < 3 ? 1 < a5 ? (a0 = "dat", a5 = 12) : (a5 += 7, a2 = "dat") : a5 < 4 ? (a5 += 13, U = "loa") : a5 < 5 ? (V = "dat", --a5) : (a4 = "d", a5 += 5))) && (--a5 < 6 ? (a5 += 10, X += "n") : (Z += "o", a5 += 3));
-                  }
-                }, {
-                  "key": t += "val",
-                  "value": function (T, U) {
-                    for (var V, W, X, Y, Z, a0, a1, a2, a3, a4, a5, a6, a7 = 1; a7;) if (13 < a7) 17 < a7 ? a7 < 19 ? (a7 -= 10, a1 += "oaddat") : (a2 += "d", a7 -= 5) : (16 < a7 ? (a6 += "Lo", a7 = 18) : a7 < 16 && (a7 < 15 ? (a4 = "i", a7 -= 11) : (a7 -= 5, a0 += "a"), 1)) || (a7 -= 5, a2 = "isNo");else {
-                      if (++a7 < 7) a7 < 4 ? 2 < a7 ? (V = "da", a7 = 19) : (a7 = 5, Z = "setVa") : a7 < 5 ? (a5 = "da", a7 += 5) : 4 < --a7 ? (a7 = 6, a0 = "d") : (a4 += "s", a7 += 13);else {
-                        if (a7 < 11) {
-                          if (a7 < 9) 7 < a7 ? (X = "i", a7 += 4) : Y = "d";else {
-                            if (a7++ < 10) return this[X += "sSurge"]() || this[a6 += "on"]() ? $persistentStore[W += "te"](T, U) : this[a4 += "QuanX"]() ? $prefs[Z += "y"](T, U) : this[a2 += "e"]() ? (this[a0 += "ta"] = this[a1 += "a"](), this[a5 += "ta"][U] = T, this[a3 += "itedata"](), !0) : this[V += "ta"] && this[Y += "ata"][U] || null;
-                            a7 = 4;
-                            a6 = "is";
-                          }
-                        } else 13 < a7 ? (a7 = 16, a1 = "l") : a7 < 13 ? 11 < a7 ? (a7 = 15, a3 = "wr") : (Z += "lueForKe", a7 = 2) : W = "wri";
-                      }
-                    }
-                  }
-                }, {
-                  "key": M += "tGotEnv",
-                  "value": function (T) {
-                    for (var U, V, W, X, Y, Z, a0, a1, a2 = 3; a2;) (25 < a2++ ? ((a2 < 30 ? ((28 < a2 ? (X = "cktou", a2 = 33) : a2 < 28 && (a0 += "k", a2 = 24)) || (a2 = 20, W += "ok"), 1) : a2 < 32 && (a2 < 31 ? (W = "Co", a2 = 27) : (Y = "ckj", a2 = 21), {})) || (33 < a2++ ? (X += "g", a2 = 31) : 33 < a2 ? (this[a0 += "t"] = this[X += "t"] ? this[Y += "ot"] : require(Z += "t"), a2 -= 32) : (a2 = 23, Z = "tough-")), 1) : a2 < 11 && ((a2 < 5 ? a2 < 3 || (a2 < 4 ? (a0 = "ckto", a2 += 25) : (a2 = 12, Y = "g"), 0) : (8 < a2 ? a2 < 10 ? W = "Co" : (Z = "c", a2 += 4) : (a2 < 7 ? 5 < a2 || (a2 += 25, W += "okie", 0) : (7 < a2 ? (a0 = "head", a2 += 2) : a1 = "cook", 0)) && (a2 = 8, this[a0 += "ugh"] = this[X += "h"] ? this[Y += "tough"] : require(Z += "e")), 0)) && (a2 += 3, Y = "ck"), 1)) || (a2 < 19 ? (a2 < 14 ? 12 < a2 || (a2 < 12 ? (X = "head", a2 = 25) : (a2 -= 6, U = "cookieJa"), 0) : ((17 < a2 ? (a2 -= 7, V = "ckja") : a2 < 16 && (14 < a2-- ? (a0 = "c", a2 = 4) : (Z += "o", a2 = 32), 1)) || (a2 < 17 ? (a2 = 19, a0 = "go") : Z = "head"), 0)) && (X = "g", a2 += 9) : 25 < a2 ? (Y += "e", a2 += 3) : (--a2 < 21 ? (a2 < 19 ? (a2 = 16, Y = "head") : (19 < a2 ? (a2 -= 20, T) : (X += "o", a2 = 13, 0)) && (T[a0 += "ers"] = T[X += "ers"] ? T[Y += "rs"] : {}, void 0 === T[Z += "ers"][W += "ie"]) && void 0 === T[U += "r"] && (T[a1 += "ieJar"] = this[V += "r"]), 1) : 22 < a2++ && (a2 < 25 ? (a2 -= 23, Z += "cooki") : (a2 -= 7, this[a0 += "jar"] = this[X += "r"] ? this[Y += "ar"] : new this[Z += "ktough"][W += "Jar"]()), 1)) || (++a2 < 24 ? (X = "ckja", a2 = 26) : (Z = "g", a2 -= 9)));
-                  }
-                }, {
-                  "key": L += "t",
-                  "value": function (T) {
-                    for (var V, W, X, Y, Z, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, aa, ab, ac, ad, ae, af, ag, ah, ai, aj, ak = 46; ak;) (39 < --ak ? (ak < 44 ? (42 < ak ? (ak -= 40, $httpClient[a1 += "t"](T, function (al, am, an) {
-                      for (var ao, ap, aq, ar = 5; ar;) ar < 3 ? 1 < ar++ ? (ar -= 3, aa(al, am, an)) : (ar = 4, ap = "st") : (3 < --ar ? (ar++ < 5 ? (aq = "bod", ar -= 4) : (!al && am && (am[aq += "y"] = an, am[ap += "usCode"] = am[ao += "us"]), ar -= 4), 1) : 2 < ar && (ao = "stat")) || (ap += "at", ar = 6);
-                    }), 1) : 42 < ++ak && (T[a8 += "eaders"] && (delete T[a7 += "rs"][ab += "-Type"], delete T[ac += "rs"][a6 += "th"]), ak = 21)) || (ak < 42 ? (ak = 0, this[af += "de"]()) : (ak = 38, a3 = "h", 0)) && (this[Y += "tGotEnv"](T), this[ad += "t"](T)[a5 += "n"](a0 += "rect", function (al, am) {
-                      for (var ao, ap, aq, ar, as, at, au, av, aw = 1; aw;) {
-                        try {
-                          for (var aw = 5, ax = 0; aw;) --aw < 6 ? aw < 2 ? -1 < --aw ? (ar += "k", aw = 15) : (aw += 18, av = al[ar += "rs"][at += "kie"][au += "p"](a9[ap += "h"][aq += "e"][ao += "e"])[as += "ng"]()) : aw < 3 ? (aw += 14, aq = "Coo") : aw < 4 ? (aw = 9, as = "toStri") : aw < 5 ? aw -= al.headers["set-cookie"] ? 0 : 4 : (aw += 5, av && a9[ar += "jar"][at += "c"](av, null)) : 15 < aw ? (aw < 18 ? aw < 17 || (ar = "head", aw = 3, 0) : (aw < 19 ? (ap += "oug", aw = 20) : 20 < ++aw ? (au = "ma", aw -= 8) : (aw -= 8, aq += "ki"), 0)) && (aw = 2, ar = "c") : (aw++ < 11 ? aw < 9 || ((aw < 10 ? (aw += 9, at = "set-coo") : 10 < aw && (aw = 0, am[ar += "r"] = a9[at += "r"], 1)) || (at = "ckja", aw = 8), 0) : void (15 < aw ? (aw = 14, ap = "ckt") : 14 < aw ? (aw -= 8, at = "setCo") : aw < 14 ? aw < 13 ? (ao = "par", aw += 9) : (aw = 1, ao += "s") : (aw = 19, ar += "e"))) && (aw < 8 ? (at += "okieSyn", --aw) : (aw += 3, ar = "cookieJa"));
-                        } catch (az) {
-                          for (aw = 1; aw;) aw < 2 ? (++aw, ar = "logE") : (a9[ar += "rr"](az), aw -= 2);
-                        }
-                        aw = ax;
-                      }
-                    })[aj += "n"](function (al) {
-                      for (var am, an, ao, ap, aq, ar, as, at, au = 2; au;) --au < 3 ? (1 < au ? (au += 2, ap = "statu") : au < 1 && (as = al[ar += "e"], an = al[ap += "de"], at = al[aq += "aders"], am = al[ao += "ody"], au += 5, 1)) || (aq = "he", au += 2) : (6 < au ? (ap += "sCo", 1) : 4 < au && (au < 6 ? (au -= 4, ar += "tatusCod") : ar = "s", 1)) || (au < 4 ? (ao = "b", au += 5) : (aa(null, {
-                        "status": as,
-                        "statusCode": an,
-                        "headers": at,
-                        "body": am
-                      }, am), au = 0));
-                    }, function (al) {
-                      for (var am, an, ao, ap, aq = 4; aq;) (4 < aq ? (aa(am, ap, ap && ap[ao += "y"]), aq -= 5, []) : 3 < aq++ && (ao = "mess", aq = 1)) || (3 < aq ? (am = al[ao += "age"], ap = al[an += "e"], aq -= 2) : aq < 3 ? (++aq, an = "respons") : (ao = "bod", aq = 5));
-                    })) : (49 < ak ? ak < 52 || (52 < ak ? (ak = 51, a8 += "gt") : (ak -= 27, a6 = "heade"), 0) : (ak < 47 ? 45 < ak ? (ak = 37, ag = "hea") : ak < 45 ? (ak -= 16, a0 = "redi") : (a9 = this, ak = 4) : ak < 48 ? (ad += "o", ak = 17) : ak < 49 ? ak -= 48 : (ak -= 6, a6 += "eng"), 0)) && (ak < 51 ? (ak = 2, aa = 1 < arguments[a8 += "h"] && void 0 !== arguments[1] ? arguments[1] : function () {}) : (ad = "g", ak -= 50)), 1) : 26 < ak && (ak < 31 ? ak < 29 ? ak++ < 28 ? (ak -= 6, Z = "opt") : (ak -= 21, ac = "h") : 29 < ak ? (ak = 29, ab += "ent") : (a7 = "isLo", ak = 45) : 36 < ak ? ak < 38 ? (ak = 18, ah = "fetc") : ak < 39 ? (ak = 14, X = "ass") : (ak = 52, a8 = "i") : ak < 34 ? ak < 32 ? (W = "o", ak = 48) : ak < 33 ? aj += "e" : (ai = "opt", ak = 11) : ak < 35 ? (a1 = "ge", ak -= 22) : ak++ < 36 ? (ak -= 31, a7 = "hea") : (a4 = "t", ak -= 13), 1)) || (ak < 14 ? (9 < ak++ ? ((13 < ak ? (a4 += "h", ak = 26) : 12 < ak && (a3 += "ead", ak += 17, 1)) || (11 < ak ? (ae += "r", ak = 13) : (ak = 35, ac = "i")), {}) : 6 < --ak && (8 < ak ? (V += "sQuan", ak = 27) : ak < 8 ? (ak = 9, a7 += "de") : (ac += "eade", ak = 19), 1)) || (3 < ak ? ak < 5 || (ak < 6 ? (ak += 15, aj = "th") : (ak += 38, this[ab += "e"]() && this[ac += "ite"] && (T[a6 += "rs"] = T[a3 += "ers"] || {}, Object[X += "ign"](T[ag += "ders"], {
-                      "X-Surge-Skip-Scripting": !1
-                    }))), 0) : (ak < 2 ? ak < 1 ? (ak += 53, ae = "isNeedRew") : (a8 = "h", ak = 36) : 2 < ak ? (ak += 51, a8 = "len") : ak -= 2, 0)) && (ak += 27, ab = "Cont") : (22 < --ak ? ak < 24 || (ak < 25 ? (ak = 6, ac += "sNeedRewr") : ak += this[a8 += "sSurge"]() || this[a7 += "n"]() ? -18 : -9, 0) : (19 < ak ? 21 < ak ? (ab = "isSurg", ak = 42) : ak-- < 21 ? (Y = "ini", ak += 20) : (ak = 15, this[ae += "ite"] && (T[ai += "s"] = T[W += "pts"] || {}, Object[a2 += "ign"](T[Z += "s"], {
-                      "hints": !1
-                    }))) : (++ak < 18 ? (ak < 16 ? 15 < ++ak ? ak = this[V += "X"]() ? 23 : 41 : (ak += 34, $task[ah += "h"](T)[a4 += "en"](function (al) {
-                      for (var am, an, ao, ap, aq, ar, as, at, au = 1; au;) (au < 4 ? ((2 < au ? (ao += "Co", au = 7) : 1 < au && (ao = "status", au = 3)) || (an = "he", au = 2), 1) : 7 < au && (au -= 2, ap = "sta")) || (au-- < 6 ? (au < 4 ? (au -= 3, aa(null, {
-                        "status": aq,
-                        "statusCode": ar,
-                        "headers": as,
-                        "body": at
-                      }, at)) : (aq = al[ao += "de"], ar = al[ap += "e"], as = al[an += "aders"], at = al[am += "y"]), 1) : 5 < au && (am = "bod", au = 8)) || (ap += "tusCod");
-                    }, function (al) {
-                      for (;;) {
-                        return 1, aa(al);
-                      }
-                    })) : ak < 17 ? (ak -= 6, V = "i") : (ak += 17, a2 = "ass"), 1) : ak < 19 && (ak += 32, a6 = "Content-L")) || (19 < ak ? (ak = 40, a5 = "o") : (a7 += "o", ak += 14)), 0)) && (ak += 24, af = "isNo"));
-                  }
-                }, {
-                  "key": J += "t",
-                  "value": function (T) {
-                    for (var V, W, X, Y, Z, a0, a1, a2, a3, a4 = 39; a4;) a4 < 13 ? 10 < a4 ? ++a4 < 13 ? (a1 += "i", a4++) : (a4 = 23, a2 = "th") : a4 < 5 ? (a4 < 3 ? (2 < ++a4 ? (W = "he", a4 = 24) : (a4 = 41, a0 = 1 < arguments[Z += "h"] && void 0 !== arguments[1] ? arguments[1] : function () {}), 1) : a4 < 4 && (a4 += 26, a1 = "o")) || (a4 -= this.isNode() ? -13 : 4) : (a4 < 8 ? 6 < a4 || (5 < a4 ? (V = T[Z += "l"], a3 = bT(T, bM), a4 = 12) : (Z = "f", a4 = 25), 0) : void (9 < a4 ? (a4 = 26, Y = "isNee") : 8 < a4-- ? (W += "ss", a4 += 8) : ($httpClient[Z += "t"](T, function (a5, a6, a7) {
-                      for (var a9, aa, ab, ac = 5; ac;) ac < 3 ? 1 < ac-- ? (a0(a5, a6, a7), ac--) : (ac += 6, a9 = "b") : 4 < ac ? 5 < ac ? (ac -= 4, !a5 && a6 && (a6[a9 += "ody"] = a7, a6[ab += "ode"] = a6[aa += "s"])) : (aa = "stat", ac -= 2) : ac < 4 ? (aa += "u", ac = 4) : (ac = 1, ab = "statusC");
-                    }), a4 += 30))) && (this[Z += "Surge"]() && this[Y += "dRewrite"] && (T[a2 += "eaders"] = T[W += "aders"] || {}, Object[a1 += "gn"](T[X += "s"], {
-                      "X-Surge-Skip-Scripting": !1
-                    })), a4 += 24) : 34 < a4 ? (41 < a4 ? (a4++ < 44 ? 43 < a4 ? (Y = "o", a4 = 15) : (Z += "os", a4 -= 35) : 44 < --a4 ? ($task[Z += "ch"](T)[Y += "n"](function (a5) {
-                      for (var a6, a7, a8, a9, aa, ab, ac, ad, ae = 7; ae;) 7 < ae ? (aa = "statusCod", ae = 6) : 5 < ae ? 6 < ae ? (ae -= 4, a8 = "heade") : (ae -= 2, ab = "bod") : (3 < ae ? 4 < ae || (++ae, a9 += "atusC", 0) : (2 < ae ? (a9 = "st", ae = 2) : ae < 2 ? (ae = 0, a0(null, {
-                        "status": ac,
-                        "statusCode": ad,
-                        "headers": a7,
-                        "body": a6
-                      }, a6)) : (a8 += "r", ae = 8), 0)) && (ac = a5[aa += "e"], ad = a5[a9 += "ode"], a7 = a5[a8 += "s"], a6 = a5[ab += "y"], ae = 1);
-                    }, function (a5) {
-                      for (;;) {
-                        return 1, a0(a5);
-                      }
-                    }), a4 -= 24) : (a4 -= 17, Z += "ri"), 1) : 39 < a4 && (a4 < 41 ? (a4 = 34, Y += "S") : a4 -= (T.body && T.headers && !T.headers["Content-Type"] && (T.headers["Content-Type"] = "application/x-www-form-urlencoded"), T.headers && delete T.headers["Content-Length"], this.isSurge() || this.isLoon() ? 13 : 27), 1)) || (a4 < 38 ? ((36 < a4-- ? (a4 = 0, 1) : a4 < 35 && (this[Z += "t"][Y += "t"](V, a3)[a2 += "en"](function (a5) {
-                      for (var a7, a8, a9, aa, ab, ac, ad, ae, af = 5; af;) (4 < af ? (af < 6 ? (a9 = "status", af = 1) : (af -= 2, aa = "status"), []) : 3 < af && (--af, a7 = "h")) || (2 < af ? (ab = a5[aa += "Code"], ac = a5[a9 += "Code"], ad = a5[a7 += "eaders"], ae = a5[a8 += "y"], --af) : af < 2 ? (af += 5, a8 = "bod") : (a0(null, {
-                        "status": ab,
-                        "statusCode": ac,
-                        "headers": ad,
-                        "body": ae
-                      }, ae), af = 0));
-                    }, function (a5) {
-                      for (var a6, a7, a8, a9, aa = 6; aa;) (aa < 3 ? (1 < aa ? (a8 += "od", aa += 5) : (aa = 3, a9 += "s"), 1) : 3 < --aa && ((++aa < 6 ? (aa -= 4, a8 = "messag") : 6 < aa && (a0(a7, a6, a6 && a6[a8 += "y"]), aa = 0, 1)) || (aa--, a9 = "respon"), 1)) || (aa < 3 ? (aa = 4, a7 = a5[a8 += "e"], a6 = a5[a9 += "e"]) : (aa = 2, a8 = "b"));
-                    }), a4 -= 34, 1)) || (W = "a", a4 = 3), 1) : 38 < a4 && (a4 = 1, Z = "lengt")) || (a4 -= 6, Z = "u") : (23 < a4 ? ((30 < a4 ? a4 < 33 || (++a4 < 35 ? (X = "h", a4 = 2) : (T[Z += "od"] = Y += "T", a4 = 43), "") : (a4 < 27 ? 25 < a4 ? (a1 = "ass", a4 += 7) : 24 < a4++ ? (a4 = 30, Z += "et") : (X += "eader", a4 -= 14) : 28 < a4 ? a4 < 30 ? (a4 = 9, a2 = "op") : (Y = "the", a4 = 45) : 27 < a4 ? (a4 -= 18, Z = "is") : (this[Z += "te"] && (T[Y += "s"] = T[a2 += "ts"] || {}, Object[W += "ign"](T[a1 += "pts"], {
-                      "hints": !1
-                    })), a4 = 5), 0)) && (31 < a4-- ? (Z += "r", a4 -= 25) : (a4 += 12, Z = "p")), 1) : 19 < a4 && (a4 < 22 ? 20 < a4 ? a4 = 0 : (a4 += 18, this[Z += "tEnv"](T)) : --a4 < 22 ? (a4 -= 3, Z = "meth") : (Z = "go", a4 = 19), 1)) || (a4 < 16 ? a4 < 14 ? (a2 = "h", a4 -= 6) : a4 = 14 < a4 ? (Y += "pt", 36) : this.isQuanX() ? 22 : 4 : (a4 < 18 ? (16 < a4 ? (a4 += 3, Z = "initGo") : (Z = "isNeedRew", a4 = 44), {}) : 18 < a4 && (Y = "pos", a4 = 35)) || (a4 = 40, Y = "PO"));
-                  }
-                }, {
-                  "key": K += "me",
-                  "value": function (T) {
-                    for (var U, V, W, X, Y, Z, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, aa, ab, ac, ad = 2; ad;) if (47 < ++ad) (ad < 53 ? ad < 50 || (51 < ad ? (ad = 1, a9 = {
-                      "M+": a2[a3 += "th"]() + 1,
-                      "d+": a2[Z += "ate"](),
-                      "H+": a2[a8 += "urs"](),
-                      "m+": a2[a5 += "tes"](),
-                      "s+": a2[a6 += "conds"](),
-                      "q+": Math[a0 += "r"]((a2[a7 += "etMonth"]() + 3) / 3),
-                      "S": a2[a1 += "nds"]()
-                    }) : 50 < ad ? (ad = 45, a3 = "__p") : (Z += "ep", ad = 59), 0) : ((60 < ad ? ad < 62 || (ad < 63 ? (ad = 9, a3 += "s") : (ad = 14, new RegExp("(" + U + ")")[a3 += "st"](T) && (T = T[Z += "lace"](RegExp[a8 += "1"], 1 == RegExp[a5 += "1"][a6 += "h"] ? a9[U] : ((a0 += "0") + a9[U])[a7 += "ubstr"](("" + a9[U])[a1 += "gth"])))), 0) : (ad < 57 ? (55 < ad-- ? (ad -= 23, a6 = "lengt") : 53 < ad && (a7 += "n", ad = 49)) || (ad < 53 ? ad = 5 : ad -= 5) : ad < 59 ? ad < 58 ? (ad -= 18, a1 = "getMillisec") : (ad = 8, a3 = "k") : ad < 60 ? (ad -= 4, U = Y[ac]) : (ad -= 43, /(y+)/[a3 += "st"](T) && (T = T[Z += "lace"](RegExp[a8 += "1"], (a2[a5 += "ear"]() + "")[a6 += "r"](4 - RegExp[a0 += "1"][a7 += "gth"])))), 0)) && (a3 = "pu"), 0)) && (ad < 49 ? (ad += 2, X = {}[a3 += "proto__"]) : ad += ac < ab ? 9 : -42);else {
-                      if (++ad < 19) {
-                        if (15 < ad) 17 < ad ? (ad = 37, Z = "r") : 16 < ad ? ad -= -1 === Y.indexOf(W[V]) ? -43 : -21 : (ac++, ad += 37);else {
-                          if (ad < 8) (ad < 5 ? (ad++ < 4 ? (a0 = "$", ad += 9) : (ad--, a3 = "l"), 1) : ad < 6 && (ad += 46, Z = "getD")) || (ad-- < 7 ? (ad += 17, a4 = 1 < arguments[a3 += "ength"] && void 0 !== arguments[1] ? arguments[1] : null) : ad = V < W.length ? 15 : 33);else {
-                            if (11 < ad) ad < 14 ? ad < 13 ? (a0 = "floo", ad = 40) : (ad = 35, ab = Y[a3 += "h"]) : ++ad < 16 ? (ad = 44, Z = "rep") : (a6 = "subst", ad += 20);else {
-                              if (ad < 10) {
-                                if (!(ad < 9)) return T;
-                                a1 += "o";
-                                ad = 10;
-                              } else 10 < ad++ ? (ad = 38, Y[a3 += "h"](W[V])) : (ad = 30, W = Object[a3 += "eys"](aa));
-                            }
-                          }
-                        }
-                      } else !(ad < 34 ? 28 < ad || void (--ad < 22 ? 20 < ad ? (a3 = "key", ad += 25) : 18 < --ad ? (a0 = "0", ad = 12) : 17 < ad ? (a1 = "len", ad += 23) : (ad = 20, aa = a9) : (--ad < 24 ? 22 < ad || (21 < ad ? (ad = 29, a2 = a4 ? new Date(a4) : new Date()) : (aa = aa[a3 += "to__"], ad += 36), 0) : (25 < ad ? (a3 = "__", ad = 47) : ++ad < 26 ? (ad = 16, a3 = "te") : (a3 += "on", ad = 6), 0)) && (a5 = "getF", ad = 24)) : (43 < ad ? 46 < --ad ? (ad = 26, Y = Object[a3 += "s"](aa)) : 45 < ad ? (ad = 21, a3 += "ro") : ad++ < 45 ? 44 < ad ? (ad = 27, a3 = "le") : (a6 = "getSe", ad = 25) : (a7 = "s", ad = 62) : (ad < 38 ? ad < 36 || (37 < ++ad ? ac = (ad = 48) - 48 : (a8 = "getHo", ad -= 34), 0) : ((ad < 41 ? 39 < ad || void (38 < ad++ ? (a5 += "ullY", ad -= 9) : (a8 = "$", ad = 23)) : (ad < 42 ? (a5 = "getMinu", ++ad) : 42 < ad ? (ad = 19, a8 = "$") : (ad = 34, a7 = "g"), 0)) && (ad = 52, V++), 0)) && (--ad < 34 ? (ad -= 5, a5 = "$") : ad = X !== aa ? 50 : 43), "")) || (32 < ad ? (ad = 54, a7 = "le") : ad < 31 && (ad++ < 30 ? (ad = 11, a3 += "ngt") : (ad -= 13, a3 = "te"), 1)) || (31 < ad ? V = (ad -= --ad - 4) - 5 : (a3 = "getM", ad += 25));
-                    }
-                  }
-                }, {
-                  "key": y += "g",
-                  "value": function () {
-                    for (var T, U, V, W, X, Y, Z, a0, a1, a2, a3 = 1; a3;) (21 < --a3 ? ((a3 < 24 ? a3 < 23 || (a3 = 8, void (Z = 3 < arguments[W += "th"] ? arguments[3] : void 0)) : ((25 < a3 ? (26 < a3-- ? (a3 = 17, W = "pu") : (T = "conc", a3 -= 10), 1) : a3 < 25 && (Y && a1[W += "h"](Y), a3 -= 21, 1)) || (W += "engt", a3 = 4), 0)) && (W = "leng", a3 = 24), 1) : 14 < a3 && (a3 < 17 ? a3 < 16 ? (a3 = 21, W = "pu") : a1[W += "sh"](X) : (18 < a3 ? (20 < a3 ? (W = "lo", a3 = 6) : 20 < ++a3 ? (a3 -= 19, U && a1[W += "sh"](U)) : (W = "==============📣系统通知", a3 = 19), []) : a3++ < 18 && (a3 += 9, W = "lo")) || (a3 = 28, a1 = ["", W += "📣=============="]), 1)) || (7 < a3 ? a3 < 10 || (a3 < 11 ? (a3 = 12, a2 += "o") : (a3 < 12 ? (this[W += "gs"] = this[a2 += "gs"][T += "at"](a1), a3 -= 11, 1) : a3 < 13 && (a3 -= 5, W = "le")) || (a3 < 14 ? (a3 += 13, W = "l") : (a3 = 11, a2 = "l")), null) : ((a3++ < 3 ? 2 < a3 || (1 < a3 ? (W = "pus", a3 += 23) : (V = this, a3 += 13), 0) : void (7 < a3 ? (a0 = function (a4) {
-                      for (var a5, a6, a7, a8, a9, aa, ab, ac, ad, ae, af = 26; af;) if (af < 11) {
-                        if (af < 4) {
-                          if (af < 2) af = "string" == typeof a4 ? 29 : 5;else {
-                            if (!(af < 3)) return {
-                              "openUrl": a7,
-                              "mediaUrl": a6
-                            };
-                            af -= V.isLoon() ? -35 : -32;
-                          }
-                        } else {
-                          if (af < 6) {
-                            if (!(4 < af)) return a4;
-                            af = "object" == bS(a4) ? 2 : 0;
-                          } else 7 < af ? (9 < af-- ? (af += 3, ab = "u") : af < 8 && (ab = "ur", af = 28)) || (af += 9, ab = "open") : af < 7 ? (af = 33, a8 = "mediaU") : (ab += "Qu", af += 16);
-                        }
-                      } else {
-                        if (af < 20) {
-                          if (17 < af) af < 19 ? (af += 17, ad = a4[aa += "l"] || a4[ab += "l"] || a4[ac += "rl"], ae = a4[a9 += "edia-url"] || a4[a8 += "l"]) : (af -= 5, ac = "open-");else {
-                            if (af < 14) 12 < af ? (af = 30, aa = "open") : af < 12 ? (af = 20, aa = "ur") : (af += 12, a9 = "m");else {
-                              if (af < 16) af < 15 ? (a8 = "m", af = 21) : af -= V.isSurge() ? 4 : 15;else {
-                                if (!(16 < af)) return {
-                                  "url": a5
-                                };
-                                af = 16;
-                                a5 = a4[aa += "l"] || a4[ab += "Url"] || a4[ac += "n-url"];
-                              }
-                            }
-                          }
-                        } else {
-                          if (af < 29) {
-                            if (af < 23) 21 < af ? (aa = "isL", af = 7) : af < 21 ? (ac = "op", af += 18) : (af -= 18, a7 = a4[aa += "l"] || a4[ab += "rl"] || a4[ac += "url"], a6 = a4[a9 += "Url"] || a4[a8 += "edia-url"]);else {
-                              if (26 < af) {
-                                if (af < 28) return V[aa += "n"]() ? a4 : V[ab += "anX"]() ? {
-                                  "open-url": a4
-                                } : V[ac += "e"]() ? {
-                                  "url": a4
-                                } : void 0;
-                                af = 31;
-                                ac += "penU";
-                              } else (af < 25 ? (23 < af ? (af -= 5, a9 += "edia") : (aa += "oo", af += 4), []) : --af < 25 && (af = 13, ac = "o")) || (af += a4 ? -24 : -21);
-                            }
-                          } else {
-                            if (++af < 33) 31 < af ? (aa += "-ur", af = 6) : 30 < af ? (a9 = "m", af -= 23) : (af = 32, ac = "isSurg");else {
-                              if (af < 35) 33 < af ? (af = 18, a8 += "r") : (ab = "is", af = 22);else {
-                                if (af < 37) {
-                                  if (36 < ++af) return {
-                                    "open-url": ad,
-                                    "media-url": ae
-                                  };
-                                  af += V.isQuanX() ? -11 : -21;
-                                } else af < 38 ? (af -= 27, aa += "r") : 38 < af ? (ac += "e", af -= 30) : (aa = "openU", af -= 2);
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }, a3++) : (5 < a3 ? 6 < a3 || (console[W += "g"](a1[a2 += "n"]("\n")), void (a3 = 18)) : (a3++ < 5 ? (X = 0 < arguments[W += "h"] && void 0 !== arguments[0] ? arguments[0] : a, a3 += 5) : (a3 = 13, U = 1 < arguments[W += "h"] && void 0 !== arguments[1] ? arguments[1] : ""), "")) && (a3 += 16, Y = 2 < arguments[W += "ngth"] && void 0 !== arguments[2] ? arguments[2] : ""))) && (a2 = "joi", a3 += 19), 0)) && (8 < a3 ? (W = "lengt", a3 -= 4) : (this.isMute || (this.isSurge() || this.isLoon() ? $notification.post(X, U, Y, a0(Z)) : this.isQuanX() && $notify(X, U, Y, a0(Z))), a3 = this.isMuteLog ? 0 : 20));
-                  }
-                }, {
-                  "key": Q += "g",
-                  "value": function () {
-                    for (var T, U, V, W, X, Y, Z, a0 = 3; a0;) (10 < a0 ? ((a0 < 13 ? 11 < a0 || (a0 += 4, T = "lo", 0) : ((a0 < 14 ? (a0 -= 13, console[Z += "g"](X[U += "n"](this[V += "r"])), 1) : a0 < 15 && (a0 -= 8, Z = "le")) || (a0 -= 11, 0 < X[Z += "ngth"] && (this[U += "ogs"] = [][V += "t"](bL(this[T += "gs"]), X))), 0)) && (V = "logSeparato", a0 = 8), 1) : a0 < 5 && (3 < a0 ? (a0 -= 2, Z = "l") : 2 < a0 ? (Y = arguments.length, X = new Array(Y), W = 0, a0 -= 2) : 1 < a0 ? (Z += "o", a0 = 12) : a0 -= W < Y ? -8 : -13, 1)) || (7 < a0 ? 9 < a0 ? (a0++, U = "l") : a0 < 9 ? (U = "joi", a0 = 13) : (X[W] = arguments[W], a0 -= 2) : 6 < a0 ? (a0 -= 2, W++) : a0 < 6 ? a0 -= 4 : (V = "conca", a0 += 4));
-                  }
-                }, {
-                  "key": P += "rr",
-                  "value": function (T, U) {
-                    for (var V, W, X, Y, Z, a0, a1, a2, a3, a4, a5, a6, a7 = 14; a7;) (16 < a7 ? 20 < a7 || ((a7 < 19 ? (17 < a7 ? (Z = "❗", a7 -= 17) : (a7 += 3, this[a0 += "og"]("", (Z += "️")[Y += "at"](this[V += "e"], a5 += " 错误!"), T[a3 += "ck"])), 1) : --a7 < 19 && (a7 -= a1 ? 1 : 11, 1)) || (a7 -= 19), 0) : (11 < a7 ? 15 < a7 ? (a4 = "n", a7 = 8) : (a7 < 14 ? 12 < a7 || (a7 -= 2, void (Y = "isL")) : (14 < a7 ? (a6 = "❗", a7 = 11) : (a0 = "isSurg", a7 = 6), 0)) && (W = ", 错", a7 = 21) : 6 < a7-- ? (a7 < 8 ? (6 < a7 ? (a7 += 2, X = "lo") : (this[X += "g"]("", (a6 += "️")[a2 += "t"](this[a4 += "ame"], W += "!"), T), a7 -= 6), 1) : a7 < 9 && (a7 += 10, a0 = "l")) || (a7 < 10 ? (a1 = !this[a0 += "e"]() && !this[Z += "nX"]() && !this[Y += "oon"](), a7 -= 4) : (a7 = 19, W += "误")) : (a7 < 2 ? 0 < a7 || (a5 = ",", a7 = 13, null) : (a7 < 3 ? (Y += "c", a7 += 2) : a7 < 4 ? (a7 += 12, V = "nam") : 4 < a7-- ? (a7 = 12, Z = "isQua") : (a2 = "conca", a7--), 0)) && (a3 = "sta", a7 = 16), null)) && (Y = "con", a7 = 3);
-                  }
-                }, {
-                  "key": E += "t",
-                  "value": function (T) {
-                    for (;;) {
-                      return 1, new Promise(function (U) {
-                        for (;;) {
-                          return 1, setTimeout(U, T);
-                        }
-                      });
-                    }
-                  }
-                }, {
-                  "key": R += "one",
-                  "value": function () {
-                    for (var T, U, V, W, X, Y, Z, a0, a1, a2 = 18; a2;) (a2++ < 8 ? ((5 < a2 ? (a2 < 7 ? (a2 = 12, Y = "lo") : a2-- < 8 ? (a2 = 20, Z = " ") : (a2 -= 2, T += "! "), 1) : a2 < 4 && (2 < a2 ? (a2 = 15, W = "startT") : (a2 = 24, W += "im"), 1)) || (a2 < 5 ? (a2 = 11, W += "uan") : (Y = "g", a2 = 2)), 1) : a2 < 15 && ((12 < a2 ? 13 < a2 || (a2 = 10, this[Y += "g"]("", (W += "\uDD14")[a0 += "t"](this[a1 += "e"], T += "🕛 ")[U += "at"](V, Z += "秒")), "") : (a2 < 11 ? a2 < 10 ? (U += "onc", a2 = 13) : (a2 += 4, W = "\uD83D") : a2 < 12 ? (a2 += 11, Y = "l") : (a2 += 11, a0 = "is"), "")) && (a0 = "conca", a2 += 7), 1)) || (20 < a2 ? (24 < a2++ ? (a2++ < 27 ? (a2 = 9, V = (new Date()[Y += "ime"]() - this[W += "e"]) / 1000) : (Y += "sSu", a2 = 16), 1) : 24 < a2 && ((this[Y += "rge"]() || this[W += "X"]() || this[a0 += "Loon"]()) && $done(X), a2 = 0, 1)) || (a2 < 24 ? --a2 < 22 || (a2 = 7, a1 = "nam", "") : (a2 = 17, this[Y += "og"](), "")) && (T = ", 结束", a2 -= 13) : (a2 < 17 ? a2 < 16 || (Y += "etT", void (a2 = 1)) : void ((a2 < 18 ? (a2 -= 14, W = "isQ", 1) : 17 < --a2 && (a2 < 19 ? (Y = "leng", a2++) : (a2 = 4, X = 0 < arguments[Y += "th"] && void 0 !== arguments[0] ? arguments[0] : {}), 1)) || (Y = "i", a2 += 8))) && (U = "c", a2 = 6));
-                  }
-                }]);
-                S = 35;
-                D += "p";
-              } else (6 < S ? (8 < S ? (S = 24, G = "lo") : 7 < S ? (S += 7, y = "ms") : E = "wai", 1) : S < 6 && (u += "o", S += 11, 1)) || (D = "runScri", S += 4);
-            }
-          } else S < 19 ? (16 < S ? (++S < 19 ? (S += 9, q = "g") : (S += 13, O = "isL"), 1) : 14 < S && (15 < S-- ? (z += "d", S = 13) : (S += 8, t = "set"), [])) || (S < 13 ? (S < 11 ? (F = function (T, U) {
-            for (var V, W, X, Y, Z, a0 = 25; a0;) 25 < a0 ? (32 < a0 ? (W += "g", a0 = 20) : 30 < a0 && (a0 < 32 ? (this[W += "File"] = X += "dat", a0 -= 8) : (a0 -= 28, this[W += "rtTime"] = new Date()[X += "Time"]()), 1)) || (a0 < 29 ? (a0 < 27 ? (W = "sta", a0 = 3) : 28 < ++a0 && (a0 -= 12, W = "d")) || (W = "isNeedRew", a0 = 9) : a0 < 30 ? (W += "a", a0 += 2) : (a0 -= 11, W += "o")) : (17 < a0 ? a0 < 21 || void ((24 < a0-- ? (a0 -= 16, bW(this, F), 1) : a0 < 22 && (19 < --a0 ? (a0 = 26, this[W += "rator"] = "\n") : (a0 -= 5, Y = "c"), 1)) || (22 < a0 ? this[W += "e"] = !((a0 += 4) - 26) : (a0 += 11, W = "lo"))) : ((a0-- < 10 ? ((a0 < 3 ? 1 < a0 || void (0 < a0-- ? this[W += "ite"] = !((a0 += ++a0 + 5) - 5) : (a0 = 11, W = "l")) : ((--a0 < 4 ? a0 < 3 || (W = "dat", void (a0 += 12)) : ((a0 < 6 ? (3 < --a0 ? (Z = "n", a0 += 26) : (W = "logSepa", a0 = 22), []) : 6 < a0 && (W += "r", a0 = 2)) || (W = "na", a0 = 18), 0)) && (a0 += 11, W = "ass"), 0)) && (a0 += 30, X = "get"), 1) : a0++ < 12 && ((11 < a0 ? (a0 = 16, W = "ht") : 10 < a0 && (V = ", ", a0 = 7)) || (W = "isMut", a0 += 14), 1)) || (a0 < 15 ? a0 < 14 ? (a0 += 8, Object[W += "ign"](this, U)) : (a0 -= 13, X = "\uD83D") : (a0 < 17 ? a0-- < 16 || (a0 += 13, this[W += "tp"] = new g(this), 0) : (a0 -= 12, this[W += "ata"] = null)) && (a0 = 29, X = "box.")), 0)) && (a0 < 19 ? (this[W += "me"] = T, a0 = 12) : 19 < a0++ ? (a0 -= 11, this[W += "s"] = []) : (a0 = 0, this[W += "g"]("", (X += "\uDD14")[Y += "oncat"](this[Z += "ame"], V += "开始!"))));
-          }, S = 8) : S < 12 && (N = "lodash_ge", S = 19)) || (v = "i", S = 38) : S < 14 ? (I = "isSu", S += 16) : (S = 2, x = "loda")) : (26 < ++S ? 27 < S || (S = 21, s += "b", 0) : void (--S < 22 ? (S < 20 ? (O += "o", S += 4, 1) : 20 < S && (s = "toO", S -= 9, 1)) || (P += "E", S = 26) : (S-- < 24 ? --S < 21 || (S -= 20, H = "writedat", 0) : void (S-- < 24 ? (z = "get", S -= 13) : (S = 5, C += "S"))) && (R = "d", S -= 2))) && (r = "i", S -= 24);
-        }
-      })())(a, b);
-      o = 8;
-      h = "indexO";
-    }
-  } else o < 4 ? (2 < o ? (g = (() => {
-    for (var r, s, t, u, v = 1; v;) if (4 < v) --v, u = "se";else {
-      if (v < 3) v < 2 ? (++v, s = function (w) {
-        for (var y, z = 3; z;) 3 < z ? (z = 1, y += "n") : z < 3 ? z-- < 2 ? this[y += "v"] = w : (y = "e", z = 4) : (bW(this, s), --z);
-      }) : (r = "p", ++v);else {
-        if (!(v < 4)) return bA(s, [{
-          "key": u += "nd",
-          "value": function (w) {
-            for (var y, z, A, B, C, D = 6; D;) if (10 < D) {
-              if (D < 12) D = 3, z = "pos";else {
-                if (!(D < 13)) return new Promise(function (E, F) {
-                  for (var G, H = 2; H;) 1 < --H ? (H -= 2, y[G += "l"](A, w, function (I, J, K) {
-                    for (var M = 4; M;) 3 < M-- ? M -= I ? 0 : 2 : (M < 2 ? 0 < M || (E(J), "") : void F(I)) && M--;
-                  })) : H < 1 ? (G += "l", H = 3) : G = "ca";
-                });
-                D -= 10;
-                C = 1 < arguments[B += "gth"] && void 0 !== arguments[1] ? arguments[1] : z += "ET";
-              }
-            } else (D < 5 ? 3 < D || (D < 3 ? D < 2 ? (w = (B += "g") == typeof w ? {
-              "url": w
-            } : w, D += 7) : (B = "strin", D = 1) : ((B += "T") === C && (y = this[z += "t"]), D += 10), 0) : (D < 8 ? D < 6 ? (B = "POS", D += 6) : D < 7 ? (D -= 2, A = this) : (D = 12, B += "n") : D++ < 9 ? (B = "ge", D = 10) : --D < 10 ? (B = "le", D = 7) : (y = this[B += "t"], D -= 5), 0)) && (D += 5, z = "G");
-          }
-        }, {
-          "key": t += "t",
-          "value": function (w) {
-            for (var y, z, A, B = 1; B;) {
-              if (3 < B) return this[z += "end"][A += "l"](this[y += "v"], w);
-              2 < B-- ? (B = 4, y = "en") : B < 1 ? (B += 2, A = "cal") : (z = "s", B += 2);
-            }
-          }
-        }, {
-          "key": r += "ost",
-          "value": function (w) {
-            for (var x, y, z, A, B = 2; B;) if (++B < 4) B < 3 ? (y += "l", B += 4) : (B = 4, y = "ca");else {
-              if (B < 5) B = 5, z = "POS";else {
-                if (6 < ++B) {
-                  if (!(B < 8)) return this[x += "d"][y += "l"](this[A += "v"], w, z += "T");
-                  A = "en";
-                  B -= 6;
-                } else B = 3, x = "sen";
-              }
-            }
-          }
-        }]);
-        v = 5;
-        t = "ge";
-      }
-    }
-  })(), o += 8, 1) : 1 < o && (l = "exi", o = 1)) || (o += 8, m = "undefi") : (5 < o ? o < 7 || (o = 6, j = "G", 0) : void ((4 < o++ ? (o = 3, (m += "d") != typeof process) : (k = "stri", o = 2, 0)) && -1 < JSON[k += "ngify"](process[n += "v"])[h += "f"](j += "HUB") && process[l += "t"](0))) && (o -= 2, j += "IT");
-}, 1)) || (18 < cf++ ? 19 < --cf ? (bW = function (a, b) {
-  for (var g, h = 3; h;) (h < 3 ? (h < 2 ? ((() => {
-    throw new TypeError(g += "n");
-  })(), --h) : (h += 2, g = "Cannot call a class "), 1) : 3 < h && (g += "as a functio", h = 1)) || (h += a instanceof b ? -3 : -1);
-}, cf -= 12) : (cf = 31, c4 = void 0) : (bH = function (a, b) {
-  for (var g, h, j, k, l, m, n, o, p, q = 5; q;) if (q < 5) (q < 3 ? (q < 2 ? (l = (o += "d") != typeof Symbol && a[Symbol[m += "r"]] || a[n += "r"], q = 11) : (n = "@@ite", q = 13), []) : 3 < q++ && (q -= 4, o = "undefine")) || (q = Array.isArray(a) || (l = bV(a)) || b && a && "number" == typeof a.length ? 6 : 14);else {
-    if (10 < q) {
-      if (q < 13) {
-        if (!(q < 12)) return {
-          "s": j,
-          "n": function () {
-            for (var s, t = 1; t;) {
-              if (!(t < 2)) return k >= a[s += "h"] ? {
-                "done": !0
-              } : {
-                "done": !1,
-                "value": a[k++]
-              };
-              s = "lengt";
-              t++;
-            }
-          },
-          "e": function (s) {
-            var t = 1;
-            if (t) throw t = 0, s;
-          },
-          "f": j
-        };
-        q = l ? 7 : 3;
-      } else {
-        if (q < 14) n += "rato", q = 4;else {
-          if (!(q < 15)) return {
-            "s": function () {
-              for (var s, t = 2; t;) 1 < t ? (t = 1, s = "c") : (t = 0, l = l[s += "all"](a));
-            },
-            "n": function () {
-              for (var s, t, u = 1; u;) if (4 < u) u < 6 ? (s = "don", --u) : (t = l[s += "t"](), u = 5);else {
-                if (3 < u++) h = t[s += "e"], u -= 3;else {
-                  if (u < 4) {
-                    if (2 < u--) return t;
-                    u = 3;
-                    s = "n";
-                  } else s += "ex", u = 6;
-                }
-              }
-            },
-            "e": function (s) {
-              for (var t = 2; t;) 1 < t ? g = !((t = 1) - 1) : (p = s, t = 0);
-            },
-            "f": function () {
-              for (var t, u, v = 1; v;) {
-                try {
-                  for (var v = 4, w = 0; v;) (v++ < 3 ? (++v < 4 ? (h || null == l[u += "rn"] || l[t += "n"](), v -= 3) : (u += "etu", v -= 3), 1) : v < 5 && (v -= 2, u = "r")) || (t = "retur", v -= 2);
-                } finally {
-                  for (v = 1; v;) if (v < 2) v -= g ? -1 : 1;else throw p;
-                }
-                v = w;
+                }) : (_0x2a8671._v = _0x57673f, _0x2a8671._s = 1, _0x23d43c(_0x2a8671, !1));
+              } catch (_0x406f03) {
+                _0x4e61a4.call({
+                  "_w": _0x2a8671,
+                  "_d": !1
+                }, _0x406f03);
               }
             }
           };
-          q = 9;
-          o = "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable";
+        _0x21802e || (_0x281e9c = function (_0x331d25) {
+          _0x5c23cc(this, _0x281e9c, _0x4adf6c, "_h");
+          _0x467713(_0x331d25);
+          _0x3a4479.call(this);
+          try {
+            _0x331d25(_0x2ec1d4(_0x932a8d, this, 1), _0x2ec1d4(_0x4e61a4, this, 1));
+          } catch (_0xbbc25a) {
+            _0x4e61a4.call(this, _0xbbc25a);
+          }
+        }, _0x3a4479 = function (_0x24b2ec) {
+          this._c = [];
+          this._a = void 0;
+          this._s = 0;
+          this._d = !1;
+          this._v = void 0;
+          this._h = 0;
+          this._n = !1;
+        }, _0x3a4479.prototype = _0x83bf13(56)(_0x281e9c.prototype, {
+          "then": function (_0x4c957e, _0x7a4e9) {
+            var _0x39674c = _0x3f676f(_0x4be1dc(this, _0x281e9c));
+            return _0x39674c.ok = typeof _0x4c957e != "function" || _0x4c957e, _0x39674c.fail = typeof _0x7a4e9 == "function" && _0x7a4e9, _0x39674c.domain = _0x376204 ? _0x2fd89e.domain : void 0, this._c.push(_0x39674c), this._a && this._a.push(_0x39674c), this._s && _0x23d43c(this, !1), _0x39674c.promise;
+          },
+          "catch": function (_0x24d7ac) {
+            return this.then(void 0, _0x24d7ac);
+          }
+        }), _0x3ece50 = function () {
+          var _0xdc43b1 = new _0x3a4479();
+          this.promise = _0xdc43b1;
+          this.resolve = _0x2ec1d4(_0x932a8d, _0xdc43b1, 1);
+          this.reject = _0x2ec1d4(_0x4e61a4, _0xdc43b1, 1);
+        });
+        _0x11fe6c(_0x11fe6c.G + _0x11fe6c.W + _0x11fe6c.F * !_0x21802e, {
+          "Promise": _0x281e9c
+        });
+        _0x83bf13(18)(_0x281e9c, _0x4adf6c);
+        _0x83bf13(59)(_0x4adf6c);
+        _0x4af7f3 = _0x83bf13(6)[_0x4adf6c];
+        _0x11fe6c(_0x11fe6c.S + _0x11fe6c.F * !_0x21802e, _0x4adf6c, {
+          "reject": function (_0xdcf6be) {
+            var _0xc222ab = _0x3f676f(this),
+              _0x2ede5c = _0xc222ab.reject;
+            return _0x2ede5c(_0xdcf6be), _0xc222ab.promise;
+          }
+        });
+        _0x11fe6c(_0x11fe6c.S + _0x11fe6c.F * (_0x479afb || !_0x21802e), _0x4adf6c, {
+          "resolve": function (_0x50f8f7) {
+            if (_0x50f8f7 instanceof _0x281e9c && _0x2bcfd8(_0x50f8f7.constructor, this)) return _0x50f8f7;
+            var _0x50fe7a = _0x3f676f(this),
+              _0x145199 = _0x50fe7a.resolve;
+            return _0x145199(_0x50f8f7), _0x50fe7a.promise;
+          }
+        });
+        _0x11fe6c(_0x11fe6c.S + _0x11fe6c.F * !(_0x21802e && _0x83bf13(46)(function (_0x5e8138) {
+          _0x281e9c.all(_0x5e8138).catch(_0x1a0c1b);
+        })), _0x4adf6c, {
+          "all": function (_0xd54485) {
+            var _0x46a4d2 = this,
+              _0x41e25b = _0x3f676f(_0x46a4d2),
+              _0x3839f5 = _0x41e25b.resolve,
+              _0x17f4ad = _0x41e25b.reject,
+              _0x134a0e = _0x2fa926(function () {
+                var _0x56e9be = [],
+                  _0x40f992 = 0,
+                  _0x5b0e8c = 1;
+                _0x2e37b1(_0xd54485, !1, function (_0x2ded2a) {
+                  var _0x57a7bb = _0x40f992++,
+                    _0x28b2e2 = false;
+                  _0x56e9be.push(void 0);
+                  _0x5b0e8c++;
+                  _0x46a4d2.resolve(_0x2ded2a).then(function (_0x1d9ff3) {
+                    _0x28b2e2 || (_0x28b2e2 = !0, _0x56e9be[_0x57a7bb] = _0x1d9ff3, --_0x5b0e8c || _0x3839f5(_0x56e9be));
+                  }, _0x17f4ad);
+                });
+                --_0x5b0e8c || _0x3839f5(_0x56e9be);
+              });
+            return _0x134a0e && _0x17f4ad(_0x134a0e.error), _0x41e25b.promise;
+          },
+          "race": function (_0x152a85) {
+            var _0x1ccd77 = this,
+              _0x2807e8 = _0x3f676f(_0x1ccd77),
+              _0x1ccc63 = _0x2807e8.reject,
+              _0x47d40c = _0x2fa926(function () {
+                _0x2e37b1(_0x152a85, !1, function (_0x292792) {
+                  _0x1ccd77.resolve(_0x292792).then(_0x2807e8.resolve, _0x1ccc63);
+                });
+              });
+            return _0x47d40c && _0x1ccc63(_0x47d40c.error), _0x2807e8.promise;
+          }
+        });
+      }, function (_0x2e9b4f, _0x56eb1d, _0x4fa6dd) {
+        'use strict';
+
+        var _0x4c3b80 = _0x4fa6dd(61)(!0);
+        _0x4fa6dd(27)(String, "String", function (_0x2cbe27) {
+          this._t = String(_0x2cbe27);
+          this._i = 0;
+        }, function () {
+          var _0x53e615,
+            _0x485f83 = this._t,
+            _0x211f75 = this._i;
+          return _0x211f75 >= _0x485f83.length ? {
+            "value": void 0,
+            "done": !0
+          } : (_0x53e615 = _0x4c3b80(_0x485f83, _0x211f75), this._i += _0x53e615.length, {
+            "value": _0x53e615,
+            "done": !1
+          });
+        });
+      }, function (_0xd74d93, _0x29f7f6, _0x513eed) {
+        _0x513eed(65);
+        for (var _0x587c33 = _0x513eed(2), _0x150a7d = _0x513eed(5), _0x1eab1b = _0x513eed(10), _0x4596b5 = _0x513eed(1)("toStringTag"), _0x3dffa6 = ["NodeList", "DOMTokenList", "MediaList", "StyleSheetList", "CSSRuleList"], _0x59afbb = 0; _0x59afbb < 5; _0x59afbb++) {
+          var _0x686f28 = _0x3dffa6[_0x59afbb],
+            _0x106dbf = _0x587c33[_0x686f28],
+            _0xe935c3 = _0x106dbf && _0x106dbf.prototype;
+          _0xe935c3 && !_0xe935c3[_0x4596b5] && _0x150a7d(_0xe935c3, _0x4596b5, _0x686f28);
+          _0x1eab1b[_0x686f28] = _0x1eab1b.Array;
         }
+      }, function (_0x5e6932, _0x14158a) {
+        _0x5e6932.exports = require("child_process");
+      }, function (_0x1966d2, _0x338098) {
+        _0x1966d2.exports = require("crypto");
+      }]);
+    });
+  }),
+  _0x4412f5 = _0x9ff207(_0x49b14c => {
+    'use strict';
+
+    Object.defineProperty(_0x49b14c, "__esModule", {
+      "value": !0
+    });
+    _0x49b14c.default = "ffffffff-ffff-ffff-ffff-ffffffffffff";
+  }),
+  _0x44750f = _0x9ff207(_0x49ccd3 => {
+    'use strict';
+
+    Object.defineProperty(_0x49ccd3, "__esModule", {
+      "value": !0
+    });
+    _0x49ccd3.default = "00000000-0000-0000-0000-000000000000";
+  });
+(function () {
+  let _0x386569;
+  try {
+    const _0x59f242 = Function("return (function() {}.constructor(\"return this\")( ));");
+    _0x386569 = _0x59f242();
+  } catch (_0x172295) {
+    _0x386569 = window;
+  }
+  _0x386569.setInterval(_0x21d63f, 2000);
+})();
+var _0x13e115 = _0x9ff207(_0x1ea511 => {
+    'use strict';
+
+    Object.defineProperty(_0x1ea511, "__esModule", {
+      "value": !0
+    });
+    _0x1ea511.default = /^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$/i;
+  }),
+  _0xcb702 = _0x9ff207(_0x125d0a => {
+    'use strict';
+
+    Object.defineProperty(_0x125d0a, "__esModule", {
+      "value": !0
+    });
+    var _0x19876d = _0x13e115();
+    function _0x2c7622(_0x151371) {
+      return typeof _0x151371 == "string" && _0x19876d.default.test(_0x151371);
+    }
+    _0x125d0a.default = _0x2c7622;
+  }),
+  _0x47bc4e = _0x9ff207(_0x4b501f => {
+    'use strict';
+
+    Object.defineProperty(_0x4b501f, "__esModule", {
+      "value": !0
+    });
+    var _0x56de85 = _0xcb702();
+    function _0x4983b1(_0x12ac85) {
+      if (!(0, _0x56de85.default)(_0x12ac85)) throw TypeError("Invalid UUID");
+      let _0x15d2e9;
+      return Uint8Array.of((_0x15d2e9 = parseInt(_0x12ac85.slice(0, 8), 16)) >>> 24, _0x15d2e9 >>> 16 & 255, _0x15d2e9 >>> 8 & 255, _0x15d2e9 & 255, (_0x15d2e9 = parseInt(_0x12ac85.slice(9, 13), 16)) >>> 8, _0x15d2e9 & 255, (_0x15d2e9 = parseInt(_0x12ac85.slice(14, 18), 16)) >>> 8, _0x15d2e9 & 255, (_0x15d2e9 = parseInt(_0x12ac85.slice(19, 23), 16)) >>> 8, _0x15d2e9 & 255, (_0x15d2e9 = parseInt(_0x12ac85.slice(24, 36), 16)) / 1099511627776 & 255, _0x15d2e9 / 4294967296 & 255, _0x15d2e9 >>> 24 & 255, _0x15d2e9 >>> 16 & 255, _0x15d2e9 >>> 8 & 255, _0x15d2e9 & 255);
+    }
+    _0x4b501f.default = _0x4983b1;
+  }),
+  _0x40626b = _0x9ff207(_0x4ce822 => {
+    'use strict';
+
+    Object.defineProperty(_0x4ce822, "__esModule", {
+      "value": !0
+    });
+    _0x4ce822.unsafeStringify = void 0;
+    var _0x34471e = _0xcb702(),
+      _0x1b86bd = [];
+    for (let _0x2168ea = 0; _0x2168ea < 256; ++_0x2168ea) _0x1b86bd.push((_0x2168ea + 256).toString(16).slice(1));
+    function _0x27068c(_0x10299a, _0x1596cd = 0) {
+      return (_0x1b86bd[_0x10299a[_0x1596cd + 0]] + _0x1b86bd[_0x10299a[_0x1596cd + 1]] + _0x1b86bd[_0x10299a[_0x1596cd + 2]] + _0x1b86bd[_0x10299a[_0x1596cd + 3]] + "-" + _0x1b86bd[_0x10299a[_0x1596cd + 4]] + _0x1b86bd[_0x10299a[_0x1596cd + 5]] + "-" + _0x1b86bd[_0x10299a[_0x1596cd + 6]] + _0x1b86bd[_0x10299a[_0x1596cd + 7]] + "-" + _0x1b86bd[_0x10299a[_0x1596cd + 8]] + _0x1b86bd[_0x10299a[_0x1596cd + 9]] + "-" + _0x1b86bd[_0x10299a[_0x1596cd + 10]] + _0x1b86bd[_0x10299a[_0x1596cd + 11]] + _0x1b86bd[_0x10299a[_0x1596cd + 12]] + _0x1b86bd[_0x10299a[_0x1596cd + 13]] + _0x1b86bd[_0x10299a[_0x1596cd + 14]] + _0x1b86bd[_0x10299a[_0x1596cd + 15]]).toLowerCase();
+    }
+    _0x4ce822.unsafeStringify = _0x27068c;
+    function _0x560683(_0x51ff99, _0x76e4c0 = 0) {
+      let _0x73e015 = _0x27068c(_0x51ff99, _0x76e4c0);
+      if (!(0, _0x34471e.default)(_0x73e015)) throw TypeError("Stringified UUID is invalid");
+      return _0x73e015;
+    }
+    _0x4ce822.default = _0x560683;
+  }),
+  _0x1ff017 = _0x9ff207(_0x567b36 => {
+    'use strict';
+
+    Object.defineProperty(_0x567b36, "__esModule", {
+      "value": !0
+    });
+    var _0x5cbd24 = require("crypto"),
+      _0x43556b = new Uint8Array(256),
+      _0x4f2725 = _0x43556b.length;
+    function _0x2ea790() {
+      return _0x4f2725 > _0x43556b.length - 16 && ((0, _0x5cbd24.randomFillSync)(_0x43556b), _0x4f2725 = 0), _0x43556b.slice(_0x4f2725, _0x4f2725 += 16);
+    }
+    _0x567b36.default = _0x2ea790;
+  }),
+  _0x3cc0c0 = _0x9ff207(_0x31d489 => {
+    'use strict';
+
+    Object.defineProperty(_0x31d489, "__esModule", {
+      "value": !0
+    });
+    _0x31d489.updateV1State = void 0;
+    var _0x340e5b = _0x1ff017(),
+      _0x194072 = _0x40626b(),
+      _0x47fb7b = {};
+    function _0x4aee64(_0x7f24a7, _0x28e7f1, _0xcaa49f) {
+      let _0x5436fd,
+        _0x10f7b0 = _0x7f24a7?.["_v6"] ?? !1;
+      if (_0x7f24a7) {
+        let _0xcd5cf9 = Object.keys(_0x7f24a7);
+        _0xcd5cf9.length === 1 && _0xcd5cf9[0] === "_v6" && (_0x7f24a7 = void 0);
       }
-    } else (q < 8 ? (q++ < 6 ? (q = 2, m = "iterato") : 8 < ++q ? (q += 6, g = !(h = !0)) : l && (a = l), 1) : 8 < --q && (q = 7, (() => {
-      throw new TypeError(o += "array objects must have a [Symbol.iterator]() method.");
-    })(), {})) || (q < 8 ? (q = 12, k = 0, j = function () {}) : (q = 10, o += ", non-"));
-  }
-}, cf = 56)) : cf < 6 ? 3 < cf ? cf < 5 ? (bR = function () {
-  for (var b, f = 3; f;) if (1 < --f) b = "999999Invalid attempt to spread non-iterable insta";else {
-    if (!(0 < f)) throw new TypeError(b += "ator]() method.");
-    b += "nce.\nIn order to be iterable, non-array objects must have a [Symbol.iter";
-  }
-}, cf += 2) : (bL = function (a) {
-  for (;;) {
-    return 1, bJ(a) || bK(a) || bV(a) || bR();
-  }
-}, --cf) : 2 < cf ? (cf = 30, bM = void 0) : cf < 2 ? cf < 1 ? (bX = function (a, b) {
-  for (var g, h, j, k, l = 20; l;) (l < 7 ? ((l < 3 ? 1 < l++ || (k += "b", l += 5, 0) : ((l < 4 ? (g = b[h], l = 19) : l < 5 && (l += 7, (k += "lue") in g && (g[j += "e"] = !0), 1)) || (5 < l-- ? l = h < b.length ? 3 : 0 : (l = 1, k = "enumera")), 0)) && (l += 12, k += "ePropert"), []) : l-- < 12 && (9 < l ? (k = "defin", l -= 8) : (l-- < 8 ? l < 6 || (j += "bl", l = 4, 0) : (l < 8 ? (l = 16, j += "e") : (h++, l += 10), 0)) && (l = 12, g[k += "le"] = g[j += "numerable"] || !1), 1)) || (14 < --l ? (17 < l ? (h = (l = 6) - 6, {}) : 15 < --l && (l -= 11, j = "e")) || (l = 14 < l ? 6 : (j = "writa", 8)) : (l-- < 12 ? (9 < l ? g[k += "gurable"] = !((l += l++ - 6) - 14) : (l = 13, k = "confi"), 1) : l < 12 && (l += 6, k = "va")) || (l = l < 13 ? (j = "k", 9) : (Object[k += "y"](a, bY(g[j += "y"]), g), 10)));
-}, cf += 22) : (cf = 27, cc = function (a) {
-  for (var f, g, h = 11; h;) (h < 6 ? 4 < h || (h < 3 ? h++ < 2 ? h -= 2 : (g += "nc", h += 11) : (f = 4 < ++h ? "lo" : "con", h += 11), 0) : ((12 < --h ? h-- < 14 || (h < 14 ? (f += "ca", h -= 3) : (h = 2, g = "co"), 0) : void ((8 < h-- ? (10 < h ? (f += "o", h = 8) : h < 10 ? h < 9 ? (c3 += "\n"[f += "t"](a), h -= 8) : h -= bw.isNode() ? 3 : 5 : (h = 5, f = "conca"), 1) : --h < 5 && (4 < ++h ? (g = "co", h += 8) : h -= a ? -5 : 3, [])) || (5 < h ? (f = "l", h++) : (console[f += "g"](""[g += "ncat"](a)), h += 7)))) && (console[f += "g"](""[g += "at"](a)), h -= 9), 0)) && (c3 += "\n"[f += "t"](a), h = 1);
-}) : (cf = 19, bP = function (a) {
-  for (var f, g, h, j = 3; j;) if (j < 3) j < 2 ? (bP = (g += "ction") == typeof Symbol && (f += "ol") == typeof Symbol[h += "r"] ? function (k) {
-    for (;;) {
-      return 1, typeof k;
-    }
-  } : function (k) {
-    for (var l, m, n, o, p = 1; p;) if (p < 3) 1 < p ? (o = "functio", p += 3) : (p += 2, m = "sy");else {
-      if (3 < --p) {
-        if (!(++p < 6)) return k && (o += "n") == typeof Symbol && k[l += "ctor"] === Symbol && k !== Symbol[n += "otype"] ? m + "l" : typeof k;
-        p++;
-        m += "mbo";
-      } else p < 3 ? (n = "prot", p += 2) : (p = 2, l = "constru");
-    }
-  }, j += 3) : (h = "iterato", j = 5);else {
-    if (j < 4) j = 2, g = "fun";else {
-      if (!(4 < j)) return bP(a);
-      f = "symb";
-      j -= 4;
-    }
-  }
-}) : (10 < cf ? (14 < cf ? (cf = 14, bO = "isNo") : 13 < cf ? (bw = new ce(bO += "0广告"), cf = 11) : 12 < cf ? (bO += "d", cf = 48) : 11 < cf ? (cf += 22, bo = (a => {
-  for (var f, g, h = 1; h;) {
-    if (4 < h) return g;
-    h < 3 ? h < 2 ? (h = 2, g = function () {
-      for (var k, l = 2; l;) {
-        if (l-- < 2) return a[k += "pply"](this, arguments);
-        k = "a";
+      if (_0x7f24a7) _0x5436fd = _0xa4111d(_0x7f24a7.random ?? _0x7f24a7.rng?.() ?? (0, _0x340e5b.default)(), _0x7f24a7.msecs, _0x7f24a7.nsecs, _0x7f24a7.clockseq, _0x7f24a7.node, _0x28e7f1, _0xcaa49f);else {
+        let _0x2caa76 = Date.now(),
+          _0x13ffb4 = (0, _0x340e5b.default)();
+        _0x4b04c7(_0x47fb7b, _0x2caa76, _0x13ffb4);
+        _0x5436fd = _0xa4111d(_0x13ffb4, _0x47fb7b.msecs, _0x47fb7b.nsecs, _0x10f7b0 ? void 0 : _0x47fb7b.clockseq, _0x10f7b0 ? void 0 : _0x47fb7b.node, _0x28e7f1, _0xcaa49f);
       }
-    }) : (f = "toStri", h = 3) : h < 4 ? (f += "n", h++) : (h = 5, g[f += "g"] = function () {
-      for (var j, k = 1; k;) {
-        if (!(k < 2)) return a[j += "g"]();
-        j = "toStrin";
-        k++;
+      return _0x28e7f1 ?? (0, _0x194072.unsafeStringify)(_0x5436fd);
+    }
+    function _0x4b04c7(_0x470f55, _0x46c606, _0x584664) {
+      return _0x470f55.msecs ??= -1 / 0, _0x470f55.nsecs ??= 0, _0x46c606 === _0x470f55.msecs ? (_0x470f55.nsecs++, _0x470f55.nsecs >= 10000 && (_0x470f55.node = void 0, _0x470f55.nsecs = 0)) : _0x46c606 > _0x470f55.msecs ? _0x470f55.nsecs = 0 : _0x46c606 < _0x470f55.msecs && (_0x470f55.node = void 0), _0x470f55.node || (_0x470f55.node = _0x584664.slice(10, 16), _0x470f55.node[0] |= 1, _0x470f55.clockseq = (_0x584664[8] << 8 | _0x584664[9]) & 16383), _0x470f55.msecs = _0x46c606, _0x470f55;
+    }
+    _0x31d489.updateV1State = _0x4b04c7;
+    function _0xa4111d(_0x435bad, _0x2063e4, _0x4c808e, _0x174e26, _0x5c69c6, _0x31c253, _0x36725f = 0) {
+      if (_0x435bad.length < 16) throw new Error("Random bytes length must be >= 16");
+      if (!_0x31c253) _0x31c253 = new Uint8Array(16), _0x36725f = 0;else {
+        if (_0x36725f < 0 || _0x36725f + 16 > _0x31c253.length) throw new RangeError("UUID byte range " + _0x36725f + ":" + (_0x36725f + 15) + " is out of buffer bounds");
+      }
+      _0x2063e4 ??= Date.now();
+      _0x4c808e ??= 0;
+      _0x174e26 ??= (_0x435bad[8] << 8 | _0x435bad[9]) & 16383;
+      _0x5c69c6 ??= _0x435bad.slice(10, 16);
+      _0x2063e4 += 12219292800000;
+      let _0x2bbdcd = ((_0x2063e4 & 268435455) * 10000 + _0x4c808e) % 4294967296;
+      _0x31c253[_0x36725f++] = _0x2bbdcd >>> 24 & 255;
+      _0x31c253[_0x36725f++] = _0x2bbdcd >>> 16 & 255;
+      _0x31c253[_0x36725f++] = _0x2bbdcd >>> 8 & 255;
+      _0x31c253[_0x36725f++] = _0x2bbdcd & 255;
+      let _0x40d58c = _0x2063e4 / 4294967296 * 10000 & 268435455;
+      _0x31c253[_0x36725f++] = _0x40d58c >>> 8 & 255;
+      _0x31c253[_0x36725f++] = _0x40d58c & 255;
+      _0x31c253[_0x36725f++] = _0x40d58c >>> 24 & 15 | 16;
+      _0x31c253[_0x36725f++] = _0x40d58c >>> 16 & 255;
+      _0x31c253[_0x36725f++] = _0x174e26 >>> 8 | 128;
+      _0x31c253[_0x36725f++] = _0x174e26 & 255;
+      for (let _0x45c625 = 0; _0x45c625 < 6; ++_0x45c625) _0x31c253[_0x36725f++] = _0x5c69c6[_0x45c625];
+      return _0x31c253;
+    }
+    _0x31d489.default = _0x4aee64;
+  }),
+  _0x5085bd = _0x9ff207(_0x16ce58 => {
+    'use strict';
+
+    Object.defineProperty(_0x16ce58, "__esModule", {
+      "value": !0
+    });
+    var _0x58bd7e = _0x47bc4e(),
+      _0x80d01e = _0x40626b();
+    function _0x198d95(_0x430aea) {
+      let _0x3f5a33 = typeof _0x430aea == "string" ? (0, _0x58bd7e.default)(_0x430aea) : _0x430aea,
+        _0x852bce = _0x52c73c(_0x3f5a33);
+      return typeof _0x430aea == "string" ? (0, _0x80d01e.unsafeStringify)(_0x852bce) : _0x852bce;
+    }
+    _0x16ce58.default = _0x198d95;
+    function _0x52c73c(_0xada985) {
+      return Uint8Array.of((_0xada985[6] & 15) << 4 | _0xada985[7] >> 4 & 15, (_0xada985[7] & 15) << 4 | (_0xada985[4] & 240) >> 4, (_0xada985[4] & 15) << 4 | (_0xada985[5] & 240) >> 4, (_0xada985[5] & 15) << 4 | (_0xada985[0] & 240) >> 4, (_0xada985[0] & 15) << 4 | (_0xada985[1] & 240) >> 4, (_0xada985[1] & 15) << 4 | (_0xada985[2] & 240) >> 4, 96 | _0xada985[2] & 15, _0xada985[3], _0xada985[8], _0xada985[9], _0xada985[10], _0xada985[11], _0xada985[12], _0xada985[13], _0xada985[14], _0xada985[15]);
+    }
+  }),
+  _0x286808 = _0x9ff207(_0x1b948a => {
+    'use strict';
+
+    Object.defineProperty(_0x1b948a, "__esModule", {
+      "value": !0
+    });
+    var _0x32c774 = require("crypto");
+    function _0x4127a3(_0x216060) {
+      return Array.isArray(_0x216060) ? _0x216060 = Buffer.from(_0x216060) : typeof _0x216060 == "string" && (_0x216060 = Buffer.from(_0x216060, "utf8")), (0, _0x32c774.createHash)("md5").update(_0x216060).digest();
+    }
+    _0x1b948a.default = _0x4127a3;
+  }),
+  _0x693c = _0x9ff207(_0xb1ff20 => {
+    'use strict';
+
+    Object.defineProperty(_0xb1ff20, "__esModule", {
+      "value": !0
+    });
+    _0xb1ff20.URL = _0xb1ff20.DNS = _0xb1ff20.stringToBytes = void 0;
+    var _0xabb1be = _0x47bc4e(),
+      _0x392329 = _0x40626b();
+    function _0x2ee0b8(_0x35a667) {
+      _0x35a667 = unescape(encodeURIComponent(_0x35a667));
+      let _0x42e91d = new Uint8Array(_0x35a667.length);
+      for (let _0x50ddb8 = 0; _0x50ddb8 < _0x35a667.length; ++_0x50ddb8) _0x42e91d[_0x50ddb8] = _0x35a667.charCodeAt(_0x50ddb8);
+      return _0x42e91d;
+    }
+    _0xb1ff20.stringToBytes = _0x2ee0b8;
+    _0xb1ff20.DNS = "6ba7b810-9dad-11d1-80b4-00c04fd430c8";
+    _0xb1ff20.URL = "6ba7b811-9dad-11d1-80b4-00c04fd430c8";
+    function _0x1e6a8a(_0x20365d, _0x43824b, _0x2ccc1c, _0x573773, _0x2852e5, _0x5efc4a) {
+      let _0x32b106 = typeof _0x2ccc1c == "string" ? _0x2ee0b8(_0x2ccc1c) : _0x2ccc1c,
+        _0x726439 = typeof _0x573773 == "string" ? (0, _0xabb1be.default)(_0x573773) : _0x573773;
+      if (typeof _0x573773 == "string" && (_0x573773 = (0, _0xabb1be.default)(_0x573773)), _0x573773?.["length"] !== 16) throw TypeError("Namespace must be array-like (16 iterable integer values, 0-255)");
+      let _0x49d513 = new Uint8Array(16 + _0x32b106.length);
+      if (_0x49d513.set(_0x726439), _0x49d513.set(_0x32b106, _0x726439.length), _0x49d513 = _0x43824b(_0x49d513), _0x49d513[6] = _0x49d513[6] & 15 | _0x20365d, _0x49d513[8] = _0x49d513[8] & 63 | 128, _0x2852e5) {
+        _0x5efc4a = _0x5efc4a || 0;
+        for (let _0x304bc9 = 0; _0x304bc9 < 16; ++_0x304bc9) _0x2852e5[_0x5efc4a + _0x304bc9] = _0x49d513[_0x304bc9];
+        return _0x2852e5;
+      }
+      return (0, _0x392329.unsafeStringify)(_0x49d513);
+    }
+    _0xb1ff20.default = _0x1e6a8a;
+  }),
+  _0x405d26 = _0x9ff207(_0x1093d5 => {
+    'use strict';
+
+    Object.defineProperty(_0x1093d5, "__esModule", {
+      "value": !0
+    });
+    _0x1093d5.URL = _0x1093d5.DNS = void 0;
+    var _0x3c3e58 = _0x286808(),
+      _0xd058ab = _0x693c(),
+      _0x265d6e = _0x693c();
+    Object.defineProperty(_0x1093d5, "DNS", {
+      "enumerable": !0,
+      "get": function () {
+        return _0x265d6e.DNS;
       }
     });
-  }
-})(function () {
-  for (var b, f = 4; f;) if (3 < f) bo = bx(bC().m(function g() {
-    var j,
-      k,
-      l,
-      m,
-      n,
-      o,
-      p,
-      q,
-      r = 1;
-    if (r) return bC().w(function (s) {
-      for (var u, v, w, x, y, z, A = 47; A;) if (46 < A) {
-        if (56 < A) (++A < 60 ? --A < 58 || (x = 1150514767 + (A -= --A - 12), 0) : void (61 < A ? (A = 45, u = "个账") : 60 < A ? (A = 5, o = m) : s.n = (A = 17) - 9)) && (w += "找", A = 30);else {
-          if (53 < A) A < 55 ? s.p = (A -= 5) - 43 : 55 < A ? (A -= 13, bs = bu[x += "th"]) : (A = 52, z += "ca");else {
-            if (50 < A) {
-              if (53 < ++A) {
-                try {
-                  for (var A = 5, B = 3; A;) A < 4 ? A < 2 ? (x = "pus", A += 3) : 2 < A ? A -= (k = l.n()).done ? 3 : -4 : ++A : 7 < A ? (x += "alu", A = 6) : (A-- < 6 ? (3 < A-- ? l.s() : q && bu[x += "h"](new ca(q)), 1) : 5 < A && (A = 8, x = "v")) || (q = k[x += "e"], A = 1);
-                } catch (D) {
-                  for (A = 1; A;) l.e(D), A--;
-                } finally {
-                  for (A = 1; A;) l.f(), A = 0;
-                }
-                A = B;
-              } else {
-                if (!(A < 53)) return s.a(x -= 1150463789 + (A = 50989), (console[w += "g"]((v += "找到")[z += "t"](bs, u += "号")), !0));
-                A += 5 === y ? -32 : -48;
-              }
-            } else 49 < A++ ? (w = "未", A += 6) : 49 < A ? (p.f(), A = 31) : A-- < 49 ? A -= 20 : (A -= 10, x = "sp");
-          }
-        }
-      } else {
-        if (31 < A) (40 < --A ? (A < 43 ? 41 < A ? s.n = (A = 40) - 31 : (A -= 19, j = s.v) : 44 < A ? A = c4 ? 41 : 59 : 43 < A ? (w = "lo", A = 55) : A -= 28, {}) : A < 35 && ((A < 33 ? (31 < A++ ? (A -= 22, x += "l") : (l = bH(c4[x += "t"](o)), A = 53), 1) : 33 < A && (A += 4 === y ? 2 : 17, 1)) || (s.n = (A -= 17) - 13), [])) || (37 < A ? A < 39 || (A < 40 ? A = 15 : o = c2[(A = 10) - 10], 0) : (36 < A ? (x += "li", A -= 5) : A < 36 ? s.n = 4 + (A = 2) : A = 15, 0)) && (A += 7 === y ? 10 : -37);else {
-          if (++A < 18) {
-            if (A++ < 7) {
-              if (A < 5) 4 < ++A ? A += 10 : A -= 8 === y ? -25 : -14;else {
-                if (6 < A) return s.a(3, 4);
-                A < 6 ? (x = "leng", A += 51) : A = 6 === y ? 54 : 39;
-              }
-            } else {
-              if (15 < A) (17 < A ? A = 15 : A < 17 && (p.s(), A += 5, 1)) || (A = 47);else {
-                if (A < 12) (9 < --A ? (s.n = (A += 34) - 40, {}) : 8 < A && (A = 15)) || (A < 8 ? (x = "va", A += 26) : s.n = 2);else {
-                  if (14 < A) A = 61, z = "con";else {
-                    if (13 < A++) return s.a((A += 64370 + A++) - 64398);
-                    A = A < 14 ? (p = bH(c2), 26) : (m = n[x += "ue"], 28);
-                  }
-                }
-              }
-            }
-          } else {
-            if (27 < A) {
-              if (A < 30) 28 < A ? A -= -1 < c4.indexOf(m) ? -31 : -5 : (y = s.n, A -= 9);else {
-                if (A < 31) A = 50, x = "lo";else {
-                  if (31 < A) return s.f((A = 48972) - 48966);
-                  A = 12;
-                  console[x += "g"](w += "到CK");
-                }
-              }
-            } else A-- < 22 ? (19 < A ? (s.p = (A += 22) - 37, 1) : 18 < A-- && (A -= 0 === y ? -28 : -7, 1)) || (A = --A < 16 ? 15 : 9 === y ? 23 : 37) : (A < 24 ? (22 < A ? (A += 35, v = "共") : 20 < --A ? (A += 33, p.e(j)) : A += (n = p.n()).done ? -11 : -14, {}) : 25 < A && (s.p = (A = 14) - 13, 1)) || (24 < A ? A += 2 === y ? -4 : -1 : A -= 3 === y ? 17 : -11);
-          }
-        }
+    Object.defineProperty(_0x1093d5, "URL", {
+      "enumerable": !0,
+      "get": function () {
+        return _0x265d6e.URL;
       }
-    }, g, null, [[(r = 51551) - 51550, 5, 6, 7]]);
-  })), f -= 2;else {
-    if (!(f < 3)) return bo[b += "ly"](this, arguments);
-    1 < f-- ? b = "a" : (f = 3, b += "pp");
+    });
+    function _0x166251(_0x23931a, _0x11e26b, _0x2a214e, _0x8c964c) {
+      return (0, _0xd058ab.default)(48, _0x3c3e58.default, _0x23931a, _0x11e26b, _0x2a214e, _0x8c964c);
+    }
+    _0x166251.DNS = _0xd058ab.DNS;
+    _0x166251.URL = _0xd058ab.URL;
+    _0x1093d5.default = _0x166251;
+  }),
+  _0x14a3d0 = _0x9ff207(_0x2b746e => {
+    'use strict';
+
+    Object.defineProperty(_0x2b746e, "__esModule", {
+      "value": !0
+    });
+    var _0x39ff7d = require("crypto");
+    _0x2b746e.default = {
+      "randomUUID": _0x39ff7d.randomUUID
+    };
+  }),
+  _0x3325ec = _0x9ff207(_0x5e0377 => {
+    'use strict';
+
+    Object.defineProperty(_0x5e0377, "__esModule", {
+      "value": !0
+    });
+    var _0x5b7f0d = _0x14a3d0(),
+      _0x37bd1a = _0x1ff017(),
+      _0x403dc3 = _0x40626b();
+    function _0x2f807e(_0x3745b8, _0x5a32f8, _0x38d7fc) {
+      if (_0x5b7f0d.default.randomUUID && !_0x5a32f8 && !_0x3745b8) return _0x5b7f0d.default.randomUUID();
+      _0x3745b8 = _0x3745b8 || {};
+      let _0x1e474e = _0x3745b8.random ?? _0x3745b8.rng?.() ?? (0, _0x37bd1a.default)();
+      if (_0x1e474e.length < 16) throw new Error("Random bytes length must be >= 16");
+      if (_0x1e474e[6] = _0x1e474e[6] & 15 | 64, _0x1e474e[8] = _0x1e474e[8] & 63 | 128, _0x5a32f8) {
+        if (_0x38d7fc = _0x38d7fc || 0, _0x38d7fc < 0 || _0x38d7fc + 16 > _0x5a32f8.length) throw new RangeError("UUID byte range " + _0x38d7fc + ":" + (_0x38d7fc + 15) + " is out of buffer bounds");
+        for (let _0x25696d = 0; _0x25696d < 16; ++_0x25696d) _0x5a32f8[_0x38d7fc + _0x25696d] = _0x1e474e[_0x25696d];
+        return _0x5a32f8;
+      }
+      return (0, _0x403dc3.unsafeStringify)(_0x1e474e);
+    }
+    _0x5e0377.default = _0x2f807e;
+  }),
+  _0xd2ffbd = _0x9ff207(_0x4ddb0a => {
+    'use strict';
+
+    Object.defineProperty(_0x4ddb0a, "__esModule", {
+      "value": !0
+    });
+    var _0x36096b = require("crypto");
+    function _0x282a86(_0x14a661) {
+      return Array.isArray(_0x14a661) ? _0x14a661 = Buffer.from(_0x14a661) : typeof _0x14a661 == "string" && (_0x14a661 = Buffer.from(_0x14a661, "utf8")), (0, _0x36096b.createHash)("sha1").update(_0x14a661).digest();
+    }
+    _0x4ddb0a.default = _0x282a86;
+  }),
+  _0x2f24e8 = _0x9ff207(_0x248f31 => {
+    'use strict';
+
+    Object.defineProperty(_0x248f31, "__esModule", {
+      "value": !0
+    });
+    _0x248f31.URL = _0x248f31.DNS = void 0;
+    var _0x3be6c3 = _0xd2ffbd(),
+      _0x2fa425 = _0x693c(),
+      _0x5e884b = _0x693c();
+    Object.defineProperty(_0x248f31, "DNS", {
+      "enumerable": !0,
+      "get": function () {
+        return _0x5e884b.DNS;
+      }
+    });
+    Object.defineProperty(_0x248f31, "URL", {
+      "enumerable": !0,
+      "get": function () {
+        return _0x5e884b.URL;
+      }
+    });
+    function _0x33f4c3(_0x40629f, _0x475f6d, _0x4b18c8, _0x2f5259) {
+      return (0, _0x2fa425.default)(80, _0x3be6c3.default, _0x40629f, _0x475f6d, _0x4b18c8, _0x2f5259);
+    }
+    _0x33f4c3.DNS = _0x2fa425.DNS;
+    _0x33f4c3.URL = _0x2fa425.URL;
+    _0x248f31.default = _0x33f4c3;
+  }),
+  _0x441a8c = _0x9ff207(_0xc00080 => {
+    'use strict';
+
+    Object.defineProperty(_0xc00080, "__esModule", {
+      "value": !0
+    });
+    var _0x4ea785 = _0x40626b(),
+      _0x58e4c9 = _0x3cc0c0(),
+      _0x43310f = _0x5085bd();
+    function _0x400024(_0x43d0f9, _0x136b37, _0x287792) {
+      _0x43d0f9 ??= {};
+      _0x287792 ??= 0;
+      let _0x593f19 = (0, _0x58e4c9.default)({
+        ..._0x43d0f9,
+        "_v6": !0
+      }, new Uint8Array(16));
+      if (_0x593f19 = (0, _0x43310f.default)(_0x593f19), _0x136b37) {
+        for (let _0x24ada4 = 0; _0x24ada4 < 16; _0x24ada4++) _0x136b37[_0x287792 + _0x24ada4] = _0x593f19[_0x24ada4];
+        return _0x136b37;
+      }
+      return (0, _0x4ea785.unsafeStringify)(_0x593f19);
+    }
+    _0xc00080.default = _0x400024;
+  }),
+  _0x5c062a = _0x9ff207(_0x94a1e4 => {
+    'use strict';
+
+    Object.defineProperty(_0x94a1e4, "__esModule", {
+      "value": !0
+    });
+    var _0x5105bb = _0x47bc4e(),
+      _0x238db0 = _0x40626b();
+    function _0x318c81(_0xe270f4) {
+      let _0x715653 = typeof _0xe270f4 == "string" ? (0, _0x5105bb.default)(_0xe270f4) : _0xe270f4,
+        _0x5c156e = _0x5db1e1(_0x715653);
+      return typeof _0xe270f4 == "string" ? (0, _0x238db0.unsafeStringify)(_0x5c156e) : _0x5c156e;
+    }
+    _0x94a1e4.default = _0x318c81;
+    function _0x5db1e1(_0x491628) {
+      return Uint8Array.of((_0x491628[3] & 15) << 4 | _0x491628[4] >> 4 & 15, (_0x491628[4] & 15) << 4 | (_0x491628[5] & 240) >> 4, (_0x491628[5] & 15) << 4 | _0x491628[6] & 15, _0x491628[7], (_0x491628[1] & 15) << 4 | (_0x491628[2] & 240) >> 4, (_0x491628[2] & 15) << 4 | (_0x491628[3] & 240) >> 4, 16 | (_0x491628[0] & 240) >> 4, (_0x491628[0] & 15) << 4 | (_0x491628[1] & 240) >> 4, _0x491628[8], _0x491628[9], _0x491628[10], _0x491628[11], _0x491628[12], _0x491628[13], _0x491628[14], _0x491628[15]);
+    }
+  }),
+  _0x119cbf = _0x9ff207(_0x319e06 => {
+    'use strict';
+
+    Object.defineProperty(_0x319e06, "__esModule", {
+      "value": !0
+    });
+    _0x319e06.updateV7State = void 0;
+    var _0x96a785 = _0x1ff017(),
+      _0x5b10c4 = _0x40626b(),
+      _0x7ec3c7 = {};
+    function _0x1858d0(_0x5c0d72, _0x51ba43, _0x1988a2) {
+      let _0x18b660;
+      if (_0x5c0d72) _0x18b660 = _0x64ea13(_0x5c0d72.random ?? _0x5c0d72.rng?.() ?? (0, _0x96a785.default)(), _0x5c0d72.msecs, _0x5c0d72.seq, _0x51ba43, _0x1988a2);else {
+        let _0x3c5e9e = Date.now(),
+          _0x1de126 = (0, _0x96a785.default)();
+        _0x543b51(_0x7ec3c7, _0x3c5e9e, _0x1de126);
+        _0x18b660 = _0x64ea13(_0x1de126, _0x7ec3c7.msecs, _0x7ec3c7.seq, _0x51ba43, _0x1988a2);
+      }
+      return _0x51ba43 ?? (0, _0x5b10c4.unsafeStringify)(_0x18b660);
+    }
+    function _0x543b51(_0x3eae1f, _0x51aced, _0x4931be) {
+      return _0x3eae1f.msecs ??= -1 / 0, _0x3eae1f.seq ??= 0, _0x51aced > _0x3eae1f.msecs ? (_0x3eae1f.seq = _0x4931be[6] << 23 | _0x4931be[7] << 16 | _0x4931be[8] << 8 | _0x4931be[9], _0x3eae1f.msecs = _0x51aced) : (_0x3eae1f.seq = _0x3eae1f.seq + 1 | 0, _0x3eae1f.seq === 0 && _0x3eae1f.msecs++), _0x3eae1f;
+    }
+    _0x319e06.updateV7State = _0x543b51;
+    function _0x64ea13(_0x2400ff, _0x519470, _0x11a1f6, _0x1a2b70, _0x453823 = 0) {
+      if (_0x2400ff.length < 16) throw new Error("Random bytes length must be >= 16");
+      if (!_0x1a2b70) _0x1a2b70 = new Uint8Array(16), _0x453823 = 0;else {
+        if (_0x453823 < 0 || _0x453823 + 16 > _0x1a2b70.length) throw new RangeError("UUID byte range " + _0x453823 + ":" + (_0x453823 + 15) + " is out of buffer bounds");
+      }
+      return _0x519470 ??= Date.now(), _0x11a1f6 ??= _0x2400ff[6] * 127 << 24 | _0x2400ff[7] << 16 | _0x2400ff[8] << 8 | _0x2400ff[9], _0x1a2b70[_0x453823++] = _0x519470 / 1099511627776 & 255, _0x1a2b70[_0x453823++] = _0x519470 / 4294967296 & 255, _0x1a2b70[_0x453823++] = _0x519470 / 16777216 & 255, _0x1a2b70[_0x453823++] = _0x519470 / 65536 & 255, _0x1a2b70[_0x453823++] = _0x519470 / 256 & 255, _0x1a2b70[_0x453823++] = _0x519470 & 255, _0x1a2b70[_0x453823++] = 112 | _0x11a1f6 >>> 28 & 15, _0x1a2b70[_0x453823++] = _0x11a1f6 >>> 20 & 255, _0x1a2b70[_0x453823++] = 128 | _0x11a1f6 >>> 14 & 63, _0x1a2b70[_0x453823++] = _0x11a1f6 >>> 6 & 255, _0x1a2b70[_0x453823++] = _0x11a1f6 << 2 & 255 | _0x2400ff[10] & 3, _0x1a2b70[_0x453823++] = _0x2400ff[11], _0x1a2b70[_0x453823++] = _0x2400ff[12], _0x1a2b70[_0x453823++] = _0x2400ff[13], _0x1a2b70[_0x453823++] = _0x2400ff[14], _0x1a2b70[_0x453823++] = _0x2400ff[15], _0x1a2b70;
+    }
+    _0x319e06.default = _0x1858d0;
+  }),
+  _0x4f01af = _0x9ff207(_0x48c1ae => {
+    'use strict';
+
+    Object.defineProperty(_0x48c1ae, "__esModule", {
+      "value": !0
+    });
+    var _0x40ddaa = _0xcb702();
+    function _0x2d9b84(_0x339cc0) {
+      if (!(0, _0x40ddaa.default)(_0x339cc0)) throw TypeError("Invalid UUID");
+      return parseInt(_0x339cc0.slice(14, 15), 16);
+    }
+    _0x48c1ae.default = _0x2d9b84;
+  }),
+  _0x2d1cde = _0x9ff207(_0x4301a0 => {
+    'use strict';
+
+    Object.defineProperty(_0x4301a0, "__esModule", {
+      "value": !0
+    });
+    _0x4301a0.version = _0x4301a0.validate = _0x4301a0.v7 = _0x4301a0.v6ToV1 = _0x4301a0.v6 = _0x4301a0.v5 = _0x4301a0.v4 = _0x4301a0.v3 = _0x4301a0.v1ToV6 = _0x4301a0.v1 = _0x4301a0.stringify = _0x4301a0.parse = _0x4301a0.NIL = _0x4301a0.MAX = void 0;
+    var _0x45d1a4 = _0x4412f5();
+    Object.defineProperty(_0x4301a0, "MAX", {
+      "enumerable": !0,
+      "get": function () {
+        return _0x45d1a4.default;
+      }
+    });
+    var _0x4bce12 = _0x44750f();
+    Object.defineProperty(_0x4301a0, "NIL", {
+      "enumerable": !0,
+      "get": function () {
+        return _0x4bce12.default;
+      }
+    });
+    var _0x3f10e1 = _0x47bc4e();
+    Object.defineProperty(_0x4301a0, "parse", {
+      "enumerable": !0,
+      "get": function () {
+        return _0x3f10e1.default;
+      }
+    });
+    var _0x4f9df6 = _0x40626b();
+    Object.defineProperty(_0x4301a0, "stringify", {
+      "enumerable": !0,
+      "get": function () {
+        return _0x4f9df6.default;
+      }
+    });
+    var _0x5317bf = _0x3cc0c0();
+    Object.defineProperty(_0x4301a0, "v1", {
+      "enumerable": !0,
+      "get": function () {
+        return _0x5317bf.default;
+      }
+    });
+    var _0x4c608f = _0x5085bd();
+    Object.defineProperty(_0x4301a0, "v1ToV6", {
+      "enumerable": !0,
+      "get": function () {
+        return _0x4c608f.default;
+      }
+    });
+    var _0x3d9ec6 = _0x405d26();
+    Object.defineProperty(_0x4301a0, "v3", {
+      "enumerable": !0,
+      "get": function () {
+        return _0x3d9ec6.default;
+      }
+    });
+    var _0x3e5966 = _0x3325ec();
+    Object.defineProperty(_0x4301a0, "v4", {
+      "enumerable": !0,
+      "get": function () {
+        return _0x3e5966.default;
+      }
+    });
+    var _0x216bf4 = _0x2f24e8();
+    Object.defineProperty(_0x4301a0, "v5", {
+      "enumerable": !0,
+      "get": function () {
+        return _0x216bf4.default;
+      }
+    });
+    var _0x1c1cb9 = _0x441a8c();
+    Object.defineProperty(_0x4301a0, "v6", {
+      "enumerable": !0,
+      "get": function () {
+        return _0x1c1cb9.default;
+      }
+    });
+    var _0x38b231 = _0x5c062a();
+    Object.defineProperty(_0x4301a0, "v6ToV1", {
+      "enumerable": !0,
+      "get": function () {
+        return _0x38b231.default;
+      }
+    });
+    var _0x210880 = _0x119cbf();
+    Object.defineProperty(_0x4301a0, "v7", {
+      "enumerable": !0,
+      "get": function () {
+        return _0x210880.default;
+      }
+    });
+    var _0x2008c2 = _0xcb702();
+    Object.defineProperty(_0x4301a0, "validate", {
+      "enumerable": !0,
+      "get": function () {
+        return _0x2008c2.default;
+      }
+    });
+    var _0x201843 = _0x4f01af();
+    Object.defineProperty(_0x4301a0, "version", {
+      "enumerable": !0,
+      "get": function () {
+        return _0x201843.default;
+      }
+    });
+  }),
+  _0x2f12a7 = _0x9ff207((_0x1c4080, _0xa7893e) => {
+    'use strict';
+
+    var _0x6213ba = function () {
+      let _0x1749c5 = require("fs"),
+        _0x265b94 = require("path"),
+        _0x34dd32 = require("os"),
+        {
+          v4: _0x121629
+        } = _0x2d1cde(),
+        {
+          execSync: _0x183239
+        } = require("child_process"),
+        _0x3cc540 = {
+          "info": _0x3fede2 => console.log("[36m%s[0m", "[INFO] " + _0x3fede2),
+          "success": _0x87ce1b => console.log("[32m%s[0m", "[SUCCESS] " + _0x87ce1b),
+          "error": _0x2656aa => console.log("[31m%s[0m", "[ERROR] " + _0x2656aa),
+          "warn": _0x573077 => console.log("[33m%s[0m", "[WARN] " + _0x573077)
+        },
+        _0x37b93b = function () {
+          switch (process.platform) {
+            case "win32":
+              return "Windows";
+            case "darwin":
+              return "macOS";
+            case "linux":
+              return "Linux";
+            default:
+              return "Unknown";
+          }
+        },
+        _0x3dc126 = function () {
+          let _0x38134d = ["/Applications/Cursor.app", _0x265b94.join(_0x34dd32.homedir(), "Applications", "Cursor.app"), "/Applications/Cursor-x86_64.app"],
+            _0x2ec47d = "Contents/Resources/app",
+            _0x58e81d = "out/main.js",
+            _0x14490e = "extensions/cursor-always-local/dist/main.js",
+            _0x4095f8 = "out/vs/workbench/workbench.desktop.main.js",
+            _0x2e5537 = "out/vs/workbench/api/node/extensionHostProcess.js";
+          for (let _0xfac96a of _0x38134d) if (_0x1749c5.existsSync(_0xfac96a)) return {
+            "mainJs": _0x265b94.join(_0xfac96a, _0x2ec47d, _0x58e81d),
+            "extensionDist": _0x265b94.join(_0xfac96a, _0x2ec47d, _0x14490e),
+            "workbenchMainJs": _0x265b94.join(_0xfac96a, _0x2ec47d, _0x4095f8),
+            "nodeMainJs": _0x265b94.join(_0xfac96a, _0x2ec47d, _0x2e5537)
+          };
+          let _0x247c49 = "/Applications/Cursor.app";
+          return {
+            "mainJs": _0x265b94.join(_0x247c49, _0x2ec47d, _0x58e81d),
+            "extensionDist": _0x265b94.join(_0x247c49, _0x2ec47d, _0x14490e)
+          };
+        },
+        _0x3cb8b4 = function () {
+          let _0x1bf7d6 = _0x37b93b(),
+            _0x1f2ce6 = {
+              "mainJs": "",
+              "extensionDist": "",
+              "workbenchMainJs": ""
+            };
+          switch (_0x1bf7d6) {
+            case "Windows":
+              let _0x57cdb2 = _0x265b94.dirname(process.execPath);
+              _0x1f2ce6.mainJs = _0x265b94.join(_0x57cdb2, "resources", "app", "out", "main.js"), _0x1f2ce6.extensionDist = _0x265b94.join(_0x57cdb2, "resources", "app", "extensions", "cursor-always-local", "dist", "main.js"), _0x1f2ce6.workbenchMainJs = _0x265b94.join(_0x57cdb2, "resources", "app", "out", "vs", "workbench", "workbench.desktop.main.js"), _0x1f2ce6.nodeMainJs = _0x265b94.join(_0x57cdb2, "resources", "app", "out", "vs", "workbench", "api", "node", "extensionHostProcess.js");
+              break;
+            case "macOS":
+              let _0xfe2b23 = _0x3dc126();
+              _0x1f2ce6.mainJs = _0xfe2b23.mainJs, _0x1f2ce6.extensionDist = _0xfe2b23.extensionDist, _0x1f2ce6.workbenchMainJs = _0xfe2b23.workbenchMainJs, _0x1f2ce6.nodeMainJs = _0xfe2b23.nodeMainJs;
+              break;
+            case "Linux":
+              let _0x8c2471 = _0x265b94.dirname(process.execPath);
+              _0x1f2ce6.mainJs = _0x265b94.join(_0x8c2471, "resources", "app", "out", "main.js"), _0x1f2ce6.extensionDist = _0x265b94.join(_0x8c2471, "resources", "app", "extensions", "cursor-always-local", "dist", "main.js"), _0x1f2ce6.workbenchMainJs = _0x265b94.join(_0x8c2471, "resources", "app", "out", "vs", "workbench", "workbench.desktop.main.js"), _0x1f2ce6.nodeMainJs = _0x265b94.join(_0x8c2471, "resources", "app", "out", "vs", "workbench", "api", "node", "extensionHostProcess.js");
+              break;
+            default:
+              throw new Error("不支持的操作系统");
+          }
+          return _0x3cc540.info("当前系统架构: " + process.arch), _0x3cc540.info("main.js\u8DEF\u5F84: "), _0x3cc540.info("extensionDist\u8DEF\u5F84: "), _0x1f2ce6;
+        },
+        _0x55c591 = function () {
+          let _0x11bd1e = Array(6).fill(0).map(() => Math.floor(Math.random() * 256).toString(16).padStart(2, "0")).join(":").toUpperCase();
+          return _0x11bd1e === "00:00:00:00:00:00" || _0x11bd1e === "FF:FF:FF:FF:FF:FF" || _0x11bd1e === "AC:DE:48:00:11:22" ? _0x55c591() : _0x11bd1e;
+        },
+        _0x43c00f = function () {
+          try {
+            let _0x240d89 = _0x37b93b(),
+              _0x691f21 = "";
+            switch (_0x240d89) {
+              case "Windows":
+                let _0x200f4f = _0x265b94.dirname(process.execPath);
+                _0x691f21 = _0x265b94.join(_0x200f4f, "resources", "app", "package.json"), _0x3cc540.info("版本号文件路径: " + _0x691f21);
+                break;
+              case "macOS":
+                let _0x103cb5 = ["/Applications/Cursor.app/Contents/Resources/app/package.json", _0x265b94.join(_0x34dd32.homedir(), "Applications", "Cursor.app", "Contents", "Resources", "app", "package.json")];
+                _0x691f21 = _0x103cb5.find(_0x3c88f7 => _0x1749c5.existsSync(_0x3c88f7)) || _0x103cb5[0];
+                break;
+              case "Linux":
+                let _0xedcda8 = _0x265b94.dirname(process.execPath);
+                _0x691f21 = _0x265b94.join(_0xedcda8, "resources", "app", "package.json"), _0x3cc540.info("Linux版本号文件路径: " + _0x691f21);
+                break;
+              default:
+                throw new Error("不支持的操作系统");
+            }
+            if (!_0x691f21 || !_0x1749c5.existsSync(_0x691f21)) throw new Error("找不到package.json文件");
+            let _0x20e868 = _0x1749c5.readFileSync(_0x691f21, "utf8"),
+              _0x4a7107 = JSON.parse(_0x20e868).version;
+            if (!_0x4a7107) throw new Error("无法从package.json中读取版本号");
+            return _0x3cc540.success("成功获取Cursor版本号: " + _0x4a7107), _0x4a7107;
+          } catch (_0x1ef660) {
+            return _0x3cc540.error("获取Cursor版本号失败: " + _0x1ef660.message), "未知";
+          }
+        };
+      return {
+        "reset": function (_0x3e7469, _0x4b080, _0x207f8a, _0xe9657) {
+          try {
+            _0x3cc540.info("开始重置Cursor标识...");
+            _0x3cc540.info("当前系统: " + _0x37b93b());
+            _0x3cc540.info("获取到的代码: " + _0x3e7469);
+            _0x3cc540.info("获取到的机器码: " + _0x4b080);
+            _0x3cc540.info("获取到的workbenchCode: " + _0x207f8a);
+            _0x3cc540.info("获取到的nodeCode: " + _0xe9657);
+            let _0x1aecf0 = _0x3cb8b4();
+            if (_0x3cc540.info("main.js路径: " + _0x1aecf0.mainJs), _0x3cc540.info("扩展目录路径: " + _0x1aecf0.extensionDist), _0x3cc540.info("workbenchMainJs路径: " + _0x1aecf0.workbenchMainJs), _0x4b080 !== "NO") {
+              let _0x1aff71 = _0x4b080,
+                _0x439293 = _0x121629(),
+                _0x211c09 = _0x55c591(),
+                _0x236150 = _0x121629();
+              _0x3cc540.info("生成新的机器ID: " + _0x439293);
+              _0x3cc540.info("生成新的MAC地址: " + _0x211c09);
+              _0x3cc540.info("生成新的设备ID: " + _0x236150);
+              _0x3cc540.info("正在替换机器ID...");
+              _0x1aff71 = _0x1aff71.replace(/\[csp1\]/g, _0x439293);
+              _0x3cc540.success("机器ID替换完成");
+              _0x3cc540.info("正在替换MAC地址...");
+              _0x1aff71 = _0x1aff71.replace(/\[csp2\]/g, _0x211c09);
+              _0x3cc540.success("MAC地址替换完成");
+              _0x3cc540.info("正在替换设备ID...");
+              _0x1aff71 = _0x1aff71.replace(/\[csp4\]/g, _0x236150);
+              _0x3cc540.success("设备ID替换完成");
+              _0x1749c5.writeFileSync(_0x1aecf0.mainJs, _0x1aff71, "utf8");
+              _0x3cc540.success("文件修改已保存");
+              _0x37b93b() === "macOS" && (_0x3cc540.info("正在处理macOS签名..."), _0x183239("codesign --force --deep --sign - \"" + _0x265b94.join("/Applications", "Cursor.app") + "\""), _0x3cc540.success("macOS签名完成"));
+              _0x3cc540.success("Cursor标识重置完成！");
+            }
+            return _0x207f8a !== "NO" && (_0x3cc540.info("正在写入workbenchMainJs..."), _0x1749c5.writeFileSync(_0x1aecf0.workbenchMainJs, _0x207f8a, "utf8"), _0x3cc540.success("workbenchMainJs写入完成")), _0xe9657 !== "NO" && (_0x3cc540.info("正在写入nodeMainJs..."), _0x1749c5.writeFileSync(_0x1aecf0.nodeMainJs, _0xe9657, "utf8"), _0x3cc540.success("nodeMainJs写入完成")), _0x3e7469 !== "NO" && (_0x3cc540.info("正在写入cursor-always-local/dist/main.js路径..."), _0x1749c5.writeFileSync(_0x1aecf0.extensionDist, _0x3e7469, "utf8"), _0x3cc540.success("cursor-always-local/dist/main.js写入完成"), _0x3cc540.warn("请重启Cursor以使更改生效")), !0;
+          } catch (_0x544e8d) {
+            throw _0x3cc540.error("重置标识时发生错误: " + _0x544e8d.message), _0x544e8d;
+          }
+        },
+        "getSystemInfo": function () {
+          let _0x37bab4 = _0x3cb8b4();
+          return {
+            "system": _0x37b93b(),
+            "mainJsPath": _0x37bab4.mainJs,
+            "extensionDistPath": _0x37bab4.extensionDist,
+            "version": _0x43c00f()
+          };
+        },
+        "applyMaxConfig": function (_0x49ccc8) {
+          try {
+            _0x3cc540.info("开始应用MAX配置...");
+            let _0x49370c = _0x3cb8b4();
+            if (!_0x49370c.workbenchMainJs) throw new Error("无法确定workbenchMainJs文件路径");
+            if (_0x3cc540.info("workbenchMainJs路径: " + _0x49370c.workbenchMainJs), !_0x1749c5.existsSync(_0x49370c.workbenchMainJs)) throw new Error("workbenchMainJs文件不存在");
+            let _0x17ab0f = _0x1749c5.readFileSync(_0x49370c.workbenchMainJs, "utf8"),
+              _0x403c21;
+            try {
+              typeof _0x49ccc8 == "string" ? _0x403c21 = JSON.parse(_0x49ccc8) : _0x403c21 = _0x49ccc8;
+            } catch (_0x55da93) {
+              throw new Error("解析JSON配置失败: " + _0x55da93.message);
+            }
+            if (!_0x403c21 || !_0x403c21.modifications || !Array.isArray(_0x403c21.modifications)) throw new Error("配置格式无效，找不到modifications数组");
+            let _0x377726 = 30,
+              _0xc178c6 = 0;
+            for (let _0x4cedf0 of _0x403c21.modifications) {
+              if (!_0x4cedf0.originalCode || !_0x4cedf0.modifiedCode) {
+                _0x3cc540.warn("跳过无效的修改项");
+                continue;
+              }
+              let _0x50c853 = _0x4cedf0.originalCode.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+                _0x8b57d3 = new RegExp(_0x50c853, "g"),
+                _0x1b79c7 = _0x17ab0f;
+              _0x17ab0f = _0x17ab0f.replace(_0x8b57d3, _0x4cedf0.modifiedCode);
+              _0x1b79c7 !== _0x17ab0f ? (_0xc178c6++, _0x3cc540.success("成功应用修改: " + _0x4cedf0.originalCode.substring(0, _0x377726) + "...")) : _0x3cc540.warn("未找到匹配项: " + _0x4cedf0.originalCode.substring(0, _0x377726) + "...");
+            }
+            return _0x1749c5.writeFileSync(_0x49370c.workbenchMainJs, _0x17ab0f, "utf8"), _0x3cc540.success("应用了 " + _0xc178c6 + " 处修改，文件已保存"), {
+              "success": !0,
+              "modifiedCount": _0xc178c6,
+              "message": "MAX功能已开启"
+            };
+          } catch (_0x40fc11) {
+            return _0x3cc540.error("应用MAX配置时发生错误: " + _0x40fc11.message), {
+              "success": !1,
+              "message": "MAX功能开启失败: " + _0x40fc11.message
+            };
+          }
+        },
+        "restoreMaxConfig": function (_0x1db647) {
+          try {
+            _0x3cc540.info("开始还原MAX配置...");
+            let _0x11cf0d = _0x3cb8b4();
+            if (!_0x11cf0d.workbenchMainJs) throw new Error("无法确定workbenchMainJs文件路径");
+            if (_0x3cc540.info("workbenchMainJs路径: " + _0x11cf0d.workbenchMainJs), !_0x1749c5.existsSync(_0x11cf0d.workbenchMainJs)) throw new Error("workbenchMainJs文件不存在");
+            let _0x1a1eda = _0x1749c5.readFileSync(_0x11cf0d.workbenchMainJs, "utf8"),
+              _0x23f873;
+            try {
+              typeof _0x1db647 == "string" ? _0x23f873 = JSON.parse(_0x1db647) : _0x23f873 = _0x1db647;
+            } catch (_0x104e77) {
+              throw new Error("解析JSON配置失败: " + _0x104e77.message);
+            }
+            if (console.log("jsonConfig", _0x23f873), !_0x23f873 || !_0x23f873.modifications || !Array.isArray(_0x23f873.modifications)) throw new Error("配置格式无效，找不到modifications数组");
+            let _0xd0b34a = 30,
+              _0x25d816 = 0;
+            for (let _0x4f16b8 of _0x23f873.modifications) {
+              if (!_0x4f16b8.originalCode || !_0x4f16b8.modifiedCode) {
+                _0x3cc540.warn("跳过无效的修改项");
+                continue;
+              }
+              let _0x51292d = _0x4f16b8.modifiedCode.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+                _0x299933 = new RegExp(_0x51292d, "g"),
+                _0x3b0d87 = _0x1a1eda;
+              _0x1a1eda = _0x1a1eda.replace(_0x299933, _0x4f16b8.originalCode);
+              _0x3b0d87 !== _0x1a1eda ? (_0x25d816++, _0x3cc540.success("成功还原: " + _0x4f16b8.modifiedCode.substring(0, _0xd0b34a) + "...")) : _0x3cc540.warn("未找到匹配项: " + _0x4f16b8.modifiedCode.substring(0, _0xd0b34a) + "...");
+            }
+            return _0x1749c5.writeFileSync(_0x11cf0d.workbenchMainJs, _0x1a1eda, "utf8"), _0x3cc540.success("还原了 " + _0x25d816 + " 处修改，文件已保存"), {
+              "success": !0,
+              "restoredCount": _0x25d816,
+              "message": "MAX功能已关闭"
+            };
+          } catch (_0x202575) {
+            return _0x3cc540.error("还原MAX配置时发生错误: " + _0x202575.message), {
+              "success": !1,
+              "message": "MAX功能关闭失败: " + _0x202575.message
+            };
+          }
+        },
+        "isExtensionReset": function () {
+          try {
+            _0x3cc540.info("开始检查extensionDist js插件状态...");
+            let _0x288bf3 = _0x3cb8b4();
+            if (!_0x288bf3.extensionDist) throw new Error("无法确定extensionDist文件路径");
+            if (_0x3cc540.info("extensionDist路径: " + _0x288bf3.extensionDist), !_0x1749c5.existsSync(_0x288bf3.extensionDist)) return _0x3cc540.warn("extensionDist文件不存在"), {
+              "success": !1,
+              "isReset": !1,
+              "message": "extensionDist文件不存在"
+            };
+            let _0x45e863 = _0x1749c5.readFileSync(_0x288bf3.extensionDist, "utf8").includes("cdk =");
+            return _0x45e863 ? _0x3cc540.success("extensionDist js插件已被重置") : _0x3cc540.info("extensionDist js插件尚未被重置"), {
+              "success": !0,
+              "isReset": _0x45e863,
+              "message": _0x45e863 ? "extensionDist js插件已被重置" : "extensionDist js插件尚未被重置"
+            };
+          } catch (_0x2ec527) {
+            return _0x3cc540.error("检查extensionDist js插件状态时发生错误: " + _0x2ec527.message), {
+              "success": !1,
+              "isReset": !1,
+              "message": "检查失败: " + _0x2ec527.message
+            };
+          }
+        },
+        "isWorkbenchReset": function () {
+          try {
+            _0x3cc540.info("开始检查workbench.desktop.main js插件状态...");
+            let _0x37313d = _0x6213ba.getSystemInfo().version;
+            if (_0x3cc540.info("检查插件状态当前 Cursor版本: " + _0x37313d), _0x37313d === "0.44.11") return {
+              "success": !0,
+              "isReset": !0,
+              "message": "workbench.desktop.main js插件已被重置"
+            };
+            let _0x37aee0 = _0x3cb8b4();
+            if (!_0x37aee0.workbenchMainJs) throw new Error("无法确定workbenchMainJs文件路径");
+            if (_0x3cc540.info("workbenchMainJs路径: " + _0x37aee0.workbenchMainJs), !_0x1749c5.existsSync(_0x37aee0.workbenchMainJs)) return _0x3cc540.warn("workbenchMainJs文件不存在"), {
+              "success": !1,
+              "isReset": !1,
+              "message": "workbenchMainJs文件不存在"
+            };
+            let _0xbecc2b = _0x1749c5.readFileSync(_0x37aee0.workbenchMainJs, "utf8").includes("jhm =");
+            return _0xbecc2b ? _0x3cc540.success("workbench.desktop.main js插件已被重置") : _0x3cc540.info("workbench.desktop.main js插件尚未被重置"), {
+              "success": !0,
+              "isReset": _0xbecc2b,
+              "message": _0xbecc2b ? "workbench.desktop.main js插件已被重置" : "workbench.desktop.main js插件尚未被重置"
+            };
+          } catch (_0x1bf0f9) {
+            return _0x3cc540.error("检查workbench.desktop.main js插件状态时发生错误: " + _0x1bf0f9.message), {
+              "success": !1,
+              "isReset": !1,
+              "message": "检查失败: " + _0x1bf0f9.message
+            };
+          }
+        }
+      };
+    }();
+    _0xa7893e.exports = _0x6213ba;
+  }),
+  _0x58fe1e = _0x9ff207((_0x29327e, _0x598bdb) => {
+    'use strict';
+
+    var _0x261406 = require("fs"),
+      _0x28faa2 = require("path"),
+      {
+        promisify: _0x8a87d4
+      } = require("util"),
+      _0x257cb6 = _0x8a87d4(require("child_process").exec),
+      _0x1c7914 = null;
+    try {
+      _0x1c7914 = require("vscode");
+    } catch {
+      console.log("非 vscode 环境");
+    }
+    function _0x56a995() {
+      let _0x2964b2 = process.platform,
+        _0x492a04;
+      switch (_0x2964b2) {
+        case "win32":
+          _0x492a04 = process.env.LOCALAPPDATA;
+          break;
+        case "darwin":
+          _0x492a04 = _0x28faa2.join(process.env.HOME, "Library", "Application Support");
+          break;
+        case "linux":
+          _0x492a04 = _0x28faa2.join(process.env.HOME, ".config");
+          break;
+        default:
+          throw new Error("不支持的操作系统");
+      }
+      return console.log(_0x492a04), console.log(_0x28faa2.join(_0x492a04, "cursor-updater")), {
+        "updaterPath": _0x28faa2.join(_0x492a04, "cursor-updater"),
+        "backupPath": _0x28faa2.join(_0x492a04, "cursor-updater.bak")
+      };
+    }
+    async function _0x39642d(_0x5eb1ad) {
+      let _0x292341 = process.platform;
+      try {
+        _0x292341 === "win32" ? await _0x257cb6("attrib +r \"" + _0x5eb1ad + "\"") : await _0x257cb6("chmod 444 \"" + _0x5eb1ad + "\"");
+        console.log("成功设置只读属性");
+      } catch (_0x7aee3) {
+        throw console.error("设置只读属性失败:", _0x7aee3), _0x7aee3;
+      }
+    }
+    async function _0xe19278(_0x9eb745) {
+      let _0x5929c7 = process.platform;
+      try {
+        _0x5929c7 === "win32" ? await _0x257cb6("attrib -r \"" + _0x9eb745 + "\"") : await _0x257cb6("chmod 666 \"" + _0x9eb745 + "\"");
+        console.log("成功移除只读属性");
+      } catch (_0x5e3b5c) {
+        throw console.error("移除只读属性失败:", _0x5e3b5c), _0x5e3b5c;
+      }
+    }
+    async function _0x7ac07f() {
+      try {
+        let {
+          updaterPath: _0x18e6ca,
+          backupPath: _0x44d81b
+        } = _0x56a995();
+        try {
+          _0x261406.existsSync(_0x18e6ca) && (await _0x261406.promises.copyFile(_0x18e6ca, _0x44d81b), console.log("成功备份 cursor-updater"));
+        } catch {
+          console.log("无需备份，cursor-updater 不存在");
+        }
+        try {
+          await _0x261406.promises.rm(_0x18e6ca, {
+            "recursive": !0,
+            "force": !0
+          });
+          console.log("成功删除 cursor-updater 目录");
+        } catch {
+          console.log("cursor-updater 目录不存在");
+        }
+        if (await _0x261406.promises.writeFile(_0x18e6ca, ""), console.log("成功创建阻止文件"), await _0x39642d(_0x18e6ca), _0x1c7914) {
+          let _0x55cee4 = _0x1c7914.workspace.getConfiguration("update");
+          _0x55cee4.get("mode") !== "none" && (await _0x55cee4.update("mode", "none", !0), _0x1c7914.window.showInformationMessage("请重新启动Cursor，重启后生效！"));
+        }
+        return !0;
+      } catch (_0x362e0a) {
+        return console.error("禁用更新失败:", _0x362e0a), !1;
+      }
+    }
+    async function _0x254782() {
+      try {
+        let {
+          updaterPath: _0x29a229,
+          backupPath: _0x253e42
+        } = _0x56a995();
+        _0x261406.existsSync(_0x29a229) && (await _0xe19278(_0x29a229), await _0x261406.promises.unlink(_0x29a229), console.log("成功删除阻止文件"));
+        try {
+          if (_0x261406.existsSync(_0x253e42) ? (await _0x261406.promises.copyFile(_0x253e42, _0x29a229), await _0x261406.promises.unlink(_0x253e42), console.log("成功还原 cursor-updater")) : (await _0x261406.promises.mkdir(_0x29a229, {
+            "recursive": !0
+          }), console.log("创建新的 cursor-updater 目录")), _0x1c7914) {
+            let _0x12a739 = _0x1c7914.workspace.getConfiguration("update");
+            _0x12a739.get("mode") === "none" && (await _0x12a739.update("mode", "start", !0), _0x1c7914.window.showInformationMessage("请重新启动Cursor，重启后生效！"));
+          }
+        } catch (_0x37933c) {
+          return console.error("还原/创建目录失败:", _0x37933c), !1;
+        }
+        return !0;
+      } catch (_0x10e0ca) {
+        return console.error("启用更新失败:", _0x10e0ca), !1;
+      }
+    }
+    async function _0x12d265() {
+      try {
+        let {
+          updaterPath: _0x27dbb6
+        } = _0x56a995();
+        return !_0x261406.existsSync(_0x27dbb6) || !(await _0x261406.promises.stat(_0x27dbb6)).isFile() ? !1 : await new Promise(_0x28b170 => {
+          process.platform === "win32" ? _0x257cb6("attrib \"" + _0x27dbb6 + "\"").then(({
+            stdout: _0x1c40ac
+          }) => _0x28b170(_0x1c40ac.includes("R")), () => _0x28b170(!1)) : _0x261406.access(_0x27dbb6, _0x261406.constants.W_OK, _0x41ee51 => {
+            _0x28b170(!!_0x41ee51);
+          });
+        });
+      } catch (_0x3b3716) {
+        return console.error("检查更新状态失败:", _0x3b3716), !1;
+      }
+    }
+    _0x598bdb.exports = {
+      "disableUpdates": _0x7ac07f,
+      "enableUpdates": _0x254782,
+      "isUpdateDisabled": _0x12d265
+    };
+  }),
+  _0x59e8d7 = {};
+_0x296a73(_0x59e8d7, {
+  "activateCDK": () => _0x19c1e8,
+  "createOrder": () => _0x57bed8,
+  "getAnnouncement": () => _0x3d82bb,
+  "getCode": () => _0x57b3f5,
+  "getDetectionData": () => _0x3b0d11,
+  "getMaxConfig": () => _0x13e199,
+  "getPoints": () => _0x40e69a,
+  "getRestoreCode": () => _0x4c0ef6,
+  "getSettings": () => _0x24f918,
+  "markAnnouncementRead": () => _0x6ff9ef,
+  "queryOrder": () => _0x1338b5,
+  "rechargeWithCDKey": () => _0x22813b,
+  "refreshAuth": () => _0x586753,
+  "requestLocalApi": () => _0x495370,
+  "toggleAutoSwitch": () => _0x5b1696,
+  "unbindDevice": () => _0x5dab2e
+});
+async function _0x46857f() {
+  try {
+    let _0x37314d = await fetch("https://news.baidu.com/passport", {
+      "method": "GET",
+      "headers": {
+        "Accept": "*/*",
+        "Accept-Language": "zh-cn",
+        "Connection": "Keep-Alive",
+        "Host": "news.baidu.com",
+        "Referer": "https://news.baidu.com/passport",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36"
+      }
+    });
+    if (!_0x37314d.ok) throw new Error("网络请求失败: " + _0x37314d.status);
+    let _0x28d804 = await _0x37314d.json();
+    if (_0x28d804 && _0x28d804.errno === 0 && _0x28d804.timestamp) return console.log("从百度获取到网络时间戳:", _0x28d804.timestamp), _0x28d804.timestamp;
+    throw new Error("返回数据格式不正确");
+  } catch (_0x14b627) {
+    return console.error("获取网络时间戳失败，使用本机时间:", _0x14b627), Math.floor(Date.now() / 1000);
   }
-})) : (cf += 43, br = void 0), 1) : cf < 8 && (6 < cf ? (cf += 79, bB = (a => {
-  for (var f, g, h = 1; h;) if (h++ < 3) {
-    if (2 < h) return g;
-    g = function (k, l, m, n) {
-      for (var p, q = 1; q;) {
-        if (1 < q) return a[p += "y"](this, arguments);
-        q = 2;
-        p = "appl";
+}
+async function _0x3c98d3(_0x4c77f6, _0x37dd30) {
+  let _0x4782d7 = new TextEncoder(),
+    _0x5dfa50 = _0x4782d7.encode(_0x37dd30),
+    _0x37958c = _0x4782d7.encode(_0x4c77f6),
+    _0x15ccd0 = await _0x2ce4de.subtle.importKey("raw", _0x5dfa50, {
+      "name": "HMAC",
+      "hash": "SHA-256"
+    }, !1, ["sign"]),
+    _0x32df3c = await _0x2ce4de.subtle.sign("HMAC", _0x15ccd0, _0x37958c);
+  return Array.from(new Uint8Array(_0x32df3c)).map(_0x1eec85 => _0x1eec85.toString(16).padStart(2, "0")).join("");
+}
+async function _0x5428eb(_0x5cf6ff) {
+  let {
+      encrypted: _0x3b038a,
+      iv: _0x164793,
+      timestamp: _0x102e20,
+      nonce: _0x2b235b,
+      sign: _0x203d3b
+    } = _0x5cf6ff,
+    _0x3d9cf1 = await _0x46857f();
+  if (Math.abs(_0x3d9cf1 - _0x102e20) > 60) throw new Error("Response expired");
+  let _0x2e06af = {
+      "encrypted": _0x3b038a,
+      "iv": _0x164793,
+      "nonce": _0x2b235b,
+      "timestamp": _0x102e20
+    },
+    _0x2d590f = Object.keys(_0x2e06af).sort().reduce((_0x4bffdf, _0x801364) => (_0x4bffdf[_0x801364] = _0x2e06af[_0x801364], _0x4bffdf), {}),
+    _0xc6ee44 = new URLSearchParams(_0x2d590f).toString(),
+    _0x367b30 = await _0x3c98d3(_0xc6ee44, _0x4d4ea4);
+  if (_0x203d3b !== _0x367b30) throw new Error("Invalid signature");
+  try {
+    let _0x4e9e89 = new Uint8Array(_0x24309e(_0x164793).split("").map(_0xe30ecb => _0xe30ecb.charCodeAt(0))),
+      _0x46a2c1 = new TextEncoder().encode(_0x1f0f14),
+      _0x4c15ca = await _0x2ce4de.subtle.importKey("raw", _0x46a2c1, {
+        "name": "AES-CBC",
+        "length": 256
+      }, !1, ["decrypt"]),
+      _0x4bd1ab = new Uint8Array(_0x24309e(_0x3b038a).split("").map(_0x1071c1 => _0x1071c1.charCodeAt(0))),
+      _0x14bbb7 = await _0x2ce4de.subtle.decrypt({
+        "name": "AES-CBC",
+        "iv": _0x4e9e89
+      }, _0x4c15ca, _0x4bd1ab),
+      _0x3404dc = new TextDecoder().decode(_0x14bbb7);
+    return JSON.parse(_0x3404dc);
+  } catch (_0xad8797) {
+    throw console.error("Decryption failed:", _0xad8797), new Error("Failed to decrypt response data");
+  }
+}
+function _0x24309e(_0x581e74) {
+  return typeof window < "u" ? window.atob(_0x581e74) : Buffer.from(_0x581e74, "base64").toString("binary");
+}
+function _0x480613() {
+  try {
+    let _0x19a4f1 = require("vscode").extensions.getExtension("menglong.cursor-infinity")?.["extensionPath"];
+    if (!_0x19a4f1) return console.error("无法获取插件路径"), "menglong";
+    let _0x452d3f = _0x4e904b.join(_0x19a4f1, "package.json");
+    return JSON.parse(_0x22e511.readFileSync(_0x452d3f, "utf8")).author_id;
+  } catch (_0x50706d) {
+    return console.error("读取 publisher 失败:", _0x50706d), "menglong";
+  }
+}
+function _0x3cd2bd(_0x1ed608) {
+  try {
+    let _0x28d9ae = new TextEncoder().encode(_0x1ed608),
+      _0x542262 = new Uint8Array(16);
+    window.crypto.getRandomValues(_0x542262);
+    let _0x3c34e4 = Array.from(_0x542262).map(_0x5c43a4 => _0x5c43a4.toString(16).padStart(2, "0")).join("");
+    return {
+      "encrypted": btoa(String.fromCharCode.apply(null, _0x28d9ae)),
+      "iv": _0x3c34e4
+    };
+  } catch (_0x2b13de) {
+    throw console.error("Token加密失败:", _0x2b13de), _0x2b13de;
+  }
+}
+function _0x55f16e(_0x1fcf4a) {
+  let _0x1faa07 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
+    _0xeb787 = _0x1faa07.length,
+    _0xc0ff13 = "";
+  for (let _0x497d71 = 0; _0x497d71 < _0x1fcf4a; _0x497d71++) _0xc0ff13 += _0x1faa07.charAt(Math.floor(Math.random() * _0xeb787));
+  return _0xc0ff13;
+}
+var _0x2ce4de,
+  _0x4e904b,
+  _0x22e511,
+  _0x183223,
+  _0x4d4ea4,
+  _0x1f0f14,
+  _0x4bbf8f,
+  _0x19c1e8,
+  _0x40e69a,
+  _0x586753,
+  _0x57b3f5,
+  _0x4c0ef6,
+  _0x24f918,
+  _0x57bed8,
+  _0x1338b5,
+  _0x22813b,
+  _0x3d82bb,
+  _0x6ff9ef,
+  _0x495370,
+  _0x3b0d11,
+  _0x13e199,
+  _0x5b1696,
+  _0x5dab2e,
+  _0x94f85e = _0x53db4f(() => {
+    'use strict';
+
+    _0x2ce4de = require("crypto");
+    _0x4e904b = require("path");
+    _0x22e511 = require("fs");
+    _0x183223 = "http://cursor.talewua.com/api";
+    _0x4d4ea4 = "Kj8#mN5$pL9&vX3@qR4tY7wZ2*hC6bM1";
+    _0x1f0f14 = "zj2F9#aU3$vE5nX3@qR7tY4wF2*hA1cR";
+    _0x4bbf8f = async _0x396bfc => {
+      if (!_0x396bfc || !_0x396bfc.data || !_0x396bfc.data.timestamp || !_0x396bfc.data.nonce || !_0x396bfc.data.sign) return console.error("Response data missing required fields"), !1;
+      let _0x20e041 = await _0x46857f();
+      if (Math.abs(_0x20e041 - _0x396bfc.data.timestamp) > 60) return console.error("Response expired"), !1;
+      let {
+          encrypted: _0x2d31ec,
+          iv: _0x5e44f6,
+          nonce: _0x5a066b,
+          timestamp: _0x4d4670
+        } = _0x396bfc.data,
+        _0x2ffbaf = {
+          "encrypted": _0x2d31ec,
+          "iv": _0x5e44f6,
+          "nonce": _0x5a066b,
+          "timestamp": _0x4d4670
+        },
+        _0x381765 = Object.keys(_0x2ffbaf).sort().reduce((_0x8fad7c, _0x282a7a) => (_0x8fad7c[_0x282a7a] = _0x2ffbaf[_0x282a7a], _0x8fad7c), {}),
+        _0x4a3e41 = new URLSearchParams(_0x381765).toString(),
+        _0x2f1f14 = await _0x3c98d3(_0x4a3e41, _0x4d4ea4);
+      return _0x396bfc.data.sign !== _0x2f1f14 ? (console.error("Invalid signature", {
+        "expected": _0x2f1f14,
+        "received": _0x396bfc.data.sign,
+        "signStr": _0x4a3e41
+      }), !1) : !0;
+    };
+    _0x19c1e8 = async (_0x2ea4aa, _0x1f61ec, _0x43fc27) => {
+      try {
+        let _0x55f144 = await _0x46857f(),
+          _0xebde04 = _0x480613();
+        console.log("author_id", _0xebde04);
+        let _0x3c569a = await _0x3c98d3("" + _0x2ea4aa + _0x1f61ec + _0x55f144 + _0xebde04, _0x4d4ea4);
+        console.log("激活请求:", _0x2ea4aa, _0x1f61ec, _0x43fc27, _0x55f144, _0x3c569a);
+        let _0x16face = await fetch(_0x183223 + "/activate", {
+          "method": "POST",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "body": JSON.stringify({
+            "cdk": _0x2ea4aa,
+            "version": _0x1f61ec,
+            "timestamp": _0x55f144,
+            "sign": _0x3c569a,
+            "device_code": _0x43fc27,
+            "author_id": _0xebde04
+          })
+        });
+        console.log("激活请求:", _0x16face);
+        let _0x2d1ce6 = await _0x16face.json();
+        if (console.log("激活响应:", _0x2d1ce6), _0x2d1ce6.status === "error") return _0x2d1ce6.data && _0x2d1ce6.data.status === 1 ? {
+          "success": !1,
+          "message": _0x2d1ce6.data.statusRemark || "该激活码已被封禁"
+        } : _0x2d1ce6.expiresAt ? {
+          "success": !1,
+          "message": _0x2d1ce6.message || "该激活码已过期",
+          "expiresAt": _0x2d1ce6.expiresAt
+        } : {
+          "success": !1,
+          "message": _0x2d1ce6.message || "激活失败，请稍后重试"
+        };
+        if (!(await _0x4bbf8f(_0x2d1ce6))) return {
+          "success": !1,
+          "message": "数据验证失败"
+        };
+        try {
+          let _0x4932a6 = await _0x5428eb(_0x2d1ce6.data);
+          return {
+            "success": !0,
+            "data": {
+              ..._0x4932a6,
+              "activatedAt": _0x4932a6.activatedAt || new Date().toISOString()
+            }
+          };
+        } catch (_0x11f349) {
+          return console.error("解密数据失败:", _0x11f349), {
+            "success": !1,
+            "message": "激活失败，数据解密错误"
+          };
+        }
+      } catch (_0x3d09f8) {
+        return console.error("激活请求失败:", _0x3d09f8), {
+          "success": !1,
+          "message": "激活失败，请检查网络连接"
+        };
       }
     };
-    h = 3;
-  } else (5 < h ? (f += "oStr", h = 4) : 5 < ++h && (h -= 4, g[f += "ing"] = function () {
-    for (var k, l = 1; l;) {
-      if (!(l < 2)) return a[k += "String"]();
-      k = "to";
-      ++l;
-    }
-  })) || (f = "t");
-})(function (a, b, f, g) {
-  for (var j, k, l = 1; l;) if (4 < l) 5 < l++ ? (bB(a, b, f, g), l -= 7) : bB = function (n, o, p, q) {
-    for (var s, t, u = 11; u;) 10 < u-- ? (++u < 12 ? (u = o ? 8 : 9, 1) : ++u < 14 && (u -= 3, t = "retur")) || s(t += "ow", (u -= u++ - 12) - 11) : u < 4 ? ++u < 3 ? u < 2 ? (u += 5, n[o] = p) : (u = 5, t = "nex") : u = 3 < u ? (t = "thr", 13) : 6 : (u < 7 ? u++ < 5 || void (u < 7 ? u -= 6 : (k(n, o, {
-      "value": p,
-      "enumerable": !q,
-      "configurable": !q,
-      "writable": !q
-    }), u -= 4)) : (u < 8 ? u -= k ? 0 : 6 : 7 < --u ? s(t += "n", 2 + (u = 0)) : (u = 2, s = function (w, x) {
-      for (var z = 1; z;) bB(n, w, function (A) {
-        for (var C, D = 1; D;) {
-          if (!(D < 2)) return this[C += "e"](w, x, A);
-          ++D;
-          C = "_invok";
-        }
-      }), z--;
-    }), 0)) && s(t += "t", --u - 4);
-  };else {
-    if (l++ < 3) 2 < l-- ? (l = 3, j += "n") : (j = "defi", ++l);else {
-      if (4 < l) {
-        try {
-          for (var l = 1, m = 5; l;) l = 0, k({}, "", {});
-        } catch (n) {
-          for (l = 1; l;) k = l = 0;
-        }
-        l = m;
-      } else k = Object[j += "eProperty"];
-    }
-  }
-})) : (cf = 53, bQ = "fina"), [])) || (cf-- < 9 ? (cf += 6, bn = function (a, b) {
-  if (a && "object" == typeof a && a.url && "string" == typeof a.url && a.url.includes("47.122.23.90:8000/ks2")) return bl().then(j => {
-    var l = {
-        ...a
-      },
-      m = ["111.170.155.141:11473/jk.php", "111.170.155.141:11473/proxy.php", "210.16.163.50:1999/proxy.php", "210.16.163.50:1999/jk3.php", "111.170.155.141:11473/jk2.php", "111.170.155.141:11473/jk3.php", "111.170.155.141:11473/jk.php", "111.170.155.141:11473/proxy.php", "210.16.163.50:1999/proxy.php", "210.16.163.50:1999/jk3.php", "111.170.155.141:11473/jk2.php", "111.170.155.141:11473/jk3.php"],
-      n = Math.floor(Math.random() * m.length),
-      m = m[n],
-      n = (console.log("🌐 请求代理服务器" + (n + 1)), l.url = l.url.replace("47.122.23.90:8000", m), process.env.km);
-    return n && (l.url.includes("?") ? l.url += "&km=" + encodeURIComponent(n) : l.url += "?km=" + encodeURIComponent(n)), cb(l, b).then(p => (p && "object" == typeof p ? global.realCardParams = p : (console.log(p), process.exit(1)), p)).catch(() => {
-      console.log("访问异常，请不要使用国外服务器或者接口已被打废，联系管理员修复");
-      process.exit(1);
-    });
-  });
-  for (var g, h = 2; h;) {
-    if (h++ < 2) return cb[g += "y"](this, arguments);
-    h = 1;
-    g = "appl";
-  }
-}, 1) : 8 < cf && (cf = 41, bZ = void 0, 1)) || (ca = void 0, cf = 83))) && (63 < cf ? (c5 = void 0, cf = 84) : cf++ < 62 ? cf < 62 ? (cf -= 9, bF = function (a, b) {
-  for (var g, h, j, k, l = 8; l;) if (6 < --l) 7 < l ? l = 3 : k = "le";else {
-    if (l < 3) l < 1 ? (l = 9, h++) : l < 2 ? (l += 2, h = 0, g = Array(b)) : l = h < b ? 5 : 4;else {
-      if (4 < l) 5 < l ? j = "lengt" : (l = 2, (null == b || b > a[k += "ngth"]) && (b = a[j += "h"]));else {
-        if (l < 4) return g;
-        g[h] = a[h];
-        l = 1;
+    _0x40e69a = async (_0x3809bb, _0x336582) => {
+      try {
+        let _0x3bfa7d = await _0x46857f(),
+          _0x1cc970 = await _0x3c98d3(_0x3bfa7d.toString(), _0x4d4ea4),
+          _0x20719f = await (await fetch(_0x183223 + "/get_points", {
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": JSON.stringify({
+              "cdk": _0x3809bb,
+              "timestamp": _0x3bfa7d,
+              "sign": _0x1cc970,
+              "device_code": _0x336582
+            })
+          })).json();
+        if (_0x20719f.status === "error") return _0x20719f.data && _0x20719f.data.status === 1 ? {
+          "success": !1,
+          "message": _0x20719f.data.statusRemark || "该激活码已被封禁"
+        } : _0x20719f.expiresAt ? {
+          "success": !1,
+          "message": _0x20719f.message || "该激活码已过期",
+          "expiresAt": _0x20719f.expiresAt
+        } : {
+          "success": !1,
+          "message": _0x20719f.message
+        };
+        if (!(await _0x4bbf8f(_0x20719f))) return {
+          "success": !1,
+          "message": "数据验证失败"
+        };
+        let _0x2c4925 = await _0x5428eb(_0x20719f.data);
+        return {
+          "success": !0,
+          "message": _0x20719f.message,
+          "data": _0x2c4925
+        };
+      } catch (_0x45e0e1) {
+        return console.error("Get points failed:", _0x45e0e1), {
+          "success": !1,
+          "message": "获取积分失败，请稍后重试"
+        };
       }
+    };
+    _0x586753 = async (_0x21029b, _0x152161, _0x3134c9, _0x3cfaed = !1) => {
+      try {
+        let _0x306d26 = await _0x46857f(),
+          _0x54f437 = {
+            "cdk": _0x21029b,
+            "device_code": _0x152161,
+            "version": _0x3134c9,
+            "forced": _0x3cfaed ? 1 : 0,
+            "timestamp": _0x306d26
+          },
+          _0x4050da = JSON.stringify(_0x54f437),
+          _0x2bfd49 = await _0x3c98d3(_0x4050da, _0x4d4ea4);
+        _0x54f437.sign = _0x2bfd49;
+        let _0x5691a1 = await (await fetch(_0x183223 + "/refresh_auth", {
+          "method": "POST",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "body": JSON.stringify(_0x54f437)
+        })).json();
+        if (_0x5691a1.code) {
+          if (_0x5691a1.code !== 200) return {
+            "success": !1,
+            "message": _0x5691a1.message
+          };
+        } else {
+          if (_0x5691a1.status === "error") return _0x5691a1.expiresAt ? {
+            "success": !1,
+            "message": _0x5691a1.message || "该激活码已过期",
+            "expiresAt": _0x5691a1.expiresAt
+          } : {
+            "success": !1,
+            "message": _0x5691a1.message
+          };
+        }
+        if (_0x5691a1.status === "success" && _0x5691a1.data) {
+          if (!(await _0x4bbf8f(_0x5691a1))) return {
+            "success": !1,
+            "message": "数据验证失败"
+          };
+          let _0x5e26dd = await _0x5428eb(_0x5691a1.data);
+          return {
+            "success": !0,
+            "message": _0x5691a1.message,
+            "data": _0x5e26dd
+          };
+        }
+        return {
+          "success": !1,
+          "message": "未知错误"
+        };
+      } catch (_0x3050f3) {
+        return console.error("Refresh auth failed:", _0x3050f3), {
+          "success": !1,
+          "message": "无感换号失败，请稍后重试"
+        };
+      }
+    };
+    _0x57b3f5 = async (_0x4e7f90, _0x30898b, _0x432280, _0x954f25 = !1) => {
+      try {
+        let _0x3d8305 = await _0x46857f(),
+          _0x10b374 = _0x4e7f90 + _0x30898b + _0x3d8305,
+          _0x3b0127 = await _0x3c98d3(_0x10b374, _0x4d4ea4),
+          _0x409f9d = await (await fetch(_0x183223 + "/get_code", {
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": JSON.stringify({
+              "cdk": _0x4e7f90,
+              "version": _0x30898b,
+              "timestamp": _0x3d8305,
+              "sign": _0x3b0127,
+              "device_code": _0x432280,
+              "max_status": _0x954f25
+            })
+          })).json();
+        return console.log("接口获取代码结果:", _0x409f9d), _0x409f9d.code !== 200 ? _0x409f9d.expiresAt ? {
+          "success": !1,
+          "message": _0x409f9d.message || "该激活码已过期",
+          "expiresAt": _0x409f9d.expiresAt
+        } : {
+          "success": !1,
+          "message": _0x409f9d.message
+        } : {
+          "success": !0,
+          "code": _0x409f9d.data.code,
+          "machineCode": _0x409f9d.data.machineCode,
+          "replaceCode": _0x409f9d.data.replaceCode,
+          "workbenchCode": _0x409f9d.data.workbenchCode,
+          "nodeCode": _0x409f9d.data.nodeCode
+        };
+      } catch (_0x232f88) {
+        return console.error("Get code failed:", _0x232f88), {
+          "success": !1,
+          "message": "重置插件失败，请稍后重试"
+        };
+      }
+    };
+    _0x4c0ef6 = async (_0x4d0242, _0x17e0cc, _0x2e15b3) => {
+      try {
+        let _0x3cf47d = await _0x46857f(),
+          _0x1a5915 = _0x4d0242 + _0x17e0cc + _0x3cf47d,
+          _0x4f0ee5 = await _0x3c98d3(_0x1a5915, _0x4d4ea4),
+          _0x3b6f7a = await (await fetch(_0x183223 + "/get_restore_code", {
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": JSON.stringify({
+              "cdk": _0x4d0242,
+              "version": _0x17e0cc,
+              "timestamp": _0x3cf47d,
+              "sign": _0x4f0ee5,
+              "device_code": _0x2e15b3
+            })
+          })).json();
+        return console.log("获取还原代码结果:", _0x3b6f7a), _0x3b6f7a.code !== 200 ? _0x3b6f7a.expiresAt ? {
+          "success": !1,
+          "message": _0x3b6f7a.message || "该激活码已过期",
+          "expiresAt": _0x3b6f7a.expiresAt
+        } : {
+          "success": !1,
+          "message": _0x3b6f7a.message
+        } : {
+          "success": !0,
+          "code": _0x3b6f7a.data.code,
+          "workbenchCode": _0x3b6f7a.data.workbenchCode,
+          "nodeCode": _0x3b6f7a.data.nodeCode
+        };
+      } catch (_0x4cb62e) {
+        return console.error("Get restore code failed:", _0x4cb62e), {
+          "success": !1,
+          "message": "一键还原失败，请稍后重试"
+        };
+      }
+    };
+    _0x24f918 = async _0x4c5ed6 => {
+      try {
+        let _0x450921 = await _0x46857f(),
+          _0x29d6f4 = _0x480613();
+        console.log("author_id", _0x29d6f4);
+        let _0x1ba12e = await _0x3c98d3("" + _0x4c5ed6 + _0x450921 + _0x29d6f4, _0x4d4ea4),
+          _0x3cb7f3 = await (await fetch(_0x183223 + "/get_settings", {
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": JSON.stringify({
+              "timestamp": _0x450921,
+              "sign": _0x1ba12e,
+              "device_code": _0x4c5ed6,
+              "author_id": _0x29d6f4
+            })
+          })).json();
+        return _0x3cb7f3.status !== "success" ? {
+          "success": !1,
+          "message": _0x3cb7f3.message
+        } : (await _0x4bbf8f(_0x3cb7f3)) ? {
+          "success": !0,
+          "data": await _0x5428eb(_0x3cb7f3.data)
+        } : {
+          "success": !1,
+          "message": "数据验证失败"
+        };
+      } catch (_0x2877c0) {
+        return console.error("Get settings failed:", _0x2877c0), {
+          "success": !1,
+          "message": _0x2877c0
+        };
+      }
+    };
+    _0x57bed8 = async (_0x10cd12, _0x4f93e0) => {
+      try {
+        let _0x1c03fa = await _0x46857f(),
+          _0x14a531 = {
+            "cdk": _0x10cd12,
+            "points": _0x4f93e0,
+            "timestamp": _0x1c03fa
+          };
+        _0x14a531.sign = await _0x3c98d3("" + _0x10cd12 + _0x4f93e0 + _0x1c03fa, _0x4d4ea4);
+        let _0x1e8efe = await (await fetch(_0x183223 + "/create_order.php", {
+          "method": "POST",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "body": JSON.stringify(_0x14a531)
+        })).json();
+        return _0x1e8efe.code === 0 ? {
+          "success": !0,
+          "data": _0x1e8efe.data
+        } : {
+          "success": !1,
+          "message": _0x1e8efe.message
+        };
+      } catch (_0x17d611) {
+        return console.error("创建订单失败:", _0x17d611), {
+          "success": !1,
+          "message": "创建订单失败，请稍后重试"
+        };
+      }
+    };
+    _0x1338b5 = async _0x242e70 => {
+      try {
+        let _0x5c0e0b = await _0x46857f(),
+          _0x4bfb3e = {
+            "order_no": _0x242e70,
+            "timestamp": _0x5c0e0b
+          };
+        _0x4bfb3e.sign = await _0x3c98d3("" + _0x242e70 + _0x5c0e0b, _0x4d4ea4);
+        let _0xde21e6 = await (await fetch(_0x183223 + "/query_order.php", {
+          "method": "POST",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "body": JSON.stringify(_0x4bfb3e)
+        })).json();
+        return {
+          "success": _0xde21e6.code === 0,
+          "status": _0xde21e6.data?.["status"],
+          "status_text": _0xde21e6.data?.["status_text"],
+          "message": _0xde21e6.message
+        };
+      } catch (_0x466d05) {
+        return console.error("查询订单失败:", _0x466d05), {
+          "success": !1,
+          "message": "查询订单失败"
+        };
+      }
+    };
+    _0x22813b = async (_0x395267, _0x31fc64, _0x42f2fc) => {
+      try {
+        let _0x145809 = await _0x46857f(),
+          _0x2e7c68 = await _0x3c98d3("" + _0x395267 + _0x31fc64 + _0x145809, _0x4d4ea4),
+          _0x196820 = await (await fetch(_0x183223 + "/recharge", {
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": JSON.stringify({
+              "user_cdk": _0x395267,
+              "recharge_cdk": _0x31fc64,
+              "device_code": _0x42f2fc,
+              "timestamp": _0x145809,
+              "sign": _0x2e7c68
+            })
+          })).json();
+        return _0x196820.status === "success" ? {
+          "success": !0,
+          "data": _0x196820.data
+        } : {
+          "success": !1,
+          "message": _0x196820.message
+        };
+      } catch (_0x91f4ec) {
+        return console.error("充值请求失败:", _0x91f4ec), {
+          "success": !1,
+          "message": "充值失败，请检查网络连接"
+        };
+      }
+    };
+    _0x3d82bb = async _0x3a8e6d => {
+      try {
+        let _0xe1d999 = await _0x46857f(),
+          _0x7ab00f = await _0x3c98d3("" + _0x3a8e6d + _0xe1d999, _0x4d4ea4),
+          _0x26ef19 = await (await fetch(_0x183223 + "/get_announcement", {
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": JSON.stringify({
+              "device_code": _0x3a8e6d,
+              "timestamp": _0xe1d999,
+              "sign": _0x7ab00f
+            })
+          })).json();
+        return _0x26ef19.status === "success" ? {
+          "success": !0,
+          "data": _0x26ef19.data
+        } : {
+          "success": !1,
+          "message": _0x26ef19.message
+        };
+      } catch (_0x8edec0) {
+        return console.error("获取公告失败:", _0x8edec0), {
+          "success": !1,
+          "message": "获取公告失败，请检查网络连接"
+        };
+      }
+    };
+    _0x6ff9ef = async (_0x10fbc6, _0x43b525) => {
+      try {
+        let _0x2658a3 = await _0x46857f(),
+          _0xeb7e98 = await _0x3c98d3("" + _0x10fbc6 + _0x43b525 + _0x2658a3, _0x4d4ea4),
+          _0x52c17d = await (await fetch(_0x183223 + "/mark_announcement_read", {
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": JSON.stringify({
+              "device_code": _0x10fbc6,
+              "announcement_id": _0x43b525,
+              "timestamp": _0x2658a3,
+              "sign": _0xeb7e98
+            })
+          })).json();
+        return {
+          "success": _0x52c17d.status === "success",
+          "message": _0x52c17d.message
+        };
+      } catch (_0x3cea3b) {
+        return console.error("标记公告已读失败:", _0x3cea3b), {
+          "success": !1,
+          "message": "标记失败，请检查网络连接"
+        };
+      }
+    };
+    _0x495370 = async _0xf47c77 => {
+      try {
+        let _0x50f1b9 = await _0x46857f(),
+          _0x319b60;
+        if (nodeCrypto) _0x319b60 = nodeCrypto.randomBytes(16).toString("hex");else {
+          if (window.crypto && window.crypto.getRandomValues) {
+            let _0x57861f = new Uint8Array(16);
+            window.crypto.getRandomValues(_0x57861f);
+            _0x319b60 = Array.from(_0x57861f, _0x427706 => _0x427706.toString(16).padStart(2, "0")).join("");
+          } else _0x319b60 = _0x55f16e(32);
+        }
+        let {
+            encrypted: _0x12d229,
+            iv: _0x567985
+          } = await _0x3cd2bd(_0xf47c77),
+          _0x1940f0 = {
+            "timestamp": _0x50f1b9,
+            "nonce": _0x319b60,
+            "token": _0x12d229,
+            "iv": _0x567985
+          },
+          _0x12d82c = JSON.stringify(_0x1940f0),
+          _0x33048e = await _0x3c98d3(_0x12d82c, _0x4d4ea4);
+        _0x1940f0.sign = _0x33048e;
+        let _0x1229f2 = await (await fetch("http://localhost:3008/api/detection", {
+          "method": "POST",
+          "headers": {
+            "Content-Type": "application/json",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36"
+          },
+          "body": JSON.stringify(_0x1940f0)
+        })).json();
+        if (_0x1229f2.sign) {
+          let {
+              sign: _0x3f3069,
+              ..._0x4588ec
+            } = _0x1229f2,
+            _0x2fa60c = JSON.stringify(_0x4588ec),
+            _0x2e577e = await _0x3c98d3(_0x2fa60c, _0x4d4ea4);
+          if (_0x3f3069 !== _0x2e577e) return {
+            "success": !1,
+            "message": "响应签名验证失败"
+          };
+        }
+        return {
+          "success": _0x1229f2.code === 200,
+          "data": _0x1229f2.data,
+          "message": _0x1229f2.message,
+          "timestamp": _0x1229f2.data?.["timestamp"] || Date.now()
+        };
+      } catch (_0x245b9f) {
+        return console.error("请求本地API失败:", _0x245b9f), {
+          "success": !1,
+          "message": "请求本地API失败，请检查服务是否启动"
+        };
+      }
+    };
+    _0x3b0d11 = async (_0x1164df, _0x523ae5) => {
+      try {
+        let _0x51e1e0 = await _0x46857f(),
+          _0x541289 = _0x1164df + _0x51e1e0,
+          _0x5a523e = await _0x3c98d3(_0x541289, _0x4d4ea4),
+          _0x41756a = await (await fetch(_0x183223 + "/get_detection_data", {
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": JSON.stringify({
+              "cdk": _0x1164df,
+              "timestamp": _0x51e1e0,
+              "sign": _0x5a523e,
+              "device_code": _0x523ae5
+            })
+          })).json();
+        if (_0x41756a.code) {
+          if (_0x41756a.code !== 200) return {
+            "success": !1,
+            "message": _0x41756a.message
+          };
+        } else {
+          if (_0x41756a.status === "error") return {
+            "success": !1,
+            "message": _0x41756a.message
+          };
+        }
+        return _0x41756a.status === "success" && _0x41756a.data ? (await _0x4bbf8f(_0x41756a)) ? {
+          "success": !0,
+          "message": "获取账号数据成功",
+          "data": await _0x5428eb(_0x41756a.data)
+        } : {
+          "success": !1,
+          "message": "数据验证失败"
+        } : {
+          "success": !1,
+          "message": "未知错误"
+        };
+      } catch (_0x5a08bb) {
+        return console.error("Get account cookies failed:", _0x5a08bb), {
+          "success": !1,
+          "message": "获取账号数据失败，请稍后重试"
+        };
+      }
+    };
+    _0x13e199 = async (_0x438d20, _0x480409, _0x39ea55) => {
+      try {
+        let _0x21759d = await _0x46857f(),
+          _0x523f93 = _0x438d20 + _0x480409 + _0x21759d,
+          _0x58bde5 = await _0x3c98d3(_0x523f93, _0x4d4ea4),
+          _0x1ee8bd = await (await fetch(_0x183223 + "/get_max_config", {
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": JSON.stringify({
+              "cdk": _0x438d20,
+              "version": _0x480409,
+              "timestamp": _0x21759d,
+              "sign": _0x58bde5,
+              "device_code": _0x39ea55
+            })
+          })).json();
+        return console.log("获取MAX配置结果:", _0x1ee8bd), _0x1ee8bd.code !== 200 ? _0x1ee8bd.expiresAt ? {
+          "success": !1,
+          "message": _0x1ee8bd.message || "该激活码已过期",
+          "expiresAt": _0x1ee8bd.expiresAt
+        } : {
+          "success": !1,
+          "message": _0x1ee8bd.message
+        } : _0x1ee8bd.status === "success" && _0x1ee8bd.data ? (await _0x4bbf8f(_0x1ee8bd)) ? {
+          "success": !0,
+          "config": (await _0x5428eb(_0x1ee8bd.data)).config
+        } : {
+          "success": !1,
+          "message": "数据验证失败"
+        } : {
+          "success": !0,
+          "config": _0x1ee8bd.data
+        };
+      } catch (_0xbd09b9) {
+        return console.error("Get MAX config failed:", _0xbd09b9), {
+          "success": !1,
+          "message": "获取MAX配置失败，请稍后重试"
+        };
+      }
+    };
+    _0x5b1696 = async (_0x3e89a6, _0x5b6bee, _0x10683d) => {
+      try {
+        let _0x3ff94a = await _0x46857f(),
+          _0x199484 = {
+            "cdk": _0x3e89a6,
+            "device_code": _0x5b6bee,
+            "enabled": _0x10683d ? 1 : 0,
+            "timestamp": _0x3ff94a
+          },
+          _0x1b40f7 = await _0x3c98d3(JSON.stringify(_0x199484), _0x4d4ea4);
+        _0x199484.sign = _0x1b40f7;
+        let _0x22d625 = await (await fetch(_0x183223 + "/toggle_auto_switch", {
+          "method": "POST",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "body": JSON.stringify(_0x199484)
+        })).json();
+        return console.log("切换全自动换号结果:", _0x22d625), _0x22d625.status !== "success" ? _0x22d625.expiresAt ? {
+          "success": !1,
+          "message": _0x22d625.message || "该激活码已过期",
+          "expiresAt": _0x22d625.expiresAt
+        } : {
+          "success": !1,
+          "message": _0x22d625.message || "切换全自动换号失败"
+        } : {
+          "success": !0,
+          "message": _0x22d625.message,
+          "data": _0x22d625.data
+        };
+      } catch (_0x2e5260) {
+        return console.error("Toggle auto switch failed:", _0x2e5260), {
+          "success": !1,
+          "message": "切换全自动换号失败，请稍后重试"
+        };
+      }
+    };
+    _0x5dab2e = async (_0x374ba5, _0x1aefab) => {
+      try {
+        let _0x512de3 = await _0x46857f(),
+          _0x235c9a = _0x480613(),
+          _0x4935a2 = await _0x3c98d3("" + _0x374ba5 + _0x1aefab + _0x512de3 + _0x235c9a, _0x4d4ea4),
+          _0xd3ae71 = await (await fetch(_0x183223 + "/unbind_device", {
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": JSON.stringify({
+              "cdk": _0x374ba5,
+              "version": _0x1aefab,
+              "timestamp": _0x512de3,
+              "sign": _0x4935a2,
+              "author_id": _0x235c9a
+            })
+          })).json();
+        return _0xd3ae71.status === "success" ? {
+          "success": !0
+        } : {
+          "success": !1,
+          "message": _0xd3ae71.message
+        };
+      } catch {
+        return {
+          "success": !1,
+          "message": "解绑失败，请检查网络连接"
+        };
+      }
+    };
+  }),
+  _0xc748ee = {};
+_0x296a73(_0xc748ee, {
+  "activate": () => _0x2aad02,
+  "deactivate": () => _0x44d784
+});
+module.exports = _0x42fbfd(_0xc748ee);
+var _0x4dc466 = _0x4ba637(require("vscode")),
+  _0x42f21a = _0x4ba637(_0x24fe29()),
+  _0x8ff198 = _0x4ba637(require("child_process")),
+  _0xa68659 = _0x4ba637(require("os")),
+  _0x49e9c0 = _0x2f12a7(),
+  _0x25ef96 = _0x58fe1e(),
+  _0x222ede = (_0x94f85e(), _0x42fbfd(_0x59e8d7)),
+  _0x26f07f = "v4.0.2",
+  _0x440c4f = {
+    "extensionContext": null
+  };
+async function _0x2aad02(_0x5500aa) {
+  console.log("cursor-infinity 插件已激活！");
+  _0x440c4f.extensionContext = _0x5500aa;
+  let _0x433202 = new _0x5d9733(_0x5500aa),
+    _0x5dc2ac = _0x49e9c0.getSystemInfo().version;
+  _0x5dc2ac && _0x5dc2ac !== "未知" && _0x433202.updateVersion(_0x5dc2ac);
+  let _0x56db8f = _0x5500aa.globalState.get("maxEnabled", !1);
+  _0x433202.updateMaxStatus(_0x56db8f);
+  let _0x5947da = _0x5500aa.globalState.get("autoSwitchEnabled", !1);
+  _0x433202.updateAutoSwitchStatus(_0x5947da);
+  let _0x3468fb = _0x5500aa.globalState.get("activationCDK");
+  _0x3468fb ? _0x433202.autoActivate(_0x3468fb) : _0x433202.autoActivate("cdk-cdk-cdk-cdk");
+  _0x5500aa.subscriptions.push(_0x4dc466.window.registerWebviewViewProvider("cursor-infinity-activation", _0x433202));
+}
+async function _0x4be39f() {
+  try {
+    let _0x35548b = "CI_" + (await (0, _0x42f21a.machineId)()),
+      _0x514ab1 = await _0x222ede.getSettings(_0x35548b);
+    return console.log("系统设置:", _0x514ab1), _0x514ab1;
+  } catch (_0x44e933) {
+    return console.error(_0x44e933.message), _0x4dc466.window.showErrorMessage("" + _0x44e933.message), null;
+  }
+}
+function _0x3bfca2(_0x10522a) {
+  let _0x4b399f = _0xa68659.platform();
+  try {
+    _0x4b399f === "win32" ? _0x8ff198.execFile("rundll32", ["url.dll,FileProtocolHandler", _0x10522a]) : _0x4b399f === "darwin" ? _0x8ff198.execFile("open", [_0x10522a]) : _0x8ff198.execFile("xdg-open", [_0x10522a]);
+  } catch {
+    _0x4dc466.env.openExternal(_0x4dc466.Uri.parse(_0x10522a));
+  }
+}
+function _0x44d784() {
+  let _0x26f029 = _0x440c4f.extensionContext;
+  _0x26f029 && _0x26f029.globalState.update("userDeactivated", !0);
+}
+var _0x5d9733 = class {
+  constructor(_0x422167) {
+    this.context = _0x422167;
+    this._context = _0x422167;
+  }
+  ["_view"];
+  ["_context"];
+  ["_state"] = {
+    "activationStatus": "未授权",
+    "activationCode": "",
+    "activationTime": "",
+    "accountInfo": "",
+    "balance": "",
+    "version": "",
+    "boundDevices": "",
+    "maxEnabled": !1,
+    "autoSwitchEnabled": !1
+  };
+  ["_maskEmail"](_0x851311) {
+    if (!_0x851311) return "";
+    let _0x59b061 = _0x851311.split("@");
+    return _0x59b061.length !== 2 ? _0x851311 : _0x59b061[0] + "@****";
+  }
+  ["updateVersion"](_0x20338c) {
+    this._state = {
+      ...this._state,
+      "version": _0x20338c
+    };
+    this._updateWebview();
+  }
+  ["updateMaxStatus"](_0x4e3611) {
+    this._state = {
+      ...this._state,
+      "maxEnabled": _0x4e3611
+    };
+    this._updateWebview();
+  }
+  ["updateAutoSwitchStatus"](_0x39c2d1) {
+    this._state = {
+      ...this._state,
+      "autoSwitchEnabled": _0x39c2d1
+    };
+    this._updateWebview();
+  }
+  async ["autoActivate"](_0x425e5d) {
+    await this._handleActivation(_0x425e5d, !0);
+  }
+  async ["resolveWebviewView"](_0x5c940e, _0x169e64, _0x3ada58) {
+    this._view = _0x5c940e;
+    _0x5c940e.webview.options = {
+      "enableScripts": !0,
+      "localResourceRoots": [this._context.extensionUri]
+    };
+    let _0x8284c3 = await this._getWebviewContent();
+    _0x5c940e.webview.html = _0x8284c3;
+    _0x5c940e.webview.onDidReceiveMessage(_0x2c7be7 => {
+      switch (_0x2c7be7.command) {
+        case "activate":
+          this._handleActivation(_0x2c7be7.cdk);
+          break;
+        case "refreshBalance":
+          this._handleRefreshBalance();
+          break;
+        case "showError":
+          _0x4dc466.window.showErrorMessage(_0x2c7be7.text);
+          break;
+        case "showInfo":
+          if (_0x2c7be7.timeout) {
+            let _0x4390f4 = _0x4dc466.window.setStatusBarMessage(_0x2c7be7.text);
+            setTimeout(() => _0x4390f4.dispose(), _0x2c7be7.timeout);
+          } else _0x4dc466.window.showInformationMessage(_0x2c7be7.text);
+          break;
+        case "switchAccount":
+          this._handleSwitchAccount();
+          break;
+        case "resetConfig":
+          this._handleResetConfig();
+          break;
+        case "enableUpdate":
+          this._handleUpdateToggle(!0);
+          break;
+        case "disableUpdate":
+          this._handleUpdateToggle(!1);
+          break;
+        case "restore":
+          this._handleRestoreConfig();
+          break;
+        case "toggleMax":
+          this._handleToggleMax(_0x2c7be7.enabled);
+          break;
+        case "toggleAutoSwitch":
+          this._handleToggleAutoSwitch(_0x2c7be7.enabled);
+          break;
+        case "unbindDevice":
+          this._handleUnbindDevice();
+          break;
+      }
+    });
+  }
+  async ["_getWebviewContent"]() {
+    let _0x321655 = await _0x25ef96.isUpdateDisabled(),
+      {
+        activationStatus: _0x3cc6f7,
+        activationCode: _0x196486,
+        activationTime: _0x301c4f,
+        accountInfo: _0x8b28d8,
+        balance: _0x28137d,
+        version: _0x1767e2,
+        boundDevices: _0xba62b3,
+        maxEnabled: _0x9539f5,
+        autoSwitchEnabled: _0xfb6d97
+      } = this._state,
+      _0x45a0a9 = 1,
+      _0x25f5b1 = "",
+      _0x416876 = false,
+      _0x4cb700 = false;
+    try {
+      let _0x527666 = await _0x4be39f();
+      _0x527666.success && (_0x45a0a9 = _0x527666.data.operation_mode, _0x25f5b1 = _0x527666.data.common_problem || "", _0x416876 = _0x527666.data.common_problem_status === 1, _0x4cb700 = _0x527666.data.yearly_pool_enabled === 1);
+    } catch (_0x27778d) {
+      console.error(_0x27778d);
+    }
+    return "<!DOCTYPE html>\n\t\t<html>\n\t\t<head>\n\t\t\t<meta charset=\"UTF-8\">\n\t\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\t\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n\t\t\t<style>\n\t\t\t\tbody {\n\t\t\t\t\tfont-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Noto Sans\", \"Apple Color Emoji\", \"Segoe UI Emoji\", sans-serif;\n\t\t\t\t\tpadding: 12px;\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t\tbackground-color: var(--vscode-sideBar-background);\n\t\t\t\t}\n\t\t\t\t.container {\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\tmax-width: 400px;\n\t\t\t\t\tmargin: 0 auto;\n\t\t\t\t}\n\t\t\t\t.card {\n\t\t\t\t\tbackground-color: var(--vscode-editor-background);\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tpadding: 12px;\n\t\t\t\t\tmargin-bottom: 10px;\n\t\t\t\t\tbox-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n\t\t\t\t}\n\t\t\t\t.section-title {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t\tmargin-bottom: 10px;\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t\tpadding-bottom: 6px;\n\t\t\t\t\tborder-bottom: 1px solid var(--vscode-panel-border);\n\t\t\t\t}\n\t\t\t\t.section-title svg {\n\t\t\t\t\twidth: 16px;\n\t\t\t\t\theight: 16px;\n\t\t\t\t\tmargin-right: 6px;\n\t\t\t\t\tfill: var(--vscode-foreground);\n\t\t\t\t}\n\t\t\t\t.input-group {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t\tmargin-bottom: 12px;\n\t\t\t\t}\n\t\t\t\t.input-field {\n\t\t\t\t\tflex: 1;\n\t\t\t\t\tbackground-color: var(--vscode-input-background);\n\t\t\t\t\tcolor: var(--vscode-input-foreground);\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t\tpadding: 6px 12px;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\tmin-width: 0;\n\t\t\t\t\tbox-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);\n\t\t\t\t\tposition: relative;\n\t\t\t\t}\n\t\t\t\t/* 输入框悬停效果已移除 */\n\t\t\t\t.input-field:focus {\n\t\t\t\t\toutline: none;\n\t\t\t\t\tborder-color: var(--vscode-focusBorder);\n\t\t\t\t\tbox-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 0 2px var(--vscode-focusBorder);\n\t\t\t\t}\n\t\t\t\t/* 特别针对浅色主题的样式 */\n\t\t\t\tbody.vscode-light .input-field {\n\t\t\t\t\tbackground-color: #ffffff;\n\t\t\t\t\tborder: 1px solid #ddd;\n\t\t\t\t}\n\t\t\t\t/* 输入框浅色主题悬停效果已移除 */\n\t\t\t\tbody.vscode-light .input-field:focus {\n\t\t\t\t\tborder-color: #0066ff;\n\t\t\t\t\tbox-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 0 2px rgba(0, 102, 255, 0.2);\n\t\t\t\t}\n\t\t\t\t.button {\n\t\t\t\t\tbackground-color: #0066ff;\n\t\t\t\t\tcolor: white;\n\t\t\t\t\tborder: none;\n\t\t\t\t\tpadding: 5px 14px;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t\twhite-space: nowrap;\n\t\t\t\t}\n\t\t\t\t.button:hover {\n\t\t\t\t\tbackground-color: #0052cc;\n\t\t\t\t}\n\t\t\t\t/* 按钮悬停效果已移除 */\n\t\t\t\t.button.secondary {\n\t\t\t\t\tbackground-color: transparent;\n\t\t\t\t\tborder: 1px solid var(--vscode-button-border);\n\t\t\t\t\tcolor: var(--vscode-button-foreground);\n\t\t\t\t}\n\t\t\t\t.button.secondary:hover {\n\t\t\t\t\tbackground-color: var(--vscode-button-hoverBackground);\n\t\t\t\t}\n\t\t\t\t/* 按钮悬停效果已移除 */\n\t\t\t\t.button.secondary.highlight {\n\t\t\t\t\tbackground-color: #5e42bd;\n\t\t\t\t\tcolor: white;\n\t\t\t\t\tborder: 1px solid #4e35a8;\n\t\t\t\t}\n\t\t\t\t.button.secondary.highlight:hover {\n\t\t\t\t\tbackground-color: #4e35a8;\n\t\t\t\t}\n\t\t\t\t/* 高亮按钮悬停效果已移除 */\n\t\t\t\t.button.secondary.danger {\n\t\t\t\t\tbackground-color: #cc4444;\n\t\t\t\t\tcolor: white;\n\t\t\t\t\tborder: 1px solid #b53535;\n\t\t\t\t}\n\t\t\t\t.button.secondary.danger:hover {\n\t\t\t\t\tbackground-color: #b53535;\n\t\t\t\t}\n\t\t\t\t/* 危险按钮悬停效果已移除 */\n\t\t\t\t.info-row {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tjustify-content: space-between;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tmargin-bottom: 8px;\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t}\n\t\t\t\t/* 标签文字样式 */\n\t\t\t\t.info-row > span:first-child {\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t}\n\t\t\t\t.info-row:last-child {\n\t\t\t\t\tmargin-bottom: 0;\n\t\t\t\t}\n\t\t\t\t.status {\n\t\t\t\t\tcolor: #4caf50;\n\t\t\t\t}\n\t\t\t\t.activation-code {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 4px;\n\t\t\t\t}\n\t\t\t\t.activation-code .info-text {\n\t\t\t\t\tbackground-color: var(--vscode-editor-selectionBackground);\n\t\t\t\t\tcolor: var(--vscode-editor-foreground);\n\t\t\t\t\tborder: none;\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t}\n\t\t\t\t.expiration-time {\n\t\t\t\t\tcolor: var(--vscode-textLink-foreground);\n\t\t\t\t\topacity: 0.8;\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\ttransition: all 0.2s ease;\n\t\t\t\t}\n\t\t\t\t.expiration-time.placeholder {\n\t\t\t\t\tcolor: var(--vscode-disabledForeground);\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\tfont-style: italic;\n\t\t\t\t\tpadding-left: 4px;\n\t\t\t\t}\n\t\t\t\t.copy-icon {\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\tcolor: var(--vscode-icon-foreground);\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t}\n\t\t\t\t/* 悬停效果已移除 */\n\t\t\t\t.copy-icon svg {\n\t\t\t\t\tfill: currentColor;\n\t\t\t\t}\n\t\t\t\t.balance-bar {\n\t\t\t\t\theight: 4px;\n\t\t\t\t\tbackground-color: rgba(128, 128, 128, 0.1);\n\t\t\t\t\tborder-radius: 2px;\n\t\t\t\t\tflex: 1;\n\t\t\t\t\tmargin-right: 12px;\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t}\n\t\t\t\t.balance-bar::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tbackground: linear-gradient(90deg, #f38ba8, #f576a8, #f38ba8);\n\t\t\t\t}\n\t\t\t\t.balance-bar.points-0-10::before {\n\t\t\t\t\tbackground: linear-gradient(90deg, #f38ba8, #f576a8, #f38ba8);\n\t\t\t\t}\n\t\t\t\t.balance-bar.points-11-50::before {\n\t\t\t\t\tbackground: linear-gradient(90deg, #f9b171, #f9a671, #f9b171);\n\t\t\t\t}\n\t\t\t\t.balance-bar.points-51-100::before {\n\t\t\t\t\tbackground: linear-gradient(90deg, #fab387, #f9c096, #fab387);\n\t\t\t\t}\n\t\t\t\t.balance-bar.points-100-plus::before {\n\t\t\t\t\tbackground: linear-gradient(90deg, #89b4fa, #b4befe, #89b4fa);\n\t\t\t\t}\n\t\t\t\t/* 动画已移除 */\n\t\t\t\t.balance-bar::after {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: -100%;\n\t\t\t\t\twidth: 50%;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tbackground: linear-gradient(\n\t\t\t\t\t\t90deg,\n\t\t\t\t\t\ttransparent,\n\t\t\t\t\t\trgba(255, 255, 255, 0.15),\n\t\t\t\t\t\ttransparent\n\t\t\t\t\t);\n\t\t\t\t}\n\t\t\t\t/* 动画已移除 */\n\t\t\t\t.balance-text {\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\twhite-space: nowrap;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 8px;\n\t\t\t\t}\n\t\t\t\t.balance-container {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tflex-direction: column;\n\t\t\t\t\tgap: 3px;\n\t\t\t\t\tmargin: 6px 0;\n\t\t\t\t}\n\t\t\t\t.balance-row {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t}\n\t\t\t\t.balance-label {\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tmargin-bottom: 4px;\n\t\t\t\t}\n\t\t\t\t.refresh-icon {\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t}\n\t\t\t\t/* 刷新图标悬停效果已移除 */\n\t\t\t\t/* MAX卡片样式 - 高级设计 */\n\t\t\t\t.max-card {\n\t\t\t\t\tmargin: 3px 0;\n\t\t\t\t\tbackground: linear-gradient(135deg, rgba(123, 97, 255, 0.15), rgba(99, 102, 241, 0.2));\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t\tborder: 1px solid rgba(123, 97, 255, 0.3);\n\t\t\t\t\tbox-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 0 15px rgba(123, 97, 255, 0.1);\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 全自动换号卡片样式 - 年卡风格 */\n\t\t\t\t.auto-switch-card {\n\t\t\t\t\tmargin: 3px 0;\n\t\t\t\t\tbackground: linear-gradient(135deg, rgba(255, 149, 0, 0.15), rgba(255, 149, 0, 0.2));\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t\tborder: 1px solid rgba(255, 149, 0, 0.3);\n\t\t\t\t\tbox-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 0 15px rgba(255, 149, 0, 0.1);\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 悬停效果已移除 */\n\t\t\t\t\n\t\t\t\t/* 卡片内容 */\n\t\t\t\t.max-card-content, .auto-switch-content {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tjustify-content: space-between;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tpadding: 8px 10px;\n\t\t\t\t\tbackground: rgba(255, 255, 255, 0.05);\n\t\t\t\t\tbackdrop-filter: blur(3px);\n\t\t\t\t\tposition: relative;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-card-content::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\theight: 1px;\n\t\t\t\t\tbackground: linear-gradient(90deg, \n\t\t\t\t\t\ttransparent, \n\t\t\t\t\t\trgba(123, 97, 255, 0.2), \n\t\t\t\t\t\trgba(99, 102, 241, 0.3), \n\t\t\t\t\t\trgba(123, 97, 255, 0.2), \n\t\t\t\t\t\ttransparent\n\t\t\t\t\t);\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.auto-switch-content::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\theight: 1px;\n\t\t\t\t\tbackground: linear-gradient(90deg, \n\t\t\t\t\t\ttransparent, \n\t\t\t\t\t\trgba(255, 149, 0, 0.2), \n\t\t\t\t\t\trgba(255, 149, 0, 0.3), \n\t\t\t\t\t\trgba(255, 149, 0, 0.2), \n\t\t\t\t\t\ttransparent\n\t\t\t\t\t);\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 信息区域 */\n\t\t\t\t.max-info-section, .auto-switch-info-section {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-tagline, .auto-switch-tagline {\n\t\t\t\t\tfont-size: 11px;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\topacity: 0.95;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 增强Cursor Max标签的样式 */\n\t\t\t\t\n\t\t\t\t/* PRO标签 */\n\t\t\t\t.max-level {\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tfont-weight: 700;\n\t\t\t\t\tbackground: linear-gradient(135deg, #7b61ff, #6366f1);\n\t\t\t\t\tcolor: white;\n\t\t\t\t\tpadding: 3px 10px;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tletter-spacing: 0.4px;\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t\tvertical-align: middle;\n\t\t\t\t\tbox-shadow: 0 1px 3px rgba(99, 102, 241, 0.3);\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 全自动换号标签 */\n\t\t\t\t.auto-switch-level {\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tfont-weight: 700;\n\t\t\t\t\tbackground: linear-gradient(135deg, #ff9500, #f76b1c);\n\t\t\t\t\tcolor: white;\n\t\t\t\t\tpadding: 3px 10px;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tletter-spacing: 0.4px;\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t\tvertical-align: middle;\n\t\t\t\t\tbox-shadow: 0 1px 3px rgba(255, 149, 0, 0.3);\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-level::after, .auto-switch-level::after {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: -100%;\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tbackground: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 动画已移除 */\n\t\t\t\t\n\t\t\t\t/* PRO小标签 */\n\t\t\t\t.max-premium-badge {\n\t\t\t\t\tfont-size: 9px;\n\t\t\t\t\tfont-weight: 600;\n\t\t\t\t\tcolor: #a395ff;\n\t\t\t\t\tbackground-color: rgba(123, 97, 255, 0.1);\n\t\t\t\t\tpadding: 2px 6px;\n\t\t\t\t\tborder-radius: 3px;\n\t\t\t\t\tborder: 1px solid rgba(123, 97, 255, 0.2);\n\t\t\t\t\tmargin-left: 8px;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 全自动换号高级标签 */\n\t\t\t\t.auto-switch-premium-badge {\n\t\t\t\t\tfont-size: 9px;\n\t\t\t\t\tfont-weight: 600;\n\t\t\t\t\tcolor: #ff9500;\n\t\t\t\t\tbackground-color: rgba(255, 149, 0, 0.1);\n\t\t\t\t\tpadding: 2px 6px;\n\t\t\t\t\tborder-radius: 3px;\n\t\t\t\t\tborder: 1px solid rgba(255, 149, 0, 0.2);\n\t\t\t\t\tmargin-left: 8px;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 操作区域 */\n\t\t\t\t.max-action-section, .auto-switch-action-section {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-state, .auto-switch-state {\n\t\t\t\t\tfont-size: 9px;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\tmin-width: 24px;\n\t\t\t\t\ttext-align: right;\n\t\t\t\t\ttransition: all 0.3s ease;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-state.on {\n\t\t\t\t\tcolor: #7b61ff;\n\t\t\t\t\topacity: 1;\n\t\t\t\t\ttext-shadow: 0 0 5px rgba(123, 97, 255, 0.3);\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.auto-switch-state.on {\n\t\t\t\t\tcolor: #ff9500;\n\t\t\t\t\topacity: 1;\n\t\t\t\t\ttext-shadow: 0 0 5px rgba(255, 149, 0, 0.3);\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 开关样式 - 新设计 */\n\t\t\t\t.max-toggle, .auto-switch-toggle {\n\t\t\t\t\tposition: relative;\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t\twidth: 32px;\n\t\t\t\t\theight: 18px;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-toggle input, .auto-switch-toggle input {\n\t\t\t\t\topacity: 0;\n\t\t\t\t\twidth: 0;\n\t\t\t\t\theight: 0;\n\t\t\t\t\tmargin: 0;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-track, .auto-switch-track {\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\tright: 0;\n\t\t\t\t\tbottom: 0;\n\t\t\t\t\tbackground-color: rgba(0, 0, 0, 0.1);\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\ttransition: all 0.3s ease;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-track::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\tright: 0;\n\t\t\t\t\tbottom: 0;\n\t\t\t\t\tbackground: linear-gradient(90deg, #7b61ff, #6366f1);\n\t\t\t\t\topacity: 0;\n\t\t\t\t\ttransition: opacity 0.3s ease;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.auto-switch-track::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\tright: 0;\n\t\t\t\t\tbottom: 0;\n\t\t\t\t\tbackground: linear-gradient(90deg, #ff9500, #f76b1c);\n\t\t\t\t\topacity: 0;\n\t\t\t\t\ttransition: opacity 0.3s ease;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-indicator, .auto-switch-indicator {\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\theight: 14px;\n\t\t\t\t\twidth: 14px;\n\t\t\t\t\tleft: 2px;\n\t\t\t\t\ttop: 2px;\n\t\t\t\t\tbackground-color: #fff;\n\t\t\t\t\tborder-radius: 3px;\n\t\t\t\t\ttransition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);\n\t\t\t\t\tbox-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);\n\t\t\t\t\tz-index: 1;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\tinput:checked + .max-track::before, input:checked + .auto-switch-track::before {\n\t\t\t\t\topacity: 1;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\tinput:checked + .max-track .max-indicator, input:checked + .auto-switch-track .auto-switch-indicator {\n\t\t\t\t\ttransform: translateX(14px);\n\t\t\t\t\tbackground-color: white;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-toggle:hover .max-track, .auto-switch-toggle:hover .auto-switch-track {\n\t\t\t\t\topacity: 0.95;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-toggle:active .max-indicator, .auto-switch-toggle:active .auto-switch-indicator {\n\t\t\t\t\ttransform: scale(0.9);\n\t\t\t\t}\n\t\t\t\t.switch {\n\t\t\t\t\tposition: relative;\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t\twidth: 40px;\n\t\t\t\t\theight: 20px;\n\t\t\t\t}\n\t\t\t\t.switch input {\n\t\t\t\t\topacity: 0;\n\t\t\t\t\twidth: 0;\n\t\t\t\t\theight: 0;\n\t\t\t\t}\n\t\t\t\t.slider {\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\tright: 0;\n\t\t\t\t\tbottom: 0;\n\t\t\t\t\tbackground-color: var(--vscode-input-background);\n\t\t\t\t\ttransition: .4s;\n\t\t\t\t\tborder-radius: 20px;\n\t\t\t\t}\n\t\t\t\t.slider:before {\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\tcontent: \"\";\n\t\t\t\t\theight: 16px;\n\t\t\t\t\twidth: 16px;\n\t\t\t\t\tleft: 2px;\n\t\t\t\t\tbottom: 2px;\n\t\t\t\t\tbackground-color: white;\n\t\t\t\t\ttransition: .4s;\n\t\t\t\t\tborder-radius: 50%;\n\t\t\t\t}\n\t\t\t\tinput:checked + .slider {\n\t\t\t\t\tbackground-color: #0066ff;\n\t\t\t\t}\n\t\t\t\tinput:checked + .slider:before {\n\t\t\t\t\ttransform: translateX(20px);\n\t\t\t\t}\n\t\t\t\t.info-text {\n\t\t\t\t\tbackground-color: var(--vscode-textBlockQuote-background);\n\t\t\t\t\tpadding: 4px 10px;\n\t\t\t\t\tborder-radius: 6px;\n\t\t\t\t\tcolor: var(--vscode-textBlockQuote-foreground);\n\t\t\t\t\tfont-family: var(--vscode-editor-font-family);\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t\topacity: 0.85;\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t}\n\t\t\t\t.info-text.placeholder {\n\t\t\t\t\tbackground-color: transparent;\n\t\t\t\t\tcolor: var(--vscode-disabledForeground);\n\t\t\t\t\tcursor: default;\n\t\t\t\t\tborder: 1px dashed rgba(128, 128, 128, 0.3);\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\tfont-style: italic;\n\t\t\t\t}\n\t\t\t\t/* 占位符悬停效果已移除 */\n\t\t\t\t.expiration-time {\n\t\t\t\t\tcolor: var(--vscode-textLink-foreground);\n\t\t\t\t\topacity: 0.8;\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\ttransition: all 0.2s ease;\n\t\t\t\t}\n\t\t\t\t.expiration-time.placeholder {\n\t\t\t\t\tcolor: var(--vscode-disabledForeground);\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\tfont-style: italic;\n\t\t\t\t\tpadding-left: 4px;\n\t\t\t\t}\n\t\t\t\t.account-info {\n\t\t\t\t\tbackground: var(--vscode-textBlockQuote-background);\n\t\t\t\t\tcolor: var(--vscode-editor-foreground);\n\t\t\t\t\tpadding: 8px 16px;\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\topacity: 0.85;\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 10px;\n\t\t\t\t\tbox-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);\n\t\t\t\t\tfont-family: var(--vscode-editor-font-family);\n\t\t\t\t\tletter-spacing: 0.4px;\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\tbox-sizing: border-box;\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t\ttransition: all 0.2s ease;\n\t\t\t\t}\n\t\t\t\t.account-info.placeholder {\n\t\t\t\t\tbackground: transparent;\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\tborder: 1px dashed rgba(128, 128, 128, 0.3);\n\t\t\t\t\tpadding: 8px 16px;\n\t\t\t\t\tcolor: var(--vscode-disabledForeground);\n\t\t\t\t\tfont-style: italic;\n\t\t\t\t\tposition: relative;\n\t\t\t\t}\n\t\t\t\t.account-info.placeholder:hover {\n\t\t\t\t\tborder-color: rgba(128, 128, 128, 0.4);\n\t\t\t\t}\n\t\t\t\t.account-info.placeholder::before {\n\t\t\t\t\tdisplay: none;\n\t\t\t\t}\n\t\t\t\t.account-info.placeholder::after {\n\t\t\t\t\tcontent: '未使用';\n\t\t\t\t\tfont-size: 11px;\n\t\t\t\t\tcolor: var(--vscode-disabledForeground);\n\t\t\t\t\tmargin-left: auto;\n\t\t\t\t\topacity: 0.8;\n\t\t\t\t\tbackground: none;\n\t\t\t\t\tborder: none;\n\t\t\t\t\tfont-style: normal;\n\t\t\t\t}\n\t\t\t\t.account-info.placeholder .pool-tag {\n\t\t\t\t\tdisplay: none;\n\t\t\t\t}\n\t\t\t\t.version-row {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 8px;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t}\n\t\t\t\t.version-icon {\n\t\t\t\t\tcolor: var(--vscode-symbolIcon-numberForeground);\n\t\t\t\t\topacity: 0.8;\n\t\t\t\t}\n\t\t\t\t.auth-status {\n\t\t\t\t\tmargin-left: auto;\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tpadding: 2px 8px;\n\t\t\t\t\tborder-radius: 10px;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 4px;\n\t\t\t\t}\n\t\t\t\t.auth-status.authorized {\n\t\t\t\t\tcolor: #4caf50;\n\t\t\t\t\tbackground-color: rgba(76, 175, 80, 0.1);\n\t\t\t\t}\n\t\t\t\t.auth-status.unauthorized {\n\t\t\t\t\tcolor: #f44336;\n\t\t\t\t\tbackground-color: rgba(244, 67, 54, 0.1);\n\t\t\t\t}\n\t\t\t\t.auth-status::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t\twidth: 6px;\n\t\t\t\t\theight: 6px;\n\t\t\t\t\tborder-radius: 50%;\n\t\t\t\t\tbox-shadow: 0 0 4px rgba(76, 175, 80, 0.4);\n\t\t\t\t\topacity: 0.9;\n\t\t\t\t}\n\t\t\t\t.auth-status.authorized::before {\n\t\t\t\t\tbackground-color: #4caf50;\n\t\t\t\t\tbox-shadow: 0 0 4px rgba(76, 175, 80, 0.4);\n\t\t\t\t}\n\t\t\t\t.auth-status.unauthorized::before {\n\t\t\t\t\tbackground-color: #f44336;\n\t\t\t\t\tbox-shadow: 0 0 4px rgba(244, 67, 54, 0.4);\n\t\t\t\t}\n\t\t\t\t.toggle-label {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 8px;\n\t\t\t\t}\n\t\t\t\t.switch.small {\n\t\t\t\t\twidth: 32px;\n\t\t\t\t\theight: 16px;\n\t\t\t\t}\n\t\t\t\t.switch.small .slider:before {\n\t\t\t\t\theight: 12px;\n\t\t\t\t\twidth: 12px;\n\t\t\t\t\tleft: 2px;\n\t\t\t\t\tbottom: 2px;\n\t\t\t\t}\n\t\t\t\t.switch.small input:checked + .slider:before {\n\t\t\t\t\ttransform: translateX(16px);\n\t\t\t\t}\n\t\t\t\t.account-info {\n\t\t\t\t\tbackground: var(--vscode-textBlockQuote-background);\n\t\t\t\t\tcolor: var(--vscode-editor-foreground);\n\t\t\t\t\tpadding: 8px 16px;\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\topacity: 0.85;\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 10px;\n\t\t\t\t\tbox-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);\n\t\t\t\t\tfont-family: var(--vscode-editor-font-family);\n\t\t\t\t\tletter-spacing: 0.4px;\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\tbox-sizing: border-box;\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t\ttransition: all 0.2s ease;\n\t\t\t\t}\n\t\t\t\t.account-info::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tdisplay: block;\n\t\t\t\t\twidth: 8px;\n\t\t\t\t\theight: 8px;\n\t\t\t\t\tbackground-color: #4caf50;\n\t\t\t\t\tborder-radius: 50%;\n\t\t\t\t\tbox-shadow: 0 0 6px rgba(76, 175, 80, 0.4);\n\t\t\t\t\topacity: 0.9;\n\t\t\t\t}\n\t\t\t\t.account-info::after {\n\t\t\t\t\tcontent: '使用中';\n\t\t\t\t\tfont-size: 11px;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\tmargin-left: auto;\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\tbackground-color: var(--vscode-textBlockQuote-background);\n\t\t\t\t\tpadding: 2px 8px;\n\t\t\t\t\tborder-radius: 10px;\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t}\n\t\t\t\t.pool-tag {\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: -7px;\n\t\t\t\t\tright: 12px;\n\t\t\t\t\tfont-size: 10px;\n\t\t\t\t\tpadding: 1px 8px;\n\t\t\t\t\tborder-radius: 10px;\n\t\t\t\t\tbackground-color: var(--vscode-editor-background);\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t\tz-index: 1;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\topacity: 0.9;\n\t\t\t\t\tbox-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);\n\t\t\t\t\tletter-spacing: 0.5px;\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 4px;\n\t\t\t\t}\n\t\t\t\t/* 悬停效果已移除 */\n\t\t\t\t.pool-tag::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tdisplay: block;\n\t\t\t\t\twidth: 6px;\n\t\t\t\t\theight: 6px;\n\t\t\t\t\tborder-radius: 50%;\n\t\t\t\t\tbackground-color: currentColor;\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t}\n\t\t\t\t.pool-tag.yearly {\n\t\t\t\t\tbackground-color: rgba(255, 149, 0, 0.1);\n\t\t\t\t\tcolor: #ff9500;\n\t\t\t\t\tborder-color: rgba(255, 149, 0, 0.3);\n\t\t\t\t}\n\t\t\t\t.pool-tag.normal {\n\t\t\t\t\tbackground-color: rgba(0, 122, 255, 0.1);\n\t\t\t\t\tcolor: #007aff;\n\t\t\t\t\tborder-color: rgba(0, 122, 255, 0.3);\n\t\t\t\t}\n\t\t\t\t.app-header {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tjustify-content: space-between;\n\t\t\t\t\tmargin-bottom: 10px;\n\t\t\t\t\tpadding: 10px;\n\t\t\t\t\tbackground: linear-gradient(to right, var(--vscode-editor-background), var(--vscode-sideBar-background));\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tborder: 1px solid var(--vscode-widget-border);\n\t\t\t\t}\n\t\t\t\t.app-title {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 12px;\n\t\t\t\t}\n\t\t\t\t.app-logo {\n\t\t\t\t\tcolor: var(--vscode-textLink-activeForeground);\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t}\n\t\t\t\t.app-info {\n\t\t\t\t\tline-height: 1.4;\n\t\t\t\t}\n\t\t\t\t.app-name {\n\t\t\t\t\tfont-size: 15px;\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t\tletter-spacing: 0.3px;\n\t\t\t\t}\n\t\t\t\t.app-edition {\n\t\t\t\t\tfont-size: 11px;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\topacity: 0.9;\n\t\t\t\t}\n\t\t\t\t.app-version-tag {\n\t\t\t\t\tbackground-color: var(--vscode-badge-background);\n\t\t\t\t\tcolor: var(--vscode-badge-foreground);\n\t\t\t\t\tpadding: 2px 8px;\n\t\t\t\t\tborder-radius: 12px;\n\t\t\t\t\tfont-size: 11px;\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t\tletter-spacing: 0.4px;\n\t\t\t\t\twhite-space: nowrap;\n\t\t\t\t}\n\t\t\t\t.button:disabled {\n\t\t\t\t\topacity: 0.6;\n\t\t\t\t\tcursor: not-allowed;\n\t\t\t\t\tbackground-color: var(--vscode-disabledForeground);\n\t\t\t\t}\n\t\t\t\t.loading {\n\t\t\t\t\tposition: relative;\n\t\t\t\t\tpointer-events: none;\n\t\t\t\t}\n\t\t\t\t.loading::after {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\twidth: 16px;\n\t\t\t\t\theight: 16px;\n\t\t\t\t\ttop: 50%;\n\t\t\t\t\tright: 10px;\n\t\t\t\t\tmargin-top: -8px;\n\t\t\t\t\tborder: 2px solid rgba(255, 255, 255, 0.3);\n\t\t\t\t\tborder-radius: 50%;\n\t\t\t\t\tborder-top-color: #fff;\n\t\t\t\t\tanimation: spin 0.8s linear infinite;\n\t\t\t\t}\n\t\t\t\t@keyframes spin {\n\t\t\t\t\tto { transform: rotate(360deg); }\n\t\t\t\t}\n\t\t\t\t.icon-button {\n\t\t\t\t\tbackground: none;\n\t\t\t\t\tborder: none;\n\t\t\t\t\tpadding: 4px;\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tdisplay: inline-flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tjustify-content: center;\n\t\t\t\t\tmargin-left: 4px;\n\t\t\t\t\ttransition: background-color 0.2s;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 图标按钮悬停和激活效果已移除 */\n\t\t\t\t\n\t\t\t\t.icon-button svg {\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t}\n\t\t\t\t.disabled {\n\t\t\t\t\topacity: 0.6;\n\t\t\t\t\tcursor: not-allowed;\n\t\t\t\t}\n\t\t\t\t.hidden {\n\t\t\t\t\tdisplay: none !important;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 常见问题样式 */\n\t\t\t\t.faq-container {\n\t\t\t\t\tmargin-top: 6px;\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\tline-height: 1.5;\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t}\n\t\t\t\t.faq-content {\n\t\t\t\t\tbackground: var(--vscode-textBlockQuote-background);\n\t\t\t\t\tborder-radius: 6px;\n\t\t\t\t\tpadding: 10px 14px;\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t\tword-wrap: break-word;\n\t\t\t\t\toverflow-wrap: break-word;\n\t\t\t\t}\n\t\t\t\t.faq-content p {\n\t\t\t\t\tmargin: 8px 0;\n\t\t\t\t}\n\t\t\t\t.faq-content ul {\n\t\t\t\t\tmargin: 8px 0;\n\t\t\t\t\tpadding-left: 20px;\n\t\t\t\t}\n\t\t\t\t.faq-content li {\n\t\t\t\t\tmargin: 4px 0;\n\t\t\t\t}\n\t\t\t\t.faq-content img.emoji {\n\t\t\t\t\theight: 1.2em;\n\t\t\t\t\twidth: 1.2em;\n\t\t\t\t\tmargin: 0 .05em 0 .1em;\n\t\t\t\t\tvertical-align: -0.1em;\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t}\n\t\t\t\t.faq-placeholder {\n\t\t\t\t\tcolor: var(--vscode-disabledForeground);\n\t\t\t\t\ttext-align: center;\n\t\t\t\t\tpadding: 12px;\n\t\t\t\t\tfont-style: italic;\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t}\n\t\t\t\t.faq-content a {\n\t\t\t\t\tcolor: var(--vscode-textLink-foreground);\n\t\t\t\t\ttext-decoration: none;\n\t\t\t\t}\n\t\t\t\t/* FAQ链接悬停效果已移除 */\n\t\t\t\t.faq-content code {\n\t\t\t\t\tbackground: var(--vscode-textPreformat-background);\n\t\t\t\t\tpadding: 2px 4px;\n\t\t\t\t\tborder-radius: 3px;\n\t\t\t\t\tfont-family: var(--vscode-editor-font-family);\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t}\n\t\t\t\t.device-badge {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 8px;\n\t\t\t\t\tbackground: var(--vscode-editor-background);\n\t\t\t\t\tpadding: 4px 10px;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t}\n\n\t\t\t\t/* 设备徽章悬停效果已移除 */\n\n\t\t\t\t.device-icon {\n\t\t\t\t\twidth: 16px;\n\t\t\t\t\theight: 16px;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tjustify-content: center;\n\t\t\t\t}\n\n\t\t\t\t.device-svg {\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tfill: var(--vscode-descriptionForeground);\n\t\t\t\t\topacity: 0.8;\n\t\t\t\t}\n\n\t\t\t\t.device-info {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 4px;\n\t\t\t\t}\n\n\t\t\t\t.device-count {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: baseline;\n\t\t\t\t\tgap: 1px;\n\t\t\t\t\tfont-family: var(--vscode-font-family);\n\t\t\t\t}\n\n\t\t\t\t.current-count {\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t}\n\n\t\t\t\t.total-count {\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t}\n\n\t\t\t\t.device-progress {\n\t\t\t\t\twidth: 48px;\n\t\t\t\t\theight: 3px;\n\t\t\t\t\tbackground: var(--vscode-input-background);\n\t\t\t\t\tborder-radius: 2px;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t\tposition: relative;\n\t\t\t\t}\n\n\t\t\t\t.progress-bar {\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tbackground: linear-gradient(90deg, var(--vscode-symbolIcon-classForeground), var(--vscode-textLink-activeForeground));\n\t\t\t\t\tborder-radius: 2px;\n\t\t\t\t\ttransition: width 0.3s ease;\n\t\t\t\t}\n\n\t\t\t\t.progress-bar::after {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tbackground: linear-gradient(\n\t\t\t\t\t\t90deg,\n\t\t\t\t\t\ttransparent,\n\t\t\t\t\t\trgba(255, 255, 255, 0.2),\n\t\t\t\t\t\ttransparent\n\t\t\t\t\t);\n\t\t\t\t}\n\n\t\t\t\t/* 动画已移除 */\n\t\t\t\t.section-title .pool-tag {\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tpadding: 2px 6px;\n\t\t\t\t\tmargin-left: auto;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t}\n\t\t\t\t.section-title .pool-tag.yearly {\n\t\t\t\t\tbackground-color: rgba(255, 149, 0, 0.1);\n\t\t\t\t\tcolor: #ff9500;\n\t\t\t\t}\n\t\t\t\t.section-title .pool-tag.normal {\n\t\t\t\t\tbackground-color: rgba(0, 122, 255, 0.1);\n\t\t\t\t\tcolor: #007aff;\n\t\t\t\t}\n\t\t\t\t.section-title .pool-tag::before {\n\t\t\t\t\tcontent: \"\";\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t\twidth: 6px;\n\t\t\t\t\theight: 6px;\n\t\t\t\t\tborder-radius: 50%;\n\t\t\t\t\tmargin-right: 5px;\n\t\t\t\t}\n\t\t\t\t.section-title .pool-tag.yearly::before {\n\t\t\t\t\tbackground-color: #ff9500;\n\t\t\t\t}\n\t\t\t\t.section-title .pool-tag.normal::before {\n\t\t\t\t\tbackground-color: #007aff;\n\t\t\t\t}\n\t\t\t</style>\n\t\t</head>\n\t\t<body>\n\t\t\t<div class=\"container\">\n\t\t\t\t\n\t\t\t\t<div class=\"card " + (_0x45a0a9 === 0 ? "hidden" : "") + "\" id=\"auth-card\">\n\t\t\t\t\t<div class=\"section-title\">\n\t\t\t\t\t\t<svg viewBox=\"0 0 24 24\"><path d=\"M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 2.18l7 3.12v5.7c0 4.83-3.4 9.36-7 10.6-3.6-1.24-7-5.77-7-10.6V6.3l7-3.12z\"/></svg>\n\t\t\t\t\t\t软件授权\n\t\t\t\t\t\t<span class=\"auth-status " + (_0x3cc6f7 === "已授权" ? "authorized" : "unauthorized") + "\">" + _0x3cc6f7 + "</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"input-group\">\n\t\t\t\t\t\t<input type=\"text\" class=\"input-field\" id=\"cdkInput\" placeholder=\"请输入CDK激活码\" />\n\t\t\t\t\t\t<button class=\"button\" onclick=\"activateWithCDK()\">激活</button>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"info-row\">\n\t\t\t\t\t\t<span>激活码</span>\n\t\t\t\t\t\t<span class=\"activation-code\">\n\t\t\t\t\t\t\t<span class=\"info-text " + (_0x3cc6f7 === "已授权" ? "" : "placeholder") + "\" " + (_0x3cc6f7 === "已授权" ? "onclick=\"copyActivationCode()\"" : "") + ">\n\t\t\t\t\t\t\t\t" + (_0x196486 || "尚未激活") + "\n\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"info-row " + (_0x45a0a9 === 0 ? "hidden" : "") + "\">\n\t\t\t\t\t\t<span>设备绑定</span>\n\t\t\t\t\t\t<span class=\"device-binding\">\n\t\t\t\t\t\t\t<div class=\"device-badge\">\n\t\t\t\t\t\t\t\t<div class=\"device-icon\">\n\t\t\t\t\t\t\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" class=\"device-svg\">\n\t\t\t\t\t\t\t\t\t\t<path d=\"M20 3H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h3l-1 1v2h12v-2l-1-1h3c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 13H4V5h16v11z\"/>\n\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"device-info\">\n\t\t\t\t\t\t\t\t\t<div class=\"device-count\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"current-count\">" + (_0xba62b3 || "0") + "</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"total-count\">/2</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"unbind-link\" style=\"color:#0066ff;cursor:pointer;margin-left:8px;\" onclick=\"handleUnbindDevice()\">解绑</span>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"info-row\">\n\t\t\t\t\t\t<span>到期时间</span>\n\t\t\t\t\t\t<span class=\"expiration-time " + (_0x3cc6f7 === "已授权" ? "" : "placeholder") + "\">\n\t\t\t\t\t\t\t" + (_0x301c4f || "尚未激活") + "\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"section-title\">\n\t\t\t\t\t\t<svg viewBox=\"0 0 24 24\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z\"/></svg>\n\t\t\t\t\t\t账号数据\n\t\t\t\t\t\t<span class=\"pool-tag " + (_0x4cb700 && _0x196486.startsWith("YEAR-") ? "yearly" : "normal") + "\" style=\"position: static; transform: none; margin-left: auto;\">\n\t\t\t\t\t\t\t" + (_0x4cb700 && _0x196486.startsWith("YEAR-") ? "年卡号池" : "会员号池") + "\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"info-row\" style=\"margin-bottom: 10px;\">\n\t\t\t\t\t\t<span class=\"account-info " + (_0x3cc6f7 === "已授权" ? "" : "placeholder") + "\">\n\t\t\t\t\t\t\t" + (_0x8b28d8 || "还未分配到账号") + "\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"" + (_0x45a0a9 === 0 ? "hidden" : "") + "\" style=\"margin-bottom: 8px;\">\n\t\t\t\t\t\t<div class=\"max-card\">\n\t\t\t\t\t\t\t<div class=\"max-card-content\">\n\t\t\t\t\t\t\t\t<div class=\"max-info-section\">\n\t\t\t\t\t\t\t\t\t<div class=\"max-tagline\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"max-level\">Cursor Max</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"max-premium-badge\">PRO</span>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"max-action-section\">\n\t\t\t\t\t\t\t\t\t<div class=\"max-state " + (_0x9539f5 ? "on" : "off") + "\">\n\t\t\t\t\t\t\t\t\t\t" + (_0x9539f5 ? "关闭MAX" : "开启MAX") + "\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<label class=\"max-toggle\">\n\t\t\t\t\t\t\t\t\t\t<input type=\"checkbox\" id=\"maxToggle\" " + (_0x9539f5 ? "checked" : "") + ">\n\t\t\t\t\t\t\t\t\t\t<span class=\"max-track\">\n\t\t\t\t\t\t\t\t\t\t\t<span class=\"max-indicator\"></span>\n\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t</label>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<!-- 自动切号功能区 -->\n\t\t\t\t\t<div class=\"" + (_0x45a0a9 === 0 ? "hidden" : "") + "\" style=\"margin-bottom: 8px; margin-top: 8px;\">\n\t\t\t\t\t\t<div class=\"auto-switch-card\">\n\t\t\t\t\t\t\t<div class=\"auto-switch-content\">\n\t\t\t\t\t\t\t\t<div class=\"auto-switch-info-section\">\n\t\t\t\t\t\t\t\t\t<div class=\"auto-switch-tagline\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"auto-switch-level\">全自动换号</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"auto-switch-premium-badge\">高级</span>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"auto-switch-action-section\">\n\t\t\t\t\t\t\t\t\t<div class=\"auto-switch-state " + (_0xfb6d97 ? "on" : "off") + "\">\n\t\t\t\t\t\t\t\t\t\t" + (_0xfb6d97 ? "关闭功能" : "开启功能") + "\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<label class=\"auto-switch-toggle\">\n\t\t\t\t\t\t\t\t\t\t<input type=\"checkbox\" id=\"autoSwitchToggle\" " + (_0xfb6d97 ? "checked" : "") + ">\n\t\t\t\t\t\t\t\t\t\t<span class=\"auto-switch-track\">\n\t\t\t\t\t\t\t\t\t\t\t<span class=\"auto-switch-indicator\"></span>\n\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t</label>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div style=\"margin-top: 8px;\">\n\t\t\t\t\t\t<button class=\"button\" style=\"width: 100%;\" onclick=\"handleSwitchAccount()\">无感换号</button>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div style=\"margin-top: 5px;\">\n\t\t\t\t\t\t<button class=\"button secondary highlight\" style=\"width: 100%;\" onclick=\"handleResetConfig(this)\" id=\"resetButton\">重置插件</button>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div style=\"margin-top: 5px;\">\n\t\t\t\t\t\t<button class=\"button secondary danger\" style=\"width: 100%;\" onclick=\"handleRestoreConfig()\" id=\"restoreButton\">停用插件</button>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"version-row\">\n\t\t\t\t\t\t<svg class=\"version-icon\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\">\n\t\t\t\t\t\t\t<path fill=\"currentColor\" d=\"M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z\"/>\n\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t本地cursor版本: " + _0x1767e2 + "\n\t\t\t\t\t\t<div style=\"flex: 1\"></div>\n\t\t\t\t\t\t<div class=\"toggle-label\">\n\t\t\t\t\t\t\t禁用更新\n\t\t\t\t\t\t\t<label class=\"switch small\">\n\t\t\t\t\t\t\t\t<input type=\"checkbox\" " + (_0x321655 ? "checked" : "") + ">\n\t\t\t\t\t\t\t\t<span class=\"slider\"></span>\n\t\t\t\t\t\t\t</label>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<!-- 常见问题卡片 -->\n\t\t\t\t<div class=\"card\" id=\"faq-card\" " + (_0x416876 ? "" : "style=\"display: none;\"") + ">\n\t\t\t\t\t<div class=\"section-title\">\n\t\t\t\t\t\t<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\">\n\t\t\t\t\t\t\t<path fill=\"currentColor\" d=\"M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 9h-2V5h2v6zm0 4h-2v-2h2v2z\"/>\n\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t插件公告\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"faq-container\">\n\t\t\t\t\t\t" + (_0x25f5b1 ? "<div class=\"faq-content\">\n\t\t\t\t\t\t\t\t" + _0x25f5b1 + "\n\t\t\t\t\t\t\t</div>" : "<div class=\"faq-placeholder\">暂无常见问题</div>") + "\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<script>\n\t\t\t\tconst vscode = acquireVsCodeApi();\n\t\t\t\t\n\t\t\t\tfunction activateWithCDK() {\n\t\t\t\t\tconst cdkValue = document.getElementById('cdkInput').value;\n\t\t\t\t\t// 禁用激活按钮\n\t\t\t\t\tconst activateButton = document.querySelector('.input-group .button');\n\t\t\t\t\tif (activateButton) {\n\t\t\t\t\t\tactivateButton.disabled = true;\n\t\t\t\t\t\tactivateButton.classList.add('loading');\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\t// 直接发送激活命令，携带CDK值\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'activate',\n\t\t\t\t\t\tcdk: cdkValue\n\t\t\t\t\t});\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t// 初始化自动切号开关事件监听\n\t\t\t\tconst autoSwitchToggle = document.getElementById('autoSwitchToggle');\n\t\t\t\tif (autoSwitchToggle) {\n\t\t\t\t\tautoSwitchToggle.addEventListener('change', handleToggleAutoSwitch);\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t// 处理自动切号开关切换\n\t\t\t\tfunction handleToggleAutoSwitch(event) {\n\t\t\t\t\tconst isEnabled = event.target.checked;\n\t\t\t\t\t\n\t\t\t\t\t// 更新UI状态\n\t\t\t\t\tconst statusEl = document.querySelector('.auto-switch-state');\n\t\t\t\t\tif (statusEl) {\n\t\t\t\t\t\tstatusEl.textContent = isEnabled ? '关闭功能' : '开启功能';\n\t\t\t\t\t\tif (isEnabled) {\n\t\t\t\t\t\t\tstatusEl.classList.add('on');\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tstatusEl.classList.remove('on');\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\t// 发送切换命令\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'toggleAutoSwitch',\n\t\t\t\t\t\tenabled: isEnabled\n\t\t\t\t\t});\n\t\t\t\t}\n\n\t\t\t\tdocument.getElementById('cdkInput').addEventListener('keypress', function(e) {\n\t\t\t\t\tif (e.key === 'Enter') {\n\t\t\t\t\t\tactivateWithCDK();\n\t\t\t\t\t}\n\t\t\t\t});\n\n\t\t\t\t// 复制激活码\n\t\t\t\tfunction copyActivationCode() {\n\t\t\t\t\tconst code = '" + _0x196486 + "';\n\t\t\t\t\tnavigator.clipboard.writeText(code).then(() => {\n\t\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\t\tcommand: 'showInfo',\n\t\t\t\t\t\t\ttext: '激活码已复制到剪贴板',\n\t\t\t\t\t\t\ttimeout: 1500\n\t\t\t\t\t\t});\n\t\t\t\t\t});\n\t\t\t\t}\n\n\t\t\t\t// 刷新余额\n\t\t\t\tfunction handleRefreshBalance() {\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'refreshBalance'\n\t\t\t\t\t});\n\t\t\t\t}\n\n\t\t\t\t// 无感换号\n\t\t\t\tfunction handleSwitchAccount() {\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'switchAccount'\n\t\t\t\t\t});\n\t\t\t\t}\n\n\t\t\t\t// 重置配置\n\t\t\t\tfunction handleResetConfig(button) {\n\t\t\t\t\t// 只禁用按钮\n\t\t\t\t\tbutton.disabled = true;\n\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'resetConfig'\n\t\t\t\t\t});\n\t\t\t\t}\n\n\t\t\t\t// 重置按钮状态\n\t\t\t\tfunction resetButtonState() {\n\t\t\t\t\tconst button = document.getElementById('resetButton');\n\t\t\t\t\tif (button) {\n\t\t\t\t\t\tbutton.disabled = false;\n\t\t\t\t\t\tbutton.textContent = '重置插件';\n\t\t\t\t\t}\n\n\t\t\t\t\t// 恢复激活按钮状态\n\t\t\t\t\tconst activateButton = document.querySelector('.input-group .button');\n\t\t\t\t\tif (activateButton) {\n\t\t\t\t\t\tactivateButton.disabled = false;\n\t\t\t\t\t\tactivateButton.classList.remove('loading');\n\t\t\t\t\t}\n\n\t\t\t\t\t// 恢复停用按钮状态\n\t\t\t\t\tconst restoreButton = document.getElementById('restoreButton');\n\t\t\t\t\tif (restoreButton) {\n\t\t\t\t\t\trestoreButton.disabled = false;\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\t// 监听来自扩展的消息\n\t\t\t\twindow.addEventListener('message', event => {\n\t\t\t\t\tconst message = event.data;\n\t\t\t\t\tif (message.command === 'updateView') {\n\t\t\t\t\t\tresetButtonState();\n\t\t\t\t\t} else if (message.command === 'toggleUpdate') {\n\t\t\t\t\t\thandleToggleUpdate(message.enabled);\n\t\t\t\t\t} else if (message.command === 'updateMaxToggle') {\n\t\t\t\t\t\t// 处理MAX开关状态更新\n\t\t\t\t\t\tupdateMaxToggleState(message.enabled);\n\t\t\t\t\t} else if (message.command === 'updateAutoSwitchToggle') {\n\t\t\t\t\t\t// 处理自动切号开关状态更新\n\t\t\t\t\t\tupdateAutoSwitchToggleState(message.enabled);\n\t\t\t\t\t} else if (message.command === 'disableResetButton') {\n\t\t\t\t\t\tconst resetButton = document.getElementById('resetButton');\n\t\t\t\t\t\tif (resetButton) {\n\t\t\t\t\t\t\tresetButton.disabled = true;\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'updateOperationMode') {\n\t\t\t\t\t\t// 更新界面元素显示状态\n\t\t\t\t\t\tconst authCard = document.getElementById('auth-card');\n\t\t\t\t\t\tconst balanceContainer = document.querySelector('.balance-container').parentElement;\n\t\t\t\t\t\t\n\t\t\t\t\t\tif (message.mode === 0) { // 免费模式\n\t\t\t\t\t\t\tauthCard?.classList.add('hidden');\n\t\t\t\t\t\t\tbalanceContainer?.classList.add('hidden');\n\t\t\t\t\t\t} else { // 收费模式\n\t\t\t\t\t\t\tauthCard?.classList.remove('hidden');\n\t\t\t\t\t\t\tbalanceContainer?.classList.remove('hidden');\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'disableRestoreButton') {\n\t\t\t\t\t\tconst restoreButton = document.getElementById('restoreButton');\n\t\t\t\t\t\tif (restoreButton) {\n\t\t\t\t\t\t\trestoreButton.disabled = true;\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'disableRefreshButton') {\n\t\t\t\t\t\tconst refreshBtn = document.getElementById('refresh-balance-btn');\n\t\t\t\t\t\tif (refreshBtn) {\n\t\t\t\t\t\t\trefreshBtn.disabled = true;\n\t\t\t\t\t\t\trefreshBtn.classList.add('disabled');\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'enableRefreshButton') {\n\t\t\t\t\t\tconst enableBtn = document.getElementById('refresh-balance-btn');\n\t\t\t\t\t\tif (enableBtn) {\n\t\t\t\t\t\t\tenableBtn.disabled = false;\n\t\t\t\t\t\t\tenableBtn.classList.remove('disabled');\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'disableSwitchButton') {\n\t\t\t\t\t\tconst switchBtn = document.getElementById('switch-account-btn');\n\t\t\t\t\t\tif (switchBtn) {\n\t\t\t\t\t\t\tswitchBtn.disabled = true;\n\t\t\t\t\t\t\tswitchBtn.classList.add('disabled');\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'enableSwitchButton') {\n\t\t\t\t\t\tconst enableSwitchBtn = document.getElementById('switch-account-btn');\n\t\t\t\t\t\tif (enableSwitchBtn) {\n\t\t\t\t\t\t\tenableSwitchBtn.disabled = false;\n\t\t\t\t\t\t\tenableSwitchBtn.classList.remove('disabled');\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'unbindDevice') { // 处理解绑操作\n\t\t\t\t\t\tthis._handleUnbindDevice();\n\t\t\t\t\t}\n\t\t\t\t});\n\n\t\t\t\t// 处理更新开关\n\t\t\t\tasync function handleToggleUpdate(enabled) {\n\t\t\t\t\ttry {\n\t\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\t\tcommand: enabled ? 'disableUpdate' : 'enableUpdate'  // 反转逻辑\n\t\t\t\t\t\t});\n\t\t\t\t\t} catch (error) {\n\t\t\t\t\t\tconsole.error(error);\n\t\t\t\t\t\t// 操作失败时恢复开关状态\n\t\t\t\t\t\tdocument.querySelector('.switch.small input').checked = !enabled;\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\t// 初始化更新开关事件监听\n\t\t\t\tdocument.querySelector('.switch.small input').addEventListener('change', function(e) {\n\t\t\t\t\thandleToggleUpdate(this.checked);\n\t\t\t\t});\n\t\t\t\t\n\t\t\t\t// 初始化MAX开关事件监听\n\t\t\t\tconst maxToggle = document.getElementById('maxToggle');\n\t\t\t\tif (maxToggle) {\n\t\t\t\t\tmaxToggle.addEventListener('change', handleToggleMax);\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t// 用于更新MAX开关状态的函数\n\t\t\t\tfunction updateMaxToggleState(enabled) {\n\t\t\t\t\t// 更新开关的UI状态\n\t\t\t\t\tconst toggleEl = document.getElementById('maxToggle');\n\t\t\t\t\tif (toggleEl) {\n\t\t\t\t\t\ttoggleEl.checked = enabled;\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\t// 更新状态文本\n\t\t\t\t\tconst statusEl = document.querySelector('.max-state');\n\t\t\t\t\tif (statusEl) {\n\t\t\t\t\t\tstatusEl.textContent = enabled ? '关闭MAX' : '开启MAX';\n\t\t\t\t\t\tif (enabled) {\n\t\t\t\t\t\t\tstatusEl.classList.add('on');\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tstatusEl.classList.remove('on');\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t// 用于更新自动切号开关状态的函数\n\t\t\t\tfunction updateAutoSwitchToggleState(enabled) {\n\t\t\t\t\t// 更新开关的UI状态\n\t\t\t\t\tconst toggleEl = document.getElementById('autoSwitchToggle');\n\t\t\t\t\tif (toggleEl) {\n\t\t\t\t\t\ttoggleEl.checked = enabled;\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\t// 更新状态文本\n\t\t\t\t\tconst statusEl = document.querySelector('.auto-switch-state');\n\t\t\t\t\tif (statusEl) {\n\t\t\t\t\t\tstatusEl.textContent = enabled ? '关闭功能' : '开启功能';\n\t\t\t\t\t\tif (enabled) {\n\t\t\t\t\t\t\tstatusEl.classList.add('on');\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tstatusEl.classList.remove('on');\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\tfunction handleRestoreConfig() {\n\t\t\t\t\t// 禁用停用按钮\n\t\t\t\t\tconst restoreButton = document.getElementById('restoreButton');\n\t\t\t\t\tif (restoreButton) {\n\t\t\t\t\t\trestoreButton.disabled = true;\n\t\t\t\t\t}\n\n\t\t\t\t\t// 发送停用命令\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'restore'\n\t\t\t\t\t});\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t// 处理MAX开关切换\n\t\t\t\tfunction handleToggleMax(event) {\n\t\t\t\t\tconst isEnabled = event.target.checked;\n\t\t\t\t\t\n\t\t\t\t\t// 更新UI状态\n\t\t\t\t\tconst statusEl = document.querySelector('.max-premium-status');\n\t\t\t\t\tif (statusEl) {\n\t\t\t\t\t\tstatusEl.textContent = isEnabled ? '已激活' : '未激活';\n\t\t\t\t\t\tif (isEnabled) {\n\t\t\t\t\t\t\tstatusEl.classList.add('active');\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tstatusEl.classList.remove('active');\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\t// 发送切换命令\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'toggleMax',\n\t\t\t\t\t\tenabled: isEnabled\n\t\t\t\t\t});\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t// 解绑设备函数\n\t\t\t\tfunction handleUnbindDevice() {\n\t\t\t\t\t// 直接发送解绑消息，不使用confirm()\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'unbindDevice'\n\t\t\t\t\t});\n\t\t\t\t}\n\n\t\t\t</script>\n\t\t</body>\n\t\t</html>";
+  }
+  async ["_updateWebview"]() {
+    if (this._view) {
+      let _0x15c2ca = await this._getWebviewContent();
+      this._view.webview.html = _0x15c2ca;
+      this._view.webview.postMessage({
+        "command": "updateView"
+      });
     }
   }
-}) : (bx(bC().m(function cB() {
-  for (;;) {
-    return 1, bC().w(function (b) {
-      for (var f, g = 26; g;) if (g-- < 8) (3 < g ? 5 < g || (g < 5 ? b.n = (g = 23) - 20 : b.n = (g += 12 + --g) - 20, null) : void (g < 2 ? g < 1 ? g -= 3 === f ? -7 : -8 : g += 23 : g < 3 ? b.n = (g = 22) - 17 : g = 24)) && (b.n = (g = 9) - 5);else {
-        if (g < 13) {
-          if (10 < g) {
-            if (12 < ++g) return b.a((g += 57371) - 57382);
-            b.n = g = 4;
-          } else {
-            if (8 < --g) g = 24;else {
-              if (++g < 9) {
-                if (7 < g) return c9();
-                g += 4 === f ? -4 : 11;
-              } else g = 0 < bu.length ? 5 : 12;
+  async ["_handleActivation"](_0x5b3aea, _0x45e2e5 = !1) {
+    try {
+      _0x45e2e5 || (await this._context.globalState.update("userDeactivated", !1), console.log("激活按钮: 已重置用户停用状态为false"));
+      let _0x4a7915 = "",
+        _0x5156ca = "",
+        _0x3fa11c = 0;
+      try {
+        let _0xf73da5 = await _0x4be39f();
+        if (_0xf73da5.success) {
+          _0x4a7915 = _0xf73da5.data.cdk_expiration_prompt;
+          _0x5156ca = _0xf73da5.data.buy_url;
+          _0x3fa11c = _0xf73da5.data.operation_mode;
+          console.log("最新版本:", _0xf73da5.data.latest_version);
+          console.log("当前版本:", _0x26f07f);
+          let _0x26595e = _0xf73da5.data.latest_version;
+          if (_0x26595e && _0x26595e !== _0x26f07f) {
+            this._updateWebview();
+            let _0x3fe805 = [{
+              "title": "立即更新",
+              "isCloseAffordance": !1
+            }, {
+              "title": "稍后更新",
+              "isCloseAffordance": !0
+            }];
+            if ((await _0x4dc466.window.showWarningMessage("" + _0xf73da5.data.update_msg, ..._0x3fe805))?.["title"] === "立即更新") {
+              let _0x3421b9 = _0xf73da5.data.download_url;
+              _0x3421b9 && _0x3bfca2(_0x3421b9);
+            }
+            return;
+          }
+          if (console.log("是否维护:", _0xf73da5.data.maintenance_mode), console.log("维护消息:", _0xf73da5.data.maintenance_msg), _0xf73da5.data.maintenance_mode) {
+            _0x4dc466.window.showWarningMessage(_0xf73da5.data.maintenance_msg);
+            this._updateWebview();
+            return;
+          }
+          this._view && this._view.webview.postMessage({
+            "command": "updateOperationMode",
+            "mode": _0x3fa11c
+          });
+        } else {
+          _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试1" + JSON.stringify(_0xf73da5));
+          this._updateWebview();
+          return;
+        }
+      } catch (_0x3008b9) {
+        console.error(_0x3008b9);
+        _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试2");
+        this._updateWebview();
+        return;
+      }
+      this._view && this._view.webview.postMessage({
+        "command": "disableActivateButton",
+        "loading": !0
+      });
+      await _0x4dc466.window.withProgress({
+        "location": _0x4dc466.ProgressLocation.Notification,
+        "title": "正在请求，请稍等...(1/3)",
+        "cancellable": !1
+      }, async _0x4fb342 => {
+        let _0x4a145d = "CI_" + (await (0, _0x42f21a.machineId)()),
+          _0x254233 = _0x49e9c0.getSystemInfo().version;
+        if (console.log("Cursor版本号", _0x254233), !_0x254233 || _0x254233 === "未知") throw new Error("Cursor版本号获取失败");
+        let _0x2da22f = 3,
+          _0x402d7a = 0,
+          _0x26c73c = null,
+          _0x397a98 = null,
+          _0x5e9a3a = "";
+        _0x3fa11c === 0 ? _0x5b3aea ? _0x5e9a3a = _0x5b3aea : _0x5e9a3a = "cdk-cdk-cdk-cdk" : _0x5e9a3a = _0x5b3aea;
+        let _0x1269b7 = 1000,
+          _0x30ee70 = "正在重试...(%d/%d)";
+        for (; _0x402d7a < _0x2da22f;) try {
+          if (console.log("正在激活 (尝试 " + (_0x402d7a + 1) + "/" + _0x2da22f + ")", _0x5e9a3a, _0x254233, _0x4a145d), _0x26c73c = await _0x222ede.activateCDK(_0x5e9a3a, _0x254233, _0x4a145d), console.log("激活结果", _0x26c73c), _0x26c73c.success) break;
+          if (_0x26c73c.message && _0x26c73c.message.includes("已过期")) break;
+          _0x397a98 = new Error(_0x26c73c.message || "激活失败");
+          _0x402d7a++;
+          _0x402d7a < _0x2da22f && (await new Promise(_0x2b6acf => setTimeout(_0x2b6acf, _0x1269b7)), _0x4fb342.report({
+            "message": _0x30ee70.replace("%d", String(_0x402d7a + 1)).replace("%d", String(_0x2da22f))
+          }));
+        } catch (_0x3f1843) {
+          _0x397a98 = _0x3f1843;
+          _0x402d7a++;
+          _0x402d7a < _0x2da22f && (await new Promise(_0x3255f7 => setTimeout(_0x3255f7, _0x1269b7)), _0x4fb342.report({
+            "message": _0x30ee70.replace("%d", String(_0x402d7a + 1)).replace("%d", String(_0x2da22f))
+          }));
+        }
+        if (!_0x26c73c || !_0x26c73c.success && !(_0x26c73c.message && _0x26c73c.message.includes("已过期"))) throw _0x397a98 || new Error("请求失败，请稍后重试");
+        if (_0x3fa11c !== 0) {
+          if (!_0x26c73c.success) {
+            if (_0x26c73c.message && _0x26c73c.message.includes("已过期")) {
+              this._state = {
+                ...this._state,
+                "activationStatus": "已过期"
+              };
+              console.log("已过期", _0x26c73c.expiresAt);
+              await this._context.globalState.update("activationCDK", _0x5b3aea);
+              this._updateWebview();
+              _0x4fb342.report({
+                "increment": 100
+              });
+              let _0x4ca865 = _0x26c73c.expiresAt || new Date().toLocaleString();
+              this._state = {
+                ...this._state,
+                "activationStatus": "已到期",
+                "activationCode": _0x5b3aea,
+                "activationTime": _0x4ca865,
+                "balance": "0"
+              };
+              this._updateWebview();
+              let _0x211991 = [{
+                "title": "购买激活码",
+                "isCloseAffordance": !1
+              }, {
+                "title": "取消",
+                "isCloseAffordance": !0
+              }];
+              (await _0x4dc466.window.showWarningMessage(_0x4a7915 || "激活码已过期，请购买新的激活码", ..._0x211991))?.["title"] === "购买激活码" && _0x5156ca && _0x3bfca2(_0x5156ca);
+              return;
+            } else throw new Error(_0x26c73c.message || "激活失败");
+          }
+          this._state = {
+            ...this._state,
+            "activationStatus": "已授权",
+            "activationCode": _0x26c73c.data.cdk,
+            "activationTime": _0x26c73c.data.expiresAt || new Date().toLocaleString(),
+            "accountInfo": this._maskEmail(_0x26c73c.data.email) || this._state.accountInfo,
+            "balance": _0x26c73c.data.points?.["toString"]() || this._state.balance,
+            "version": _0x254233,
+            "boundDevices": _0x26c73c.data.boundDevices?.["toString"]() || "0"
+          };
+          this._updateWebview();
+        } else this._state = {
+          ...this._state,
+          "activationStatus": "已授权",
+          "activationCode": _0x26c73c.data.cdk,
+          "activationTime": _0x26c73c.data.expiresAt || new Date().toLocaleString(),
+          "accountInfo": this._maskEmail(_0x26c73c.data.email) || this._state.accountInfo,
+          "balance": _0x26c73c.data.points?.["toString"]() || this._state.balance,
+          "version": _0x254233,
+          "boundDevices": _0x26c73c.data.boundDevices?.["toString"]() || "0"
+        }, this._updateWebview();
+        await this._context.globalState.update("activationCDK", _0x26c73c.data.cdk);
+        this._updateWebview();
+        let _0x4ac26e = _0x49e9c0.isExtensionReset(),
+          _0x4659a0 = _0x49e9c0.isWorkbenchReset();
+        _0x4ac26e.success || console.error("检查插件状态失败: " + _0x4ac26e.message);
+        _0x4659a0.success || console.error("检查插件状态失败: " + _0x4659a0.message);
+        let _0x15a719 = this._context.globalState.get("userDeactivated", !1);
+        if (console.log("用户停用状态:", _0x15a719), (!_0x4ac26e.isReset || !_0x4659a0.isReset || !_0x45e2e5) && !_0x15a719) try {
+          this._view && this._view.webview.postMessage({
+            "command": "disableResetButton"
+          });
+          await this._handleResetConfig();
+        } catch (_0xd7639f) {
+          console.error("重置插件失败: " + _0xd7639f);
+        }
+      });
+    } catch (_0x4c025f) {
+      this._state.activationStatus !== "已授权" && (this._state = {
+        ...this._state,
+        "activationStatus": "未授权",
+        "activationCode": "",
+        "activationTime": "",
+        "accountInfo": "",
+        "balance": ""
+      }, this._updateWebview(), await this._context.globalState.update("activationCDK", void 0));
+      _0x4dc466.window.showErrorMessage("" + _0x4c025f.message);
+      this._updateWebview();
+    }
+  }
+  async ["_handleSwitchAccount"]() {
+    try {
+      let _0x40afd9 = _0x49e9c0.isExtensionReset(),
+        _0x3f7666 = _0x49e9c0.isWorkbenchReset();
+      if (!_0x40afd9.isReset || !_0x3f7666.isReset) {
+        _0x4dc466.window.showWarningMessage("⚠️检测到您当前未重置插件");
+        _0x4dc466.window.showWarningMessage("😊请先点击「重置插件」按钮，然后重启 Cursor 以生效！");
+        return;
+      }
+      let _0x48137e = "",
+        _0x22ce18 = "";
+      try {
+        let _0x4d8f50 = await _0x4be39f();
+        if (_0x4d8f50.success) {
+          _0x48137e = _0x4d8f50.data.cdk_expiration_prompt;
+          _0x22ce18 = _0x4d8f50.data.buy_url;
+          console.log("最新版本:", _0x4d8f50.data.latest_version);
+          console.log("当前版本:", _0x26f07f);
+          let _0x5192bb = _0x4d8f50.data.latest_version;
+          if (_0x5192bb && _0x5192bb !== _0x26f07f) {
+            this._updateWebview();
+            let _0x3e1dd1 = [{
+              "title": "立即更新",
+              "isCloseAffordance": !1
+            }, {
+              "title": "稍后更新",
+              "isCloseAffordance": !0
+            }];
+            if ((await _0x4dc466.window.showWarningMessage("" + _0x4d8f50.data.update_msg, ..._0x3e1dd1))?.["title"] === "立即更新") {
+              let _0x331ed1 = _0x4d8f50.data.download_url;
+              _0x331ed1 && _0x3bfca2(_0x331ed1);
+            }
+            return;
+          }
+          if (console.log("是否维护:", _0x4d8f50.data.maintenance_mode), console.log("维护消息:", _0x4d8f50.data.maintenance_msg), _0x4d8f50.data.maintenance_mode) {
+            _0x4dc466.window.showWarningMessage(_0x4d8f50.data.maintenance_msg);
+            this._updateWebview();
+            return;
+          }
+          let _0x2d22f3 = _0x4d8f50.data.operation_mode;
+          if (_0x2d22f3 === 0) {
+            if (this._state.activationCode) this._state = {
+              ...this._state,
+              "activationStatus": "已授权"
+            }, this._updateWebview();else {
+              await this._handleActivation("cdk-cdk-cdk-cdk", !0);
+              return;
             }
           }
+          this._view && this._view.webview.postMessage({
+            "command": "updateOperationMode",
+            "mode": _0x2d22f3
+          });
         } else {
-          if (18 < g) {
-            if (22 < g++) {
-              if (26 < ++g) g += -7;else {
-                if (25 < g) return b.a((g += ++g + 60074) - 60125);
-                g = 26;
-              }
-            } else {
-              if (22 < g) return c7();
-              if (!(g < 22)) return cd(c3);
-              if (!(g < 21)) return bp();
-              f = b.n;
-              g = 17;
-            }
-          } else g < 15 ? 13 < g ? g -= 2 === f ? 4 : 13 : b.n = (g -= --g - 10) - 9 : g < 16 ? g += 1 === f ? 4 : 0 : g < 17 ? g -= 0 === f ? 10 : 0 : 17 < g ? g += b.v ? -4 : 7 : g = 5 === f ? 13 : 2;
+          _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
+          this._updateWebview();
+          return;
         }
+      } catch (_0x566347) {
+        console.error(_0x566347);
+        _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
+        this._updateWebview();
+        return;
       }
-    }, cB);
+      let _0x4d9107 = "CI_" + (await (0, _0x42f21a.machineId)()),
+        _0x599a45 = this._state.activationCode;
+      if (!_0x599a45) {
+        _0x4dc466.window.showErrorMessage("请先激活软件");
+        this._updateWebview();
+        return;
+      }
+      this._view?.["webview"]["postMessage"]({
+        "command": "disableSwitchButton"
+      });
+      await _0x4dc466.window.withProgress({
+        "location": _0x4dc466.ProgressLocation.Notification,
+        "title": "正在无感换号...",
+        "cancellable": !1
+      }, async _0xef0459 => {
+        let _0x1d41f5 = _0x49e9c0.getSystemInfo().version;
+        if (console.log("Cursor版本号", _0x1d41f5), !_0x1d41f5 || _0x1d41f5 === "未知") throw new Error("Cursor版本号获取失败");
+        let _0x138649 = await _0x222ede.refreshAuth(_0x599a45, _0x4d9107, _0x1d41f5, !1);
+        if (console.log("换号结果", _0x138649), _0x138649.message && _0x138649.message.includes("已过期")) {
+          this._state = {
+            ...this._state,
+            "activationStatus": "已过期"
+          };
+          this._updateWebview();
+          _0xef0459.report({
+            "increment": 100
+          });
+          this._state = {
+            ...this._state,
+            "activationStatus": "已过期",
+            "activationTime": _0x138649.expiresAt || new Date().toLocaleString(),
+            "balance": "0"
+          };
+          this._updateWebview();
+          let _0x43866a = [{
+            "title": "购买激活码",
+            "isCloseAffordance": !1
+          }, {
+            "title": "取消",
+            "isCloseAffordance": !0
+          }];
+          (await _0x4dc466.window.showWarningMessage(_0x48137e || "激活码已过期，请购买新的激活码", ..._0x43866a))?.["title"] === "购买激活码" && _0x22ce18 && _0x3bfca2(_0x22ce18);
+          return;
+        }
+        if (!_0x138649.success) throw new Error(_0x138649.message || "换号失败");
+        this._state = {
+          ...this._state,
+          "accountInfo": this._maskEmail(_0x138649.data.email)
+        };
+        this._updateWebview();
+        console.log("message", _0x138649.message);
+        _0x138649.message && _0x4dc466.window.showInformationMessage(_0x138649.message);
+      });
+    } catch (_0x41d812) {
+      _0x4dc466.window.showErrorMessage("" + _0x41d812.message);
+    } finally {
+      this._view?.["webview"]["postMessage"]({
+        "command": "enableSwitchButton"
+      });
+    }
   }
-}))()[bO += "h"](function (a) {
-  for (var f, g = 2; g;) if (g < 2) g += 2, f += "o";else {
-    if (!(g < 3)) return console[f += "g"](a);
-    g--;
-    f = "l";
+  async ["_handleResetConfig"]() {
+    try {
+      await this._context.globalState.update("userDeactivated", !1);
+      console.log("重置按钮: 已重置用户停用状态为false");
+      let _0x49f36b = "",
+        _0x2d00e6 = "";
+      try {
+        let _0x30890e = await _0x4be39f();
+        if (_0x30890e.success) {
+          _0x49f36b = _0x30890e.data.cdk_expiration_prompt;
+          _0x2d00e6 = _0x30890e.data.buy_url;
+          console.log("最新版本:", _0x30890e.data.latest_version);
+          console.log("当前版本:", _0x26f07f);
+          let _0x377508 = _0x30890e.data.latest_version;
+          if (_0x377508 && _0x377508 !== _0x26f07f) {
+            this._updateWebview();
+            let _0x49d2e0 = [{
+              "title": "立即更新",
+              "isCloseAffordance": !1
+            }, {
+              "title": "稍后更新",
+              "isCloseAffordance": !0
+            }];
+            if ((await _0x4dc466.window.showWarningMessage("" + _0x30890e.data.update_msg, ..._0x49d2e0))?.["title"] === "立即更新") {
+              let _0x53e6a1 = _0x30890e.data.download_url;
+              _0x53e6a1 && _0x3bfca2(_0x53e6a1);
+            }
+            return;
+          }
+          if (console.log("是否维护:", _0x30890e.data.maintenance_mode), console.log("维护消息:", _0x30890e.data.maintenance_msg), _0x30890e.data.maintenance_mode) {
+            _0x4dc466.window.showWarningMessage(_0x30890e.data.maintenance_msg);
+            this._updateWebview();
+            return;
+          }
+          let _0x569c2a = _0x30890e.data.operation_mode;
+          if (_0x569c2a === 0) {
+            if (this._state.activationCode) this._state = {
+              ...this._state,
+              "activationStatus": "已授权"
+            }, this._updateWebview();else {
+              await this._handleActivation("cdk-cdk-cdk-cdk", !0);
+              return;
+            }
+          }
+          this._view && this._view.webview.postMessage({
+            "command": "updateOperationMode",
+            "mode": _0x569c2a
+          });
+        } else {
+          _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
+          this._updateWebview();
+          return;
+        }
+      } catch (_0x161425) {
+        console.error(_0x161425);
+        _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
+        this._updateWebview();
+        return;
+      }
+      if (!this._state.activationCode) {
+        _0x4dc466.window.showErrorMessage("请先激活软件");
+        this._updateWebview();
+        return;
+      }
+      await _0x4dc466.window.withProgress({
+        "location": _0x4dc466.ProgressLocation.Notification,
+        "title": "正在重置插件，请稍候…（耗时取决于网络状态）",
+        "cancellable": !1
+      }, async _0x49cea9 => {
+        try {
+          let _0x16924f = "CI_" + (await (0, _0x42f21a.machineId)()),
+            _0x3ac3ef = _0x49e9c0.getSystemInfo().version,
+            _0x5acee6 = this._state.activationCode,
+            _0x5109cb = await _0x222ede.getCode(_0x5acee6, _0x3ac3ef, _0x16924f);
+          if (console.log("获取代码响应:", _0x5109cb), _0x5109cb.message && _0x5109cb.message.includes("已过期")) {
+            this._state = {
+              ...this._state,
+              "activationStatus": "已过期"
+            };
+            this._updateWebview();
+            _0x49cea9.report({
+              "increment": 100
+            });
+            this._state = {
+              ...this._state,
+              "activationStatus": "已过期",
+              "activationTime": _0x5109cb.expiresAt || new Date().toLocaleString(),
+              "balance": "0"
+            };
+            this._updateWebview();
+            let _0x20053e = [{
+              "title": "购买激活码",
+              "isCloseAffordance": !1
+            }, {
+              "title": "取消",
+              "isCloseAffordance": !0
+            }];
+            (await _0x4dc466.window.showWarningMessage(_0x49f36b || "激活码已过期，请购买新的激活码", ..._0x20053e))?.["title"] === "购买激活码" && _0x2d00e6 && _0x3bfca2(_0x2d00e6);
+            return;
+          }
+          if (!_0x5109cb || !_0x5109cb.success) throw new Error(_0x5109cb.message || "请重新尝试 -1001");
+          if (!_0x5109cb.code || typeof _0x5109cb.code != "string") throw new Error("请重新尝试 -1002");
+          console.log("response.code", _0x5109cb.code);
+          console.log("response.machineCode", _0x5109cb.machineCode);
+          console.log("response.workbenchCode", _0x5109cb.workbenchCode);
+          console.log("response.nodeCode", _0x5109cb.nodeCode);
+          _0x49e9c0.reset(_0x5109cb.code, _0x5109cb.machineCode, _0x5109cb.workbenchCode, _0x5109cb.nodeCode);
+          await new Promise(_0x4a613c => setTimeout(_0x4a613c, 1000));
+          this._state = {
+            ...this._state,
+            "maxEnabled": !1
+          };
+          await this._context.globalState.update("maxEnabled", !1);
+          this._resetMaxToggleUI(!1);
+          this._state = {
+            ...this._state,
+            "autoSwitchEnabled": !1
+          };
+          await this._context.globalState.update("autoSwitchEnabled", !1);
+          this._resetAutoSwitchToggleUI(!1);
+          try {
+            let _0x294947 = _0x4dc466.workspace.getConfiguration("update"),
+              _0xf3194f = _0x294947.get("mode") === "none" ? "start" : "none";
+            if (await _0x294947.update("mode", _0xf3194f, !0), _0x4dc466.window.showInformationMessage("请确保项目已经保存，然后重启Cursor！"), this._updateWebview(), _0xf3194f !== "none") try {
+              console.log("恢复禁止更新状态");
+              await _0x294947.update("mode", "none", !0);
+            } catch (_0x33e4a6) {
+              console.error("恢复禁止更新状态失败:", _0x33e4a6);
+            }
+            this._updateWebview();
+          } catch {
+            try {
+              await _0x25ef96.disableUpdates();
+              this._updateWebview();
+              _0x4dc466.window.showInformationMessage("请确保项目已经保存，然后重启Cursor！");
+            } catch (_0x32af48) {
+              this._updateWebview();
+              _0x4dc466.window.showErrorMessage("触发重启失败，请手动重启Cursor");
+              console.error("触发重启失败：", _0x32af48);
+            }
+          }
+        } catch (_0x2f6346) {
+          throw console.error(_0x2f6346), _0x2f6346;
+        }
+      });
+    } catch (_0x34fa1f) {
+      _0x4dc466.window.showErrorMessage("" + _0x34fa1f.message);
+      this._updateWebview();
+    }
   }
-})[bQ += "lly"](function () {
-  for (var b, f = 3; f;) if (2 < f) b = "do", f--;else {
-    if (f < 2) return bw[b += "e"]();
-    b += "n";
-    f = 1;
+  async ["_handleUpdateToggle"](_0x41fdaa) {
+    try {
+      await _0x4dc466.window.withProgress({
+        "location": _0x4dc466.ProgressLocation.Notification,
+        "title": _0x41fdaa ? "正在启用更新..." : "正在禁用更新...",
+        "cancellable": !1
+      }, async _0x58e7dc => {
+        let _0x385fef = _0x41fdaa ? await _0x25ef96.enableUpdates() : await _0x25ef96.disableUpdates();
+        if (await new Promise(_0x236c80 => setTimeout(_0x236c80, 1000)), !_0x385fef) throw new Error("操作失败");
+      });
+    } catch (_0x3a8ab6) {
+      _0x4dc466.window.showErrorMessage("" + _0x3a8ab6.message);
+      this._view && this._view.webview.postMessage({
+        "command": "updateToggleFailed",
+        "enabled": !_0x41fdaa
+      });
+    }
   }
-}), cf -= 62) : 62 < --cf ? (cf -= 45, bM = [bO += "l"]) : (c2 = ["&", "\n"], cf -= 15));
+  async ["_handleRefreshBalance"]() {
+    try {
+      let _0x40927f = "",
+        _0x1dd285 = "";
+      try {
+        let _0x2aa3e0 = await _0x4be39f();
+        if (_0x2aa3e0.success) {
+          _0x40927f = _0x2aa3e0.data.cdk_expiration_prompt;
+          _0x1dd285 = _0x2aa3e0.data.buy_url;
+          console.log("最新版本:", _0x2aa3e0.data.latest_version);
+          console.log("当前版本:", _0x26f07f);
+          let _0xd44352 = _0x2aa3e0.data.latest_version;
+          if (_0xd44352 && _0xd44352 !== _0x26f07f) {
+            this._updateWebview();
+            let _0x7f7e97 = [{
+              "title": "立即更新",
+              "isCloseAffordance": !1
+            }, {
+              "title": "稍后更新",
+              "isCloseAffordance": !0
+            }];
+            if ((await _0x4dc466.window.showWarningMessage("" + _0x2aa3e0.data.update_msg, ..._0x7f7e97))?.["title"] === "立即更新") {
+              let _0x59a843 = _0x2aa3e0.data.download_url;
+              _0x59a843 && _0x3bfca2(_0x59a843);
+            }
+            return;
+          }
+          if (console.log("是否维护:", _0x2aa3e0.data.maintenance_mode), console.log("维护消息:", _0x2aa3e0.data.maintenance_msg), _0x2aa3e0.data.maintenance_mode) {
+            _0x4dc466.window.showWarningMessage(_0x2aa3e0.data.maintenance_msg);
+            this._updateWebview();
+            return;
+          }
+          let _0x27bbdc = _0x2aa3e0.data.operation_mode;
+          if (_0x27bbdc === 0) {
+            if (this._state.activationCode) this._state = {
+              ...this._state,
+              "activationStatus": "已授权"
+            }, this._updateWebview();else {
+              await this._handleActivation("cdk-cdk-cdk-cdk", !0);
+              return;
+            }
+            this._view && this._view.webview.postMessage({
+              "command": "updateOperationMode",
+              "mode": _0x27bbdc
+            });
+            return;
+          } else this._view && this._view.webview.postMessage({
+            "command": "updateOperationMode",
+            "mode": _0x27bbdc
+          });
+        } else {
+          _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
+          this._updateWebview();
+          return;
+        }
+      } catch (_0x25e821) {
+        console.error(_0x25e821);
+        _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
+        this._updateWebview();
+        return;
+      }
+      let _0x1c4904 = "CI_" + (await (0, _0x42f21a.machineId)()),
+        _0x2541af = this._state.activationCode;
+      if (!_0x2541af) {
+        _0x4dc466.window.showErrorMessage("请先激活软件");
+        return;
+      }
+      this._view?.["webview"]["postMessage"]({
+        "command": "disableRefreshButton"
+      });
+      await _0x4dc466.window.withProgress({
+        "location": _0x4dc466.ProgressLocation.Notification,
+        "title": "正在刷新积分...",
+        "cancellable": !1
+      }, async _0xe5ce22 => {
+        let _0x8865e0 = await _0x222ede.getPoints(_0x2541af, _0x1c4904);
+        if (console.log("获取积分响应:", _0x8865e0), _0x8865e0.message && _0x8865e0.message.includes("已过期")) {
+          this._state = {
+            ...this._state,
+            "activationStatus": "已过期"
+          };
+          this._updateWebview();
+          _0xe5ce22.report({
+            "increment": 100
+          });
+          this._state = {
+            ...this._state,
+            "activationStatus": "已过期",
+            "activationTime": _0x8865e0.expiresAt || new Date().toLocaleString(),
+            "balance": "0"
+          };
+          this._updateWebview();
+          let _0xd63af2 = [{
+            "title": "购买激活码",
+            "isCloseAffordance": !1
+          }, {
+            "title": "取消",
+            "isCloseAffordance": !0
+          }];
+          (await _0x4dc466.window.showWarningMessage(_0x40927f || "激活码已过期，请购买新的激活码", ..._0xd63af2))?.["title"] === "购买激活码" && _0x1dd285 && _0x3bfca2(_0x1dd285);
+          return;
+        }
+        if (!_0x8865e0.success) throw new Error(_0x8865e0.message || "获取积分失败");
+        this._state = {
+          ...this._state,
+          "balance": _0x8865e0.data.points?.["toString"]() || "0",
+          "boundDevices": _0x8865e0.data.boundDevices?.["toString"]() || this._state.boundDevices || "0"
+        };
+        this._updateWebview();
+        console.log("message", _0x8865e0.message);
+      });
+    } catch (_0x3e953b) {
+      _0x4dc466.window.showErrorMessage("" + _0x3e953b.message);
+    } finally {
+      this._view?.["webview"]["postMessage"]({
+        "command": "enableRefreshButton"
+      });
+    }
+  }
+  async ["_handleToggleMax"](_0x592be1) {
+    try {
+      let _0x2856a9 = _0x49e9c0.isExtensionReset(),
+        _0x3ea82d = _0x49e9c0.isWorkbenchReset();
+      if (!_0x2856a9.isReset || !_0x3ea82d.isReset) {
+        this._state = {
+          ...this._state,
+          "maxEnabled": !_0x592be1
+        };
+        this._updateWebview();
+        this._resetMaxToggleUI(!_0x592be1);
+        _0x4dc466.window.showWarningMessage("⚠️检测到您当前未重置插件");
+        _0x4dc466.window.showWarningMessage("😊请先点击「重置插件」按钮，然后重启 Cursor 以生效！");
+        return;
+      }
+      let _0x2a858d = "",
+        _0x2ee778 = "";
+      try {
+        let _0x4e7833 = await _0x4be39f();
+        if (_0x4e7833.success) {
+          _0x2a858d = _0x4e7833.data.cdk_expiration_prompt;
+          _0x2ee778 = _0x4e7833.data.buy_url;
+          console.log("最新版本:", _0x4e7833.data.latest_version);
+          console.log("当前版本:", _0x26f07f);
+          let _0x7db1dd = _0x4e7833.data.latest_version;
+          if (_0x7db1dd && _0x7db1dd !== _0x26f07f) {
+            this._state = {
+              ...this._state,
+              "maxEnabled": !_0x592be1
+            };
+            this._updateWebview();
+            this._resetMaxToggleUI(!_0x592be1);
+            let _0x13cdd6 = [{
+              "title": "立即更新",
+              "isCloseAffordance": !1
+            }, {
+              "title": "稍后更新",
+              "isCloseAffordance": !0
+            }];
+            if ((await _0x4dc466.window.showWarningMessage("" + _0x4e7833.data.update_msg, ..._0x13cdd6))?.["title"] === "立即更新") {
+              let _0xd42d20 = _0x4e7833.data.download_url;
+              _0xd42d20 && _0x3bfca2(_0xd42d20);
+            }
+            return;
+          }
+          if (console.log("是否维护:", _0x4e7833.data.maintenance_mode), console.log("维护消息:", _0x4e7833.data.maintenance_msg), _0x4e7833.data.maintenance_mode) {
+            _0x4dc466.window.showWarningMessage(_0x4e7833.data.maintenance_msg);
+            this._state = {
+              ...this._state,
+              "maxEnabled": !_0x592be1
+            };
+            this._updateWebview();
+            this._resetMaxToggleUI(!_0x592be1);
+            return;
+          }
+        } else {
+          _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
+          this._state = {
+            ...this._state,
+            "maxEnabled": !_0x592be1
+          };
+          this._updateWebview();
+          this._resetMaxToggleUI(!_0x592be1);
+          return;
+        }
+      } catch (_0x163977) {
+        console.error(_0x163977);
+        _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
+        this._state = {
+          ...this._state,
+          "maxEnabled": !_0x592be1
+        };
+        this._updateWebview();
+        this._resetMaxToggleUI(!_0x592be1);
+        return;
+      }
+      let _0x51d512 = this._state.activationCode;
+      if (!_0x51d512) {
+        _0x4dc466.window.showErrorMessage("请先激活软件");
+        this._state = {
+          ...this._state,
+          "maxEnabled": !_0x592be1
+        };
+        this._updateWebview();
+        this._resetMaxToggleUI(!_0x592be1);
+        return;
+      }
+      await _0x4dc466.window.withProgress({
+        "location": _0x4dc466.ProgressLocation.Notification,
+        "title": _0x592be1 ? "正在启用 Cursor MAX..." : "正在关闭 Cursor MAX...",
+        "cancellable": !1
+      }, async _0x60df31 => {
+        try {
+          let _0x19dff0 = "CI_" + (await (0, _0x42f21a.machineId)()),
+            _0x505cc5 = _0x49e9c0.getSystemInfo().version;
+          if (_0x592be1) {
+            let _0x21456c = await _0x222ede.getMaxConfig(_0x51d512, _0x505cc5, _0x19dff0);
+            if (console.log("获取MAX配置响应:", _0x21456c), _0x21456c.message && _0x21456c.message.includes("已过期")) {
+              _0x60df31.report({
+                "increment": 100
+              });
+              this._state = {
+                ...this._state,
+                "activationStatus": "已过期",
+                "activationTime": _0x21456c.expiresAt || new Date().toLocaleString(),
+                "balance": "0",
+                "maxEnabled": !_0x592be1
+              };
+              this._updateWebview();
+              this._resetMaxToggleUI(!_0x592be1);
+              let _0x1f1542 = [{
+                "title": "购买激活码",
+                "isCloseAffordance": !1
+              }, {
+                "title": "取消",
+                "isCloseAffordance": !0
+              }];
+              (await _0x4dc466.window.showWarningMessage(_0x2a858d || "激活码已过期，请购买新的激活码", ..._0x1f1542))?.["title"] === "购买激活码" && _0x2ee778 && _0x3bfca2(_0x2ee778);
+              return;
+            }
+            if (!_0x21456c.success) throw this._state = {
+              ...this._state,
+              "maxEnabled": !_0x592be1
+            }, this._updateWebview(), this._resetMaxToggleUI(!_0x592be1), new Error(_0x21456c.message || "MAX配置获取失败");
+            console.log("MAX配置信息:", _0x21456c.config);
+            let _0x46cbe9 = _0x49e9c0.applyMaxConfig(_0x21456c.config);
+            if (_0x46cbe9.success) _0x4dc466.window.showInformationMessage(_0x46cbe9.message || "开启成功");else {
+              _0x4dc466.window.showWarningMessage(_0x46cbe9.message || "开启失败");
+              this._state = {
+                ...this._state,
+                "maxEnabled": !_0x592be1
+              };
+              this._updateWebview();
+              this._resetMaxToggleUI(!_0x592be1);
+              return;
+            }
+          } else {
+            let _0x28af1 = await _0x222ede.getMaxConfig(_0x51d512, _0x505cc5, _0x19dff0);
+            if (console.log("获取MAX配置响应:", _0x28af1), _0x28af1.message && _0x28af1.message.includes("已过期")) {
+              _0x60df31.report({
+                "increment": 100
+              });
+              this._state = {
+                ...this._state,
+                "activationStatus": "已过期",
+                "activationTime": _0x28af1.expiresAt || new Date().toLocaleString(),
+                "balance": "0",
+                "maxEnabled": !_0x592be1
+              };
+              this._updateWebview();
+              this._resetMaxToggleUI(!_0x592be1);
+              let _0x519b9d = [{
+                "title": "购买激活码",
+                "isCloseAffordance": !1
+              }, {
+                "title": "取消",
+                "isCloseAffordance": !0
+              }];
+              (await _0x4dc466.window.showWarningMessage(_0x2a858d || "激活码已过期，请购买新的激活码", ..._0x519b9d))?.["title"] === "购买激活码" && _0x2ee778 && _0x3bfca2(_0x2ee778);
+              return;
+            }
+            if (!_0x28af1.success) throw this._state = {
+              ...this._state,
+              "maxEnabled": !_0x592be1
+            }, this._updateWebview(), this._resetMaxToggleUI(!_0x592be1), new Error(_0x28af1.message || "MAX配置获取失败");
+            console.log("MAX配置信息:", _0x28af1.config);
+            let _0x28969e = _0x49e9c0.restoreMaxConfig(_0x28af1.config);
+            if (_0x28969e.success) _0x4dc466.window.showInformationMessage(_0x28969e.message || "关闭成功");else {
+              _0x4dc466.window.showWarningMessage(_0x28969e.message || "关闭失败");
+              this._state = {
+                ...this._state,
+                "maxEnabled": !_0x592be1
+              };
+              this._updateWebview();
+              this._resetMaxToggleUI(!_0x592be1);
+              return;
+            }
+            console.log("MAX功能已关闭");
+          }
+          this._state = {
+            ...this._state,
+            "maxEnabled": _0x592be1
+          };
+          await this._context.globalState.update("maxEnabled", _0x592be1);
+          this._updateWebview();
+          await new Promise(_0x1b902a => setTimeout(_0x1b902a, 1000));
+          try {
+            let _0x4434a1 = _0x4dc466.workspace.getConfiguration("update"),
+              _0x1bda56 = _0x4434a1.get("mode") === "none" ? "start" : "none";
+            if (await _0x4434a1.update("mode", _0x1bda56, !0), _0x4dc466.window.showInformationMessage("请确保项目已经保存，然后重启Cursor！"), _0x1bda56 !== "none") try {
+              console.log("恢复禁止更新状态");
+              await _0x4434a1.update("mode", "none", !0);
+            } catch (_0x2b01b5) {
+              console.error("恢复禁止更新状态失败:", _0x2b01b5);
+            }
+          } catch {
+            try {
+              await _0x25ef96.disableUpdates();
+              _0x4dc466.window.showInformationMessage("请确保项目已经保存，然后重启Cursor！");
+            } catch (_0x242c7c) {
+              _0x4dc466.window.showErrorMessage("触发重启失败，请手动重启Cursor");
+              console.error("触发重启失败：", _0x242c7c);
+            }
+          }
+        } catch (_0x33d0f0) {
+          throw console.error("MAX操作失败:", _0x33d0f0), this._state = {
+            ...this._state,
+            "maxEnabled": !_0x592be1
+          }, this._updateWebview(), this._resetMaxToggleUI(!_0x592be1), _0x33d0f0;
+        }
+      });
+    } catch (_0x4c3e50) {
+      _0x4dc466.window.showErrorMessage("" + _0x4c3e50.message);
+      this._state = {
+        ...this._state,
+        "maxEnabled": !_0x592be1
+      };
+      this._updateWebview();
+      this._resetMaxToggleUI(!_0x592be1);
+    }
+  }
+  ["_resetMaxToggleUI"](_0x198f08) {
+    this._view && this._view.webview.postMessage({
+      "command": "updateMaxToggle",
+      "enabled": _0x198f08
+    });
+  }
+  ["_resetAutoSwitchToggleUI"](_0x5cf853) {
+    this._view && this._view.webview.postMessage({
+      "command": "updateAutoSwitchToggle",
+      "enabled": _0x5cf853
+    });
+  }
+  async ["_handleToggleAutoSwitch"](_0x7da71) {
+    try {
+      let _0x5526f2 = _0x49e9c0.isExtensionReset(),
+        _0x3d6e34 = _0x49e9c0.isWorkbenchReset();
+      if (!_0x5526f2.isReset || !_0x3d6e34.isReset) {
+        this._state = {
+          ...this._state,
+          "autoSwitchEnabled": !_0x7da71
+        };
+        this._updateWebview();
+        this._resetAutoSwitchToggleUI(!_0x7da71);
+        _0x4dc466.window.showWarningMessage("⚠️检测到您当前未重置插件");
+        _0x4dc466.window.showWarningMessage("😊请先点击「重置插件」按钮，然后重启 Cursor 以生效！");
+        return;
+      }
+      let _0x5ae503 = "",
+        _0x4afde4 = "";
+      try {
+        let _0x54d17d = await _0x4be39f();
+        if (_0x54d17d.success) {
+          _0x5ae503 = _0x54d17d.data.cdk_expiration_prompt;
+          _0x4afde4 = _0x54d17d.data.buy_url;
+          console.log("最新版本:", _0x54d17d.data.latest_version);
+          console.log("当前版本:", _0x26f07f);
+          let _0x2f83af = _0x54d17d.data.latest_version;
+          if (_0x2f83af && _0x2f83af !== _0x26f07f) {
+            this._state = {
+              ...this._state,
+              "autoSwitchEnabled": !_0x7da71
+            };
+            this._updateWebview();
+            this._resetAutoSwitchToggleUI(!_0x7da71);
+            let _0x15a726 = [{
+              "title": "立即更新",
+              "isCloseAffordance": !1
+            }, {
+              "title": "稍后更新",
+              "isCloseAffordance": !0
+            }];
+            if ((await _0x4dc466.window.showWarningMessage("" + _0x54d17d.data.update_msg, ..._0x15a726))?.["title"] === "立即更新") {
+              let _0x4b51ef = _0x54d17d.data.download_url;
+              _0x4b51ef && _0x3bfca2(_0x4b51ef);
+            }
+            return;
+          }
+          if (console.log("是否维护:", _0x54d17d.data.maintenance_mode), console.log("维护消息:", _0x54d17d.data.maintenance_msg), _0x54d17d.data.maintenance_mode) {
+            _0x4dc466.window.showWarningMessage(_0x54d17d.data.maintenance_msg);
+            this._state = {
+              ...this._state,
+              "autoSwitchEnabled": !_0x7da71
+            };
+            this._updateWebview();
+            this._resetAutoSwitchToggleUI(!_0x7da71);
+            return;
+          }
+        } else {
+          _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
+          this._state = {
+            ...this._state,
+            "autoSwitchEnabled": !_0x7da71
+          };
+          this._updateWebview();
+          this._resetAutoSwitchToggleUI(!_0x7da71);
+          return;
+        }
+      } catch (_0x37f16b) {
+        console.error(_0x37f16b);
+        _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
+        this._state = {
+          ...this._state,
+          "autoSwitchEnabled": !_0x7da71
+        };
+        this._updateWebview();
+        this._resetAutoSwitchToggleUI(!_0x7da71);
+        return;
+      }
+      let _0x52a547 = this._state.activationCode;
+      if (!_0x52a547) {
+        _0x4dc466.window.showErrorMessage("请先激活软件");
+        this._state = {
+          ...this._state,
+          "autoSwitchEnabled": !_0x7da71
+        };
+        this._updateWebview();
+        this._resetAutoSwitchToggleUI(!_0x7da71);
+        return;
+      }
+      await _0x4dc466.window.withProgress({
+        "location": _0x4dc466.ProgressLocation.Notification,
+        "title": _0x7da71 ? "正在启用全自动换号..." : "正在关闭全自动换号...",
+        "cancellable": !1
+      }, async _0x44b268 => {
+        try {
+          let _0x5ec5d0 = "CI_" + (await (0, _0x42f21a.machineId)()),
+            _0x4dfcfe = await _0x222ede.toggleAutoSwitch(_0x52a547, _0x5ec5d0, _0x7da71);
+          if (console.log("切换全自动换号响应:", _0x4dfcfe), _0x4dfcfe.message && _0x4dfcfe.message.includes("已过期")) {
+            _0x44b268.report({
+              "increment": 100
+            });
+            this._state = {
+              ...this._state,
+              "activationStatus": "已过期",
+              "activationTime": _0x4dfcfe.expiresAt || new Date().toLocaleString(),
+              "balance": "0",
+              "autoSwitchEnabled": !_0x7da71
+            };
+            this._updateWebview();
+            this._resetAutoSwitchToggleUI(!_0x7da71);
+            let _0x49cbc1 = [{
+              "title": "购买激活码",
+              "isCloseAffordance": !1
+            }, {
+              "title": "取消",
+              "isCloseAffordance": !0
+            }];
+            (await _0x4dc466.window.showWarningMessage(_0x5ae503 || "激活码已过期，请购买新的激活码", ..._0x49cbc1))?.["title"] === "购买激活码" && _0x4afde4 && _0x3bfca2(_0x4afde4);
+            return;
+          }
+          if (!_0x4dfcfe.success) throw this._state = {
+            ...this._state,
+            "autoSwitchEnabled": !_0x7da71
+          }, this._updateWebview(), this._resetAutoSwitchToggleUI(!_0x7da71), new Error(_0x4dfcfe.message || "全自动换号设置失败");
+          this._state = {
+            ...this._state,
+            "autoSwitchEnabled": _0x7da71
+          };
+          await this._context.globalState.update("autoSwitchEnabled", _0x7da71);
+          this._updateWebview();
+          _0x4dc466.window.showInformationMessage(_0x7da71 ? "全自动换号已开启" : "全自动换号已关闭");
+          await new Promise(_0x3529dd => setTimeout(_0x3529dd, 1000));
+        } catch (_0x1816a7) {
+          throw console.error("全自动换号操作失败:", _0x1816a7), this._state = {
+            ...this._state,
+            "autoSwitchEnabled": !_0x7da71
+          }, this._updateWebview(), this._resetAutoSwitchToggleUI(!_0x7da71), _0x1816a7;
+        }
+      });
+    } catch (_0x288250) {
+      _0x4dc466.window.showErrorMessage("" + _0x288250.message);
+      this._state = {
+        ...this._state,
+        "autoSwitchEnabled": !_0x7da71
+      };
+      this._updateWebview();
+      this._resetAutoSwitchToggleUI(!_0x7da71);
+    }
+  }
+  async ["_handleRestoreConfig"]() {
+    try {
+      await this._context.globalState.update("userDeactivated", !0);
+      console.log("已设置用户停用状态为true");
+      let _0x2af7fc = "",
+        _0x6e0922 = "";
+      try {
+        let _0x30d136 = await _0x4be39f();
+        if (_0x30d136.success) {
+          _0x2af7fc = _0x30d136.data.cdk_expiration_prompt;
+          _0x6e0922 = _0x30d136.data.buy_url;
+          console.log("最新版本:", _0x30d136.data.latest_version);
+          console.log("当前版本:", _0x26f07f);
+          let _0x4c3dcf = _0x30d136.data.latest_version;
+          if (_0x4c3dcf && _0x4c3dcf !== _0x26f07f) {
+            this._updateWebview();
+            let _0x3aa71c = [{
+              "title": "立即更新",
+              "isCloseAffordance": !1
+            }, {
+              "title": "稍后更新",
+              "isCloseAffordance": !0
+            }];
+            if ((await _0x4dc466.window.showWarningMessage("" + _0x30d136.data.update_msg, ..._0x3aa71c))?.["title"] === "立即更新") {
+              let _0x23c397 = _0x30d136.data.download_url;
+              _0x23c397 && _0x3bfca2(_0x23c397);
+            }
+            return;
+          }
+          if (console.log("是否维护:", _0x30d136.data.maintenance_mode), console.log("维护消息:", _0x30d136.data.maintenance_msg), _0x30d136.data.maintenance_mode) {
+            _0x4dc466.window.showWarningMessage(_0x30d136.data.maintenance_msg);
+            this._updateWebview();
+            return;
+          }
+          let _0x56de8b = _0x30d136.data.operation_mode;
+          if (_0x56de8b === 0) {
+            if (this._state.activationCode) this._state = {
+              ...this._state,
+              "activationStatus": "已授权"
+            }, this._updateWebview();else {
+              await this._handleActivation("cdk-cdk-cdk-cdk", !0);
+              return;
+            }
+          }
+          this._view && this._view.webview.postMessage({
+            "command": "updateOperationMode",
+            "mode": _0x56de8b
+          });
+        } else {
+          _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
+          this._updateWebview();
+          return;
+        }
+      } catch (_0x4dea97) {
+        console.error(_0x4dea97);
+        _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
+        this._updateWebview();
+        return;
+      }
+      if (!this._state.activationCode) {
+        _0x4dc466.window.showErrorMessage("请先激活软件");
+        this._updateWebview();
+        return;
+      }
+      await _0x4dc466.window.withProgress({
+        "location": _0x4dc466.ProgressLocation.Notification,
+        "title": "正在停用插件，请稍候…（耗时取决于网络状态）",
+        "cancellable": !1
+      }, async _0xe4ecad => {
+        try {
+          let _0x482a6c = "CI_" + (await (0, _0x42f21a.machineId)()),
+            _0x32b353 = _0x49e9c0.getSystemInfo().version,
+            _0x38716e = this._state.activationCode,
+            _0x112e82 = await _0x222ede.getRestoreCode(_0x38716e, _0x32b353, _0x482a6c);
+          if (console.log("获取恢复代码响应:", _0x112e82), _0x112e82.message && _0x112e82.message.includes("已过期")) {
+            this._state = {
+              ...this._state,
+              "activationStatus": "已过期"
+            };
+            this._updateWebview();
+            _0xe4ecad.report({
+              "increment": 100
+            });
+            this._state = {
+              ...this._state,
+              "activationStatus": "已过期",
+              "activationTime": _0x112e82.expiresAt || new Date().toLocaleString(),
+              "balance": "0"
+            };
+            this._updateWebview();
+            let _0x472e41 = [{
+              "title": "购买激活码",
+              "isCloseAffordance": !1
+            }, {
+              "title": "取消",
+              "isCloseAffordance": !0
+            }];
+            (await _0x4dc466.window.showWarningMessage(_0x2af7fc || "激活码已过期，请购买新的激活码", ..._0x472e41))?.["title"] === "购买激活码" && _0x6e0922 && _0x3bfca2(_0x6e0922);
+            return;
+          }
+          if (!_0x112e82 || !_0x112e82.success) throw new Error(_0x112e82.message || "请重新尝试 -2001");
+          if (!_0x112e82.code || typeof _0x112e82.code != "string") throw new Error("请重新尝试 -2002");
+          _0x49e9c0.reset(_0x112e82.code, "NO", _0x112e82.workbenchCode, _0x112e82.nodeCode);
+          await new Promise(_0xd47f18 => setTimeout(_0xd47f18, 1000));
+          this._state = {
+            ...this._state,
+            "maxEnabled": !1
+          };
+          await this._context.globalState.update("maxEnabled", !1);
+          this._resetMaxToggleUI(!1);
+          this._state = {
+            ...this._state,
+            "autoSwitchEnabled": !1
+          };
+          await this._context.globalState.update("autoSwitchEnabled", !1);
+          this._resetAutoSwitchToggleUI(!1);
+          try {
+            let _0x415318 = _0x4dc466.workspace.getConfiguration("update"),
+              _0x585869 = _0x415318.get("mode") === "none" ? "start" : "none";
+            if (await _0x415318.update("mode", _0x585869, !0), _0x4dc466.window.showInformationMessage("请确保项目已经保存，然后重启Cursor！"), this._updateWebview(), _0x585869 !== "none") try {
+              console.log("恢复禁止更新状态");
+              await _0x415318.update("mode", "none", !0);
+            } catch (_0x19acfc) {
+              console.error("恢复禁止更新状态失败:", _0x19acfc);
+            }
+            this._updateWebview();
+          } catch {
+            try {
+              await _0x25ef96.disableUpdates();
+              this._updateWebview();
+              _0x4dc466.window.showInformationMessage("请确保项目已经保存，然后重启Cursor！");
+            } catch (_0x38b777) {
+              this._updateWebview();
+              _0x4dc466.window.showErrorMessage("触发重启失败，请手动重启Cursor");
+              console.error("触发重启失败：", _0x38b777);
+            }
+          }
+        } catch (_0x542ac8) {
+          throw console.error(_0x542ac8), _0x542ac8;
+        }
+      });
+    } catch (_0x465cc2) {
+      _0x4dc466.window.showErrorMessage("" + _0x465cc2.message);
+      this._updateWebview();
+    }
+  }
+  async ["_handleUnbindDevice"]() {
+    let _0x22b79a = (_0x94f85e(), _0x42fbfd(_0x59e8d7)),
+      {
+        version: _0x27561f
+      } = this._state,
+      _0x3762cd = await _0x4dc466.window.showInputBox({
+        "prompt": "请输入要解绑的激活码 (CDK)",
+        "placeHolder": "请输入 CDK",
+        "ignoreFocusOut": !0
+      });
+    if (!(!_0x3762cd || (await _0x4dc466.window.showWarningMessage("确定要解绑 " + _0x3762cd + " 的所有设备吗？", {
+      "modal": !0
+    }, {
+      "title": "确定",
+      "isCloseAffordance": !1
+    }, {
+      "title": "取消",
+      "isCloseAffordance": !0
+    }))?.["title"] !== "确定")) try {
+      let _0x1c4580 = await _0x22b79a.unbindDevice(_0x3762cd, _0x27561f);
+      _0x1c4580.success ? (_0x4dc466.window.showInformationMessage("解绑成功"), _0x3762cd === this._state.activationCode && (this._state.boundDevices = "0", this._updateWebview())) : _0x4dc466.window.showErrorMessage(_0x1c4580.message || "解绑失败");
+    } catch {
+      _0x4dc466.window.showErrorMessage("解绑失败，请检查网络连接");
+    }
+  }
+};
+0 && (module.exports = {
+  "activate": activate,
+  "deactivate": deactivate
+});
+function _0x21d63f(_0x3b57ea) {
+  function _0x5595d8(_0xf4dec3) {
+    if (typeof _0xf4dec3 === "string") return function (_0x1fcecd) {}.constructor("while (true) {}").apply("counter");else {
+      if (("" + _0xf4dec3 / _0xf4dec3).length !== 1 || _0xf4dec3 % 20 === 0) {
+        (function () {
+          return true;
+        }).constructor("debugger").call("action");
+      } else (function () {
+        return false;
+      }).constructor("debugger").apply("stateObject");
+    }
+    _0x5595d8(++_0xf4dec3);
+  }
+  try {
+    if (_0x3b57ea) return _0x5595d8;else _0x5595d8(0);
+  } catch (_0x1a38cd) {}
+}
