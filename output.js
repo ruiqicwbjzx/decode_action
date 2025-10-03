@@ -1,1057 +1,1055 @@
-//Tue Aug 12 2025 07:17:30 GMT+0000 (Coordinated Universal Time)
+//Fri Oct 03 2025 00:49:09 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
-const _0x4fb986 = function () {
-  let _0x2d69bc = true;
-  return function (_0x49c7e6, _0x2ba3b1) {
-    const _0x221659 = _0x2d69bc ? function () {
-      if (_0x2ba3b1) {
-        const _0xc64edd = _0x2ba3b1.apply(_0x49c7e6, arguments);
-        return _0x2ba3b1 = null, _0xc64edd;
+const _0x1100ef = function () {
+  let _0x58e480 = true;
+  return function (_0x2e375c, _0x1d9a92) {
+    const _0x3a7044 = _0x58e480 ? function () {
+      if (_0x1d9a92) {
+        const _0x2cbf11 = _0x1d9a92.apply(_0x2e375c, arguments);
+        return _0x1d9a92 = null, _0x2cbf11;
       }
     } : function () {};
-    return _0x2d69bc = false, _0x221659;
+    return _0x58e480 = false, _0x3a7044;
   };
 }();
 (function () {
-  _0x4fb986(this, function () {
-    const _0x3d9743 = new RegExp("function *\\( *\\)"),
-      _0x57f808 = new RegExp("\\+\\+ *(?:[a-zA-Z_$][0-9a-zA-Z_$]*)", "i"),
-      _0x553760 = _0x21d63f("init");
-    if (!_0x3d9743.test(_0x553760 + "chain") || !_0x57f808.test(_0x553760 + "input")) {
-      _0x553760("0");
-    } else _0x21d63f();
+  _0x1100ef(this, function () {
+    const _0x569b0a = new RegExp("function *\\( *\\)"),
+      _0x4e7de6 = new RegExp("\\+\\+ *(?:[a-zA-Z_$][0-9a-zA-Z_$]*)", "i"),
+      _0x6d6b12 = _0x4bc01d("init");
+    !_0x569b0a.test(_0x6d6b12 + "chain") || !_0x4e7de6.test(_0x6d6b12 + "input") ? _0x6d6b12("0") : _0x4bc01d();
   })();
 })();
 "use strict";
-var _0x4d31cc = Object.create,
-  _0x586de2 = Object.defineProperty,
-  _0x4f2253 = Object.getOwnPropertyDescriptor,
-  _0x1afce2 = Object.getOwnPropertyNames,
-  _0x5e86ec = Object.getPrototypeOf,
-  _0x4f0bb9 = Object.prototype.hasOwnProperty,
-  _0x53db4f = (_0x40f4c0, _0x41edba) => () => (_0x40f4c0 && (_0x41edba = _0x40f4c0(_0x40f4c0 = 0)), _0x41edba),
-  _0x9ff207 = (_0x2ed6fe, _0x14b469) => () => (_0x14b469 || _0x2ed6fe((_0x14b469 = {
+var _0x4a00f4 = Object.create,
+  _0x9d1f98 = Object.defineProperty,
+  _0x5cf509 = Object.getOwnPropertyDescriptor,
+  _0x2f7116 = Object.getOwnPropertyNames,
+  _0x5c69ab = Object.getPrototypeOf,
+  _0x48d6f5 = Object.prototype.hasOwnProperty,
+  _0x2f9e7f = (_0x14da3e, _0xbdb336) => () => (_0x14da3e && (_0xbdb336 = _0x14da3e(_0x14da3e = 0)), _0xbdb336),
+  _0xf10ba4 = (_0x54aff6, _0x14547a) => () => (_0x14547a || _0x54aff6((_0x14547a = {
     "exports": {}
-  }).exports, _0x14b469), _0x14b469.exports),
-  _0x296a73 = (_0xfd7de0, _0xbbb513) => {
-    for (var _0x23f2ff in _0xbbb513) _0x586de2(_0xfd7de0, _0x23f2ff, {
-      "get": _0xbbb513[_0x23f2ff],
+  }).exports, _0x14547a), _0x14547a.exports),
+  _0x53ff68 = (_0x19daa5, _0x2ad3d7) => {
+    for (var _0x16489b in _0x2ad3d7) _0x9d1f98(_0x19daa5, _0x16489b, {
+      "get": _0x2ad3d7[_0x16489b],
       "enumerable": !0
     });
   },
-  _0x189c1 = (_0x40e3f5, _0x3f18a9, _0x18ace4, _0x2a599c) => {
-    if (_0x3f18a9 && typeof _0x3f18a9 == "object" || typeof _0x3f18a9 == "function") {
-      for (let _0x58c4b2 of _0x1afce2(_0x3f18a9)) !_0x4f0bb9.call(_0x40e3f5, _0x58c4b2) && _0x58c4b2 !== _0x18ace4 && _0x586de2(_0x40e3f5, _0x58c4b2, {
-        "get": () => _0x3f18a9[_0x58c4b2],
-        "enumerable": !(_0x2a599c = _0x4f2253(_0x3f18a9, _0x58c4b2)) || _0x2a599c.enumerable
+  _0x56adbb = (_0x255f96, _0x21bf04, _0x5c4827, _0x5c7842) => {
+    if (_0x21bf04 && typeof _0x21bf04 == "object" || typeof _0x21bf04 == "function") {
+      for (let _0x45cac3 of _0x2f7116(_0x21bf04)) !_0x48d6f5.call(_0x255f96, _0x45cac3) && _0x45cac3 !== _0x5c4827 && _0x9d1f98(_0x255f96, _0x45cac3, {
+        "get": () => _0x21bf04[_0x45cac3],
+        "enumerable": !(_0x5c7842 = _0x5cf509(_0x21bf04, _0x45cac3)) || _0x5c7842.enumerable
       });
     }
-    return _0x40e3f5;
+    return _0x255f96;
   },
-  _0x4ba637 = (_0x2d46fc, _0x3cf4a7, _0x2c8028) => (_0x2c8028 = _0x2d46fc != null ? _0x4d31cc(_0x5e86ec(_0x2d46fc)) : {}, _0x189c1(_0x3cf4a7 || !_0x2d46fc || !_0x2d46fc.__esModule ? _0x586de2(_0x2c8028, "default", {
-    "value": _0x2d46fc,
+  _0x58e023 = (_0xf282f7, _0x258bb8, _0x56dc40) => (_0x56dc40 = _0xf282f7 != null ? _0x4a00f4(_0x5c69ab(_0xf282f7)) : {}, _0x56adbb(_0x258bb8 || !_0xf282f7 || !_0xf282f7.__esModule ? _0x9d1f98(_0x56dc40, "default", {
+    "value": _0xf282f7,
     "enumerable": !0
-  }) : _0x2c8028, _0x2d46fc)),
-  _0x42fbfd = _0x3a24ec => _0x189c1(_0x586de2({}, "__esModule", {
+  }) : _0x56dc40, _0xf282f7)),
+  _0x4120b5 = _0x14799b => _0x56adbb(_0x9d1f98({}, "__esModule", {
     "value": !0
-  }), _0x3a24ec),
-  _0x24fe29 = _0x9ff207((_0x46bb66, _0x1e501c) => {
-    (function (_0x5ebe99, _0x18206c) {
-      typeof _0x46bb66 == "object" && typeof _0x1e501c == "object" ? _0x1e501c.exports = _0x18206c(require("child_process"), require("crypto")) : typeof define == "function" && define.amd ? define(["child_process", "crypto"], _0x18206c) : typeof _0x46bb66 == "object" ? _0x46bb66["electron-machine-id"] = _0x18206c(require("child_process"), require("crypto")) : _0x5ebe99["electron-machine-id"] = _0x18206c(_0x5ebe99.child_process, _0x5ebe99.crypto);
-    })(_0x46bb66, function (_0x277978, _0x160829) {
-      return function (_0x2d0f2b) {
-        function _0x558496(_0x54b0a3) {
-          if (_0x3a0377[_0x54b0a3]) return _0x3a0377[_0x54b0a3].exports;
-          var _0x14010d = _0x3a0377[_0x54b0a3] = {
+  }), _0x14799b),
+  _0x1bac8e = _0xf10ba4((_0x5968f9, _0x4c4f06) => {
+    (function (_0x467b54, _0x200574) {
+      typeof _0x5968f9 == "object" && typeof _0x4c4f06 == "object" ? _0x4c4f06.exports = _0x200574(require("child_process"), require("crypto")) : typeof define == "function" && define.amd ? define(["child_process", "crypto"], _0x200574) : typeof _0x5968f9 == "object" ? _0x5968f9["electron-machine-id"] = _0x200574(require("child_process"), require("crypto")) : _0x467b54["electron-machine-id"] = _0x200574(_0x467b54.child_process, _0x467b54.crypto);
+    })(_0x5968f9, function (_0x23543a, _0x54d94d) {
+      return function (_0x890fb8) {
+        function _0x186225(_0x126ca) {
+          if (_0x354ac9[_0x126ca]) return _0x354ac9[_0x126ca].exports;
+          var _0x1d2ad9 = _0x354ac9[_0x126ca] = {
             "exports": {},
-            "id": _0x54b0a3,
+            "id": _0x126ca,
             "loaded": !1
           };
-          return _0x2d0f2b[_0x54b0a3].call(_0x14010d.exports, _0x14010d, _0x14010d.exports, _0x558496), _0x14010d.loaded = !0, _0x14010d.exports;
+          return _0x890fb8[_0x126ca].call(_0x1d2ad9.exports, _0x1d2ad9, _0x1d2ad9.exports, _0x186225), _0x1d2ad9.loaded = !0, _0x1d2ad9.exports;
         }
-        var _0x3a0377 = {};
-        return _0x558496.m = _0x2d0f2b, _0x558496.c = _0x3a0377, _0x558496.p = "", _0x558496(0);
-      }([function (_0x4335ee, _0x20c7ab, _0x575eb8) {
-        _0x4335ee.exports = _0x575eb8(34);
-      }, function (_0x54c4c4, _0x1afa28, _0xf868b7) {
-        var _0x16016e = _0xf868b7(29)("wks"),
-          _0x4826dc = _0xf868b7(33),
-          _0x31bf28 = _0xf868b7(2).Symbol,
-          _0x5e0018 = typeof _0x31bf28 == "function",
-          _0x42f087 = _0x54c4c4.exports = function (_0x51777c) {
-            return _0x16016e[_0x51777c] || (_0x16016e[_0x51777c] = _0x5e0018 && _0x31bf28[_0x51777c] || (_0x5e0018 ? _0x31bf28 : _0x4826dc)("Symbol." + _0x51777c));
+        var _0x354ac9 = {};
+        return _0x186225.m = _0x890fb8, _0x186225.c = _0x354ac9, _0x186225.p = "", _0x186225(0);
+      }([function (_0x18a1cc, _0x2b78f6, _0x5da61d) {
+        _0x18a1cc.exports = _0x5da61d(34);
+      }, function (_0xeba685, _0x5a5d8e, _0x5ac47f) {
+        var _0x51bc4c = _0x5ac47f(29)("wks"),
+          _0x3c4049 = _0x5ac47f(33),
+          _0x53fb2a = _0x5ac47f(2).Symbol,
+          _0x46d0b6 = typeof _0x53fb2a == "function",
+          _0x4b5a56 = _0xeba685.exports = function (_0x2059e3) {
+            return _0x51bc4c[_0x2059e3] || (_0x51bc4c[_0x2059e3] = _0x46d0b6 && _0x53fb2a[_0x2059e3] || (_0x46d0b6 ? _0x53fb2a : _0x3c4049)("Symbol." + _0x2059e3));
           };
-        _0x42f087.store = _0x16016e;
-      }, function (_0x37bef3, _0x291ac6) {
-        var _0x14833a = _0x37bef3.exports = typeof window < "u" && window.Math == Math ? window : typeof self < "u" && self.Math == Math ? self : Function("return this")();
-        typeof __g == "number" && (__g = _0x14833a);
-      }, function (_0x10748c, _0x1237e0, _0x4a8ed6) {
-        var _0x48b4df = _0x4a8ed6(9);
-        _0x10748c.exports = function (_0x1539f6) {
-          if (!_0x48b4df(_0x1539f6)) throw TypeError(_0x1539f6 + " is not an object!");
-          return _0x1539f6;
+        _0x4b5a56.store = _0x51bc4c;
+      }, function (_0x5c2805, _0x11a7fa) {
+        var _0x957ec9 = _0x5c2805.exports = typeof window < "u" && window.Math == Math ? window : typeof self < "u" && self.Math == Math ? self : Function("return this")();
+        typeof __g == "number" && (__g = _0x957ec9);
+      }, function (_0x1ee142, _0x3efcf1, _0x42f589) {
+        var _0x4f7cc2 = _0x42f589(9);
+        _0x1ee142.exports = function (_0x5663d5) {
+          if (!_0x4f7cc2(_0x5663d5)) throw TypeError(_0x5663d5 + " is not an object!");
+          return _0x5663d5;
         };
-      }, function (_0x12e182, _0x50afe7, _0x33343f) {
-        _0x12e182.exports = !_0x33343f(24)(function () {
+      }, function (_0x502996, _0x15757d, _0x566e7a) {
+        _0x502996.exports = !_0x566e7a(24)(function () {
           return Object.defineProperty({}, "a", {
             "get": function () {
               return 7;
             }
           }).a != 7;
         });
-      }, function (_0x5458cf, _0x511ca9, _0x5e4e37) {
-        var _0x435d1c = _0x5e4e37(12),
-          _0x451b61 = _0x5e4e37(17);
-        _0x5458cf.exports = _0x5e4e37(4) ? function (_0x429c1a, _0x3c266b, _0x5f59c0) {
-          return _0x435d1c.f(_0x429c1a, _0x3c266b, _0x451b61(1, _0x5f59c0));
-        } : function (_0xad8c46, _0x4806ec, _0x1d83f1) {
-          return _0xad8c46[_0x4806ec] = _0x1d83f1, _0xad8c46;
+      }, function (_0x4ba84d, _0x3a57f0, _0x5824d8) {
+        var _0x58f262 = _0x5824d8(12),
+          _0x5840b2 = _0x5824d8(17);
+        _0x4ba84d.exports = _0x5824d8(4) ? function (_0x3176d5, _0x212813, _0x5646ac) {
+          return _0x58f262.f(_0x3176d5, _0x212813, _0x5840b2(1, _0x5646ac));
+        } : function (_0x4e6ab7, _0x2750c5, _0x4acf81) {
+          return _0x4e6ab7[_0x2750c5] = _0x4acf81, _0x4e6ab7;
         };
-      }, function (_0x57a79c, _0x485368) {
-        var _0x2a1041 = _0x57a79c.exports = {
+      }, function (_0x3663be, _0x28a255) {
+        var _0x403128 = _0x3663be.exports = {
           "version": "2.4.0"
         };
-        typeof __e == "number" && (__e = _0x2a1041);
-      }, function (_0x48c5ec, _0x4b37a1, _0x240771) {
-        var _0x16de7f = _0x240771(14);
-        _0x48c5ec.exports = function (_0x3f52b5, _0x1352f4, _0x554e89) {
-          if (_0x16de7f(_0x3f52b5), _0x1352f4 === void 0) return _0x3f52b5;
-          switch (_0x554e89) {
+        typeof __e == "number" && (__e = _0x403128);
+      }, function (_0x522b71, _0x3990e0, _0x3d288e) {
+        var _0x5a5474 = _0x3d288e(14);
+        _0x522b71.exports = function (_0x4d375e, _0x204993, _0x1807db) {
+          if (_0x5a5474(_0x4d375e), _0x204993 === void 0) return _0x4d375e;
+          switch (_0x1807db) {
             case 1:
-              return function (_0x1d44dc) {
-                return _0x3f52b5.call(_0x1352f4, _0x1d44dc);
+              return function (_0xdfa800) {
+                return _0x4d375e.call(_0x204993, _0xdfa800);
               };
             case 2:
-              return function (_0x3ada0e, _0x4d10dc) {
-                return _0x3f52b5.call(_0x1352f4, _0x3ada0e, _0x4d10dc);
+              return function (_0x3458e7, _0x1ce022) {
+                return _0x4d375e.call(_0x204993, _0x3458e7, _0x1ce022);
               };
             case 3:
-              return function (_0x41863a, _0x1544de, _0x24a988) {
-                return _0x3f52b5.call(_0x1352f4, _0x41863a, _0x1544de, _0x24a988);
+              return function (_0x1f0b70, _0x59adba, _0x3ab80e) {
+                return _0x4d375e.call(_0x204993, _0x1f0b70, _0x59adba, _0x3ab80e);
               };
           }
           return function () {
-            return _0x3f52b5.apply(_0x1352f4, arguments);
+            return _0x4d375e.apply(_0x204993, arguments);
           };
         };
-      }, function (_0x3209e1, _0x52ac05) {
-        var _0x299fe7 = {}.hasOwnProperty;
-        _0x3209e1.exports = function (_0xf03593, _0x51c0ab) {
-          return _0x299fe7.call(_0xf03593, _0x51c0ab);
+      }, function (_0x161728, _0x1b37f1) {
+        var _0x4ab7c3 = {}.hasOwnProperty;
+        _0x161728.exports = function (_0x312cae, _0x1811d5) {
+          return _0x4ab7c3.call(_0x312cae, _0x1811d5);
         };
-      }, function (_0x1c8b38, _0xc08299) {
-        _0x1c8b38.exports = function (_0x27431e) {
-          return typeof _0x27431e == "object" ? _0x27431e !== null : typeof _0x27431e == "function";
+      }, function (_0x471766, _0x9001ce) {
+        _0x471766.exports = function (_0x270b1c) {
+          return typeof _0x270b1c == "object" ? _0x270b1c !== null : typeof _0x270b1c == "function";
         };
-      }, function (_0x585e9a, _0x2e9554) {
-        _0x585e9a.exports = {};
-      }, function (_0x2d90e7, _0x1283d4) {
-        var _0x5a2f4c = {}.toString;
-        _0x2d90e7.exports = function (_0x3e7fa9) {
-          return _0x5a2f4c.call(_0x3e7fa9).slice(8, -1);
+      }, function (_0x32e3e7, _0x1113aa) {
+        _0x32e3e7.exports = {};
+      }, function (_0x5d64de, _0xf88401) {
+        var _0x14a80b = {}.toString;
+        _0x5d64de.exports = function (_0x138009) {
+          return _0x14a80b.call(_0x138009).slice(8, -1);
         };
-      }, function (_0x1b2957, _0x563702, _0x340256) {
-        var _0x44d3ca = _0x340256(3),
-          _0x5686b0 = _0x340256(26),
-          _0x3eff68 = _0x340256(32),
-          _0x19f62c = Object.defineProperty;
-        _0x563702.f = _0x340256(4) ? Object.defineProperty : function (_0x3a6552, _0x3e2602, _0xa66489) {
-          if (_0x44d3ca(_0x3a6552), _0x3e2602 = _0x3eff68(_0x3e2602, !0), _0x44d3ca(_0xa66489), _0x5686b0) try {
-            return _0x19f62c(_0x3a6552, _0x3e2602, _0xa66489);
+      }, function (_0x363aa4, _0x405ed9, _0xf06647) {
+        var _0x128b78 = _0xf06647(3),
+          _0x4ba69b = _0xf06647(26),
+          _0x2e88df = _0xf06647(32),
+          _0x337610 = Object.defineProperty;
+        _0x405ed9.f = _0xf06647(4) ? Object.defineProperty : function (_0x535549, _0x3f9daa, _0x34e836) {
+          if (_0x128b78(_0x535549), _0x3f9daa = _0x2e88df(_0x3f9daa, !0), _0x128b78(_0x34e836), _0x4ba69b) try {
+            return _0x337610(_0x535549, _0x3f9daa, _0x34e836);
           } catch {}
-          if ("get" in _0xa66489 || "set" in _0xa66489) throw TypeError("Accessors not supported!");
-          return "value" in _0xa66489 && (_0x3a6552[_0x3e2602] = _0xa66489.value), _0x3a6552;
+          if ("get" in _0x34e836 || "set" in _0x34e836) throw TypeError("Accessors not supported!");
+          return "value" in _0x34e836 && (_0x535549[_0x3f9daa] = _0x34e836.value), _0x535549;
         };
-      }, function (_0x4e7bc3, _0x217453, _0x369ccf) {
-        var _0x3ff151 = _0x369ccf(42),
-          _0x3d251f = _0x369ccf(15);
-        _0x4e7bc3.exports = function (_0x5023f2) {
-          return _0x3ff151(_0x3d251f(_0x5023f2));
+      }, function (_0x27dd86, _0x596c4a, _0x217079) {
+        var _0x1e80a1 = _0x217079(42),
+          _0x48e1a3 = _0x217079(15);
+        _0x27dd86.exports = function (_0xc122cb) {
+          return _0x1e80a1(_0x48e1a3(_0xc122cb));
         };
-      }, function (_0x25dbfc, _0x2ec1a7) {
-        _0x25dbfc.exports = function (_0x1a1d80) {
-          if (typeof _0x1a1d80 != "function") throw TypeError(_0x1a1d80 + " is not a function!");
-          return _0x1a1d80;
+      }, function (_0x340b72, _0x1cec6d) {
+        _0x340b72.exports = function (_0x56a4c2) {
+          if (typeof _0x56a4c2 != "function") throw TypeError(_0x56a4c2 + " is not a function!");
+          return _0x56a4c2;
         };
-      }, function (_0x4f703e, _0x5a70b9) {
-        _0x4f703e.exports = function (_0x5e79ff) {
-          if (_0x5e79ff == null) throw TypeError("Can't call method on  " + _0x5e79ff);
-          return _0x5e79ff;
+      }, function (_0x3f9d5c, _0x40c545) {
+        _0x3f9d5c.exports = function (_0x46713d) {
+          if (_0x46713d == null) throw TypeError("Can't call method on  " + _0x46713d);
+          return _0x46713d;
         };
-      }, function (_0x4e213b, _0x3c6db2, _0x39ba10) {
-        var _0xf827cb = _0x39ba10(9),
-          _0x5966e2 = _0x39ba10(2).document,
-          _0x13228f = _0xf827cb(_0x5966e2) && _0xf827cb(_0x5966e2.createElement);
-        _0x4e213b.exports = function (_0x1d62ba) {
-          return _0x13228f ? _0x5966e2.createElement(_0x1d62ba) : {};
+      }, function (_0xaaccaf, _0x137916, _0x1c20ed) {
+        var _0x38721e = _0x1c20ed(9),
+          _0x32dff6 = _0x1c20ed(2).document,
+          _0x2cfddf = _0x38721e(_0x32dff6) && _0x38721e(_0x32dff6.createElement);
+        _0xaaccaf.exports = function (_0x4e5a00) {
+          return _0x2cfddf ? _0x32dff6.createElement(_0x4e5a00) : {};
         };
-      }, function (_0x35de26, _0x23c899) {
-        _0x35de26.exports = function (_0x2d2df7, _0x32ab02) {
+      }, function (_0x2ef589, _0x4d6f8c) {
+        _0x2ef589.exports = function (_0x52343e, _0x36ca23) {
           return {
-            "enumerable": !(1 & _0x2d2df7),
-            "configurable": !(2 & _0x2d2df7),
-            "writable": !(4 & _0x2d2df7),
-            "value": _0x32ab02
+            "enumerable": !(1 & _0x52343e),
+            "configurable": !(2 & _0x52343e),
+            "writable": !(4 & _0x52343e),
+            "value": _0x36ca23
           };
         };
-      }, function (_0x101050, _0x1111f7, _0x153a88) {
-        var _0x367457 = _0x153a88(12).f,
-          _0x55991c = _0x153a88(8),
-          _0x199b62 = _0x153a88(1)("toStringTag");
-        _0x101050.exports = function (_0x41f4f, _0x142a52, _0x4d48bb) {
-          _0x41f4f && !_0x55991c(_0x41f4f = _0x4d48bb ? _0x41f4f : _0x41f4f.prototype, _0x199b62) && _0x367457(_0x41f4f, _0x199b62, {
+      }, function (_0x43e664, _0x2f6264, _0x2007de) {
+        var _0x3e94e5 = _0x2007de(12).f,
+          _0x540a23 = _0x2007de(8),
+          _0x16693e = _0x2007de(1)("toStringTag");
+        _0x43e664.exports = function (_0x9f3184, _0x5b4881, _0x297275) {
+          _0x9f3184 && !_0x540a23(_0x9f3184 = _0x297275 ? _0x9f3184 : _0x9f3184.prototype, _0x16693e) && _0x3e94e5(_0x9f3184, _0x16693e, {
             "configurable": !0,
-            "value": _0x142a52
+            "value": _0x5b4881
           });
         };
-      }, function (_0x2a76e5, _0x3c0522, _0x405914) {
-        var _0x17db15 = _0x405914(29)("keys"),
-          _0x309582 = _0x405914(33);
-        _0x2a76e5.exports = function (_0x3119ad) {
-          return _0x17db15[_0x3119ad] || (_0x17db15[_0x3119ad] = _0x309582(_0x3119ad));
+      }, function (_0x27191a, _0x5eed7c, _0x150164) {
+        var _0x348377 = _0x150164(29)("keys"),
+          _0x431935 = _0x150164(33);
+        _0x27191a.exports = function (_0x3f89f6) {
+          return _0x348377[_0x3f89f6] || (_0x348377[_0x3f89f6] = _0x431935(_0x3f89f6));
         };
-      }, function (_0x204f49, _0x5b3a98) {
-        var _0x5f3ba6 = Math.ceil,
-          _0x3ea52a = Math.floor;
-        _0x204f49.exports = function (_0x275631) {
-          return isNaN(_0x275631 = +_0x275631) ? 0 : (_0x275631 > 0 ? _0x3ea52a : _0x5f3ba6)(_0x275631);
+      }, function (_0x109b22, _0x35eb25) {
+        var _0x2d5305 = Math.ceil,
+          _0x536176 = Math.floor;
+        _0x109b22.exports = function (_0x137c61) {
+          return isNaN(_0x137c61 = +_0x137c61) ? 0 : (_0x137c61 > 0 ? _0x536176 : _0x2d5305)(_0x137c61);
         };
-      }, function (_0x3fe4c0, _0x39cf79, _0x5d695f) {
-        var _0x39bc25 = _0x5d695f(11),
-          _0x3d9a43 = _0x5d695f(1)("toStringTag"),
-          _0x21d92c = _0x39bc25(function () {
+      }, function (_0x2468fa, _0x21591f, _0x3a1464) {
+        var _0x441922 = _0x3a1464(11),
+          _0x9207ab = _0x3a1464(1)("toStringTag"),
+          _0x5377e2 = _0x441922(function () {
             return arguments;
           }()) == "Arguments",
-          _0x94f8a = function (_0x29cd11, _0x351fd9) {
+          _0x27755a = function (_0x693a7b, _0x5ceac6) {
             try {
-              return _0x29cd11[_0x351fd9];
+              return _0x693a7b[_0x5ceac6];
             } catch {}
           };
-        _0x3fe4c0.exports = function (_0x4ac03f) {
-          var _0x45ef9c, _0x18031c, _0x4f689a;
-          return _0x4ac03f === void 0 ? "Undefined" : _0x4ac03f === null ? "Null" : typeof (_0x18031c = _0x94f8a(_0x45ef9c = Object(_0x4ac03f), _0x3d9a43)) == "string" ? _0x18031c : _0x21d92c ? _0x39bc25(_0x45ef9c) : (_0x4f689a = _0x39bc25(_0x45ef9c)) == "Object" && typeof _0x45ef9c.callee == "function" ? "Arguments" : _0x4f689a;
+        _0x2468fa.exports = function (_0x1deb03) {
+          var _0x16931f, _0x180854, _0x4db630;
+          return _0x1deb03 === void 0 ? "Undefined" : _0x1deb03 === null ? "Null" : typeof (_0x180854 = _0x27755a(_0x16931f = Object(_0x1deb03), _0x9207ab)) == "string" ? _0x180854 : _0x5377e2 ? _0x441922(_0x16931f) : (_0x4db630 = _0x441922(_0x16931f)) == "Object" && typeof _0x16931f.callee == "function" ? "Arguments" : _0x4db630;
         };
-      }, function (_0x552ab3, _0x46b105) {
-        _0x552ab3.exports = "constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",");
-      }, function (_0x208235, _0x4d26e8, _0xae5db5) {
-        var _0x3a1189 = _0xae5db5(2),
-          _0x2c44f7 = _0xae5db5(6),
-          _0x5e0938 = _0xae5db5(7),
-          _0x7911b3 = _0xae5db5(5),
-          _0x2b17f8 = "prototype",
-          _0x369355 = function (_0x3ba225, _0x339e4e, _0x258dc6) {
-            var _0x55c429,
-              _0x3d3ee4,
-              _0x57572b,
-              _0x3553f3 = _0x3ba225 & _0x369355.F,
-              _0x16ad74 = _0x3ba225 & _0x369355.G,
-              _0x6e5615 = _0x3ba225 & _0x369355.S,
-              _0x436a36 = _0x3ba225 & _0x369355.P,
-              _0x437629 = _0x3ba225 & _0x369355.B,
-              _0x4a984f = _0x3ba225 & _0x369355.W,
-              _0x212708 = _0x16ad74 ? _0x2c44f7 : _0x2c44f7[_0x339e4e] || (_0x2c44f7[_0x339e4e] = {}),
-              _0x16f6f8 = _0x212708[_0x2b17f8],
-              _0x35f8f1 = _0x16ad74 ? _0x3a1189 : _0x6e5615 ? _0x3a1189[_0x339e4e] : (_0x3a1189[_0x339e4e] || {})[_0x2b17f8];
-            _0x16ad74 && (_0x258dc6 = _0x339e4e);
-            for (_0x55c429 in _0x258dc6) _0x3d3ee4 = !_0x3553f3 && _0x35f8f1 && _0x35f8f1[_0x55c429] !== void 0, _0x3d3ee4 && _0x55c429 in _0x212708 || (_0x57572b = _0x3d3ee4 ? _0x35f8f1[_0x55c429] : _0x258dc6[_0x55c429], _0x212708[_0x55c429] = _0x16ad74 && typeof _0x35f8f1[_0x55c429] != "function" ? _0x258dc6[_0x55c429] : _0x437629 && _0x3d3ee4 ? _0x5e0938(_0x57572b, _0x3a1189) : _0x4a984f && _0x35f8f1[_0x55c429] == _0x57572b ? function (_0x590e25) {
-              var _0x2a991c = function (_0x35dd62, _0x10fff9, _0x4bcf17) {
-                if (this instanceof _0x590e25) {
+      }, function (_0x4e43e2, _0x47ea96) {
+        _0x4e43e2.exports = "constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",");
+      }, function (_0x14dc72, _0x2a42ef, _0x3d4931) {
+        var _0x2daab1 = _0x3d4931(2),
+          _0x4fdc07 = _0x3d4931(6),
+          _0x4650cc = _0x3d4931(7),
+          _0x3a5f56 = _0x3d4931(5),
+          _0xd6c42a = "prototype",
+          _0x5749e4 = function (_0x56acf2, _0x214edd, _0xe61086) {
+            var _0x4b2da1,
+              _0x1c163d,
+              _0x142119,
+              _0x3e1c17 = _0x56acf2 & _0x5749e4.F,
+              _0x45b5b5 = _0x56acf2 & _0x5749e4.G,
+              _0x1cea84 = _0x56acf2 & _0x5749e4.S,
+              _0x93791e = _0x56acf2 & _0x5749e4.P,
+              _0x3c56a4 = _0x56acf2 & _0x5749e4.B,
+              _0x5964a0 = _0x56acf2 & _0x5749e4.W,
+              _0x5cda46 = _0x45b5b5 ? _0x4fdc07 : _0x4fdc07[_0x214edd] || (_0x4fdc07[_0x214edd] = {}),
+              _0x52603a = _0x5cda46[_0xd6c42a],
+              _0x4c2cf5 = _0x45b5b5 ? _0x2daab1 : _0x1cea84 ? _0x2daab1[_0x214edd] : (_0x2daab1[_0x214edd] || {})[_0xd6c42a];
+            _0x45b5b5 && (_0xe61086 = _0x214edd);
+            for (_0x4b2da1 in _0xe61086) _0x1c163d = !_0x3e1c17 && _0x4c2cf5 && _0x4c2cf5[_0x4b2da1] !== void 0, _0x1c163d && _0x4b2da1 in _0x5cda46 || (_0x142119 = _0x1c163d ? _0x4c2cf5[_0x4b2da1] : _0xe61086[_0x4b2da1], _0x5cda46[_0x4b2da1] = _0x45b5b5 && typeof _0x4c2cf5[_0x4b2da1] != "function" ? _0xe61086[_0x4b2da1] : _0x3c56a4 && _0x1c163d ? _0x4650cc(_0x142119, _0x2daab1) : _0x5964a0 && _0x4c2cf5[_0x4b2da1] == _0x142119 ? function (_0x4dfcf7) {
+              var _0x5b8667 = function (_0x23d6d4, _0x77ea5b, _0x21f52a) {
+                if (this instanceof _0x4dfcf7) {
                   switch (arguments.length) {
                     case 0:
-                      return new _0x590e25();
+                      return new _0x4dfcf7();
                     case 1:
-                      return new _0x590e25(_0x35dd62);
+                      return new _0x4dfcf7(_0x23d6d4);
                     case 2:
-                      return new _0x590e25(_0x35dd62, _0x10fff9);
+                      return new _0x4dfcf7(_0x23d6d4, _0x77ea5b);
                   }
-                  return new _0x590e25(_0x35dd62, _0x10fff9, _0x4bcf17);
+                  return new _0x4dfcf7(_0x23d6d4, _0x77ea5b, _0x21f52a);
                 }
-                return _0x590e25.apply(this, arguments);
+                return _0x4dfcf7.apply(this, arguments);
               };
-              return _0x2a991c[_0x2b17f8] = _0x590e25[_0x2b17f8], _0x2a991c;
-            }(_0x57572b) : _0x436a36 && typeof _0x57572b == "function" ? _0x5e0938(Function.call, _0x57572b) : _0x57572b, _0x436a36 && ((_0x212708.virtual || (_0x212708.virtual = {}))[_0x55c429] = _0x57572b, _0x3ba225 & _0x369355.R && _0x16f6f8 && !_0x16f6f8[_0x55c429] && _0x7911b3(_0x16f6f8, _0x55c429, _0x57572b)));
+              return _0x5b8667[_0xd6c42a] = _0x4dfcf7[_0xd6c42a], _0x5b8667;
+            }(_0x142119) : _0x93791e && typeof _0x142119 == "function" ? _0x4650cc(Function.call, _0x142119) : _0x142119, _0x93791e && ((_0x5cda46.virtual || (_0x5cda46.virtual = {}))[_0x4b2da1] = _0x142119, _0x56acf2 & _0x5749e4.R && _0x52603a && !_0x52603a[_0x4b2da1] && _0x3a5f56(_0x52603a, _0x4b2da1, _0x142119)));
           };
-        _0x369355.F = 1;
-        _0x369355.G = 2;
-        _0x369355.S = 4;
-        _0x369355.P = 8;
-        _0x369355.B = 16;
-        _0x369355.W = 32;
-        _0x369355.U = 64;
-        _0x369355.R = 128;
-        _0x208235.exports = _0x369355;
-      }, function (_0x3efb15, _0x15a90b) {
-        _0x3efb15.exports = function (_0x4c1e2f) {
+        _0x5749e4.F = 1;
+        _0x5749e4.G = 2;
+        _0x5749e4.S = 4;
+        _0x5749e4.P = 8;
+        _0x5749e4.B = 16;
+        _0x5749e4.W = 32;
+        _0x5749e4.U = 64;
+        _0x5749e4.R = 128;
+        _0x14dc72.exports = _0x5749e4;
+      }, function (_0xf117d9, _0x5ad48c) {
+        _0xf117d9.exports = function (_0x3d5f08) {
           try {
-            return !!_0x4c1e2f();
+            return !!_0x3d5f08();
           } catch {
             return !0;
           }
         };
-      }, function (_0x44f6eb, _0x42cd58, _0x4e78e6) {
-        _0x44f6eb.exports = _0x4e78e6(2).document && document.documentElement;
-      }, function (_0x10ec5a, _0x1cd3dc, _0x27308d) {
-        _0x10ec5a.exports = !_0x27308d(4) && !_0x27308d(24)(function () {
-          return Object.defineProperty(_0x27308d(16)("div"), "a", {
+      }, function (_0x5c18ee, _0x14d158, _0x3faae1) {
+        _0x5c18ee.exports = _0x3faae1(2).document && document.documentElement;
+      }, function (_0x39a81e, _0x2d5fc0, _0x318a5b) {
+        _0x39a81e.exports = !_0x318a5b(4) && !_0x318a5b(24)(function () {
+          return Object.defineProperty(_0x318a5b(16)("div"), "a", {
             "get": function () {
               return 7;
             }
           }).a != 7;
         });
-      }, function (_0x4e9e4e, _0x23e3cf, _0x2e7a8c) {
+      }, function (_0x1cf31e, _0x3882bb, _0x675fbc) {
         'use strict';
 
-        var _0x54015b = _0x2e7a8c(28),
-          _0x1680e1 = _0x2e7a8c(23),
-          _0x29057f = _0x2e7a8c(57),
-          _0x35a803 = _0x2e7a8c(5),
-          _0x3b68f8 = _0x2e7a8c(8),
-          _0x3d9357 = _0x2e7a8c(10),
-          _0xd58791 = _0x2e7a8c(45),
-          _0x5b77e9 = _0x2e7a8c(18),
-          _0x145326 = _0x2e7a8c(52),
-          _0x225618 = _0x2e7a8c(1)("iterator"),
-          _0x56381d = !([].keys && "next" in [].keys()),
-          _0x6296d7 = "@@iterator",
-          _0x1fccfa = "keys",
-          _0x537b8d = "values",
-          _0x344444 = function () {
+        var _0x2a1643 = _0x675fbc(28),
+          _0x4ca701 = _0x675fbc(23),
+          _0xa9afee = _0x675fbc(57),
+          _0xb79ae0 = _0x675fbc(5),
+          _0x40c628 = _0x675fbc(8),
+          _0x5e586f = _0x675fbc(10),
+          _0x16327b = _0x675fbc(45),
+          _0x14e3ad = _0x675fbc(18),
+          _0x38a064 = _0x675fbc(52),
+          _0x4eb5ac = _0x675fbc(1)("iterator"),
+          _0x469e0a = !([].keys && "next" in [].keys()),
+          _0xb6b024 = "@@iterator",
+          _0x2a7943 = "keys",
+          _0x57e801 = "values",
+          _0x580287 = function () {
             return this;
           };
-        _0x4e9e4e.exports = function (_0x4c1ae0, _0x2c8795, _0x56a654, _0x50ed79, _0x3baf69, _0x49f832, _0x573cc9) {
-          _0xd58791(_0x56a654, _0x2c8795, _0x50ed79);
-          var _0x175664,
-            _0x54f539,
-            _0x52c46c,
-            _0x75ea27 = function (_0x1bfedd) {
-              if (!_0x56381d && _0x1bfedd in _0x1c3173) return _0x1c3173[_0x1bfedd];
-              switch (_0x1bfedd) {
-                case _0x1fccfa:
+        _0x1cf31e.exports = function (_0x334e13, _0x51e852, _0xcf455e, _0x5b7c8f, _0x43058f, _0x2e4d47, _0x5031e0) {
+          _0x16327b(_0xcf455e, _0x51e852, _0x5b7c8f);
+          var _0x9e589c,
+            _0x113cd1,
+            _0x4e8a96,
+            _0x13389a = function (_0x57b85d) {
+              if (!_0x469e0a && _0x57b85d in _0x41c517) return _0x41c517[_0x57b85d];
+              switch (_0x57b85d) {
+                case _0x2a7943:
                   return function () {
-                    return new _0x56a654(this, _0x1bfedd);
+                    return new _0xcf455e(this, _0x57b85d);
                   };
-                case _0x537b8d:
+                case _0x57e801:
                   return function () {
-                    return new _0x56a654(this, _0x1bfedd);
+                    return new _0xcf455e(this, _0x57b85d);
                   };
               }
               return function () {
-                return new _0x56a654(this, _0x1bfedd);
+                return new _0xcf455e(this, _0x57b85d);
               };
             },
-            _0x577905 = _0x2c8795 + " Iterator",
-            _0x2457e5 = _0x3baf69 == _0x537b8d,
-            _0x5e4465 = false,
-            _0x1c3173 = _0x4c1ae0.prototype,
-            _0x10216f = _0x1c3173[_0x225618] || _0x1c3173[_0x6296d7] || _0x3baf69 && _0x1c3173[_0x3baf69],
-            _0x4e658f = _0x10216f || _0x75ea27(_0x3baf69),
-            _0x470be0 = _0x3baf69 ? _0x2457e5 ? _0x75ea27("entries") : _0x4e658f : void 0,
-            _0x6bbd85 = _0x2c8795 == "Array" && _0x1c3173.entries || _0x10216f;
-          if (_0x6bbd85 && (_0x52c46c = _0x145326(_0x6bbd85.call(new _0x4c1ae0())), _0x52c46c !== Object.prototype && (_0x5b77e9(_0x52c46c, _0x577905, !0), _0x54015b || _0x3b68f8(_0x52c46c, _0x225618) || _0x35a803(_0x52c46c, _0x225618, _0x344444))), _0x2457e5 && _0x10216f && _0x10216f.name !== _0x537b8d && (_0x5e4465 = !0, _0x4e658f = function () {
-            return _0x10216f.call(this);
-          }), _0x54015b && !_0x573cc9 || !_0x56381d && !_0x5e4465 && _0x1c3173[_0x225618] || _0x35a803(_0x1c3173, _0x225618, _0x4e658f), _0x3d9357[_0x2c8795] = _0x4e658f, _0x3d9357[_0x577905] = _0x344444, _0x3baf69) {
-            if (_0x175664 = {
-              "values": _0x2457e5 ? _0x4e658f : _0x75ea27(_0x537b8d),
-              "keys": _0x49f832 ? _0x4e658f : _0x75ea27(_0x1fccfa),
-              "entries": _0x470be0
-            }, _0x573cc9) {
-              for (_0x54f539 in _0x175664) _0x54f539 in _0x1c3173 || _0x29057f(_0x1c3173, _0x54f539, _0x175664[_0x54f539]);
-            } else _0x1680e1(_0x1680e1.P + _0x1680e1.F * (_0x56381d || _0x5e4465), _0x2c8795, _0x175664);
+            _0x46e707 = _0x51e852 + " Iterator",
+            _0x371a87 = _0x43058f == _0x57e801,
+            _0x5c8b3c = false,
+            _0x41c517 = _0x334e13.prototype,
+            _0x469443 = _0x41c517[_0x4eb5ac] || _0x41c517[_0xb6b024] || _0x43058f && _0x41c517[_0x43058f],
+            _0x5af2c6 = _0x469443 || _0x13389a(_0x43058f),
+            _0x5b50a0 = _0x43058f ? _0x371a87 ? _0x13389a("entries") : _0x5af2c6 : void 0,
+            _0x35345 = _0x51e852 == "Array" && _0x41c517.entries || _0x469443;
+          if (_0x35345 && (_0x4e8a96 = _0x38a064(_0x35345.call(new _0x334e13())), _0x4e8a96 !== Object.prototype && (_0x14e3ad(_0x4e8a96, _0x46e707, !0), _0x2a1643 || _0x40c628(_0x4e8a96, _0x4eb5ac) || _0xb79ae0(_0x4e8a96, _0x4eb5ac, _0x580287))), _0x371a87 && _0x469443 && _0x469443.name !== _0x57e801 && (_0x5c8b3c = !0, _0x5af2c6 = function () {
+            return _0x469443.call(this);
+          }), _0x2a1643 && !_0x5031e0 || !_0x469e0a && !_0x5c8b3c && _0x41c517[_0x4eb5ac] || _0xb79ae0(_0x41c517, _0x4eb5ac, _0x5af2c6), _0x5e586f[_0x51e852] = _0x5af2c6, _0x5e586f[_0x46e707] = _0x580287, _0x43058f) {
+            if (_0x9e589c = {
+              "values": _0x371a87 ? _0x5af2c6 : _0x13389a(_0x57e801),
+              "keys": _0x2e4d47 ? _0x5af2c6 : _0x13389a(_0x2a7943),
+              "entries": _0x5b50a0
+            }, _0x5031e0) {
+              for (_0x113cd1 in _0x9e589c) _0x113cd1 in _0x41c517 || _0xa9afee(_0x41c517, _0x113cd1, _0x9e589c[_0x113cd1]);
+            } else _0x4ca701(_0x4ca701.P + _0x4ca701.F * (_0x469e0a || _0x5c8b3c), _0x51e852, _0x9e589c);
           }
-          return _0x175664;
+          return _0x9e589c;
         };
-      }, function (_0x982c2b, _0xbced0b) {
-        _0x982c2b.exports = !0;
-      }, function (_0x1af615, _0x5749ee, _0x27a7dc) {
-        var _0x326342 = _0x27a7dc(2),
-          _0xe51b4a = "__core-js_shared__",
-          _0xc3cbe6 = _0x326342[_0xe51b4a] || (_0x326342[_0xe51b4a] = {});
-        _0x1af615.exports = function (_0x5b30dd) {
-          return _0xc3cbe6[_0x5b30dd] || (_0xc3cbe6[_0x5b30dd] = {});
+      }, function (_0x5c8a8a, _0x142272) {
+        _0x5c8a8a.exports = !0;
+      }, function (_0x1acd27, _0x2c12ff, _0x45d5f8) {
+        var _0x232a66 = _0x45d5f8(2),
+          _0x57d854 = "__core-js_shared__",
+          _0x17ac17 = _0x232a66[_0x57d854] || (_0x232a66[_0x57d854] = {});
+        _0x1acd27.exports = function (_0x164843) {
+          return _0x17ac17[_0x164843] || (_0x17ac17[_0x164843] = {});
         };
-      }, function (_0x245609, _0x1b5718, _0xa35aa5) {
-        var _0x15083e,
-          _0x379470,
-          _0x299665,
-          _0x23f1ba = _0xa35aa5(7),
-          _0x23e983 = _0xa35aa5(41),
-          _0x54a88a = _0xa35aa5(25),
-          _0x8d795a = _0xa35aa5(16),
-          _0x257a07 = _0xa35aa5(2),
-          _0x3f7df1 = _0x257a07.process,
-          _0x441872 = _0x257a07.setImmediate,
-          _0x3b0f9e = _0x257a07.clearImmediate,
-          _0x5b23a8 = _0x257a07.MessageChannel,
-          _0x329926 = 0,
-          _0xc54dda = {},
-          _0x35669b = "onreadystatechange",
-          _0x2e4159 = function () {
-            var _0x3fc6be = +this;
-            if (_0xc54dda.hasOwnProperty(_0x3fc6be)) {
-              var _0x208903 = _0xc54dda[_0x3fc6be];
-              delete _0xc54dda[_0x3fc6be];
-              _0x208903();
+      }, function (_0x4ad2db, _0x620002, _0x1cf32c) {
+        var _0x4ce8a8,
+          _0x41a810,
+          _0x7ad85a,
+          _0x3233ac = _0x1cf32c(7),
+          _0x96e5d3 = _0x1cf32c(41),
+          _0x290cc0 = _0x1cf32c(25),
+          _0x1f155c = _0x1cf32c(16),
+          _0x5b021b = _0x1cf32c(2),
+          _0x4929b3 = _0x5b021b.process,
+          _0x4b262e = _0x5b021b.setImmediate,
+          _0x56d46a = _0x5b021b.clearImmediate,
+          _0x112135 = _0x5b021b.MessageChannel,
+          _0x2ae83b = 0,
+          _0x3b72c3 = {},
+          _0x52e897 = "onreadystatechange",
+          _0xc5a9f8 = function () {
+            var _0x115b9a = +this;
+            if (_0x3b72c3.hasOwnProperty(_0x115b9a)) {
+              var _0x13cd26 = _0x3b72c3[_0x115b9a];
+              delete _0x3b72c3[_0x115b9a];
+              _0x13cd26();
             }
           },
-          _0x1e1797 = function (_0x1c3b32) {
-            _0x2e4159.call(_0x1c3b32.data);
+          _0x2a147d = function (_0x443b73) {
+            _0xc5a9f8.call(_0x443b73.data);
           };
-        _0x441872 && _0x3b0f9e || (_0x441872 = function (_0x46bc10) {
-          for (var _0x3d1bdc = [], _0x22423c = 1; arguments.length > _0x22423c;) _0x3d1bdc.push(arguments[_0x22423c++]);
-          return _0xc54dda[++_0x329926] = function () {
-            _0x23e983(typeof _0x46bc10 == "function" ? _0x46bc10 : Function(_0x46bc10), _0x3d1bdc);
-          }, _0x15083e(_0x329926), _0x329926;
-        }, _0x3b0f9e = function (_0x60ebbf) {
-          delete _0xc54dda[_0x60ebbf];
-        }, _0xa35aa5(11)(_0x3f7df1) == "process" ? _0x15083e = function (_0x277e4f) {
-          _0x3f7df1.nextTick(_0x23f1ba(_0x2e4159, _0x277e4f, 1));
-        } : _0x5b23a8 ? (_0x379470 = new _0x5b23a8(), _0x299665 = _0x379470.port2, _0x379470.port1.onmessage = _0x1e1797, _0x15083e = _0x23f1ba(_0x299665.postMessage, _0x299665, 1)) : _0x257a07.addEventListener && typeof postMessage == "function" && !_0x257a07.importScripts ? (_0x15083e = function (_0x36b572) {
-          _0x257a07.postMessage(_0x36b572 + "", "*");
-        }, _0x257a07.addEventListener("message", _0x1e1797, !1)) : _0x15083e = _0x35669b in _0x8d795a("script") ? function (_0x1895fe) {
-          _0x54a88a.appendChild(_0x8d795a("script"))[_0x35669b] = function () {
-            _0x54a88a.removeChild(this);
-            _0x2e4159.call(_0x1895fe);
+        _0x4b262e && _0x56d46a || (_0x4b262e = function (_0x49c70f) {
+          for (var _0x4daf37 = [], _0x5a1650 = 1; arguments.length > _0x5a1650;) _0x4daf37.push(arguments[_0x5a1650++]);
+          return _0x3b72c3[++_0x2ae83b] = function () {
+            _0x96e5d3(typeof _0x49c70f == "function" ? _0x49c70f : Function(_0x49c70f), _0x4daf37);
+          }, _0x4ce8a8(_0x2ae83b), _0x2ae83b;
+        }, _0x56d46a = function (_0x38858f) {
+          delete _0x3b72c3[_0x38858f];
+        }, _0x1cf32c(11)(_0x4929b3) == "process" ? _0x4ce8a8 = function (_0x3374ea) {
+          _0x4929b3.nextTick(_0x3233ac(_0xc5a9f8, _0x3374ea, 1));
+        } : _0x112135 ? (_0x41a810 = new _0x112135(), _0x7ad85a = _0x41a810.port2, _0x41a810.port1.onmessage = _0x2a147d, _0x4ce8a8 = _0x3233ac(_0x7ad85a.postMessage, _0x7ad85a, 1)) : _0x5b021b.addEventListener && typeof postMessage == "function" && !_0x5b021b.importScripts ? (_0x4ce8a8 = function (_0x5601e4) {
+          _0x5b021b.postMessage(_0x5601e4 + "", "*");
+        }, _0x5b021b.addEventListener("message", _0x2a147d, !1)) : _0x4ce8a8 = _0x52e897 in _0x1f155c("script") ? function (_0x30e95f) {
+          _0x290cc0.appendChild(_0x1f155c("script"))[_0x52e897] = function () {
+            _0x290cc0.removeChild(this);
+            _0xc5a9f8.call(_0x30e95f);
           };
-        } : function (_0xad3f0a) {
-          setTimeout(_0x23f1ba(_0x2e4159, _0xad3f0a, 1), 0);
+        } : function (_0x52692d) {
+          setTimeout(_0x3233ac(_0xc5a9f8, _0x52692d, 1), 0);
         });
-        _0x245609.exports = {
-          "set": _0x441872,
-          "clear": _0x3b0f9e
+        _0x4ad2db.exports = {
+          "set": _0x4b262e,
+          "clear": _0x56d46a
         };
-      }, function (_0x10b62e, _0x22ddd9, _0x543efa) {
-        var _0x2ef939 = _0x543efa(20),
-          _0x4da7aa = Math.min;
-        _0x10b62e.exports = function (_0x52ff58) {
-          return _0x52ff58 > 0 ? _0x4da7aa(_0x2ef939(_0x52ff58), 9007199254740991) : 0;
+      }, function (_0x5350bb, _0x4e2d04, _0x42a488) {
+        var _0x3c9060 = _0x42a488(20),
+          _0x3e7315 = Math.min;
+        _0x5350bb.exports = function (_0x10b95b) {
+          return _0x10b95b > 0 ? _0x3e7315(_0x3c9060(_0x10b95b), 9007199254740991) : 0;
         };
-      }, function (_0x27dc75, _0x177f9c, _0x482928) {
-        var _0x10012a = _0x482928(9);
-        _0x27dc75.exports = function (_0x1d81c9, _0xc5cd7c) {
-          if (!_0x10012a(_0x1d81c9)) return _0x1d81c9;
-          var _0x5254cc, _0x1e1b1e;
-          if (_0xc5cd7c && typeof (_0x5254cc = _0x1d81c9.toString) == "function" && !_0x10012a(_0x1e1b1e = _0x5254cc.call(_0x1d81c9)) || typeof (_0x5254cc = _0x1d81c9.valueOf) == "function" && !_0x10012a(_0x1e1b1e = _0x5254cc.call(_0x1d81c9)) || !_0xc5cd7c && typeof (_0x5254cc = _0x1d81c9.toString) == "function" && !_0x10012a(_0x1e1b1e = _0x5254cc.call(_0x1d81c9))) return _0x1e1b1e;
+      }, function (_0x5a03d5, _0x247331, _0x1097af) {
+        var _0x3991d2 = _0x1097af(9);
+        _0x5a03d5.exports = function (_0x37c5d3, _0x30c955) {
+          if (!_0x3991d2(_0x37c5d3)) return _0x37c5d3;
+          var _0x5d8a50, _0x53b705;
+          if (_0x30c955 && typeof (_0x5d8a50 = _0x37c5d3.toString) == "function" && !_0x3991d2(_0x53b705 = _0x5d8a50.call(_0x37c5d3)) || typeof (_0x5d8a50 = _0x37c5d3.valueOf) == "function" && !_0x3991d2(_0x53b705 = _0x5d8a50.call(_0x37c5d3)) || !_0x30c955 && typeof (_0x5d8a50 = _0x37c5d3.toString) == "function" && !_0x3991d2(_0x53b705 = _0x5d8a50.call(_0x37c5d3))) return _0x53b705;
           throw TypeError("Can't convert object to primitive value");
         };
-      }, function (_0x43b976, _0x47004a) {
-        var _0x34182e = 0,
-          _0xf6f586 = Math.random();
-        _0x43b976.exports = function (_0x44ac9f) {
-          return "Symbol(".concat(_0x44ac9f === void 0 ? "" : _0x44ac9f, ")_", (++_0x34182e + _0xf6f586).toString(36));
+      }, function (_0x18ee39, _0x5eb1db) {
+        var _0x2c3128 = 0,
+          _0x3ad5dd = Math.random();
+        _0x18ee39.exports = function (_0x22e5dc) {
+          return "Symbol(".concat(_0x22e5dc === void 0 ? "" : _0x22e5dc, ")_", (++_0x2c3128 + _0x3ad5dd).toString(36));
         };
-      }, function (_0x379ed3, _0x4fdfbe, _0x39cb39) {
+      }, function (_0x53d887, _0x260921, _0x22bc7a) {
         'use strict';
 
-        function _0x44ca80(_0x8d649c) {
-          return _0x8d649c && _0x8d649c.__esModule ? _0x8d649c : {
-            "default": _0x8d649c
+        function _0x31d3d0(_0x4e2e69) {
+          return _0x4e2e69 && _0x4e2e69.__esModule ? _0x4e2e69 : {
+            "default": _0x4e2e69
           };
         }
-        function _0x2ed702() {
+        function _0x3b17c1() {
           return process.platform !== "win32" ? "" : process.arch === "ia32" && process.env.hasOwnProperty("PROCESSOR_ARCHITEW6432") ? "mixed" : "native";
         }
-        function _0xd9410f(_0x24de5c) {
-          return (0, _0x3b9ff4.createHash)("sha256").update(_0x24de5c).digest("hex");
+        function _0x4b6f68(_0x1c11b2) {
+          return (0, _0x3e936c.createHash)("sha256").update(_0x1c11b2).digest("hex");
         }
-        function _0x5dc210(_0x3974a9) {
-          switch (_0x495ab9) {
+        function _0x5df938(_0x3b076d) {
+          switch (_0x33ce6c) {
             case "darwin":
-              return _0x3974a9.split("IOPlatformUUID")[1].split("\n")[0].replace(/\=|\s+|\"/gi, "").toLowerCase();
+              return _0x3b076d.split("IOPlatformUUID")[1].split("\n")[0].replace(/\=|\s+|\"/gi, "").toLowerCase();
             case "win32":
-              return _0x3974a9.toString().split("REG_SZ")[1].replace(/\r+|\n+|\s+/gi, "").toLowerCase();
+              return _0x3b076d.toString().split("REG_SZ")[1].replace(/\r+|\n+|\s+/gi, "").toLowerCase();
             case "linux":
-              return _0x3974a9.toString().replace(/\r+|\n+|\s+/gi, "").toLowerCase();
+              return _0x3b076d.toString().replace(/\r+|\n+|\s+/gi, "").toLowerCase();
             case "freebsd":
-              return _0x3974a9.toString().replace(/\r+|\n+|\s+/gi, "").toLowerCase();
+              return _0x3b076d.toString().replace(/\r+|\n+|\s+/gi, "").toLowerCase();
             default:
               throw new Error("Unsupported platform: " + process.platform);
           }
         }
-        function _0x8e1125(_0x26f2ec) {
-          var _0x114d7d = _0x5dc210((0, _0x68888b.execSync)(_0x8449a3[_0x495ab9]).toString());
-          return _0x26f2ec ? _0x114d7d : _0xd9410f(_0x114d7d);
+        function _0x3a3ee4(_0x2515a6) {
+          var _0xc12ce6 = _0x5df938((0, _0x50638f.execSync)(_0x2e21e6[_0x33ce6c]).toString());
+          return _0x2515a6 ? _0xc12ce6 : _0x4b6f68(_0xc12ce6);
         }
-        function _0x2025f3(_0x1c6cd0) {
-          return new _0x5eb73a.default(function (_0x2e78dc, _0x57f6ac) {
-            return (0, _0x68888b.exec)(_0x8449a3[_0x495ab9], {}, function (_0x4b77c1, _0x5bfc6d, _0x2dddea) {
-              if (_0x4b77c1) return _0x57f6ac(new Error("Error while obtaining machine id: " + _0x4b77c1.stack));
-              var _0x162f81 = _0x5dc210(_0x5bfc6d.toString());
-              return _0x2e78dc(_0x1c6cd0 ? _0x162f81 : _0xd9410f(_0x162f81));
+        function _0x59242d(_0x1f13cf) {
+          return new _0xf70eca.default(function (_0x44f068, _0x3ef68f) {
+            return (0, _0x50638f.exec)(_0x2e21e6[_0x33ce6c], {}, function (_0x58a115, _0x4cd9db, _0x493b75) {
+              if (_0x58a115) return _0x3ef68f(new Error("Error while obtaining machine id: " + _0x58a115.stack));
+              var _0x51eead = _0x5df938(_0x4cd9db.toString());
+              return _0x44f068(_0x1f13cf ? _0x51eead : _0x4b6f68(_0x51eead));
             });
           });
         }
-        Object.defineProperty(_0x4fdfbe, "__esModule", {
+        Object.defineProperty(_0x260921, "__esModule", {
           "value": !0
         });
-        var _0x5ce5a5 = _0x39cb39(35),
-          _0x5eb73a = _0x44ca80(_0x5ce5a5);
-        _0x4fdfbe.machineIdSync = _0x8e1125;
-        _0x4fdfbe.machineId = _0x2025f3;
-        var _0x68888b = _0x39cb39(70),
-          _0x3b9ff4 = _0x39cb39(71),
-          _0x2abe7a = process,
-          _0x495ab9 = _0x2abe7a.platform,
-          _0x411b03 = {
+        var _0x2eba72 = _0x22bc7a(35),
+          _0xf70eca = _0x31d3d0(_0x2eba72);
+        _0x260921.machineIdSync = _0x3a3ee4;
+        _0x260921.machineId = _0x59242d;
+        var _0x50638f = _0x22bc7a(70),
+          _0x3e936c = _0x22bc7a(71),
+          _0xa636fa = process,
+          _0x33ce6c = _0xa636fa.platform,
+          _0x35d3ed = {
             "native": "%windir%\\System32",
             "mixed": "%windir%\\sysnative\\cmd.exe /c %windir%\\System32"
           },
-          _0x8449a3 = {
+          _0x2e21e6 = {
             "darwin": "ioreg -rd1 -c IOPlatformExpertDevice",
-            "win32": _0x411b03[_0x2ed702()] + "\\REG.exe QUERY HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography /v MachineGuid",
+            "win32": _0x35d3ed[_0x3b17c1()] + "\\REG.exe QUERY HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography /v MachineGuid",
             "linux": "( cat /var/lib/dbus/machine-id /etc/machine-id 2> /dev/null || hostname ) | head -n 1 || :",
             "freebsd": "kenv -q smbios.system.uuid || sysctl -n kern.hostuuid"
           };
-      }, function (_0x535d4c, _0x1b0f3a, _0x2724ab) {
-        _0x535d4c.exports = {
-          "default": _0x2724ab(36),
+      }, function (_0x52689b, _0x50876d, _0x5309e4) {
+        _0x52689b.exports = {
+          "default": _0x5309e4(36),
           "__esModule": !0
         };
-      }, function (_0x198400, _0x44a428, _0x5f3e64) {
-        _0x5f3e64(66);
-        _0x5f3e64(68);
-        _0x5f3e64(69);
-        _0x5f3e64(67);
-        _0x198400.exports = _0x5f3e64(6).Promise;
-      }, function (_0x29eb3c, _0x5d9fa5) {
-        _0x29eb3c.exports = function () {};
-      }, function (_0x2ec5b4, _0x64cbe) {
-        _0x2ec5b4.exports = function (_0xc6211e, _0x15af7a, _0x53f091, _0x642c29) {
-          if (!(_0xc6211e instanceof _0x15af7a) || _0x642c29 !== void 0 && _0x642c29 in _0xc6211e) throw TypeError(_0x53f091 + ": incorrect invocation!");
-          return _0xc6211e;
+      }, function (_0x37c578, _0x3a2d21, _0x701f42) {
+        _0x701f42(66);
+        _0x701f42(68);
+        _0x701f42(69);
+        _0x701f42(67);
+        _0x37c578.exports = _0x701f42(6).Promise;
+      }, function (_0x2b4d7b, _0x4a8949) {
+        _0x2b4d7b.exports = function () {};
+      }, function (_0x586bf7, _0x102322) {
+        _0x586bf7.exports = function (_0x86f278, _0x4dcd29, _0x41206b, _0x49d3ea) {
+          if (!(_0x86f278 instanceof _0x4dcd29) || _0x49d3ea !== void 0 && _0x49d3ea in _0x86f278) throw TypeError(_0x41206b + ": incorrect invocation!");
+          return _0x86f278;
         };
-      }, function (_0x2cbfd1, _0x5cb6b9, _0x4a1f45) {
-        var _0xfef94c = _0x4a1f45(13),
-          _0x433836 = _0x4a1f45(31),
-          _0x18ae18 = _0x4a1f45(62);
-        _0x2cbfd1.exports = function (_0x1d7539) {
-          return function (_0x83a71, _0x55f689, _0x131563) {
-            var _0x1d1143,
-              _0x5ed593 = _0xfef94c(_0x83a71),
-              _0x1a6bf0 = _0x433836(_0x5ed593.length),
-              _0x156203 = _0x18ae18(_0x131563, _0x1a6bf0);
-            if (_0x1d7539 && _0x55f689 != _0x55f689) {
-              for (; _0x1a6bf0 > _0x156203;) if (_0x1d1143 = _0x5ed593[_0x156203++], _0x1d1143 != _0x1d1143) return !0;
+      }, function (_0x5b5e76, _0x42757f, _0x3261cb) {
+        var _0x20bbc4 = _0x3261cb(13),
+          _0xff5ad2 = _0x3261cb(31),
+          _0x173001 = _0x3261cb(62);
+        _0x5b5e76.exports = function (_0xc817cf) {
+          return function (_0x4902a0, _0x1dc8be, _0x4448bb) {
+            var _0x6fa8e3,
+              _0x2d8df0 = _0x20bbc4(_0x4902a0),
+              _0x5b8a7b = _0xff5ad2(_0x2d8df0.length),
+              _0x91b29e = _0x173001(_0x4448bb, _0x5b8a7b);
+            if (_0xc817cf && _0x1dc8be != _0x1dc8be) {
+              for (; _0x5b8a7b > _0x91b29e;) if (_0x6fa8e3 = _0x2d8df0[_0x91b29e++], _0x6fa8e3 != _0x6fa8e3) return !0;
             } else {
-              for (; _0x1a6bf0 > _0x156203; _0x156203++) if ((_0x1d7539 || _0x156203 in _0x5ed593) && _0x5ed593[_0x156203] === _0x55f689) return _0x1d7539 || _0x156203 || 0;
+              for (; _0x5b8a7b > _0x91b29e; _0x91b29e++) if ((_0xc817cf || _0x91b29e in _0x2d8df0) && _0x2d8df0[_0x91b29e] === _0x1dc8be) return _0xc817cf || _0x91b29e || 0;
             }
-            return !_0x1d7539 && -1;
+            return !_0xc817cf && -1;
           };
         };
-      }, function (_0x1f4681, _0x7edf6e, _0x554847) {
-        var _0x171f79 = _0x554847(7),
-          _0x304687 = _0x554847(44),
-          _0x3226d8 = _0x554847(43),
-          _0x593be2 = _0x554847(3),
-          _0x3e4573 = _0x554847(31),
-          _0x117c38 = _0x554847(64),
-          _0x15d6e5 = {},
-          _0x3f510b = {},
-          _0x7edf6e = _0x1f4681.exports = function (_0x526181, _0x19fb82, _0x324593, _0x4987e2, _0x23daba) {
-            var _0x3a4178,
-              _0x280c13,
-              _0x1d7306,
-              _0x1ebcd1,
-              _0x7f5e4a = _0x23daba ? function () {
-                return _0x526181;
-              } : _0x117c38(_0x526181),
-              _0x1bc08b = _0x171f79(_0x324593, _0x4987e2, _0x19fb82 ? 2 : 1),
-              _0x36f240 = 0;
-            if (typeof _0x7f5e4a != "function") throw TypeError(_0x526181 + " is not iterable!");
-            if (_0x3226d8(_0x7f5e4a)) {
-              for (_0x3a4178 = _0x3e4573(_0x526181.length); _0x3a4178 > _0x36f240; _0x36f240++) if (_0x1ebcd1 = _0x19fb82 ? _0x1bc08b(_0x593be2(_0x280c13 = _0x526181[_0x36f240])[0], _0x280c13[1]) : _0x1bc08b(_0x526181[_0x36f240]), _0x1ebcd1 === _0x15d6e5 || _0x1ebcd1 === _0x3f510b) return _0x1ebcd1;
+      }, function (_0x2c172a, _0x366b43, _0x8c154e) {
+        var _0x586dc6 = _0x8c154e(7),
+          _0x552849 = _0x8c154e(44),
+          _0x45b986 = _0x8c154e(43),
+          _0x41b938 = _0x8c154e(3),
+          _0x31f9f6 = _0x8c154e(31),
+          _0x549af8 = _0x8c154e(64),
+          _0x2ab759 = {},
+          _0xc45ee3 = {},
+          _0x366b43 = _0x2c172a.exports = function (_0x26459b, _0x5ba978, _0x3cb32c, _0x1f9975, _0x53a0aa) {
+            var _0x46cbee,
+              _0x516a0c,
+              _0x438ae,
+              _0xd17dc2,
+              _0x3cb47d = _0x53a0aa ? function () {
+                return _0x26459b;
+              } : _0x549af8(_0x26459b),
+              _0x2ab782 = _0x586dc6(_0x3cb32c, _0x1f9975, _0x5ba978 ? 2 : 1),
+              _0x4bbe0e = 0;
+            if (typeof _0x3cb47d != "function") throw TypeError(_0x26459b + " is not iterable!");
+            if (_0x45b986(_0x3cb47d)) {
+              for (_0x46cbee = _0x31f9f6(_0x26459b.length); _0x46cbee > _0x4bbe0e; _0x4bbe0e++) if (_0xd17dc2 = _0x5ba978 ? _0x2ab782(_0x41b938(_0x516a0c = _0x26459b[_0x4bbe0e])[0], _0x516a0c[1]) : _0x2ab782(_0x26459b[_0x4bbe0e]), _0xd17dc2 === _0x2ab759 || _0xd17dc2 === _0xc45ee3) return _0xd17dc2;
             } else {
-              for (_0x1d7306 = _0x7f5e4a.call(_0x526181); !(_0x280c13 = _0x1d7306.next()).done;) if (_0x1ebcd1 = _0x304687(_0x1d7306, _0x1bc08b, _0x280c13.value, _0x19fb82), _0x1ebcd1 === _0x15d6e5 || _0x1ebcd1 === _0x3f510b) return _0x1ebcd1;
+              for (_0x438ae = _0x3cb47d.call(_0x26459b); !(_0x516a0c = _0x438ae.next()).done;) if (_0xd17dc2 = _0x552849(_0x438ae, _0x2ab782, _0x516a0c.value, _0x5ba978), _0xd17dc2 === _0x2ab759 || _0xd17dc2 === _0xc45ee3) return _0xd17dc2;
             }
           };
-        _0x7edf6e.BREAK = _0x15d6e5;
-        _0x7edf6e.RETURN = _0x3f510b;
-      }, function (_0x4fb72c, _0x2ba3f9) {
-        _0x4fb72c.exports = function (_0x413803, _0x553e72, _0x13b70d) {
-          var _0x5860aa = _0x13b70d === void 0;
-          switch (_0x553e72.length) {
+        _0x366b43.BREAK = _0x2ab759;
+        _0x366b43.RETURN = _0xc45ee3;
+      }, function (_0x300232, _0x5c361e) {
+        _0x300232.exports = function (_0x53e2c6, _0x1be563, _0x162ba4) {
+          var _0x33d824 = _0x162ba4 === void 0;
+          switch (_0x1be563.length) {
             case 0:
-              return _0x5860aa ? _0x413803() : _0x413803.call(_0x13b70d);
+              return _0x33d824 ? _0x53e2c6() : _0x53e2c6.call(_0x162ba4);
             case 1:
-              return _0x5860aa ? _0x413803(_0x553e72[0]) : _0x413803.call(_0x13b70d, _0x553e72[0]);
+              return _0x33d824 ? _0x53e2c6(_0x1be563[0]) : _0x53e2c6.call(_0x162ba4, _0x1be563[0]);
             case 2:
-              return _0x5860aa ? _0x413803(_0x553e72[0], _0x553e72[1]) : _0x413803.call(_0x13b70d, _0x553e72[0], _0x553e72[1]);
+              return _0x33d824 ? _0x53e2c6(_0x1be563[0], _0x1be563[1]) : _0x53e2c6.call(_0x162ba4, _0x1be563[0], _0x1be563[1]);
             case 3:
-              return _0x5860aa ? _0x413803(_0x553e72[0], _0x553e72[1], _0x553e72[2]) : _0x413803.call(_0x13b70d, _0x553e72[0], _0x553e72[1], _0x553e72[2]);
+              return _0x33d824 ? _0x53e2c6(_0x1be563[0], _0x1be563[1], _0x1be563[2]) : _0x53e2c6.call(_0x162ba4, _0x1be563[0], _0x1be563[1], _0x1be563[2]);
             case 4:
-              return _0x5860aa ? _0x413803(_0x553e72[0], _0x553e72[1], _0x553e72[2], _0x553e72[3]) : _0x413803.call(_0x13b70d, _0x553e72[0], _0x553e72[1], _0x553e72[2], _0x553e72[3]);
+              return _0x33d824 ? _0x53e2c6(_0x1be563[0], _0x1be563[1], _0x1be563[2], _0x1be563[3]) : _0x53e2c6.call(_0x162ba4, _0x1be563[0], _0x1be563[1], _0x1be563[2], _0x1be563[3]);
           }
-          return _0x413803.apply(_0x13b70d, _0x553e72);
+          return _0x53e2c6.apply(_0x162ba4, _0x1be563);
         };
-      }, function (_0x64c03c, _0xb027f5, _0x36f475) {
-        var _0x23dd1a = _0x36f475(11);
-        _0x64c03c.exports = Object("z").propertyIsEnumerable(0) ? Object : function (_0x27820d) {
-          return _0x23dd1a(_0x27820d) == "String" ? _0x27820d.split("") : Object(_0x27820d);
+      }, function (_0x2f8a08, _0x4c3e57, _0x3b5ffb) {
+        var _0x44033b = _0x3b5ffb(11);
+        _0x2f8a08.exports = Object("z").propertyIsEnumerable(0) ? Object : function (_0x1d3b40) {
+          return _0x44033b(_0x1d3b40) == "String" ? _0x1d3b40.split("") : Object(_0x1d3b40);
         };
-      }, function (_0x5b537a, _0x2b799f, _0x2143c9) {
-        var _0x279a9c = _0x2143c9(10),
-          _0x2b936e = _0x2143c9(1)("iterator"),
-          _0x137724 = Array.prototype;
-        _0x5b537a.exports = function (_0x2d17e2) {
-          return _0x2d17e2 !== void 0 && (_0x279a9c.Array === _0x2d17e2 || _0x137724[_0x2b936e] === _0x2d17e2);
+      }, function (_0x23790f, _0x12c23c, _0x59d626) {
+        var _0x5efd5e = _0x59d626(10),
+          _0x57bfc0 = _0x59d626(1)("iterator"),
+          _0x5b8055 = Array.prototype;
+        _0x23790f.exports = function (_0x2b5d64) {
+          return _0x2b5d64 !== void 0 && (_0x5efd5e.Array === _0x2b5d64 || _0x5b8055[_0x57bfc0] === _0x2b5d64);
         };
-      }, function (_0xdddb71, _0x1373ef, _0x1897b3) {
-        var _0x29df74 = _0x1897b3(3);
-        _0xdddb71.exports = function (_0x40920c, _0x51d8e3, _0x1f4b88, _0x41b62f) {
+      }, function (_0xbd9175, _0xc4fe92, _0x2e2ca3) {
+        var _0x21dbf8 = _0x2e2ca3(3);
+        _0xbd9175.exports = function (_0x491076, _0x467413, _0x58963a, _0x445563) {
           try {
-            return _0x41b62f ? _0x51d8e3(_0x29df74(_0x1f4b88)[0], _0x1f4b88[1]) : _0x51d8e3(_0x1f4b88);
-          } catch (_0x1068cf) {
-            var _0x2f335f = _0x40920c.return;
-            throw _0x2f335f !== void 0 && _0x29df74(_0x2f335f.call(_0x40920c)), _0x1068cf;
+            return _0x445563 ? _0x467413(_0x21dbf8(_0x58963a)[0], _0x58963a[1]) : _0x467413(_0x58963a);
+          } catch (_0x4c02a6) {
+            var _0x5da2d3 = _0x491076.return;
+            throw _0x5da2d3 !== void 0 && _0x21dbf8(_0x5da2d3.call(_0x491076)), _0x4c02a6;
           }
         };
-      }, function (_0x2fc6db, _0x19ab5c, _0x19990f) {
+      }, function (_0x4a5c2c, _0x466f36, _0x5942f3) {
         'use strict';
 
-        var _0x1f4ee4 = _0x19990f(49),
-          _0x1595d0 = _0x19990f(17),
-          _0x4f3854 = _0x19990f(18),
-          _0x45bef3 = {};
-        _0x19990f(5)(_0x45bef3, _0x19990f(1)("iterator"), function () {
+        var _0x14b8c1 = _0x5942f3(49),
+          _0x56c80f = _0x5942f3(17),
+          _0x2b59a3 = _0x5942f3(18),
+          _0x59e072 = {};
+        _0x5942f3(5)(_0x59e072, _0x5942f3(1)("iterator"), function () {
           return this;
         });
-        _0x2fc6db.exports = function (_0x9bd091, _0x4a1145, _0x382cd4) {
-          _0x9bd091.prototype = _0x1f4ee4(_0x45bef3, {
-            "next": _0x1595d0(1, _0x382cd4)
+        _0x4a5c2c.exports = function (_0x522c23, _0xcbd375, _0x542c1e) {
+          _0x522c23.prototype = _0x14b8c1(_0x59e072, {
+            "next": _0x56c80f(1, _0x542c1e)
           });
-          _0x4f3854(_0x9bd091, _0x4a1145 + " Iterator");
+          _0x2b59a3(_0x522c23, _0xcbd375 + " Iterator");
         };
-      }, function (_0x179fcd, _0x241d6c, _0x50c0b5) {
-        var _0x25d2dc = _0x50c0b5(1)("iterator"),
-          _0x5bbe0e = false;
+      }, function (_0x37de3b, _0xe867cd, _0x4b53e1) {
+        var _0x382545 = _0x4b53e1(1)("iterator"),
+          _0x588333 = false;
         try {
-          var _0x95a49 = [7][_0x25d2dc]();
-          _0x95a49.return = function () {
-            _0x5bbe0e = !0;
+          var _0x9bb1fe = [7][_0x382545]();
+          _0x9bb1fe.return = function () {
+            _0x588333 = !0;
           };
-          Array.from(_0x95a49, function () {
+          Array.from(_0x9bb1fe, function () {
             throw 2;
           });
         } catch {}
-        _0x179fcd.exports = function (_0x1adc34, _0x105076) {
-          if (!_0x105076 && !_0x5bbe0e) return !1;
-          var _0x3355a3 = false;
+        _0x37de3b.exports = function (_0x1d2949, _0x1612be) {
+          if (!_0x1612be && !_0x588333) return !1;
+          var _0x3e728a = false;
           try {
-            var _0x937f67 = [7],
-              _0x26d77c = _0x937f67[_0x25d2dc]();
-            _0x26d77c.next = function () {
+            var _0x562e46 = [7],
+              _0x544618 = _0x562e46[_0x382545]();
+            _0x544618.next = function () {
               return {
-                "done": _0x3355a3 = !0
+                "done": _0x3e728a = !0
               };
             };
-            _0x937f67[_0x25d2dc] = function () {
-              return _0x26d77c;
+            _0x562e46[_0x382545] = function () {
+              return _0x544618;
             };
-            _0x1adc34(_0x937f67);
+            _0x1d2949(_0x562e46);
           } catch {}
-          return _0x3355a3;
+          return _0x3e728a;
         };
-      }, function (_0x5108e3, _0x562594) {
-        _0x5108e3.exports = function (_0x487d64, _0x529f10) {
+      }, function (_0x21900d, _0xf67a22) {
+        _0x21900d.exports = function (_0x291cfb, _0x28d549) {
           return {
-            "value": _0x529f10,
-            "done": !!_0x487d64
+            "value": _0x28d549,
+            "done": !!_0x291cfb
           };
         };
-      }, function (_0x2cf671, _0x47f5cb, _0x41287e) {
-        var _0x5c4eb2 = _0x41287e(2),
-          _0x5dc9f1 = _0x41287e(30).set,
-          _0x27a121 = _0x5c4eb2.MutationObserver || _0x5c4eb2.WebKitMutationObserver,
-          _0x23280b = _0x5c4eb2.process,
-          _0x1ee4b6 = _0x5c4eb2.Promise,
-          _0x109ee1 = _0x41287e(11)(_0x23280b) == "process";
-        _0x2cf671.exports = function () {
-          var _0x45f43f,
-            _0x1d5c47,
-            _0x3ba906,
-            _0x14a6e3 = function () {
-              var _0x55cb51, _0x143866;
-              for (_0x109ee1 && (_0x55cb51 = _0x23280b.domain) && _0x55cb51.exit(); _0x45f43f;) {
-                _0x143866 = _0x45f43f.fn;
-                _0x45f43f = _0x45f43f.next;
+      }, function (_0x5ae160, _0xdf3fe, _0x1e4f2b) {
+        var _0x4042f3 = _0x1e4f2b(2),
+          _0x3c21f8 = _0x1e4f2b(30).set,
+          _0x225e2c = _0x4042f3.MutationObserver || _0x4042f3.WebKitMutationObserver,
+          _0x3a951f = _0x4042f3.process,
+          _0x2e1830 = _0x4042f3.Promise,
+          _0x2e3bcf = _0x1e4f2b(11)(_0x3a951f) == "process";
+        _0x5ae160.exports = function () {
+          var _0x3cbf43,
+            _0x233a0c,
+            _0x331b21,
+            _0x5eeca2 = function () {
+              var _0xdb0f91, _0x3aed08;
+              for (_0x2e3bcf && (_0xdb0f91 = _0x3a951f.domain) && _0xdb0f91.exit(); _0x3cbf43;) {
+                _0x3aed08 = _0x3cbf43.fn;
+                _0x3cbf43 = _0x3cbf43.next;
                 try {
-                  _0x143866();
-                } catch (_0x4e32e7) {
-                  throw _0x45f43f ? _0x3ba906() : _0x1d5c47 = void 0, _0x4e32e7;
+                  _0x3aed08();
+                } catch (_0x3db073) {
+                  throw _0x3cbf43 ? _0x331b21() : _0x233a0c = void 0, _0x3db073;
                 }
               }
-              _0x1d5c47 = void 0;
-              _0x55cb51 && _0x55cb51.enter();
+              _0x233a0c = void 0;
+              _0xdb0f91 && _0xdb0f91.enter();
             };
-          if (_0x109ee1) _0x3ba906 = function () {
-            _0x23280b.nextTick(_0x14a6e3);
+          if (_0x2e3bcf) _0x331b21 = function () {
+            _0x3a951f.nextTick(_0x5eeca2);
           };else {
-            if (_0x27a121) {
-              var _0x3da00c = true,
-                _0x4782d0 = document.createTextNode("");
-              new _0x27a121(_0x14a6e3).observe(_0x4782d0, {
+            if (_0x225e2c) {
+              var _0x470d3f = true,
+                _0x31b0c3 = document.createTextNode("");
+              new _0x225e2c(_0x5eeca2).observe(_0x31b0c3, {
                 "characterData": !0
               });
-              _0x3ba906 = function () {
-                _0x4782d0.data = _0x3da00c = !_0x3da00c;
+              _0x331b21 = function () {
+                _0x31b0c3.data = _0x470d3f = !_0x470d3f;
               };
             } else {
-              if (_0x1ee4b6 && _0x1ee4b6.resolve) {
-                var _0x882d9a = _0x1ee4b6.resolve();
-                _0x3ba906 = function () {
-                  _0x882d9a.then(_0x14a6e3);
+              if (_0x2e1830 && _0x2e1830.resolve) {
+                var _0x411072 = _0x2e1830.resolve();
+                _0x331b21 = function () {
+                  _0x411072.then(_0x5eeca2);
                 };
-              } else _0x3ba906 = function () {
-                _0x5dc9f1.call(_0x5c4eb2, _0x14a6e3);
+              } else _0x331b21 = function () {
+                _0x3c21f8.call(_0x4042f3, _0x5eeca2);
               };
             }
           }
-          return function (_0x201314) {
-            var _0x152917 = {
-              "fn": _0x201314,
+          return function (_0x2b10c1) {
+            var _0x4ebeeb = {
+              "fn": _0x2b10c1,
               "next": void 0
             };
-            _0x1d5c47 && (_0x1d5c47.next = _0x152917);
-            _0x45f43f || (_0x45f43f = _0x152917, _0x3ba906());
-            _0x1d5c47 = _0x152917;
+            _0x233a0c && (_0x233a0c.next = _0x4ebeeb);
+            _0x3cbf43 || (_0x3cbf43 = _0x4ebeeb, _0x331b21());
+            _0x233a0c = _0x4ebeeb;
           };
         };
-      }, function (_0x2550de, _0x4d82ad, _0x295158) {
-        var _0x1d9935 = _0x295158(3),
-          _0x1fa9bb = _0x295158(50),
-          _0x59548c = _0x295158(22),
-          _0x54b946 = _0x295158(19)("IE_PROTO"),
-          _0x18877b = function () {},
-          _0x270bbf = "prototype",
-          _0x218d3f = function () {
-            var _0x149a46,
-              _0x667912 = _0x295158(16)("iframe"),
-              _0x3bfa75 = _0x59548c.length,
-              _0x59d81a = ">";
-            for (_0x667912.style.display = "none", _0x295158(25).appendChild(_0x667912), _0x667912.src = "javascript:", _0x149a46 = _0x667912.contentWindow.document, _0x149a46.open(), _0x149a46.write("<script>document.F=Object</script" + _0x59d81a), _0x149a46.close(), _0x218d3f = _0x149a46.F; _0x3bfa75--;) delete _0x218d3f[_0x270bbf][_0x59548c[_0x3bfa75]];
-            return _0x218d3f();
+      }, function (_0x3faa14, _0x58a143, _0x12951e) {
+        var _0xe8080 = _0x12951e(3),
+          _0x45ee31 = _0x12951e(50),
+          _0x54d634 = _0x12951e(22),
+          _0x11335d = _0x12951e(19)("IE_PROTO"),
+          _0x2fc585 = function () {},
+          _0x361d87 = "prototype",
+          _0xcef8c0 = function () {
+            var _0x4acb17,
+              _0xaadd9b = _0x12951e(16)("iframe"),
+              _0x47f334 = _0x54d634.length,
+              _0x2663cc = ">";
+            for (_0xaadd9b.style.display = "none", _0x12951e(25).appendChild(_0xaadd9b), _0xaadd9b.src = "javascript:", _0x4acb17 = _0xaadd9b.contentWindow.document, _0x4acb17.open(), _0x4acb17.write("<script>document.F=Object</script" + _0x2663cc), _0x4acb17.close(), _0xcef8c0 = _0x4acb17.F; _0x47f334--;) delete _0xcef8c0[_0x361d87][_0x54d634[_0x47f334]];
+            return _0xcef8c0();
           };
-        _0x2550de.exports = Object.create || function (_0x36b41b, _0x270e00) {
-          var _0x224071;
-          return _0x36b41b !== null ? (_0x18877b[_0x270bbf] = _0x1d9935(_0x36b41b), _0x224071 = new _0x18877b(), _0x18877b[_0x270bbf] = null, _0x224071[_0x54b946] = _0x36b41b) : _0x224071 = _0x218d3f(), _0x270e00 === void 0 ? _0x224071 : _0x1fa9bb(_0x224071, _0x270e00);
+        _0x3faa14.exports = Object.create || function (_0x3d1afd, _0x2f5d37) {
+          var _0x426476;
+          return _0x3d1afd !== null ? (_0x2fc585[_0x361d87] = _0xe8080(_0x3d1afd), _0x426476 = new _0x2fc585(), _0x2fc585[_0x361d87] = null, _0x426476[_0x11335d] = _0x3d1afd) : _0x426476 = _0xcef8c0(), _0x2f5d37 === void 0 ? _0x426476 : _0x45ee31(_0x426476, _0x2f5d37);
         };
-      }, function (_0x504bf5, _0x2abc22, _0x3306fb) {
-        var _0x12078c = _0x3306fb(12),
-          _0x273b01 = _0x3306fb(3),
-          _0x6ddea7 = _0x3306fb(54);
-        _0x504bf5.exports = _0x3306fb(4) ? Object.defineProperties : function (_0x555b12, _0x5d5eb4) {
-          _0x273b01(_0x555b12);
-          for (var _0x3411f5, _0x183370 = _0x6ddea7(_0x5d5eb4), _0x585658 = _0x183370.length, _0x186fd4 = 0; _0x585658 > _0x186fd4;) _0x12078c.f(_0x555b12, _0x3411f5 = _0x183370[_0x186fd4++], _0x5d5eb4[_0x3411f5]);
-          return _0x555b12;
+      }, function (_0x2ac435, _0x1d54fc, _0x46e60d) {
+        var _0xcd1757 = _0x46e60d(12),
+          _0x212e18 = _0x46e60d(3),
+          _0x4be3b4 = _0x46e60d(54);
+        _0x2ac435.exports = _0x46e60d(4) ? Object.defineProperties : function (_0x21d294, _0x227078) {
+          _0x212e18(_0x21d294);
+          for (var _0x55ec9f, _0x484f00 = _0x4be3b4(_0x227078), _0x282fd3 = _0x484f00.length, _0x2be378 = 0; _0x282fd3 > _0x2be378;) _0xcd1757.f(_0x21d294, _0x55ec9f = _0x484f00[_0x2be378++], _0x227078[_0x55ec9f]);
+          return _0x21d294;
         };
-      }, function (_0x2e8a6e, _0x486c9b, _0x4f3628) {
-        var _0x5c2552 = _0x4f3628(55),
-          _0x12d29b = _0x4f3628(17),
-          _0x474485 = _0x4f3628(13),
-          _0x48053a = _0x4f3628(32),
-          _0x1fd7c3 = _0x4f3628(8),
-          _0x4d2b1a = _0x4f3628(26),
-          _0x110447 = Object.getOwnPropertyDescriptor;
-        _0x486c9b.f = _0x4f3628(4) ? _0x110447 : function (_0x4b4a6d, _0x265773) {
-          if (_0x4b4a6d = _0x474485(_0x4b4a6d), _0x265773 = _0x48053a(_0x265773, !0), _0x4d2b1a) try {
-            return _0x110447(_0x4b4a6d, _0x265773);
+      }, function (_0x1cf6a4, _0x1ddb77, _0x185cb2) {
+        var _0x199292 = _0x185cb2(55),
+          _0x944b73 = _0x185cb2(17),
+          _0x5a2f8a = _0x185cb2(13),
+          _0x46bf45 = _0x185cb2(32),
+          _0xa77806 = _0x185cb2(8),
+          _0x340d44 = _0x185cb2(26),
+          _0x1e60b1 = Object.getOwnPropertyDescriptor;
+        _0x1ddb77.f = _0x185cb2(4) ? _0x1e60b1 : function (_0xf4392c, _0x4e5488) {
+          if (_0xf4392c = _0x5a2f8a(_0xf4392c), _0x4e5488 = _0x46bf45(_0x4e5488, !0), _0x340d44) try {
+            return _0x1e60b1(_0xf4392c, _0x4e5488);
           } catch {}
-          if (_0x1fd7c3(_0x4b4a6d, _0x265773)) return _0x12d29b(!_0x5c2552.f.call(_0x4b4a6d, _0x265773), _0x4b4a6d[_0x265773]);
+          if (_0xa77806(_0xf4392c, _0x4e5488)) return _0x944b73(!_0x199292.f.call(_0xf4392c, _0x4e5488), _0xf4392c[_0x4e5488]);
         };
-      }, function (_0x5d5ec7, _0x59a8ed, _0x47fecf) {
-        var _0x2a872d = _0x47fecf(8),
-          _0x3fa958 = _0x47fecf(63),
-          _0x5cd9d8 = _0x47fecf(19)("IE_PROTO"),
-          _0x3a3129 = Object.prototype;
-        _0x5d5ec7.exports = Object.getPrototypeOf || function (_0x9db159) {
-          return _0x9db159 = _0x3fa958(_0x9db159), _0x2a872d(_0x9db159, _0x5cd9d8) ? _0x9db159[_0x5cd9d8] : typeof _0x9db159.constructor == "function" && _0x9db159 instanceof _0x9db159.constructor ? _0x9db159.constructor.prototype : _0x9db159 instanceof Object ? _0x3a3129 : null;
+      }, function (_0x5ad362, _0x2dab04, _0x3a1f8d) {
+        var _0x481ed8 = _0x3a1f8d(8),
+          _0x22d8e2 = _0x3a1f8d(63),
+          _0x4a551b = _0x3a1f8d(19)("IE_PROTO"),
+          _0x32d55a = Object.prototype;
+        _0x5ad362.exports = Object.getPrototypeOf || function (_0x34a2c1) {
+          return _0x34a2c1 = _0x22d8e2(_0x34a2c1), _0x481ed8(_0x34a2c1, _0x4a551b) ? _0x34a2c1[_0x4a551b] : typeof _0x34a2c1.constructor == "function" && _0x34a2c1 instanceof _0x34a2c1.constructor ? _0x34a2c1.constructor.prototype : _0x34a2c1 instanceof Object ? _0x32d55a : null;
         };
-      }, function (_0x396167, _0x3bb84d, _0x4cfd96) {
-        var _0x572331 = _0x4cfd96(8),
-          _0x289683 = _0x4cfd96(13),
-          _0x404dbf = _0x4cfd96(39)(!1),
-          _0x1e4c6a = _0x4cfd96(19)("IE_PROTO");
-        _0x396167.exports = function (_0x2d4bd5, _0x30eafb) {
-          var _0x4ca638,
-            _0x5b0773 = _0x289683(_0x2d4bd5),
-            _0x3b9d24 = 0,
-            _0x13b707 = [];
-          for (_0x4ca638 in _0x5b0773) _0x4ca638 != _0x1e4c6a && _0x572331(_0x5b0773, _0x4ca638) && _0x13b707.push(_0x4ca638);
-          for (; _0x30eafb.length > _0x3b9d24;) _0x572331(_0x5b0773, _0x4ca638 = _0x30eafb[_0x3b9d24++]) && (~_0x404dbf(_0x13b707, _0x4ca638) || _0x13b707.push(_0x4ca638));
-          return _0x13b707;
+      }, function (_0x2308aa, _0x12ce78, _0x546ff8) {
+        var _0x2b5cef = _0x546ff8(8),
+          _0x361dda = _0x546ff8(13),
+          _0x2cfa10 = _0x546ff8(39)(!1),
+          _0x213774 = _0x546ff8(19)("IE_PROTO");
+        _0x2308aa.exports = function (_0x491751, _0x10e89e) {
+          var _0x455483,
+            _0x5df42d = _0x361dda(_0x491751),
+            _0x2b1528 = 0,
+            _0x1fbb63 = [];
+          for (_0x455483 in _0x5df42d) _0x455483 != _0x213774 && _0x2b5cef(_0x5df42d, _0x455483) && _0x1fbb63.push(_0x455483);
+          for (; _0x10e89e.length > _0x2b1528;) _0x2b5cef(_0x5df42d, _0x455483 = _0x10e89e[_0x2b1528++]) && (~_0x2cfa10(_0x1fbb63, _0x455483) || _0x1fbb63.push(_0x455483));
+          return _0x1fbb63;
         };
-      }, function (_0x498dee, _0x5f22b2, _0x5d1754) {
-        var _0x20ec1d = _0x5d1754(53),
-          _0x48eebd = _0x5d1754(22);
-        _0x498dee.exports = Object.keys || function (_0x1f7911) {
-          return _0x20ec1d(_0x1f7911, _0x48eebd);
+      }, function (_0xb5ef37, _0x2fe94e, _0x30d4c0) {
+        var _0x237a5b = _0x30d4c0(53),
+          _0x49c408 = _0x30d4c0(22);
+        _0xb5ef37.exports = Object.keys || function (_0x381483) {
+          return _0x237a5b(_0x381483, _0x49c408);
         };
-      }, function (_0x11474f, _0xa7fdcd) {
-        _0xa7fdcd.f = {}.propertyIsEnumerable;
-      }, function (_0x42bd3f, _0x58a530, _0x6ac21a) {
-        var _0x5b0d0d = _0x6ac21a(5);
-        _0x42bd3f.exports = function (_0x5c49cf, _0x31c51d, _0x2403cd) {
-          for (var _0x4ea0ce in _0x31c51d) _0x2403cd && _0x5c49cf[_0x4ea0ce] ? _0x5c49cf[_0x4ea0ce] = _0x31c51d[_0x4ea0ce] : _0x5b0d0d(_0x5c49cf, _0x4ea0ce, _0x31c51d[_0x4ea0ce]);
-          return _0x5c49cf;
+      }, function (_0x30cf98, _0x46069a) {
+        _0x46069a.f = {}.propertyIsEnumerable;
+      }, function (_0x70ae8, _0x52c6dd, _0x1ec34d) {
+        var _0xee3a58 = _0x1ec34d(5);
+        _0x70ae8.exports = function (_0x23ab3f, _0x119bb4, _0x1701a9) {
+          for (var _0x23c4df in _0x119bb4) _0x1701a9 && _0x23ab3f[_0x23c4df] ? _0x23ab3f[_0x23c4df] = _0x119bb4[_0x23c4df] : _0xee3a58(_0x23ab3f, _0x23c4df, _0x119bb4[_0x23c4df]);
+          return _0x23ab3f;
         };
-      }, function (_0x2d9b4f, _0x5d2041, _0x45613e) {
-        _0x2d9b4f.exports = _0x45613e(5);
-      }, function (_0x2fde6a, _0xf00fb7, _0x1bde4c) {
-        var _0x12f45e = _0x1bde4c(9),
-          _0x103f8b = _0x1bde4c(3),
-          _0x4419f5 = function (_0x2e4d35, _0x29223c) {
-            if (_0x103f8b(_0x2e4d35), !_0x12f45e(_0x29223c) && _0x29223c !== null) throw TypeError(_0x29223c + ": can't set as prototype!");
+      }, function (_0x2e13dd, _0x4db8fc, _0x3e7f40) {
+        _0x2e13dd.exports = _0x3e7f40(5);
+      }, function (_0x29a4ac, _0x294ac5, _0x1c2b54) {
+        var _0x1023bd = _0x1c2b54(9),
+          _0x2e76c7 = _0x1c2b54(3),
+          _0x302929 = function (_0x26794e, _0x8ae946) {
+            if (_0x2e76c7(_0x26794e), !_0x1023bd(_0x8ae946) && _0x8ae946 !== null) throw TypeError(_0x8ae946 + ": can't set as prototype!");
           };
-        _0x2fde6a.exports = {
-          "set": Object.setPrototypeOf || ("__proto__" in {} ? function (_0x1bd0f1, _0xed57de, _0x268a2e) {
+        _0x29a4ac.exports = {
+          "set": Object.setPrototypeOf || ("__proto__" in {} ? function (_0x384945, _0xfadf81, _0x332f2a) {
             try {
-              _0x268a2e = _0x1bde4c(7)(Function.call, _0x1bde4c(51).f(Object.prototype, "__proto__").set, 2);
-              _0x268a2e(_0x1bd0f1, []);
-              _0xed57de = !(_0x1bd0f1 instanceof Array);
+              _0x332f2a = _0x1c2b54(7)(Function.call, _0x1c2b54(51).f(Object.prototype, "__proto__").set, 2);
+              _0x332f2a(_0x384945, []);
+              _0xfadf81 = !(_0x384945 instanceof Array);
             } catch {
-              _0xed57de = !0;
+              _0xfadf81 = !0;
             }
-            return function (_0x15542a, _0x3e4973) {
-              return _0x4419f5(_0x15542a, _0x3e4973), _0xed57de ? _0x15542a.__proto__ = _0x3e4973 : _0x268a2e(_0x15542a, _0x3e4973), _0x15542a;
+            return function (_0x31845f, _0x2717b7) {
+              return _0x302929(_0x31845f, _0x2717b7), _0xfadf81 ? _0x31845f.__proto__ = _0x2717b7 : _0x332f2a(_0x31845f, _0x2717b7), _0x31845f;
             };
           }({}, !1) : void 0),
-          "check": _0x4419f5
+          "check": _0x302929
         };
-      }, function (_0x57fe85, _0x1bf2b3, _0x1d4cc3) {
+      }, function (_0x39dc1c, _0x2dac18, _0x482c8a) {
         'use strict';
 
-        var _0x1fb1b6 = _0x1d4cc3(2),
-          _0x95f488 = _0x1d4cc3(6),
-          _0x5f0015 = _0x1d4cc3(12),
-          _0x52e819 = _0x1d4cc3(4),
-          _0x1b1a97 = _0x1d4cc3(1)("species");
-        _0x57fe85.exports = function (_0x149f4d) {
-          var _0x4e9c9b = typeof _0x95f488[_0x149f4d] == "function" ? _0x95f488[_0x149f4d] : _0x1fb1b6[_0x149f4d];
-          _0x52e819 && _0x4e9c9b && !_0x4e9c9b[_0x1b1a97] && _0x5f0015.f(_0x4e9c9b, _0x1b1a97, {
+        var _0x85214b = _0x482c8a(2),
+          _0x4d2d46 = _0x482c8a(6),
+          _0x2a7577 = _0x482c8a(12),
+          _0x3e1e89 = _0x482c8a(4),
+          _0x5a2b89 = _0x482c8a(1)("species");
+        _0x39dc1c.exports = function (_0x5b929f) {
+          var _0x1f9a0f = typeof _0x4d2d46[_0x5b929f] == "function" ? _0x4d2d46[_0x5b929f] : _0x85214b[_0x5b929f];
+          _0x3e1e89 && _0x1f9a0f && !_0x1f9a0f[_0x5a2b89] && _0x2a7577.f(_0x1f9a0f, _0x5a2b89, {
             "configurable": !0,
             "get": function () {
               return this;
             }
           });
         };
-      }, function (_0x212f5b, _0x497f9e, _0x940acf) {
-        var _0x307268 = _0x940acf(3),
-          _0x4eeb52 = _0x940acf(14),
-          _0x553884 = _0x940acf(1)("species");
-        _0x212f5b.exports = function (_0x4dc72b, _0x2bdb2a) {
-          var _0x541f99,
-            _0x283ac7 = _0x307268(_0x4dc72b).constructor;
-          return _0x283ac7 === void 0 || (_0x541f99 = _0x307268(_0x283ac7)[_0x553884]) == null ? _0x2bdb2a : _0x4eeb52(_0x541f99);
+      }, function (_0x397dd9, _0x2e3aa8, _0x2a59d6) {
+        var _0x15c12d = _0x2a59d6(3),
+          _0xa33d44 = _0x2a59d6(14),
+          _0x4738ec = _0x2a59d6(1)("species");
+        _0x397dd9.exports = function (_0xfede54, _0x519780) {
+          var _0x220420,
+            _0x24136e = _0x15c12d(_0xfede54).constructor;
+          return _0x24136e === void 0 || (_0x220420 = _0x15c12d(_0x24136e)[_0x4738ec]) == null ? _0x519780 : _0xa33d44(_0x220420);
         };
-      }, function (_0x478401, _0x30b59b, _0x3b66d6) {
-        var _0x4c0543 = _0x3b66d6(20),
-          _0x5c9fb3 = _0x3b66d6(15);
-        _0x478401.exports = function (_0x1cff86) {
-          return function (_0x2240c5, _0x3a4bf6) {
-            var _0x13b05b,
-              _0x3581eb,
-              _0x1e5955 = String(_0x5c9fb3(_0x2240c5)),
-              _0x42ad09 = _0x4c0543(_0x3a4bf6),
-              _0x527e84 = _0x1e5955.length;
-            return _0x42ad09 < 0 || _0x42ad09 >= _0x527e84 ? _0x1cff86 ? "" : void 0 : (_0x13b05b = _0x1e5955.charCodeAt(_0x42ad09), _0x13b05b < 55296 || _0x13b05b > 56319 || _0x42ad09 + 1 === _0x527e84 || (_0x3581eb = _0x1e5955.charCodeAt(_0x42ad09 + 1)) < 56320 || _0x3581eb > 57343 ? _0x1cff86 ? _0x1e5955.charAt(_0x42ad09) : _0x13b05b : _0x1cff86 ? _0x1e5955.slice(_0x42ad09, _0x42ad09 + 2) : (_0x13b05b - 55296 << 10) + (_0x3581eb - 56320) + 65536);
+      }, function (_0x4a7d08, _0x34462b, _0x4e7b65) {
+        var _0x160241 = _0x4e7b65(20),
+          _0x2fecc8 = _0x4e7b65(15);
+        _0x4a7d08.exports = function (_0x284e6a) {
+          return function (_0x2a9a15, _0x10983f) {
+            var _0x218549,
+              _0xd9af70,
+              _0x5a8c0d = String(_0x2fecc8(_0x2a9a15)),
+              _0x251157 = _0x160241(_0x10983f),
+              _0x40baf4 = _0x5a8c0d.length;
+            return _0x251157 < 0 || _0x251157 >= _0x40baf4 ? _0x284e6a ? "" : void 0 : (_0x218549 = _0x5a8c0d.charCodeAt(_0x251157), _0x218549 < 55296 || _0x218549 > 56319 || _0x251157 + 1 === _0x40baf4 || (_0xd9af70 = _0x5a8c0d.charCodeAt(_0x251157 + 1)) < 56320 || _0xd9af70 > 57343 ? _0x284e6a ? _0x5a8c0d.charAt(_0x251157) : _0x218549 : _0x284e6a ? _0x5a8c0d.slice(_0x251157, _0x251157 + 2) : (_0x218549 - 55296 << 10) + (_0xd9af70 - 56320) + 65536);
           };
         };
-      }, function (_0x527174, _0x309df5, _0x40d179) {
-        var _0x51c028 = _0x40d179(20),
-          _0x135994 = Math.max,
-          _0x2affb1 = Math.min;
-        _0x527174.exports = function (_0x1cd5c8, _0x257263) {
-          return _0x1cd5c8 = _0x51c028(_0x1cd5c8), _0x1cd5c8 < 0 ? _0x135994(_0x1cd5c8 + _0x257263, 0) : _0x2affb1(_0x1cd5c8, _0x257263);
+      }, function (_0x526f19, _0x3d4c2c, _0x319e87) {
+        var _0x1c2525 = _0x319e87(20),
+          _0x3463cc = Math.max,
+          _0x4b0e4f = Math.min;
+        _0x526f19.exports = function (_0x3ea1d2, _0x12ca8c) {
+          return _0x3ea1d2 = _0x1c2525(_0x3ea1d2), _0x3ea1d2 < 0 ? _0x3463cc(_0x3ea1d2 + _0x12ca8c, 0) : _0x4b0e4f(_0x3ea1d2, _0x12ca8c);
         };
-      }, function (_0x5e1e4c, _0x389e94, _0x454f05) {
-        var _0x4dbc62 = _0x454f05(15);
-        _0x5e1e4c.exports = function (_0x469317) {
-          return Object(_0x4dbc62(_0x469317));
+      }, function (_0x2af53e, _0x204f78, _0xe18d3b) {
+        var _0x29feb9 = _0xe18d3b(15);
+        _0x2af53e.exports = function (_0x3247e9) {
+          return Object(_0x29feb9(_0x3247e9));
         };
-      }, function (_0x455b62, _0x4721c3, _0x29185e) {
-        var _0x671d1b = _0x29185e(21),
-          _0x559eaf = _0x29185e(1)("iterator"),
-          _0x4dfbca = _0x29185e(10);
-        _0x455b62.exports = _0x29185e(6).getIteratorMethod = function (_0x509a9d) {
-          if (_0x509a9d != null) return _0x509a9d[_0x559eaf] || _0x509a9d["@@iterator"] || _0x4dfbca[_0x671d1b(_0x509a9d)];
+      }, function (_0x957219, _0x345c38, _0x1e213f) {
+        var _0x4e933f = _0x1e213f(21),
+          _0x38f126 = _0x1e213f(1)("iterator"),
+          _0x5b19e8 = _0x1e213f(10);
+        _0x957219.exports = _0x1e213f(6).getIteratorMethod = function (_0x47874a) {
+          if (_0x47874a != null) return _0x47874a[_0x38f126] || _0x47874a["@@iterator"] || _0x5b19e8[_0x4e933f(_0x47874a)];
         };
-      }, function (_0x2be91f, _0x4cbb29, _0x481004) {
+      }, function (_0x26a86f, _0x2d9f8d, _0x18cf88) {
         'use strict';
 
-        var _0x5ac18a = _0x481004(37),
-          _0x290251 = _0x481004(47),
-          _0x4019ba = _0x481004(10),
-          _0x30cff9 = _0x481004(13);
-        _0x2be91f.exports = _0x481004(27)(Array, "Array", function (_0x5cbf0c, _0x5e3ea6) {
-          this._t = _0x30cff9(_0x5cbf0c);
+        var _0x53c7c2 = _0x18cf88(37),
+          _0x71ca30 = _0x18cf88(47),
+          _0x1711db = _0x18cf88(10),
+          _0x23e981 = _0x18cf88(13);
+        _0x26a86f.exports = _0x18cf88(27)(Array, "Array", function (_0x61a8c6, _0x1485f9) {
+          this._t = _0x23e981(_0x61a8c6);
           this._i = 0;
-          this._k = _0x5e3ea6;
+          this._k = _0x1485f9;
         }, function () {
-          var _0x30ddb1 = this._t,
-            _0x10d6b4 = this._k,
-            _0x3da12a = this._i++;
-          return !_0x30ddb1 || _0x3da12a >= _0x30ddb1.length ? (this._t = void 0, _0x290251(1)) : _0x10d6b4 == "keys" ? _0x290251(0, _0x3da12a) : _0x10d6b4 == "values" ? _0x290251(0, _0x30ddb1[_0x3da12a]) : _0x290251(0, [_0x3da12a, _0x30ddb1[_0x3da12a]]);
+          var _0x571732 = this._t,
+            _0x4011e4 = this._k,
+            _0x1ba28a = this._i++;
+          return !_0x571732 || _0x1ba28a >= _0x571732.length ? (this._t = void 0, _0x71ca30(1)) : _0x4011e4 == "keys" ? _0x71ca30(0, _0x1ba28a) : _0x4011e4 == "values" ? _0x71ca30(0, _0x571732[_0x1ba28a]) : _0x71ca30(0, [_0x1ba28a, _0x571732[_0x1ba28a]]);
         }, "values");
-        _0x4019ba.Arguments = _0x4019ba.Array;
-        _0x5ac18a("keys");
-        _0x5ac18a("values");
-        _0x5ac18a("entries");
-      }, function (_0x353a79, _0x1b710d) {}, function (_0x139126, _0x3434d6, _0x83bf13) {
+        _0x1711db.Arguments = _0x1711db.Array;
+        _0x53c7c2("keys");
+        _0x53c7c2("values");
+        _0x53c7c2("entries");
+      }, function (_0x2de18e, _0x10f3b8) {}, function (_0x34983f, _0x3eb62c, _0x517a14) {
         'use strict';
 
-        var _0x3a4479,
-          _0x528185,
-          _0x4af7f3,
-          _0x479afb = _0x83bf13(28),
-          _0x117b34 = _0x83bf13(2),
-          _0x2ec1d4 = _0x83bf13(7),
-          _0x3d18a8 = _0x83bf13(21),
-          _0x11fe6c = _0x83bf13(23),
-          _0x3c77a3 = _0x83bf13(9),
-          _0x467713 = (_0x83bf13(3), _0x83bf13(14)),
-          _0x5c23cc = _0x83bf13(38),
-          _0x2e37b1 = _0x83bf13(40),
-          _0x4be1dc = (_0x83bf13(58).set, _0x83bf13(60)),
-          _0x236c48 = _0x83bf13(30).set,
-          _0x8c9733 = _0x83bf13(48)(),
-          _0x4adf6c = "Promise",
-          _0x18046a = _0x117b34.TypeError,
-          _0x2fd89e = _0x117b34.process,
-          _0x281e9c = _0x117b34[_0x4adf6c],
-          _0x2fd89e = _0x117b34.process,
-          _0x376204 = _0x3d18a8(_0x2fd89e) == "process",
-          _0x1a0c1b = function () {},
-          _0x21802e = !!function () {
+        var _0x2aff5b,
+          _0x530120,
+          _0x3849f1,
+          _0x37e95c = _0x517a14(28),
+          _0x372a50 = _0x517a14(2),
+          _0x15ef9c = _0x517a14(7),
+          _0x2741ce = _0x517a14(21),
+          _0x53f098 = _0x517a14(23),
+          _0x15363c = _0x517a14(9),
+          _0x24ac4c = (_0x517a14(3), _0x517a14(14)),
+          _0xaa3755 = _0x517a14(38),
+          _0x2dc7c2 = _0x517a14(40),
+          _0x1558c1 = (_0x517a14(58).set, _0x517a14(60)),
+          _0x390049 = _0x517a14(30).set,
+          _0x13b0ef = _0x517a14(48)(),
+          _0x1178d2 = "Promise",
+          _0x5c5a21 = _0x372a50.TypeError,
+          _0x23cf23 = _0x372a50.process,
+          _0x2a0382 = _0x372a50[_0x1178d2],
+          _0x23cf23 = _0x372a50.process,
+          _0x111244 = _0x2741ce(_0x23cf23) == "process",
+          _0x1778b4 = function () {},
+          _0x3552a6 = !!function () {
             try {
-              var _0x234242 = _0x281e9c.resolve(1),
-                _0x428e22 = (_0x234242.constructor = {})[_0x83bf13(1)("species")] = function (_0x3abbb5) {
-                  _0x3abbb5(_0x1a0c1b, _0x1a0c1b);
+              var _0x350662 = _0x2a0382.resolve(1),
+                _0xd095fa = (_0x350662.constructor = {})[_0x517a14(1)("species")] = function (_0x3748fb) {
+                  _0x3748fb(_0x1778b4, _0x1778b4);
                 };
-              return (_0x376204 || typeof PromiseRejectionEvent == "function") && _0x234242.then(_0x1a0c1b) instanceof _0x428e22;
+              return (_0x111244 || typeof PromiseRejectionEvent == "function") && _0x350662.then(_0x1778b4) instanceof _0xd095fa;
             } catch {}
           }(),
-          _0x2bcfd8 = function (_0x472bf5, _0x3aa886) {
-            return _0x472bf5 === _0x3aa886 || _0x472bf5 === _0x281e9c && _0x3aa886 === _0x4af7f3;
+          _0xb8406f = function (_0x350146, _0x5acf72) {
+            return _0x350146 === _0x5acf72 || _0x350146 === _0x2a0382 && _0x5acf72 === _0x3849f1;
           },
-          _0x4d7636 = function (_0x14b838) {
-            var _0xa6ca67;
-            return !(!_0x3c77a3(_0x14b838) || typeof (_0xa6ca67 = _0x14b838.then) != "function") && _0xa6ca67;
+          _0x31b6a2 = function (_0x29cf87) {
+            var _0x1e10d5;
+            return !(!_0x15363c(_0x29cf87) || typeof (_0x1e10d5 = _0x29cf87.then) != "function") && _0x1e10d5;
           },
-          _0x3f676f = function (_0x43a2a4) {
-            return _0x2bcfd8(_0x281e9c, _0x43a2a4) ? new _0x3ece50(_0x43a2a4) : new _0x528185(_0x43a2a4);
+          _0x48123a = function (_0x362b4a) {
+            return _0xb8406f(_0x2a0382, _0x362b4a) ? new _0x3f7029(_0x362b4a) : new _0x530120(_0x362b4a);
           },
-          _0x3ece50 = _0x528185 = function (_0x2d491d) {
-            var _0x37143e, _0x50e51a;
-            this.promise = new _0x2d491d(function (_0x252dbe, _0x194c54) {
-              if (_0x37143e !== void 0 || _0x50e51a !== void 0) throw _0x18046a("Bad Promise constructor");
-              _0x37143e = _0x252dbe;
-              _0x50e51a = _0x194c54;
+          _0x3f7029 = _0x530120 = function (_0x4b7e12) {
+            var _0x111a48, _0x4400ec;
+            this.promise = new _0x4b7e12(function (_0x305e9f, _0x415997) {
+              if (_0x111a48 !== void 0 || _0x4400ec !== void 0) throw _0x5c5a21("Bad Promise constructor");
+              _0x111a48 = _0x305e9f;
+              _0x4400ec = _0x415997;
             });
-            this.resolve = _0x467713(_0x37143e);
-            this.reject = _0x467713(_0x50e51a);
+            this.resolve = _0x24ac4c(_0x111a48);
+            this.reject = _0x24ac4c(_0x4400ec);
           },
-          _0x2fa926 = function (_0x163821) {
+          _0x2d3dcf = function (_0x219088) {
             try {
-              _0x163821();
-            } catch (_0x193f45) {
+              _0x219088();
+            } catch (_0x5b631e) {
               return {
-                "error": _0x193f45
+                "error": _0x5b631e
               };
             }
           },
-          _0x23d43c = function (_0x4cb06d, _0x178f89) {
-            if (!_0x4cb06d._n) {
-              _0x4cb06d._n = !0;
-              var _0x1aa938 = _0x4cb06d._c;
-              _0x8c9733(function () {
-                for (var _0x4d04d9 = _0x4cb06d._v, _0x763f1a = _0x4cb06d._s == 1, _0x14f2f8 = 0, _0xacba75 = function (_0x2febd2) {
-                    var _0x502438,
-                      _0x12b060,
-                      _0x4c2c55 = _0x763f1a ? _0x2febd2.ok : _0x2febd2.fail,
-                      _0x578f61 = _0x2febd2.resolve,
-                      _0x349de2 = _0x2febd2.reject,
-                      _0x20155c = _0x2febd2.domain;
+          _0x44bb3a = function (_0x237f16, _0xe5661c) {
+            if (!_0x237f16._n) {
+              _0x237f16._n = !0;
+              var _0x9633e2 = _0x237f16._c;
+              _0x13b0ef(function () {
+                for (var _0x10d73b = _0x237f16._v, _0x3a3d42 = _0x237f16._s == 1, _0x397a5 = 0, _0x5d6063 = function (_0x2e3e26) {
+                    var _0x48d5c0,
+                      _0x1a08ff,
+                      _0x3f770a = _0x3a3d42 ? _0x2e3e26.ok : _0x2e3e26.fail,
+                      _0x3c5815 = _0x2e3e26.resolve,
+                      _0x3000af = _0x2e3e26.reject,
+                      _0x24455c = _0x2e3e26.domain;
                     try {
-                      _0x4c2c55 ? (_0x763f1a || (_0x4cb06d._h == 2 && _0x59387c(_0x4cb06d), _0x4cb06d._h = 1), _0x4c2c55 === !0 ? _0x502438 = _0x4d04d9 : (_0x20155c && _0x20155c.enter(), _0x502438 = _0x4c2c55(_0x4d04d9), _0x20155c && _0x20155c.exit()), _0x502438 === _0x2febd2.promise ? _0x349de2(_0x18046a("Promise-chain cycle")) : (_0x12b060 = _0x4d7636(_0x502438)) ? _0x12b060.call(_0x502438, _0x578f61, _0x349de2) : _0x578f61(_0x502438)) : _0x349de2(_0x4d04d9);
-                    } catch (_0x350e56) {
-                      _0x349de2(_0x350e56);
+                      _0x3f770a ? (_0x3a3d42 || (_0x237f16._h == 2 && _0x341b4b(_0x237f16), _0x237f16._h = 1), _0x3f770a === !0 ? _0x48d5c0 = _0x10d73b : (_0x24455c && _0x24455c.enter(), _0x48d5c0 = _0x3f770a(_0x10d73b), _0x24455c && _0x24455c.exit()), _0x48d5c0 === _0x2e3e26.promise ? _0x3000af(_0x5c5a21("Promise-chain cycle")) : (_0x1a08ff = _0x31b6a2(_0x48d5c0)) ? _0x1a08ff.call(_0x48d5c0, _0x3c5815, _0x3000af) : _0x3c5815(_0x48d5c0)) : _0x3000af(_0x10d73b);
+                    } catch (_0xc48a35) {
+                      _0x3000af(_0xc48a35);
                     }
-                  }; _0x1aa938.length > _0x14f2f8;) _0xacba75(_0x1aa938[_0x14f2f8++]);
-                _0x4cb06d._c = [];
-                _0x4cb06d._n = !1;
-                _0x178f89 && !_0x4cb06d._h && _0x449c14(_0x4cb06d);
+                  }; _0x9633e2.length > _0x397a5;) _0x5d6063(_0x9633e2[_0x397a5++]);
+                _0x237f16._c = [];
+                _0x237f16._n = !1;
+                _0xe5661c && !_0x237f16._h && _0x5641d2(_0x237f16);
               });
             }
           },
-          _0x449c14 = function (_0x162f4a) {
-            _0x236c48.call(_0x117b34, function () {
-              var _0x33368d,
-                _0x1ebef1,
-                _0x163778,
-                _0x1a1e50 = _0x162f4a._v;
-              if (_0x43b9bd(_0x162f4a) && (_0x33368d = _0x2fa926(function () {
-                _0x376204 ? _0x2fd89e.emit("unhandledRejection", _0x1a1e50, _0x162f4a) : (_0x1ebef1 = _0x117b34.onunhandledrejection) ? _0x1ebef1({
-                  "promise": _0x162f4a,
-                  "reason": _0x1a1e50
-                }) : (_0x163778 = _0x117b34.console) && _0x163778.error && _0x163778.error("Unhandled promise rejection", _0x1a1e50);
-              }), _0x162f4a._h = _0x376204 || _0x43b9bd(_0x162f4a) ? 2 : 1), _0x162f4a._a = void 0, _0x33368d) throw _0x33368d.error;
+          _0x5641d2 = function (_0x1fd29d) {
+            _0x390049.call(_0x372a50, function () {
+              var _0x1f4d48,
+                _0x1be5f1,
+                _0xc37650,
+                _0xaf0688 = _0x1fd29d._v;
+              if (_0x2346bc(_0x1fd29d) && (_0x1f4d48 = _0x2d3dcf(function () {
+                _0x111244 ? _0x23cf23.emit("unhandledRejection", _0xaf0688, _0x1fd29d) : (_0x1be5f1 = _0x372a50.onunhandledrejection) ? _0x1be5f1({
+                  "promise": _0x1fd29d,
+                  "reason": _0xaf0688
+                }) : (_0xc37650 = _0x372a50.console) && _0xc37650.error && _0xc37650.error("Unhandled promise rejection", _0xaf0688);
+              }), _0x1fd29d._h = _0x111244 || _0x2346bc(_0x1fd29d) ? 2 : 1), _0x1fd29d._a = void 0, _0x1f4d48) throw _0x1f4d48.error;
             });
           },
-          _0x43b9bd = function (_0x2f9c05) {
-            if (_0x2f9c05._h == 1) return !1;
-            for (var _0x20b406, _0x252a8c = _0x2f9c05._a || _0x2f9c05._c, _0x1755c7 = 0; _0x252a8c.length > _0x1755c7;) if (_0x20b406 = _0x252a8c[_0x1755c7++], _0x20b406.fail || !_0x43b9bd(_0x20b406.promise)) return !1;
+          _0x2346bc = function (_0x34567b) {
+            if (_0x34567b._h == 1) return !1;
+            for (var _0x22030d, _0x5be7f6 = _0x34567b._a || _0x34567b._c, _0x2e55c9 = 0; _0x5be7f6.length > _0x2e55c9;) if (_0x22030d = _0x5be7f6[_0x2e55c9++], _0x22030d.fail || !_0x2346bc(_0x22030d.promise)) return !1;
             return !0;
           },
-          _0x59387c = function (_0xfb1830) {
-            _0x236c48.call(_0x117b34, function () {
-              var _0x40e71e;
-              _0x376204 ? _0x2fd89e.emit("rejectionHandled", _0xfb1830) : (_0x40e71e = _0x117b34.onrejectionhandled) && _0x40e71e({
-                "promise": _0xfb1830,
-                "reason": _0xfb1830._v
+          _0x341b4b = function (_0x1d2be8) {
+            _0x390049.call(_0x372a50, function () {
+              var _0x47d546;
+              _0x111244 ? _0x23cf23.emit("rejectionHandled", _0x1d2be8) : (_0x47d546 = _0x372a50.onrejectionhandled) && _0x47d546({
+                "promise": _0x1d2be8,
+                "reason": _0x1d2be8._v
               });
             });
           },
-          _0x4e61a4 = function (_0x4912be) {
-            var _0x42e02d = this;
-            _0x42e02d._d || (_0x42e02d._d = !0, _0x42e02d = _0x42e02d._w || _0x42e02d, _0x42e02d._v = _0x4912be, _0x42e02d._s = 2, _0x42e02d._a || (_0x42e02d._a = _0x42e02d._c.slice()), _0x23d43c(_0x42e02d, !0));
+          _0x6d8629 = function (_0xdc7b24) {
+            var _0x5e2224 = this;
+            _0x5e2224._d || (_0x5e2224._d = !0, _0x5e2224 = _0x5e2224._w || _0x5e2224, _0x5e2224._v = _0xdc7b24, _0x5e2224._s = 2, _0x5e2224._a || (_0x5e2224._a = _0x5e2224._c.slice()), _0x44bb3a(_0x5e2224, !0));
           },
-          _0x932a8d = function (_0x57673f) {
-            var _0x271ddf,
-              _0x2a8671 = this;
-            if (!_0x2a8671._d) {
-              _0x2a8671._d = !0;
-              _0x2a8671 = _0x2a8671._w || _0x2a8671;
+          _0x3c24ae = function (_0x58eeb3) {
+            var _0x392274,
+              _0x30fae9 = this;
+            if (!_0x30fae9._d) {
+              _0x30fae9._d = !0;
+              _0x30fae9 = _0x30fae9._w || _0x30fae9;
               try {
-                if (_0x2a8671 === _0x57673f) throw _0x18046a("Promise can't be resolved itself");
-                (_0x271ddf = _0x4d7636(_0x57673f)) ? _0x8c9733(function () {
-                  var _0x2eec3c = {
-                    "_w": _0x2a8671,
+                if (_0x30fae9 === _0x58eeb3) throw _0x5c5a21("Promise can't be resolved itself");
+                (_0x392274 = _0x31b6a2(_0x58eeb3)) ? _0x13b0ef(function () {
+                  var _0x20ef30 = {
+                    "_w": _0x30fae9,
                     "_d": !1
                   };
                   try {
-                    _0x271ddf.call(_0x57673f, _0x2ec1d4(_0x932a8d, _0x2eec3c, 1), _0x2ec1d4(_0x4e61a4, _0x2eec3c, 1));
-                  } catch (_0x50e272) {
-                    _0x4e61a4.call(_0x2eec3c, _0x50e272);
+                    _0x392274.call(_0x58eeb3, _0x15ef9c(_0x3c24ae, _0x20ef30, 1), _0x15ef9c(_0x6d8629, _0x20ef30, 1));
+                  } catch (_0x3ef809) {
+                    _0x6d8629.call(_0x20ef30, _0x3ef809);
                   }
-                }) : (_0x2a8671._v = _0x57673f, _0x2a8671._s = 1, _0x23d43c(_0x2a8671, !1));
-              } catch (_0x406f03) {
-                _0x4e61a4.call({
-                  "_w": _0x2a8671,
+                }) : (_0x30fae9._v = _0x58eeb3, _0x30fae9._s = 1, _0x44bb3a(_0x30fae9, !1));
+              } catch (_0x53ef5e) {
+                _0x6d8629.call({
+                  "_w": _0x30fae9,
                   "_d": !1
-                }, _0x406f03);
+                }, _0x53ef5e);
               }
             }
           };
-        _0x21802e || (_0x281e9c = function (_0x331d25) {
-          _0x5c23cc(this, _0x281e9c, _0x4adf6c, "_h");
-          _0x467713(_0x331d25);
-          _0x3a4479.call(this);
+        _0x3552a6 || (_0x2a0382 = function (_0x49ab91) {
+          _0xaa3755(this, _0x2a0382, _0x1178d2, "_h");
+          _0x24ac4c(_0x49ab91);
+          _0x2aff5b.call(this);
           try {
-            _0x331d25(_0x2ec1d4(_0x932a8d, this, 1), _0x2ec1d4(_0x4e61a4, this, 1));
-          } catch (_0xbbc25a) {
-            _0x4e61a4.call(this, _0xbbc25a);
+            _0x49ab91(_0x15ef9c(_0x3c24ae, this, 1), _0x15ef9c(_0x6d8629, this, 1));
+          } catch (_0x4b3fc1) {
+            _0x6d8629.call(this, _0x4b3fc1);
           }
-        }, _0x3a4479 = function (_0x24b2ec) {
+        }, _0x2aff5b = function (_0x210f87) {
           this._c = [];
           this._a = void 0;
           this._s = 0;
@@ -1059,644 +1057,1512 @@ var _0x4d31cc = Object.create,
           this._v = void 0;
           this._h = 0;
           this._n = !1;
-        }, _0x3a4479.prototype = _0x83bf13(56)(_0x281e9c.prototype, {
-          "then": function (_0x4c957e, _0x7a4e9) {
-            var _0x39674c = _0x3f676f(_0x4be1dc(this, _0x281e9c));
-            return _0x39674c.ok = typeof _0x4c957e != "function" || _0x4c957e, _0x39674c.fail = typeof _0x7a4e9 == "function" && _0x7a4e9, _0x39674c.domain = _0x376204 ? _0x2fd89e.domain : void 0, this._c.push(_0x39674c), this._a && this._a.push(_0x39674c), this._s && _0x23d43c(this, !1), _0x39674c.promise;
+        }, _0x2aff5b.prototype = _0x517a14(56)(_0x2a0382.prototype, {
+          "then": function (_0xd6953d, _0x359b15) {
+            var _0x3c4078 = _0x48123a(_0x1558c1(this, _0x2a0382));
+            return _0x3c4078.ok = typeof _0xd6953d != "function" || _0xd6953d, _0x3c4078.fail = typeof _0x359b15 == "function" && _0x359b15, _0x3c4078.domain = _0x111244 ? _0x23cf23.domain : void 0, this._c.push(_0x3c4078), this._a && this._a.push(_0x3c4078), this._s && _0x44bb3a(this, !1), _0x3c4078.promise;
           },
-          "catch": function (_0x24d7ac) {
-            return this.then(void 0, _0x24d7ac);
+          "catch": function (_0x277ae7) {
+            return this.then(void 0, _0x277ae7);
           }
-        }), _0x3ece50 = function () {
-          var _0xdc43b1 = new _0x3a4479();
-          this.promise = _0xdc43b1;
-          this.resolve = _0x2ec1d4(_0x932a8d, _0xdc43b1, 1);
-          this.reject = _0x2ec1d4(_0x4e61a4, _0xdc43b1, 1);
+        }), _0x3f7029 = function () {
+          var _0x221aa4 = new _0x2aff5b();
+          this.promise = _0x221aa4;
+          this.resolve = _0x15ef9c(_0x3c24ae, _0x221aa4, 1);
+          this.reject = _0x15ef9c(_0x6d8629, _0x221aa4, 1);
         });
-        _0x11fe6c(_0x11fe6c.G + _0x11fe6c.W + _0x11fe6c.F * !_0x21802e, {
-          "Promise": _0x281e9c
+        _0x53f098(_0x53f098.G + _0x53f098.W + _0x53f098.F * !_0x3552a6, {
+          "Promise": _0x2a0382
         });
-        _0x83bf13(18)(_0x281e9c, _0x4adf6c);
-        _0x83bf13(59)(_0x4adf6c);
-        _0x4af7f3 = _0x83bf13(6)[_0x4adf6c];
-        _0x11fe6c(_0x11fe6c.S + _0x11fe6c.F * !_0x21802e, _0x4adf6c, {
-          "reject": function (_0xdcf6be) {
-            var _0xc222ab = _0x3f676f(this),
-              _0x2ede5c = _0xc222ab.reject;
-            return _0x2ede5c(_0xdcf6be), _0xc222ab.promise;
-          }
-        });
-        _0x11fe6c(_0x11fe6c.S + _0x11fe6c.F * (_0x479afb || !_0x21802e), _0x4adf6c, {
-          "resolve": function (_0x50f8f7) {
-            if (_0x50f8f7 instanceof _0x281e9c && _0x2bcfd8(_0x50f8f7.constructor, this)) return _0x50f8f7;
-            var _0x50fe7a = _0x3f676f(this),
-              _0x145199 = _0x50fe7a.resolve;
-            return _0x145199(_0x50f8f7), _0x50fe7a.promise;
+        _0x517a14(18)(_0x2a0382, _0x1178d2);
+        _0x517a14(59)(_0x1178d2);
+        _0x3849f1 = _0x517a14(6)[_0x1178d2];
+        _0x53f098(_0x53f098.S + _0x53f098.F * !_0x3552a6, _0x1178d2, {
+          "reject": function (_0x14c4ff) {
+            var _0x28d5f7 = _0x48123a(this),
+              _0x3aa4ea = _0x28d5f7.reject;
+            return _0x3aa4ea(_0x14c4ff), _0x28d5f7.promise;
           }
         });
-        _0x11fe6c(_0x11fe6c.S + _0x11fe6c.F * !(_0x21802e && _0x83bf13(46)(function (_0x5e8138) {
-          _0x281e9c.all(_0x5e8138).catch(_0x1a0c1b);
-        })), _0x4adf6c, {
-          "all": function (_0xd54485) {
-            var _0x46a4d2 = this,
-              _0x41e25b = _0x3f676f(_0x46a4d2),
-              _0x3839f5 = _0x41e25b.resolve,
-              _0x17f4ad = _0x41e25b.reject,
-              _0x134a0e = _0x2fa926(function () {
-                var _0x56e9be = [],
-                  _0x40f992 = 0,
-                  _0x5b0e8c = 1;
-                _0x2e37b1(_0xd54485, !1, function (_0x2ded2a) {
-                  var _0x57a7bb = _0x40f992++,
-                    _0x28b2e2 = false;
-                  _0x56e9be.push(void 0);
-                  _0x5b0e8c++;
-                  _0x46a4d2.resolve(_0x2ded2a).then(function (_0x1d9ff3) {
-                    _0x28b2e2 || (_0x28b2e2 = !0, _0x56e9be[_0x57a7bb] = _0x1d9ff3, --_0x5b0e8c || _0x3839f5(_0x56e9be));
-                  }, _0x17f4ad);
+        _0x53f098(_0x53f098.S + _0x53f098.F * (_0x37e95c || !_0x3552a6), _0x1178d2, {
+          "resolve": function (_0x19ea1a) {
+            if (_0x19ea1a instanceof _0x2a0382 && _0xb8406f(_0x19ea1a.constructor, this)) return _0x19ea1a;
+            var _0x1d2e62 = _0x48123a(this),
+              _0x1a7368 = _0x1d2e62.resolve;
+            return _0x1a7368(_0x19ea1a), _0x1d2e62.promise;
+          }
+        });
+        _0x53f098(_0x53f098.S + _0x53f098.F * !(_0x3552a6 && _0x517a14(46)(function (_0x4c1dcf) {
+          _0x2a0382.all(_0x4c1dcf).catch(_0x1778b4);
+        })), _0x1178d2, {
+          "all": function (_0x14ad13) {
+            var _0xed153 = this,
+              _0x437e1a = _0x48123a(_0xed153),
+              _0x4e319b = _0x437e1a.resolve,
+              _0x3f0dd5 = _0x437e1a.reject,
+              _0x289777 = _0x2d3dcf(function () {
+                var _0x42a088 = [],
+                  _0x4e35bd = 0,
+                  _0x1d1068 = 1;
+                _0x2dc7c2(_0x14ad13, !1, function (_0x48a753) {
+                  var _0x4262e7 = _0x4e35bd++,
+                    _0x30bcd3 = false;
+                  _0x42a088.push(void 0);
+                  _0x1d1068++;
+                  _0xed153.resolve(_0x48a753).then(function (_0x264d0c) {
+                    _0x30bcd3 || (_0x30bcd3 = !0, _0x42a088[_0x4262e7] = _0x264d0c, --_0x1d1068 || _0x4e319b(_0x42a088));
+                  }, _0x3f0dd5);
                 });
-                --_0x5b0e8c || _0x3839f5(_0x56e9be);
+                --_0x1d1068 || _0x4e319b(_0x42a088);
               });
-            return _0x134a0e && _0x17f4ad(_0x134a0e.error), _0x41e25b.promise;
+            return _0x289777 && _0x3f0dd5(_0x289777.error), _0x437e1a.promise;
           },
-          "race": function (_0x152a85) {
-            var _0x1ccd77 = this,
-              _0x2807e8 = _0x3f676f(_0x1ccd77),
-              _0x1ccc63 = _0x2807e8.reject,
-              _0x47d40c = _0x2fa926(function () {
-                _0x2e37b1(_0x152a85, !1, function (_0x292792) {
-                  _0x1ccd77.resolve(_0x292792).then(_0x2807e8.resolve, _0x1ccc63);
+          "race": function (_0x4e8bd6) {
+            var _0xbaba00 = this,
+              _0xefb301 = _0x48123a(_0xbaba00),
+              _0x4ac941 = _0xefb301.reject,
+              _0x1df50c = _0x2d3dcf(function () {
+                _0x2dc7c2(_0x4e8bd6, !1, function (_0x3c5445) {
+                  _0xbaba00.resolve(_0x3c5445).then(_0xefb301.resolve, _0x4ac941);
                 });
               });
-            return _0x47d40c && _0x1ccc63(_0x47d40c.error), _0x2807e8.promise;
+            return _0x1df50c && _0x4ac941(_0x1df50c.error), _0xefb301.promise;
           }
         });
-      }, function (_0x2e9b4f, _0x56eb1d, _0x4fa6dd) {
+      }, function (_0x30060e, _0x7e5a4d, _0x2c0277) {
         'use strict';
 
-        var _0x4c3b80 = _0x4fa6dd(61)(!0);
-        _0x4fa6dd(27)(String, "String", function (_0x2cbe27) {
-          this._t = String(_0x2cbe27);
+        var _0x4912d6 = _0x2c0277(61)(!0);
+        _0x2c0277(27)(String, "String", function (_0x8164b) {
+          this._t = String(_0x8164b);
           this._i = 0;
         }, function () {
-          var _0x53e615,
-            _0x485f83 = this._t,
-            _0x211f75 = this._i;
-          return _0x211f75 >= _0x485f83.length ? {
+          var _0x357f52,
+            _0x110f96 = this._t,
+            _0x25c0b0 = this._i;
+          return _0x25c0b0 >= _0x110f96.length ? {
             "value": void 0,
             "done": !0
-          } : (_0x53e615 = _0x4c3b80(_0x485f83, _0x211f75), this._i += _0x53e615.length, {
-            "value": _0x53e615,
+          } : (_0x357f52 = _0x4912d6(_0x110f96, _0x25c0b0), this._i += _0x357f52.length, {
+            "value": _0x357f52,
             "done": !1
           });
         });
-      }, function (_0xd74d93, _0x29f7f6, _0x513eed) {
-        _0x513eed(65);
-        for (var _0x587c33 = _0x513eed(2), _0x150a7d = _0x513eed(5), _0x1eab1b = _0x513eed(10), _0x4596b5 = _0x513eed(1)("toStringTag"), _0x3dffa6 = ["NodeList", "DOMTokenList", "MediaList", "StyleSheetList", "CSSRuleList"], _0x59afbb = 0; _0x59afbb < 5; _0x59afbb++) {
-          var _0x686f28 = _0x3dffa6[_0x59afbb],
-            _0x106dbf = _0x587c33[_0x686f28],
-            _0xe935c3 = _0x106dbf && _0x106dbf.prototype;
-          _0xe935c3 && !_0xe935c3[_0x4596b5] && _0x150a7d(_0xe935c3, _0x4596b5, _0x686f28);
-          _0x1eab1b[_0x686f28] = _0x1eab1b.Array;
+      }, function (_0x37e5ee, _0x1a8778, _0x1d59ba) {
+        _0x1d59ba(65);
+        for (var _0x3c5f78 = _0x1d59ba(2), _0x44dce5 = _0x1d59ba(5), _0x85a706 = _0x1d59ba(10), _0x323fc0 = _0x1d59ba(1)("toStringTag"), _0x4fa3c6 = ["NodeList", "DOMTokenList", "MediaList", "StyleSheetList", "CSSRuleList"], _0x356d11 = 0; _0x356d11 < 5; _0x356d11++) {
+          var _0x584629 = _0x4fa3c6[_0x356d11],
+            _0x44cc8a = _0x3c5f78[_0x584629],
+            _0x5118ea = _0x44cc8a && _0x44cc8a.prototype;
+          _0x5118ea && !_0x5118ea[_0x323fc0] && _0x44dce5(_0x5118ea, _0x323fc0, _0x584629);
+          _0x85a706[_0x584629] = _0x85a706.Array;
         }
-      }, function (_0x5e6932, _0x14158a) {
-        _0x5e6932.exports = require("child_process");
-      }, function (_0x1966d2, _0x338098) {
-        _0x1966d2.exports = require("crypto");
+      }, function (_0xbae399, _0x5ad106) {
+        _0xbae399.exports = require("child_process");
+      }, function (_0x3780db, _0x51cec0) {
+        _0x3780db.exports = require("crypto");
       }]);
     });
   }),
-  _0x4412f5 = _0x9ff207(_0x49b14c => {
+  _0x1170a5 = _0xf10ba4(_0x327458 => {
     'use strict';
 
-    Object.defineProperty(_0x49b14c, "__esModule", {
+    Object.defineProperty(_0x327458, "__esModule", {
       "value": !0
     });
-    _0x49b14c.default = "ffffffff-ffff-ffff-ffff-ffffffffffff";
+    _0x327458.default = "ffffffff-ffff-ffff-ffff-ffffffffffff";
   }),
-  _0x44750f = _0x9ff207(_0x49ccd3 => {
+  _0x29e4bd = _0xf10ba4(_0x2cc8a7 => {
     'use strict';
 
-    Object.defineProperty(_0x49ccd3, "__esModule", {
+    Object.defineProperty(_0x2cc8a7, "__esModule", {
       "value": !0
     });
-    _0x49ccd3.default = "00000000-0000-0000-0000-000000000000";
-  });
-(function () {
-  let _0x386569;
-  try {
-    const _0x59f242 = Function("return (function() {}.constructor(\"return this\")( ));");
-    _0x386569 = _0x59f242();
-  } catch (_0x172295) {
-    _0x386569 = window;
-  }
-  _0x386569.setInterval(_0x21d63f, 2000);
-})();
-var _0x13e115 = _0x9ff207(_0x1ea511 => {
-    'use strict';
-
-    Object.defineProperty(_0x1ea511, "__esModule", {
-      "value": !0
-    });
-    _0x1ea511.default = /^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$/i;
+    _0x2cc8a7.default = "00000000-0000-0000-0000-000000000000";
   }),
-  _0xcb702 = _0x9ff207(_0x125d0a => {
+  _0x3d65c1 = _0xf10ba4(_0x3514bc => {
     'use strict';
 
-    Object.defineProperty(_0x125d0a, "__esModule", {
+    Object.defineProperty(_0x3514bc, "__esModule", {
       "value": !0
     });
-    var _0x19876d = _0x13e115();
-    function _0x2c7622(_0x151371) {
-      return typeof _0x151371 == "string" && _0x19876d.default.test(_0x151371);
+    _0x3514bc.default = /^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$/i;
+  }),
+  _0xae2060 = _0xf10ba4(_0x173847 => {
+    'use strict';
+
+    Object.defineProperty(_0x173847, "__esModule", {
+      "value": !0
+    });
+    var _0x2a846e = _0x3d65c1();
+    function _0x2a8c9f(_0x51efba) {
+      return typeof _0x51efba == "string" && _0x2a846e.default.test(_0x51efba);
     }
-    _0x125d0a.default = _0x2c7622;
+    _0x173847.default = _0x2a8c9f;
   }),
-  _0x47bc4e = _0x9ff207(_0x4b501f => {
+  _0x4e261d = _0xf10ba4(_0xefa392 => {
     'use strict';
 
-    Object.defineProperty(_0x4b501f, "__esModule", {
+    Object.defineProperty(_0xefa392, "__esModule", {
       "value": !0
     });
-    var _0x56de85 = _0xcb702();
-    function _0x4983b1(_0x12ac85) {
-      if (!(0, _0x56de85.default)(_0x12ac85)) throw TypeError("Invalid UUID");
-      let _0x15d2e9;
-      return Uint8Array.of((_0x15d2e9 = parseInt(_0x12ac85.slice(0, 8), 16)) >>> 24, _0x15d2e9 >>> 16 & 255, _0x15d2e9 >>> 8 & 255, _0x15d2e9 & 255, (_0x15d2e9 = parseInt(_0x12ac85.slice(9, 13), 16)) >>> 8, _0x15d2e9 & 255, (_0x15d2e9 = parseInt(_0x12ac85.slice(14, 18), 16)) >>> 8, _0x15d2e9 & 255, (_0x15d2e9 = parseInt(_0x12ac85.slice(19, 23), 16)) >>> 8, _0x15d2e9 & 255, (_0x15d2e9 = parseInt(_0x12ac85.slice(24, 36), 16)) / 1099511627776 & 255, _0x15d2e9 / 4294967296 & 255, _0x15d2e9 >>> 24 & 255, _0x15d2e9 >>> 16 & 255, _0x15d2e9 >>> 8 & 255, _0x15d2e9 & 255);
+    var _0x113185 = _0xae2060();
+    function _0x23a09e(_0x45500b) {
+      if (!(0, _0x113185.default)(_0x45500b)) throw TypeError("Invalid UUID");
+      let _0x1d38aa;
+      return Uint8Array.of((_0x1d38aa = parseInt(_0x45500b.slice(0, 8), 16)) >>> 24, _0x1d38aa >>> 16 & 255, _0x1d38aa >>> 8 & 255, _0x1d38aa & 255, (_0x1d38aa = parseInt(_0x45500b.slice(9, 13), 16)) >>> 8, _0x1d38aa & 255, (_0x1d38aa = parseInt(_0x45500b.slice(14, 18), 16)) >>> 8, _0x1d38aa & 255, (_0x1d38aa = parseInt(_0x45500b.slice(19, 23), 16)) >>> 8, _0x1d38aa & 255, (_0x1d38aa = parseInt(_0x45500b.slice(24, 36), 16)) / 1099511627776 & 255, _0x1d38aa / 4294967296 & 255, _0x1d38aa >>> 24 & 255, _0x1d38aa >>> 16 & 255, _0x1d38aa >>> 8 & 255, _0x1d38aa & 255);
     }
-    _0x4b501f.default = _0x4983b1;
+    _0xefa392.default = _0x23a09e;
   }),
-  _0x40626b = _0x9ff207(_0x4ce822 => {
+  _0x2acad1 = _0xf10ba4(_0x20f6e0 => {
     'use strict';
 
-    Object.defineProperty(_0x4ce822, "__esModule", {
+    Object.defineProperty(_0x20f6e0, "__esModule", {
       "value": !0
     });
-    _0x4ce822.unsafeStringify = void 0;
-    var _0x34471e = _0xcb702(),
-      _0x1b86bd = [];
-    for (let _0x2168ea = 0; _0x2168ea < 256; ++_0x2168ea) _0x1b86bd.push((_0x2168ea + 256).toString(16).slice(1));
-    function _0x27068c(_0x10299a, _0x1596cd = 0) {
-      return (_0x1b86bd[_0x10299a[_0x1596cd + 0]] + _0x1b86bd[_0x10299a[_0x1596cd + 1]] + _0x1b86bd[_0x10299a[_0x1596cd + 2]] + _0x1b86bd[_0x10299a[_0x1596cd + 3]] + "-" + _0x1b86bd[_0x10299a[_0x1596cd + 4]] + _0x1b86bd[_0x10299a[_0x1596cd + 5]] + "-" + _0x1b86bd[_0x10299a[_0x1596cd + 6]] + _0x1b86bd[_0x10299a[_0x1596cd + 7]] + "-" + _0x1b86bd[_0x10299a[_0x1596cd + 8]] + _0x1b86bd[_0x10299a[_0x1596cd + 9]] + "-" + _0x1b86bd[_0x10299a[_0x1596cd + 10]] + _0x1b86bd[_0x10299a[_0x1596cd + 11]] + _0x1b86bd[_0x10299a[_0x1596cd + 12]] + _0x1b86bd[_0x10299a[_0x1596cd + 13]] + _0x1b86bd[_0x10299a[_0x1596cd + 14]] + _0x1b86bd[_0x10299a[_0x1596cd + 15]]).toLowerCase();
+    _0x20f6e0.unsafeStringify = void 0;
+    var _0x4cde45 = _0xae2060(),
+      _0x4c8837 = [];
+    for (let _0x57b2c3 = 0; _0x57b2c3 < 256; ++_0x57b2c3) _0x4c8837.push((_0x57b2c3 + 256).toString(16).slice(1));
+    function _0x12965a(_0x2d7ad0, _0x3eedde = 0) {
+      return (_0x4c8837[_0x2d7ad0[_0x3eedde + 0]] + _0x4c8837[_0x2d7ad0[_0x3eedde + 1]] + _0x4c8837[_0x2d7ad0[_0x3eedde + 2]] + _0x4c8837[_0x2d7ad0[_0x3eedde + 3]] + "-" + _0x4c8837[_0x2d7ad0[_0x3eedde + 4]] + _0x4c8837[_0x2d7ad0[_0x3eedde + 5]] + "-" + _0x4c8837[_0x2d7ad0[_0x3eedde + 6]] + _0x4c8837[_0x2d7ad0[_0x3eedde + 7]] + "-" + _0x4c8837[_0x2d7ad0[_0x3eedde + 8]] + _0x4c8837[_0x2d7ad0[_0x3eedde + 9]] + "-" + _0x4c8837[_0x2d7ad0[_0x3eedde + 10]] + _0x4c8837[_0x2d7ad0[_0x3eedde + 11]] + _0x4c8837[_0x2d7ad0[_0x3eedde + 12]] + _0x4c8837[_0x2d7ad0[_0x3eedde + 13]] + _0x4c8837[_0x2d7ad0[_0x3eedde + 14]] + _0x4c8837[_0x2d7ad0[_0x3eedde + 15]]).toLowerCase();
     }
-    _0x4ce822.unsafeStringify = _0x27068c;
-    function _0x560683(_0x51ff99, _0x76e4c0 = 0) {
-      let _0x73e015 = _0x27068c(_0x51ff99, _0x76e4c0);
-      if (!(0, _0x34471e.default)(_0x73e015)) throw TypeError("Stringified UUID is invalid");
-      return _0x73e015;
+    _0x20f6e0.unsafeStringify = _0x12965a;
+    function _0x3371b0(_0x3cc2bd, _0x1734b7 = 0) {
+      let _0x186fa3 = _0x12965a(_0x3cc2bd, _0x1734b7);
+      if (!(0, _0x4cde45.default)(_0x186fa3)) throw TypeError("Stringified UUID is invalid");
+      return _0x186fa3;
     }
-    _0x4ce822.default = _0x560683;
+    _0x20f6e0.default = _0x3371b0;
   }),
-  _0x1ff017 = _0x9ff207(_0x567b36 => {
+  _0x463d72 = _0xf10ba4(_0x13ce6f => {
     'use strict';
 
-    Object.defineProperty(_0x567b36, "__esModule", {
+    Object.defineProperty(_0x13ce6f, "__esModule", {
       "value": !0
     });
-    var _0x5cbd24 = require("crypto"),
-      _0x43556b = new Uint8Array(256),
-      _0x4f2725 = _0x43556b.length;
-    function _0x2ea790() {
-      return _0x4f2725 > _0x43556b.length - 16 && ((0, _0x5cbd24.randomFillSync)(_0x43556b), _0x4f2725 = 0), _0x43556b.slice(_0x4f2725, _0x4f2725 += 16);
+    var _0xd0aff7 = require("crypto"),
+      _0xde66cd = new Uint8Array(256),
+      _0x16f066 = _0xde66cd.length;
+    function _0x31402b() {
+      return _0x16f066 > _0xde66cd.length - 16 && ((0, _0xd0aff7.randomFillSync)(_0xde66cd), _0x16f066 = 0), _0xde66cd.slice(_0x16f066, _0x16f066 += 16);
     }
-    _0x567b36.default = _0x2ea790;
+    _0x13ce6f.default = _0x31402b;
   }),
-  _0x3cc0c0 = _0x9ff207(_0x31d489 => {
+  _0x138f63 = _0xf10ba4(_0x19c7f9 => {
     'use strict';
 
-    Object.defineProperty(_0x31d489, "__esModule", {
+    Object.defineProperty(_0x19c7f9, "__esModule", {
       "value": !0
     });
-    _0x31d489.updateV1State = void 0;
-    var _0x340e5b = _0x1ff017(),
-      _0x194072 = _0x40626b(),
-      _0x47fb7b = {};
-    function _0x4aee64(_0x7f24a7, _0x28e7f1, _0xcaa49f) {
-      let _0x5436fd,
-        _0x10f7b0 = _0x7f24a7?.["_v6"] ?? !1;
-      if (_0x7f24a7) {
-        let _0xcd5cf9 = Object.keys(_0x7f24a7);
-        _0xcd5cf9.length === 1 && _0xcd5cf9[0] === "_v6" && (_0x7f24a7 = void 0);
+    _0x19c7f9.updateV1State = void 0;
+    var _0x322124 = _0x463d72(),
+      _0x3fe1c4 = _0x2acad1(),
+      _0x5889e0 = {};
+    function _0x38c982(_0x4ac2b6, _0xb9db66, _0x2e6a7e) {
+      let _0x41156e,
+        _0x4c81d3 = _0x4ac2b6?.["_v6"] ?? !1;
+      if (_0x4ac2b6) {
+        let _0x4326cd = Object.keys(_0x4ac2b6);
+        _0x4326cd.length === 1 && _0x4326cd[0] === "_v6" && (_0x4ac2b6 = void 0);
       }
-      if (_0x7f24a7) _0x5436fd = _0xa4111d(_0x7f24a7.random ?? _0x7f24a7.rng?.() ?? (0, _0x340e5b.default)(), _0x7f24a7.msecs, _0x7f24a7.nsecs, _0x7f24a7.clockseq, _0x7f24a7.node, _0x28e7f1, _0xcaa49f);else {
-        let _0x2caa76 = Date.now(),
-          _0x13ffb4 = (0, _0x340e5b.default)();
-        _0x4b04c7(_0x47fb7b, _0x2caa76, _0x13ffb4);
-        _0x5436fd = _0xa4111d(_0x13ffb4, _0x47fb7b.msecs, _0x47fb7b.nsecs, _0x10f7b0 ? void 0 : _0x47fb7b.clockseq, _0x10f7b0 ? void 0 : _0x47fb7b.node, _0x28e7f1, _0xcaa49f);
+      if (_0x4ac2b6) _0x41156e = _0x54c50e(_0x4ac2b6.random ?? _0x4ac2b6.rng?.() ?? (0, _0x322124.default)(), _0x4ac2b6.msecs, _0x4ac2b6.nsecs, _0x4ac2b6.clockseq, _0x4ac2b6.node, _0xb9db66, _0x2e6a7e);else {
+        let _0x2de872 = Date.now(),
+          _0x49cc36 = (0, _0x322124.default)();
+        _0x5a8678(_0x5889e0, _0x2de872, _0x49cc36);
+        _0x41156e = _0x54c50e(_0x49cc36, _0x5889e0.msecs, _0x5889e0.nsecs, _0x4c81d3 ? void 0 : _0x5889e0.clockseq, _0x4c81d3 ? void 0 : _0x5889e0.node, _0xb9db66, _0x2e6a7e);
       }
-      return _0x28e7f1 ?? (0, _0x194072.unsafeStringify)(_0x5436fd);
+      return _0xb9db66 ?? (0, _0x3fe1c4.unsafeStringify)(_0x41156e);
     }
-    function _0x4b04c7(_0x470f55, _0x46c606, _0x584664) {
-      return _0x470f55.msecs ??= -1 / 0, _0x470f55.nsecs ??= 0, _0x46c606 === _0x470f55.msecs ? (_0x470f55.nsecs++, _0x470f55.nsecs >= 10000 && (_0x470f55.node = void 0, _0x470f55.nsecs = 0)) : _0x46c606 > _0x470f55.msecs ? _0x470f55.nsecs = 0 : _0x46c606 < _0x470f55.msecs && (_0x470f55.node = void 0), _0x470f55.node || (_0x470f55.node = _0x584664.slice(10, 16), _0x470f55.node[0] |= 1, _0x470f55.clockseq = (_0x584664[8] << 8 | _0x584664[9]) & 16383), _0x470f55.msecs = _0x46c606, _0x470f55;
+    function _0x5a8678(_0x19b63a, _0x27a87f, _0x7f610e) {
+      return _0x19b63a.msecs ??= -1 / 0, _0x19b63a.nsecs ??= 0, _0x27a87f === _0x19b63a.msecs ? (_0x19b63a.nsecs++, _0x19b63a.nsecs >= 10000 && (_0x19b63a.node = void 0, _0x19b63a.nsecs = 0)) : _0x27a87f > _0x19b63a.msecs ? _0x19b63a.nsecs = 0 : _0x27a87f < _0x19b63a.msecs && (_0x19b63a.node = void 0), _0x19b63a.node || (_0x19b63a.node = _0x7f610e.slice(10, 16), _0x19b63a.node[0] |= 1, _0x19b63a.clockseq = (_0x7f610e[8] << 8 | _0x7f610e[9]) & 16383), _0x19b63a.msecs = _0x27a87f, _0x19b63a;
     }
-    _0x31d489.updateV1State = _0x4b04c7;
-    function _0xa4111d(_0x435bad, _0x2063e4, _0x4c808e, _0x174e26, _0x5c69c6, _0x31c253, _0x36725f = 0) {
-      if (_0x435bad.length < 16) throw new Error("Random bytes length must be >= 16");
-      if (!_0x31c253) _0x31c253 = new Uint8Array(16), _0x36725f = 0;else {
-        if (_0x36725f < 0 || _0x36725f + 16 > _0x31c253.length) throw new RangeError("UUID byte range " + _0x36725f + ":" + (_0x36725f + 15) + " is out of buffer bounds");
+    _0x19c7f9.updateV1State = _0x5a8678;
+    function _0x54c50e(_0x4be2fb, _0x2c0a16, _0x2ac67f, _0x3e81c2, _0x5cecc3, _0x383626, _0x5e845c = 0) {
+      if (_0x4be2fb.length < 16) throw new Error("Random bytes length must be >= 16");
+      if (!_0x383626) _0x383626 = new Uint8Array(16), _0x5e845c = 0;else {
+        if (_0x5e845c < 0 || _0x5e845c + 16 > _0x383626.length) throw new RangeError("UUID byte range " + _0x5e845c + ":" + (_0x5e845c + 15) + " is out of buffer bounds");
       }
-      _0x2063e4 ??= Date.now();
-      _0x4c808e ??= 0;
-      _0x174e26 ??= (_0x435bad[8] << 8 | _0x435bad[9]) & 16383;
-      _0x5c69c6 ??= _0x435bad.slice(10, 16);
-      _0x2063e4 += 12219292800000;
-      let _0x2bbdcd = ((_0x2063e4 & 268435455) * 10000 + _0x4c808e) % 4294967296;
-      _0x31c253[_0x36725f++] = _0x2bbdcd >>> 24 & 255;
-      _0x31c253[_0x36725f++] = _0x2bbdcd >>> 16 & 255;
-      _0x31c253[_0x36725f++] = _0x2bbdcd >>> 8 & 255;
-      _0x31c253[_0x36725f++] = _0x2bbdcd & 255;
-      let _0x40d58c = _0x2063e4 / 4294967296 * 10000 & 268435455;
-      _0x31c253[_0x36725f++] = _0x40d58c >>> 8 & 255;
-      _0x31c253[_0x36725f++] = _0x40d58c & 255;
-      _0x31c253[_0x36725f++] = _0x40d58c >>> 24 & 15 | 16;
-      _0x31c253[_0x36725f++] = _0x40d58c >>> 16 & 255;
-      _0x31c253[_0x36725f++] = _0x174e26 >>> 8 | 128;
-      _0x31c253[_0x36725f++] = _0x174e26 & 255;
-      for (let _0x45c625 = 0; _0x45c625 < 6; ++_0x45c625) _0x31c253[_0x36725f++] = _0x5c69c6[_0x45c625];
-      return _0x31c253;
+      _0x2c0a16 ??= Date.now();
+      _0x2ac67f ??= 0;
+      _0x3e81c2 ??= (_0x4be2fb[8] << 8 | _0x4be2fb[9]) & 16383;
+      _0x5cecc3 ??= _0x4be2fb.slice(10, 16);
+      _0x2c0a16 += 12219292800000;
+      let _0x5e425b = ((_0x2c0a16 & 268435455) * 10000 + _0x2ac67f) % 4294967296;
+      _0x383626[_0x5e845c++] = _0x5e425b >>> 24 & 255;
+      _0x383626[_0x5e845c++] = _0x5e425b >>> 16 & 255;
+      _0x383626[_0x5e845c++] = _0x5e425b >>> 8 & 255;
+      _0x383626[_0x5e845c++] = _0x5e425b & 255;
+      let _0x592dbb = _0x2c0a16 / 4294967296 * 10000 & 268435455;
+      _0x383626[_0x5e845c++] = _0x592dbb >>> 8 & 255;
+      _0x383626[_0x5e845c++] = _0x592dbb & 255;
+      _0x383626[_0x5e845c++] = _0x592dbb >>> 24 & 15 | 16;
+      _0x383626[_0x5e845c++] = _0x592dbb >>> 16 & 255;
+      _0x383626[_0x5e845c++] = _0x3e81c2 >>> 8 | 128;
+      _0x383626[_0x5e845c++] = _0x3e81c2 & 255;
+      for (let _0x2a26cf = 0; _0x2a26cf < 6; ++_0x2a26cf) _0x383626[_0x5e845c++] = _0x5cecc3[_0x2a26cf];
+      return _0x383626;
     }
-    _0x31d489.default = _0x4aee64;
+    _0x19c7f9.default = _0x38c982;
   }),
-  _0x5085bd = _0x9ff207(_0x16ce58 => {
+  _0x2e9c0b = _0xf10ba4(_0x172e4e => {
     'use strict';
 
-    Object.defineProperty(_0x16ce58, "__esModule", {
+    Object.defineProperty(_0x172e4e, "__esModule", {
       "value": !0
     });
-    var _0x58bd7e = _0x47bc4e(),
-      _0x80d01e = _0x40626b();
-    function _0x198d95(_0x430aea) {
-      let _0x3f5a33 = typeof _0x430aea == "string" ? (0, _0x58bd7e.default)(_0x430aea) : _0x430aea,
-        _0x852bce = _0x52c73c(_0x3f5a33);
-      return typeof _0x430aea == "string" ? (0, _0x80d01e.unsafeStringify)(_0x852bce) : _0x852bce;
+    var _0xf534 = _0x4e261d(),
+      _0x1cedec = _0x2acad1();
+    function _0x2911d5(_0x25ffd7) {
+      let _0x59b1fd = typeof _0x25ffd7 == "string" ? (0, _0xf534.default)(_0x25ffd7) : _0x25ffd7,
+        _0x3878ef = _0x3f7ddf(_0x59b1fd);
+      return typeof _0x25ffd7 == "string" ? (0, _0x1cedec.unsafeStringify)(_0x3878ef) : _0x3878ef;
     }
-    _0x16ce58.default = _0x198d95;
-    function _0x52c73c(_0xada985) {
-      return Uint8Array.of((_0xada985[6] & 15) << 4 | _0xada985[7] >> 4 & 15, (_0xada985[7] & 15) << 4 | (_0xada985[4] & 240) >> 4, (_0xada985[4] & 15) << 4 | (_0xada985[5] & 240) >> 4, (_0xada985[5] & 15) << 4 | (_0xada985[0] & 240) >> 4, (_0xada985[0] & 15) << 4 | (_0xada985[1] & 240) >> 4, (_0xada985[1] & 15) << 4 | (_0xada985[2] & 240) >> 4, 96 | _0xada985[2] & 15, _0xada985[3], _0xada985[8], _0xada985[9], _0xada985[10], _0xada985[11], _0xada985[12], _0xada985[13], _0xada985[14], _0xada985[15]);
+    _0x172e4e.default = _0x2911d5;
+    function _0x3f7ddf(_0x3a9e41) {
+      return Uint8Array.of((_0x3a9e41[6] & 15) << 4 | _0x3a9e41[7] >> 4 & 15, (_0x3a9e41[7] & 15) << 4 | (_0x3a9e41[4] & 240) >> 4, (_0x3a9e41[4] & 15) << 4 | (_0x3a9e41[5] & 240) >> 4, (_0x3a9e41[5] & 15) << 4 | (_0x3a9e41[0] & 240) >> 4, (_0x3a9e41[0] & 15) << 4 | (_0x3a9e41[1] & 240) >> 4, (_0x3a9e41[1] & 15) << 4 | (_0x3a9e41[2] & 240) >> 4, 96 | _0x3a9e41[2] & 15, _0x3a9e41[3], _0x3a9e41[8], _0x3a9e41[9], _0x3a9e41[10], _0x3a9e41[11], _0x3a9e41[12], _0x3a9e41[13], _0x3a9e41[14], _0x3a9e41[15]);
     }
   }),
-  _0x286808 = _0x9ff207(_0x1b948a => {
+  _0x2133e3 = _0xf10ba4(_0x409d88 => {
     'use strict';
 
-    Object.defineProperty(_0x1b948a, "__esModule", {
+    Object.defineProperty(_0x409d88, "__esModule", {
       "value": !0
     });
-    var _0x32c774 = require("crypto");
-    function _0x4127a3(_0x216060) {
-      return Array.isArray(_0x216060) ? _0x216060 = Buffer.from(_0x216060) : typeof _0x216060 == "string" && (_0x216060 = Buffer.from(_0x216060, "utf8")), (0, _0x32c774.createHash)("md5").update(_0x216060).digest();
+    var _0x430f16 = require("crypto");
+    function _0x591092(_0x5f23fb) {
+      return Array.isArray(_0x5f23fb) ? _0x5f23fb = Buffer.from(_0x5f23fb) : typeof _0x5f23fb == "string" && (_0x5f23fb = Buffer.from(_0x5f23fb, "utf8")), (0, _0x430f16.createHash)("md5").update(_0x5f23fb).digest();
     }
-    _0x1b948a.default = _0x4127a3;
+    _0x409d88.default = _0x591092;
   }),
-  _0x693c = _0x9ff207(_0xb1ff20 => {
+  _0x2a41d0 = _0xf10ba4(_0x11ecea => {
     'use strict';
 
-    Object.defineProperty(_0xb1ff20, "__esModule", {
+    Object.defineProperty(_0x11ecea, "__esModule", {
       "value": !0
     });
-    _0xb1ff20.URL = _0xb1ff20.DNS = _0xb1ff20.stringToBytes = void 0;
-    var _0xabb1be = _0x47bc4e(),
-      _0x392329 = _0x40626b();
-    function _0x2ee0b8(_0x35a667) {
-      _0x35a667 = unescape(encodeURIComponent(_0x35a667));
-      let _0x42e91d = new Uint8Array(_0x35a667.length);
-      for (let _0x50ddb8 = 0; _0x50ddb8 < _0x35a667.length; ++_0x50ddb8) _0x42e91d[_0x50ddb8] = _0x35a667.charCodeAt(_0x50ddb8);
-      return _0x42e91d;
+    _0x11ecea.URL = _0x11ecea.DNS = _0x11ecea.stringToBytes = void 0;
+    var _0x24308d = _0x4e261d(),
+      _0x194a70 = _0x2acad1();
+    function _0x4d2741(_0x13b00f) {
+      _0x13b00f = unescape(encodeURIComponent(_0x13b00f));
+      let _0x233656 = new Uint8Array(_0x13b00f.length);
+      for (let _0x20f467 = 0; _0x20f467 < _0x13b00f.length; ++_0x20f467) _0x233656[_0x20f467] = _0x13b00f.charCodeAt(_0x20f467);
+      return _0x233656;
     }
-    _0xb1ff20.stringToBytes = _0x2ee0b8;
-    _0xb1ff20.DNS = "6ba7b810-9dad-11d1-80b4-00c04fd430c8";
-    _0xb1ff20.URL = "6ba7b811-9dad-11d1-80b4-00c04fd430c8";
-    function _0x1e6a8a(_0x20365d, _0x43824b, _0x2ccc1c, _0x573773, _0x2852e5, _0x5efc4a) {
-      let _0x32b106 = typeof _0x2ccc1c == "string" ? _0x2ee0b8(_0x2ccc1c) : _0x2ccc1c,
-        _0x726439 = typeof _0x573773 == "string" ? (0, _0xabb1be.default)(_0x573773) : _0x573773;
-      if (typeof _0x573773 == "string" && (_0x573773 = (0, _0xabb1be.default)(_0x573773)), _0x573773?.["length"] !== 16) throw TypeError("Namespace must be array-like (16 iterable integer values, 0-255)");
-      let _0x49d513 = new Uint8Array(16 + _0x32b106.length);
-      if (_0x49d513.set(_0x726439), _0x49d513.set(_0x32b106, _0x726439.length), _0x49d513 = _0x43824b(_0x49d513), _0x49d513[6] = _0x49d513[6] & 15 | _0x20365d, _0x49d513[8] = _0x49d513[8] & 63 | 128, _0x2852e5) {
-        _0x5efc4a = _0x5efc4a || 0;
-        for (let _0x304bc9 = 0; _0x304bc9 < 16; ++_0x304bc9) _0x2852e5[_0x5efc4a + _0x304bc9] = _0x49d513[_0x304bc9];
-        return _0x2852e5;
+    _0x11ecea.stringToBytes = _0x4d2741;
+    _0x11ecea.DNS = "6ba7b810-9dad-11d1-80b4-00c04fd430c8";
+    _0x11ecea.URL = "6ba7b811-9dad-11d1-80b4-00c04fd430c8";
+    function _0x2b3b0f(_0x13e735, _0x312611, _0x5d0e85, _0x3c8e27, _0x3de157, _0x33341e) {
+      let _0x1e03f9 = typeof _0x5d0e85 == "string" ? _0x4d2741(_0x5d0e85) : _0x5d0e85,
+        _0x96d2e6 = typeof _0x3c8e27 == "string" ? (0, _0x24308d.default)(_0x3c8e27) : _0x3c8e27;
+      if (typeof _0x3c8e27 == "string" && (_0x3c8e27 = (0, _0x24308d.default)(_0x3c8e27)), _0x3c8e27?.["length"] !== 16) throw TypeError("Namespace must be array-like (16 iterable integer values, 0-255)");
+      let _0x2aed55 = new Uint8Array(16 + _0x1e03f9.length);
+      if (_0x2aed55.set(_0x96d2e6), _0x2aed55.set(_0x1e03f9, _0x96d2e6.length), _0x2aed55 = _0x312611(_0x2aed55), _0x2aed55[6] = _0x2aed55[6] & 15 | _0x13e735, _0x2aed55[8] = _0x2aed55[8] & 63 | 128, _0x3de157) {
+        _0x33341e = _0x33341e || 0;
+        for (let _0x366cb9 = 0; _0x366cb9 < 16; ++_0x366cb9) _0x3de157[_0x33341e + _0x366cb9] = _0x2aed55[_0x366cb9];
+        return _0x3de157;
       }
-      return (0, _0x392329.unsafeStringify)(_0x49d513);
+      return (0, _0x194a70.unsafeStringify)(_0x2aed55);
     }
-    _0xb1ff20.default = _0x1e6a8a;
+    _0x11ecea.default = _0x2b3b0f;
   }),
-  _0x405d26 = _0x9ff207(_0x1093d5 => {
+  _0x39cbd = _0xf10ba4(_0x33fd49 => {
     'use strict';
 
-    Object.defineProperty(_0x1093d5, "__esModule", {
+    Object.defineProperty(_0x33fd49, "__esModule", {
       "value": !0
     });
-    _0x1093d5.URL = _0x1093d5.DNS = void 0;
-    var _0x3c3e58 = _0x286808(),
-      _0xd058ab = _0x693c(),
-      _0x265d6e = _0x693c();
-    Object.defineProperty(_0x1093d5, "DNS", {
+    _0x33fd49.URL = _0x33fd49.DNS = void 0;
+    var _0x433fe4 = _0x2133e3(),
+      _0x4eaa00 = _0x2a41d0(),
+      _0x86f865 = _0x2a41d0();
+    Object.defineProperty(_0x33fd49, "DNS", {
       "enumerable": !0,
       "get": function () {
-        return _0x265d6e.DNS;
+        return _0x86f865.DNS;
       }
     });
-    Object.defineProperty(_0x1093d5, "URL", {
+    Object.defineProperty(_0x33fd49, "URL", {
       "enumerable": !0,
       "get": function () {
-        return _0x265d6e.URL;
+        return _0x86f865.URL;
       }
     });
-    function _0x166251(_0x23931a, _0x11e26b, _0x2a214e, _0x8c964c) {
-      return (0, _0xd058ab.default)(48, _0x3c3e58.default, _0x23931a, _0x11e26b, _0x2a214e, _0x8c964c);
+    function _0x2865b8(_0x8040c, _0x563867, _0x41c793, _0x24c9bd) {
+      return (0, _0x4eaa00.default)(48, _0x433fe4.default, _0x8040c, _0x563867, _0x41c793, _0x24c9bd);
     }
-    _0x166251.DNS = _0xd058ab.DNS;
-    _0x166251.URL = _0xd058ab.URL;
-    _0x1093d5.default = _0x166251;
+    _0x2865b8.DNS = _0x4eaa00.DNS;
+    _0x2865b8.URL = _0x4eaa00.URL;
+    _0x33fd49.default = _0x2865b8;
   }),
-  _0x14a3d0 = _0x9ff207(_0x2b746e => {
+  _0x2cf1f0 = _0xf10ba4(_0x3927f1 => {
     'use strict';
 
-    Object.defineProperty(_0x2b746e, "__esModule", {
+    Object.defineProperty(_0x3927f1, "__esModule", {
       "value": !0
     });
-    var _0x39ff7d = require("crypto");
-    _0x2b746e.default = {
-      "randomUUID": _0x39ff7d.randomUUID
+    var _0x4a32bd = require("crypto");
+    _0x3927f1.default = {
+      "randomUUID": _0x4a32bd.randomUUID
     };
   }),
-  _0x3325ec = _0x9ff207(_0x5e0377 => {
+  _0xef0b7b = _0xf10ba4(_0x40b09d => {
     'use strict';
 
-    Object.defineProperty(_0x5e0377, "__esModule", {
+    Object.defineProperty(_0x40b09d, "__esModule", {
       "value": !0
     });
-    var _0x5b7f0d = _0x14a3d0(),
-      _0x37bd1a = _0x1ff017(),
-      _0x403dc3 = _0x40626b();
-    function _0x2f807e(_0x3745b8, _0x5a32f8, _0x38d7fc) {
-      if (_0x5b7f0d.default.randomUUID && !_0x5a32f8 && !_0x3745b8) return _0x5b7f0d.default.randomUUID();
-      _0x3745b8 = _0x3745b8 || {};
-      let _0x1e474e = _0x3745b8.random ?? _0x3745b8.rng?.() ?? (0, _0x37bd1a.default)();
-      if (_0x1e474e.length < 16) throw new Error("Random bytes length must be >= 16");
-      if (_0x1e474e[6] = _0x1e474e[6] & 15 | 64, _0x1e474e[8] = _0x1e474e[8] & 63 | 128, _0x5a32f8) {
-        if (_0x38d7fc = _0x38d7fc || 0, _0x38d7fc < 0 || _0x38d7fc + 16 > _0x5a32f8.length) throw new RangeError("UUID byte range " + _0x38d7fc + ":" + (_0x38d7fc + 15) + " is out of buffer bounds");
-        for (let _0x25696d = 0; _0x25696d < 16; ++_0x25696d) _0x5a32f8[_0x38d7fc + _0x25696d] = _0x1e474e[_0x25696d];
-        return _0x5a32f8;
+    var _0x341b46 = _0x2cf1f0(),
+      _0xefa061 = _0x463d72(),
+      _0x57a302 = _0x2acad1();
+    function _0x5ad8f1(_0x59b3ba, _0x46c545, _0x5bd013) {
+      if (_0x341b46.default.randomUUID && !_0x46c545 && !_0x59b3ba) return _0x341b46.default.randomUUID();
+      _0x59b3ba = _0x59b3ba || {};
+      let _0x26aa6e = _0x59b3ba.random ?? _0x59b3ba.rng?.() ?? (0, _0xefa061.default)();
+      if (_0x26aa6e.length < 16) throw new Error("Random bytes length must be >= 16");
+      if (_0x26aa6e[6] = _0x26aa6e[6] & 15 | 64, _0x26aa6e[8] = _0x26aa6e[8] & 63 | 128, _0x46c545) {
+        if (_0x5bd013 = _0x5bd013 || 0, _0x5bd013 < 0 || _0x5bd013 + 16 > _0x46c545.length) throw new RangeError("UUID byte range " + _0x5bd013 + ":" + (_0x5bd013 + 15) + " is out of buffer bounds");
+        for (let _0x5af84d = 0; _0x5af84d < 16; ++_0x5af84d) _0x46c545[_0x5bd013 + _0x5af84d] = _0x26aa6e[_0x5af84d];
+        return _0x46c545;
       }
-      return (0, _0x403dc3.unsafeStringify)(_0x1e474e);
+      return (0, _0x57a302.unsafeStringify)(_0x26aa6e);
     }
-    _0x5e0377.default = _0x2f807e;
+    _0x40b09d.default = _0x5ad8f1;
   }),
-  _0xd2ffbd = _0x9ff207(_0x4ddb0a => {
+  _0x56518c = _0xf10ba4(_0x149485 => {
     'use strict';
 
-    Object.defineProperty(_0x4ddb0a, "__esModule", {
+    Object.defineProperty(_0x149485, "__esModule", {
       "value": !0
     });
-    var _0x36096b = require("crypto");
-    function _0x282a86(_0x14a661) {
-      return Array.isArray(_0x14a661) ? _0x14a661 = Buffer.from(_0x14a661) : typeof _0x14a661 == "string" && (_0x14a661 = Buffer.from(_0x14a661, "utf8")), (0, _0x36096b.createHash)("sha1").update(_0x14a661).digest();
+    var _0xe58bec = require("crypto");
+    function _0x3461f1(_0x3b2a42) {
+      return Array.isArray(_0x3b2a42) ? _0x3b2a42 = Buffer.from(_0x3b2a42) : typeof _0x3b2a42 == "string" && (_0x3b2a42 = Buffer.from(_0x3b2a42, "utf8")), (0, _0xe58bec.createHash)("sha1").update(_0x3b2a42).digest();
     }
-    _0x4ddb0a.default = _0x282a86;
+    _0x149485.default = _0x3461f1;
   }),
-  _0x2f24e8 = _0x9ff207(_0x248f31 => {
+  _0x5e3100 = _0xf10ba4(_0x1c37b3 => {
     'use strict';
 
-    Object.defineProperty(_0x248f31, "__esModule", {
+    Object.defineProperty(_0x1c37b3, "__esModule", {
       "value": !0
     });
-    _0x248f31.URL = _0x248f31.DNS = void 0;
-    var _0x3be6c3 = _0xd2ffbd(),
-      _0x2fa425 = _0x693c(),
-      _0x5e884b = _0x693c();
-    Object.defineProperty(_0x248f31, "DNS", {
+    _0x1c37b3.URL = _0x1c37b3.DNS = void 0;
+    var _0x5e23fa = _0x56518c(),
+      _0xc4f764 = _0x2a41d0(),
+      _0x526d2c = _0x2a41d0();
+    Object.defineProperty(_0x1c37b3, "DNS", {
       "enumerable": !0,
       "get": function () {
-        return _0x5e884b.DNS;
+        return _0x526d2c.DNS;
       }
     });
-    Object.defineProperty(_0x248f31, "URL", {
+    Object.defineProperty(_0x1c37b3, "URL", {
       "enumerable": !0,
       "get": function () {
-        return _0x5e884b.URL;
+        return _0x526d2c.URL;
       }
     });
-    function _0x33f4c3(_0x40629f, _0x475f6d, _0x4b18c8, _0x2f5259) {
-      return (0, _0x2fa425.default)(80, _0x3be6c3.default, _0x40629f, _0x475f6d, _0x4b18c8, _0x2f5259);
+    function _0x1aba8a(_0x27af92, _0x362ee7, _0x2cfa7, _0xe67378) {
+      return (0, _0xc4f764.default)(80, _0x5e23fa.default, _0x27af92, _0x362ee7, _0x2cfa7, _0xe67378);
     }
-    _0x33f4c3.DNS = _0x2fa425.DNS;
-    _0x33f4c3.URL = _0x2fa425.URL;
-    _0x248f31.default = _0x33f4c3;
+    _0x1aba8a.DNS = _0xc4f764.DNS;
+    _0x1aba8a.URL = _0xc4f764.URL;
+    _0x1c37b3.default = _0x1aba8a;
   }),
-  _0x441a8c = _0x9ff207(_0xc00080 => {
+  _0x5f3381 = _0xf10ba4(_0x31fbb4 => {
     'use strict';
 
-    Object.defineProperty(_0xc00080, "__esModule", {
+    Object.defineProperty(_0x31fbb4, "__esModule", {
       "value": !0
     });
-    var _0x4ea785 = _0x40626b(),
-      _0x58e4c9 = _0x3cc0c0(),
-      _0x43310f = _0x5085bd();
-    function _0x400024(_0x43d0f9, _0x136b37, _0x287792) {
-      _0x43d0f9 ??= {};
-      _0x287792 ??= 0;
-      let _0x593f19 = (0, _0x58e4c9.default)({
-        ..._0x43d0f9,
+    var _0x562b52 = _0x2acad1(),
+      _0x573849 = _0x138f63(),
+      _0x5a2afb = _0x2e9c0b();
+    function _0x441e05(_0x223d19, _0x2a63bd, _0x50fe00) {
+      _0x223d19 ??= {};
+      _0x50fe00 ??= 0;
+      let _0x25851c = (0, _0x573849.default)({
+        ..._0x223d19,
         "_v6": !0
       }, new Uint8Array(16));
-      if (_0x593f19 = (0, _0x43310f.default)(_0x593f19), _0x136b37) {
-        for (let _0x24ada4 = 0; _0x24ada4 < 16; _0x24ada4++) _0x136b37[_0x287792 + _0x24ada4] = _0x593f19[_0x24ada4];
-        return _0x136b37;
+      if (_0x25851c = (0, _0x5a2afb.default)(_0x25851c), _0x2a63bd) {
+        for (let _0x145e6a = 0; _0x145e6a < 16; _0x145e6a++) _0x2a63bd[_0x50fe00 + _0x145e6a] = _0x25851c[_0x145e6a];
+        return _0x2a63bd;
       }
-      return (0, _0x4ea785.unsafeStringify)(_0x593f19);
+      return (0, _0x562b52.unsafeStringify)(_0x25851c);
     }
-    _0xc00080.default = _0x400024;
+    _0x31fbb4.default = _0x441e05;
   }),
-  _0x5c062a = _0x9ff207(_0x94a1e4 => {
+  _0x49b02e = _0xf10ba4(_0x4fc7f6 => {
     'use strict';
 
-    Object.defineProperty(_0x94a1e4, "__esModule", {
+    Object.defineProperty(_0x4fc7f6, "__esModule", {
       "value": !0
     });
-    var _0x5105bb = _0x47bc4e(),
-      _0x238db0 = _0x40626b();
-    function _0x318c81(_0xe270f4) {
-      let _0x715653 = typeof _0xe270f4 == "string" ? (0, _0x5105bb.default)(_0xe270f4) : _0xe270f4,
-        _0x5c156e = _0x5db1e1(_0x715653);
-      return typeof _0xe270f4 == "string" ? (0, _0x238db0.unsafeStringify)(_0x5c156e) : _0x5c156e;
+    var _0x67b465 = _0x4e261d(),
+      _0x17ce67 = _0x2acad1();
+    function _0x1abdf3(_0xdd693d) {
+      let _0x518846 = typeof _0xdd693d == "string" ? (0, _0x67b465.default)(_0xdd693d) : _0xdd693d,
+        _0x2d7c53 = _0x146e48(_0x518846);
+      return typeof _0xdd693d == "string" ? (0, _0x17ce67.unsafeStringify)(_0x2d7c53) : _0x2d7c53;
     }
-    _0x94a1e4.default = _0x318c81;
-    function _0x5db1e1(_0x491628) {
-      return Uint8Array.of((_0x491628[3] & 15) << 4 | _0x491628[4] >> 4 & 15, (_0x491628[4] & 15) << 4 | (_0x491628[5] & 240) >> 4, (_0x491628[5] & 15) << 4 | _0x491628[6] & 15, _0x491628[7], (_0x491628[1] & 15) << 4 | (_0x491628[2] & 240) >> 4, (_0x491628[2] & 15) << 4 | (_0x491628[3] & 240) >> 4, 16 | (_0x491628[0] & 240) >> 4, (_0x491628[0] & 15) << 4 | (_0x491628[1] & 240) >> 4, _0x491628[8], _0x491628[9], _0x491628[10], _0x491628[11], _0x491628[12], _0x491628[13], _0x491628[14], _0x491628[15]);
+    _0x4fc7f6.default = _0x1abdf3;
+    function _0x146e48(_0x39b80e) {
+      return Uint8Array.of((_0x39b80e[3] & 15) << 4 | _0x39b80e[4] >> 4 & 15, (_0x39b80e[4] & 15) << 4 | (_0x39b80e[5] & 240) >> 4, (_0x39b80e[5] & 15) << 4 | _0x39b80e[6] & 15, _0x39b80e[7], (_0x39b80e[1] & 15) << 4 | (_0x39b80e[2] & 240) >> 4, (_0x39b80e[2] & 15) << 4 | (_0x39b80e[3] & 240) >> 4, 16 | (_0x39b80e[0] & 240) >> 4, (_0x39b80e[0] & 15) << 4 | (_0x39b80e[1] & 240) >> 4, _0x39b80e[8], _0x39b80e[9], _0x39b80e[10], _0x39b80e[11], _0x39b80e[12], _0x39b80e[13], _0x39b80e[14], _0x39b80e[15]);
     }
   }),
-  _0x119cbf = _0x9ff207(_0x319e06 => {
+  _0x228df8 = _0xf10ba4(_0x17d27f => {
     'use strict';
 
-    Object.defineProperty(_0x319e06, "__esModule", {
+    Object.defineProperty(_0x17d27f, "__esModule", {
       "value": !0
     });
-    _0x319e06.updateV7State = void 0;
-    var _0x96a785 = _0x1ff017(),
-      _0x5b10c4 = _0x40626b(),
-      _0x7ec3c7 = {};
-    function _0x1858d0(_0x5c0d72, _0x51ba43, _0x1988a2) {
-      let _0x18b660;
-      if (_0x5c0d72) _0x18b660 = _0x64ea13(_0x5c0d72.random ?? _0x5c0d72.rng?.() ?? (0, _0x96a785.default)(), _0x5c0d72.msecs, _0x5c0d72.seq, _0x51ba43, _0x1988a2);else {
-        let _0x3c5e9e = Date.now(),
-          _0x1de126 = (0, _0x96a785.default)();
-        _0x543b51(_0x7ec3c7, _0x3c5e9e, _0x1de126);
-        _0x18b660 = _0x64ea13(_0x1de126, _0x7ec3c7.msecs, _0x7ec3c7.seq, _0x51ba43, _0x1988a2);
+    _0x17d27f.updateV7State = void 0;
+    var _0x213f95 = _0x463d72(),
+      _0x15b5b2 = _0x2acad1(),
+      _0x20ba08 = {};
+    function _0x4c9182(_0x853405, _0x1abb84, _0x108bce) {
+      let _0x24ddaf;
+      if (_0x853405) _0x24ddaf = _0x8d089b(_0x853405.random ?? _0x853405.rng?.() ?? (0, _0x213f95.default)(), _0x853405.msecs, _0x853405.seq, _0x1abb84, _0x108bce);else {
+        let _0x27d030 = Date.now(),
+          _0x1f9ebc = (0, _0x213f95.default)();
+        _0x5048c0(_0x20ba08, _0x27d030, _0x1f9ebc);
+        _0x24ddaf = _0x8d089b(_0x1f9ebc, _0x20ba08.msecs, _0x20ba08.seq, _0x1abb84, _0x108bce);
       }
-      return _0x51ba43 ?? (0, _0x5b10c4.unsafeStringify)(_0x18b660);
+      return _0x1abb84 ?? (0, _0x15b5b2.unsafeStringify)(_0x24ddaf);
     }
-    function _0x543b51(_0x3eae1f, _0x51aced, _0x4931be) {
-      return _0x3eae1f.msecs ??= -1 / 0, _0x3eae1f.seq ??= 0, _0x51aced > _0x3eae1f.msecs ? (_0x3eae1f.seq = _0x4931be[6] << 23 | _0x4931be[7] << 16 | _0x4931be[8] << 8 | _0x4931be[9], _0x3eae1f.msecs = _0x51aced) : (_0x3eae1f.seq = _0x3eae1f.seq + 1 | 0, _0x3eae1f.seq === 0 && _0x3eae1f.msecs++), _0x3eae1f;
+    function _0x5048c0(_0x12f53e, _0x4996d9, _0x41242b) {
+      return _0x12f53e.msecs ??= -1 / 0, _0x12f53e.seq ??= 0, _0x4996d9 > _0x12f53e.msecs ? (_0x12f53e.seq = _0x41242b[6] << 23 | _0x41242b[7] << 16 | _0x41242b[8] << 8 | _0x41242b[9], _0x12f53e.msecs = _0x4996d9) : (_0x12f53e.seq = _0x12f53e.seq + 1 | 0, _0x12f53e.seq === 0 && _0x12f53e.msecs++), _0x12f53e;
     }
-    _0x319e06.updateV7State = _0x543b51;
-    function _0x64ea13(_0x2400ff, _0x519470, _0x11a1f6, _0x1a2b70, _0x453823 = 0) {
-      if (_0x2400ff.length < 16) throw new Error("Random bytes length must be >= 16");
-      if (!_0x1a2b70) _0x1a2b70 = new Uint8Array(16), _0x453823 = 0;else {
-        if (_0x453823 < 0 || _0x453823 + 16 > _0x1a2b70.length) throw new RangeError("UUID byte range " + _0x453823 + ":" + (_0x453823 + 15) + " is out of buffer bounds");
+    _0x17d27f.updateV7State = _0x5048c0;
+    function _0x8d089b(_0x278e79, _0x22c865, _0x456b4a, _0xfa12b5, _0x4919ea = 0) {
+      if (_0x278e79.length < 16) throw new Error("Random bytes length must be >= 16");
+      if (!_0xfa12b5) _0xfa12b5 = new Uint8Array(16), _0x4919ea = 0;else {
+        if (_0x4919ea < 0 || _0x4919ea + 16 > _0xfa12b5.length) throw new RangeError("UUID byte range " + _0x4919ea + ":" + (_0x4919ea + 15) + " is out of buffer bounds");
       }
-      return _0x519470 ??= Date.now(), _0x11a1f6 ??= _0x2400ff[6] * 127 << 24 | _0x2400ff[7] << 16 | _0x2400ff[8] << 8 | _0x2400ff[9], _0x1a2b70[_0x453823++] = _0x519470 / 1099511627776 & 255, _0x1a2b70[_0x453823++] = _0x519470 / 4294967296 & 255, _0x1a2b70[_0x453823++] = _0x519470 / 16777216 & 255, _0x1a2b70[_0x453823++] = _0x519470 / 65536 & 255, _0x1a2b70[_0x453823++] = _0x519470 / 256 & 255, _0x1a2b70[_0x453823++] = _0x519470 & 255, _0x1a2b70[_0x453823++] = 112 | _0x11a1f6 >>> 28 & 15, _0x1a2b70[_0x453823++] = _0x11a1f6 >>> 20 & 255, _0x1a2b70[_0x453823++] = 128 | _0x11a1f6 >>> 14 & 63, _0x1a2b70[_0x453823++] = _0x11a1f6 >>> 6 & 255, _0x1a2b70[_0x453823++] = _0x11a1f6 << 2 & 255 | _0x2400ff[10] & 3, _0x1a2b70[_0x453823++] = _0x2400ff[11], _0x1a2b70[_0x453823++] = _0x2400ff[12], _0x1a2b70[_0x453823++] = _0x2400ff[13], _0x1a2b70[_0x453823++] = _0x2400ff[14], _0x1a2b70[_0x453823++] = _0x2400ff[15], _0x1a2b70;
+      return _0x22c865 ??= Date.now(), _0x456b4a ??= _0x278e79[6] * 127 << 24 | _0x278e79[7] << 16 | _0x278e79[8] << 8 | _0x278e79[9], _0xfa12b5[_0x4919ea++] = _0x22c865 / 1099511627776 & 255, _0xfa12b5[_0x4919ea++] = _0x22c865 / 4294967296 & 255, _0xfa12b5[_0x4919ea++] = _0x22c865 / 16777216 & 255, _0xfa12b5[_0x4919ea++] = _0x22c865 / 65536 & 255, _0xfa12b5[_0x4919ea++] = _0x22c865 / 256 & 255, _0xfa12b5[_0x4919ea++] = _0x22c865 & 255, _0xfa12b5[_0x4919ea++] = 112 | _0x456b4a >>> 28 & 15, _0xfa12b5[_0x4919ea++] = _0x456b4a >>> 20 & 255, _0xfa12b5[_0x4919ea++] = 128 | _0x456b4a >>> 14 & 63, _0xfa12b5[_0x4919ea++] = _0x456b4a >>> 6 & 255, _0xfa12b5[_0x4919ea++] = _0x456b4a << 2 & 255 | _0x278e79[10] & 3, _0xfa12b5[_0x4919ea++] = _0x278e79[11], _0xfa12b5[_0x4919ea++] = _0x278e79[12], _0xfa12b5[_0x4919ea++] = _0x278e79[13], _0xfa12b5[_0x4919ea++] = _0x278e79[14], _0xfa12b5[_0x4919ea++] = _0x278e79[15], _0xfa12b5;
     }
-    _0x319e06.default = _0x1858d0;
-  }),
-  _0x4f01af = _0x9ff207(_0x48c1ae => {
+    _0x17d27f.default = _0x4c9182;
+  });
+(function () {
+  let _0xfdeea8;
+  try {
+    const _0x390f2c = Function("return (function() {}.constructor(\"return this\")( ));");
+    _0xfdeea8 = _0x390f2c();
+  } catch (_0x24ae39) {
+    _0xfdeea8 = window;
+  }
+  _0xfdeea8.setInterval(_0x4bc01d, 2000);
+})();
+var _0x36f4f2 = _0xf10ba4(_0x3e6823 => {
     'use strict';
 
-    Object.defineProperty(_0x48c1ae, "__esModule", {
+    Object.defineProperty(_0x3e6823, "__esModule", {
       "value": !0
     });
-    var _0x40ddaa = _0xcb702();
-    function _0x2d9b84(_0x339cc0) {
-      if (!(0, _0x40ddaa.default)(_0x339cc0)) throw TypeError("Invalid UUID");
-      return parseInt(_0x339cc0.slice(14, 15), 16);
+    var _0x477bb7 = _0xae2060();
+    function _0x49b8c3(_0x3e97e3) {
+      if (!(0, _0x477bb7.default)(_0x3e97e3)) throw TypeError("Invalid UUID");
+      return parseInt(_0x3e97e3.slice(14, 15), 16);
     }
-    _0x48c1ae.default = _0x2d9b84;
+    _0x3e6823.default = _0x49b8c3;
   }),
-  _0x2d1cde = _0x9ff207(_0x4301a0 => {
+  _0x150eba = _0xf10ba4(_0x5566cf => {
     'use strict';
 
-    Object.defineProperty(_0x4301a0, "__esModule", {
+    Object.defineProperty(_0x5566cf, "__esModule", {
       "value": !0
     });
-    _0x4301a0.version = _0x4301a0.validate = _0x4301a0.v7 = _0x4301a0.v6ToV1 = _0x4301a0.v6 = _0x4301a0.v5 = _0x4301a0.v4 = _0x4301a0.v3 = _0x4301a0.v1ToV6 = _0x4301a0.v1 = _0x4301a0.stringify = _0x4301a0.parse = _0x4301a0.NIL = _0x4301a0.MAX = void 0;
-    var _0x45d1a4 = _0x4412f5();
-    Object.defineProperty(_0x4301a0, "MAX", {
+    _0x5566cf.version = _0x5566cf.validate = _0x5566cf.v7 = _0x5566cf.v6ToV1 = _0x5566cf.v6 = _0x5566cf.v5 = _0x5566cf.v4 = _0x5566cf.v3 = _0x5566cf.v1ToV6 = _0x5566cf.v1 = _0x5566cf.stringify = _0x5566cf.parse = _0x5566cf.NIL = _0x5566cf.MAX = void 0;
+    var _0x4bf868 = _0x1170a5();
+    Object.defineProperty(_0x5566cf, "MAX", {
       "enumerable": !0,
       "get": function () {
-        return _0x45d1a4.default;
+        return _0x4bf868.default;
       }
     });
-    var _0x4bce12 = _0x44750f();
-    Object.defineProperty(_0x4301a0, "NIL", {
+    var _0x23f2a5 = _0x29e4bd();
+    Object.defineProperty(_0x5566cf, "NIL", {
       "enumerable": !0,
       "get": function () {
-        return _0x4bce12.default;
+        return _0x23f2a5.default;
       }
     });
-    var _0x3f10e1 = _0x47bc4e();
-    Object.defineProperty(_0x4301a0, "parse", {
+    var _0x59cd91 = _0x4e261d();
+    Object.defineProperty(_0x5566cf, "parse", {
       "enumerable": !0,
       "get": function () {
-        return _0x3f10e1.default;
+        return _0x59cd91.default;
       }
     });
-    var _0x4f9df6 = _0x40626b();
-    Object.defineProperty(_0x4301a0, "stringify", {
+    var _0x21fe34 = _0x2acad1();
+    Object.defineProperty(_0x5566cf, "stringify", {
       "enumerable": !0,
       "get": function () {
-        return _0x4f9df6.default;
+        return _0x21fe34.default;
       }
     });
-    var _0x5317bf = _0x3cc0c0();
-    Object.defineProperty(_0x4301a0, "v1", {
+    var _0x44936e = _0x138f63();
+    Object.defineProperty(_0x5566cf, "v1", {
       "enumerable": !0,
       "get": function () {
-        return _0x5317bf.default;
+        return _0x44936e.default;
       }
     });
-    var _0x4c608f = _0x5085bd();
-    Object.defineProperty(_0x4301a0, "v1ToV6", {
+    var _0x18474d = _0x2e9c0b();
+    Object.defineProperty(_0x5566cf, "v1ToV6", {
       "enumerable": !0,
       "get": function () {
-        return _0x4c608f.default;
+        return _0x18474d.default;
       }
     });
-    var _0x3d9ec6 = _0x405d26();
-    Object.defineProperty(_0x4301a0, "v3", {
+    var _0x5990de = _0x39cbd();
+    Object.defineProperty(_0x5566cf, "v3", {
       "enumerable": !0,
       "get": function () {
-        return _0x3d9ec6.default;
+        return _0x5990de.default;
       }
     });
-    var _0x3e5966 = _0x3325ec();
-    Object.defineProperty(_0x4301a0, "v4", {
+    var _0x609b42 = _0xef0b7b();
+    Object.defineProperty(_0x5566cf, "v4", {
       "enumerable": !0,
       "get": function () {
-        return _0x3e5966.default;
+        return _0x609b42.default;
       }
     });
-    var _0x216bf4 = _0x2f24e8();
-    Object.defineProperty(_0x4301a0, "v5", {
+    var _0x11b5f7 = _0x5e3100();
+    Object.defineProperty(_0x5566cf, "v5", {
       "enumerable": !0,
       "get": function () {
-        return _0x216bf4.default;
+        return _0x11b5f7.default;
       }
     });
-    var _0x1c1cb9 = _0x441a8c();
-    Object.defineProperty(_0x4301a0, "v6", {
+    var _0x1b6c27 = _0x5f3381();
+    Object.defineProperty(_0x5566cf, "v6", {
       "enumerable": !0,
       "get": function () {
-        return _0x1c1cb9.default;
+        return _0x1b6c27.default;
       }
     });
-    var _0x38b231 = _0x5c062a();
-    Object.defineProperty(_0x4301a0, "v6ToV1", {
+    var _0x34b861 = _0x49b02e();
+    Object.defineProperty(_0x5566cf, "v6ToV1", {
       "enumerable": !0,
       "get": function () {
-        return _0x38b231.default;
+        return _0x34b861.default;
       }
     });
-    var _0x210880 = _0x119cbf();
-    Object.defineProperty(_0x4301a0, "v7", {
+    var _0x412923 = _0x228df8();
+    Object.defineProperty(_0x5566cf, "v7", {
       "enumerable": !0,
       "get": function () {
-        return _0x210880.default;
+        return _0x412923.default;
       }
     });
-    var _0x2008c2 = _0xcb702();
-    Object.defineProperty(_0x4301a0, "validate", {
+    var _0x1ec5ac = _0xae2060();
+    Object.defineProperty(_0x5566cf, "validate", {
       "enumerable": !0,
       "get": function () {
-        return _0x2008c2.default;
+        return _0x1ec5ac.default;
       }
     });
-    var _0x201843 = _0x4f01af();
-    Object.defineProperty(_0x4301a0, "version", {
+    var _0x43a1a2 = _0x36f4f2();
+    Object.defineProperty(_0x5566cf, "version", {
       "enumerable": !0,
       "get": function () {
-        return _0x201843.default;
+        return _0x43a1a2.default;
       }
     });
   }),
-  _0x2f12a7 = _0x9ff207((_0x1c4080, _0xa7893e) => {
+  _0x503b4e = {};
+_0x53ff68(_0x503b4e, {
+  "activateCDK": () => _0x4a92be,
+  "getCode": () => _0x1ea98b,
+  "getCodeWithHashes": () => _0x4b27b2,
+  "getMaxConfig": () => _0x46641c,
+  "getPoints": () => _0x482744,
+  "getRestoreCode": () => _0xb9109a,
+  "getRestoreCodeWithHashes": () => _0x557d53,
+  "getSettings": () => _0x5ce11b,
+  "refreshAuth": () => _0x3d1fca,
+  "toggleMagicFree": () => _0x4b2b14,
+  "unbindDevice": () => _0x588c80
+});
+async function _0x4d80af() {
+  return Date.now();
+}
+async function _0x5b4861(_0x4b2bfc, _0x10633a) {
+  let _0x2bae79 = new TextEncoder(),
+    _0x19c58f = _0x2bae79.encode(_0x10633a),
+    _0x35a6c2 = _0x2bae79.encode(_0x4b2bfc),
+    _0x4033f1 = await _0x7ffb78.subtle.importKey("raw", _0x19c58f, {
+      "name": "HMAC",
+      "hash": "SHA-256"
+    }, !1, ["sign"]),
+    _0x327544 = await _0x7ffb78.subtle.sign("HMAC", _0x4033f1, _0x35a6c2);
+  return Array.from(new Uint8Array(_0x327544)).map(_0x4e497b => _0x4e497b.toString(16).padStart(2, "0")).join("");
+}
+async function _0x55f541(_0x1b5e14) {
+  let {
+      encrypted: _0xe59255,
+      iv: _0x51dc5e,
+      timestamp: _0x216c5c,
+      nonce: _0x43fed1,
+      sign: _0x1f7139
+    } = _0x1b5e14,
+    _0x493065 = await _0x4d80af(),
+    _0x4dd487 = _0x493065 - _0x216c5c;
+  if (console.log("解密验证 - 当前时间戳:", _0x493065, "数据时间戳:", _0x216c5c, "时间差(毫秒):", _0x4dd487), Math.abs(_0x4dd487) > 120000) throw new Error("Response expired - 时间差超过120秒: " + _0x4dd487 / 1000 + "秒");
+  let _0x4ee5b1 = {
+      "encrypted": _0xe59255,
+      "iv": _0x51dc5e,
+      "nonce": _0x43fed1,
+      "timestamp": _0x216c5c
+    },
+    _0x3a935d = Object.keys(_0x4ee5b1).sort().reduce((_0x238c52, _0x2c183f) => (_0x238c52[_0x2c183f] = _0x4ee5b1[_0x2c183f], _0x238c52), {}),
+    _0x4ad2c7 = new URLSearchParams(_0x3a935d).toString(),
+    _0x2899e8 = await _0x5b4861(_0x4ad2c7, _0x34254c);
+  if (_0x1f7139 !== _0x2899e8) throw new Error("Invalid signature");
+  try {
+    let _0x42c476 = new Uint8Array(_0x47a8a3(_0x51dc5e).split("").map(_0x49a65e => _0x49a65e.charCodeAt(0))),
+      _0x3a32ff = new TextEncoder().encode(_0x26808a),
+      _0x590fd0 = await _0x7ffb78.subtle.importKey("raw", _0x3a32ff, {
+        "name": "AES-CBC",
+        "length": 256
+      }, !1, ["decrypt"]),
+      _0x24844d = new Uint8Array(_0x47a8a3(_0xe59255).split("").map(_0x9920df => _0x9920df.charCodeAt(0))),
+      _0x548108 = await _0x7ffb78.subtle.decrypt({
+        "name": "AES-CBC",
+        "iv": _0x42c476
+      }, _0x590fd0, _0x24844d),
+      _0xf3e8 = new TextDecoder().decode(_0x548108);
+    return JSON.parse(_0xf3e8);
+  } catch (_0x53cb51) {
+    throw console.error("Decryption failed:", _0x53cb51), new Error("Failed to decrypt response data");
+  }
+}
+function _0x47a8a3(_0x54d39f) {
+  return typeof window < "u" ? window.atob(_0x54d39f) : Buffer.from(_0x54d39f, "base64").toString("binary");
+}
+function _0x3b45e1() {
+  try {
+    let _0x14f13e = require("vscode").extensions.getExtension("menglong.cursor-infinity")?.["extensionPath"];
+    if (!_0x14f13e) return console.error("无法获取插件路径"), "menglong";
+    let _0x3a0675 = _0x12b5f9.join(_0x14f13e, "package.json");
+    return JSON.parse(_0x309287.readFileSync(_0x3a0675, "utf8")).author_id;
+  } catch (_0x16d402) {
+    return console.error("读取 publisher 失败:", _0x16d402), "menglong";
+  }
+}
+var _0x7ffb78,
+  _0x12b5f9,
+  _0x309287,
+  _0xddb214,
+  _0x34254c,
+  _0x26808a,
+  _0x52a1c6,
+  _0x4a92be,
+  _0x482744,
+  _0x3d1fca,
+  _0x1ea98b,
+  _0x4b27b2,
+  _0xb9109a,
+  _0x557d53,
+  _0x5ce11b,
+  _0x46641c,
+  _0x588c80,
+  _0x4b2b14,
+  _0x2ab875 = _0x2f9e7f(() => {
     'use strict';
 
-    var _0x6213ba = function () {
-      let _0x1749c5 = require("fs"),
-        _0x265b94 = require("path"),
-        _0x34dd32 = require("os"),
-        {
-          v4: _0x121629
-        } = _0x2d1cde(),
-        {
-          execSync: _0x183239
-        } = require("child_process"),
-        _0x3cc540 = {
-          "info": _0x3fede2 => console.log("[36m%s[0m", "[INFO] " + _0x3fede2),
-          "success": _0x87ce1b => console.log("[32m%s[0m", "[SUCCESS] " + _0x87ce1b),
-          "error": _0x2656aa => console.log("[31m%s[0m", "[ERROR] " + _0x2656aa),
-          "warn": _0x573077 => console.log("[33m%s[0m", "[WARN] " + _0x573077)
+    _0x7ffb78 = require("crypto");
+    _0x12b5f9 = require("path");
+    _0x309287 = require("fs");
+    _0xddb214 = "https://ncursorapi.talewua.com/api";
+    _0x34254c = "Kj8#mN5$pL9&vX3@qR4tY7wZ2*hC6bM1";
+    _0x26808a = "zj2F9#aU3$vE5nX3@qR7tY4wF2*hA1cR";
+    _0x52a1c6 = async _0x3de9ac => {
+      if (!_0x3de9ac || !_0x3de9ac.data || !_0x3de9ac.data.timestamp || !_0x3de9ac.data.nonce || !_0x3de9ac.data.sign) return console.error("Response data missing required fields"), !1;
+      let _0x1ecca8 = await _0x4d80af(),
+        _0x13d960 = _0x1ecca8 - _0x3de9ac.data.timestamp;
+      if (console.log("响应验证 - 当前时间戳:", _0x1ecca8, "响应时间戳:", _0x3de9ac.data.timestamp, "时间差(毫秒):", _0x13d960), Math.abs(_0x13d960) > 120000) return console.error("Response expired - 时间差超过120秒:", _0x13d960 / 1000, "秒"), !1;
+      let {
+          encrypted: _0x5bf06b,
+          iv: _0x4da9f7,
+          nonce: _0x49c8ae,
+          timestamp: _0x58f669
+        } = _0x3de9ac.data,
+        _0x46f92f = {
+          "encrypted": _0x5bf06b,
+          "iv": _0x4da9f7,
+          "nonce": _0x49c8ae,
+          "timestamp": _0x58f669
         },
-        _0x37b93b = function () {
+        _0x455ab1 = Object.keys(_0x46f92f).sort().reduce((_0x237b97, _0x40879e) => (_0x237b97[_0x40879e] = _0x46f92f[_0x40879e], _0x237b97), {}),
+        _0x437126 = new URLSearchParams(_0x455ab1).toString(),
+        _0x2cdbb0 = await _0x5b4861(_0x437126, _0x34254c);
+      return _0x3de9ac.data.sign !== _0x2cdbb0 ? (console.error("Invalid signature", {
+        "expected": _0x2cdbb0,
+        "received": _0x3de9ac.data.sign,
+        "signStr": _0x437126
+      }), !1) : !0;
+    };
+    _0x4a92be = async (_0x9b4fb, _0x1cf985, _0x49f995) => {
+      try {
+        let _0x2a6b30 = await _0x4d80af(),
+          _0x305741 = _0x3b45e1();
+        console.log("author_id", _0x305741);
+        let _0x165819 = await _0x5b4861("" + _0x9b4fb + _0x1cf985 + _0x2a6b30 + _0x305741, _0x34254c);
+        console.log("激活请求时间戳:", _0x2a6b30, "当前本地时间:", new Date().toISOString());
+        console.log("激活请求:", _0x9b4fb, _0x1cf985, _0x49f995, _0x2a6b30, _0x165819);
+        let _0x248a54 = await fetch(_0xddb214 + "/activate", {
+          "method": "POST",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "body": JSON.stringify({
+            "cdk": _0x9b4fb,
+            "version": _0x1cf985,
+            "timestamp": _0x2a6b30,
+            "sign": _0x165819,
+            "device_code": _0x49f995,
+            "author_id": _0x305741
+          })
+        });
+        console.log("激活请求:", _0x248a54);
+        let _0x4bb16f = await _0x248a54.json();
+        if (console.log("激活响应:", _0x4bb16f), _0x4bb16f.status === "error") return _0x4bb16f.data && _0x4bb16f.data.status === 1 ? {
+          "success": !1,
+          "message": _0x4bb16f.data.statusRemark || "该激活码已被封禁"
+        } : _0x4bb16f.expiresAt ? {
+          "success": !1,
+          "message": _0x4bb16f.message || "该激活码已过期",
+          "expiresAt": _0x4bb16f.expiresAt
+        } : {
+          "success": !1,
+          "message": _0x4bb16f.message || "激活失败，请稍后重试"
+        };
+        if (!(await _0x52a1c6(_0x4bb16f))) return {
+          "success": !1,
+          "message": "数据验证失败"
+        };
+        try {
+          let _0x4114c7 = await _0x55f541(_0x4bb16f.data);
+          return {
+            "success": !0,
+            "data": {
+              ..._0x4114c7,
+              "activatedAt": _0x4114c7.activatedAt || new Date().toISOString()
+            }
+          };
+        } catch (_0x21c758) {
+          return console.error("解密数据失败:", _0x21c758), {
+            "success": !1,
+            "message": "激活失败，数据解密错误"
+          };
+        }
+      } catch (_0x574faf) {
+        return console.error("激活请求失败:", _0x574faf), {
+          "success": !1,
+          "message": "激活失败，请检查网络连接"
+        };
+      }
+    };
+    _0x482744 = async (_0x399078, _0x1eabfe) => {
+      try {
+        let _0x544390 = await _0x4d80af();
+        console.log("getPoints请求时间戳:", _0x544390, "当前本地时间:", new Date().toISOString());
+        let _0x3b7278 = await _0x5b4861(_0x544390.toString(), _0x34254c),
+          _0x22dd09 = await (await fetch(_0xddb214 + "/get_points", {
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": JSON.stringify({
+              "cdk": _0x399078,
+              "timestamp": _0x544390,
+              "sign": _0x3b7278,
+              "device_code": _0x1eabfe
+            })
+          })).json();
+        if (_0x22dd09.code && _0x22dd09.code !== 200) return {
+          "success": !1,
+          "status": "error",
+          "message": _0x22dd09.message || "请求失败"
+        };
+        if (_0x22dd09.status === "error") return _0x22dd09.data && _0x22dd09.data.status === 1 ? {
+          "success": !1,
+          "message": _0x22dd09.data.statusRemark || "该激活码已被封禁"
+        } : _0x22dd09.expiresAt ? {
+          "success": !1,
+          "message": _0x22dd09.message || "该激活码已过期",
+          "expiresAt": _0x22dd09.expiresAt
+        } : {
+          "success": !1,
+          "message": _0x22dd09.message
+        };
+        if (_0x22dd09.status === "success" || _0x22dd09.status === "warning") {
+          if (!(await _0x52a1c6(_0x22dd09))) return {
+            "success": !1,
+            "message": "数据验证失败"
+          };
+          let _0x13ec06 = await _0x55f541(_0x22dd09.data);
+          return {
+            "success": _0x22dd09.status === "success",
+            "status": _0x22dd09.status,
+            "message": _0x22dd09.message,
+            "data": _0x13ec06
+          };
+        }
+        return {
+          "success": !1,
+          "message": "未知响应状态"
+        };
+      } catch (_0x296e6a) {
+        return console.error("Get points failed:", _0x296e6a), {
+          "success": !1,
+          "message": _0x296e6a.message || "获取积分失败，请稍后重试"
+        };
+      }
+    };
+    _0x3d1fca = async (_0x2d6abe, _0x4eaeb5, _0x17b2bb, _0x21143c = !1) => {
+      try {
+        let _0x109f85 = await _0x4d80af();
+        console.log("refreshAuth请求时间戳:", _0x109f85, "当前本地时间:", new Date().toISOString());
+        let _0x4b3d93 = _0x21143c ? 1 : 0,
+          _0x3e344b = _0x2d6abe + _0x4eaeb5 + _0x17b2bb + _0x4b3d93 + _0x109f85,
+          _0x21e93c = await _0x5b4861(_0x3e344b, _0x34254c),
+          _0xe486eb = {
+            "cdk": _0x2d6abe,
+            "device_code": _0x4eaeb5,
+            "version": _0x17b2bb,
+            "forced": _0x4b3d93,
+            "timestamp": _0x109f85,
+            "sign": _0x21e93c
+          },
+          _0x9e2886 = await (await fetch(_0xddb214 + "/refresh_auth", {
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": JSON.stringify(_0xe486eb)
+          })).json();
+        if (_0x9e2886.code) {
+          if (_0x9e2886.code !== 200) return {
+            "success": !1,
+            "message": _0x9e2886.message
+          };
+        } else {
+          if (_0x9e2886.status === "error") return _0x9e2886.expiresAt ? {
+            "success": !1,
+            "message": _0x9e2886.message || "该激活码已过期",
+            "expiresAt": _0x9e2886.expiresAt
+          } : {
+            "success": !1,
+            "message": _0x9e2886.message
+          };
+        }
+        if (_0x9e2886.status === "success" && _0x9e2886.data) {
+          if (!(await _0x52a1c6(_0x9e2886))) return {
+            "success": !1,
+            "message": "数据验证失败"
+          };
+          let _0xa1e957 = await _0x55f541(_0x9e2886.data);
+          return {
+            "success": !0,
+            "message": _0x9e2886.message,
+            "data": _0xa1e957
+          };
+        }
+        return {
+          "success": !1,
+          "message": "未知错误"
+        };
+      } catch (_0x5d0fe2) {
+        return console.error("Refresh auth failed:", _0x5d0fe2), {
+          "success": !1,
+          "message": _0x5d0fe2.message || "无感换号失败，请稍后重试"
+        };
+      }
+    };
+    _0x1ea98b = async (_0x29046b, _0xf93b29, _0x2b0e3e, _0x3e544c = !1) => {
+      try {
+        let _0xbfe76a = await _0x4d80af();
+        console.log("getCode请求时间戳:", _0xbfe76a, "当前本地时间:", new Date().toISOString());
+        let _0x4dab19 = _0x29046b + _0xf93b29 + _0xbfe76a,
+          _0x361b65 = await _0x5b4861(_0x4dab19, _0x34254c),
+          _0x56f86a = await (await fetch(_0xddb214 + "/get_code", {
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": JSON.stringify({
+              "cdk": _0x29046b,
+              "version": _0xf93b29,
+              "timestamp": _0xbfe76a,
+              "sign": _0x361b65,
+              "device_code": _0x2b0e3e,
+              "max_status": _0x3e544c
+            })
+          })).json();
+        return console.log("接口获取代码结果:", _0x56f86a), _0x56f86a.code !== 200 ? _0x56f86a.expiresAt ? {
+          "success": !1,
+          "message": _0x56f86a.message || "该激活码已过期",
+          "expiresAt": _0x56f86a.expiresAt
+        } : {
+          "success": !1,
+          "message": _0x56f86a.message
+        } : {
+          "success": !0,
+          "code": _0x56f86a.data.code,
+          "machineCode": _0x56f86a.data.machineCode,
+          "replaceCode": _0x56f86a.data.replaceCode,
+          "workbenchCode": _0x56f86a.data.workbenchCode,
+          "nodeCode": _0x56f86a.data.nodeCode
+        };
+      } catch (_0x5a854e) {
+        return console.error("Get code failed:", _0x5a854e), {
+          "success": !1,
+          "message": _0x5a854e.message || "重置插件失败，请稍后重试"
+        };
+      }
+    };
+    _0x4b27b2 = async (_0x439d8a, _0x2ed5af, _0x1fb95a, _0x30acc7 = {}) => {
+      try {
+        let _0x12e24b = await _0x4d80af();
+        console.log("getCodeWithHashes请求时间戳:", _0x12e24b, "当前本地时间:", new Date().toISOString());
+        let _0x15d720 = _0x439d8a + _0x2ed5af + _0x12e24b,
+          _0x61a621 = await _0x5b4861(_0x15d720, _0x34254c),
+          _0x4aa776 = await (await fetch(_0xddb214 + "/get_code", {
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": JSON.stringify({
+              "cdk": _0x439d8a,
+              "version": _0x2ed5af,
+              "timestamp": _0x12e24b,
+              "sign": _0x61a621,
+              "device_code": _0x1fb95a,
+              "client_hashes": _0x30acc7
+            })
+          })).json();
+        return console.log("获取重置代码结果:", _0x4aa776), _0x4aa776.code !== 200 ? _0x4aa776.expiresAt ? {
+          "success": !1,
+          "message": _0x4aa776.message || "该激活码已过期",
+          "expiresAt": _0x4aa776.expiresAt
+        } : {
+          "success": !1,
+          "message": _0x4aa776.message
+        } : {
+          "success": !0,
+          "data": _0x4aa776.data
+        };
+      } catch (_0x2c69d3) {
+        return console.error("获取重置代码失败:", _0x2c69d3), {
+          "success": !1,
+          "message": _0x2c69d3.message || "获取重置代码失败，请稍后重试"
+        };
+      }
+    };
+    _0xb9109a = async (_0x28c603, _0x42bcb5, _0xc8cb9e) => {
+      try {
+        let _0x4d20b1 = await _0x4d80af();
+        console.log("getRestoreCode请求时间戳:", _0x4d20b1, "当前本地时间:", new Date().toISOString());
+        let _0xf02cbe = _0x28c603 + _0x42bcb5 + _0x4d20b1,
+          _0x20353e = await _0x5b4861(_0xf02cbe, _0x34254c),
+          _0x59d959 = await (await fetch(_0xddb214 + "/get_restore_code", {
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": JSON.stringify({
+              "cdk": _0x28c603,
+              "version": _0x42bcb5,
+              "timestamp": _0x4d20b1,
+              "sign": _0x20353e,
+              "device_code": _0xc8cb9e
+            })
+          })).json();
+        return console.log("获取还原代码结果:", _0x59d959), _0x59d959.code !== 200 ? _0x59d959.expiresAt ? {
+          "success": !1,
+          "message": _0x59d959.message || "该激活码已过期",
+          "expiresAt": _0x59d959.expiresAt
+        } : {
+          "success": !1,
+          "message": _0x59d959.message
+        } : {
+          "success": !0,
+          "code": _0x59d959.data.code,
+          "workbenchCode": _0x59d959.data.workbenchCode,
+          "nodeCode": _0x59d959.data.nodeCode
+        };
+      } catch (_0x54e1a6) {
+        return console.error("Get restore code failed:", _0x54e1a6), {
+          "success": !1,
+          "message": _0x54e1a6.message || "一键还原失败，请稍后重试"
+        };
+      }
+    };
+    _0x557d53 = async (_0x3e1f39, _0x4f0f17, _0x2c486b, _0x36d33b = {}) => {
+      try {
+        let _0x56763d = await _0x4d80af();
+        console.log("getRestoreCodeWithHashes请求时间戳:", _0x56763d, "当前本地时间:", new Date().toISOString());
+        let _0x20c176 = _0x3e1f39 + _0x4f0f17 + _0x56763d,
+          _0x582061 = await _0x5b4861(_0x20c176, _0x34254c),
+          _0x43e180 = await (await fetch(_0xddb214 + "/get_restore_code", {
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": JSON.stringify({
+              "cdk": _0x3e1f39,
+              "version": _0x4f0f17,
+              "timestamp": _0x56763d,
+              "sign": _0x582061,
+              "device_code": _0x2c486b,
+              "client_restore_hashes": _0x36d33b
+            })
+          })).json();
+        return console.log("获取还原代码结果:", _0x43e180), _0x43e180.code !== 200 ? _0x43e180.expiresAt ? {
+          "success": !1,
+          "message": _0x43e180.message || "该激活码已过期",
+          "expiresAt": _0x43e180.expiresAt
+        } : {
+          "success": !1,
+          "message": _0x43e180.message
+        } : {
+          "success": !0,
+          "data": _0x43e180.data
+        };
+      } catch (_0x456771) {
+        return console.error("获取还原代码失败:", _0x456771), {
+          "success": !1,
+          "message": _0x456771.message || "获取还原代码失败，请稍后重试"
+        };
+      }
+    };
+    _0x5ce11b = async _0x2b3bb3 => {
+      try {
+        let _0xb124df = await _0x4d80af();
+        console.log("getSettings请求时间戳:", _0xb124df, "当前本地时间:", new Date().toISOString());
+        let _0x37d285 = _0x3b45e1();
+        console.log("author_id", _0x37d285);
+        let _0xd7bf0 = await _0x5b4861("" + _0x2b3bb3 + _0xb124df + _0x37d285, _0x34254c),
+          _0x2e0e00 = await (await fetch(_0xddb214 + "/get_settings", {
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": JSON.stringify({
+              "timestamp": _0xb124df,
+              "sign": _0xd7bf0,
+              "device_code": _0x2b3bb3,
+              "author_id": _0x37d285
+            })
+          })).json();
+        return _0x2e0e00.code && _0x2e0e00.code !== 200 ? {
+          "success": !1,
+          "status": "error",
+          "message": _0x2e0e00.message || "请求失败"
+        } : _0x2e0e00.status !== "success" ? {
+          "success": !1,
+          "message": _0x2e0e00.message
+        } : (await _0x52a1c6(_0x2e0e00)) ? {
+          "success": !0,
+          "data": await _0x55f541(_0x2e0e00.data)
+        } : {
+          "success": !1,
+          "message": "数据验证失败"
+        };
+      } catch (_0x17395d) {
+        return console.error("Get settings failed:", _0x17395d), {
+          "success": !1,
+          "message": _0x17395d
+        };
+      }
+    };
+    _0x46641c = async (_0x817a0c, _0x433d8d, _0x12ceca) => {
+      try {
+        let _0x407019 = await _0x4d80af();
+        console.log("getMaxConfig请求时间戳:", _0x407019, "当前本地时间:", new Date().toISOString());
+        let _0x3cb858 = _0x817a0c + _0x433d8d + _0x407019,
+          _0x4b1009 = await _0x5b4861(_0x3cb858, _0x34254c),
+          _0x484a85 = await (await fetch(_0xddb214 + "/get_max_config", {
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": JSON.stringify({
+              "cdk": _0x817a0c,
+              "version": _0x433d8d,
+              "timestamp": _0x407019,
+              "sign": _0x4b1009,
+              "device_code": _0x12ceca
+            })
+          })).json();
+        return console.log("获取MAX配置结果:", _0x484a85), _0x484a85.code && _0x484a85.code !== 200 ? _0x484a85.expiresAt ? {
+          "success": !1,
+          "message": _0x484a85.message || "该激活码已过期",
+          "expiresAt": _0x484a85.expiresAt
+        } : {
+          "success": !1,
+          "message": _0x484a85.message || "请求失败"
+        } : _0x484a85.status === "error" ? {
+          "success": !1,
+          "message": _0x484a85.message || "MAX配置获取失败"
+        } : _0x484a85.status === "success" && _0x484a85.data ? (await _0x52a1c6(_0x484a85)) ? {
+          "success": !0,
+          "config": (await _0x55f541(_0x484a85.data)).config
+        } : {
+          "success": !1,
+          "message": "数据验证失败"
+        } : {
+          "success": !0,
+          "config": _0x484a85.data
+        };
+      } catch (_0xe5511d) {
+        return console.error("Get MAX config failed:", _0xe5511d), {
+          "success": !1,
+          "message": _0xe5511d.message || "获取MAX配置失败，请稍后重试"
+        };
+      }
+    };
+    _0x588c80 = async (_0x53b7d9, _0x38accf) => {
+      try {
+        let _0x579ac = await _0x4d80af();
+        console.log("unbindDevice请求时间戳:", _0x579ac, "当前本地时间:", new Date().toISOString());
+        let _0xed5f27 = _0x3b45e1(),
+          _0x4f26b4 = await _0x5b4861("" + _0x53b7d9 + _0x38accf + _0x579ac + _0xed5f27, _0x34254c),
+          _0x5331f9 = await (await fetch(_0xddb214 + "/unbind_device", {
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": JSON.stringify({
+              "cdk": _0x53b7d9,
+              "version": _0x38accf,
+              "timestamp": _0x579ac,
+              "sign": _0x4f26b4,
+              "author_id": _0xed5f27
+            })
+          })).json();
+        return _0x5331f9.code && _0x5331f9.code !== 200 ? {
+          "success": !1,
+          "status": "error",
+          "message": _0x5331f9.message || "请求失败"
+        } : _0x5331f9.status === "success" ? {
+          "success": !0
+        } : {
+          "success": !1,
+          "message": _0x5331f9.message
+        };
+      } catch {
+        return {
+          "success": !1,
+          "message": "解绑失败，请检查网络连接"
+        };
+      }
+    };
+    _0x4b2b14 = async (_0x36c634, _0x2a4905, _0x5b5ee7) => {
+      try {
+        let _0x4ae424 = await _0x4d80af();
+        console.log("toggleMagicFree请求时间戳:", _0x4ae424, "当前本地时间:", new Date().toISOString());
+        let _0x8f4033 = _0x5b5ee7 ? 1 : 0,
+          _0x19d390 = _0x36c634 + _0x2a4905 + _0x8f4033 + _0x4ae424,
+          _0x25f2ef = await _0x5b4861(_0x19d390, _0x34254c),
+          _0x398163 = {
+            "cdk": _0x36c634,
+            "device_code": _0x2a4905,
+            "enabled": _0x8f4033,
+            "timestamp": _0x4ae424,
+            "sign": _0x25f2ef
+          },
+          _0x10f3a9 = await (await fetch(_0xddb214 + "/toggle_magic_free_mode", {
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": JSON.stringify(_0x398163)
+          })).json();
+        return console.log("toggleMagicFree响应:", _0x10f3a9), _0x10f3a9.code && _0x10f3a9.code !== 200 ? {
+          "success": !1,
+          "status": "error",
+          "message": _0x10f3a9.message || "请求失败"
+        } : _0x10f3a9.status === "error" ? _0x10f3a9.expiresAt ? {
+          "success": !1,
+          "message": _0x10f3a9.message || "该激活码已过期",
+          "expiresAt": _0x10f3a9.expiresAt
+        } : {
+          "success": !1,
+          "message": _0x10f3a9.message
+        } : _0x10f3a9.status === "success" ? {
+          "success": !0,
+          "message": _0x10f3a9.message,
+          "data": _0x10f3a9.data
+        } : {
+          "success": !1,
+          "message": "未知错误"
+        };
+      } catch (_0x14654d) {
+        return console.error("Toggle magic free failed:", _0x14654d), {
+          "success": !1,
+          "message": _0x14654d.message || "免魔法模式切换失败，请稍后重试"
+        };
+      }
+    };
+  }),
+  _0x4db94e = _0xf10ba4((_0x20f3e4, _0x35ee16) => {
+    'use strict';
+
+    var _0x27bb60 = function () {
+      let _0x2011f1 = require("fs"),
+        _0x4b4c66 = require("path"),
+        _0x3d2962 = require("os"),
+        {
+          v4: _0x488996
+        } = _0x150eba(),
+        {
+          execSync: _0x4aa949
+        } = require("child_process"),
+        _0x5d940f = require("crypto"),
+        _0x4f769e = {
+          "info": _0x4cfb88 => console.log("[36m%s[0m", "[INFO] " + _0x4cfb88),
+          "success": _0x1d981d => console.log("[32m%s[0m", "[SUCCESS] " + _0x1d981d),
+          "error": _0x36b39e => console.log("[31m%s[0m", "[ERROR] " + _0x36b39e),
+          "warn": _0x2f2ed8 => console.log("[33m%s[0m", "[WARN] " + _0x2f2ed8)
+        };
+      class _0x123cd1 {
+        constructor(_0xbbafb) {
+          this.cacheDir = _0x4b4c66.join(_0xbbafb.globalStorageUri.fsPath, "js_cache");
+          this.metadataFile = _0x4b4c66.join(this.cacheDir, "file_metadata.json");
+          this.ensureCacheDir();
+        }
+        ["ensureCacheDir"]() {
+          _0x2011f1.existsSync(this.cacheDir) || (_0x2011f1.mkdirSync(this.cacheDir, {
+            "recursive": !0
+          }), _0x4f769e.info("创建缓存目录: " + this.cacheDir));
+        }
+        ["getVersionDir"](_0x4723ce) {
+          let _0x3fdcff = _0x4b4c66.join(this.cacheDir, _0x4723ce);
+          return _0x2011f1.existsSync(_0x3fdcff) || (_0x2011f1.mkdirSync(_0x3fdcff, {
+            "recursive": !0
+          }), _0x4f769e.info("创建版本目录: " + _0x3fdcff)), _0x3fdcff;
+        }
+        ["saveFile"](_0x2e5b85, _0x36c01d, _0x179652) {
+          let _0x5db893 = this.getVersionDir(_0x2e5b85),
+            _0x21482c = _0x15f9b0[_0x36c01d] || _0x36c01d + ".dat",
+            _0x55fa0d = _0x4b4c66.join(_0x5db893, _0x21482c);
+          _0x2011f1.writeFileSync(_0x55fa0d, _0x179652, "utf8");
+          _0x4f769e.success("重置代码已缓存: " + _0x36c01d + ".js");
+          let _0x3a0122 = this.calculateHash(_0x179652);
+          return this.updateMetadata(_0x2e5b85, _0x36c01d, _0x3a0122, "reset"), _0x3a0122;
+        }
+        ["saveRestoreFile"](_0x506674, _0x201dda, _0x2c6ddc) {
+          let _0x47acb6 = this.getVersionDir(_0x506674),
+            _0xe319ab = _0x4167c0[_0x201dda] || _0x201dda + "_bak.dat",
+            _0x5b8ba9 = _0x4b4c66.join(_0x47acb6, _0xe319ab);
+          _0x2011f1.writeFileSync(_0x5b8ba9, _0x2c6ddc, "utf8");
+          _0x4f769e.success("还原代码已缓存: " + _0x201dda + "_restore.js");
+          let _0x3c7f6c = this.calculateHash(_0x2c6ddc);
+          return this.updateMetadata(_0x506674, _0x201dda, _0x3c7f6c, "restore"), _0x3c7f6c;
+        }
+        ["readFile"](_0x5b1649, _0x26633c) {
+          let _0x1b4e1e = _0x15f9b0[_0x26633c] || _0x26633c + ".dat",
+            _0x112c2b = _0x4b4c66.join(this.cacheDir, _0x5b1649, _0x1b4e1e);
+          return _0x2011f1.existsSync(_0x112c2b) ? (_0x4f769e.info("从缓存读取重置代码: " + _0x26633c + ".js"), _0x2011f1.readFileSync(_0x112c2b, "utf8")) : (_0x4f769e.warn("重置代码缓存不存在: " + _0x26633c + ".js"), null);
+        }
+        ["readFileWithCDK"](_0x2eacd4, _0x12dbdc, _0x182d08) {
+          let _0x3f5e18 = this.readFile(_0x2eacd4, _0x12dbdc);
+          return _0x3f5e18 && _0x182d08 ? _0x3f5e18.replace(/cdk-cdk-cdk-cdk/g, _0x182d08) : _0x3f5e18;
+        }
+        ["readRestoreFile"](_0x425639, _0x34e9eb) {
+          let _0x556a99 = _0x4167c0[_0x34e9eb] || _0x34e9eb + "_bak.dat",
+            _0x3df1bf = _0x4b4c66.join(this.cacheDir, _0x425639, _0x556a99);
+          return _0x2011f1.existsSync(_0x3df1bf) ? (_0x4f769e.info("从缓存读取还原代码: " + _0x34e9eb + "_restore.js"), _0x2011f1.readFileSync(_0x3df1bf, "utf8")) : (_0x4f769e.warn("还原代码缓存不存在: " + _0x34e9eb + "_restore.js"), null);
+        }
+        ["getLocalHashes"](_0x1ef292) {
+          return this.readMetadata()[_0x1ef292]?.["reset"] || {};
+        }
+        ["getLocalRestoreHashes"](_0x5cbe39) {
+          return this.readMetadata()[_0x5cbe39]?.["restore"] || {};
+        }
+        ["calculateHash"](_0x2f7a51) {
+          return _0x5d940f.createHash("md5").update(_0x2f7a51).digest("hex");
+        }
+        ["updateMetadata"](_0x2edc6d, _0x1bcf44, _0xd9b613, _0x33ad77) {
+          let _0x33c631 = this.readMetadata();
+          _0x33c631[_0x2edc6d] || (_0x33c631[_0x2edc6d] = {});
+          _0x33c631[_0x2edc6d][_0x33ad77] || (_0x33c631[_0x2edc6d][_0x33ad77] = {});
+          _0x33c631[_0x2edc6d][_0x33ad77][_0x1bcf44] = _0xd9b613;
+          this.writeMetadata(_0x33c631);
+        }
+        ["readMetadata"]() {
+          if (_0x2011f1.existsSync(this.metadataFile)) try {
+            return JSON.parse(_0x2011f1.readFileSync(this.metadataFile, "utf8"));
+          } catch (_0x188bc7) {
+            _0x4f769e.error("读取缓存元数据失败: " + _0x188bc7.message);
+          }
+          return {};
+        }
+        ["writeMetadata"](_0x3dfb69) {
+          _0x2011f1.writeFileSync(this.metadataFile, JSON.stringify(_0x3dfb69, null, 2), "utf8");
+        }
+        ["cleanOldCache"]() {
+          try {
+            let _0x2b66a2 = _0x2011f1.readdirSync(this.cacheDir).filter(_0x5371e3 => {
+              let _0xc5b672 = _0x4b4c66.join(this.cacheDir, _0x5371e3);
+              return _0x2011f1.statSync(_0xc5b672).isDirectory();
+            }).sort().reverse();
+            _0x2b66a2.length > 5 && _0x2b66a2.slice(5).forEach(_0x4e8eb5 => {
+              let _0x194b94 = _0x4b4c66.join(this.cacheDir, _0x4e8eb5);
+              _0x2011f1.rmSync(_0x194b94, {
+                "recursive": !0,
+                "force": !0
+              });
+              _0x4f769e.info("清理旧缓存版本: " + _0x4e8eb5);
+            });
+          } catch (_0x922a45) {
+            _0x4f769e.error("清理缓存失败: " + _0x922a45.message);
+          }
+        }
+      }
+      let _0x2a3717 = null;
+      function _0x1fc0af(_0x237fc7) {
+        return !_0x2a3717 && _0x237fc7 && (_0x2a3717 = new _0x123cd1(_0x237fc7), _0x4f769e.info("JS文件缓存已初始化")), _0x2a3717;
+      }
+      let _0x38e884 = {
+          "code": "f1",
+          "machine": "f2",
+          "workbench": "f3",
+          "node": "f4"
+        },
+        _0x3e4f42 = {
+          "code": "r1",
+          "workbench": "r2",
+          "node": "r3"
+        },
+        _0x15f9b0 = {
+          "code": "app_core.dat",
+          "machine": "sys_info.dat",
+          "workbench": "ui_main.dat",
+          "node": "ext_host.dat"
+        },
+        _0x4167c0 = {
+          "code": "app_core_bak.dat",
+          "workbench": "ui_main_bak.dat",
+          "node": "ext_host_bak.dat"
+        };
+      async function _0x5d53a1(_0x5e797d, _0x30be8c, _0x2730dd) {
+        if (!_0x2a3717) throw new Error("缓存未初始化");
+        let _0xde1375 = (_0x2ab875(), _0x4120b5(_0x503b4e)),
+          _0x47a1fd = _0x2a3717.getLocalHashes(_0x30be8c),
+          _0x49d09e = {};
+        Object.entries(_0x47a1fd).forEach(([_0x3e8662, _0xc584c4]) => {
+          let _0x10da9f = _0x38e884[_0x3e8662];
+          _0x10da9f && (_0x49d09e[_0x10da9f] = _0xc584c4);
+        });
+        _0x4f769e.info("本地重置代码哈希: " + JSON.stringify(_0x47a1fd));
+        let _0x4576fa = await _0xde1375.getCodeWithHashes(_0x5e797d, _0x30be8c, _0x2730dd, _0x49d09e);
+        if (!_0x4576fa.success) {
+          if (_0x4576fa.expiresAt) {
+            let _0x22ffea = new Error(_0x4576fa.message || "该激活码已过期");
+            throw _0x22ffea.isExpired = !0, _0x22ffea.expiresAt = _0x4576fa.expiresAt, _0x22ffea;
+          }
+          throw new Error(_0x4576fa.message);
+        }
+        let {
+            file_hashes: _0x3a8293,
+            files: _0x3aef48
+          } = _0x4576fa.data,
+          _0x1ee926 = {};
+        Object.entries(_0x3a8293).forEach(([_0x18b126, _0x5785e7]) => {
+          let _0x49adf7 = Object.keys(_0x38e884).find(_0x5334fe => _0x38e884[_0x5334fe] === _0x18b126);
+          _0x49adf7 && (_0x1ee926[_0x49adf7] = _0x5785e7);
+        });
+        _0x4f769e.info("服务端重置代码哈希: " + JSON.stringify(_0x1ee926));
+        _0x3aef48 && Object.keys(_0x3aef48).length > 0 ? (_0x4f769e.info("发现重置代码更新，更新缓存..."), Object.entries(_0x3aef48).forEach(([_0xc08589, _0x131308]) => {
+          let _0x295102 = Object.keys(_0x38e884).find(_0x3b0c3d => _0x38e884[_0x3b0c3d] === _0xc08589);
+          _0x295102 && _0x2a3717.saveFile(_0x30be8c, _0x295102, _0x131308);
+        })) : _0x4f769e.info("所有重置代码都是最新的，无需下载");
+        let _0x2e3d00 = {
+          "code": _0x2a3717.readFileWithCDK(_0x30be8c, "code", _0x5e797d) || "NO",
+          "machineCode": _0x2a3717.readFile(_0x30be8c, "machine") || "NO",
+          "workbenchCode": _0x2a3717.readFileWithCDK(_0x30be8c, "workbench", _0x5e797d) || "NO",
+          "nodeCode": _0x2a3717.readFile(_0x30be8c, "node") || "NO"
+        };
+        return _0x4f769e.info("准备注入的重置代码状态: " + JSON.stringify({
+          "code": _0x2e3d00.code !== "NO" ? "有内容" : "无内容",
+          "machineCode": _0x2e3d00.machineCode !== "NO" ? "有内容" : "无内容",
+          "workbenchCode": _0x2e3d00.workbenchCode !== "NO" ? "有内容" : "无内容",
+          "nodeCode": _0x2e3d00.nodeCode !== "NO" ? "有内容" : "无内容"
+        })), _0x2e3d00;
+      }
+      async function _0x29e399(_0x199191, _0x227a12, _0x2c501f) {
+        if (!_0x2a3717) throw new Error("缓存未初始化");
+        let _0x289a6b = (_0x2ab875(), _0x4120b5(_0x503b4e)),
+          _0x4f7e0f = _0x2a3717.getLocalRestoreHashes(_0x227a12),
+          _0x4dc4db = {};
+        Object.entries(_0x4f7e0f).forEach(([_0x3e10ee, _0x33b3ba]) => {
+          let _0x100896 = _0x3e4f42[_0x3e10ee];
+          _0x100896 && (_0x4dc4db[_0x100896] = _0x33b3ba);
+        });
+        _0x4f769e.info("本地还原代码哈希: " + JSON.stringify(_0x4f7e0f));
+        let _0x2b8409 = await _0x289a6b.getRestoreCodeWithHashes(_0x199191, _0x227a12, _0x2c501f, _0x4dc4db);
+        if (!_0x2b8409.success) {
+          if (_0x2b8409.expiresAt) {
+            let _0x108a3c = new Error(_0x2b8409.message || "该激活码已过期");
+            throw _0x108a3c.isExpired = !0, _0x108a3c.expiresAt = _0x2b8409.expiresAt, _0x108a3c;
+          }
+          throw new Error(_0x2b8409.message);
+        }
+        let {
+            file_hashes: _0x4b96c0,
+            files: _0x245055
+          } = _0x2b8409.data,
+          _0x22238f = {};
+        Object.entries(_0x4b96c0).forEach(([_0xf08513, _0x131f45]) => {
+          let _0x5a11d8 = Object.keys(_0x3e4f42).find(_0x3b5e30 => _0x3e4f42[_0x3b5e30] === _0xf08513);
+          _0x5a11d8 && (_0x22238f[_0x5a11d8] = _0x131f45);
+        });
+        _0x4f769e.info("服务端还原代码哈希: " + JSON.stringify(_0x22238f));
+        _0x245055 && Object.keys(_0x245055).length > 0 ? (_0x4f769e.info("发现还原代码更新，更新缓存..."), Object.entries(_0x245055).forEach(([_0x34ea6c, _0x3c7be6]) => {
+          let _0x3c87d2 = Object.keys(_0x3e4f42).find(_0x158a21 => _0x3e4f42[_0x158a21] === _0x34ea6c);
+          _0x3c87d2 && _0x2a3717.saveRestoreFile(_0x227a12, _0x3c87d2, _0x3c7be6);
+        })) : _0x4f769e.info("所有还原代码都是最新的，无需下载");
+        let _0x39c98a = {
+          "code": _0x2a3717.readRestoreFile(_0x227a12, "code") || "NO",
+          "workbenchCode": _0x2a3717.readRestoreFile(_0x227a12, "workbench") || "NO",
+          "nodeCode": _0x2a3717.readRestoreFile(_0x227a12, "node") || "NO"
+        };
+        return _0x4f769e.info("准备注入的还原代码状态: " + JSON.stringify({
+          "code": _0x39c98a.code !== "NO" ? "有内容" : "无内容",
+          "workbenchCode": _0x39c98a.workbenchCode !== "NO" ? "有内容" : "无内容",
+          "nodeCode": _0x39c98a.nodeCode !== "NO" ? "有内容" : "无内容"
+        })), _0x39c98a;
+      }
+      let _0x569561 = async function (_0x252074, _0x51a51d, _0x2e1408, _0x9e9a0e) {
+          try {
+            _0x4f769e.info("开始智能重置插件配置...");
+            let _0x677b21 = _0x1fc0af(_0x9e9a0e),
+              _0x132b75 = await _0x5d53a1(_0x252074, _0x51a51d, _0x2e1408);
+            return _0x290262(_0x132b75.code, _0x132b75.machineCode, _0x132b75.workbenchCode, _0x132b75.nodeCode), _0x677b21.cleanOldCache(), _0x4f769e.success("智能重置插件配置完成！"), !0;
+          } catch (_0x9a86fc) {
+            throw _0x4f769e.error("智能重置插件配置失败: " + _0x9a86fc.message), _0x9a86fc;
+          }
+        },
+        _0x2051fc = async function (_0x14d773, _0x584d80, _0xc298bb, _0x117f40) {
+          try {
+            _0x4f769e.info("开始智能停用插件配置...");
+            let _0x18c45e = _0x1fc0af(_0x117f40),
+              _0x2827e9 = await _0x29e399(_0x14d773, _0x584d80, _0xc298bb);
+            return _0x290262(_0x2827e9.code, "NO", _0x2827e9.workbenchCode, _0x2827e9.nodeCode), _0x18c45e.cleanOldCache(), _0x4f769e.success("智能停用插件配置完成！"), !0;
+          } catch (_0x37c1ec) {
+            throw _0x4f769e.error("智能停用插件配置失败: " + _0x37c1ec.message), _0x37c1ec;
+          }
+        },
+        _0x38d858 = function () {
           switch (process.platform) {
             case "win32":
               return "Windows";
@@ -1708,1263 +2574,349 @@ var _0x13e115 = _0x9ff207(_0x1ea511 => {
               return "Unknown";
           }
         },
-        _0x3dc126 = function () {
-          let _0x38134d = ["/Applications/Cursor.app", _0x265b94.join(_0x34dd32.homedir(), "Applications", "Cursor.app"), "/Applications/Cursor-x86_64.app"],
-            _0x2ec47d = "Contents/Resources/app",
-            _0x58e81d = "out/main.js",
-            _0x14490e = "extensions/cursor-always-local/dist/main.js",
-            _0x4095f8 = "out/vs/workbench/workbench.desktop.main.js",
-            _0x2e5537 = "out/vs/workbench/api/node/extensionHostProcess.js";
-          for (let _0xfac96a of _0x38134d) if (_0x1749c5.existsSync(_0xfac96a)) return {
-            "mainJs": _0x265b94.join(_0xfac96a, _0x2ec47d, _0x58e81d),
-            "extensionDist": _0x265b94.join(_0xfac96a, _0x2ec47d, _0x14490e),
-            "workbenchMainJs": _0x265b94.join(_0xfac96a, _0x2ec47d, _0x4095f8),
-            "nodeMainJs": _0x265b94.join(_0xfac96a, _0x2ec47d, _0x2e5537)
+        _0x2b7f3d = function (_0x4548b4, _0xb3d99d, _0x3f6796 = "utf8") {
+          try {
+            if (_0x2011f1.existsSync(_0x4548b4)) try {
+              _0x2011f1.chmodSync(_0x4548b4, 438);
+            } catch {
+              _0x4f769e.warn("无法修改文件权限: " + _0x4548b4);
+            }
+            if (_0x2011f1.writeFileSync(_0x4548b4, _0xb3d99d, _0x3f6796), _0x2011f1.existsSync(_0x4548b4) && _0x2011f1.readFileSync(_0x4548b4, _0x3f6796).length > 0) return !0;
+            throw new Error("文件写入验证失败");
+          } catch (_0x4dd03d) {
+            throw _0x4f769e.error("写入文件失败 " + _0x4548b4 + ": " + _0x4dd03d.message), _0x4dd03d;
+          }
+        },
+        _0x2ac942 = function () {
+          let _0x2a825a = ["/Applications/Cursor.app", _0x4b4c66.join(_0x3d2962.homedir(), "Applications", "Cursor.app"), "/Applications/Cursor-x86_64.app"],
+            _0x51358f = "Contents/Resources/app",
+            _0x1c8d73 = "out/main.js",
+            _0x57e19a = "extensions/cursor-always-local/dist/main.js",
+            _0x1694f4 = "out/vs/workbench/workbench.desktop.main.js",
+            _0x51c215 = "out/vs/workbench/api/node/extensionHostProcess.js";
+          for (let _0x1f2987 of _0x2a825a) if (_0x2011f1.existsSync(_0x1f2987)) return {
+            "mainJs": _0x4b4c66.join(_0x1f2987, _0x51358f, _0x1c8d73),
+            "extensionDist": _0x4b4c66.join(_0x1f2987, _0x51358f, _0x57e19a),
+            "workbenchMainJs": _0x4b4c66.join(_0x1f2987, _0x51358f, _0x1694f4),
+            "nodeMainJs": _0x4b4c66.join(_0x1f2987, _0x51358f, _0x51c215)
           };
-          let _0x247c49 = "/Applications/Cursor.app";
+          let _0x216bc0 = "/Applications/Cursor.app";
           return {
-            "mainJs": _0x265b94.join(_0x247c49, _0x2ec47d, _0x58e81d),
-            "extensionDist": _0x265b94.join(_0x247c49, _0x2ec47d, _0x14490e)
+            "mainJs": _0x4b4c66.join(_0x216bc0, _0x51358f, _0x1c8d73),
+            "extensionDist": _0x4b4c66.join(_0x216bc0, _0x51358f, _0x57e19a)
           };
         },
-        _0x3cb8b4 = function () {
-          let _0x1bf7d6 = _0x37b93b(),
-            _0x1f2ce6 = {
+        _0x12320e = function () {
+          let _0x40e7a2 = _0x38d858(),
+            _0x16cb9a = {
               "mainJs": "",
               "extensionDist": "",
               "workbenchMainJs": ""
             };
-          switch (_0x1bf7d6) {
+          switch (_0x40e7a2) {
             case "Windows":
-              let _0x57cdb2 = _0x265b94.dirname(process.execPath);
-              _0x1f2ce6.mainJs = _0x265b94.join(_0x57cdb2, "resources", "app", "out", "main.js"), _0x1f2ce6.extensionDist = _0x265b94.join(_0x57cdb2, "resources", "app", "extensions", "cursor-always-local", "dist", "main.js"), _0x1f2ce6.workbenchMainJs = _0x265b94.join(_0x57cdb2, "resources", "app", "out", "vs", "workbench", "workbench.desktop.main.js"), _0x1f2ce6.nodeMainJs = _0x265b94.join(_0x57cdb2, "resources", "app", "out", "vs", "workbench", "api", "node", "extensionHostProcess.js");
+              let _0x5ce6a2 = _0x4b4c66.dirname(process.execPath);
+              _0x16cb9a.mainJs = _0x4b4c66.join(_0x5ce6a2, "resources", "app", "out", "main.js"), _0x16cb9a.extensionDist = _0x4b4c66.join(_0x5ce6a2, "resources", "app", "extensions", "cursor-always-local", "dist", "main.js"), _0x16cb9a.workbenchMainJs = _0x4b4c66.join(_0x5ce6a2, "resources", "app", "out", "vs", "workbench", "workbench.desktop.main.js"), _0x16cb9a.nodeMainJs = _0x4b4c66.join(_0x5ce6a2, "resources", "app", "out", "vs", "workbench", "api", "node", "extensionHostProcess.js");
               break;
             case "macOS":
-              let _0xfe2b23 = _0x3dc126();
-              _0x1f2ce6.mainJs = _0xfe2b23.mainJs, _0x1f2ce6.extensionDist = _0xfe2b23.extensionDist, _0x1f2ce6.workbenchMainJs = _0xfe2b23.workbenchMainJs, _0x1f2ce6.nodeMainJs = _0xfe2b23.nodeMainJs;
+              let _0x5a1e74 = _0x2ac942();
+              _0x16cb9a.mainJs = _0x5a1e74.mainJs, _0x16cb9a.extensionDist = _0x5a1e74.extensionDist, _0x16cb9a.workbenchMainJs = _0x5a1e74.workbenchMainJs, _0x16cb9a.nodeMainJs = _0x5a1e74.nodeMainJs;
               break;
             case "Linux":
-              let _0x8c2471 = _0x265b94.dirname(process.execPath);
-              _0x1f2ce6.mainJs = _0x265b94.join(_0x8c2471, "resources", "app", "out", "main.js"), _0x1f2ce6.extensionDist = _0x265b94.join(_0x8c2471, "resources", "app", "extensions", "cursor-always-local", "dist", "main.js"), _0x1f2ce6.workbenchMainJs = _0x265b94.join(_0x8c2471, "resources", "app", "out", "vs", "workbench", "workbench.desktop.main.js"), _0x1f2ce6.nodeMainJs = _0x265b94.join(_0x8c2471, "resources", "app", "out", "vs", "workbench", "api", "node", "extensionHostProcess.js");
+              let _0x2ff2d1 = _0x4b4c66.dirname(process.execPath);
+              _0x16cb9a.mainJs = _0x4b4c66.join(_0x2ff2d1, "resources", "app", "out", "main.js"), _0x16cb9a.extensionDist = _0x4b4c66.join(_0x2ff2d1, "resources", "app", "extensions", "cursor-always-local", "dist", "main.js"), _0x16cb9a.workbenchMainJs = _0x4b4c66.join(_0x2ff2d1, "resources", "app", "out", "vs", "workbench", "workbench.desktop.main.js"), _0x16cb9a.nodeMainJs = _0x4b4c66.join(_0x2ff2d1, "resources", "app", "out", "vs", "workbench", "api", "node", "extensionHostProcess.js");
               break;
             default:
               throw new Error("不支持的操作系统");
           }
-          return _0x3cc540.info("当前系统架构: " + process.arch), _0x3cc540.info("main.js\u8DEF\u5F84: "), _0x3cc540.info("extensionDist\u8DEF\u5F84: "), _0x1f2ce6;
+          return _0x4f769e.info("当前系统架构: " + process.arch), _0x4f769e.info("main.js\u8DEF\u5F84: "), _0x4f769e.info("extensionDist\u8DEF\u5F84: "), _0x16cb9a;
         },
-        _0x55c591 = function () {
-          let _0x11bd1e = Array(6).fill(0).map(() => Math.floor(Math.random() * 256).toString(16).padStart(2, "0")).join(":").toUpperCase();
-          return _0x11bd1e === "00:00:00:00:00:00" || _0x11bd1e === "FF:FF:FF:FF:FF:FF" || _0x11bd1e === "AC:DE:48:00:11:22" ? _0x55c591() : _0x11bd1e;
+        _0x1941b4 = function () {
+          let _0x3deba6 = Array(6).fill(0).map(() => Math.floor(Math.random() * 256).toString(16).padStart(2, "0")).join(":").toUpperCase();
+          return _0x3deba6 === "00:00:00:00:00:00" || _0x3deba6 === "FF:FF:FF:FF:FF:FF" || _0x3deba6 === "AC:DE:48:00:11:22" ? _0x1941b4() : _0x3deba6;
         },
-        _0x43c00f = function () {
+        _0x2922f8 = function () {
           try {
-            let _0x240d89 = _0x37b93b(),
-              _0x691f21 = "";
-            switch (_0x240d89) {
+            let _0x456614 = _0x38d858(),
+              _0x6fc3cb = "";
+            switch (_0x456614) {
               case "Windows":
-                let _0x200f4f = _0x265b94.dirname(process.execPath);
-                _0x691f21 = _0x265b94.join(_0x200f4f, "resources", "app", "package.json"), _0x3cc540.info("版本号文件路径: " + _0x691f21);
+                let _0x4edecd = _0x4b4c66.dirname(process.execPath);
+                _0x6fc3cb = _0x4b4c66.join(_0x4edecd, "resources", "app", "package.json"), _0x4f769e.info("版本号文件路径: " + _0x6fc3cb);
                 break;
               case "macOS":
-                let _0x103cb5 = ["/Applications/Cursor.app/Contents/Resources/app/package.json", _0x265b94.join(_0x34dd32.homedir(), "Applications", "Cursor.app", "Contents", "Resources", "app", "package.json")];
-                _0x691f21 = _0x103cb5.find(_0x3c88f7 => _0x1749c5.existsSync(_0x3c88f7)) || _0x103cb5[0];
+                let _0x20fab5 = ["/Applications/Cursor.app/Contents/Resources/app/package.json", _0x4b4c66.join(_0x3d2962.homedir(), "Applications", "Cursor.app", "Contents", "Resources", "app", "package.json")];
+                _0x6fc3cb = _0x20fab5.find(_0x20de79 => _0x2011f1.existsSync(_0x20de79)) || _0x20fab5[0];
                 break;
               case "Linux":
-                let _0xedcda8 = _0x265b94.dirname(process.execPath);
-                _0x691f21 = _0x265b94.join(_0xedcda8, "resources", "app", "package.json"), _0x3cc540.info("Linux版本号文件路径: " + _0x691f21);
+                let _0x57e4a3 = _0x4b4c66.dirname(process.execPath);
+                _0x6fc3cb = _0x4b4c66.join(_0x57e4a3, "resources", "app", "package.json"), _0x4f769e.info("Linux版本号文件路径: " + _0x6fc3cb);
                 break;
               default:
                 throw new Error("不支持的操作系统");
             }
-            if (!_0x691f21 || !_0x1749c5.existsSync(_0x691f21)) throw new Error("找不到package.json文件");
-            let _0x20e868 = _0x1749c5.readFileSync(_0x691f21, "utf8"),
-              _0x4a7107 = JSON.parse(_0x20e868).version;
-            if (!_0x4a7107) throw new Error("无法从package.json中读取版本号");
-            return _0x3cc540.success("成功获取Cursor版本号: " + _0x4a7107), _0x4a7107;
-          } catch (_0x1ef660) {
-            return _0x3cc540.error("获取Cursor版本号失败: " + _0x1ef660.message), "未知";
+            if (!_0x6fc3cb || !_0x2011f1.existsSync(_0x6fc3cb)) throw new Error("找不到package.json文件");
+            let _0xd59ac2 = _0x2011f1.readFileSync(_0x6fc3cb, "utf8"),
+              _0x3b3e55 = JSON.parse(_0xd59ac2).version;
+            if (!_0x3b3e55) throw new Error("无法从package.json中读取版本号");
+            return _0x4f769e.success("成功获取Cursor版本号: " + _0x3b3e55), _0x3b3e55;
+          } catch (_0xdb6395) {
+            return _0x4f769e.error("获取Cursor版本号失败: " + _0xdb6395.message), "未知";
+          }
+        },
+        _0x290262 = function (_0x12f407, _0x598df1, _0x3df03e, _0x301171) {
+          try {
+            _0x4f769e.info("开始重置Cursor标识...");
+            _0x4f769e.info("当前系统: " + _0x38d858());
+            _0x4f769e.info("获取到的代码: " + _0x12f407);
+            _0x4f769e.info("获取到的机器码: " + _0x598df1);
+            _0x4f769e.info("获取到的workbenchCode: " + _0x3df03e);
+            _0x4f769e.info("获取到的nodeCode: " + _0x301171);
+            let _0x1deec9 = _0x12320e();
+            if (_0x4f769e.info("main.js路径: " + _0x1deec9.mainJs), _0x4f769e.info("扩展目录路径: " + _0x1deec9.extensionDist), _0x4f769e.info("workbenchMainJs路径: " + _0x1deec9.workbenchMainJs), _0x598df1 !== "NO") {
+              let _0x5b2953 = _0x598df1,
+                _0x332c3c = _0x488996(),
+                _0x435001 = _0x1941b4(),
+                _0x46123e = _0x488996();
+              _0x4f769e.info("生成新的机器ID: " + _0x332c3c);
+              _0x4f769e.info("生成新的MAC地址: " + _0x435001);
+              _0x4f769e.info("生成新的设备ID: " + _0x46123e);
+              _0x4f769e.info("正在替换机器ID...");
+              _0x5b2953 = _0x5b2953.replace(/\[csp1\]/g, _0x332c3c);
+              _0x4f769e.success("机器ID替换完成");
+              _0x4f769e.info("正在替换MAC地址...");
+              _0x5b2953 = _0x5b2953.replace(/\[csp2\]/g, _0x435001);
+              _0x4f769e.success("MAC地址替换完成");
+              _0x4f769e.info("正在替换设备ID...");
+              _0x5b2953 = _0x5b2953.replace(/\[csp4\]/g, _0x46123e);
+              _0x4f769e.success("设备ID替换完成");
+              _0x2b7f3d(_0x1deec9.mainJs, _0x5b2953, "utf8");
+              _0x4f769e.success("文件修改已保存");
+              _0x38d858() === "macOS" && (_0x4f769e.info("正在处理macOS签名..."), _0x4aa949("codesign --force --deep --sign - \"" + _0x4b4c66.join("/Applications", "Cursor.app") + "\""), _0x4f769e.success("macOS签名完成"));
+              _0x4f769e.success("Cursor标识重置完成！");
+            }
+            return _0x3df03e !== "NO" && (_0x4f769e.info("正在写入workbenchMainJs..."), _0x2b7f3d(_0x1deec9.workbenchMainJs, _0x3df03e, "utf8"), _0x4f769e.success("workbenchMainJs写入完成")), _0x301171 !== "NO" && (_0x4f769e.info("正在写入nodeMainJs..."), _0x2b7f3d(_0x1deec9.nodeMainJs, _0x301171, "utf8"), _0x4f769e.success("nodeMainJs写入完成")), _0x12f407 !== "NO" && (_0x4f769e.info("正在写入cursor-always-local/dist/main.js路径..."), _0x2b7f3d(_0x1deec9.extensionDist, _0x12f407, "utf8"), _0x4f769e.success("cursor-always-local/dist/main.js写入完成"), _0x4f769e.warn("请重启Cursor以使更改生效")), !0;
+          } catch (_0x367360) {
+            throw _0x4f769e.error("重置标识时发生错误: " + _0x367360.message), _0x367360;
           }
         };
       return {
-        "reset": function (_0x3e7469, _0x4b080, _0x207f8a, _0xe9657) {
-          try {
-            _0x3cc540.info("开始重置Cursor标识...");
-            _0x3cc540.info("当前系统: " + _0x37b93b());
-            _0x3cc540.info("获取到的代码: " + _0x3e7469);
-            _0x3cc540.info("获取到的机器码: " + _0x4b080);
-            _0x3cc540.info("获取到的workbenchCode: " + _0x207f8a);
-            _0x3cc540.info("获取到的nodeCode: " + _0xe9657);
-            let _0x1aecf0 = _0x3cb8b4();
-            if (_0x3cc540.info("main.js路径: " + _0x1aecf0.mainJs), _0x3cc540.info("扩展目录路径: " + _0x1aecf0.extensionDist), _0x3cc540.info("workbenchMainJs路径: " + _0x1aecf0.workbenchMainJs), _0x4b080 !== "NO") {
-              let _0x1aff71 = _0x4b080,
-                _0x439293 = _0x121629(),
-                _0x211c09 = _0x55c591(),
-                _0x236150 = _0x121629();
-              _0x3cc540.info("生成新的机器ID: " + _0x439293);
-              _0x3cc540.info("生成新的MAC地址: " + _0x211c09);
-              _0x3cc540.info("生成新的设备ID: " + _0x236150);
-              _0x3cc540.info("正在替换机器ID...");
-              _0x1aff71 = _0x1aff71.replace(/\[csp1\]/g, _0x439293);
-              _0x3cc540.success("机器ID替换完成");
-              _0x3cc540.info("正在替换MAC地址...");
-              _0x1aff71 = _0x1aff71.replace(/\[csp2\]/g, _0x211c09);
-              _0x3cc540.success("MAC地址替换完成");
-              _0x3cc540.info("正在替换设备ID...");
-              _0x1aff71 = _0x1aff71.replace(/\[csp4\]/g, _0x236150);
-              _0x3cc540.success("设备ID替换完成");
-              _0x1749c5.writeFileSync(_0x1aecf0.mainJs, _0x1aff71, "utf8");
-              _0x3cc540.success("文件修改已保存");
-              _0x37b93b() === "macOS" && (_0x3cc540.info("正在处理macOS签名..."), _0x183239("codesign --force --deep --sign - \"" + _0x265b94.join("/Applications", "Cursor.app") + "\""), _0x3cc540.success("macOS签名完成"));
-              _0x3cc540.success("Cursor标识重置完成！");
-            }
-            return _0x207f8a !== "NO" && (_0x3cc540.info("正在写入workbenchMainJs..."), _0x1749c5.writeFileSync(_0x1aecf0.workbenchMainJs, _0x207f8a, "utf8"), _0x3cc540.success("workbenchMainJs写入完成")), _0xe9657 !== "NO" && (_0x3cc540.info("正在写入nodeMainJs..."), _0x1749c5.writeFileSync(_0x1aecf0.nodeMainJs, _0xe9657, "utf8"), _0x3cc540.success("nodeMainJs写入完成")), _0x3e7469 !== "NO" && (_0x3cc540.info("正在写入cursor-always-local/dist/main.js路径..."), _0x1749c5.writeFileSync(_0x1aecf0.extensionDist, _0x3e7469, "utf8"), _0x3cc540.success("cursor-always-local/dist/main.js写入完成"), _0x3cc540.warn("请重启Cursor以使更改生效")), !0;
-          } catch (_0x544e8d) {
-            throw _0x3cc540.error("重置标识时发生错误: " + _0x544e8d.message), _0x544e8d;
-          }
-        },
+        "reset": _0x290262,
+        "resetWithCache": _0x569561,
+        "restoreWithCache": _0x2051fc,
+        "initCache": _0x1fc0af,
         "getSystemInfo": function () {
-          let _0x37bab4 = _0x3cb8b4();
+          let _0x4093c5 = _0x12320e();
           return {
-            "system": _0x37b93b(),
-            "mainJsPath": _0x37bab4.mainJs,
-            "extensionDistPath": _0x37bab4.extensionDist,
-            "version": _0x43c00f()
+            "system": _0x38d858(),
+            "mainJsPath": _0x4093c5.mainJs,
+            "extensionDistPath": _0x4093c5.extensionDist,
+            "version": _0x2922f8()
           };
         },
-        "applyMaxConfig": function (_0x49ccc8) {
+        "applyMaxConfig": function (_0x3b2428) {
           try {
-            _0x3cc540.info("开始应用MAX配置...");
-            let _0x49370c = _0x3cb8b4();
-            if (!_0x49370c.workbenchMainJs) throw new Error("无法确定workbenchMainJs文件路径");
-            if (_0x3cc540.info("workbenchMainJs路径: " + _0x49370c.workbenchMainJs), !_0x1749c5.existsSync(_0x49370c.workbenchMainJs)) throw new Error("workbenchMainJs文件不存在");
-            let _0x17ab0f = _0x1749c5.readFileSync(_0x49370c.workbenchMainJs, "utf8"),
-              _0x403c21;
+            _0x4f769e.info("开始应用MAX配置...");
+            let _0x522e3b = _0x12320e();
+            if (!_0x522e3b.workbenchMainJs) throw new Error("无法确定workbenchMainJs文件路径");
+            if (_0x4f769e.info("workbenchMainJs路径: " + _0x522e3b.workbenchMainJs), !_0x2011f1.existsSync(_0x522e3b.workbenchMainJs)) throw new Error("workbenchMainJs文件不存在");
+            let _0x2e50aa = _0x2011f1.readFileSync(_0x522e3b.workbenchMainJs, "utf8"),
+              _0x82de8;
             try {
-              typeof _0x49ccc8 == "string" ? _0x403c21 = JSON.parse(_0x49ccc8) : _0x403c21 = _0x49ccc8;
-            } catch (_0x55da93) {
-              throw new Error("解析JSON配置失败: " + _0x55da93.message);
+              typeof _0x3b2428 == "string" ? _0x82de8 = JSON.parse(_0x3b2428) : _0x82de8 = _0x3b2428;
+            } catch (_0x17331b) {
+              throw new Error("解析JSON配置失败: " + _0x17331b.message);
             }
-            if (!_0x403c21 || !_0x403c21.modifications || !Array.isArray(_0x403c21.modifications)) throw new Error("配置格式无效，找不到modifications数组");
-            let _0x377726 = 30,
-              _0xc178c6 = 0;
-            for (let _0x4cedf0 of _0x403c21.modifications) {
-              if (!_0x4cedf0.originalCode || !_0x4cedf0.modifiedCode) {
-                _0x3cc540.warn("跳过无效的修改项");
+            if (!_0x82de8 || !_0x82de8.modifications || !Array.isArray(_0x82de8.modifications)) throw new Error("配置格式无效，找不到modifications数组");
+            let _0x243f44 = 30,
+              _0xca68f3 = 0;
+            for (let _0x2e2321 of _0x82de8.modifications) {
+              if (!_0x2e2321.originalCode || !_0x2e2321.modifiedCode) {
+                _0x4f769e.warn("跳过无效的修改项");
                 continue;
               }
-              let _0x50c853 = _0x4cedf0.originalCode.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
-                _0x8b57d3 = new RegExp(_0x50c853, "g"),
-                _0x1b79c7 = _0x17ab0f;
-              _0x17ab0f = _0x17ab0f.replace(_0x8b57d3, _0x4cedf0.modifiedCode);
-              _0x1b79c7 !== _0x17ab0f ? (_0xc178c6++, _0x3cc540.success("成功应用修改: " + _0x4cedf0.originalCode.substring(0, _0x377726) + "...")) : _0x3cc540.warn("未找到匹配项: " + _0x4cedf0.originalCode.substring(0, _0x377726) + "...");
+              let _0x177b9c = _0x2e2321.originalCode.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+                _0x2a6c68 = new RegExp(_0x177b9c, "g"),
+                _0x4883e6 = _0x2e50aa;
+              _0x2e50aa = _0x2e50aa.replace(_0x2a6c68, _0x2e2321.modifiedCode);
+              _0x4883e6 !== _0x2e50aa ? (_0xca68f3++, _0x4f769e.success("成功应用修改: " + _0x2e2321.originalCode.substring(0, _0x243f44) + "...")) : _0x4f769e.warn("未找到匹配项: " + _0x2e2321.originalCode.substring(0, _0x243f44) + "...");
             }
-            return _0x1749c5.writeFileSync(_0x49370c.workbenchMainJs, _0x17ab0f, "utf8"), _0x3cc540.success("应用了 " + _0xc178c6 + " 处修改，文件已保存"), {
+            return _0x2b7f3d(_0x522e3b.workbenchMainJs, _0x2e50aa, "utf8"), _0x4f769e.success("应用了 " + _0xca68f3 + " 处修改，文件已保存"), {
               "success": !0,
-              "modifiedCount": _0xc178c6,
+              "modifiedCount": _0xca68f3,
               "message": "MAX功能已开启"
             };
-          } catch (_0x40fc11) {
-            return _0x3cc540.error("应用MAX配置时发生错误: " + _0x40fc11.message), {
+          } catch (_0x2511aa) {
+            return _0x4f769e.error("应用MAX配置时发生错误: " + _0x2511aa.message), {
               "success": !1,
-              "message": "MAX功能开启失败: " + _0x40fc11.message
+              "message": "MAX功能开启失败: " + _0x2511aa.message
             };
           }
         },
-        "restoreMaxConfig": function (_0x1db647) {
+        "restoreMaxConfig": function (_0x2d0712) {
           try {
-            _0x3cc540.info("开始还原MAX配置...");
-            let _0x11cf0d = _0x3cb8b4();
-            if (!_0x11cf0d.workbenchMainJs) throw new Error("无法确定workbenchMainJs文件路径");
-            if (_0x3cc540.info("workbenchMainJs路径: " + _0x11cf0d.workbenchMainJs), !_0x1749c5.existsSync(_0x11cf0d.workbenchMainJs)) throw new Error("workbenchMainJs文件不存在");
-            let _0x1a1eda = _0x1749c5.readFileSync(_0x11cf0d.workbenchMainJs, "utf8"),
-              _0x23f873;
+            _0x4f769e.info("开始还原MAX配置...");
+            let _0x20b9cc = _0x12320e();
+            if (!_0x20b9cc.workbenchMainJs) throw new Error("无法确定workbenchMainJs文件路径");
+            if (_0x4f769e.info("workbenchMainJs路径: " + _0x20b9cc.workbenchMainJs), !_0x2011f1.existsSync(_0x20b9cc.workbenchMainJs)) throw new Error("workbenchMainJs文件不存在");
+            let _0x52c3d8 = _0x2011f1.readFileSync(_0x20b9cc.workbenchMainJs, "utf8"),
+              _0x48547a;
             try {
-              typeof _0x1db647 == "string" ? _0x23f873 = JSON.parse(_0x1db647) : _0x23f873 = _0x1db647;
-            } catch (_0x104e77) {
-              throw new Error("解析JSON配置失败: " + _0x104e77.message);
+              typeof _0x2d0712 == "string" ? _0x48547a = JSON.parse(_0x2d0712) : _0x48547a = _0x2d0712;
+            } catch (_0xa877c8) {
+              throw new Error("解析JSON配置失败: " + _0xa877c8.message);
             }
-            if (console.log("jsonConfig", _0x23f873), !_0x23f873 || !_0x23f873.modifications || !Array.isArray(_0x23f873.modifications)) throw new Error("配置格式无效，找不到modifications数组");
-            let _0xd0b34a = 30,
-              _0x25d816 = 0;
-            for (let _0x4f16b8 of _0x23f873.modifications) {
-              if (!_0x4f16b8.originalCode || !_0x4f16b8.modifiedCode) {
-                _0x3cc540.warn("跳过无效的修改项");
+            if (console.log("jsonConfig", _0x48547a), !_0x48547a || !_0x48547a.modifications || !Array.isArray(_0x48547a.modifications)) throw new Error("配置格式无效，找不到modifications数组");
+            let _0x362a3e = 30,
+              _0x5004f9 = 0;
+            for (let _0x2ea50c of _0x48547a.modifications) {
+              if (!_0x2ea50c.originalCode || !_0x2ea50c.modifiedCode) {
+                _0x4f769e.warn("跳过无效的修改项");
                 continue;
               }
-              let _0x51292d = _0x4f16b8.modifiedCode.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
-                _0x299933 = new RegExp(_0x51292d, "g"),
-                _0x3b0d87 = _0x1a1eda;
-              _0x1a1eda = _0x1a1eda.replace(_0x299933, _0x4f16b8.originalCode);
-              _0x3b0d87 !== _0x1a1eda ? (_0x25d816++, _0x3cc540.success("成功还原: " + _0x4f16b8.modifiedCode.substring(0, _0xd0b34a) + "...")) : _0x3cc540.warn("未找到匹配项: " + _0x4f16b8.modifiedCode.substring(0, _0xd0b34a) + "...");
+              let _0x4dbdef = _0x2ea50c.modifiedCode.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+                _0x1a64e4 = new RegExp(_0x4dbdef, "g"),
+                _0x3957ac = _0x52c3d8;
+              _0x52c3d8 = _0x52c3d8.replace(_0x1a64e4, _0x2ea50c.originalCode);
+              _0x3957ac !== _0x52c3d8 ? (_0x5004f9++, _0x4f769e.success("成功还原: " + _0x2ea50c.modifiedCode.substring(0, _0x362a3e) + "...")) : _0x4f769e.warn("未找到匹配项: " + _0x2ea50c.modifiedCode.substring(0, _0x362a3e) + "...");
             }
-            return _0x1749c5.writeFileSync(_0x11cf0d.workbenchMainJs, _0x1a1eda, "utf8"), _0x3cc540.success("还原了 " + _0x25d816 + " 处修改，文件已保存"), {
+            return _0x2b7f3d(_0x20b9cc.workbenchMainJs, _0x52c3d8, "utf8"), _0x4f769e.success("还原了 " + _0x5004f9 + " 处修改，文件已保存"), {
               "success": !0,
-              "restoredCount": _0x25d816,
+              "restoredCount": _0x5004f9,
               "message": "MAX功能已关闭"
             };
-          } catch (_0x202575) {
-            return _0x3cc540.error("还原MAX配置时发生错误: " + _0x202575.message), {
+          } catch (_0x1ba987) {
+            return _0x4f769e.error("还原MAX配置时发生错误: " + _0x1ba987.message), {
               "success": !1,
-              "message": "MAX功能关闭失败: " + _0x202575.message
+              "message": "MAX功能关闭失败: " + _0x1ba987.message
             };
           }
         },
         "isExtensionReset": function () {
           try {
-            _0x3cc540.info("开始检查extensionDist js插件状态...");
-            let _0x288bf3 = _0x3cb8b4();
-            if (!_0x288bf3.extensionDist) throw new Error("无法确定extensionDist文件路径");
-            if (_0x3cc540.info("extensionDist路径: " + _0x288bf3.extensionDist), !_0x1749c5.existsSync(_0x288bf3.extensionDist)) return _0x3cc540.warn("extensionDist文件不存在"), {
+            _0x4f769e.info("开始检查extensionDist js插件状态...");
+            let _0x21aa77 = _0x12320e();
+            if (!_0x21aa77.extensionDist) throw new Error("无法确定extensionDist文件路径");
+            if (_0x4f769e.info("extensionDist路径: " + _0x21aa77.extensionDist), !_0x2011f1.existsSync(_0x21aa77.extensionDist)) return _0x4f769e.warn("extensionDist文件不存在"), {
               "success": !1,
               "isReset": !1,
               "message": "extensionDist文件不存在"
             };
-            let _0x45e863 = _0x1749c5.readFileSync(_0x288bf3.extensionDist, "utf8").includes("cdk =");
-            return _0x45e863 ? _0x3cc540.success("extensionDist js插件已被重置") : _0x3cc540.info("extensionDist js插件尚未被重置"), {
+            let _0x417931 = _0x2011f1.readFileSync(_0x21aa77.extensionDist, "utf8").includes("cdk =");
+            return _0x417931 ? _0x4f769e.success("extensionDist js插件已被重置") : _0x4f769e.info("extensionDist js插件尚未被重置"), {
               "success": !0,
-              "isReset": _0x45e863,
-              "message": _0x45e863 ? "extensionDist js插件已被重置" : "extensionDist js插件尚未被重置"
+              "isReset": _0x417931,
+              "message": _0x417931 ? "extensionDist js插件已被重置" : "extensionDist js插件尚未被重置"
             };
-          } catch (_0x2ec527) {
-            return _0x3cc540.error("检查extensionDist js插件状态时发生错误: " + _0x2ec527.message), {
+          } catch (_0x3191c5) {
+            return _0x4f769e.error("检查extensionDist js插件状态时发生错误: " + _0x3191c5.message), {
               "success": !1,
               "isReset": !1,
-              "message": "检查失败: " + _0x2ec527.message
+              "message": "检查失败: " + _0x3191c5.message
             };
           }
         },
         "isWorkbenchReset": function () {
           try {
-            _0x3cc540.info("开始检查workbench.desktop.main js插件状态...");
-            let _0x37313d = _0x6213ba.getSystemInfo().version;
-            if (_0x3cc540.info("检查插件状态当前 Cursor版本: " + _0x37313d), _0x37313d === "0.44.11") return {
+            _0x4f769e.info("开始检查workbench.desktop.main js插件状态...");
+            let _0x5b490f = _0x27bb60.getSystemInfo().version;
+            if (_0x4f769e.info("检查插件状态当前 Cursor版本: " + _0x5b490f), _0x5b490f === "0.44.11") return {
               "success": !0,
               "isReset": !0,
               "message": "workbench.desktop.main js插件已被重置"
             };
-            let _0x37aee0 = _0x3cb8b4();
-            if (!_0x37aee0.workbenchMainJs) throw new Error("无法确定workbenchMainJs文件路径");
-            if (_0x3cc540.info("workbenchMainJs路径: " + _0x37aee0.workbenchMainJs), !_0x1749c5.existsSync(_0x37aee0.workbenchMainJs)) return _0x3cc540.warn("workbenchMainJs文件不存在"), {
+            let _0x357bc7 = _0x12320e();
+            if (!_0x357bc7.workbenchMainJs) throw new Error("无法确定workbenchMainJs文件路径");
+            if (_0x4f769e.info("workbenchMainJs路径: " + _0x357bc7.workbenchMainJs), !_0x2011f1.existsSync(_0x357bc7.workbenchMainJs)) return _0x4f769e.warn("workbenchMainJs文件不存在"), {
               "success": !1,
               "isReset": !1,
               "message": "workbenchMainJs文件不存在"
             };
-            let _0xbecc2b = _0x1749c5.readFileSync(_0x37aee0.workbenchMainJs, "utf8").includes("jhm =");
-            return _0xbecc2b ? _0x3cc540.success("workbench.desktop.main js插件已被重置") : _0x3cc540.info("workbench.desktop.main js插件尚未被重置"), {
+            let _0x271f67 = _0x2011f1.readFileSync(_0x357bc7.workbenchMainJs, "utf8").includes("zsjhm =");
+            return _0x271f67 ? _0x4f769e.success("workbench.desktop.main js插件已被重置") : _0x4f769e.info("workbench.desktop.main js插件尚未被重置"), {
               "success": !0,
-              "isReset": _0xbecc2b,
-              "message": _0xbecc2b ? "workbench.desktop.main js插件已被重置" : "workbench.desktop.main js插件尚未被重置"
+              "isReset": _0x271f67,
+              "message": _0x271f67 ? "workbench.desktop.main js插件已被重置" : "workbench.desktop.main js插件尚未被重置"
             };
-          } catch (_0x1bf0f9) {
-            return _0x3cc540.error("检查workbench.desktop.main js插件状态时发生错误: " + _0x1bf0f9.message), {
+          } catch (_0x293619) {
+            return _0x4f769e.error("检查workbench.desktop.main js插件状态时发生错误: " + _0x293619.message), {
               "success": !1,
               "isReset": !1,
-              "message": "检查失败: " + _0x1bf0f9.message
+              "message": "检查失败: " + _0x293619.message
             };
           }
         }
       };
     }();
-    _0xa7893e.exports = _0x6213ba;
+    _0x35ee16.exports = _0x27bb60;
   }),
-  _0x58fe1e = _0x9ff207((_0x29327e, _0x598bdb) => {
-    'use strict';
-
-    var _0x261406 = require("fs"),
-      _0x28faa2 = require("path"),
-      {
-        promisify: _0x8a87d4
-      } = require("util"),
-      _0x257cb6 = _0x8a87d4(require("child_process").exec),
-      _0x1c7914 = null;
-    try {
-      _0x1c7914 = require("vscode");
-    } catch {
-      console.log("非 vscode 环境");
-    }
-    function _0x56a995() {
-      let _0x2964b2 = process.platform,
-        _0x492a04;
-      switch (_0x2964b2) {
-        case "win32":
-          _0x492a04 = process.env.LOCALAPPDATA;
-          break;
-        case "darwin":
-          _0x492a04 = _0x28faa2.join(process.env.HOME, "Library", "Application Support");
-          break;
-        case "linux":
-          _0x492a04 = _0x28faa2.join(process.env.HOME, ".config");
-          break;
-        default:
-          throw new Error("不支持的操作系统");
-      }
-      return console.log(_0x492a04), console.log(_0x28faa2.join(_0x492a04, "cursor-updater")), {
-        "updaterPath": _0x28faa2.join(_0x492a04, "cursor-updater"),
-        "backupPath": _0x28faa2.join(_0x492a04, "cursor-updater.bak")
-      };
-    }
-    async function _0x39642d(_0x5eb1ad) {
-      let _0x292341 = process.platform;
-      try {
-        _0x292341 === "win32" ? await _0x257cb6("attrib +r \"" + _0x5eb1ad + "\"") : await _0x257cb6("chmod 444 \"" + _0x5eb1ad + "\"");
-        console.log("成功设置只读属性");
-      } catch (_0x7aee3) {
-        throw console.error("设置只读属性失败:", _0x7aee3), _0x7aee3;
-      }
-    }
-    async function _0xe19278(_0x9eb745) {
-      let _0x5929c7 = process.platform;
-      try {
-        _0x5929c7 === "win32" ? await _0x257cb6("attrib -r \"" + _0x9eb745 + "\"") : await _0x257cb6("chmod 666 \"" + _0x9eb745 + "\"");
-        console.log("成功移除只读属性");
-      } catch (_0x5e3b5c) {
-        throw console.error("移除只读属性失败:", _0x5e3b5c), _0x5e3b5c;
-      }
-    }
-    async function _0x7ac07f() {
-      try {
-        let {
-          updaterPath: _0x18e6ca,
-          backupPath: _0x44d81b
-        } = _0x56a995();
-        try {
-          _0x261406.existsSync(_0x18e6ca) && (await _0x261406.promises.copyFile(_0x18e6ca, _0x44d81b), console.log("成功备份 cursor-updater"));
-        } catch {
-          console.log("无需备份，cursor-updater 不存在");
-        }
-        try {
-          await _0x261406.promises.rm(_0x18e6ca, {
-            "recursive": !0,
-            "force": !0
-          });
-          console.log("成功删除 cursor-updater 目录");
-        } catch {
-          console.log("cursor-updater 目录不存在");
-        }
-        if (await _0x261406.promises.writeFile(_0x18e6ca, ""), console.log("成功创建阻止文件"), await _0x39642d(_0x18e6ca), _0x1c7914) {
-          let _0x55cee4 = _0x1c7914.workspace.getConfiguration("update");
-          _0x55cee4.get("mode") !== "none" && (await _0x55cee4.update("mode", "none", !0), _0x1c7914.window.showInformationMessage("请重新启动Cursor，重启后生效！"));
-        }
-        return !0;
-      } catch (_0x362e0a) {
-        return console.error("禁用更新失败:", _0x362e0a), !1;
-      }
-    }
-    async function _0x254782() {
-      try {
-        let {
-          updaterPath: _0x29a229,
-          backupPath: _0x253e42
-        } = _0x56a995();
-        _0x261406.existsSync(_0x29a229) && (await _0xe19278(_0x29a229), await _0x261406.promises.unlink(_0x29a229), console.log("成功删除阻止文件"));
-        try {
-          if (_0x261406.existsSync(_0x253e42) ? (await _0x261406.promises.copyFile(_0x253e42, _0x29a229), await _0x261406.promises.unlink(_0x253e42), console.log("成功还原 cursor-updater")) : (await _0x261406.promises.mkdir(_0x29a229, {
-            "recursive": !0
-          }), console.log("创建新的 cursor-updater 目录")), _0x1c7914) {
-            let _0x12a739 = _0x1c7914.workspace.getConfiguration("update");
-            _0x12a739.get("mode") === "none" && (await _0x12a739.update("mode", "start", !0), _0x1c7914.window.showInformationMessage("请重新启动Cursor，重启后生效！"));
-          }
-        } catch (_0x37933c) {
-          return console.error("还原/创建目录失败:", _0x37933c), !1;
-        }
-        return !0;
-      } catch (_0x10e0ca) {
-        return console.error("启用更新失败:", _0x10e0ca), !1;
-      }
-    }
-    async function _0x12d265() {
-      try {
-        let {
-          updaterPath: _0x27dbb6
-        } = _0x56a995();
-        return !_0x261406.existsSync(_0x27dbb6) || !(await _0x261406.promises.stat(_0x27dbb6)).isFile() ? !1 : await new Promise(_0x28b170 => {
-          process.platform === "win32" ? _0x257cb6("attrib \"" + _0x27dbb6 + "\"").then(({
-            stdout: _0x1c40ac
-          }) => _0x28b170(_0x1c40ac.includes("R")), () => _0x28b170(!1)) : _0x261406.access(_0x27dbb6, _0x261406.constants.W_OK, _0x41ee51 => {
-            _0x28b170(!!_0x41ee51);
-          });
-        });
-      } catch (_0x3b3716) {
-        return console.error("检查更新状态失败:", _0x3b3716), !1;
-      }
-    }
-    _0x598bdb.exports = {
-      "disableUpdates": _0x7ac07f,
-      "enableUpdates": _0x254782,
-      "isUpdateDisabled": _0x12d265
-    };
-  }),
-  _0x59e8d7 = {};
-_0x296a73(_0x59e8d7, {
-  "activateCDK": () => _0x19c1e8,
-  "createOrder": () => _0x57bed8,
-  "getAnnouncement": () => _0x3d82bb,
-  "getCode": () => _0x57b3f5,
-  "getDetectionData": () => _0x3b0d11,
-  "getMaxConfig": () => _0x13e199,
-  "getPoints": () => _0x40e69a,
-  "getRestoreCode": () => _0x4c0ef6,
-  "getSettings": () => _0x24f918,
-  "markAnnouncementRead": () => _0x6ff9ef,
-  "queryOrder": () => _0x1338b5,
-  "rechargeWithCDKey": () => _0x22813b,
-  "refreshAuth": () => _0x586753,
-  "requestLocalApi": () => _0x495370,
-  "toggleAutoSwitch": () => _0x5b1696,
-  "unbindDevice": () => _0x5dab2e
+  _0x5a8313 = {};
+_0x53ff68(_0x5a8313, {
+  "activate": () => _0x2e88a5,
+  "deactivate": () => _0x186fcf
 });
-async function _0x46857f() {
-  try {
-    let _0x37314d = await fetch("https://news.baidu.com/passport", {
-      "method": "GET",
-      "headers": {
-        "Accept": "*/*",
-        "Accept-Language": "zh-cn",
-        "Connection": "Keep-Alive",
-        "Host": "news.baidu.com",
-        "Referer": "https://news.baidu.com/passport",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36"
-      }
-    });
-    if (!_0x37314d.ok) throw new Error("网络请求失败: " + _0x37314d.status);
-    let _0x28d804 = await _0x37314d.json();
-    if (_0x28d804 && _0x28d804.errno === 0 && _0x28d804.timestamp) return console.log("从百度获取到网络时间戳:", _0x28d804.timestamp), _0x28d804.timestamp;
-    throw new Error("返回数据格式不正确");
-  } catch (_0x14b627) {
-    return console.error("获取网络时间戳失败，使用本机时间:", _0x14b627), Math.floor(Date.now() / 1000);
-  }
-}
-async function _0x3c98d3(_0x4c77f6, _0x37dd30) {
-  let _0x4782d7 = new TextEncoder(),
-    _0x5dfa50 = _0x4782d7.encode(_0x37dd30),
-    _0x37958c = _0x4782d7.encode(_0x4c77f6),
-    _0x15ccd0 = await _0x2ce4de.subtle.importKey("raw", _0x5dfa50, {
-      "name": "HMAC",
-      "hash": "SHA-256"
-    }, !1, ["sign"]),
-    _0x32df3c = await _0x2ce4de.subtle.sign("HMAC", _0x15ccd0, _0x37958c);
-  return Array.from(new Uint8Array(_0x32df3c)).map(_0x1eec85 => _0x1eec85.toString(16).padStart(2, "0")).join("");
-}
-async function _0x5428eb(_0x5cf6ff) {
-  let {
-      encrypted: _0x3b038a,
-      iv: _0x164793,
-      timestamp: _0x102e20,
-      nonce: _0x2b235b,
-      sign: _0x203d3b
-    } = _0x5cf6ff,
-    _0x3d9cf1 = await _0x46857f();
-  if (Math.abs(_0x3d9cf1 - _0x102e20) > 60) throw new Error("Response expired");
-  let _0x2e06af = {
-      "encrypted": _0x3b038a,
-      "iv": _0x164793,
-      "nonce": _0x2b235b,
-      "timestamp": _0x102e20
-    },
-    _0x2d590f = Object.keys(_0x2e06af).sort().reduce((_0x4bffdf, _0x801364) => (_0x4bffdf[_0x801364] = _0x2e06af[_0x801364], _0x4bffdf), {}),
-    _0xc6ee44 = new URLSearchParams(_0x2d590f).toString(),
-    _0x367b30 = await _0x3c98d3(_0xc6ee44, _0x4d4ea4);
-  if (_0x203d3b !== _0x367b30) throw new Error("Invalid signature");
-  try {
-    let _0x4e9e89 = new Uint8Array(_0x24309e(_0x164793).split("").map(_0xe30ecb => _0xe30ecb.charCodeAt(0))),
-      _0x46a2c1 = new TextEncoder().encode(_0x1f0f14),
-      _0x4c15ca = await _0x2ce4de.subtle.importKey("raw", _0x46a2c1, {
-        "name": "AES-CBC",
-        "length": 256
-      }, !1, ["decrypt"]),
-      _0x4bd1ab = new Uint8Array(_0x24309e(_0x3b038a).split("").map(_0x1071c1 => _0x1071c1.charCodeAt(0))),
-      _0x14bbb7 = await _0x2ce4de.subtle.decrypt({
-        "name": "AES-CBC",
-        "iv": _0x4e9e89
-      }, _0x4c15ca, _0x4bd1ab),
-      _0x3404dc = new TextDecoder().decode(_0x14bbb7);
-    return JSON.parse(_0x3404dc);
-  } catch (_0xad8797) {
-    throw console.error("Decryption failed:", _0xad8797), new Error("Failed to decrypt response data");
-  }
-}
-function _0x24309e(_0x581e74) {
-  return typeof window < "u" ? window.atob(_0x581e74) : Buffer.from(_0x581e74, "base64").toString("binary");
-}
-function _0x480613() {
-  try {
-    let _0x19a4f1 = require("vscode").extensions.getExtension("menglong.cursor-infinity")?.["extensionPath"];
-    if (!_0x19a4f1) return console.error("无法获取插件路径"), "menglong";
-    let _0x452d3f = _0x4e904b.join(_0x19a4f1, "package.json");
-    return JSON.parse(_0x22e511.readFileSync(_0x452d3f, "utf8")).author_id;
-  } catch (_0x50706d) {
-    return console.error("读取 publisher 失败:", _0x50706d), "menglong";
-  }
-}
-function _0x3cd2bd(_0x1ed608) {
-  try {
-    let _0x28d9ae = new TextEncoder().encode(_0x1ed608),
-      _0x542262 = new Uint8Array(16);
-    window.crypto.getRandomValues(_0x542262);
-    let _0x3c34e4 = Array.from(_0x542262).map(_0x5c43a4 => _0x5c43a4.toString(16).padStart(2, "0")).join("");
-    return {
-      "encrypted": btoa(String.fromCharCode.apply(null, _0x28d9ae)),
-      "iv": _0x3c34e4
-    };
-  } catch (_0x2b13de) {
-    throw console.error("Token加密失败:", _0x2b13de), _0x2b13de;
-  }
-}
-function _0x55f16e(_0x1fcf4a) {
-  let _0x1faa07 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
-    _0xeb787 = _0x1faa07.length,
-    _0xc0ff13 = "";
-  for (let _0x497d71 = 0; _0x497d71 < _0x1fcf4a; _0x497d71++) _0xc0ff13 += _0x1faa07.charAt(Math.floor(Math.random() * _0xeb787));
-  return _0xc0ff13;
-}
-var _0x2ce4de,
-  _0x4e904b,
-  _0x22e511,
-  _0x183223,
-  _0x4d4ea4,
-  _0x1f0f14,
-  _0x4bbf8f,
-  _0x19c1e8,
-  _0x40e69a,
-  _0x586753,
-  _0x57b3f5,
-  _0x4c0ef6,
-  _0x24f918,
-  _0x57bed8,
-  _0x1338b5,
-  _0x22813b,
-  _0x3d82bb,
-  _0x6ff9ef,
-  _0x495370,
-  _0x3b0d11,
-  _0x13e199,
-  _0x5b1696,
-  _0x5dab2e,
-  _0x94f85e = _0x53db4f(() => {
-    'use strict';
-
-    _0x2ce4de = require("crypto");
-    _0x4e904b = require("path");
-    _0x22e511 = require("fs");
-    _0x183223 = "http://cursor.talewua.com/api";
-    _0x4d4ea4 = "Kj8#mN5$pL9&vX3@qR4tY7wZ2*hC6bM1";
-    _0x1f0f14 = "zj2F9#aU3$vE5nX3@qR7tY4wF2*hA1cR";
-    _0x4bbf8f = async _0x396bfc => {
-      if (!_0x396bfc || !_0x396bfc.data || !_0x396bfc.data.timestamp || !_0x396bfc.data.nonce || !_0x396bfc.data.sign) return console.error("Response data missing required fields"), !1;
-      let _0x20e041 = await _0x46857f();
-      if (Math.abs(_0x20e041 - _0x396bfc.data.timestamp) > 60) return console.error("Response expired"), !1;
-      let {
-          encrypted: _0x2d31ec,
-          iv: _0x5e44f6,
-          nonce: _0x5a066b,
-          timestamp: _0x4d4670
-        } = _0x396bfc.data,
-        _0x2ffbaf = {
-          "encrypted": _0x2d31ec,
-          "iv": _0x5e44f6,
-          "nonce": _0x5a066b,
-          "timestamp": _0x4d4670
-        },
-        _0x381765 = Object.keys(_0x2ffbaf).sort().reduce((_0x8fad7c, _0x282a7a) => (_0x8fad7c[_0x282a7a] = _0x2ffbaf[_0x282a7a], _0x8fad7c), {}),
-        _0x4a3e41 = new URLSearchParams(_0x381765).toString(),
-        _0x2f1f14 = await _0x3c98d3(_0x4a3e41, _0x4d4ea4);
-      return _0x396bfc.data.sign !== _0x2f1f14 ? (console.error("Invalid signature", {
-        "expected": _0x2f1f14,
-        "received": _0x396bfc.data.sign,
-        "signStr": _0x4a3e41
-      }), !1) : !0;
-    };
-    _0x19c1e8 = async (_0x2ea4aa, _0x1f61ec, _0x43fc27) => {
-      try {
-        let _0x55f144 = await _0x46857f(),
-          _0xebde04 = _0x480613();
-        console.log("author_id", _0xebde04);
-        let _0x3c569a = await _0x3c98d3("" + _0x2ea4aa + _0x1f61ec + _0x55f144 + _0xebde04, _0x4d4ea4);
-        console.log("激活请求:", _0x2ea4aa, _0x1f61ec, _0x43fc27, _0x55f144, _0x3c569a);
-        let _0x16face = await fetch(_0x183223 + "/activate", {
-          "method": "POST",
-          "headers": {
-            "Content-Type": "application/json"
-          },
-          "body": JSON.stringify({
-            "cdk": _0x2ea4aa,
-            "version": _0x1f61ec,
-            "timestamp": _0x55f144,
-            "sign": _0x3c569a,
-            "device_code": _0x43fc27,
-            "author_id": _0xebde04
-          })
-        });
-        console.log("激活请求:", _0x16face);
-        let _0x2d1ce6 = await _0x16face.json();
-        if (console.log("激活响应:", _0x2d1ce6), _0x2d1ce6.status === "error") return _0x2d1ce6.data && _0x2d1ce6.data.status === 1 ? {
-          "success": !1,
-          "message": _0x2d1ce6.data.statusRemark || "该激活码已被封禁"
-        } : _0x2d1ce6.expiresAt ? {
-          "success": !1,
-          "message": _0x2d1ce6.message || "该激活码已过期",
-          "expiresAt": _0x2d1ce6.expiresAt
-        } : {
-          "success": !1,
-          "message": _0x2d1ce6.message || "激活失败，请稍后重试"
-        };
-        if (!(await _0x4bbf8f(_0x2d1ce6))) return {
-          "success": !1,
-          "message": "数据验证失败"
-        };
-        try {
-          let _0x4932a6 = await _0x5428eb(_0x2d1ce6.data);
-          return {
-            "success": !0,
-            "data": {
-              ..._0x4932a6,
-              "activatedAt": _0x4932a6.activatedAt || new Date().toISOString()
-            }
-          };
-        } catch (_0x11f349) {
-          return console.error("解密数据失败:", _0x11f349), {
-            "success": !1,
-            "message": "激活失败，数据解密错误"
-          };
-        }
-      } catch (_0x3d09f8) {
-        return console.error("激活请求失败:", _0x3d09f8), {
-          "success": !1,
-          "message": "激活失败，请检查网络连接"
-        };
-      }
-    };
-    _0x40e69a = async (_0x3809bb, _0x336582) => {
-      try {
-        let _0x3bfa7d = await _0x46857f(),
-          _0x1cc970 = await _0x3c98d3(_0x3bfa7d.toString(), _0x4d4ea4),
-          _0x20719f = await (await fetch(_0x183223 + "/get_points", {
-            "method": "POST",
-            "headers": {
-              "Content-Type": "application/json"
-            },
-            "body": JSON.stringify({
-              "cdk": _0x3809bb,
-              "timestamp": _0x3bfa7d,
-              "sign": _0x1cc970,
-              "device_code": _0x336582
-            })
-          })).json();
-        if (_0x20719f.status === "error") return _0x20719f.data && _0x20719f.data.status === 1 ? {
-          "success": !1,
-          "message": _0x20719f.data.statusRemark || "该激活码已被封禁"
-        } : _0x20719f.expiresAt ? {
-          "success": !1,
-          "message": _0x20719f.message || "该激活码已过期",
-          "expiresAt": _0x20719f.expiresAt
-        } : {
-          "success": !1,
-          "message": _0x20719f.message
-        };
-        if (!(await _0x4bbf8f(_0x20719f))) return {
-          "success": !1,
-          "message": "数据验证失败"
-        };
-        let _0x2c4925 = await _0x5428eb(_0x20719f.data);
-        return {
-          "success": !0,
-          "message": _0x20719f.message,
-          "data": _0x2c4925
-        };
-      } catch (_0x45e0e1) {
-        return console.error("Get points failed:", _0x45e0e1), {
-          "success": !1,
-          "message": "获取积分失败，请稍后重试"
-        };
-      }
-    };
-    _0x586753 = async (_0x21029b, _0x152161, _0x3134c9, _0x3cfaed = !1) => {
-      try {
-        let _0x306d26 = await _0x46857f(),
-          _0x54f437 = {
-            "cdk": _0x21029b,
-            "device_code": _0x152161,
-            "version": _0x3134c9,
-            "forced": _0x3cfaed ? 1 : 0,
-            "timestamp": _0x306d26
-          },
-          _0x4050da = JSON.stringify(_0x54f437),
-          _0x2bfd49 = await _0x3c98d3(_0x4050da, _0x4d4ea4);
-        _0x54f437.sign = _0x2bfd49;
-        let _0x5691a1 = await (await fetch(_0x183223 + "/refresh_auth", {
-          "method": "POST",
-          "headers": {
-            "Content-Type": "application/json"
-          },
-          "body": JSON.stringify(_0x54f437)
-        })).json();
-        if (_0x5691a1.code) {
-          if (_0x5691a1.code !== 200) return {
-            "success": !1,
-            "message": _0x5691a1.message
-          };
-        } else {
-          if (_0x5691a1.status === "error") return _0x5691a1.expiresAt ? {
-            "success": !1,
-            "message": _0x5691a1.message || "该激活码已过期",
-            "expiresAt": _0x5691a1.expiresAt
-          } : {
-            "success": !1,
-            "message": _0x5691a1.message
-          };
-        }
-        if (_0x5691a1.status === "success" && _0x5691a1.data) {
-          if (!(await _0x4bbf8f(_0x5691a1))) return {
-            "success": !1,
-            "message": "数据验证失败"
-          };
-          let _0x5e26dd = await _0x5428eb(_0x5691a1.data);
-          return {
-            "success": !0,
-            "message": _0x5691a1.message,
-            "data": _0x5e26dd
-          };
-        }
-        return {
-          "success": !1,
-          "message": "未知错误"
-        };
-      } catch (_0x3050f3) {
-        return console.error("Refresh auth failed:", _0x3050f3), {
-          "success": !1,
-          "message": "无感换号失败，请稍后重试"
-        };
-      }
-    };
-    _0x57b3f5 = async (_0x4e7f90, _0x30898b, _0x432280, _0x954f25 = !1) => {
-      try {
-        let _0x3d8305 = await _0x46857f(),
-          _0x10b374 = _0x4e7f90 + _0x30898b + _0x3d8305,
-          _0x3b0127 = await _0x3c98d3(_0x10b374, _0x4d4ea4),
-          _0x409f9d = await (await fetch(_0x183223 + "/get_code", {
-            "method": "POST",
-            "headers": {
-              "Content-Type": "application/json"
-            },
-            "body": JSON.stringify({
-              "cdk": _0x4e7f90,
-              "version": _0x30898b,
-              "timestamp": _0x3d8305,
-              "sign": _0x3b0127,
-              "device_code": _0x432280,
-              "max_status": _0x954f25
-            })
-          })).json();
-        return console.log("接口获取代码结果:", _0x409f9d), _0x409f9d.code !== 200 ? _0x409f9d.expiresAt ? {
-          "success": !1,
-          "message": _0x409f9d.message || "该激活码已过期",
-          "expiresAt": _0x409f9d.expiresAt
-        } : {
-          "success": !1,
-          "message": _0x409f9d.message
-        } : {
-          "success": !0,
-          "code": _0x409f9d.data.code,
-          "machineCode": _0x409f9d.data.machineCode,
-          "replaceCode": _0x409f9d.data.replaceCode,
-          "workbenchCode": _0x409f9d.data.workbenchCode,
-          "nodeCode": _0x409f9d.data.nodeCode
-        };
-      } catch (_0x232f88) {
-        return console.error("Get code failed:", _0x232f88), {
-          "success": !1,
-          "message": "重置插件失败，请稍后重试"
-        };
-      }
-    };
-    _0x4c0ef6 = async (_0x4d0242, _0x17e0cc, _0x2e15b3) => {
-      try {
-        let _0x3cf47d = await _0x46857f(),
-          _0x1a5915 = _0x4d0242 + _0x17e0cc + _0x3cf47d,
-          _0x4f0ee5 = await _0x3c98d3(_0x1a5915, _0x4d4ea4),
-          _0x3b6f7a = await (await fetch(_0x183223 + "/get_restore_code", {
-            "method": "POST",
-            "headers": {
-              "Content-Type": "application/json"
-            },
-            "body": JSON.stringify({
-              "cdk": _0x4d0242,
-              "version": _0x17e0cc,
-              "timestamp": _0x3cf47d,
-              "sign": _0x4f0ee5,
-              "device_code": _0x2e15b3
-            })
-          })).json();
-        return console.log("获取还原代码结果:", _0x3b6f7a), _0x3b6f7a.code !== 200 ? _0x3b6f7a.expiresAt ? {
-          "success": !1,
-          "message": _0x3b6f7a.message || "该激活码已过期",
-          "expiresAt": _0x3b6f7a.expiresAt
-        } : {
-          "success": !1,
-          "message": _0x3b6f7a.message
-        } : {
-          "success": !0,
-          "code": _0x3b6f7a.data.code,
-          "workbenchCode": _0x3b6f7a.data.workbenchCode,
-          "nodeCode": _0x3b6f7a.data.nodeCode
-        };
-      } catch (_0x4cb62e) {
-        return console.error("Get restore code failed:", _0x4cb62e), {
-          "success": !1,
-          "message": "一键还原失败，请稍后重试"
-        };
-      }
-    };
-    _0x24f918 = async _0x4c5ed6 => {
-      try {
-        let _0x450921 = await _0x46857f(),
-          _0x29d6f4 = _0x480613();
-        console.log("author_id", _0x29d6f4);
-        let _0x1ba12e = await _0x3c98d3("" + _0x4c5ed6 + _0x450921 + _0x29d6f4, _0x4d4ea4),
-          _0x3cb7f3 = await (await fetch(_0x183223 + "/get_settings", {
-            "method": "POST",
-            "headers": {
-              "Content-Type": "application/json"
-            },
-            "body": JSON.stringify({
-              "timestamp": _0x450921,
-              "sign": _0x1ba12e,
-              "device_code": _0x4c5ed6,
-              "author_id": _0x29d6f4
-            })
-          })).json();
-        return _0x3cb7f3.status !== "success" ? {
-          "success": !1,
-          "message": _0x3cb7f3.message
-        } : (await _0x4bbf8f(_0x3cb7f3)) ? {
-          "success": !0,
-          "data": await _0x5428eb(_0x3cb7f3.data)
-        } : {
-          "success": !1,
-          "message": "数据验证失败"
-        };
-      } catch (_0x2877c0) {
-        return console.error("Get settings failed:", _0x2877c0), {
-          "success": !1,
-          "message": _0x2877c0
-        };
-      }
-    };
-    _0x57bed8 = async (_0x10cd12, _0x4f93e0) => {
-      try {
-        let _0x1c03fa = await _0x46857f(),
-          _0x14a531 = {
-            "cdk": _0x10cd12,
-            "points": _0x4f93e0,
-            "timestamp": _0x1c03fa
-          };
-        _0x14a531.sign = await _0x3c98d3("" + _0x10cd12 + _0x4f93e0 + _0x1c03fa, _0x4d4ea4);
-        let _0x1e8efe = await (await fetch(_0x183223 + "/create_order.php", {
-          "method": "POST",
-          "headers": {
-            "Content-Type": "application/json"
-          },
-          "body": JSON.stringify(_0x14a531)
-        })).json();
-        return _0x1e8efe.code === 0 ? {
-          "success": !0,
-          "data": _0x1e8efe.data
-        } : {
-          "success": !1,
-          "message": _0x1e8efe.message
-        };
-      } catch (_0x17d611) {
-        return console.error("创建订单失败:", _0x17d611), {
-          "success": !1,
-          "message": "创建订单失败，请稍后重试"
-        };
-      }
-    };
-    _0x1338b5 = async _0x242e70 => {
-      try {
-        let _0x5c0e0b = await _0x46857f(),
-          _0x4bfb3e = {
-            "order_no": _0x242e70,
-            "timestamp": _0x5c0e0b
-          };
-        _0x4bfb3e.sign = await _0x3c98d3("" + _0x242e70 + _0x5c0e0b, _0x4d4ea4);
-        let _0xde21e6 = await (await fetch(_0x183223 + "/query_order.php", {
-          "method": "POST",
-          "headers": {
-            "Content-Type": "application/json"
-          },
-          "body": JSON.stringify(_0x4bfb3e)
-        })).json();
-        return {
-          "success": _0xde21e6.code === 0,
-          "status": _0xde21e6.data?.["status"],
-          "status_text": _0xde21e6.data?.["status_text"],
-          "message": _0xde21e6.message
-        };
-      } catch (_0x466d05) {
-        return console.error("查询订单失败:", _0x466d05), {
-          "success": !1,
-          "message": "查询订单失败"
-        };
-      }
-    };
-    _0x22813b = async (_0x395267, _0x31fc64, _0x42f2fc) => {
-      try {
-        let _0x145809 = await _0x46857f(),
-          _0x2e7c68 = await _0x3c98d3("" + _0x395267 + _0x31fc64 + _0x145809, _0x4d4ea4),
-          _0x196820 = await (await fetch(_0x183223 + "/recharge", {
-            "method": "POST",
-            "headers": {
-              "Content-Type": "application/json"
-            },
-            "body": JSON.stringify({
-              "user_cdk": _0x395267,
-              "recharge_cdk": _0x31fc64,
-              "device_code": _0x42f2fc,
-              "timestamp": _0x145809,
-              "sign": _0x2e7c68
-            })
-          })).json();
-        return _0x196820.status === "success" ? {
-          "success": !0,
-          "data": _0x196820.data
-        } : {
-          "success": !1,
-          "message": _0x196820.message
-        };
-      } catch (_0x91f4ec) {
-        return console.error("充值请求失败:", _0x91f4ec), {
-          "success": !1,
-          "message": "充值失败，请检查网络连接"
-        };
-      }
-    };
-    _0x3d82bb = async _0x3a8e6d => {
-      try {
-        let _0xe1d999 = await _0x46857f(),
-          _0x7ab00f = await _0x3c98d3("" + _0x3a8e6d + _0xe1d999, _0x4d4ea4),
-          _0x26ef19 = await (await fetch(_0x183223 + "/get_announcement", {
-            "method": "POST",
-            "headers": {
-              "Content-Type": "application/json"
-            },
-            "body": JSON.stringify({
-              "device_code": _0x3a8e6d,
-              "timestamp": _0xe1d999,
-              "sign": _0x7ab00f
-            })
-          })).json();
-        return _0x26ef19.status === "success" ? {
-          "success": !0,
-          "data": _0x26ef19.data
-        } : {
-          "success": !1,
-          "message": _0x26ef19.message
-        };
-      } catch (_0x8edec0) {
-        return console.error("获取公告失败:", _0x8edec0), {
-          "success": !1,
-          "message": "获取公告失败，请检查网络连接"
-        };
-      }
-    };
-    _0x6ff9ef = async (_0x10fbc6, _0x43b525) => {
-      try {
-        let _0x2658a3 = await _0x46857f(),
-          _0xeb7e98 = await _0x3c98d3("" + _0x10fbc6 + _0x43b525 + _0x2658a3, _0x4d4ea4),
-          _0x52c17d = await (await fetch(_0x183223 + "/mark_announcement_read", {
-            "method": "POST",
-            "headers": {
-              "Content-Type": "application/json"
-            },
-            "body": JSON.stringify({
-              "device_code": _0x10fbc6,
-              "announcement_id": _0x43b525,
-              "timestamp": _0x2658a3,
-              "sign": _0xeb7e98
-            })
-          })).json();
-        return {
-          "success": _0x52c17d.status === "success",
-          "message": _0x52c17d.message
-        };
-      } catch (_0x3cea3b) {
-        return console.error("标记公告已读失败:", _0x3cea3b), {
-          "success": !1,
-          "message": "标记失败，请检查网络连接"
-        };
-      }
-    };
-    _0x495370 = async _0xf47c77 => {
-      try {
-        let _0x50f1b9 = await _0x46857f(),
-          _0x319b60;
-        if (nodeCrypto) _0x319b60 = nodeCrypto.randomBytes(16).toString("hex");else {
-          if (window.crypto && window.crypto.getRandomValues) {
-            let _0x57861f = new Uint8Array(16);
-            window.crypto.getRandomValues(_0x57861f);
-            _0x319b60 = Array.from(_0x57861f, _0x427706 => _0x427706.toString(16).padStart(2, "0")).join("");
-          } else _0x319b60 = _0x55f16e(32);
-        }
-        let {
-            encrypted: _0x12d229,
-            iv: _0x567985
-          } = await _0x3cd2bd(_0xf47c77),
-          _0x1940f0 = {
-            "timestamp": _0x50f1b9,
-            "nonce": _0x319b60,
-            "token": _0x12d229,
-            "iv": _0x567985
-          },
-          _0x12d82c = JSON.stringify(_0x1940f0),
-          _0x33048e = await _0x3c98d3(_0x12d82c, _0x4d4ea4);
-        _0x1940f0.sign = _0x33048e;
-        let _0x1229f2 = await (await fetch("http://localhost:3008/api/detection", {
-          "method": "POST",
-          "headers": {
-            "Content-Type": "application/json",
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36"
-          },
-          "body": JSON.stringify(_0x1940f0)
-        })).json();
-        if (_0x1229f2.sign) {
-          let {
-              sign: _0x3f3069,
-              ..._0x4588ec
-            } = _0x1229f2,
-            _0x2fa60c = JSON.stringify(_0x4588ec),
-            _0x2e577e = await _0x3c98d3(_0x2fa60c, _0x4d4ea4);
-          if (_0x3f3069 !== _0x2e577e) return {
-            "success": !1,
-            "message": "响应签名验证失败"
-          };
-        }
-        return {
-          "success": _0x1229f2.code === 200,
-          "data": _0x1229f2.data,
-          "message": _0x1229f2.message,
-          "timestamp": _0x1229f2.data?.["timestamp"] || Date.now()
-        };
-      } catch (_0x245b9f) {
-        return console.error("请求本地API失败:", _0x245b9f), {
-          "success": !1,
-          "message": "请求本地API失败，请检查服务是否启动"
-        };
-      }
-    };
-    _0x3b0d11 = async (_0x1164df, _0x523ae5) => {
-      try {
-        let _0x51e1e0 = await _0x46857f(),
-          _0x541289 = _0x1164df + _0x51e1e0,
-          _0x5a523e = await _0x3c98d3(_0x541289, _0x4d4ea4),
-          _0x41756a = await (await fetch(_0x183223 + "/get_detection_data", {
-            "method": "POST",
-            "headers": {
-              "Content-Type": "application/json"
-            },
-            "body": JSON.stringify({
-              "cdk": _0x1164df,
-              "timestamp": _0x51e1e0,
-              "sign": _0x5a523e,
-              "device_code": _0x523ae5
-            })
-          })).json();
-        if (_0x41756a.code) {
-          if (_0x41756a.code !== 200) return {
-            "success": !1,
-            "message": _0x41756a.message
-          };
-        } else {
-          if (_0x41756a.status === "error") return {
-            "success": !1,
-            "message": _0x41756a.message
-          };
-        }
-        return _0x41756a.status === "success" && _0x41756a.data ? (await _0x4bbf8f(_0x41756a)) ? {
-          "success": !0,
-          "message": "获取账号数据成功",
-          "data": await _0x5428eb(_0x41756a.data)
-        } : {
-          "success": !1,
-          "message": "数据验证失败"
-        } : {
-          "success": !1,
-          "message": "未知错误"
-        };
-      } catch (_0x5a08bb) {
-        return console.error("Get account cookies failed:", _0x5a08bb), {
-          "success": !1,
-          "message": "获取账号数据失败，请稍后重试"
-        };
-      }
-    };
-    _0x13e199 = async (_0x438d20, _0x480409, _0x39ea55) => {
-      try {
-        let _0x21759d = await _0x46857f(),
-          _0x523f93 = _0x438d20 + _0x480409 + _0x21759d,
-          _0x58bde5 = await _0x3c98d3(_0x523f93, _0x4d4ea4),
-          _0x1ee8bd = await (await fetch(_0x183223 + "/get_max_config", {
-            "method": "POST",
-            "headers": {
-              "Content-Type": "application/json"
-            },
-            "body": JSON.stringify({
-              "cdk": _0x438d20,
-              "version": _0x480409,
-              "timestamp": _0x21759d,
-              "sign": _0x58bde5,
-              "device_code": _0x39ea55
-            })
-          })).json();
-        return console.log("获取MAX配置结果:", _0x1ee8bd), _0x1ee8bd.code !== 200 ? _0x1ee8bd.expiresAt ? {
-          "success": !1,
-          "message": _0x1ee8bd.message || "该激活码已过期",
-          "expiresAt": _0x1ee8bd.expiresAt
-        } : {
-          "success": !1,
-          "message": _0x1ee8bd.message
-        } : _0x1ee8bd.status === "success" && _0x1ee8bd.data ? (await _0x4bbf8f(_0x1ee8bd)) ? {
-          "success": !0,
-          "config": (await _0x5428eb(_0x1ee8bd.data)).config
-        } : {
-          "success": !1,
-          "message": "数据验证失败"
-        } : {
-          "success": !0,
-          "config": _0x1ee8bd.data
-        };
-      } catch (_0xbd09b9) {
-        return console.error("Get MAX config failed:", _0xbd09b9), {
-          "success": !1,
-          "message": "获取MAX配置失败，请稍后重试"
-        };
-      }
-    };
-    _0x5b1696 = async (_0x3e89a6, _0x5b6bee, _0x10683d) => {
-      try {
-        let _0x3ff94a = await _0x46857f(),
-          _0x199484 = {
-            "cdk": _0x3e89a6,
-            "device_code": _0x5b6bee,
-            "enabled": _0x10683d ? 1 : 0,
-            "timestamp": _0x3ff94a
-          },
-          _0x1b40f7 = await _0x3c98d3(JSON.stringify(_0x199484), _0x4d4ea4);
-        _0x199484.sign = _0x1b40f7;
-        let _0x22d625 = await (await fetch(_0x183223 + "/toggle_auto_switch", {
-          "method": "POST",
-          "headers": {
-            "Content-Type": "application/json"
-          },
-          "body": JSON.stringify(_0x199484)
-        })).json();
-        return console.log("切换全自动换号结果:", _0x22d625), _0x22d625.status !== "success" ? _0x22d625.expiresAt ? {
-          "success": !1,
-          "message": _0x22d625.message || "该激活码已过期",
-          "expiresAt": _0x22d625.expiresAt
-        } : {
-          "success": !1,
-          "message": _0x22d625.message || "切换全自动换号失败"
-        } : {
-          "success": !0,
-          "message": _0x22d625.message,
-          "data": _0x22d625.data
-        };
-      } catch (_0x2e5260) {
-        return console.error("Toggle auto switch failed:", _0x2e5260), {
-          "success": !1,
-          "message": "切换全自动换号失败，请稍后重试"
-        };
-      }
-    };
-    _0x5dab2e = async (_0x374ba5, _0x1aefab) => {
-      try {
-        let _0x512de3 = await _0x46857f(),
-          _0x235c9a = _0x480613(),
-          _0x4935a2 = await _0x3c98d3("" + _0x374ba5 + _0x1aefab + _0x512de3 + _0x235c9a, _0x4d4ea4),
-          _0xd3ae71 = await (await fetch(_0x183223 + "/unbind_device", {
-            "method": "POST",
-            "headers": {
-              "Content-Type": "application/json"
-            },
-            "body": JSON.stringify({
-              "cdk": _0x374ba5,
-              "version": _0x1aefab,
-              "timestamp": _0x512de3,
-              "sign": _0x4935a2,
-              "author_id": _0x235c9a
-            })
-          })).json();
-        return _0xd3ae71.status === "success" ? {
-          "success": !0
-        } : {
-          "success": !1,
-          "message": _0xd3ae71.message
-        };
-      } catch {
-        return {
-          "success": !1,
-          "message": "解绑失败，请检查网络连接"
-        };
-      }
-    };
-  }),
-  _0xc748ee = {};
-_0x296a73(_0xc748ee, {
-  "activate": () => _0x2aad02,
-  "deactivate": () => _0x44d784
-});
-module.exports = _0x42fbfd(_0xc748ee);
-var _0x4dc466 = _0x4ba637(require("vscode")),
-  _0x42f21a = _0x4ba637(_0x24fe29()),
-  _0x8ff198 = _0x4ba637(require("child_process")),
-  _0xa68659 = _0x4ba637(require("os")),
-  _0x49e9c0 = _0x2f12a7(),
-  _0x25ef96 = _0x58fe1e(),
-  _0x222ede = (_0x94f85e(), _0x42fbfd(_0x59e8d7)),
-  _0x26f07f = "v4.0.2",
-  _0x440c4f = {
+module.exports = _0x4120b5(_0x5a8313);
+var _0x153215 = _0x58e023(require("vscode")),
+  _0x27fd84 = _0x58e023(_0x1bac8e()),
+  _0x92d205 = _0x58e023(require("child_process")),
+  _0x330f58 = _0x58e023(require("os")),
+  _0x28e985 = _0x4db94e(),
+  _0x1edf4a = (_0x2ab875(), _0x4120b5(_0x503b4e)),
+  _0x517d34 = "v5.6.6",
+  _0x126000 = {
     "extensionContext": null
   };
-async function _0x2aad02(_0x5500aa) {
+async function _0x2e88a5(_0x5528a5) {
   console.log("cursor-infinity 插件已激活！");
-  _0x440c4f.extensionContext = _0x5500aa;
-  let _0x433202 = new _0x5d9733(_0x5500aa),
-    _0x5dc2ac = _0x49e9c0.getSystemInfo().version;
-  _0x5dc2ac && _0x5dc2ac !== "未知" && _0x433202.updateVersion(_0x5dc2ac);
-  let _0x56db8f = _0x5500aa.globalState.get("maxEnabled", !1);
-  _0x433202.updateMaxStatus(_0x56db8f);
-  let _0x5947da = _0x5500aa.globalState.get("autoSwitchEnabled", !1);
-  _0x433202.updateAutoSwitchStatus(_0x5947da);
-  let _0x3468fb = _0x5500aa.globalState.get("activationCDK");
-  _0x3468fb ? _0x433202.autoActivate(_0x3468fb) : _0x433202.autoActivate("cdk-cdk-cdk-cdk");
-  _0x5500aa.subscriptions.push(_0x4dc466.window.registerWebviewViewProvider("cursor-infinity-activation", _0x433202));
+  _0x126000.extensionContext = _0x5528a5;
+  _0x28e985.initCache(_0x5528a5);
+  let _0x5c2dc2 = new _0x4dd1a5(_0x5528a5),
+    _0x4678a2 = _0x28e985.getSystemInfo().version;
+  _0x4678a2 && _0x4678a2 !== "未知" && _0x5c2dc2.updateVersion(_0x4678a2);
+  let _0x3515c2 = _0x5528a5.globalState.get("maxEnabled", !1);
+  _0x5c2dc2.updateMaxStatus(_0x3515c2);
+  let _0x43cc3b = _0x5528a5.globalState.get("magicFreeEnabled", !1);
+  _0x5c2dc2.updateMagicFreeStatus(_0x43cc3b);
+  let _0x232233 = _0x5528a5.globalState.get("activationCDK");
+  _0x232233 ? (_0x5c2dc2.autoActivate(_0x232233), _0x5c2dc2._initializeCIQuota()) : _0x5c2dc2.autoActivate("cdk-cdk-cdk-cdk");
+  let _0x5babf6 = _0x153215.window.createStatusBarItem(_0x153215.StatusBarAlignment.Left, 200);
+  _0x5babf6.text = "$(extensions) cursor-Infinity";
+  _0x5babf6.tooltip = "打开 cursor Infinity 插件面板";
+  _0x5babf6.command = "cursor-infinity.openPanel";
+  _0x5babf6.show();
+  let _0x4974f6 = _0x153215.commands.registerCommand("cursor-infinity.openPanel", () => {
+    _0x153215.commands.executeCommand("workbench.view.extension.cursor-infinity-sidebar");
+  });
+  _0x5528a5.subscriptions.push(_0x153215.window.registerWebviewViewProvider("cursor-infinity-activation", _0x5c2dc2), _0x5babf6, _0x4974f6);
+  _0x153215.workspace.getConfiguration("cursor-infinity").get("autoOpenPanel", !0) && setTimeout(() => {
+    _0x153215.commands.executeCommand("workbench.view.extension.cursor-infinity-sidebar");
+  }, 1000);
 }
-async function _0x4be39f() {
+async function _0xafae99() {
   try {
-    let _0x35548b = "CI_" + (await (0, _0x42f21a.machineId)()),
-      _0x514ab1 = await _0x222ede.getSettings(_0x35548b);
-    return console.log("系统设置:", _0x514ab1), _0x514ab1;
-  } catch (_0x44e933) {
-    return console.error(_0x44e933.message), _0x4dc466.window.showErrorMessage("" + _0x44e933.message), null;
+    let _0x51a088 = "CI_" + (await (0, _0x27fd84.machineId)()),
+      _0x4cd286 = await _0x1edf4a.getSettings(_0x51a088);
+    return console.log("系统设置:", _0x4cd286), _0x4cd286;
+  } catch (_0x44e162) {
+    return console.error(_0x44e162.message), null;
   }
 }
-function _0x3bfca2(_0x10522a) {
-  let _0x4b399f = _0xa68659.platform();
+function _0x328cd7(_0x12626f) {
+  let _0x141225 = _0x330f58.platform();
   try {
-    _0x4b399f === "win32" ? _0x8ff198.execFile("rundll32", ["url.dll,FileProtocolHandler", _0x10522a]) : _0x4b399f === "darwin" ? _0x8ff198.execFile("open", [_0x10522a]) : _0x8ff198.execFile("xdg-open", [_0x10522a]);
+    _0x141225 === "win32" ? _0x92d205.execFile("rundll32", ["url.dll,FileProtocolHandler", _0x12626f]) : _0x141225 === "darwin" ? _0x92d205.execFile("open", [_0x12626f]) : _0x92d205.execFile("xdg-open", [_0x12626f]);
   } catch {
-    _0x4dc466.env.openExternal(_0x4dc466.Uri.parse(_0x10522a));
+    _0x153215.env.openExternal(_0x153215.Uri.parse(_0x12626f));
   }
 }
-function _0x44d784() {
-  let _0x26f029 = _0x440c4f.extensionContext;
-  _0x26f029 && _0x26f029.globalState.update("userDeactivated", !0);
+function _0x186fcf() {
+  let _0x3d54b1 = _0x126000.extensionContext;
+  _0x3d54b1 && _0x3d54b1.globalState.update("userDeactivated", !0);
 }
-var _0x5d9733 = class {
-  constructor(_0x422167) {
-    this.context = _0x422167;
-    this._context = _0x422167;
+var _0x4dd1a5 = class {
+  constructor(_0x33b650) {
+    this.context = _0x33b650;
+    this._context = _0x33b650;
   }
   ["_view"];
   ["_context"];
@@ -2977,61 +2929,157 @@ var _0x5d9733 = class {
     "version": "",
     "boundDevices": "",
     "maxEnabled": !1,
-    "autoSwitchEnabled": !1
+    "magicFreeEnabled": !1
   };
-  ["_maskEmail"](_0x851311) {
-    if (!_0x851311) return "";
-    let _0x59b061 = _0x851311.split("@");
-    return _0x59b061.length !== 2 ? _0x851311 : _0x59b061[0] + "@****";
+  ["MODAL_DELAY_MS"] = 1000;
+  async ["_showModalWithDelay"](_0xd145f7, _0x57d586, _0x357eaf) {
+    console.log("[DEBUG] _showModalWithDelay called:", _0xd145f7, _0x57d586);
+    await new Promise(_0x3b0912 => setTimeout(_0x3b0912, this.MODAL_DELAY_MS));
+    this._view ? (console.log("[DEBUG] Sending message to webview:", _0xd145f7), this._view.webview.postMessage({
+      "command": _0xd145f7,
+      "message": _0x57d586,
+      ..._0x357eaf
+    })) : console.log("[DEBUG] WebView not available!");
   }
-  ["updateVersion"](_0x20338c) {
+  async ["_showNetworkErrorModal"]() {
+    console.log("[DEBUG] _showNetworkErrorModal called");
+    await new Promise(_0x518605 => setTimeout(_0x518605, this.MODAL_DELAY_MS));
+    this._view ? (console.log("[DEBUG] Sending network error modal to webview"), this._view.webview.postMessage({
+      "command": "showNetworkErrorModal"
+    })) : console.log("[DEBUG] WebView not available!");
+  }
+  async ["_showConfirmModal"](_0x3da522, _0x595967 = "确定", _0x4d14dd = "取消", _0x24db7a = this.MODAL_DELAY_MS) {
+    return await new Promise(_0x35582e => setTimeout(_0x35582e, _0x24db7a)), new Promise(_0x3c7178 => {
+      if (this._view) {
+        let _0x2b6bb6 = "confirm_" + Date.now(),
+          _0x363062 = this._view.webview.onDidReceiveMessage(_0x5d774f => {
+            _0x5d774f.command === "confirmResult" && _0x5d774f.callbackId === _0x2b6bb6 && (_0x363062.dispose(), _0x3c7178(_0x5d774f.result));
+          });
+        this._view.webview.postMessage({
+          "command": "showConfirmModal",
+          "message": _0x3da522,
+          "confirmText": _0x595967,
+          "cancelText": _0x4d14dd,
+          "callbackId": _0x2b6bb6
+        });
+      } else _0x3c7178(!1);
+    });
+  }
+  ["_maskEmail"](_0x1d7a6e) {
+    if (!_0x1d7a6e) return "";
+    let _0x57bbb6 = _0x1d7a6e.split("@");
+    return _0x57bbb6.length !== 2 ? _0x1d7a6e : _0x57bbb6[0] + "@****";
+  }
+  ["_maskActivationCode"](_0x83bf88) {
+    if (!_0x83bf88) return "";
+    let _0x228183 = _0x83bf88.split("-");
+    if (_0x228183.length < 3) return _0x83bf88;
+    let _0x269841 = [];
+    for (let _0x5cb57b = 0; _0x5cb57b < _0x228183.length; _0x5cb57b++) _0x5cb57b === 0 || _0x5cb57b === _0x228183.length - 1 ? _0x269841.push(_0x228183[_0x5cb57b]) : _0x269841.push("****");
+    return _0x269841.join("-");
+  }
+  ["_formatAccountDisplay"](_0x420821) {
+    if (!_0x420821) return "暂无邮箱";
+    let _0x11cb8e = _0x420821.includes("@") ? _0x420821.split("@")[0] : _0x420821;
+    return _0x11cb8e.length >= 7 ? _0x11cb8e.substring(0, 3) + "***" + _0x11cb8e.substring(_0x11cb8e.length - 4) : _0x11cb8e;
+  }
+  ["updateVersion"](_0x517e52) {
     this._state = {
       ...this._state,
-      "version": _0x20338c
+      "version": _0x517e52
     };
     this._updateWebview();
   }
-  ["updateMaxStatus"](_0x4e3611) {
+  async ["_initializeCIQuota"]() {
+    try {
+      if (this._state.activationStatus !== "已授权") return;
+      let _0x5b82c9 = this._context.globalState.get("cachedCIQuota");
+      _0x5b82c9 && (this._state = {
+        ...this._state,
+        "balance": _0x5b82c9.value.toString()
+      }, this._view && this._view.webview.postMessage({
+        "command": "updateCIQuota",
+        "data": _0x5b82c9
+      }));
+      this._state.activationCode && (await this._refreshCIQuotaSilent());
+    } catch (_0x5804ad) {
+      console.error("初始化CI积分失败:", _0x5804ad);
+    }
+  }
+  async ["_refreshCIQuotaSilent"]() {
+    try {
+      let _0x2e9a2b = "CI_" + (await (0, _0x27fd84.machineId)()),
+        _0x10b108 = this._state.activationCode;
+      if (!_0x10b108) return;
+      let _0x49f326 = await _0x1edf4a.getPoints(_0x10b108, _0x2e9a2b);
+      if (_0x49f326.status === "error" && !_0x49f326.message?.["includes"]("请勿频繁")) {
+        console.log("静默刷新CI积分失败:", _0x49f326.message);
+        return;
+      }
+      if ((_0x49f326.success || _0x49f326.status === "warning") && _0x49f326.data) {
+        let _0x1c3fd6 = parseInt(_0x49f326.data.points?.["toString"]() || "0", 10),
+          _0x42e280 = Math.min(Math.max(_0x1c3fd6, 0), 100);
+        this._state = {
+          ...this._state,
+          "balance": _0x1c3fd6.toString(),
+          "boundDevices": _0x49f326.data.boundDevices?.["toString"]() || this._state.boundDevices || "0"
+        };
+        let _0xb1716 = {
+          "value": _0x1c3fd6,
+          "percentage": _0x42e280
+        };
+        this._view && this._view.webview.postMessage({
+          "command": "updateCIQuota",
+          "data": _0xb1716
+        });
+        await this._context.globalState.update("cachedCIQuota", _0xb1716);
+      }
+    } catch (_0x247827) {
+      console.error("静默刷新CI积分失败:", _0x247827);
+    }
+  }
+  ["updateMaxStatus"](_0x59a1b2) {
     this._state = {
       ...this._state,
-      "maxEnabled": _0x4e3611
+      "maxEnabled": _0x59a1b2
     };
     this._updateWebview();
   }
-  ["updateAutoSwitchStatus"](_0x39c2d1) {
+  ["updateMagicFreeStatus"](_0x9bada4) {
     this._state = {
       ...this._state,
-      "autoSwitchEnabled": _0x39c2d1
+      "magicFreeEnabled": _0x9bada4
     };
     this._updateWebview();
   }
-  async ["autoActivate"](_0x425e5d) {
-    await this._handleActivation(_0x425e5d, !0);
+  async ["autoActivate"](_0x1fb1e4) {
+    await this._handleActivation(_0x1fb1e4, !0);
   }
-  async ["resolveWebviewView"](_0x5c940e, _0x169e64, _0x3ada58) {
-    this._view = _0x5c940e;
-    _0x5c940e.webview.options = {
+  async ["resolveWebviewView"](_0x4b0763, _0x20a336, _0x3a4946) {
+    this._view = _0x4b0763;
+    _0x4b0763.webview.options = {
       "enableScripts": !0,
       "localResourceRoots": [this._context.extensionUri]
     };
-    let _0x8284c3 = await this._getWebviewContent();
-    _0x5c940e.webview.html = _0x8284c3;
-    _0x5c940e.webview.onDidReceiveMessage(_0x2c7be7 => {
-      switch (_0x2c7be7.command) {
+    let _0x13793f = await this._getWebviewContent();
+    _0x4b0763.webview.html = _0x13793f;
+    this._state.activationCode && this._state.activationStatus === "已授权" && this._initializeCIQuota();
+    _0x4b0763.webview.onDidReceiveMessage(_0x4de2e4 => {
+      switch (_0x4de2e4.command) {
         case "activate":
-          this._handleActivation(_0x2c7be7.cdk);
+          this._handleActivation(_0x4de2e4.cdk);
           break;
         case "refreshBalance":
           this._handleRefreshBalance();
           break;
         case "showError":
-          _0x4dc466.window.showErrorMessage(_0x2c7be7.text);
+          this._showModalWithDelay("showErrorModal", _0x4de2e4.text);
           break;
         case "showInfo":
-          if (_0x2c7be7.timeout) {
-            let _0x4390f4 = _0x4dc466.window.setStatusBarMessage(_0x2c7be7.text);
-            setTimeout(() => _0x4390f4.dispose(), _0x2c7be7.timeout);
-          } else _0x4dc466.window.showInformationMessage(_0x2c7be7.text);
+          if (_0x4de2e4.timeout) {
+            let _0x2119c4 = _0x153215.window.setStatusBarMessage(_0x4de2e4.text);
+            setTimeout(() => _0x2119c4.dispose(), _0x4de2e4.timeout);
+          } else this._showModalWithDelay("showInfoModal", _0x4de2e4.text);
           break;
         case "switchAccount":
           this._handleSwitchAccount();
@@ -3039,108 +3087,116 @@ var _0x5d9733 = class {
         case "resetConfig":
           this._handleResetConfig();
           break;
-        case "enableUpdate":
-          this._handleUpdateToggle(!0);
-          break;
-        case "disableUpdate":
-          this._handleUpdateToggle(!1);
+        case "toggleAutoOpen":
+          this._handleToggleAutoOpen(_0x4de2e4.enabled);
           break;
         case "restore":
           this._handleRestoreConfig();
           break;
         case "toggleMax":
-          this._handleToggleMax(_0x2c7be7.enabled);
+          this._handleToggleMax(_0x4de2e4.enabled);
           break;
-        case "toggleAutoSwitch":
-          this._handleToggleAutoSwitch(_0x2c7be7.enabled);
+        case "toggleMagicFree":
+          this._handleToggleMagicFree(_0x4de2e4.enabled);
           break;
         case "unbindDevice":
-          this._handleUnbindDevice();
+          this._handleUnbindDevice(_0x4de2e4.cdk);
+          break;
+        case "openUrl":
+          _0x328cd7(_0x4de2e4.url);
+          break;
+        case "clearCursorProxy":
+          this._handleClearCursorProxy();
+          break;
+        case "setHttp11":
+          this._handleSetHttp11();
+          break;
+        case "confirmResult":
           break;
       }
     });
   }
   async ["_getWebviewContent"]() {
-    let _0x321655 = await _0x25ef96.isUpdateDisabled(),
+    let _0x229349 = _0x153215.workspace.getConfiguration("cursor-infinity").get("autoOpenPanel", !0),
       {
-        activationStatus: _0x3cc6f7,
-        activationCode: _0x196486,
-        activationTime: _0x301c4f,
-        accountInfo: _0x8b28d8,
-        balance: _0x28137d,
-        version: _0x1767e2,
-        boundDevices: _0xba62b3,
-        maxEnabled: _0x9539f5,
-        autoSwitchEnabled: _0xfb6d97
+        activationStatus: _0x1751e0,
+        activationCode: _0x245bb2,
+        activationTime: _0x2d1323,
+        accountInfo: _0x249024,
+        balance: _0x422319,
+        version: _0x96753e,
+        boundDevices: _0x2961a7,
+        maxEnabled: _0x2e89ae,
+        magicFreeEnabled: _0xa58654
       } = this._state,
-      _0x45a0a9 = 1,
-      _0x25f5b1 = "",
-      _0x416876 = false,
-      _0x4cb700 = false;
+      _0x544591 = null;
+    _0x1751e0 === "已授权" && (_0x544591 = this._context.globalState.get("cachedCIQuota"));
+    let _0x1e15b7 = _0x245bb2 ? this._maskActivationCode(_0x245bb2) : "",
+      _0x531e8c = this._formatAccountDisplay(_0x249024),
+      _0x2897d0 = 1,
+      _0x1427dc = "",
+      _0x126f0b = false,
+      _0x5b0480 = false,
+      _0x1b6bde = false;
     try {
-      let _0x527666 = await _0x4be39f();
-      _0x527666.success && (_0x45a0a9 = _0x527666.data.operation_mode, _0x25f5b1 = _0x527666.data.common_problem || "", _0x416876 = _0x527666.data.common_problem_status === 1, _0x4cb700 = _0x527666.data.yearly_pool_enabled === 1);
-    } catch (_0x27778d) {
-      console.error(_0x27778d);
+      let _0x2eef4f = await _0xafae99();
+      _0x2eef4f.success && (_0x2897d0 = _0x2eef4f.data.operation_mode, _0x1427dc = _0x2eef4f.data.common_problem || "", _0x126f0b = _0x2eef4f.data.common_problem_status === 1, _0x5b0480 = _0x2eef4f.data.yearly_pool_enabled === 1, _0x1b6bde = _0x2eef4f.data.magic_free_limit_enabled === 1);
+    } catch (_0x28ad32) {
+      console.error(_0x28ad32);
     }
-    return "<!DOCTYPE html>\n\t\t<html>\n\t\t<head>\n\t\t\t<meta charset=\"UTF-8\">\n\t\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\t\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n\t\t\t<style>\n\t\t\t\tbody {\n\t\t\t\t\tfont-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Noto Sans\", \"Apple Color Emoji\", \"Segoe UI Emoji\", sans-serif;\n\t\t\t\t\tpadding: 12px;\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t\tbackground-color: var(--vscode-sideBar-background);\n\t\t\t\t}\n\t\t\t\t.container {\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\tmax-width: 400px;\n\t\t\t\t\tmargin: 0 auto;\n\t\t\t\t}\n\t\t\t\t.card {\n\t\t\t\t\tbackground-color: var(--vscode-editor-background);\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tpadding: 12px;\n\t\t\t\t\tmargin-bottom: 10px;\n\t\t\t\t\tbox-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n\t\t\t\t}\n\t\t\t\t.section-title {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t\tmargin-bottom: 10px;\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t\tpadding-bottom: 6px;\n\t\t\t\t\tborder-bottom: 1px solid var(--vscode-panel-border);\n\t\t\t\t}\n\t\t\t\t.section-title svg {\n\t\t\t\t\twidth: 16px;\n\t\t\t\t\theight: 16px;\n\t\t\t\t\tmargin-right: 6px;\n\t\t\t\t\tfill: var(--vscode-foreground);\n\t\t\t\t}\n\t\t\t\t.input-group {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t\tmargin-bottom: 12px;\n\t\t\t\t}\n\t\t\t\t.input-field {\n\t\t\t\t\tflex: 1;\n\t\t\t\t\tbackground-color: var(--vscode-input-background);\n\t\t\t\t\tcolor: var(--vscode-input-foreground);\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t\tpadding: 6px 12px;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\tmin-width: 0;\n\t\t\t\t\tbox-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);\n\t\t\t\t\tposition: relative;\n\t\t\t\t}\n\t\t\t\t/* 输入框悬停效果已移除 */\n\t\t\t\t.input-field:focus {\n\t\t\t\t\toutline: none;\n\t\t\t\t\tborder-color: var(--vscode-focusBorder);\n\t\t\t\t\tbox-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 0 2px var(--vscode-focusBorder);\n\t\t\t\t}\n\t\t\t\t/* 特别针对浅色主题的样式 */\n\t\t\t\tbody.vscode-light .input-field {\n\t\t\t\t\tbackground-color: #ffffff;\n\t\t\t\t\tborder: 1px solid #ddd;\n\t\t\t\t}\n\t\t\t\t/* 输入框浅色主题悬停效果已移除 */\n\t\t\t\tbody.vscode-light .input-field:focus {\n\t\t\t\t\tborder-color: #0066ff;\n\t\t\t\t\tbox-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 0 2px rgba(0, 102, 255, 0.2);\n\t\t\t\t}\n\t\t\t\t.button {\n\t\t\t\t\tbackground-color: #0066ff;\n\t\t\t\t\tcolor: white;\n\t\t\t\t\tborder: none;\n\t\t\t\t\tpadding: 5px 14px;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t\twhite-space: nowrap;\n\t\t\t\t}\n\t\t\t\t.button:hover {\n\t\t\t\t\tbackground-color: #0052cc;\n\t\t\t\t}\n\t\t\t\t/* 按钮悬停效果已移除 */\n\t\t\t\t.button.secondary {\n\t\t\t\t\tbackground-color: transparent;\n\t\t\t\t\tborder: 1px solid var(--vscode-button-border);\n\t\t\t\t\tcolor: var(--vscode-button-foreground);\n\t\t\t\t}\n\t\t\t\t.button.secondary:hover {\n\t\t\t\t\tbackground-color: var(--vscode-button-hoverBackground);\n\t\t\t\t}\n\t\t\t\t/* 按钮悬停效果已移除 */\n\t\t\t\t.button.secondary.highlight {\n\t\t\t\t\tbackground-color: #5e42bd;\n\t\t\t\t\tcolor: white;\n\t\t\t\t\tborder: 1px solid #4e35a8;\n\t\t\t\t}\n\t\t\t\t.button.secondary.highlight:hover {\n\t\t\t\t\tbackground-color: #4e35a8;\n\t\t\t\t}\n\t\t\t\t/* 高亮按钮悬停效果已移除 */\n\t\t\t\t.button.secondary.danger {\n\t\t\t\t\tbackground-color: #cc4444;\n\t\t\t\t\tcolor: white;\n\t\t\t\t\tborder: 1px solid #b53535;\n\t\t\t\t}\n\t\t\t\t.button.secondary.danger:hover {\n\t\t\t\t\tbackground-color: #b53535;\n\t\t\t\t}\n\t\t\t\t/* 危险按钮悬停效果已移除 */\n\t\t\t\t.info-row {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tjustify-content: space-between;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tmargin-bottom: 8px;\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t}\n\t\t\t\t/* 标签文字样式 */\n\t\t\t\t.info-row > span:first-child {\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t}\n\t\t\t\t.info-row:last-child {\n\t\t\t\t\tmargin-bottom: 0;\n\t\t\t\t}\n\t\t\t\t.status {\n\t\t\t\t\tcolor: #4caf50;\n\t\t\t\t}\n\t\t\t\t.activation-code {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 4px;\n\t\t\t\t}\n\t\t\t\t.activation-code .info-text {\n\t\t\t\t\tbackground-color: var(--vscode-editor-selectionBackground);\n\t\t\t\t\tcolor: var(--vscode-editor-foreground);\n\t\t\t\t\tborder: none;\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t}\n\t\t\t\t.expiration-time {\n\t\t\t\t\tcolor: var(--vscode-textLink-foreground);\n\t\t\t\t\topacity: 0.8;\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\ttransition: all 0.2s ease;\n\t\t\t\t}\n\t\t\t\t.expiration-time.placeholder {\n\t\t\t\t\tcolor: var(--vscode-disabledForeground);\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\tfont-style: italic;\n\t\t\t\t\tpadding-left: 4px;\n\t\t\t\t}\n\t\t\t\t.copy-icon {\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\tcolor: var(--vscode-icon-foreground);\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t}\n\t\t\t\t/* 悬停效果已移除 */\n\t\t\t\t.copy-icon svg {\n\t\t\t\t\tfill: currentColor;\n\t\t\t\t}\n\t\t\t\t.balance-bar {\n\t\t\t\t\theight: 4px;\n\t\t\t\t\tbackground-color: rgba(128, 128, 128, 0.1);\n\t\t\t\t\tborder-radius: 2px;\n\t\t\t\t\tflex: 1;\n\t\t\t\t\tmargin-right: 12px;\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t}\n\t\t\t\t.balance-bar::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tbackground: linear-gradient(90deg, #f38ba8, #f576a8, #f38ba8);\n\t\t\t\t}\n\t\t\t\t.balance-bar.points-0-10::before {\n\t\t\t\t\tbackground: linear-gradient(90deg, #f38ba8, #f576a8, #f38ba8);\n\t\t\t\t}\n\t\t\t\t.balance-bar.points-11-50::before {\n\t\t\t\t\tbackground: linear-gradient(90deg, #f9b171, #f9a671, #f9b171);\n\t\t\t\t}\n\t\t\t\t.balance-bar.points-51-100::before {\n\t\t\t\t\tbackground: linear-gradient(90deg, #fab387, #f9c096, #fab387);\n\t\t\t\t}\n\t\t\t\t.balance-bar.points-100-plus::before {\n\t\t\t\t\tbackground: linear-gradient(90deg, #89b4fa, #b4befe, #89b4fa);\n\t\t\t\t}\n\t\t\t\t/* 动画已移除 */\n\t\t\t\t.balance-bar::after {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: -100%;\n\t\t\t\t\twidth: 50%;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tbackground: linear-gradient(\n\t\t\t\t\t\t90deg,\n\t\t\t\t\t\ttransparent,\n\t\t\t\t\t\trgba(255, 255, 255, 0.15),\n\t\t\t\t\t\ttransparent\n\t\t\t\t\t);\n\t\t\t\t}\n\t\t\t\t/* 动画已移除 */\n\t\t\t\t.balance-text {\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\twhite-space: nowrap;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 8px;\n\t\t\t\t}\n\t\t\t\t.balance-container {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tflex-direction: column;\n\t\t\t\t\tgap: 3px;\n\t\t\t\t\tmargin: 6px 0;\n\t\t\t\t}\n\t\t\t\t.balance-row {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t}\n\t\t\t\t.balance-label {\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tmargin-bottom: 4px;\n\t\t\t\t}\n\t\t\t\t.refresh-icon {\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t}\n\t\t\t\t/* 刷新图标悬停效果已移除 */\n\t\t\t\t/* MAX卡片样式 - 高级设计 */\n\t\t\t\t.max-card {\n\t\t\t\t\tmargin: 3px 0;\n\t\t\t\t\tbackground: linear-gradient(135deg, rgba(123, 97, 255, 0.15), rgba(99, 102, 241, 0.2));\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t\tborder: 1px solid rgba(123, 97, 255, 0.3);\n\t\t\t\t\tbox-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 0 15px rgba(123, 97, 255, 0.1);\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 全自动换号卡片样式 - 年卡风格 */\n\t\t\t\t.auto-switch-card {\n\t\t\t\t\tmargin: 3px 0;\n\t\t\t\t\tbackground: linear-gradient(135deg, rgba(255, 149, 0, 0.15), rgba(255, 149, 0, 0.2));\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t\tborder: 1px solid rgba(255, 149, 0, 0.3);\n\t\t\t\t\tbox-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 0 15px rgba(255, 149, 0, 0.1);\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 悬停效果已移除 */\n\t\t\t\t\n\t\t\t\t/* 卡片内容 */\n\t\t\t\t.max-card-content, .auto-switch-content {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tjustify-content: space-between;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tpadding: 8px 10px;\n\t\t\t\t\tbackground: rgba(255, 255, 255, 0.05);\n\t\t\t\t\tbackdrop-filter: blur(3px);\n\t\t\t\t\tposition: relative;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-card-content::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\theight: 1px;\n\t\t\t\t\tbackground: linear-gradient(90deg, \n\t\t\t\t\t\ttransparent, \n\t\t\t\t\t\trgba(123, 97, 255, 0.2), \n\t\t\t\t\t\trgba(99, 102, 241, 0.3), \n\t\t\t\t\t\trgba(123, 97, 255, 0.2), \n\t\t\t\t\t\ttransparent\n\t\t\t\t\t);\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.auto-switch-content::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\theight: 1px;\n\t\t\t\t\tbackground: linear-gradient(90deg, \n\t\t\t\t\t\ttransparent, \n\t\t\t\t\t\trgba(255, 149, 0, 0.2), \n\t\t\t\t\t\trgba(255, 149, 0, 0.3), \n\t\t\t\t\t\trgba(255, 149, 0, 0.2), \n\t\t\t\t\t\ttransparent\n\t\t\t\t\t);\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 信息区域 */\n\t\t\t\t.max-info-section, .auto-switch-info-section {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-tagline, .auto-switch-tagline {\n\t\t\t\t\tfont-size: 11px;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\topacity: 0.95;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 增强Cursor Max标签的样式 */\n\t\t\t\t\n\t\t\t\t/* PRO标签 */\n\t\t\t\t.max-level {\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tfont-weight: 700;\n\t\t\t\t\tbackground: linear-gradient(135deg, #7b61ff, #6366f1);\n\t\t\t\t\tcolor: white;\n\t\t\t\t\tpadding: 3px 10px;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tletter-spacing: 0.4px;\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t\tvertical-align: middle;\n\t\t\t\t\tbox-shadow: 0 1px 3px rgba(99, 102, 241, 0.3);\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 全自动换号标签 */\n\t\t\t\t.auto-switch-level {\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tfont-weight: 700;\n\t\t\t\t\tbackground: linear-gradient(135deg, #ff9500, #f76b1c);\n\t\t\t\t\tcolor: white;\n\t\t\t\t\tpadding: 3px 10px;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tletter-spacing: 0.4px;\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t\tvertical-align: middle;\n\t\t\t\t\tbox-shadow: 0 1px 3px rgba(255, 149, 0, 0.3);\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-level::after, .auto-switch-level::after {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: -100%;\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tbackground: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 动画已移除 */\n\t\t\t\t\n\t\t\t\t/* PRO小标签 */\n\t\t\t\t.max-premium-badge {\n\t\t\t\t\tfont-size: 9px;\n\t\t\t\t\tfont-weight: 600;\n\t\t\t\t\tcolor: #a395ff;\n\t\t\t\t\tbackground-color: rgba(123, 97, 255, 0.1);\n\t\t\t\t\tpadding: 2px 6px;\n\t\t\t\t\tborder-radius: 3px;\n\t\t\t\t\tborder: 1px solid rgba(123, 97, 255, 0.2);\n\t\t\t\t\tmargin-left: 8px;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 全自动换号高级标签 */\n\t\t\t\t.auto-switch-premium-badge {\n\t\t\t\t\tfont-size: 9px;\n\t\t\t\t\tfont-weight: 600;\n\t\t\t\t\tcolor: #ff9500;\n\t\t\t\t\tbackground-color: rgba(255, 149, 0, 0.1);\n\t\t\t\t\tpadding: 2px 6px;\n\t\t\t\t\tborder-radius: 3px;\n\t\t\t\t\tborder: 1px solid rgba(255, 149, 0, 0.2);\n\t\t\t\t\tmargin-left: 8px;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 操作区域 */\n\t\t\t\t.max-action-section, .auto-switch-action-section {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-state, .auto-switch-state {\n\t\t\t\t\tfont-size: 9px;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\tmin-width: 24px;\n\t\t\t\t\ttext-align: right;\n\t\t\t\t\ttransition: all 0.3s ease;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-state.on {\n\t\t\t\t\tcolor: #7b61ff;\n\t\t\t\t\topacity: 1;\n\t\t\t\t\ttext-shadow: 0 0 5px rgba(123, 97, 255, 0.3);\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.auto-switch-state.on {\n\t\t\t\t\tcolor: #ff9500;\n\t\t\t\t\topacity: 1;\n\t\t\t\t\ttext-shadow: 0 0 5px rgba(255, 149, 0, 0.3);\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 开关样式 - 新设计 */\n\t\t\t\t.max-toggle, .auto-switch-toggle {\n\t\t\t\t\tposition: relative;\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t\twidth: 32px;\n\t\t\t\t\theight: 18px;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-toggle input, .auto-switch-toggle input {\n\t\t\t\t\topacity: 0;\n\t\t\t\t\twidth: 0;\n\t\t\t\t\theight: 0;\n\t\t\t\t\tmargin: 0;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-track, .auto-switch-track {\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\tright: 0;\n\t\t\t\t\tbottom: 0;\n\t\t\t\t\tbackground-color: rgba(0, 0, 0, 0.1);\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\ttransition: all 0.3s ease;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-track::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\tright: 0;\n\t\t\t\t\tbottom: 0;\n\t\t\t\t\tbackground: linear-gradient(90deg, #7b61ff, #6366f1);\n\t\t\t\t\topacity: 0;\n\t\t\t\t\ttransition: opacity 0.3s ease;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.auto-switch-track::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\tright: 0;\n\t\t\t\t\tbottom: 0;\n\t\t\t\t\tbackground: linear-gradient(90deg, #ff9500, #f76b1c);\n\t\t\t\t\topacity: 0;\n\t\t\t\t\ttransition: opacity 0.3s ease;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-indicator, .auto-switch-indicator {\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\theight: 14px;\n\t\t\t\t\twidth: 14px;\n\t\t\t\t\tleft: 2px;\n\t\t\t\t\ttop: 2px;\n\t\t\t\t\tbackground-color: #fff;\n\t\t\t\t\tborder-radius: 3px;\n\t\t\t\t\ttransition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);\n\t\t\t\t\tbox-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);\n\t\t\t\t\tz-index: 1;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\tinput:checked + .max-track::before, input:checked + .auto-switch-track::before {\n\t\t\t\t\topacity: 1;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\tinput:checked + .max-track .max-indicator, input:checked + .auto-switch-track .auto-switch-indicator {\n\t\t\t\t\ttransform: translateX(14px);\n\t\t\t\t\tbackground-color: white;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-toggle:hover .max-track, .auto-switch-toggle:hover .auto-switch-track {\n\t\t\t\t\topacity: 0.95;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-toggle:active .max-indicator, .auto-switch-toggle:active .auto-switch-indicator {\n\t\t\t\t\ttransform: scale(0.9);\n\t\t\t\t}\n\t\t\t\t.switch {\n\t\t\t\t\tposition: relative;\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t\twidth: 40px;\n\t\t\t\t\theight: 20px;\n\t\t\t\t}\n\t\t\t\t.switch input {\n\t\t\t\t\topacity: 0;\n\t\t\t\t\twidth: 0;\n\t\t\t\t\theight: 0;\n\t\t\t\t}\n\t\t\t\t.slider {\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\tright: 0;\n\t\t\t\t\tbottom: 0;\n\t\t\t\t\tbackground-color: var(--vscode-input-background);\n\t\t\t\t\ttransition: .4s;\n\t\t\t\t\tborder-radius: 20px;\n\t\t\t\t}\n\t\t\t\t.slider:before {\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\tcontent: \"\";\n\t\t\t\t\theight: 16px;\n\t\t\t\t\twidth: 16px;\n\t\t\t\t\tleft: 2px;\n\t\t\t\t\tbottom: 2px;\n\t\t\t\t\tbackground-color: white;\n\t\t\t\t\ttransition: .4s;\n\t\t\t\t\tborder-radius: 50%;\n\t\t\t\t}\n\t\t\t\tinput:checked + .slider {\n\t\t\t\t\tbackground-color: #0066ff;\n\t\t\t\t}\n\t\t\t\tinput:checked + .slider:before {\n\t\t\t\t\ttransform: translateX(20px);\n\t\t\t\t}\n\t\t\t\t.info-text {\n\t\t\t\t\tbackground-color: var(--vscode-textBlockQuote-background);\n\t\t\t\t\tpadding: 4px 10px;\n\t\t\t\t\tborder-radius: 6px;\n\t\t\t\t\tcolor: var(--vscode-textBlockQuote-foreground);\n\t\t\t\t\tfont-family: var(--vscode-editor-font-family);\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t\topacity: 0.85;\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t}\n\t\t\t\t.info-text.placeholder {\n\t\t\t\t\tbackground-color: transparent;\n\t\t\t\t\tcolor: var(--vscode-disabledForeground);\n\t\t\t\t\tcursor: default;\n\t\t\t\t\tborder: 1px dashed rgba(128, 128, 128, 0.3);\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\tfont-style: italic;\n\t\t\t\t}\n\t\t\t\t/* 占位符悬停效果已移除 */\n\t\t\t\t.expiration-time {\n\t\t\t\t\tcolor: var(--vscode-textLink-foreground);\n\t\t\t\t\topacity: 0.8;\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\ttransition: all 0.2s ease;\n\t\t\t\t}\n\t\t\t\t.expiration-time.placeholder {\n\t\t\t\t\tcolor: var(--vscode-disabledForeground);\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\tfont-style: italic;\n\t\t\t\t\tpadding-left: 4px;\n\t\t\t\t}\n\t\t\t\t.account-info {\n\t\t\t\t\tbackground: var(--vscode-textBlockQuote-background);\n\t\t\t\t\tcolor: var(--vscode-editor-foreground);\n\t\t\t\t\tpadding: 8px 16px;\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\topacity: 0.85;\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 10px;\n\t\t\t\t\tbox-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);\n\t\t\t\t\tfont-family: var(--vscode-editor-font-family);\n\t\t\t\t\tletter-spacing: 0.4px;\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\tbox-sizing: border-box;\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t\ttransition: all 0.2s ease;\n\t\t\t\t}\n\t\t\t\t.account-info.placeholder {\n\t\t\t\t\tbackground: transparent;\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\tborder: 1px dashed rgba(128, 128, 128, 0.3);\n\t\t\t\t\tpadding: 8px 16px;\n\t\t\t\t\tcolor: var(--vscode-disabledForeground);\n\t\t\t\t\tfont-style: italic;\n\t\t\t\t\tposition: relative;\n\t\t\t\t}\n\t\t\t\t.account-info.placeholder:hover {\n\t\t\t\t\tborder-color: rgba(128, 128, 128, 0.4);\n\t\t\t\t}\n\t\t\t\t.account-info.placeholder::before {\n\t\t\t\t\tdisplay: none;\n\t\t\t\t}\n\t\t\t\t.account-info.placeholder::after {\n\t\t\t\t\tcontent: '未使用';\n\t\t\t\t\tfont-size: 11px;\n\t\t\t\t\tcolor: var(--vscode-disabledForeground);\n\t\t\t\t\tmargin-left: auto;\n\t\t\t\t\topacity: 0.8;\n\t\t\t\t\tbackground: none;\n\t\t\t\t\tborder: none;\n\t\t\t\t\tfont-style: normal;\n\t\t\t\t}\n\t\t\t\t.account-info.placeholder .pool-tag {\n\t\t\t\t\tdisplay: none;\n\t\t\t\t}\n\t\t\t\t.version-row {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 8px;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t}\n\t\t\t\t.version-icon {\n\t\t\t\t\tcolor: var(--vscode-symbolIcon-numberForeground);\n\t\t\t\t\topacity: 0.8;\n\t\t\t\t}\n\t\t\t\t.auth-status {\n\t\t\t\t\tmargin-left: auto;\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tpadding: 2px 8px;\n\t\t\t\t\tborder-radius: 10px;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 4px;\n\t\t\t\t}\n\t\t\t\t.auth-status.authorized {\n\t\t\t\t\tcolor: #4caf50;\n\t\t\t\t\tbackground-color: rgba(76, 175, 80, 0.1);\n\t\t\t\t}\n\t\t\t\t.auth-status.unauthorized {\n\t\t\t\t\tcolor: #f44336;\n\t\t\t\t\tbackground-color: rgba(244, 67, 54, 0.1);\n\t\t\t\t}\n\t\t\t\t.auth-status::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t\twidth: 6px;\n\t\t\t\t\theight: 6px;\n\t\t\t\t\tborder-radius: 50%;\n\t\t\t\t\tbox-shadow: 0 0 4px rgba(76, 175, 80, 0.4);\n\t\t\t\t\topacity: 0.9;\n\t\t\t\t}\n\t\t\t\t.auth-status.authorized::before {\n\t\t\t\t\tbackground-color: #4caf50;\n\t\t\t\t\tbox-shadow: 0 0 4px rgba(76, 175, 80, 0.4);\n\t\t\t\t}\n\t\t\t\t.auth-status.unauthorized::before {\n\t\t\t\t\tbackground-color: #f44336;\n\t\t\t\t\tbox-shadow: 0 0 4px rgba(244, 67, 54, 0.4);\n\t\t\t\t}\n\t\t\t\t.toggle-label {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 8px;\n\t\t\t\t}\n\t\t\t\t.switch.small {\n\t\t\t\t\twidth: 32px;\n\t\t\t\t\theight: 16px;\n\t\t\t\t}\n\t\t\t\t.switch.small .slider:before {\n\t\t\t\t\theight: 12px;\n\t\t\t\t\twidth: 12px;\n\t\t\t\t\tleft: 2px;\n\t\t\t\t\tbottom: 2px;\n\t\t\t\t}\n\t\t\t\t.switch.small input:checked + .slider:before {\n\t\t\t\t\ttransform: translateX(16px);\n\t\t\t\t}\n\t\t\t\t.account-info {\n\t\t\t\t\tbackground: var(--vscode-textBlockQuote-background);\n\t\t\t\t\tcolor: var(--vscode-editor-foreground);\n\t\t\t\t\tpadding: 8px 16px;\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\topacity: 0.85;\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 10px;\n\t\t\t\t\tbox-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);\n\t\t\t\t\tfont-family: var(--vscode-editor-font-family);\n\t\t\t\t\tletter-spacing: 0.4px;\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\tbox-sizing: border-box;\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t\ttransition: all 0.2s ease;\n\t\t\t\t}\n\t\t\t\t.account-info::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tdisplay: block;\n\t\t\t\t\twidth: 8px;\n\t\t\t\t\theight: 8px;\n\t\t\t\t\tbackground-color: #4caf50;\n\t\t\t\t\tborder-radius: 50%;\n\t\t\t\t\tbox-shadow: 0 0 6px rgba(76, 175, 80, 0.4);\n\t\t\t\t\topacity: 0.9;\n\t\t\t\t}\n\t\t\t\t.account-info::after {\n\t\t\t\t\tcontent: '使用中';\n\t\t\t\t\tfont-size: 11px;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\tmargin-left: auto;\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\tbackground-color: var(--vscode-textBlockQuote-background);\n\t\t\t\t\tpadding: 2px 8px;\n\t\t\t\t\tborder-radius: 10px;\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t}\n\t\t\t\t.pool-tag {\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: -7px;\n\t\t\t\t\tright: 12px;\n\t\t\t\t\tfont-size: 10px;\n\t\t\t\t\tpadding: 1px 8px;\n\t\t\t\t\tborder-radius: 10px;\n\t\t\t\t\tbackground-color: var(--vscode-editor-background);\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t\tz-index: 1;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\topacity: 0.9;\n\t\t\t\t\tbox-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);\n\t\t\t\t\tletter-spacing: 0.5px;\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 4px;\n\t\t\t\t}\n\t\t\t\t/* 悬停效果已移除 */\n\t\t\t\t.pool-tag::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tdisplay: block;\n\t\t\t\t\twidth: 6px;\n\t\t\t\t\theight: 6px;\n\t\t\t\t\tborder-radius: 50%;\n\t\t\t\t\tbackground-color: currentColor;\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t}\n\t\t\t\t.pool-tag.yearly {\n\t\t\t\t\tbackground-color: rgba(255, 149, 0, 0.1);\n\t\t\t\t\tcolor: #ff9500;\n\t\t\t\t\tborder-color: rgba(255, 149, 0, 0.3);\n\t\t\t\t}\n\t\t\t\t.pool-tag.normal {\n\t\t\t\t\tbackground-color: rgba(0, 122, 255, 0.1);\n\t\t\t\t\tcolor: #007aff;\n\t\t\t\t\tborder-color: rgba(0, 122, 255, 0.3);\n\t\t\t\t}\n\t\t\t\t.app-header {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tjustify-content: space-between;\n\t\t\t\t\tmargin-bottom: 10px;\n\t\t\t\t\tpadding: 10px;\n\t\t\t\t\tbackground: linear-gradient(to right, var(--vscode-editor-background), var(--vscode-sideBar-background));\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tborder: 1px solid var(--vscode-widget-border);\n\t\t\t\t}\n\t\t\t\t.app-title {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 12px;\n\t\t\t\t}\n\t\t\t\t.app-logo {\n\t\t\t\t\tcolor: var(--vscode-textLink-activeForeground);\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t}\n\t\t\t\t.app-info {\n\t\t\t\t\tline-height: 1.4;\n\t\t\t\t}\n\t\t\t\t.app-name {\n\t\t\t\t\tfont-size: 15px;\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t\tletter-spacing: 0.3px;\n\t\t\t\t}\n\t\t\t\t.app-edition {\n\t\t\t\t\tfont-size: 11px;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\topacity: 0.9;\n\t\t\t\t}\n\t\t\t\t.app-version-tag {\n\t\t\t\t\tbackground-color: var(--vscode-badge-background);\n\t\t\t\t\tcolor: var(--vscode-badge-foreground);\n\t\t\t\t\tpadding: 2px 8px;\n\t\t\t\t\tborder-radius: 12px;\n\t\t\t\t\tfont-size: 11px;\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t\tletter-spacing: 0.4px;\n\t\t\t\t\twhite-space: nowrap;\n\t\t\t\t}\n\t\t\t\t.button:disabled {\n\t\t\t\t\topacity: 0.6;\n\t\t\t\t\tcursor: not-allowed;\n\t\t\t\t\tbackground-color: var(--vscode-disabledForeground);\n\t\t\t\t}\n\t\t\t\t.loading {\n\t\t\t\t\tposition: relative;\n\t\t\t\t\tpointer-events: none;\n\t\t\t\t}\n\t\t\t\t.loading::after {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\twidth: 16px;\n\t\t\t\t\theight: 16px;\n\t\t\t\t\ttop: 50%;\n\t\t\t\t\tright: 10px;\n\t\t\t\t\tmargin-top: -8px;\n\t\t\t\t\tborder: 2px solid rgba(255, 255, 255, 0.3);\n\t\t\t\t\tborder-radius: 50%;\n\t\t\t\t\tborder-top-color: #fff;\n\t\t\t\t\tanimation: spin 0.8s linear infinite;\n\t\t\t\t}\n\t\t\t\t@keyframes spin {\n\t\t\t\t\tto { transform: rotate(360deg); }\n\t\t\t\t}\n\t\t\t\t.icon-button {\n\t\t\t\t\tbackground: none;\n\t\t\t\t\tborder: none;\n\t\t\t\t\tpadding: 4px;\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tdisplay: inline-flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tjustify-content: center;\n\t\t\t\t\tmargin-left: 4px;\n\t\t\t\t\ttransition: background-color 0.2s;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 图标按钮悬停和激活效果已移除 */\n\t\t\t\t\n\t\t\t\t.icon-button svg {\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t}\n\t\t\t\t.disabled {\n\t\t\t\t\topacity: 0.6;\n\t\t\t\t\tcursor: not-allowed;\n\t\t\t\t}\n\t\t\t\t.hidden {\n\t\t\t\t\tdisplay: none !important;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 常见问题样式 */\n\t\t\t\t.faq-container {\n\t\t\t\t\tmargin-top: 6px;\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\tline-height: 1.5;\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t}\n\t\t\t\t.faq-content {\n\t\t\t\t\tbackground: var(--vscode-textBlockQuote-background);\n\t\t\t\t\tborder-radius: 6px;\n\t\t\t\t\tpadding: 10px 14px;\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t\tword-wrap: break-word;\n\t\t\t\t\toverflow-wrap: break-word;\n\t\t\t\t}\n\t\t\t\t.faq-content p {\n\t\t\t\t\tmargin: 8px 0;\n\t\t\t\t}\n\t\t\t\t.faq-content ul {\n\t\t\t\t\tmargin: 8px 0;\n\t\t\t\t\tpadding-left: 20px;\n\t\t\t\t}\n\t\t\t\t.faq-content li {\n\t\t\t\t\tmargin: 4px 0;\n\t\t\t\t}\n\t\t\t\t.faq-content img.emoji {\n\t\t\t\t\theight: 1.2em;\n\t\t\t\t\twidth: 1.2em;\n\t\t\t\t\tmargin: 0 .05em 0 .1em;\n\t\t\t\t\tvertical-align: -0.1em;\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t}\n\t\t\t\t.faq-placeholder {\n\t\t\t\t\tcolor: var(--vscode-disabledForeground);\n\t\t\t\t\ttext-align: center;\n\t\t\t\t\tpadding: 12px;\n\t\t\t\t\tfont-style: italic;\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t}\n\t\t\t\t.faq-content a {\n\t\t\t\t\tcolor: var(--vscode-textLink-foreground);\n\t\t\t\t\ttext-decoration: none;\n\t\t\t\t}\n\t\t\t\t/* FAQ链接悬停效果已移除 */\n\t\t\t\t.faq-content code {\n\t\t\t\t\tbackground: var(--vscode-textPreformat-background);\n\t\t\t\t\tpadding: 2px 4px;\n\t\t\t\t\tborder-radius: 3px;\n\t\t\t\t\tfont-family: var(--vscode-editor-font-family);\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t}\n\t\t\t\t.device-badge {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 8px;\n\t\t\t\t\tbackground: var(--vscode-editor-background);\n\t\t\t\t\tpadding: 4px 10px;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t}\n\n\t\t\t\t/* 设备徽章悬停效果已移除 */\n\n\t\t\t\t.device-icon {\n\t\t\t\t\twidth: 16px;\n\t\t\t\t\theight: 16px;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tjustify-content: center;\n\t\t\t\t}\n\n\t\t\t\t.device-svg {\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tfill: var(--vscode-descriptionForeground);\n\t\t\t\t\topacity: 0.8;\n\t\t\t\t}\n\n\t\t\t\t.device-info {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 4px;\n\t\t\t\t}\n\n\t\t\t\t.device-count {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: baseline;\n\t\t\t\t\tgap: 1px;\n\t\t\t\t\tfont-family: var(--vscode-font-family);\n\t\t\t\t}\n\n\t\t\t\t.current-count {\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t}\n\n\t\t\t\t.total-count {\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t}\n\n\t\t\t\t.device-progress {\n\t\t\t\t\twidth: 48px;\n\t\t\t\t\theight: 3px;\n\t\t\t\t\tbackground: var(--vscode-input-background);\n\t\t\t\t\tborder-radius: 2px;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t\tposition: relative;\n\t\t\t\t}\n\n\t\t\t\t.progress-bar {\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tbackground: linear-gradient(90deg, var(--vscode-symbolIcon-classForeground), var(--vscode-textLink-activeForeground));\n\t\t\t\t\tborder-radius: 2px;\n\t\t\t\t\ttransition: width 0.3s ease;\n\t\t\t\t}\n\n\t\t\t\t.progress-bar::after {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tbackground: linear-gradient(\n\t\t\t\t\t\t90deg,\n\t\t\t\t\t\ttransparent,\n\t\t\t\t\t\trgba(255, 255, 255, 0.2),\n\t\t\t\t\t\ttransparent\n\t\t\t\t\t);\n\t\t\t\t}\n\n\t\t\t\t/* 动画已移除 */\n\t\t\t\t.section-title .pool-tag {\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tpadding: 2px 6px;\n\t\t\t\t\tmargin-left: auto;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t}\n\t\t\t\t.section-title .pool-tag.yearly {\n\t\t\t\t\tbackground-color: rgba(255, 149, 0, 0.1);\n\t\t\t\t\tcolor: #ff9500;\n\t\t\t\t}\n\t\t\t\t.section-title .pool-tag.normal {\n\t\t\t\t\tbackground-color: rgba(0, 122, 255, 0.1);\n\t\t\t\t\tcolor: #007aff;\n\t\t\t\t}\n\t\t\t\t.section-title .pool-tag::before {\n\t\t\t\t\tcontent: \"\";\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t\twidth: 6px;\n\t\t\t\t\theight: 6px;\n\t\t\t\t\tborder-radius: 50%;\n\t\t\t\t\tmargin-right: 5px;\n\t\t\t\t}\n\t\t\t\t.section-title .pool-tag.yearly::before {\n\t\t\t\t\tbackground-color: #ff9500;\n\t\t\t\t}\n\t\t\t\t.section-title .pool-tag.normal::before {\n\t\t\t\t\tbackground-color: #007aff;\n\t\t\t\t}\n\t\t\t</style>\n\t\t</head>\n\t\t<body>\n\t\t\t<div class=\"container\">\n\t\t\t\t\n\t\t\t\t<div class=\"card " + (_0x45a0a9 === 0 ? "hidden" : "") + "\" id=\"auth-card\">\n\t\t\t\t\t<div class=\"section-title\">\n\t\t\t\t\t\t<svg viewBox=\"0 0 24 24\"><path d=\"M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 2.18l7 3.12v5.7c0 4.83-3.4 9.36-7 10.6-3.6-1.24-7-5.77-7-10.6V6.3l7-3.12z\"/></svg>\n\t\t\t\t\t\t软件授权\n\t\t\t\t\t\t<span class=\"auth-status " + (_0x3cc6f7 === "已授权" ? "authorized" : "unauthorized") + "\">" + _0x3cc6f7 + "</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"input-group\">\n\t\t\t\t\t\t<input type=\"text\" class=\"input-field\" id=\"cdkInput\" placeholder=\"请输入CDK激活码\" />\n\t\t\t\t\t\t<button class=\"button\" onclick=\"activateWithCDK()\">激活</button>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"info-row\">\n\t\t\t\t\t\t<span>激活码</span>\n\t\t\t\t\t\t<span class=\"activation-code\">\n\t\t\t\t\t\t\t<span class=\"info-text " + (_0x3cc6f7 === "已授权" ? "" : "placeholder") + "\" " + (_0x3cc6f7 === "已授权" ? "onclick=\"copyActivationCode()\"" : "") + ">\n\t\t\t\t\t\t\t\t" + (_0x196486 || "尚未激活") + "\n\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"info-row " + (_0x45a0a9 === 0 ? "hidden" : "") + "\">\n\t\t\t\t\t\t<span>设备绑定</span>\n\t\t\t\t\t\t<span class=\"device-binding\">\n\t\t\t\t\t\t\t<div class=\"device-badge\">\n\t\t\t\t\t\t\t\t<div class=\"device-icon\">\n\t\t\t\t\t\t\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" class=\"device-svg\">\n\t\t\t\t\t\t\t\t\t\t<path d=\"M20 3H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h3l-1 1v2h12v-2l-1-1h3c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 13H4V5h16v11z\"/>\n\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"device-info\">\n\t\t\t\t\t\t\t\t\t<div class=\"device-count\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"current-count\">" + (_0xba62b3 || "0") + "</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"total-count\">/2</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"unbind-link\" style=\"color:#0066ff;cursor:pointer;margin-left:8px;\" onclick=\"handleUnbindDevice()\">解绑</span>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"info-row\">\n\t\t\t\t\t\t<span>到期时间</span>\n\t\t\t\t\t\t<span class=\"expiration-time " + (_0x3cc6f7 === "已授权" ? "" : "placeholder") + "\">\n\t\t\t\t\t\t\t" + (_0x301c4f || "尚未激活") + "\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"section-title\">\n\t\t\t\t\t\t<svg viewBox=\"0 0 24 24\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z\"/></svg>\n\t\t\t\t\t\t账号数据\n\t\t\t\t\t\t<span class=\"pool-tag " + (_0x4cb700 && _0x196486.startsWith("YEAR-") ? "yearly" : "normal") + "\" style=\"position: static; transform: none; margin-left: auto;\">\n\t\t\t\t\t\t\t" + (_0x4cb700 && _0x196486.startsWith("YEAR-") ? "年卡号池" : "会员号池") + "\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"info-row\" style=\"margin-bottom: 10px;\">\n\t\t\t\t\t\t<span class=\"account-info " + (_0x3cc6f7 === "已授权" ? "" : "placeholder") + "\">\n\t\t\t\t\t\t\t" + (_0x8b28d8 || "还未分配到账号") + "\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"" + (_0x45a0a9 === 0 ? "hidden" : "") + "\" style=\"margin-bottom: 8px;\">\n\t\t\t\t\t\t<div class=\"max-card\">\n\t\t\t\t\t\t\t<div class=\"max-card-content\">\n\t\t\t\t\t\t\t\t<div class=\"max-info-section\">\n\t\t\t\t\t\t\t\t\t<div class=\"max-tagline\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"max-level\">Cursor Max</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"max-premium-badge\">PRO</span>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"max-action-section\">\n\t\t\t\t\t\t\t\t\t<div class=\"max-state " + (_0x9539f5 ? "on" : "off") + "\">\n\t\t\t\t\t\t\t\t\t\t" + (_0x9539f5 ? "关闭MAX" : "开启MAX") + "\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<label class=\"max-toggle\">\n\t\t\t\t\t\t\t\t\t\t<input type=\"checkbox\" id=\"maxToggle\" " + (_0x9539f5 ? "checked" : "") + ">\n\t\t\t\t\t\t\t\t\t\t<span class=\"max-track\">\n\t\t\t\t\t\t\t\t\t\t\t<span class=\"max-indicator\"></span>\n\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t</label>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<!-- 自动切号功能区 -->\n\t\t\t\t\t<div class=\"" + (_0x45a0a9 === 0 ? "hidden" : "") + "\" style=\"margin-bottom: 8px; margin-top: 8px;\">\n\t\t\t\t\t\t<div class=\"auto-switch-card\">\n\t\t\t\t\t\t\t<div class=\"auto-switch-content\">\n\t\t\t\t\t\t\t\t<div class=\"auto-switch-info-section\">\n\t\t\t\t\t\t\t\t\t<div class=\"auto-switch-tagline\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"auto-switch-level\">全自动换号</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"auto-switch-premium-badge\">高级</span>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"auto-switch-action-section\">\n\t\t\t\t\t\t\t\t\t<div class=\"auto-switch-state " + (_0xfb6d97 ? "on" : "off") + "\">\n\t\t\t\t\t\t\t\t\t\t" + (_0xfb6d97 ? "关闭功能" : "开启功能") + "\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<label class=\"auto-switch-toggle\">\n\t\t\t\t\t\t\t\t\t\t<input type=\"checkbox\" id=\"autoSwitchToggle\" " + (_0xfb6d97 ? "checked" : "") + ">\n\t\t\t\t\t\t\t\t\t\t<span class=\"auto-switch-track\">\n\t\t\t\t\t\t\t\t\t\t\t<span class=\"auto-switch-indicator\"></span>\n\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t</label>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div style=\"margin-top: 8px;\">\n\t\t\t\t\t\t<button class=\"button\" style=\"width: 100%;\" onclick=\"handleSwitchAccount()\">无感换号</button>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div style=\"margin-top: 5px;\">\n\t\t\t\t\t\t<button class=\"button secondary highlight\" style=\"width: 100%;\" onclick=\"handleResetConfig(this)\" id=\"resetButton\">重置插件</button>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div style=\"margin-top: 5px;\">\n\t\t\t\t\t\t<button class=\"button secondary danger\" style=\"width: 100%;\" onclick=\"handleRestoreConfig()\" id=\"restoreButton\">停用插件</button>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"version-row\">\n\t\t\t\t\t\t<svg class=\"version-icon\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\">\n\t\t\t\t\t\t\t<path fill=\"currentColor\" d=\"M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z\"/>\n\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t本地cursor版本: " + _0x1767e2 + "\n\t\t\t\t\t\t<div style=\"flex: 1\"></div>\n\t\t\t\t\t\t<div class=\"toggle-label\">\n\t\t\t\t\t\t\t禁用更新\n\t\t\t\t\t\t\t<label class=\"switch small\">\n\t\t\t\t\t\t\t\t<input type=\"checkbox\" " + (_0x321655 ? "checked" : "") + ">\n\t\t\t\t\t\t\t\t<span class=\"slider\"></span>\n\t\t\t\t\t\t\t</label>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<!-- 常见问题卡片 -->\n\t\t\t\t<div class=\"card\" id=\"faq-card\" " + (_0x416876 ? "" : "style=\"display: none;\"") + ">\n\t\t\t\t\t<div class=\"section-title\">\n\t\t\t\t\t\t<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\">\n\t\t\t\t\t\t\t<path fill=\"currentColor\" d=\"M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 9h-2V5h2v6zm0 4h-2v-2h2v2z\"/>\n\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t插件公告\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"faq-container\">\n\t\t\t\t\t\t" + (_0x25f5b1 ? "<div class=\"faq-content\">\n\t\t\t\t\t\t\t\t" + _0x25f5b1 + "\n\t\t\t\t\t\t\t</div>" : "<div class=\"faq-placeholder\">暂无常见问题</div>") + "\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<script>\n\t\t\t\tconst vscode = acquireVsCodeApi();\n\t\t\t\t\n\t\t\t\tfunction activateWithCDK() {\n\t\t\t\t\tconst cdkValue = document.getElementById('cdkInput').value;\n\t\t\t\t\t// 禁用激活按钮\n\t\t\t\t\tconst activateButton = document.querySelector('.input-group .button');\n\t\t\t\t\tif (activateButton) {\n\t\t\t\t\t\tactivateButton.disabled = true;\n\t\t\t\t\t\tactivateButton.classList.add('loading');\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\t// 直接发送激活命令，携带CDK值\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'activate',\n\t\t\t\t\t\tcdk: cdkValue\n\t\t\t\t\t});\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t// 初始化自动切号开关事件监听\n\t\t\t\tconst autoSwitchToggle = document.getElementById('autoSwitchToggle');\n\t\t\t\tif (autoSwitchToggle) {\n\t\t\t\t\tautoSwitchToggle.addEventListener('change', handleToggleAutoSwitch);\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t// 处理自动切号开关切换\n\t\t\t\tfunction handleToggleAutoSwitch(event) {\n\t\t\t\t\tconst isEnabled = event.target.checked;\n\t\t\t\t\t\n\t\t\t\t\t// 更新UI状态\n\t\t\t\t\tconst statusEl = document.querySelector('.auto-switch-state');\n\t\t\t\t\tif (statusEl) {\n\t\t\t\t\t\tstatusEl.textContent = isEnabled ? '关闭功能' : '开启功能';\n\t\t\t\t\t\tif (isEnabled) {\n\t\t\t\t\t\t\tstatusEl.classList.add('on');\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tstatusEl.classList.remove('on');\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\t// 发送切换命令\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'toggleAutoSwitch',\n\t\t\t\t\t\tenabled: isEnabled\n\t\t\t\t\t});\n\t\t\t\t}\n\n\t\t\t\tdocument.getElementById('cdkInput').addEventListener('keypress', function(e) {\n\t\t\t\t\tif (e.key === 'Enter') {\n\t\t\t\t\t\tactivateWithCDK();\n\t\t\t\t\t}\n\t\t\t\t});\n\n\t\t\t\t// 复制激活码\n\t\t\t\tfunction copyActivationCode() {\n\t\t\t\t\tconst code = '" + _0x196486 + "';\n\t\t\t\t\tnavigator.clipboard.writeText(code).then(() => {\n\t\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\t\tcommand: 'showInfo',\n\t\t\t\t\t\t\ttext: '激活码已复制到剪贴板',\n\t\t\t\t\t\t\ttimeout: 1500\n\t\t\t\t\t\t});\n\t\t\t\t\t});\n\t\t\t\t}\n\n\t\t\t\t// 刷新余额\n\t\t\t\tfunction handleRefreshBalance() {\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'refreshBalance'\n\t\t\t\t\t});\n\t\t\t\t}\n\n\t\t\t\t// 无感换号\n\t\t\t\tfunction handleSwitchAccount() {\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'switchAccount'\n\t\t\t\t\t});\n\t\t\t\t}\n\n\t\t\t\t// 重置配置\n\t\t\t\tfunction handleResetConfig(button) {\n\t\t\t\t\t// 只禁用按钮\n\t\t\t\t\tbutton.disabled = true;\n\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'resetConfig'\n\t\t\t\t\t});\n\t\t\t\t}\n\n\t\t\t\t// 重置按钮状态\n\t\t\t\tfunction resetButtonState() {\n\t\t\t\t\tconst button = document.getElementById('resetButton');\n\t\t\t\t\tif (button) {\n\t\t\t\t\t\tbutton.disabled = false;\n\t\t\t\t\t\tbutton.textContent = '重置插件';\n\t\t\t\t\t}\n\n\t\t\t\t\t// 恢复激活按钮状态\n\t\t\t\t\tconst activateButton = document.querySelector('.input-group .button');\n\t\t\t\t\tif (activateButton) {\n\t\t\t\t\t\tactivateButton.disabled = false;\n\t\t\t\t\t\tactivateButton.classList.remove('loading');\n\t\t\t\t\t}\n\n\t\t\t\t\t// 恢复停用按钮状态\n\t\t\t\t\tconst restoreButton = document.getElementById('restoreButton');\n\t\t\t\t\tif (restoreButton) {\n\t\t\t\t\t\trestoreButton.disabled = false;\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\t// 监听来自扩展的消息\n\t\t\t\twindow.addEventListener('message', event => {\n\t\t\t\t\tconst message = event.data;\n\t\t\t\t\tif (message.command === 'updateView') {\n\t\t\t\t\t\tresetButtonState();\n\t\t\t\t\t} else if (message.command === 'toggleUpdate') {\n\t\t\t\t\t\thandleToggleUpdate(message.enabled);\n\t\t\t\t\t} else if (message.command === 'updateMaxToggle') {\n\t\t\t\t\t\t// 处理MAX开关状态更新\n\t\t\t\t\t\tupdateMaxToggleState(message.enabled);\n\t\t\t\t\t} else if (message.command === 'updateAutoSwitchToggle') {\n\t\t\t\t\t\t// 处理自动切号开关状态更新\n\t\t\t\t\t\tupdateAutoSwitchToggleState(message.enabled);\n\t\t\t\t\t} else if (message.command === 'disableResetButton') {\n\t\t\t\t\t\tconst resetButton = document.getElementById('resetButton');\n\t\t\t\t\t\tif (resetButton) {\n\t\t\t\t\t\t\tresetButton.disabled = true;\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'updateOperationMode') {\n\t\t\t\t\t\t// 更新界面元素显示状态\n\t\t\t\t\t\tconst authCard = document.getElementById('auth-card');\n\t\t\t\t\t\tconst balanceContainer = document.querySelector('.balance-container').parentElement;\n\t\t\t\t\t\t\n\t\t\t\t\t\tif (message.mode === 0) { // 免费模式\n\t\t\t\t\t\t\tauthCard?.classList.add('hidden');\n\t\t\t\t\t\t\tbalanceContainer?.classList.add('hidden');\n\t\t\t\t\t\t} else { // 收费模式\n\t\t\t\t\t\t\tauthCard?.classList.remove('hidden');\n\t\t\t\t\t\t\tbalanceContainer?.classList.remove('hidden');\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'disableRestoreButton') {\n\t\t\t\t\t\tconst restoreButton = document.getElementById('restoreButton');\n\t\t\t\t\t\tif (restoreButton) {\n\t\t\t\t\t\t\trestoreButton.disabled = true;\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'disableRefreshButton') {\n\t\t\t\t\t\tconst refreshBtn = document.getElementById('refresh-balance-btn');\n\t\t\t\t\t\tif (refreshBtn) {\n\t\t\t\t\t\t\trefreshBtn.disabled = true;\n\t\t\t\t\t\t\trefreshBtn.classList.add('disabled');\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'enableRefreshButton') {\n\t\t\t\t\t\tconst enableBtn = document.getElementById('refresh-balance-btn');\n\t\t\t\t\t\tif (enableBtn) {\n\t\t\t\t\t\t\tenableBtn.disabled = false;\n\t\t\t\t\t\t\tenableBtn.classList.remove('disabled');\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'disableSwitchButton') {\n\t\t\t\t\t\tconst switchBtn = document.getElementById('switch-account-btn');\n\t\t\t\t\t\tif (switchBtn) {\n\t\t\t\t\t\t\tswitchBtn.disabled = true;\n\t\t\t\t\t\t\tswitchBtn.classList.add('disabled');\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'enableSwitchButton') {\n\t\t\t\t\t\tconst enableSwitchBtn = document.getElementById('switch-account-btn');\n\t\t\t\t\t\tif (enableSwitchBtn) {\n\t\t\t\t\t\t\tenableSwitchBtn.disabled = false;\n\t\t\t\t\t\t\tenableSwitchBtn.classList.remove('disabled');\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'unbindDevice') { // 处理解绑操作\n\t\t\t\t\t\tthis._handleUnbindDevice();\n\t\t\t\t\t}\n\t\t\t\t});\n\n\t\t\t\t// 处理更新开关\n\t\t\t\tasync function handleToggleUpdate(enabled) {\n\t\t\t\t\ttry {\n\t\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\t\tcommand: enabled ? 'disableUpdate' : 'enableUpdate'  // 反转逻辑\n\t\t\t\t\t\t});\n\t\t\t\t\t} catch (error) {\n\t\t\t\t\t\tconsole.error(error);\n\t\t\t\t\t\t// 操作失败时恢复开关状态\n\t\t\t\t\t\tdocument.querySelector('.switch.small input').checked = !enabled;\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\t// 初始化更新开关事件监听\n\t\t\t\tdocument.querySelector('.switch.small input').addEventListener('change', function(e) {\n\t\t\t\t\thandleToggleUpdate(this.checked);\n\t\t\t\t});\n\t\t\t\t\n\t\t\t\t// 初始化MAX开关事件监听\n\t\t\t\tconst maxToggle = document.getElementById('maxToggle');\n\t\t\t\tif (maxToggle) {\n\t\t\t\t\tmaxToggle.addEventListener('change', handleToggleMax);\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t// 用于更新MAX开关状态的函数\n\t\t\t\tfunction updateMaxToggleState(enabled) {\n\t\t\t\t\t// 更新开关的UI状态\n\t\t\t\t\tconst toggleEl = document.getElementById('maxToggle');\n\t\t\t\t\tif (toggleEl) {\n\t\t\t\t\t\ttoggleEl.checked = enabled;\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\t// 更新状态文本\n\t\t\t\t\tconst statusEl = document.querySelector('.max-state');\n\t\t\t\t\tif (statusEl) {\n\t\t\t\t\t\tstatusEl.textContent = enabled ? '关闭MAX' : '开启MAX';\n\t\t\t\t\t\tif (enabled) {\n\t\t\t\t\t\t\tstatusEl.classList.add('on');\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tstatusEl.classList.remove('on');\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t// 用于更新自动切号开关状态的函数\n\t\t\t\tfunction updateAutoSwitchToggleState(enabled) {\n\t\t\t\t\t// 更新开关的UI状态\n\t\t\t\t\tconst toggleEl = document.getElementById('autoSwitchToggle');\n\t\t\t\t\tif (toggleEl) {\n\t\t\t\t\t\ttoggleEl.checked = enabled;\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\t// 更新状态文本\n\t\t\t\t\tconst statusEl = document.querySelector('.auto-switch-state');\n\t\t\t\t\tif (statusEl) {\n\t\t\t\t\t\tstatusEl.textContent = enabled ? '关闭功能' : '开启功能';\n\t\t\t\t\t\tif (enabled) {\n\t\t\t\t\t\t\tstatusEl.classList.add('on');\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tstatusEl.classList.remove('on');\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\tfunction handleRestoreConfig() {\n\t\t\t\t\t// 禁用停用按钮\n\t\t\t\t\tconst restoreButton = document.getElementById('restoreButton');\n\t\t\t\t\tif (restoreButton) {\n\t\t\t\t\t\trestoreButton.disabled = true;\n\t\t\t\t\t}\n\n\t\t\t\t\t// 发送停用命令\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'restore'\n\t\t\t\t\t});\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t// 处理MAX开关切换\n\t\t\t\tfunction handleToggleMax(event) {\n\t\t\t\t\tconst isEnabled = event.target.checked;\n\t\t\t\t\t\n\t\t\t\t\t// 更新UI状态\n\t\t\t\t\tconst statusEl = document.querySelector('.max-premium-status');\n\t\t\t\t\tif (statusEl) {\n\t\t\t\t\t\tstatusEl.textContent = isEnabled ? '已激活' : '未激活';\n\t\t\t\t\t\tif (isEnabled) {\n\t\t\t\t\t\t\tstatusEl.classList.add('active');\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tstatusEl.classList.remove('active');\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\t// 发送切换命令\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'toggleMax',\n\t\t\t\t\t\tenabled: isEnabled\n\t\t\t\t\t});\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t// 解绑设备函数\n\t\t\t\tfunction handleUnbindDevice() {\n\t\t\t\t\t// 直接发送解绑消息，不使用confirm()\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'unbindDevice'\n\t\t\t\t\t});\n\t\t\t\t}\n\n\t\t\t</script>\n\t\t</body>\n\t\t</html>";
+    return "<!DOCTYPE html>\n\t\t<html>\n\t\t<head>\n\t\t\t<meta charset=\"UTF-8\">\n\t\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\t\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n\t\t\t<style>\n\t\t\t\tbody {\n\t\t\t\t\tfont-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Noto Sans\", \"Apple Color Emoji\", \"Segoe UI Emoji\", sans-serif;\n\t\t\t\t\tpadding: 12px;\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t\tbackground-color: var(--vscode-sideBar-background);\n\t\t\t\t}\n\t\t\t\t.container {\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\tmax-width: 400px;\n\t\t\t\t\tmargin: 0 auto;\n\t\t\t\t}\n\t\t\t\t.card {\n\t\t\t\t\tbackground-color: var(--vscode-editor-background);\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tpadding: 12px;\n\t\t\t\t\tmargin-bottom: 10px;\n\t\t\t\t\tbox-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n\t\t\t\t}\n\t\t\t\t.section-title {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t\tmargin-bottom: 10px;\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t\tpadding-bottom: 6px;\n\t\t\t\t\tborder-bottom: 1px solid var(--vscode-panel-border);\n\t\t\t\t}\n\t\t\t\t.section-title svg {\n\t\t\t\t\twidth: 16px;\n\t\t\t\t\theight: 16px;\n\t\t\t\t\tmargin-right: 6px;\n\t\t\t\t\tfill: var(--vscode-foreground);\n\t\t\t\t}\n\t\t\t\t.input-group {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t\tmargin-bottom: 12px;\n\t\t\t\t}\n\t\t\t\t.input-field {\n\t\t\t\t\tflex: 1;\n\t\t\t\t\tbackground-color: var(--vscode-input-background);\n\t\t\t\t\tcolor: var(--vscode-input-foreground);\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t\tpadding: 6px 12px;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\tmin-width: 0;\n\t\t\t\t\tbox-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);\n\t\t\t\t\tposition: relative;\n\t\t\t\t}\n\t\t\t\t/* 输入框悬停效果已移除 */\n\t\t\t\t.input-field:focus {\n\t\t\t\t\toutline: none;\n\t\t\t\t\tborder-color: var(--vscode-focusBorder);\n\t\t\t\t\tbox-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 0 2px var(--vscode-focusBorder);\n\t\t\t\t}\n\t\t\t\t/* 特别针对浅色主题的样式 */\n\t\t\t\tbody.vscode-light .input-field {\n\t\t\t\t\tbackground-color: #ffffff;\n\t\t\t\t\tborder: 1px solid #ddd;\n\t\t\t\t}\n\t\t\t\t/* 输入框浅色主题悬停效果已移除 */\n\t\t\t\tbody.vscode-light .input-field:focus {\n\t\t\t\t\tborder-color: #0066ff;\n\t\t\t\t\tbox-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 0 2px rgba(0, 102, 255, 0.2);\n\t\t\t\t}\n\t\t\t\t.button {\n\t\t\t\t\tbackground-color: #0066ff;\n\t\t\t\t\tcolor: white;\n\t\t\t\t\tborder: none;\n\t\t\t\t\tpadding: 5px 14px;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t\twhite-space: nowrap;\n\t\t\t\t}\n\t\t\t\t.button:hover {\n\t\t\t\t\tbackground-color: #0052cc;\n\t\t\t\t}\n\t\t\t\t/* 按钮悬停效果已移除 */\n\t\t\t\t.button.secondary {\n\t\t\t\t\tbackground-color: transparent;\n\t\t\t\t\tborder: 1px solid var(--vscode-button-border);\n\t\t\t\t\tcolor: var(--vscode-button-foreground);\n\t\t\t\t}\n\t\t\t\t.button.secondary:hover {\n\t\t\t\t\tbackground-color: var(--vscode-button-hoverBackground);\n\t\t\t\t}\n\t\t\t\t/* 按钮悬停效果已移除 */\n\t\t\t\t.button.secondary.highlight {\n\t\t\t\t\tbackground-color: #5e42bd;\n\t\t\t\t\tcolor: white;\n\t\t\t\t\tborder: 1px solid #4e35a8;\n\t\t\t\t}\n\t\t\t\t.button.secondary.highlight:hover {\n\t\t\t\t\tbackground-color: #4e35a8;\n\t\t\t\t}\n\t\t\t\t/* 高亮按钮悬停效果已移除 */\n\t\t\t\t.button.secondary.danger {\n\t\t\t\t\tbackground-color: #cc4444;\n\t\t\t\t\tcolor: white;\n\t\t\t\t\tborder: 1px solid #b53535;\n\t\t\t\t}\n\t\t\t\t.button.secondary.danger:hover {\n\t\t\t\t\tbackground-color: #b53535;\n\t\t\t\t}\n\t\t\t\t/* 危险按钮悬停效果已移除 */\n\t\t\t\t.info-row {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tjustify-content: space-between;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tmargin-bottom: 8px;\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t}\n\t\t\t\t/* 标签文字样式 */\n\t\t\t\t.info-row > span:first-child {\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t}\n\t\t\t\t.info-row:last-child {\n\t\t\t\t\tmargin-bottom: 0;\n\t\t\t\t}\n\t\t\t\t.status {\n\t\t\t\t\tcolor: #4caf50;\n\t\t\t\t}\n\t\t\t\t.activation-code {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 4px;\n\t\t\t\t}\n\t\t\t\t.activation-code .info-text {\n\t\t\t\t\tbackground-color: var(--vscode-editor-selectionBackground);\n\t\t\t\t\tcolor: var(--vscode-editor-foreground);\n\t\t\t\t\tborder: none;\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t}\n\t\t\t\t.expiration-time {\n\t\t\t\t\tcolor: var(--vscode-textLink-foreground);\n\t\t\t\t\topacity: 0.8;\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\ttransition: all 0.2s ease;\n\t\t\t\t}\n\t\t\t\t.expiration-time.placeholder {\n\t\t\t\t\tcolor: var(--vscode-disabledForeground);\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\tfont-style: italic;\n\t\t\t\t\tpadding-left: 4px;\n\t\t\t\t}\n\t\t\t\t.copy-icon {\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\tcolor: var(--vscode-icon-foreground);\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t}\n\t\t\t\t/* 悬停效果已移除 */\n\t\t\t\t.copy-icon svg {\n\t\t\t\t\tfill: currentColor;\n\t\t\t\t}\n\t\t\t\t/* CI积分余量紧凑设计样式 */\n\t\t\t\t.ci-compact-card {\n\t\t\t\t\tbackground: linear-gradient(135deg, \n\t\t\t\t\t\tvar(--vscode-editor-background) 0%, \n\t\t\t\t\t\trgba(99, 102, 241, 0.05) 100%);\n\t\t\t\t\tborder: 1px solid rgba(99, 102, 241, 0.2);\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tmargin: 8px 0;\n\t\t\t\t\tpadding: 8px 12px;\n\t\t\t\t\tbox-shadow: \n\t\t\t\t\t\t0 2px 6px rgba(0, 0, 0, 0.08),\n\t\t\t\t\t\tinset 0 1px 0 rgba(255, 255, 255, 0.1);\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t}\n\n\t\t\t\t.ci-compact-header {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t}\n\n\t\t\t\t.ci-compact-label {\n\t\t\t\t\tfont-size: 11px;\n\t\t\t\t\tfont-weight: 600;\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t\twhite-space: nowrap;\n\t\t\t\t\tflex-shrink: 0;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t}\n\t\t\t\t.ci-progress-track {\n\t\t\t\t\tflex: 1;\n\t\t\t\t\theight: 4px;\n\t\t\t\t\tbackground: linear-gradient(90deg, \n\t\t\t\t\t\trgba(99, 102, 241, 0.1), \n\t\t\t\t\t\trgba(139, 92, 246, 0.1));\n\t\t\t\t\tborder-radius: 2px;\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t\tbox-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);\n\t\t\t\t\tmargin: 0 6px;\n\t\t\t\t\tflex-shrink: 1;\n\t\t\t\t\talign-self: center;\n\t\t\t\t}\n\t\t\t\t.ci-progress-glow {\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tbackground: linear-gradient(90deg, \n\t\t\t\t\t\trgba(99, 102, 241, 0.3),\n\t\t\t\t\t\trgba(139, 92, 246, 0.3),\n\t\t\t\t\t\trgba(236, 72, 153, 0.3));\n\t\t\t\t\tborder-radius: 2px;\n\t\t\t\t\tfilter: blur(2px);\n\t\t\t\t\ttransition: width 0.5s ease;\n\t\t\t\t}\n\t\t\t\t.ci-progress-fill {\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tbackground: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);\n\t\t\t\t\tborder-radius: 2px;\n\t\t\t\t\ttransition: width 0.5s ease;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t}\n\t\t\t\t.ci-progress-shine {\n\t\t\t\t\t/* 移除持续动画，减少CPU占用 */\n\t\t\t\t\tdisplay: none;\n\t\t\t\t}\n\t\t\t\t.ci-value-display {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t}\n\t\t\t\t.ci-current-value {\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tfont-weight: 700;\n\t\t\t\t\tbackground: linear-gradient(135deg, #6366f1, #8b5cf6);\n\t\t\t\t\t-webkit-background-clip: text;\n\t\t\t\t\t-webkit-text-fill-color: transparent;\n\t\t\t\t\tbackground-clip: text;\n\t\t\t\t}\n\t\t\t\t.ci-compact-refresh-btn {\n\t\t\t\t\tbackground: linear-gradient(135deg, \n\t\t\t\t\t\trgba(99, 102, 241, 0.1), \n\t\t\t\t\t\trgba(139, 92, 246, 0.1));\n\t\t\t\t\tborder: 1px solid rgba(99, 102, 241, 0.3);\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tpadding: 3px;\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\ttransition: all 0.3s ease;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tjustify-content: center;\n\t\t\t\t\tflex-shrink: 0;\n\t\t\t\t\twidth: 18px;\n\t\t\t\t\theight: 18px;\n\t\t\t\t}\n\t\t\t\t.ci-compact-refresh-btn:hover {\n\t\t\t\t\tbackground: linear-gradient(135deg, \n\t\t\t\t\t\trgba(99, 102, 241, 0.2), \n\t\t\t\t\t\trgba(139, 92, 246, 0.2));\n\t\t\t\t\tborder-color: rgba(99, 102, 241, 0.5);\n\t\t\t\t\tbox-shadow: 0 2px 6px rgba(99, 102, 241, 0.2);\n\t\t\t\t\ttransform: translateY(-1px);\n\t\t\t\t}\n\t\t\t\t.ci-refresh-icon {\n\t\t\t\t\twidth: 10px;\n\t\t\t\t\theight: 10px;\n\t\t\t\t\tfill: var(--vscode-foreground);\n\t\t\t\t\topacity: 0.8;\n\t\t\t\t\tflex-shrink: 0;\n\t\t\t\t}\n\t\t\t\t/* 已移除shine动画，减少CPU占用 */\n\t\t\t\t@keyframes spin {\n\t\t\t\t\t0% { transform: rotate(0deg); }\n\t\t\t\t\t100% { transform: rotate(360deg); }\n\t\t\t\t}\n\n\t\t\t\t/* 账号信息紧凑卡片样式 */\n\t\t\t\t.account-compact-card {\n\t\t\t\t\tbackground: linear-gradient(135deg, \n\t\t\t\t\t\tvar(--vscode-editor-background) 0%, \n\t\t\t\t\t\trgba(76, 175, 80, 0.05) 100%);\n\t\t\t\t\tborder: 1px solid rgba(76, 175, 80, 0.2);\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tmargin: 8px 0;\n\t\t\t\t\tpadding: 8px 12px;\n\t\t\t\t\tbox-shadow: \n\t\t\t\t\t\t0 2px 6px rgba(0, 0, 0, 0.08),\n\t\t\t\t\t\tinset 0 1px 0 rgba(255, 255, 255, 0.1);\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t\ttransition: all 0.3s ease;\n\t\t\t\t}\n\n\t\t\t\t.account-compact-card.inactive {\n\t\t\t\t\tbackground: linear-gradient(135deg, \n\t\t\t\t\t\tvar(--vscode-editor-background) 0%, \n\t\t\t\t\t\trgba(156, 163, 175, 0.05) 100%);\n\t\t\t\t\tborder: 1px solid rgba(156, 163, 175, 0.2);\n\t\t\t\t}\n\n\t\t\t\t.account-compact-header {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 8px;\n\t\t\t\t}\n\n\t\t\t\t.account-compact-label {\n\t\t\t\t\tfont-size: 11px;\n\t\t\t\t\tfont-weight: 600;\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t\twhite-space: nowrap;\n\t\t\t\t\tflex-shrink: 0;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t}\n\n\t\t\t\t.account-status-indicator {\n\t\t\t\t\twidth: 8px;\n\t\t\t\t\theight: 8px;\n\t\t\t\t\tborder-radius: 50%;\n\t\t\t\t\tbackground: linear-gradient(135deg, #4caf50, #81e6d9);\n\t\t\t\t\tbox-shadow: 0 0 8px rgba(76, 175, 80, 0.3);\n\t\t\t\t\tflex-shrink: 0;\n\t\t\t\t\tposition: relative;\n\t\t\t\t}\n\n\t\t\t\t.account-status-indicator.inactive {\n\t\t\t\t\tbackground: linear-gradient(135deg, #9ca3af, #d1d5db);\n\t\t\t\t\tbox-shadow: 0 0 4px rgba(156, 163, 175, 0.2);\n\t\t\t\t}\n\n\t\t\t\t.account-status-indicator::after {\n\t\t\t\t\t/* 移除脉动动画，减少CPU占用 */\n\t\t\t\t\tdisplay: none;\n\t\t\t\t}\n\n\t\t\t\t.account-email-display {\n\t\t\t\t\tflex: 1;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 8px;\n\t\t\t\t\tmin-width: 0; /* 允许容器收缩 */\n\t\t\t\t}\n\n\t\t\t\t.account-email-text {\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tfont-weight: 600;\n\t\t\t\t\tbackground: linear-gradient(135deg, #4caf50, #81e6d9);\n\t\t\t\t\t-webkit-background-clip: text;\n\t\t\t\t\t-webkit-text-fill-color: transparent;\n\t\t\t\t\tbackground-clip: text;\n\t\t\t\t\twhite-space: nowrap;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t\ttext-overflow: ellipsis;\n\t\t\t\t\tflex: 1;\n\t\t\t\t\tmin-width: 0; /* 允许文本收缩 */\n\t\t\t\t\tmax-width: calc(100% - 60px); /* 为\"使用中\"标签预留空间 */\n\t\t\t\t}\n\n\t\t\t\t.account-email-text.placeholder {\n\t\t\t\t\tbackground: none;\n\t\t\t\t\t-webkit-background-clip: unset;\n\t\t\t\t\t-webkit-text-fill-color: unset;\n\t\t\t\t\tbackground-clip: unset;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\tfont-weight: 400;\n\t\t\t\t\tfont-style: italic;\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t}\n\n\t\t\t\t.account-status-tag {\n\t\t\t\t\tbackground: linear-gradient(135deg, \n\t\t\t\t\t\trgba(76, 175, 80, 0.1), \n\t\t\t\t\t\trgba(129, 230, 217, 0.1));\n\t\t\t\t\tborder: 1px solid rgba(76, 175, 80, 0.3);\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tpadding: 2px 8px;\n\t\t\t\t\tfont-size: 10px;\n\t\t\t\t\tfont-weight: 600;\n\t\t\t\t\tcolor: #4caf50;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 4px;\n\t\t\t\t\tflex-shrink: 0;\n\t\t\t\t}\n\n\t\t\t\t.account-status-tag::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\twidth: 4px;\n\t\t\t\t\theight: 4px;\n\t\t\t\t\tborder-radius: 50%;\n\t\t\t\t\tbackground: currentColor;\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t}\n\n\t\t\t\t/* 账号信息简洁显示 */\n\t\t\t\t.account-info-tag {\n\t\t\t\t\tfont-size: 11px;\n\t\t\t\t\tfont-weight: 400;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\twhite-space: nowrap;\n\t\t\t\t\tmax-width: 140px;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t\ttext-overflow: ellipsis;\n\t\t\t\t\tmargin-left: auto;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t}\n\n\t\t\t\t.account-info-tag.inactive {\n\t\t\t\t\topacity: 0.5;\n\t\t\t\t\tfont-style: italic;\n\t\t\t\t}\n\n\t\t\t\t.status-dot {\n\t\t\t\t\twidth: 4px;\n\t\t\t\t\theight: 4px;\n\t\t\t\t\tborder-radius: 50%;\n\t\t\t\t\tbackground-color: #4caf50;\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t\tmargin-right: 6px;\n\t\t\t\t\tflex-shrink: 0;\n\t\t\t\t}\n\n\n\n\n\t\t\t\t/* 刷新图标悬停效果已移除 */\n\t\t\t\t/* MAX卡片样式 - 高级设计 */\n\t\t\t\t.max-card {\n\t\t\t\t\tmargin: 3px 0;\n\t\t\t\t\tbackground: linear-gradient(135deg, rgba(123, 97, 255, 0.15), rgba(99, 102, 241, 0.2));\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t\tborder: 1px solid rgba(123, 97, 255, 0.3);\n\t\t\t\t\tbox-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 0 15px rgba(123, 97, 255, 0.1);\n\t\t\t\t}\n\t\t\t\t\n\n\t\t\t\t\n\t\t\t\t/* 悬停效果已移除 */\n\t\t\t\t\n\t\t\t\t/* 卡片内容 */\n\t\t\t\t.max-card-content {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tjustify-content: space-between;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tpadding: 8px 10px;\n\t\t\t\t\tbackground: rgba(255, 255, 255, 0.05);\n\t\t\t\t\tbackdrop-filter: blur(3px);\n\t\t\t\t\tposition: relative;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-card-content::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\theight: 1px;\n\t\t\t\t\tbackground: linear-gradient(90deg, \n\t\t\t\t\t\ttransparent, \n\t\t\t\t\t\trgba(123, 97, 255, 0.2), \n\t\t\t\t\t\trgba(99, 102, 241, 0.3), \n\t\t\t\t\t\trgba(123, 97, 255, 0.2), \n\t\t\t\t\t\ttransparent\n\t\t\t\t\t);\n\t\t\t\t}\n\t\t\t\t\n\n\t\t\t\t\n\t\t\t\t/* 信息区域 */\n\t\t\t\t.max-info-section {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-tagline {\n\t\t\t\t\tfont-size: 11px;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\topacity: 0.95;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 增强Cursor Max标签的样式 */\n\t\t\t\t\n\t\t\t\t/* PRO标签 */\n\t\t\t\t.max-level {\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tfont-weight: 700;\n\t\t\t\t\tbackground: linear-gradient(135deg, #7b61ff, #6366f1);\n\t\t\t\t\tcolor: white;\n\t\t\t\t\tpadding: 3px 10px;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tletter-spacing: 0.4px;\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t\tvertical-align: middle;\n\t\t\t\t\tbox-shadow: 0 1px 3px rgba(99, 102, 241, 0.3);\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t}\n\t\t\t\t\n\n\t\t\t\t\n\t\t\t\t.max-level::after {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: -100%;\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tbackground: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 动画已移除 */\n\t\t\t\t\n\t\t\t\t/* PRO小标签 */\n\t\t\t\t.max-premium-badge {\n\t\t\t\t\tfont-size: 9px;\n\t\t\t\t\tfont-weight: 600;\n\t\t\t\t\tcolor: #a395ff;\n\t\t\t\t\tbackground-color: rgba(123, 97, 255, 0.1);\n\t\t\t\t\tpadding: 2px 6px;\n\t\t\t\t\tborder-radius: 3px;\n\t\t\t\t\tborder: 1px solid rgba(123, 97, 255, 0.2);\n\t\t\t\t\tmargin-left: 8px;\n\t\t\t\t}\n\t\t\t\t\n\n\t\t\t\t\n\t\t\t\t/* 操作区域 */\n\t\t\t\t.max-action-section {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-state {\n\t\t\t\t\tfont-size: 9px;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\tmin-width: 24px;\n\t\t\t\t\ttext-align: right;\n\t\t\t\t\ttransition: all 0.3s ease;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-state.on {\n\t\t\t\t\tcolor: #7b61ff;\n\t\t\t\t\topacity: 1;\n\t\t\t\t\ttext-shadow: 0 0 5px rgba(123, 97, 255, 0.3);\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t}\n\t\t\t\t\n\n\t\t\t\t\n\t\t\t\t/* 开关样式 - 新设计 */\n\t\t\t\t.max-toggle {\n\t\t\t\t\tposition: relative;\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t\twidth: 32px;\n\t\t\t\t\theight: 18px;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-toggle input {\n\t\t\t\t\topacity: 0;\n\t\t\t\t\twidth: 0;\n\t\t\t\t\theight: 0;\n\t\t\t\t\tmargin: 0;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-track {\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\tright: 0;\n\t\t\t\t\tbottom: 0;\n\t\t\t\t\tbackground-color: rgba(0, 0, 0, 0.1);\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\ttransition: all 0.3s ease;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-track::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\tright: 0;\n\t\t\t\t\tbottom: 0;\n\t\t\t\t\tbackground: linear-gradient(90deg, #7b61ff, #6366f1);\n\t\t\t\t\topacity: 0;\n\t\t\t\t\ttransition: opacity 0.3s ease;\n\t\t\t\t}\n\t\t\t\t\n\n\t\t\t\t\n\t\t\t\t.max-indicator {\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\theight: 14px;\n\t\t\t\t\twidth: 14px;\n\t\t\t\t\tleft: 2px;\n\t\t\t\t\ttop: 2px;\n\t\t\t\t\tbackground-color: #fff;\n\t\t\t\t\tborder-radius: 3px;\n\t\t\t\t\ttransition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);\n\t\t\t\t\tbox-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);\n\t\t\t\t\tz-index: 1;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\tinput:checked + .max-track::before {\n\t\t\t\t\topacity: 1;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\tinput:checked + .max-track .max-indicator {\n\t\t\t\t\ttransform: translateX(14px);\n\t\t\t\t\tbackground-color: white;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-toggle:hover .max-track {\n\t\t\t\t\topacity: 0.95;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t.max-toggle:active .max-indicator {\n\t\t\t\t\ttransform: scale(0.9);\n\t\t\t\t}\n\t\t\t\t.switch {\n\t\t\t\t\tposition: relative;\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t\twidth: 40px;\n\t\t\t\t\theight: 20px;\n\t\t\t\t}\n\t\t\t\t.switch input {\n\t\t\t\t\topacity: 0;\n\t\t\t\t\twidth: 0;\n\t\t\t\t\theight: 0;\n\t\t\t\t}\n\t\t\t\t.slider {\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\tright: 0;\n\t\t\t\t\tbottom: 0;\n\t\t\t\t\tbackground-color: var(--vscode-input-background);\n\t\t\t\t\ttransition: .4s;\n\t\t\t\t\tborder-radius: 20px;\n\t\t\t\t}\n\t\t\t\t.slider:before {\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\tcontent: \"\";\n\t\t\t\t\theight: 16px;\n\t\t\t\t\twidth: 16px;\n\t\t\t\t\tleft: 2px;\n\t\t\t\t\tbottom: 2px;\n\t\t\t\t\tbackground-color: white;\n\t\t\t\t\ttransition: .4s;\n\t\t\t\t\tborder-radius: 50%;\n\t\t\t\t}\n\t\t\t\tinput:checked + .slider {\n\t\t\t\t\tbackground-color: #0066ff;\n\t\t\t\t}\n\t\t\t\tinput:checked + .slider:before {\n\t\t\t\t\ttransform: translateX(20px);\n\t\t\t\t}\n\t\t\t\t.info-text {\n\t\t\t\t\tbackground-color: var(--vscode-textBlockQuote-background);\n\t\t\t\t\tpadding: 4px 10px;\n\t\t\t\t\tborder-radius: 6px;\n\t\t\t\t\tcolor: var(--vscode-textBlockQuote-foreground);\n\t\t\t\t\tfont-family: var(--vscode-editor-font-family);\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t\topacity: 0.85;\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t}\n\t\t\t\t.info-text.placeholder {\n\t\t\t\t\tbackground-color: transparent;\n\t\t\t\t\tcolor: var(--vscode-disabledForeground);\n\t\t\t\t\tcursor: default;\n\t\t\t\t\tborder: 1px dashed rgba(128, 128, 128, 0.3);\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\tfont-style: italic;\n\t\t\t\t}\n\t\t\t\t/* 占位符悬停效果已移除 */\n\t\t\t\t.expiration-time {\n\t\t\t\t\tcolor: var(--vscode-textLink-foreground);\n\t\t\t\t\topacity: 0.8;\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\ttransition: all 0.2s ease;\n\t\t\t\t}\n\t\t\t\t.expiration-time.placeholder {\n\t\t\t\t\tcolor: var(--vscode-disabledForeground);\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\tfont-style: italic;\n\t\t\t\t\tpadding-left: 4px;\n\t\t\t\t}\n\t\t\t\t.account-info {\n\t\t\t\t\tbackground: var(--vscode-textBlockQuote-background);\n\t\t\t\t\tcolor: var(--vscode-editor-foreground);\n\t\t\t\t\tpadding: 8px 16px;\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\topacity: 0.85;\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 10px;\n\t\t\t\t\tbox-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);\n\t\t\t\t\tfont-family: var(--vscode-editor-font-family);\n\t\t\t\t\tletter-spacing: 0.4px;\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\tbox-sizing: border-box;\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t\ttransition: all 0.2s ease;\n\t\t\t\t}\n\t\t\t\t.account-info.placeholder {\n\t\t\t\t\tbackground: transparent;\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\tborder: 1px dashed rgba(128, 128, 128, 0.3);\n\t\t\t\t\tpadding: 8px 16px;\n\t\t\t\t\tcolor: var(--vscode-disabledForeground);\n\t\t\t\t\tfont-style: italic;\n\t\t\t\t\tposition: relative;\n\t\t\t\t}\n\t\t\t\t.account-info.placeholder:hover {\n\t\t\t\t\tborder-color: rgba(128, 128, 128, 0.4);\n\t\t\t\t}\n\t\t\t\t.account-info.placeholder::before {\n\t\t\t\t\tdisplay: none;\n\t\t\t\t}\n\t\t\t\t.account-info.placeholder::after {\n\t\t\t\t\tcontent: '未使用';\n\t\t\t\t\tfont-size: 11px;\n\t\t\t\t\tcolor: var(--vscode-disabledForeground);\n\t\t\t\t\tmargin-left: auto;\n\t\t\t\t\topacity: 0.8;\n\t\t\t\t\tbackground: none;\n\t\t\t\t\tborder: none;\n\t\t\t\t\tfont-style: normal;\n\t\t\t\t}\n\t\t\t\t.account-info.placeholder .pool-tag {\n\t\t\t\t\tdisplay: none;\n\t\t\t\t}\n\t\t\t\t.version-row {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 8px;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t}\n\t\t\t\t.version-icon {\n\t\t\t\t\tcolor: var(--vscode-symbolIcon-numberForeground);\n\t\t\t\t\topacity: 0.8;\n\t\t\t\t}\n\t\t\t\t.auth-status {\n\t\t\t\t\tmargin-left: auto;\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tpadding: 2px 8px;\n\t\t\t\t\tborder-radius: 10px;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 4px;\n\t\t\t\t}\n\t\t\t\t.auth-status.authorized {\n\t\t\t\t\tcolor: #4caf50;\n\t\t\t\t\tbackground-color: rgba(76, 175, 80, 0.1);\n\t\t\t\t}\n\t\t\t\t.auth-status.unauthorized {\n\t\t\t\t\tcolor: #f44336;\n\t\t\t\t\tbackground-color: rgba(244, 67, 54, 0.1);\n\t\t\t\t}\n\t\t\t\t.auth-status::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t\twidth: 6px;\n\t\t\t\t\theight: 6px;\n\t\t\t\t\tborder-radius: 50%;\n\t\t\t\t\tbox-shadow: 0 0 4px rgba(76, 175, 80, 0.4);\n\t\t\t\t\topacity: 0.9;\n\t\t\t\t}\n\t\t\t\t.auth-status.authorized::before {\n\t\t\t\t\tbackground-color: #4caf50;\n\t\t\t\t\tbox-shadow: 0 0 4px rgba(76, 175, 80, 0.4);\n\t\t\t\t}\n\t\t\t\t.auth-status.unauthorized::before {\n\t\t\t\t\tbackground-color: #f44336;\n\t\t\t\t\tbox-shadow: 0 0 4px rgba(244, 67, 54, 0.4);\n\t\t\t\t}\n\t\t\t\t.toggle-label {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 8px;\n\t\t\t\t}\n\t\t\t\t.switch.small {\n\t\t\t\t\twidth: 32px;\n\t\t\t\t\theight: 16px;\n\t\t\t\t}\n\t\t\t\t.switch.small .slider:before {\n\t\t\t\t\theight: 12px;\n\t\t\t\t\twidth: 12px;\n\t\t\t\t\tleft: 2px;\n\t\t\t\t\tbottom: 2px;\n\t\t\t\t}\n\t\t\t\t.switch.small input:checked + .slider:before {\n\t\t\t\t\ttransform: translateX(16px);\n\t\t\t\t}\n\t\t\t\t.account-info {\n\t\t\t\t\tbackground: var(--vscode-textBlockQuote-background);\n\t\t\t\t\tcolor: var(--vscode-editor-foreground);\n\t\t\t\t\tpadding: 8px 16px;\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\topacity: 0.85;\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 10px;\n\t\t\t\t\tbox-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);\n\t\t\t\t\tfont-family: var(--vscode-editor-font-family);\n\t\t\t\t\tletter-spacing: 0.4px;\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\tbox-sizing: border-box;\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t\ttransition: all 0.2s ease;\n\t\t\t\t}\n\t\t\t\t.account-info::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tdisplay: block;\n\t\t\t\t\twidth: 8px;\n\t\t\t\t\theight: 8px;\n\t\t\t\t\tbackground-color: #4caf50;\n\t\t\t\t\tborder-radius: 50%;\n\t\t\t\t\tbox-shadow: 0 0 6px rgba(76, 175, 80, 0.4);\n\t\t\t\t\topacity: 0.9;\n\t\t\t\t}\n\t\t\t\t.account-info::after {\n\t\t\t\t\tcontent: '使用中';\n\t\t\t\t\tfont-size: 11px;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\tmargin-left: auto;\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\tbackground-color: var(--vscode-textBlockQuote-background);\n\t\t\t\t\tpadding: 2px 8px;\n\t\t\t\t\tborder-radius: 10px;\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t}\n\t\t\t\t.pool-tag {\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: -7px;\n\t\t\t\t\tright: 12px;\n\t\t\t\t\tfont-size: 10px;\n\t\t\t\t\tpadding: 1px 8px;\n\t\t\t\t\tborder-radius: 10px;\n\t\t\t\t\tbackground-color: var(--vscode-editor-background);\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t\tz-index: 1;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\topacity: 0.9;\n\t\t\t\t\tbox-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);\n\t\t\t\t\tletter-spacing: 0.5px;\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 4px;\n\t\t\t\t}\n\t\t\t\t/* 悬停效果已移除 */\n\t\t\t\t.pool-tag::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tdisplay: block;\n\t\t\t\t\twidth: 6px;\n\t\t\t\t\theight: 6px;\n\t\t\t\t\tborder-radius: 50%;\n\t\t\t\t\tbackground-color: currentColor;\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t}\n\t\t\t\t.pool-tag.yearly {\n\t\t\t\t\tbackground-color: rgba(255, 149, 0, 0.1);\n\t\t\t\t\tcolor: #ff9500;\n\t\t\t\t\tborder-color: rgba(255, 149, 0, 0.3);\n\t\t\t\t}\n\t\t\t\t.pool-tag.normal {\n\t\t\t\t\tbackground-color: rgba(0, 122, 255, 0.1);\n\t\t\t\t\tcolor: #007aff;\n\t\t\t\t\tborder-color: rgba(0, 122, 255, 0.3);\n\t\t\t\t}\n\t\t\t\t.app-header {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tjustify-content: space-between;\n\t\t\t\t\tmargin-bottom: 10px;\n\t\t\t\t\tpadding: 10px;\n\t\t\t\t\tbackground: linear-gradient(to right, var(--vscode-editor-background), var(--vscode-sideBar-background));\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tborder: 1px solid var(--vscode-widget-border);\n\t\t\t\t}\n\t\t\t\t.app-title {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 12px;\n\t\t\t\t}\n\t\t\t\t.app-logo {\n\t\t\t\t\tcolor: var(--vscode-textLink-activeForeground);\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t}\n\t\t\t\t.app-info {\n\t\t\t\t\tline-height: 1.4;\n\t\t\t\t}\n\t\t\t\t.app-name {\n\t\t\t\t\tfont-size: 15px;\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t\tletter-spacing: 0.3px;\n\t\t\t\t}\n\t\t\t\t.app-edition {\n\t\t\t\t\tfont-size: 11px;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\topacity: 0.9;\n\t\t\t\t}\n\t\t\t\t.app-version-tag {\n\t\t\t\t\tbackground-color: var(--vscode-badge-background);\n\t\t\t\t\tcolor: var(--vscode-badge-foreground);\n\t\t\t\t\tpadding: 2px 8px;\n\t\t\t\t\tborder-radius: 12px;\n\t\t\t\t\tfont-size: 11px;\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t\tletter-spacing: 0.4px;\n\t\t\t\t\twhite-space: nowrap;\n\t\t\t\t}\n\t\t\t\t.button:disabled {\n\t\t\t\t\topacity: 0.6;\n\t\t\t\t\tcursor: not-allowed;\n\t\t\t\t\tbackground-color: var(--vscode-disabledForeground);\n\t\t\t\t}\n\t\t\t\t.loading {\n\t\t\t\t\tposition: relative;\n\t\t\t\t\tpointer-events: none;\n\t\t\t\t}\n\t\t\t\t.loading::after {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\twidth: 16px;\n\t\t\t\t\theight: 16px;\n\t\t\t\t\ttop: 50%;\n\t\t\t\t\tright: 10px;\n\t\t\t\t\tmargin-top: -8px;\n\t\t\t\t\tborder: 2px solid rgba(255, 255, 255, 0.3);\n\t\t\t\t\tborder-radius: 50%;\n\t\t\t\t\tborder-top-color: #fff;\n\t\t\t\t\tanimation: spin 0.8s linear infinite;\n\t\t\t\t}\n\t\t\t\t@keyframes spin {\n\t\t\t\t\tto { transform: rotate(360deg); }\n\t\t\t\t}\n\t\t\t\t.icon-button {\n\t\t\t\t\tbackground: none;\n\t\t\t\t\tborder: none;\n\t\t\t\t\tpadding: 4px;\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tdisplay: inline-flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tjustify-content: center;\n\t\t\t\t\tmargin-left: 4px;\n\t\t\t\t\ttransition: background-color 0.2s;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 图标按钮悬停和激活效果已移除 */\n\t\t\t\t\n\t\t\t\t.icon-button svg {\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t}\n\t\t\t\t.disabled {\n\t\t\t\t\topacity: 0.6;\n\t\t\t\t\tcursor: not-allowed;\n\t\t\t\t}\n\t\t\t\t.hidden {\n\t\t\t\t\tdisplay: none !important;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 常见问题样式 */\n\t\t\t\t.faq-container {\n\t\t\t\t\tmargin-top: 6px;\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\tline-height: 1.5;\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t}\n\t\t\t\t.faq-content {\n\t\t\t\t\tbackground: var(--vscode-textBlockQuote-background);\n\t\t\t\t\tborder-radius: 6px;\n\t\t\t\t\tpadding: 10px 14px;\n\t\t\t\t\tborder: 1px solid var(--vscode-input-border);\n\t\t\t\t\tword-wrap: break-word;\n\t\t\t\t\toverflow-wrap: break-word;\n\t\t\t\t}\n\t\t\t\t.faq-content p {\n\t\t\t\t\tmargin: 8px 0;\n\t\t\t\t}\n\t\t\t\t.faq-content ul {\n\t\t\t\t\tmargin: 8px 0;\n\t\t\t\t\tpadding-left: 20px;\n\t\t\t\t}\n\t\t\t\t.faq-content li {\n\t\t\t\t\tmargin: 4px 0;\n\t\t\t\t}\n\t\t\t\t.faq-content img.emoji {\n\t\t\t\t\theight: 1.2em;\n\t\t\t\t\twidth: 1.2em;\n\t\t\t\t\tmargin: 0 .05em 0 .1em;\n\t\t\t\t\tvertical-align: -0.1em;\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t}\n\t\t\t\t.faq-placeholder {\n\t\t\t\t\tcolor: var(--vscode-disabledForeground);\n\t\t\t\t\ttext-align: center;\n\t\t\t\t\tpadding: 12px;\n\t\t\t\t\tfont-style: italic;\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t}\n\t\t\t\t.faq-content a {\n\t\t\t\t\tcolor: var(--vscode-textLink-foreground);\n\t\t\t\t\ttext-decoration: none;\n\t\t\t\t}\n\t\t\t\t/* FAQ链接悬停效果已移除 */\n\t\t\t\t.faq-content code {\n\t\t\t\t\tbackground: var(--vscode-textPreformat-background);\n\t\t\t\t\tpadding: 2px 4px;\n\t\t\t\t\tborder-radius: 3px;\n\t\t\t\t\tfont-family: var(--vscode-editor-font-family);\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t}\n\t\t\t\t/* 简洁设备绑定显示 */\n\t\t\t\t.device-simple {\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tcolor: var(--vscode-descriptionForeground);\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 10px;\n\t\t\t\t\topacity: 0.8;\n\t\t\t\t}\n\n\t\t\t\t.device-unbind {\n\t\t\t\t\tfont-size: 11px;\n\t\t\t\t\tcolor: var(--vscode-textLink-foreground);\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\topacity: 0.6;\n\t\t\t\t\ttext-decoration: none;\n\t\t\t\t\ttransition: opacity 0.2s ease;\n\t\t\t\t}\n\n\t\t\t\t.device-unbind:hover {\n\t\t\t\t\topacity: 1;\n\t\t\t\t}\n\n\t\t\t\t/* 动画已移除 */\n\t\t\t\t.section-title .pool-tag {\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tpadding: 2px 6px;\n\t\t\t\t\tmargin-left: auto;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t}\n\t\t\t\t.section-title .pool-tag.yearly {\n\t\t\t\t\tbackground-color: rgba(255, 149, 0, 0.1);\n\t\t\t\t\tcolor: #ff9500;\n\t\t\t\t}\n\t\t\t\t.section-title .pool-tag.normal {\n\t\t\t\t\tbackground-color: rgba(0, 122, 255, 0.1);\n\t\t\t\t\tcolor: #007aff;\n\t\t\t\t}\n\t\t\t\t.section-title .pool-tag::before {\n\t\t\t\t\tcontent: \"\";\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t\twidth: 6px;\n\t\t\t\t\theight: 6px;\n\t\t\t\t\tborder-radius: 50%;\n\t\t\t\t\tmargin-right: 5px;\n\t\t\t\t}\n\t\t\t\t.section-title .pool-tag.yearly::before {\n\t\t\t\t\tbackground-color: #ff9500;\n\t\t\t\t}\n\t\t\t\t.section-title .pool-tag.normal::before {\n\t\t\t\t\tbackground-color: #007aff;\n\t\t\t\t}\n\n\t\t\t\t/* 自定义确认模态框样式 */\n\t\t\t\t.confirm-modal {\n\t\t\t\t\tdisplay: none;\n\t\t\t\t\tposition: fixed;\n\t\t\t\t\tz-index: 2000;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\toverflow: auto;\n\t\t\t\t\tbackground-color: rgba(0,0,0,0.6);\n\t\t\t\t\tbackdrop-filter: blur(2px);\n\t\t\t\t}\n\n\t\t\t\t.confirm-modal-content {\n\t\t\t\t\tbackground-color: var(--vscode-editor-background);\n\t\t\t\t\tmargin: 8% auto;\n\t\t\t\t\tpadding: 0;\n\t\t\t\t\tborder: 2px solid var(--vscode-widget-border);\n\t\t\t\t\tborder-radius: 12px;\n\t\t\t\t\twidth: 85%;\n\t\t\t\t\tmax-width: 450px;\n\t\t\t\t\tmax-height: 80vh;\n\t\t\t\t\tbox-shadow: 0 8px 32px rgba(0,0,0,0.4);\n\t\t\t\t\tanimation: modalSlideIn 0.3s ease-out;\n\t\t\t\t}\n\n\t\t\t\t@keyframes modalSlideIn {\n\t\t\t\t\tfrom {\n\t\t\t\t\t\topacity: 0;\n\t\t\t\t\t\ttransform: translateY(-30px) scale(0.95);\n\t\t\t\t\t}\n\t\t\t\t\tto {\n\t\t\t\t\t\topacity: 1;\n\t\t\t\t\t\ttransform: translateY(0) scale(1);\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t/* 移动端响应式模态框 */\n\t\t\t\t@media (max-width: 450px) {\n\t\t\t\t\t.confirm-modal-content {\n\t\t\t\t\t\twidth: 95%;\n\t\t\t\t\t\tmargin: 5% auto;\n\t\t\t\t\t\tmax-width: unset;\n\t\t\t\t\t\tmax-height: 95vh;\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\t.confirm-modal-body {\n\t\t\t\t\t\tpadding: 12px 16px;\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\t.confirm-modal-header {\n\t\t\t\t\t\tpadding: 12px 16px;\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\t.confirm-modal-footer {\n\t\t\t\t\t\tpadding: 12px 16px;\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\t.confirm-modal-header {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 12px;\n\t\t\t\t\tpadding: 20px 24px 16px 24px;\n\t\t\t\t\tborder-bottom: 1px solid var(--vscode-panel-border);\n\t\t\t\t\tbackground: linear-gradient(135deg, var(--vscode-sideBar-background), var(--vscode-editor-background));\n\t\t\t\t\tborder-radius: 12px 12px 0 0;\n\t\t\t\t}\n\n\t\t\t\t.confirm-modal-icon {\n\t\t\t\t\twidth: 24px;\n\t\t\t\t\theight: 24px;\n\t\t\t\t\tcolor: #ff9500;\n\t\t\t\t\tflex-shrink: 0;\n\t\t\t\t}\n\n\t\t\t\t.confirm-modal-title {\n\t\t\t\t\tmargin: 0;\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t\tfont-size: 16px;\n\t\t\t\t\tfont-weight: 600;\n\t\t\t\t\tletter-spacing: 0.3px;\n\t\t\t\t}\n\n\t\t\t\t.confirm-modal-close {\n\t\t\t\t\tmargin-left: auto;\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t\tfont-size: 20px;\n\t\t\t\t\tfont-weight: bold;\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\topacity: 0.6;\n\t\t\t\t\ttransition: opacity 0.2s;\n\t\t\t\t\tpadding: 4px;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t}\n\n\t\t\t\t.confirm-modal-close:hover {\n\t\t\t\t\topacity: 1;\n\t\t\t\t\tbackground-color: var(--vscode-list-hoverBackground);\n\t\t\t\t}\n\n\t\t\t\t.confirm-modal-body {\n\t\t\t\t\tpadding: 16px 20px;\n\t\t\t\t\tline-height: 1.4;\n\t\t\t\t}\n\n\t\t\t\t.confirm-warning-text {\n\t\t\t\t\tfont-size: 14px;\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t\tmargin-bottom: 16px;\n\t\t\t\t}\n\n\t\t\t\t.confirm-modal-footer {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tjustify-content: flex-end;\n\t\t\t\t\tgap: 10px;\n\t\t\t\t\tpadding: 12px 20px 16px 20px;\n\t\t\t\t\tborder-top: 1px solid var(--vscode-panel-border);\n\t\t\t\t\tbackground-color: var(--vscode-sideBar-background);\n\t\t\t\t\tborder-radius: 0 0 12px 12px;\n\t\t\t\t}\n\n\t\t\t\t.confirm-btn {\n\t\t\t\t\tpadding: 8px 16px;\n\t\t\t\t\tborder: none;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tfont-weight: 600;\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\ttransition: all 0.2s ease;\n\t\t\t\t\tmin-width: 70px;\n\t\t\t\t}\n\n\t\t\t\t.confirm-btn-cancel {\n\t\t\t\t\tbackground-color: var(--vscode-button-secondaryBackground);\n\t\t\t\t\tcolor: var(--vscode-button-secondaryForeground);\n\t\t\t\t\tborder: 1px solid var(--vscode-button-border);\n\t\t\t\t}\n\n\t\t\t\t.confirm-btn-cancel:hover {\n\t\t\t\t\tbackground-color: var(--vscode-button-secondaryHoverBackground);\n\t\t\t\t\ttransform: translateY(-1px);\n\t\t\t\t}\n\n\t\t\t\t.confirm-btn-confirm {\n\t\t\t\t\tbackground: linear-gradient(135deg, #007aff, #0056cc);\n\t\t\t\t\tcolor: white;\n\t\t\t\t\tbox-shadow: 0 2px 8px rgba(0, 122, 255, 0.3);\n\t\t\t\t}\n\n\t\t\t\t.confirm-btn-confirm:hover {\n\t\t\t\t\tbackground: linear-gradient(135deg, #0056cc, #004499);\n\t\t\t\t\ttransform: translateY(-1px);\n\t\t\t\t\tbox-shadow: 0 4px 12px rgba(0, 122, 255, 0.4);\n\t\t\t\t}\n\n\t\t\t\t/* 换号确认模态框专用样式 */\n\t\t\t\t.switch-account-warning {\n\t\t\t\t\tfont-size: 14px;\n\t\t\t\t}\n\n\t\t\t\t.warning-header {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 8px;\n\t\t\t\t\tpadding: 12px 16px;\n\t\t\t\t\tbackground-color: #F56143;\n\t\t\t\t\tcolor: white;\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tmargin-bottom: 12px;\n\t\t\t\t\tfont-weight: 600;\n\t\t\t\t}\n\n\t\t\t\t.warning-icon {\n\t\t\t\t\tfont-size: 16px;\n\t\t\t\t}\n\n\t\t\t\t.warning-content {\n\t\t\t\t\tpadding: 12px 16px;\n\t\t\t\t\tbackground-color: #FFF3CD;\n\t\t\t\t\tcolor: #664D03;\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tmargin-bottom: 16px;\n\t\t\t\t}\n\n\t\t\t\t.warning-line {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 8px;\n\t\t\t\t\tmargin-bottom: 8px;\n\t\t\t\t}\n\n\t\t\t\t.warning-line:last-child {\n\t\t\t\t\tmargin-bottom: 0;\n\t\t\t\t}\n\n\t\t\t\t.content-icon {\n\t\t\t\t\tfont-size: 14px;\n\t\t\t\t\tflex-shrink: 0;\n\t\t\t\t}\n\n\t\t\t\t.final-confirm {\n\t\t\t\t\tcolor: #dc3545;\n\t\t\t\t\tfont-weight: 600;\n\t\t\t\t\ttext-align: left;\n\t\t\t\t\tfont-size: 14px;\n\t\t\t\t}\n\n\t\t\t\t/* 🌟 全新网络诊断模态框样式 - 参考换号确认框设计 🌟 */\n\t\t\t\t.network-diagnostic-container {\n\t\t\t\t\tfont-size: 14px;\n\t\t\t\t}\n\n\t\t\t\t/* 顶部网络状态区域 - 参考换号提醒样式 */\n\t\t\t\t.network-status-header {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 10px;\n\t\t\t\t\tpadding: 14px 18px;\n\t\t\t\t\tbackground: linear-gradient(135deg, #2E86AB, #1B5C75);\n\t\t\t\t\tcolor: white;\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tmargin-bottom: 16px;\n\t\t\t\t\tfont-weight: 600;\n\t\t\t\t\tbox-shadow: 0 3px 12px rgba(46, 134, 171, 0.3);\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t}\n\n\t\t\t\t.network-status-header::before {\n\t\t\t\t\t/* 移除shimmer动画，减少CPU占用 */\n\t\t\t\t\tdisplay: none;\n\t\t\t\t}\n\n\t\t\t\t.network-status-icon {\n\t\t\t\t\tfont-size: 18px;\n\t\t\t\t\t/* 移除脉动动画，减少CPU占用 */\n\t\t\t\t}\n\n\t\t\t\t/* 🎯 紧凑型网络修复列表 */\n\t\t\t\t.network-fix-list {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tflex-direction: column;\n\t\t\t\t\tgap: 8px;\n\t\t\t\t\tpadding: 0;\n\t\t\t\t}\n\n\t\t\t\t.fix-item {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tjustify-content: space-between;\n\t\t\t\t\tpadding: 10px 12px;\n\t\t\t\t\tbackground: var(--vscode-input-background);\n\t\t\t\t\tborder: 1px solid var(--vscode-widget-border);\n\t\t\t\t\tborder-radius: 6px;\n\t\t\t\t\ttransition: all 0.2s ease;\n\t\t\t\t\tmin-height: 40px;\n\t\t\t\t}\n\n\t\t\t\t.fix-item:hover {\n\t\t\t\t\tbackground: var(--vscode-list-hoverBackground);\n\t\t\t\t\ttransform: translateX(2px);\n\t\t\t\t}\n\n\t\t\t\t.fix-content {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tflex: 1;\n\t\t\t\t\tmin-width: 0;\n\t\t\t\t}\n\n\t\t\t\t.fix-title {\n\t\t\t\t\tfont-size: 13px;\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t\tcolor: var(--vscode-foreground);\n\t\t\t\t}\n\n\t\t\t\t.fix-text-group {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tflex-direction: column;\n\t\t\t\t\tgap: 2px;\n\t\t\t\t\tmin-width: 0;\n\t\t\t\t}\n\n\t\t\t\t.fix-code {\n\t\t\t\t\tfont-family: 'Courier New', monospace;\n\t\t\t\t\tfont-size: 11px;\n\t\t\t\t\tcolor: var(--vscode-textLink-foreground);\n\t\t\t\t\tbackground: var(--vscode-textBlockQuote-background);\n\t\t\t\t\tpadding: 2px 4px;\n\t\t\t\t\tborder-radius: 3px;\n\t\t\t\t\tword-break: break-all;\n\t\t\t\t}\n\n\t\t\t\t.fix-btn {\n\t\t\t\t\tpadding: 6px 12px;\n\t\t\t\t\tborder: none;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tfont-size: 11px;\n\t\t\t\t\tfont-weight: 600;\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\ttransition: all 0.2s ease;\n\t\t\t\t\tflex-shrink: 0;\n\t\t\t\t\ttext-transform: uppercase;\n\t\t\t\t\tletter-spacing: 0.5px;\n\t\t\t\t}\n\n\t\t\t\t.fix-sync {\n\t\t\t\t\tbackground: linear-gradient(135deg, #2196F3, #1976D2);\n\t\t\t\t\tcolor: white;\n\t\t\t\t}\n\n\t\t\t\t.fix-copy {\n\t\t\t\t\tbackground: linear-gradient(135deg, #4CAF50, #388E3C);\n\t\t\t\t\tcolor: white;\n\t\t\t\t}\n\n\t\t\t\t.fix-clear {\n\t\t\t\t\tbackground: linear-gradient(135deg, #FF9800, #F57C00);\n\t\t\t\t\tcolor: white;\n\t\t\t\t}\n\n\t\t\t\t.fix-tutorial {\n\t\t\t\t\tbackground: linear-gradient(135deg, #9C27B0, #7B1FA2);\n\t\t\t\t\tcolor: white;\n\t\t\t\t}\n\n\t\t\t\t.fix-http {\n\t\t\t\t\tbackground: linear-gradient(135deg, #607D8B, #455A64);\n\t\t\t\t\tcolor: white;\n\t\t\t\t}\n\n\t\t\t\t.fix-btn:hover {\n\t\t\t\t\ttransform: translateY(-1px);\n\t\t\t\t\tbox-shadow: 0 2px 8px rgba(0,0,0,0.2);\n\t\t\t\t}\n\n\t\t\t\t.fix-btn:active {\n\t\t\t\t\ttransform: translateY(0);\n\t\t\t\t}\n\n\t\t\t\t.network-help {\n\t\t\t\t\ttext-align: center;\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tcolor: #FF6B35;\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t\tpadding: 8px 0;\n\t\t\t\t\tborder-top: 1px solid var(--vscode-widget-border);\n\t\t\t\t\tmargin-top: 4px;\n\t\t\t\t}\n\n\t\t\t\t.restart-reminder {\n\t\t\t\t\tbackground: linear-gradient(135deg, #e3f2fd, #bbdefb);\n\t\t\t\t\tborder: 1px solid #2196f3;\n\t\t\t\t\tborder-radius: 6px;\n\t\t\t\t\tpadding: 10px 12px;\n\t\t\t\t\tmargin: 8px 0;\n\t\t\t\t\ttext-align: center;\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tcolor: #1565c0;\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t\tanimation: fadeInUp 0.3s ease;\n\t\t\t\t}\n\n\t\t\t\t@keyframes fadeInUp {\n\t\t\t\t\tfrom {\n\t\t\t\t\t\topacity: 0;\n\t\t\t\t\t\ttransform: translateY(10px);\n\t\t\t\t\t}\n\t\t\t\t\tto {\n\t\t\t\t\t\topacity: 1;\n\t\t\t\t\t\ttransform: translateY(0);\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\t.fix-btn.loading {\n\t\t\t\t\topacity: 0.7;\n\t\t\t\t\tcursor: not-allowed;\n\t\t\t\t\tpointer-events: none;\n\t\t\t\t}\n\n\t\t\t\t.fix-btn.success {\n\t\t\t\t\tbackground: linear-gradient(135deg, #4CAF50, #388E3C) !important;\n\t\t\t\t\tanimation: successPulse 0.3s ease;\n\t\t\t\t}\n\n\t\t\t\t.fix-btn.error {\n\t\t\t\t\tbackground: linear-gradient(135deg, #F44336, #D32F2F) !important;\n\t\t\t\t\tanimation: errorShake 0.3s ease;\n\t\t\t\t}\n\n\t\t\t\t@keyframes successPulse {\n\t\t\t\t\t0% { transform: scale(1); }\n\t\t\t\t\t50% { transform: scale(1.05); }\n\t\t\t\t\t100% { transform: scale(1); }\n\t\t\t\t}\n\n\t\t\t\t@keyframes errorShake {\n\t\t\t\t\t0%, 100% { transform: translateX(0); }\n\t\t\t\t\t25% { transform: translateX(-2px); }\n\t\t\t\t\t75% { transform: translateX(2px); }\n\t\t\t\t}\n\n\n\n\t\t\t\t/* 免魔法模式卡片样式 - 创新设计 */\n\t\t\t\t.magic-free-card {\n\t\t\t\t\tmargin: 3px 0;\n\t\t\t\t\tbackground: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(34, 197, 94, 0.2));\n\t\t\t\t\tborder-radius: 8px;\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t\tborder: 1px solid rgba(16, 185, 129, 0.3);\n\t\t\t\t\tbox-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 0 15px rgba(16, 185, 129, 0.1);\n\t\t\t\t}\n\n\t\t\t\t.magic-free-card-content {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tjustify-content: space-between;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tpadding: 8px 10px;\n\t\t\t\t\tbackground: rgba(255, 255, 255, 0.05);\n\t\t\t\t\tbackdrop-filter: blur(3px);\n\t\t\t\t\tposition: relative;\n\t\t\t\t}\n\n\t\t\t\t.magic-free-card-content::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\theight: 1px;\n\t\t\t\t\tbackground: linear-gradient(90deg, \n\t\t\t\t\t\ttransparent, \n\t\t\t\t\t\trgba(16, 185, 129, 0.2), \n\t\t\t\t\t\trgba(34, 197, 94, 0.3), \n\t\t\t\t\t\ttransparent\n\t\t\t\t\t);\n\t\t\t\t}\n\n\t\t\t\t.magic-free-info-section {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tflex-direction: column;\n\t\t\t\t\tgap: 2px;\n\t\t\t\t}\n\n\t\t\t\t.magic-free-action-section {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t}\n\n\t\t\t\t.magic-free-tagline {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t}\n\n\t\t\t\t.magic-free-level {\n\t\t\t\t\tfont-size: 12px;\n\t\t\t\t\tfont-weight: 700;\n\t\t\t\t\tbackground: linear-gradient(135deg, #10b981, #22c55e);\n\t\t\t\t\tcolor: white;\n\t\t\t\t\tpadding: 3px 10px;\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tletter-spacing: 0.3px;\n\t\t\t\t\ttext-transform: uppercase;\n\t\t\t\t\tposition: relative;\n\t\t\t\t\tbox-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t}\n\n\t\t\t\t.magic-free-level::after {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: -100%;\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tbackground: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);\n\t\t\t\t\ttransition: all 0.6s ease;\n\t\t\t\t}\n\n\t\t\t\t.magic-free-card:hover .magic-free-level::after {\n\t\t\t\t\tleft: 100%;\n\t\t\t\t}\n\n\t\t\t\t.magic-free-premium-badge {\n\t\t\t\t\tfont-size: 9px;\n\t\t\t\t\tfont-weight: 800;\n\t\t\t\t\tcolor: #fff;\n\t\t\t\t\tbackground: linear-gradient(135deg, #10b981, #22c55e);\n\t\t\t\t\tpadding: 1px 4px;\n\t\t\t\t\tborder-radius: 3px;\n\t\t\t\t\ttext-transform: uppercase;\n\t\t\t\t\tletter-spacing: 0.5px;\n\t\t\t\t\tbox-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);\n\t\t\t\t}\n\n\t\t\t\t/* 限免模式样式 - 温暖而优雅的橙金色主题 */\n\t\t\t\t.magic-free-premium-badge.limited-free {\n\t\t\t\t\tbackground: linear-gradient(135deg, #f59e0b, #f97316);\n\t\t\t\t\tborder: 1px solid rgba(245, 158, 11, 0.3);\n\t\t\t\t\tbox-shadow: 0 2px 4px rgba(245, 158, 11, 0.25), \n\t\t\t\t\t\t        0 1px 2px rgba(0, 0, 0, 0.1);\n\t\t\t\t\tcolor: #ffffff;\n\t\t\t\t\ttext-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);\n\t\t\t\t\tfont-weight: 800;\n\t\t\t\t\tletter-spacing: 0.6px;\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t}\n\n\t\t\t\t.magic-free-premium-badge.limited-free::before {\n\t\t\t\t\t/* 移除shimmer动画，减少CPU占用 */\n\t\t\t\t\tdisplay: none;\n\t\t\t\t}\n\n\t\t\t\t.magic-free-premium-badge.limited-free:hover {\n\t\t\t\t\tbackground: linear-gradient(135deg, #f97316, #ea580c);\n\t\t\t\t\tbox-shadow: 0 3px 8px rgba(245, 158, 11, 0.4), \n\t\t\t\t\t\t        0 1px 3px rgba(0, 0, 0, 0.15);\n\t\t\t\t\ttransform: translateY(-0.5px);\n\t\t\t\t}\n\n\t\t\t\t.magic-free-state {\n\t\t\t\t\tfont-size: 10px;\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t\tcolor: #6b7280;\n\t\t\t\t\topacity: 0.8;\n\t\t\t\t\tmargin-right: 4px;\n\t\t\t\t\ttransition: all 0.25s ease;\n\t\t\t\t\twhite-space: nowrap;\n\t\t\t\t}\n\n\t\t\t\t.magic-free-state.on {\n\t\t\t\t\tcolor: #10b981;\n\t\t\t\t\topacity: 1;\n\t\t\t\t\ttext-shadow: 0 0 5px rgba(16, 185, 129, 0.3);\n\t\t\t\t\tfont-weight: 500;\n\t\t\t\t}\n\n\t\t\t\t/* 免魔法模式开关样式 - 绿色主题 */\n\t\t\t\t.magic-free-toggle {\n\t\t\t\t\tposition: relative;\n\t\t\t\t\tdisplay: inline-block;\n\t\t\t\t\twidth: 32px;\n\t\t\t\t\theight: 18px;\n\t\t\t\t}\n\n\t\t\t\t.magic-free-toggle input {\n\t\t\t\t\topacity: 0;\n\t\t\t\t\twidth: 0;\n\t\t\t\t\theight: 0;\n\t\t\t\t\tmargin: 0;\n\t\t\t\t}\n\n\t\t\t\t.magic-free-track {\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\tright: 0;\n\t\t\t\t\tbottom: 0;\n\t\t\t\t\tbackground-color: rgba(0, 0, 0, 0.1);\n\t\t\t\t\tborder-radius: 4px;\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t\ttransition: all 0.3s ease;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t}\n\n\t\t\t\t.magic-free-track::before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\ttop: 0;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\tright: 0;\n\t\t\t\t\tbottom: 0;\n\t\t\t\t\tbackground: linear-gradient(90deg, #10b981, #22c55e);\n\t\t\t\t\topacity: 0;\n\t\t\t\t\ttransition: opacity 0.3s ease;\n\t\t\t\t}\n\n\t\t\t\t.magic-free-indicator {\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\theight: 14px;\n\t\t\t\t\twidth: 14px;\n\t\t\t\t\tleft: 2px;\n\t\t\t\t\ttop: 2px;\n\t\t\t\t\tbackground-color: #fff;\n\t\t\t\t\tborder-radius: 3px;\n\t\t\t\t\ttransition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);\n\t\t\t\t\tbox-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);\n\t\t\t\t\tz-index: 1;\n\t\t\t\t}\n\n\t\t\t\tinput:checked + .magic-free-track::before {\n\t\t\t\t\topacity: 1;\n\t\t\t\t}\n\n\t\t\t\tinput:checked + .magic-free-track .magic-free-indicator {\n\t\t\t\t\ttransform: translateX(14px);\n\t\t\t\t\tbackground-color: white;\n\t\t\t\t}\n\n\t\t\t\t.magic-free-toggle:hover .magic-free-track {\n\t\t\t\t\topacity: 0.95;\n\t\t\t\t}\n\n\t\t\t\t.magic-free-toggle:active .magic-free-indicator {\n\t\t\t\t\ttransform: scale(0.9);\n\t\t\t\t}\n\t\t\t</style>\n\t\t</head>\n\t\t<body>\n\t\t\t<div class=\"container\">\n\t\t\t\t\n\t\t\t\t<div class=\"card " + (_0x2897d0 === 0 ? "hidden" : "") + "\" id=\"auth-card\">\n\t\t\t\t\t<div class=\"section-title\">\n\t\t\t\t\t\t<svg viewBox=\"0 0 24 24\"><path d=\"M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 2.18l7 3.12v5.7c0 4.83-3.4 9.36-7 10.6-3.6-1.24-7-5.77-7-10.6V6.3l7-3.12z\"/></svg>\n\t\t\t\t\t\t软件授权\n\t\t\t\t\t\t<span class=\"auth-status " + (_0x1751e0 === "已授权" ? "authorized" : "unauthorized") + "\">" + _0x1751e0 + "</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"input-group\">\n\t\t\t\t\t\t<input type=\"text\" class=\"input-field\" id=\"cdkInput\" placeholder=\"请输入CDK激活码\" />\n\t\t\t\t\t\t<button class=\"button\" onclick=\"activateWithCDK()\">激活</button>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"info-row\">\n\t\t\t\t\t\t<span>激活码</span>\n\t\t\t\t\t\t<span class=\"activation-code\">\n\t\t\t\t\t\t\t<span class=\"info-text " + (_0x1751e0 === "已授权" || _0x1751e0 === "已过期" ? "" : "placeholder") + "\" " + (_0x1751e0 === "已授权" || _0x1751e0 === "已过期" ? "onclick=\"copyActivationCode()\"" : "") + ">\n\t\t\t\t\t\t\t\t" + (_0x1e15b7 || "尚未激活") + "\n\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"info-row " + (_0x2897d0 === 0 ? "hidden" : "") + "\">\n\t\t\t\t\t\t<span>设备绑定</span>\n\t\t\t\t\t\t<span class=\"device-simple\">\n\t\t\t\t\t\t\t" + (_0x2961a7 || "0") + "/2\n\t\t\t\t\t\t\t<span class=\"device-unbind\" onclick=\"handleUnbindDevice()\">解绑</span>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"info-row\">\n\t\t\t\t\t\t<span>到期时间</span>\n\t\t\t\t\t\t<span class=\"expiration-time " + (_0x1751e0 === "已授权" ? "" : "placeholder") + "\">\n\t\t\t\t\t\t\t" + (_0x2d1323 || "尚未激活") + "\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"section-title\">\n\t\t\t\t\t\t<svg viewBox=\"0 0 24 24\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z\"/></svg>\n\t\t\t\t\t\t账号数据\n\t\t\t\t\t\t" + (_0x1751e0 === "已授权" ? "<span class=\"account-info-tag\">\n\t\t\t\t\t\t\t<span class=\"status-dot\"></span>\n\t\t\t\t\t\t\t使用 " + _0x531e8c + "\n\t\t\t\t\t\t</span>" : "<span class=\"account-info-tag inactive\">\n\t\t\t\t\t\t\t未激活\n\t\t\t\t\t\t</span>") + "\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<!-- CI积分余量 -->\n\t\t\t\t\t<div class=\"" + (_0x2897d0 === 0 ? "hidden" : "") + " ci-compact-card\">\n\t\t\t\t\t\t<div class=\"ci-compact-header\">\n\t\t\t\t\t\t\t<span class=\"ci-compact-label\">CI积分余量</span>\n\t\t\t\t\t\t\t<div class=\"ci-progress-track\">\n\t\t\t\t\t\t\t\t<div class=\"ci-progress-glow\" style=\"width: " + (_0x544591?.["percentage"] || 0) + "%\"></div>\n\t\t\t\t\t\t\t\t<div class=\"ci-progress-fill\" style=\"width: " + (_0x544591?.["percentage"] || 0) + "%\"></div>\n\t\t\t\t\t\t\t\t<div class=\"ci-progress-shine\"></div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"ci-value-display\">\n\t\t\t\t\t\t\t\t<span class=\"ci-current-value\">" + (_0x544591?.["value"] || 0) + "</span>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<button class=\"ci-compact-refresh-btn\" onclick=\"refreshCIQuota()\">\n\t\t\t\t\t\t\t\t<svg class=\"ci-refresh-icon\" viewBox=\"0 0 24 24\">\n\t\t\t\t\t\t\t\t\t<path d=\"M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z\"/>\n\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"" + (_0x2897d0 === 0 ? "hidden" : "") + "\" style=\"margin-bottom: 8px;\">\n\t\t\t\t\t\t<div class=\"magic-free-card\">\n\t\t\t\t\t\t\t<div class=\"magic-free-card-content\">\n\t\t\t\t\t\t\t\t<div class=\"magic-free-info-section\">\n\t\t\t\t\t\t\t\t\t<div class=\"magic-free-tagline\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"magic-free-level\">免魔法模式</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"magic-free-premium-badge " + (_0x1b6bde ? "limited-free" : "") + "\">" + (_0x1b6bde ? "限免" : "PRO") + "</span>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"magic-free-action-section\">\n\t\t\t\t\t\t\t\t\t<div class=\"magic-free-state " + (_0xa58654 ? "on" : "off") + "\">\n\t\t\t\t\t\t\t\t\t\t" + (_0xa58654 ? "关闭免魔法" : "开启免魔法") + "\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<label class=\"magic-free-toggle\">\n\t\t\t\t\t\t\t\t\t\t<input type=\"checkbox\" id=\"magicFreeToggle\" " + (_0xa58654 ? "checked" : "") + ">\n\t\t\t\t\t\t\t\t\t\t<span class=\"magic-free-track\">\n\t\t\t\t\t\t\t\t\t\t\t<span class=\"magic-free-indicator\"></span>\n\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t</label>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"" + (_0x2897d0 === 0 ? "hidden" : "") + "\" style=\"margin-bottom: 8px;\">\n\t\t\t\t\t\t<div class=\"max-card\">\n\t\t\t\t\t\t\t<div class=\"max-card-content\">\n\t\t\t\t\t\t\t\t<div class=\"max-info-section\">\n\t\t\t\t\t\t\t\t\t<div class=\"max-tagline\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"max-level\">Cursor Max</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"max-premium-badge\">PRO</span>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"max-action-section\">\n\t\t\t\t\t\t\t\t\t<div class=\"max-state " + (_0x2e89ae ? "on" : "off") + "\">\n\t\t\t\t\t\t\t\t\t\t" + (_0x2e89ae ? "关闭MAX" : "开启MAX") + "\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<label class=\"max-toggle\">\n\t\t\t\t\t\t\t\t\t\t<input type=\"checkbox\" id=\"maxToggle\" " + (_0x2e89ae ? "checked" : "") + ">\n\t\t\t\t\t\t\t\t\t\t<span class=\"max-track\">\n\t\t\t\t\t\t\t\t\t\t\t<span class=\"max-indicator\"></span>\n\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t</label>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div style=\"margin-top: 8px;\">\n\t\t\t\t\t\t<button class=\"button\" style=\"width: 100%;\" onclick=\"handleSwitchAccount()\" id=\"switch-account-btn\">无感换号</button>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div style=\"margin-top: 5px;\">\n\t\t\t\t\t\t<button class=\"button secondary highlight\" style=\"width: 100%;\" onclick=\"handleResetConfig(this)\" id=\"resetButton\">重置插件</button>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div style=\"margin-top: 5px;\">\n\t\t\t\t\t\t<button class=\"button secondary danger\" style=\"width: 100%;\" onclick=\"handleRestoreConfig()\" id=\"restoreButton\">停用插件</button>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"version-row\">\n\t\t\t\t\t\t<svg class=\"version-icon\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\">\n\t\t\t\t\t\t\t<path fill=\"currentColor\" d=\"M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z\"/>\n\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t本地cursor版本: " + _0x96753e + "\n\t\t\t\t\t\t<div style=\"flex: 1\"></div>\n\t\t\t\t\t\t<div class=\"toggle-label\">\n\t\t\t\t\t\t\t插件自启动\n\t\t\t\t\t\t\t<label class=\"switch small\">\n\t\t\t\t\t\t\t\t<input type=\"checkbox\" id=\"autoOpenToggle\" " + (_0x229349 ? "checked" : "") + ">\n\t\t\t\t\t\t\t\t<span class=\"slider\"></span>\n\t\t\t\t\t\t\t</label>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<!-- 常见问题卡片 -->\n\t\t\t\t<div class=\"card\" id=\"faq-card\" " + (_0x126f0b ? "" : "style=\"display: none;\"") + ">\n\t\t\t\t\t<div class=\"section-title\">\n\t\t\t\t\t\t<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\">\n\t\t\t\t\t\t\t<path fill=\"currentColor\" d=\"M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 9h-2V5h2v6zm0 4h-2v-2h2v2z\"/>\n\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t插件公告\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"faq-container\">\n\t\t\t\t\t\t" + (_0x1427dc ? "<div class=\"faq-content\">\n\t\t\t\t\t\t\t\t" + _0x1427dc + "\n\t\t\t\t\t\t\t</div>" : "<div class=\"faq-placeholder\">暂无常见问题</div>") + "\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<script>\n\t\t\t\tconst vscode = acquireVsCodeApi();\n\t\t\t\t\n\t\t\t\tfunction activateWithCDK() {\n\t\t\t\t\tconst cdkValue = document.getElementById('cdkInput').value.trim();\n\t\t\t\t\t\n\t\t\t\t\t// 前端验证：检查是否输入了激活码\n\t\t\t\t\tif (!cdkValue) {\n\t\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\t\tcommand: 'showError',\n\t\t\t\t\t\t\ttext: '请输入激活码进行激活'\n\t\t\t\t\t\t});\n\t\t\t\t\t\treturn;\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\t// 禁用激活按钮\n\t\t\t\t\tconst activateButton = document.querySelector('.input-group .button');\n\t\t\t\t\tif (activateButton) {\n\t\t\t\t\t\tactivateButton.disabled = true;\n\t\t\t\t\t\tactivateButton.classList.add('loading');\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\t// 发送激活命令，携带CDK值\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'activate',\n\t\t\t\t\t\tcdk: cdkValue\n\t\t\t\t\t});\n\t\t\t\t}\n\t\t\t\t\n\n\n\t\t\t\tdocument.getElementById('cdkInput').addEventListener('keypress', function(e) {\n\t\t\t\t\tif (e.key === 'Enter') {\n\t\t\t\t\t\tactivateWithCDK();\n\t\t\t\t\t}\n\t\t\t\t});\n\n\t\t\t\t// 复制激活码\n\t\t\t\tfunction copyActivationCode() {\n\t\t\t\t\tconst code = '" + _0x245bb2 + "';\n\t\t\t\t\tnavigator.clipboard.writeText(code).then(() => {\n\t\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\t\tcommand: 'showInfo',\n\t\t\t\t\t\t\ttext: '激活码已复制到剪贴板',\n\t\t\t\t\t\t\ttimeout: 1500\n\t\t\t\t\t\t});\n\t\t\t\t\t});\n\t\t\t\t}\n\n\t\t\t\t// 刷新余额\n\t\t\t\tfunction handleRefreshBalance() {\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'refreshBalance'\n\t\t\t\t\t});\n\t\t\t\t}\n\n\t\t\t\t// 刷新CI积分余量\n\t\t\t\tfunction refreshCIQuota() {\n\t\t\t\t\tconsole.log('[DEBUG] 刷新CI积分余量按钮被点击');\n\t\t\t\t\t// 显示刷新动画\n\t\t\t\t\tconst refreshBtn = document.querySelector('.ci-compact-refresh-btn');\n\t\t\t\t\tconst refreshIcon = document.querySelector('.ci-refresh-icon');\n\t\t\t\t\tif (refreshBtn && refreshIcon) {\n\t\t\t\t\t\trefreshBtn.disabled = true;\n\t\t\t\t\t\trefreshIcon.style.animation = 'spin 1s linear infinite';\n\t\t\t\t\t}\n\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'refreshBalance'\n\t\t\t\t\t});\n\t\t\t\t}\n\n\t\t\t\t// 无感换号\n\t\t\t\tfunction handleSwitchAccount() {\n\t\t\t\t\t// 禁用按钮并添加加载状态\n\t\t\t\t\tconst switchBtn = document.getElementById('switch-account-btn');\n\t\t\t\t\tif (switchBtn) {\n\t\t\t\t\t\tswitchBtn.disabled = true;\n\t\t\t\t\t\tswitchBtn.classList.add('loading');\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'switchAccount'\n\t\t\t\t\t});\n\t\t\t\t}\n\n\t\t\t\t// 重置配置\n\t\t\t\tfunction handleResetConfig(button) {\n\t\t\t\t\t// 禁用按钮并添加加载状态\n\t\t\t\t\tbutton.disabled = true;\n\t\t\t\t\tbutton.classList.add('loading');\n\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'resetConfig'\n\t\t\t\t\t});\n\t\t\t\t}\n\n\t\t\t\t// 重置按钮状态\n\t\t\t\tfunction resetButtonState() {\n\t\t\t\t\t// 恢复重置按钮状态\n\t\t\t\t\tconst button = document.getElementById('resetButton');\n\t\t\t\t\tif (button) {\n\t\t\t\t\t\tbutton.disabled = false;\n\t\t\t\t\t\tbutton.classList.remove('loading');\n\t\t\t\t\t\tbutton.textContent = '重置插件';\n\t\t\t\t\t}\n\n\t\t\t\t\t// 恢复激活按钮状态\n\t\t\t\t\tconst activateButton = document.querySelector('.input-group .button');\n\t\t\t\t\tif (activateButton) {\n\t\t\t\t\t\tactivateButton.disabled = false;\n\t\t\t\t\t\tactivateButton.classList.remove('loading');\n\t\t\t\t\t}\n\n\t\t\t\t\t// 恢复停用按钮状态\n\t\t\t\t\tconst restoreButton = document.getElementById('restoreButton');\n\t\t\t\t\tif (restoreButton) {\n\t\t\t\t\t\trestoreButton.disabled = false;\n\t\t\t\t\t\trestoreButton.classList.remove('loading');\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\t// 恢复换号按钮状态\n\t\t\t\t\tconst switchBtn = document.getElementById('switch-account-btn');\n\t\t\t\t\tif (switchBtn) {\n\t\t\t\t\t\tswitchBtn.disabled = false;\n\t\t\t\t\t\tswitchBtn.classList.remove('loading');\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\t// 确认模态框相关函数\n\t\t\t\tlet currentConfirmCallbackId = null;\n\n\t\t\t\tfunction showConfirmModal(message, confirmText, cancelText, callbackId) {\n\t\t\t\t\tdocument.getElementById('confirmMessage').innerHTML = message;\n\t\t\t\t\tdocument.getElementById('confirmOkBtn').textContent = confirmText || '确定';\n\t\t\t\t\tdocument.getElementById('confirmCancelBtn').textContent = cancelText || '取消';\n\t\t\t\t\tdocument.getElementById('confirmModal').style.display = 'block';\n\t\t\t\t\tcurrentConfirmCallbackId = callbackId;\n\t\t\t\t}\n\n\t\t\t\tfunction closeConfirmModal() {\n\t\t\t\t\tdocument.getElementById('confirmModal').style.display = 'none';\n\t\t\t\t\tif (currentConfirmCallbackId) {\n\t\t\t\t\t\tvscode.postMessage({\n\t\t\t\t\t\t\tcommand: 'confirmResult',\n\t\t\t\t\t\t\tcallbackId: currentConfirmCallbackId,\n\t\t\t\t\t\t\tresult: false\n\t\t\t\t\t\t});\n\t\t\t\t\t\tcurrentConfirmCallbackId = null;\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\tfunction confirmModalCancel() {\n\t\t\t\t\tdocument.getElementById('confirmModal').style.display = 'none';\n\t\t\t\t\tif (currentConfirmCallbackId) {\n\t\t\t\t\t\tvscode.postMessage({\n\t\t\t\t\t\t\tcommand: 'confirmResult',\n\t\t\t\t\t\t\tcallbackId: currentConfirmCallbackId,\n\t\t\t\t\t\t\tresult: false\n\t\t\t\t\t\t});\n\t\t\t\t\t\tcurrentConfirmCallbackId = null;\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\tfunction confirmModalOk() {\n\t\t\t\t\tdocument.getElementById('confirmModal').style.display = 'none';\n\t\t\t\t\tif (currentConfirmCallbackId) {\n\t\t\t\t\t\tvscode.postMessage({\n\t\t\t\t\t\t\tcommand: 'confirmResult',\n\t\t\t\t\t\t\tcallbackId: currentConfirmCallbackId,\n\t\t\t\t\t\t\tresult: true\n\t\t\t\t\t\t});\n\t\t\t\t\t\tcurrentConfirmCallbackId = null;\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\t// 监听来自扩展的消息\n\t\t\t\twindow.addEventListener('message', event => {\n\t\t\t\t\tconst message = event.data;\n\t\t\t\t\tif (message.command === 'updateView') {\n\t\t\t\t\t\tresetButtonState();\n\t\t\t\t\t} else if (message.command === 'showConfirmModal') {\n\t\t\t\t\t\tshowConfirmModal(message.message, message.confirmText, message.cancelText, message.callbackId);\n\t\t\t\t\t} else if (message.command === 'updateAutoOpenToggle') {\n\t\t\t\t\t\t// 更新激活界面开关状态\n\t\t\t\t\t\tconst toggleEl = document.getElementById('autoOpenToggle');\n\t\t\t\t\t\tif (toggleEl) {\n\t\t\t\t\t\t\ttoggleEl.checked = message.enabled;\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'updateMaxToggle') {\n\t\t\t\t\t\t// 处理MAX开关状态更新\n\t\t\t\t\t\tupdateMaxToggleState(message.enabled, message.disabled);\n\t\t\t\t\t} else if (message.command === 'updateMagicFreeToggle') {\n\t\t\t\t\t\t// 处理免魔法模式开关状态更新\n\t\t\t\t\t\tupdateMagicFreeToggleState(message.enabled, message.disabled);\n\t\t\t\t\t} else if (message.command === 'disableResetButton') {\n\t\t\t\t\t\tconst resetButton = document.getElementById('resetButton');\n\t\t\t\t\t\tif (resetButton) {\n\t\t\t\t\t\t\tresetButton.disabled = true;\n\t\t\t\t\t\t\tresetButton.classList.add('loading');\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'updateOperationMode') {\n\t\t\t\t\t\t// 更新界面元素显示状态\n\t\t\t\t\t\tconst authCard = document.getElementById('auth-card');\n\t\t\t\t\t\tconst ciCompactCard = document.querySelector('.ci-compact-card');\n\t\t\t\t\t\t\n\t\t\t\t\t\tif (message.mode === 0) { // 免费模式\n\t\t\t\t\t\t\tauthCard?.classList.add('hidden');\n\t\t\t\t\t\t\tciCompactCard?.classList.add('hidden');\n\t\t\t\t\t\t} else { // 收费模式\n\t\t\t\t\t\t\tauthCard?.classList.remove('hidden');\n\t\t\t\t\t\t\tciCompactCard?.classList.remove('hidden');\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'disableRestoreButton') {\n\t\t\t\t\t\tconst restoreButton = document.getElementById('restoreButton');\n\t\t\t\t\t\tif (restoreButton) {\n\t\t\t\t\t\t\trestoreButton.disabled = true;\n\t\t\t\t\t\t\trestoreButton.classList.add('loading');\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'disableRefreshButton') {\n\t\t\t\t\t\tconst refreshBtn = document.getElementById('refresh-balance-btn');\n\t\t\t\t\t\tif (refreshBtn) {\n\t\t\t\t\t\t\trefreshBtn.disabled = true;\n\t\t\t\t\t\t\trefreshBtn.classList.add('disabled');\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'enableRefreshButton') {\n\t\t\t\t\t\tconst enableBtn = document.getElementById('refresh-balance-btn');\n\t\t\t\t\t\tif (enableBtn) {\n\t\t\t\t\t\t\tenableBtn.disabled = false;\n\t\t\t\t\t\t\tenableBtn.classList.remove('disabled');\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'disableSwitchButton') {\n\t\t\t\t\t\tconst switchBtn = document.getElementById('switch-account-btn');\n\t\t\t\t\t\tif (switchBtn) {\n\t\t\t\t\t\t\tswitchBtn.disabled = true;\n\t\t\t\t\t\t\tswitchBtn.classList.add('loading');\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'enableSwitchButton') {\n\t\t\t\t\t\tconst enableSwitchBtn = document.getElementById('switch-account-btn');\n\t\t\t\t\t\tif (enableSwitchBtn) {\n\t\t\t\t\t\t\tenableSwitchBtn.disabled = false;\n\t\t\t\t\t\t\tenableSwitchBtn.classList.remove('loading');\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'updateCIQuota') {\n\t\t\t\t\t\t// 更新CI积分余量显示\n\t\t\t\t\t\tconst progressFill = document.querySelector('.ci-progress-fill');\n\t\t\t\t\t\tconst progressGlow = document.querySelector('.ci-progress-glow');\n\t\t\t\t\t\tconst quotaValue = document.querySelector('.ci-current-value');\n\t\t\t\t\t\tconst refreshBtn = document.querySelector('.ci-compact-refresh-btn');\n\t\t\t\t\t\tconst refreshIcon = document.querySelector('.ci-refresh-icon');\n\t\t\t\t\t\t\n\t\t\t\t\t\tif (progressFill && progressGlow && quotaValue) {\n\t\t\t\t\t\t\tconst percentage = message.data.percentage;\n\t\t\t\t\t\t\tprogressFill.style.width = percentage + '%';\n\t\t\t\t\t\t\tprogressGlow.style.width = percentage + '%';\n\t\t\t\t\t\t\tquotaValue.textContent = message.data.value;\n\t\t\t\t\t\t}\n\t\t\t\t\t\t\n\t\t\t\t\t\t// 停止刷新动画\n\t\t\t\t\t\tif (refreshBtn && refreshIcon) {\n\t\t\t\t\t\t\trefreshBtn.disabled = false;\n\t\t\t\t\t\t\trefreshIcon.style.animation = '';\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'stopCIQuotaRefresh') {\n\t\t\t\t\t\t// 停止CI积分余量刷新动画\n\t\t\t\t\t\tconst refreshBtn = document.querySelector('.ci-compact-refresh-btn');\n\t\t\t\t\t\tconst refreshIcon = document.querySelector('.ci-refresh-icon');\n\t\t\t\t\t\t\n\t\t\t\t\t\tif (refreshBtn && refreshIcon) {\n\t\t\t\t\t\t\trefreshBtn.disabled = false;\n\t\t\t\t\t\t\trefreshIcon.style.animation = '';\n\t\t\t\t\t\t}\n\t\t\t\t\t} else if (message.command === 'unbindDevice') { // 处理解绑操作\n\t\t\t\t\t\tthis._handleUnbindDevice();\n\t\t\t\t\t} else if (message.command === 'showInfoModal') {\n\t\t\t\t\t\tshowInfoModal(message.message);\n\t\t\t\t\t} else if (message.command === 'showWarningModal') {\n\t\t\t\t\t\tshowWarningModal(message.message);\n\t\t\t\t\t} else if (message.command === 'showErrorModal') {\n\t\t\t\t\t\tshowErrorModal(message.message);\n\t\t\t\t\t} else if (message.command === 'showNetworkErrorModal') {\n\t\t\t\t\t\tshowNetworkErrorModal();\n\t\t\t\t\t} else if (message.command === 'clearProxySuccess') {\n\t\t\t\t\t\thandleClearProxySuccess();\n\t\t\t\t\t} else if (message.command === 'clearProxyFailed') {\n\t\t\t\t\t\thandleClearProxyFailed(message.error);\n\t\t\t\t\t} else if (message.command === 'setHttp11Success') {\n\t\t\t\t\t\thandleSetHttp11Success();\n\t\t\t\t\t} else if (message.command === 'setHttp11Failed') {\n\t\t\t\t\t\thandleSetHttp11Failed(message.error);\n\t\t\t\t\t}\n\t\t\t\t});\n\n\t\t\t\t// 处理激活界面开关\n\t\t\t\tasync function handleToggleAutoOpen(enabled) {\n\t\t\t\t\ttry {\n\t\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\t\tcommand: 'toggleAutoOpen',\n\t\t\t\t\t\t\tenabled: enabled\n\t\t\t\t\t\t});\n\t\t\t\t\t} catch (error) {\n\t\t\t\t\t\tconsole.error(error);\n\t\t\t\t\t\t// 操作失败时恢复开关状态\n\t\t\t\t\t\tdocument.getElementById('autoOpenToggle').checked = !enabled;\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\t// 初始化激活界面开关事件监听\n\t\t\t\tdocument.getElementById('autoOpenToggle').addEventListener('change', function(e) {\n\t\t\t\t\thandleToggleAutoOpen(this.checked);\n\t\t\t\t});\n\t\t\t\t\n\t\t\t\t// 初始化MAX开关事件监听\n\t\t\t\tconst maxToggle = document.getElementById('maxToggle');\n\t\t\t\tif (maxToggle) {\n\t\t\t\t\tmaxToggle.addEventListener('change', handleToggleMax);\n\t\t\t\t}\n\n\t\t\t\t// 初始化免魔法模式开关事件监听\n\t\t\t\tconst magicFreeToggle = document.getElementById('magicFreeToggle');\n\t\t\t\tif (magicFreeToggle) {\n\t\t\t\t\tmagicFreeToggle.addEventListener('change', handleToggleMagicFree);\n\t\t\t\t}\n\t\t\t\t\n\n\n\t\t\t\tfunction handleRestoreConfig() {\n\t\t\t\t\t// 禁用按钮并添加加载状态\n\t\t\t\t\tconst restoreButton = document.getElementById('restoreButton');\n\t\t\t\t\tif (restoreButton) {\n\t\t\t\t\t\trestoreButton.disabled = true;\n\t\t\t\t\t\trestoreButton.classList.add('loading');\n\t\t\t\t\t}\n\n\t\t\t\t\t// 发送停用命令\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'restore'\n\t\t\t\t\t});\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t// 处理MAX开关切换\n\t\t\t\tfunction handleToggleMax(event) {\n\t\t\t\t\tconst isEnabled = event.target.checked;\n\t\t\t\t\t\n\t\t\t\t\t// 更新UI状态\n\t\t\t\t\tconst statusEl = document.querySelector('.max-premium-status');\n\t\t\t\t\tif (statusEl) {\n\t\t\t\t\t\tstatusEl.textContent = isEnabled ? '已激活' : '未激活';\n\t\t\t\t\t\tif (isEnabled) {\n\t\t\t\t\t\t\tstatusEl.classList.add('active');\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tstatusEl.classList.remove('active');\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\t// 发送切换命令\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'toggleMax',\n\t\t\t\t\t\tenabled: isEnabled\n\t\t\t\t\t});\n\t\t\t\t}\n\n\t\t\t\t// 处理免魔法模式开关切换\n\t\t\t\tfunction handleToggleMagicFree(event) {\n\t\t\t\t\tconst isEnabled = event.target.checked;\n\n\t\t\t\t\t// 发送切换命令到扩展\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'toggleMagicFree',\n\t\t\t\t\t\tenabled: isEnabled\n\t\t\t\t\t});\n\t\t\t\t}\n\n\t\t\t\t// 用于更新免魔法模式开关状态的函数\n\t\t\t\tfunction updateMagicFreeToggleState(enabled, disabled = false) {\n\t\t\t\t\t// 更新开关的UI状态\n\t\t\t\t\tconst toggleEl = document.getElementById('magicFreeToggle');\n\t\t\t\t\tif (toggleEl) {\n\t\t\t\t\t\ttoggleEl.checked = enabled;\n\t\t\t\t\t\ttoggleEl.disabled = disabled;\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\t// 更新开关容器样式\n\t\t\t\t\tconst toggleContainer = document.querySelector('.magic-free-toggle');\n\t\t\t\t\tif (toggleContainer) {\n\t\t\t\t\t\tif (disabled) {\n\t\t\t\t\t\t\ttoggleContainer.style.opacity = '0.6';\n\t\t\t\t\t\t\ttoggleContainer.style.cursor = 'not-allowed';\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\ttoggleContainer.style.opacity = '1';\n\t\t\t\t\t\t\ttoggleContainer.style.cursor = 'pointer';\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\t// 更新状态文本\n\t\t\t\t\tconst stateEl = document.querySelector('.magic-free-state');\n\t\t\t\t\tif (stateEl) {\n\t\t\t\t\t\tif (disabled) {\n\t\t\t\t\t\t\tstateEl.textContent = '处理中...';\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tstateEl.textContent = enabled ? '关闭免魔法' : '开启免魔法';\n\t\t\t\t\t\t}\n\t\t\t\t\t\t\n\t\t\t\t\t\tif (enabled) {\n\t\t\t\t\t\t\tstateEl.classList.add('on');\n\t\t\t\t\t\t\tstateEl.classList.remove('off');\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tstateEl.classList.remove('on');\n\t\t\t\t\t\t\tstateEl.classList.add('off');\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\t// 用于更新MAX开关状态的函数（增强版本）\n\t\t\t\tfunction updateMaxToggleState(enabled, disabled = false) {\n\t\t\t\t\t// 更新开关的UI状态\n\t\t\t\t\tconst toggleEl = document.getElementById('maxToggle');\n\t\t\t\t\tif (toggleEl) {\n\t\t\t\t\t\ttoggleEl.checked = enabled;\n\t\t\t\t\t\ttoggleEl.disabled = disabled;\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\t// 更新开关容器样式\n\t\t\t\t\tconst toggleContainer = document.querySelector('.max-toggle');\n\t\t\t\t\tif (toggleContainer) {\n\t\t\t\t\t\tif (disabled) {\n\t\t\t\t\t\t\ttoggleContainer.style.opacity = '0.6';\n\t\t\t\t\t\t\ttoggleContainer.style.cursor = 'not-allowed';\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\ttoggleContainer.style.opacity = '1';\n\t\t\t\t\t\t\ttoggleContainer.style.cursor = 'pointer';\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\t// 更新状态文本\n\t\t\t\t\tconst stateEl = document.querySelector('.max-state');\n\t\t\t\t\tif (stateEl) {\n\t\t\t\t\t\tif (disabled) {\n\t\t\t\t\t\t\tstateEl.textContent = '处理中...';\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tstateEl.textContent = enabled ? '关闭MAX' : '开启MAX';\n\t\t\t\t\t\t}\n\t\t\t\t\t\t\n\t\t\t\t\t\tif (enabled) {\n\t\t\t\t\t\t\tstateEl.classList.add('on');\n\t\t\t\t\t\t\tstateEl.classList.remove('off');\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tstateEl.classList.remove('on');\n\t\t\t\t\t\t\tstateEl.classList.add('off');\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t// 解绑设备函数 - 显示解绑模态框\n\t\t\t\tfunction handleUnbindDevice() {\n\t\t\t\t\t// 显示解绑模态框\n\t\t\t\t\tdocument.getElementById('unbindModal').style.display = 'block';\n\t\t\t\t\t// 聚焦输入框\n\t\t\t\t\tdocument.getElementById('unbindCdkInput').focus();\n\t\t\t\t}\n\n\t\t\t\t// 关闭解绑模态框\n\t\t\t\tfunction closeUnbindModal() {\n\t\t\t\t\tdocument.getElementById('unbindModal').style.display = 'none';\n\t\t\t\t\t// 清空输入框\n\t\t\t\t\tdocument.getElementById('unbindCdkInput').value = '';\n\t\t\t\t}\n\n\t\t\t\t// 处理解绑输入框的回车键\n\t\t\t\tfunction handleUnbindInputKeypress(event) {\n\t\t\t\t\tif (event.key === 'Enter') {\n\t\t\t\t\t\tconfirmUnbind();\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\t// 确认执行解绑\n\t\t\t\tfunction confirmUnbind() {\n\t\t\t\t\tconst cdkInput = document.getElementById('unbindCdkInput');\n\t\t\t\t\tconst cdk = cdkInput.value.trim();\n\t\t\t\t\t\n\t\t\t\t\tif (!cdk) {\n\t\t\t\t\t\t// 如果没有输入激活码，提示用户\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\t\tcommand: 'showWarningModal',\n\t\t\t\t\t\t\tmessage: '请输入要解绑的激活码'\n\t\t\t\t\t\t});\n\t\t\t\t\t\treturn;\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\t// 关闭模态框\n\t\t\t\t\tcloseUnbindModal();\n\t\t\t\t\t\n\t\t\t\t\t// 发送解绑命令到后端\n\t\t\t\t\tvscode.postMessage({ \n\t\t\t\t\t\tcommand: 'unbindDevice',\n\t\t\t\t\t\tcdk: cdk\n\t\t\t\t\t});\n\t\t\t\t}\n\n\t\t\t\t// 显示信息模态框\n\t\t\t\tfunction showInfoModal(message) {\n\t\t\t\t\tdocument.getElementById('infoMessage').innerHTML = message;\n\t\t\t\t\tdocument.getElementById('infoModal').style.display = 'block';\n\t\t\t\t}\n\n\t\t\t\t// 关闭信息模态框\n\t\t\t\tfunction closeInfoModal() {\n\t\t\t\t\tdocument.getElementById('infoModal').style.display = 'none';\n\t\t\t\t}\n\n\t\t\t\t// 显示警告模态框\n\t\t\t\tfunction showWarningModal(message) {\n\t\t\t\t\tdocument.getElementById('warningMessage').innerHTML = message;\n\t\t\t\t\tdocument.getElementById('warningModal').style.display = 'block';\n\t\t\t\t}\n\n\t\t\t\t// 关闭警告模态框\n\t\t\t\tfunction closeWarningModal() {\n\t\t\t\t\tdocument.getElementById('warningModal').style.display = 'none';\n\t\t\t\t}\n\n\t\t\t\t// 显示错误模态框\n\t\t\t\tfunction showErrorModal(message) {\n\t\t\t\t\tdocument.getElementById('errorMessage').innerHTML = message;\n\t\t\t\t\tdocument.getElementById('errorModal').style.display = 'block';\n\t\t\t\t}\n\n\t\t\t\t// 关闭错误模态框\n\t\t\t\tfunction closeErrorModal() {\n\t\t\t\t\tdocument.getElementById('errorModal').style.display = 'none';\n\t\t\t\t}\n\n\t\t\t\t// 显示网络错误模态框\n\t\t\t\tfunction showNetworkErrorModal() {\n\t\t\t\t\tdocument.getElementById('networkErrorModal').style.display = 'block';\n\t\t\t\t}\n\n\t\t\t\t// 关闭网络错误模态框\n\t\t\t\tfunction closeNetworkErrorModal() {\n\t\t\t\t\tdocument.getElementById('networkErrorModal').style.display = 'none';\n\t\t\t\t}\n\n\t\t\t\tasync function handleClearProxy() {\n\t\t\t\t\tconst btn = document.getElementById('clearBtn');\n\t\t\t\t\tconst originalText = btn.textContent;\n\t\t\t\t\t\n\t\t\t\t\tbtn.classList.add('loading');\n\t\t\t\t\tbtn.textContent = '清除中...';\n\t\t\t\t\t\n\t\t\t\t\ttry {\n\t\t\t\t\t\tawait clearCursorProxy();\n\t\t\t\t\t\t\n\t\t\t\t\t\tbtn.classList.remove('loading');\n\t\t\t\t\t\tbtn.classList.add('success');\n\t\t\t\t\t\tbtn.textContent = '清除成功';\n\t\t\t\t\t\t\n\t\t\t\t\t\t// 显示重启提醒\n\t\t\t\t\t\tshowRestartReminder();\n\t\t\t\t\t\t\n\t\t\t\t\t\tsetTimeout(() => {\n\t\t\t\t\t\t\tbtn.classList.remove('success');\n\t\t\t\t\t\t\tbtn.textContent = originalText;\n\t\t\t\t\t\t}, 3000);\n\t\t\t\t\t\t\n\t\t\t\t\t} catch (error) {\n\t\t\t\t\t\tbtn.classList.remove('loading');\n\t\t\t\t\t\tbtn.classList.add('error');\n\t\t\t\t\t\tbtn.textContent = '清除失败';\n\t\t\t\t\t\t\n\t\t\t\t\t\tsetTimeout(() => {\n\t\t\t\t\t\t\tbtn.classList.remove('error');\n\t\t\t\t\t\t\tbtn.textContent = originalText;\n\t\t\t\t\t\t}, 3000);\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\tasync function handleSetHttp11() {\n\t\t\t\t\tconst btn = document.getElementById('httpBtn');\n\t\t\t\t\tconst originalText = btn.textContent;\n\t\t\t\t\t\n\t\t\t\t\tbtn.classList.add('loading');\n\t\t\t\t\tbtn.textContent = '设置中...';\n\t\t\t\t\t\n\t\t\t\t\ttry {\n\t\t\t\t\t\t// 发送设置HTTP/1.1指令到后端\n\t\t\t\t\t\tvscode.postMessage({\n\t\t\t\t\t\t\tcommand: 'setHttp11'\n\t\t\t\t\t\t});\n\t\t\t\t\t\t\n\t\t\t\t\t} catch (error) {\n\t\t\t\t\t\tbtn.classList.remove('loading');\n\t\t\t\t\t\tbtn.classList.add('error');\n\t\t\t\t\t\tbtn.textContent = '设置失败';\n\t\t\t\t\t\t\n\t\t\t\t\t\tsetTimeout(() => {\n\t\t\t\t\t\t\tbtn.classList.remove('error');\n\t\t\t\t\t\t\tbtn.textContent = originalText;\n\t\t\t\t\t\t}, 3000);\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\t// 显示重启提醒\n\t\t\t\tfunction showRestartReminder() {\n\t\t\t\t\tconst reminder = document.getElementById('restartReminder');\n\t\t\t\t\tif (reminder) {\n\t\t\t\t\t\treminder.style.display = 'block';\n\t\t\t\t\t}\n\t\t\t\t}\n\n\n\n\n\n\n\n\n\n\t\t\t\t// 清除Cursor代理设置\n\t\t\t\tasync function clearCursorProxy() {\n\t\t\t\t\tconst clearBtn = document.querySelector('#networkErrorModal .clear-proxy-btn');\n\t\t\t\t\tif (clearBtn) {\n\t\t\t\t\t\tclearBtn.disabled = true;\n\t\t\t\t\t\tclearBtn.classList.add('processing');\n\t\t\t\t\t\tclearBtn.textContent = '⏳';\n\t\t\t\t\t}\n\n\t\t\t\t\t// 发送清除代理指令到后端\n\t\t\t\t\tvscode.postMessage({\n\t\t\t\t\t\tcommand: 'clearCursorProxy'\n\t\t\t\t\t});\n\t\t\t\t}\n\n\t\t\t\t// 处理清除代理成功\n\t\t\t\tfunction handleClearProxySuccess() {\n\t\t\t\t\tconst clearBtn = document.querySelector('#networkErrorModal .clear-proxy-btn');\n\t\t\t\t\tif (clearBtn) {\n\t\t\t\t\t\tclearBtn.classList.remove('processing');\n\t\t\t\t\t\tclearBtn.classList.add('success');\n\t\t\t\t\t\tclearBtn.textContent = '✅';\n\t\t\t\t\t\t\n\t\t\t\t\t\tsetTimeout(() => {\n\t\t\t\t\t\t\tclearBtn.disabled = false;\n\t\t\t\t\t\t\tclearBtn.classList.remove('success');\n\t\t\t\t\t\t\tclearBtn.textContent = '🧹';\n\t\t\t\t\t\t}, 3000);\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\t// 处理清除代理失败\n\t\t\t\tfunction handleClearProxyFailed(errorMessage) {\n\t\t\t\t\tconst clearBtn = document.querySelector('#networkErrorModal .clear-proxy-btn');\n\t\t\t\t\tif (clearBtn) {\n\t\t\t\t\t\tclearBtn.disabled = false;\n\t\t\t\t\t\tclearBtn.classList.remove('processing');\n\t\t\t\t\t\tclearBtn.classList.add('error');\n\t\t\t\t\t\tclearBtn.textContent = '❌';\n\t\t\t\t\t\t\n\t\t\t\t\t\t// 显示详细错误信息\n\t\t\t\t\t\tconsole.error('清除代理失败:', errorMessage);\n\t\t\t\t\t\t\n\t\t\t\t\t\tsetTimeout(() => {\n\t\t\t\t\t\t\tclearBtn.classList.remove('error');\n\t\t\t\t\t\t\tclearBtn.textContent = '🧹';\n\t\t\t\t\t\t}, 2000);\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\t// 处理HTTP/1.1设置成功\n\t\t\t\tfunction handleSetHttp11Success() {\n\t\t\t\t\tconst btn = document.getElementById('httpBtn');\n\t\t\t\t\tif (btn) {\n\t\t\t\t\t\tbtn.classList.remove('loading');\n\t\t\t\t\t\tbtn.classList.add('success');\n\t\t\t\t\t\tbtn.textContent = '设置成功';\n\t\t\t\t\t\t\n\t\t\t\t\t\t// 显示重启提醒\n\t\t\t\t\t\tshowRestartReminder();\n\t\t\t\t\t\t\n\t\t\t\t\t\tsetTimeout(() => {\n\t\t\t\t\t\t\tbtn.classList.remove('success');\n\t\t\t\t\t\t\tbtn.textContent = '点击设置';\n\t\t\t\t\t\t}, 3000);\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\t// 处理HTTP/1.1设置失败\n\t\t\t\tfunction handleSetHttp11Failed(errorMessage) {\n\t\t\t\t\tconst btn = document.getElementById('httpBtn');\n\t\t\t\t\tif (btn) {\n\t\t\t\t\t\tbtn.classList.remove('loading');\n\t\t\t\t\t\tbtn.classList.add('error');\n\t\t\t\t\t\tbtn.textContent = '设置失败';\n\t\t\t\t\t\t\n\t\t\t\t\t\t// 显示详细错误信息\n\t\t\t\t\t\tconsole.error('HTTP/1.1设置失败:', errorMessage);\n\t\t\t\t\t\t\n\t\t\t\t\t\tsetTimeout(() => {\n\t\t\t\t\t\t\tbtn.classList.remove('error');\n\t\t\t\t\t\t\tbtn.textContent = '点击设置';\n\t\t\t\t\t\t}, 3000);\n\t\t\t\t\t}\n\t\t\t\t}\n\n\n\n\t\t\t\t// 点击模态框外部不再关闭模态框，避免误操作\n\t\t\t\t// window.onclick = function(event) {\n\t\t\t\t// \tconst infoModal = document.getElementById('infoModal');\n\t\t\t\t// \tconst warningModal = document.getElementById('warningModal');\n\t\t\t\t// \tconst errorModal = document.getElementById('errorModal');\n\t\t\t\t// \tconst confirmModal = document.getElementById('confirmModal');\n\t\t\t\t// \tconst unbindModal = document.getElementById('unbindModal');\n\t\t\t\t// \t\n\t\t\t\t// \tif (event.target === infoModal) {\n\t\t\t\t// \t\tcloseInfoModal();\n\t\t\t\t// \t} else if (event.target === warningModal) {\n\t\t\t\t// \t\tcloseWarningModal();\n\t\t\t\t// \t} else if (event.target === errorModal) {\n\t\t\t\t// \t\tcloseErrorModal();\n\t\t\t\t// \t} else if (event.target === confirmModal) {\n\t\t\t\t// \t\tcloseConfirmModal();\n\t\t\t\t// \t} else if (event.target === unbindModal) {\n\t\t\t\t// \t\tcloseUnbindModal();\n\t\t\t\t// \t}\n\t\t\t\t// }\n\n\t\t\t</script>\n\n\t\t\t<!-- 信息提示模态框 -->\n\t\t\t<div id=\"infoModal\" class=\"confirm-modal\">\n\t\t\t\t<div class=\"confirm-modal-content\">\n\t\t\t\t\t<div class=\"confirm-modal-header\">\n\t\t\t\t\t\t<svg class=\"confirm-modal-icon\" viewBox=\"0 0 24 24\" style=\"color: #2196f3;\">\n\t\t\t\t\t\t\t<path fill=\"currentColor\" d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z\"/>\n\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t<h3 class=\"confirm-modal-title\">操作提示</h3>\n\t\t\t\t\t\t<span class=\"confirm-modal-close\" onclick=\"closeInfoModal()\">&times;</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"confirm-modal-body\">\n\t\t\t\t\t\t<div class=\"confirm-warning-text\" id=\"infoMessage\"></div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"confirm-modal-footer\">\n\t\t\t\t\t\t<button class=\"confirm-btn confirm-btn-confirm\" onclick=\"closeInfoModal()\">我知道了</button>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<!-- 警告提示模态框 -->\n\t\t\t<div id=\"warningModal\" class=\"confirm-modal\">\n\t\t\t\t<div class=\"confirm-modal-content\">\n\t\t\t\t\t<div class=\"confirm-modal-header\">\n\t\t\t\t\t\t<svg class=\"confirm-modal-icon\" viewBox=\"0 0 24 24\">\n\t\t\t\t\t\t\t<path fill=\"currentColor\" d=\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\"/>\n\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t<h3 class=\"confirm-modal-title\">警告提示</h3>\n\t\t\t\t\t\t<span class=\"confirm-modal-close\" onclick=\"closeWarningModal()\">&times;</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"confirm-modal-body\">\n\t\t\t\t\t\t<div class=\"confirm-warning-text\" id=\"warningMessage\"></div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"confirm-modal-footer\">\n\t\t\t\t\t\t<button class=\"confirm-btn confirm-btn-confirm\" onclick=\"closeWarningModal()\">我知道了</button>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<!-- 错误提示模态框 -->\n\t\t\t<div id=\"errorModal\" class=\"confirm-modal\">\n\t\t\t\t<div class=\"confirm-modal-content\">\n\t\t\t\t\t<div class=\"confirm-modal-header\">\n\t\t\t\t\t\t<svg class=\"confirm-modal-icon\" viewBox=\"0 0 24 24\">\n\t\t\t\t\t\t\t<path fill=\"currentColor\" d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 5h2v6h-2V7zm0 8h2v2h-2v-2z\"/>\n\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t<h3 class=\"confirm-modal-title\">操作失败</h3>\n\t\t\t\t\t\t<span class=\"confirm-modal-close\" onclick=\"closeErrorModal()\">&times;</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"confirm-modal-body\">\n\t\t\t\t\t\t<div class=\"confirm-warning-text\" id=\"errorMessage\"></div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"confirm-modal-footer\">\n\t\t\t\t\t\t<button class=\"confirm-btn confirm-btn-confirm\" onclick=\"closeErrorModal()\">我知道了</button>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t\t\t\t\t<!-- 确认模态框 -->\n\t\t\t\t<div id=\"confirmModal\" class=\"confirm-modal\">\n\t\t\t\t\t<div class=\"confirm-modal-content\">\n\t\t\t\t\t\t<div class=\"confirm-modal-header\">\n\t\t\t\t\t\t\t<svg class=\"confirm-modal-icon\" viewBox=\"0 0 24 24\">\n\t\t\t\t\t\t\t\t<path fill=\"currentColor\" d=\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\"/>\n\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t<h3 class=\"confirm-modal-title\">操作确认</h3>\n\t\t\t\t\t\t\t<span class=\"confirm-modal-close\" onclick=\"closeConfirmModal()\">&times;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"confirm-modal-body\">\n\t\t\t\t\t\t\t<div class=\"confirm-warning-text\" id=\"confirmMessage\"></div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"confirm-modal-footer\">\n\t\t\t\t\t\t\t<button class=\"confirm-btn confirm-btn-cancel\" id=\"confirmCancelBtn\" onclick=\"confirmModalCancel()\">取消</button>\n\t\t\t\t\t\t\t<button class=\"confirm-btn confirm-btn-confirm\" id=\"confirmOkBtn\" onclick=\"confirmModalOk()\">确定</button>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<!-- 🌟 全新网络诊断模态框 🌟 -->\n\t\t\t<div id=\"networkErrorModal\" class=\"confirm-modal\">\n\t\t\t\t<div class=\"confirm-modal-content\">\n\t\t\t\t\t<div class=\"confirm-modal-header\">\n\t\t\t\t\t\t<svg class=\"confirm-modal-icon\" viewBox=\"0 0 24 24\" style=\"color: #ff9500;\">\n\t\t\t\t\t\t\t<path fill=\"currentColor\" d=\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\"/>\n\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t<h3 class=\"confirm-modal-title\">读取配置失败</h3>\n\t\t\t\t\t\t<span class=\"confirm-modal-close\" onclick=\"closeNetworkErrorModal()\">&times;</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"confirm-modal-body\">\n\t\t\t\t\t\t<div class=\"network-fix-list\">\n\t\t\t\t\t\t\t<div class=\"fix-item\">\n\t\t\t\t\t\t\t\t<div class=\"fix-content\">\n\t\t\t\t\t\t\t\t\t<span class=\"fix-title\">清除Cursor代理地址</span>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<button class=\"fix-btn fix-clear\" id=\"clearBtn\" onclick=\"handleClearProxy()\" title=\"清除代理设置\">点击清除</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<div class=\"fix-item\">\n\t\t\t\t\t\t\t\t<div class=\"fix-content\">\n\t\t\t\t\t\t\t\t\t<span class=\"fix-title\">设置HTTP/1.1协议<br><span style=\"font-size: 10px; color:rgb(87, 255, 53); font-weight: 600;\">（免魔法模式请忽略此设置）</span></span>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<button class=\"fix-btn fix-http\" id=\"httpBtn\" onclick=\"handleSetHttp11()\" title=\"配置HTTP/1.1协议\">点击设置</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<div class=\"proxy-clear-tip\" style=\"margin-top: 8px; padding: 8px 12px; background: var(--vscode-notifications-background); border-radius: 6px; border: 1px solid var(--vscode-widget-border);\">\n\t\t\t\t\t\t\t\t<span style=\"font-size: 12px; color: var(--vscode-descriptionForeground);\">💡清除后，开Tun模式（虚拟网卡）、规则、测选延迟低的，然后重启Cursor！<span style=\"font-size: 10px; color:rgb(87, 255, 53); font-weight: 600;\"><br>（免魔法模式请忽略此设置）</span></span>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<div class=\"restart-reminder\" id=\"restartReminder\" style=\"display: none;\">\n\t\t\t\t\t\t\t\tℹ️ 修复完成，请重启Cursor让设置生效\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<div class=\"network-help\">\n\t\t\t\t\t\t\t\t如果以上方案解决不了，请联系售后！\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"confirm-modal-footer\">\n\t\t\t\t\t\t<button class=\"confirm-btn confirm-btn-confirm\" onclick=\"closeNetworkErrorModal()\">我知道了</button>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t\t<!-- 解绑设备模态框 -->\n\t\t\t\t<div id=\"unbindModal\" class=\"confirm-modal\">\n\t\t\t\t\t<div class=\"confirm-modal-content\">\n\t\t\t\t\t\t<div class=\"confirm-modal-header\">\n\t\t\t\t\t\t\t<svg class=\"confirm-modal-icon\" viewBox=\"0 0 24 24\">\n\t\t\t\t\t\t\t\t<path fill=\"currentColor\" d=\"M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z\"/>\n\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t<h3 class=\"confirm-modal-title\">解绑设备</h3>\n\t\t\t\t\t\t\t<span class=\"confirm-modal-close\" onclick=\"closeUnbindModal()\">&times;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"confirm-modal-body\">\n\t\t\t\t\t\t\t<div style=\"margin-bottom: 16px; font-size: 14px; color: var(--vscode-foreground);\">\n\t\t\t\t\t\t\t\t请输入要解绑的激活码 (CDK)：\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<input type=\"text\" \n\t\t\t\t\t\t\t\t   id=\"unbindCdkInput\" \n\t\t\t\t\t\t\t\t   class=\"input-field\" \n\t\t\t\t\t\t\t\t   placeholder=\"请输入激活码\" \n\t\t\t\t\t\t\t\t   style=\"width: 100%; box-sizing: border-box; margin-bottom: 12px;\"\n\t\t\t\t\t\t\t\t   onkeypress=\"handleUnbindInputKeypress(event)\">\n\t\t\t\t\t\t\t<div style=\"font-size: 12px; color: var(--vscode-descriptionForeground); opacity: 0.8;\">\n\t\t\t\t\t\t\t\t提示：所有设备都会解绑，请勿恶意解绑！\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"confirm-modal-footer\">\n\t\t\t\t\t\t\t<button class=\"confirm-btn confirm-btn-cancel\" onclick=\"closeUnbindModal()\">取消</button>\n\t\t\t\t\t\t\t<button class=\"confirm-btn confirm-btn-confirm\" onclick=\"confirmUnbind()\" style=\"background: linear-gradient(135deg, #cc4444, #b53535);\">解绑</button>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t</body>\n\t\t</html>";
   }
   async ["_updateWebview"]() {
     if (this._view) {
-      let _0x15c2ca = await this._getWebviewContent();
-      this._view.webview.html = _0x15c2ca;
+      let _0x964a69 = await this._getWebviewContent();
+      this._view.webview.html = _0x964a69;
       this._view.webview.postMessage({
         "command": "updateView"
       });
     }
   }
-  async ["_handleActivation"](_0x5b3aea, _0x45e2e5 = !1) {
+  async ["_handleActivation"](_0x3ccec3, _0x5ef189 = !1) {
     try {
-      _0x45e2e5 || (await this._context.globalState.update("userDeactivated", !1), console.log("激活按钮: 已重置用户停用状态为false"));
-      let _0x4a7915 = "",
-        _0x5156ca = "",
-        _0x3fa11c = 0;
+      _0x5ef189 || (await this._context.globalState.update("userDeactivated", !1), console.log("激活按钮: 已重置用户停用状态为false"));
+      let _0xd3ea7a = "",
+        _0x360713 = "",
+        _0x2f2575 = 0;
       try {
-        let _0xf73da5 = await _0x4be39f();
-        if (_0xf73da5.success) {
-          _0x4a7915 = _0xf73da5.data.cdk_expiration_prompt;
-          _0x5156ca = _0xf73da5.data.buy_url;
-          _0x3fa11c = _0xf73da5.data.operation_mode;
-          console.log("最新版本:", _0xf73da5.data.latest_version);
-          console.log("当前版本:", _0x26f07f);
-          let _0x26595e = _0xf73da5.data.latest_version;
-          if (_0x26595e && _0x26595e !== _0x26f07f) {
-            this._updateWebview();
-            let _0x3fe805 = [{
-              "title": "立即更新",
-              "isCloseAffordance": !1
-            }, {
-              "title": "稍后更新",
-              "isCloseAffordance": !0
-            }];
-            if ((await _0x4dc466.window.showWarningMessage("" + _0xf73da5.data.update_msg, ..._0x3fe805))?.["title"] === "立即更新") {
-              let _0x3421b9 = _0xf73da5.data.download_url;
-              _0x3421b9 && _0x3bfca2(_0x3421b9);
+        let _0x5105ca = await _0xafae99();
+        if (_0x5105ca.success) {
+          _0xd3ea7a = _0x5105ca.data.cdk_expiration_prompt;
+          _0x360713 = _0x5105ca.data.buy_url;
+          _0x2f2575 = _0x5105ca.data.operation_mode;
+          console.log("最新版本:", _0x5105ca.data.latest_version);
+          console.log("当前版本:", _0x517d34);
+          let _0x2981c8 = _0x5105ca.data.latest_version;
+          if (_0x2981c8 && _0x2981c8 !== _0x517d34) {
+            if (this._updateWebview(), await this._showConfirmModal("" + _0x5105ca.data.update_msg, "立即更新", "稍后更新")) {
+              let _0x406a7e = _0x5105ca.data.download_url;
+              _0x406a7e && _0x328cd7(_0x406a7e);
             }
             return;
           }
-          if (console.log("是否维护:", _0xf73da5.data.maintenance_mode), console.log("维护消息:", _0xf73da5.data.maintenance_msg), _0xf73da5.data.maintenance_mode) {
-            _0x4dc466.window.showWarningMessage(_0xf73da5.data.maintenance_msg);
+          if (console.log("是否维护:", _0x5105ca.data.maintenance_mode), console.log("维护消息:", _0x5105ca.data.maintenance_msg), _0x5105ca.data.maintenance_mode) {
+            this._showModalWithDelay("showWarningModal", _0x5105ca.data.maintenance_msg);
             this._updateWebview();
+            this._view && this._view.webview.postMessage({
+              "command": "stopCIQuotaRefresh"
+            });
             return;
           }
           this._view && this._view.webview.postMessage({
             "command": "updateOperationMode",
-            "mode": _0x3fa11c
+            "mode": _0x2f2575
           });
         } else {
-          _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试1" + JSON.stringify(_0xf73da5));
+          this._showNetworkErrorModal();
           this._updateWebview();
           return;
         }
-      } catch (_0x3008b9) {
-        console.error(_0x3008b9);
-        _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试2");
+      } catch (_0x91b8b2) {
+        console.error(_0x91b8b2);
+        this._showNetworkErrorModal();
         this._updateWebview();
         return;
       }
@@ -3148,109 +3204,94 @@ var _0x5d9733 = class {
         "command": "disableActivateButton",
         "loading": !0
       });
-      await _0x4dc466.window.withProgress({
-        "location": _0x4dc466.ProgressLocation.Notification,
-        "title": "正在请求，请稍等...(1/3)",
+      await _0x153215.window.withProgress({
+        "location": _0x153215.ProgressLocation.Notification,
+        "title": "正在请求，请稍等...",
         "cancellable": !1
-      }, async _0x4fb342 => {
-        let _0x4a145d = "CI_" + (await (0, _0x42f21a.machineId)()),
-          _0x254233 = _0x49e9c0.getSystemInfo().version;
-        if (console.log("Cursor版本号", _0x254233), !_0x254233 || _0x254233 === "未知") throw new Error("Cursor版本号获取失败");
-        let _0x2da22f = 3,
-          _0x402d7a = 0,
-          _0x26c73c = null,
-          _0x397a98 = null,
-          _0x5e9a3a = "";
-        _0x3fa11c === 0 ? _0x5b3aea ? _0x5e9a3a = _0x5b3aea : _0x5e9a3a = "cdk-cdk-cdk-cdk" : _0x5e9a3a = _0x5b3aea;
-        let _0x1269b7 = 1000,
-          _0x30ee70 = "正在重试...(%d/%d)";
-        for (; _0x402d7a < _0x2da22f;) try {
-          if (console.log("正在激活 (尝试 " + (_0x402d7a + 1) + "/" + _0x2da22f + ")", _0x5e9a3a, _0x254233, _0x4a145d), _0x26c73c = await _0x222ede.activateCDK(_0x5e9a3a, _0x254233, _0x4a145d), console.log("激活结果", _0x26c73c), _0x26c73c.success) break;
-          if (_0x26c73c.message && _0x26c73c.message.includes("已过期")) break;
-          _0x397a98 = new Error(_0x26c73c.message || "激活失败");
-          _0x402d7a++;
-          _0x402d7a < _0x2da22f && (await new Promise(_0x2b6acf => setTimeout(_0x2b6acf, _0x1269b7)), _0x4fb342.report({
-            "message": _0x30ee70.replace("%d", String(_0x402d7a + 1)).replace("%d", String(_0x2da22f))
-          }));
-        } catch (_0x3f1843) {
-          _0x397a98 = _0x3f1843;
-          _0x402d7a++;
-          _0x402d7a < _0x2da22f && (await new Promise(_0x3255f7 => setTimeout(_0x3255f7, _0x1269b7)), _0x4fb342.report({
-            "message": _0x30ee70.replace("%d", String(_0x402d7a + 1)).replace("%d", String(_0x2da22f))
-          }));
-        }
-        if (!_0x26c73c || !_0x26c73c.success && !(_0x26c73c.message && _0x26c73c.message.includes("已过期"))) throw _0x397a98 || new Error("请求失败，请稍后重试");
-        if (_0x3fa11c !== 0) {
-          if (!_0x26c73c.success) {
-            if (_0x26c73c.message && _0x26c73c.message.includes("已过期")) {
+      }, async _0x530a08 => {
+        let _0x716574 = "CI_" + (await (0, _0x27fd84.machineId)()),
+          _0x48ed75 = _0x28e985.getSystemInfo().version;
+        if (console.log("Cursor版本号", _0x48ed75), !_0x48ed75 || _0x48ed75 === "未知") throw new Error("Cursor版本号获取失败");
+        let _0x4b0eba = "";
+        _0x2f2575 === 0 ? _0x3ccec3 ? _0x4b0eba = _0x3ccec3 : _0x4b0eba = "cdk-cdk-cdk-cdk" : _0x4b0eba = _0x3ccec3;
+        console.log("正在激活", _0x4b0eba, _0x48ed75, _0x716574);
+        let _0x1d401c = await _0x1edf4a.activateCDK(_0x4b0eba, _0x48ed75, _0x716574);
+        if (console.log("激活结果", _0x1d401c), !_0x1d401c || !_0x1d401c.success && !(_0x1d401c.message && _0x1d401c.message.includes("已过期"))) throw new Error(_0x1d401c?.["message"] || "请求失败，请稍后重试");
+        if (_0x2f2575 !== 0) {
+          if (!_0x1d401c.success) {
+            if (_0x1d401c.message && _0x1d401c.message.includes("已过期")) {
               this._state = {
                 ...this._state,
                 "activationStatus": "已过期"
               };
-              console.log("已过期", _0x26c73c.expiresAt);
-              await this._context.globalState.update("activationCDK", _0x5b3aea);
+              await this._context.globalState.update("cachedCIQuota", void 0);
+              console.log("已过期", _0x1d401c.expiresAt);
+              await this._context.globalState.update("activationCDK", _0x3ccec3);
               this._updateWebview();
-              _0x4fb342.report({
+              _0x530a08.report({
                 "increment": 100
               });
-              let _0x4ca865 = _0x26c73c.expiresAt || new Date().toLocaleString();
+              let _0x1191ee = _0x1d401c.expiresAt || new Date().toLocaleString();
               this._state = {
                 ...this._state,
-                "activationStatus": "已到期",
-                "activationCode": _0x5b3aea,
-                "activationTime": _0x4ca865,
+                "activationStatus": "已过期",
+                "activationCode": _0x3ccec3,
+                "activationTime": _0x1191ee,
                 "balance": "0"
               };
+              await this._context.globalState.update("cachedCIQuota", void 0);
               this._updateWebview();
-              let _0x211991 = [{
-                "title": "购买激活码",
-                "isCloseAffordance": !1
-              }, {
-                "title": "取消",
-                "isCloseAffordance": !0
-              }];
-              (await _0x4dc466.window.showWarningMessage(_0x4a7915 || "激活码已过期，请购买新的激活码", ..._0x211991))?.["title"] === "购买激活码" && _0x5156ca && _0x3bfca2(_0x5156ca);
+              (await this._showConfirmModal(_0xd3ea7a || "激活码已过期，请购买新的激活码", "购买激活码", "取消")) && _0x360713 && _0x328cd7(_0x360713);
               return;
-            } else throw new Error(_0x26c73c.message || "激活失败");
+            } else throw new Error(_0x1d401c.message || "激活失败");
           }
           this._state = {
             ...this._state,
             "activationStatus": "已授权",
-            "activationCode": _0x26c73c.data.cdk,
-            "activationTime": _0x26c73c.data.expiresAt || new Date().toLocaleString(),
-            "accountInfo": this._maskEmail(_0x26c73c.data.email) || this._state.accountInfo,
-            "balance": _0x26c73c.data.points?.["toString"]() || this._state.balance,
-            "version": _0x254233,
-            "boundDevices": _0x26c73c.data.boundDevices?.["toString"]() || "0"
+            "activationCode": _0x1d401c.data.cdk,
+            "activationTime": _0x1d401c.data.expiresAt || new Date().toLocaleString(),
+            "accountInfo": this._maskEmail(_0x1d401c.data.email) || this._state.accountInfo,
+            "balance": _0x1d401c.data.points?.["toString"]() || this._state.balance,
+            "version": _0x48ed75,
+            "boundDevices": _0x1d401c.data.boundDevices?.["toString"]() || "0",
+            "magicFreeEnabled": _0x1d401c.data.magicFreeEnabled || !1
           };
+          await this._context.globalState.update("magicFreeEnabled", _0x1d401c.data.magicFreeEnabled || !1);
           this._updateWebview();
+          _0x5ef189 ? setTimeout(() => {
+            this._refreshCIQuotaSilent();
+          }, 3000) : setTimeout(() => {
+            this._refreshCIQuotaSilent();
+          }, 1000);
         } else this._state = {
           ...this._state,
           "activationStatus": "已授权",
-          "activationCode": _0x26c73c.data.cdk,
-          "activationTime": _0x26c73c.data.expiresAt || new Date().toLocaleString(),
-          "accountInfo": this._maskEmail(_0x26c73c.data.email) || this._state.accountInfo,
-          "balance": _0x26c73c.data.points?.["toString"]() || this._state.balance,
-          "version": _0x254233,
-          "boundDevices": _0x26c73c.data.boundDevices?.["toString"]() || "0"
-        }, this._updateWebview();
-        await this._context.globalState.update("activationCDK", _0x26c73c.data.cdk);
+          "activationCode": _0x1d401c.data.cdk,
+          "activationTime": _0x1d401c.data.expiresAt || new Date().toLocaleString(),
+          "accountInfo": this._maskEmail(_0x1d401c.data.email) || this._state.accountInfo,
+          "balance": _0x1d401c.data.points?.["toString"]() || this._state.balance,
+          "version": _0x48ed75,
+          "boundDevices": _0x1d401c.data.boundDevices?.["toString"]() || "0",
+          "magicFreeEnabled": _0x1d401c.data.magicFreeEnabled || !1
+        }, await this._context.globalState.update("magicFreeEnabled", _0x1d401c.data.magicFreeEnabled || !1), this._updateWebview();
+        await this._context.globalState.update("activationCDK", _0x1d401c.data.cdk);
+        await this._initializeCIQuota();
         this._updateWebview();
-        let _0x4ac26e = _0x49e9c0.isExtensionReset(),
-          _0x4659a0 = _0x49e9c0.isWorkbenchReset();
-        _0x4ac26e.success || console.error("检查插件状态失败: " + _0x4ac26e.message);
-        _0x4659a0.success || console.error("检查插件状态失败: " + _0x4659a0.message);
-        let _0x15a719 = this._context.globalState.get("userDeactivated", !1);
-        if (console.log("用户停用状态:", _0x15a719), (!_0x4ac26e.isReset || !_0x4659a0.isReset || !_0x45e2e5) && !_0x15a719) try {
+        let _0x27f196 = _0x28e985.isExtensionReset(),
+          _0x3e1563 = _0x28e985.isWorkbenchReset();
+        _0x27f196.success || console.error("检查插件状态失败: " + _0x27f196.message);
+        _0x3e1563.success || console.error("检查插件状态失败: " + _0x3e1563.message);
+        let _0x38f08a = this._context.globalState.get("userDeactivated", !1);
+        if (console.log("用户停用状态:", _0x38f08a), (!_0x27f196.isReset || !_0x3e1563.isReset || !_0x5ef189) && !_0x38f08a) try {
           this._view && this._view.webview.postMessage({
             "command": "disableResetButton"
           });
           await this._handleResetConfig();
-        } catch (_0xd7639f) {
-          console.error("重置插件失败: " + _0xd7639f);
+        } catch (_0x176329) {
+          console.error("重置插件失败: " + _0x176329);
         }
       });
-    } catch (_0x4c025f) {
+    } catch (_0x93e6f9) {
       this._state.activationStatus !== "已授权" && (this._state = {
         ...this._state,
         "activationStatus": "未授权",
@@ -3258,52 +3299,47 @@ var _0x5d9733 = class {
         "activationTime": "",
         "accountInfo": "",
         "balance": ""
-      }, this._updateWebview(), await this._context.globalState.update("activationCDK", void 0));
-      _0x4dc466.window.showErrorMessage("" + _0x4c025f.message);
+      }, this._updateWebview(), await this._context.globalState.update("activationCDK", void 0), await this._context.globalState.update("cachedCIQuota", void 0));
+      this._showModalWithDelay("showErrorModal", "" + _0x93e6f9.message);
       this._updateWebview();
     }
   }
   async ["_handleSwitchAccount"]() {
     try {
-      let _0x40afd9 = _0x49e9c0.isExtensionReset(),
-        _0x3f7666 = _0x49e9c0.isWorkbenchReset();
-      if (!_0x40afd9.isReset || !_0x3f7666.isReset) {
-        _0x4dc466.window.showWarningMessage("⚠️检测到您当前未重置插件");
-        _0x4dc466.window.showWarningMessage("😊请先点击「重置插件」按钮，然后重启 Cursor 以生效！");
+      if (!(await this._showConfirmModal("<div class=\"switch-account-warning\">\n\t\t\t\t\t<div class=\"warning-header\">\n\t\t\t\t\t\t<span class=\"warning-icon\">🚨</span>\n\t\t\t\t\t\t<span>换号提醒</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"warning-content\">\n\t\t\t\t\t\t<div class=\"warning-line\">\n\t\t\t\t\t\t\t<span class=\"content-icon\">💰</span>\n\t\t\t\t\t\t\t<span>此操作将扣除您的积分</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"warning-line\">\n\t\t\t\t\t\t\t<span class=\"content-icon\">💀</span>\n\t\t\t\t\t\t\t<span>积分耗尽等于激活码作废</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"final-confirm\">\n\t\t\t\t\t\t确定要继续执行换号操作吗？\n\t\t\t\t\t</div>\n\t\t\t\t</div>", "确认换号", "取消", 0))) return;
+      let _0x1a58d = _0x28e985.isExtensionReset(),
+        _0x46e77e = _0x28e985.isWorkbenchReset();
+      if (!_0x1a58d.isReset || !_0x46e77e.isReset) {
+        this._showModalWithDelay("showWarningModal", "⚠️检测到您当前未重置插件<br/>😊请先点击「重置插件」按钮，然后重启 Cursor 以生效！");
         return;
       }
-      let _0x48137e = "",
-        _0x22ce18 = "";
+      let _0x88e1d9 = "",
+        _0x1443ac = "";
       try {
-        let _0x4d8f50 = await _0x4be39f();
-        if (_0x4d8f50.success) {
-          _0x48137e = _0x4d8f50.data.cdk_expiration_prompt;
-          _0x22ce18 = _0x4d8f50.data.buy_url;
-          console.log("最新版本:", _0x4d8f50.data.latest_version);
-          console.log("当前版本:", _0x26f07f);
-          let _0x5192bb = _0x4d8f50.data.latest_version;
-          if (_0x5192bb && _0x5192bb !== _0x26f07f) {
-            this._updateWebview();
-            let _0x3e1dd1 = [{
-              "title": "立即更新",
-              "isCloseAffordance": !1
-            }, {
-              "title": "稍后更新",
-              "isCloseAffordance": !0
-            }];
-            if ((await _0x4dc466.window.showWarningMessage("" + _0x4d8f50.data.update_msg, ..._0x3e1dd1))?.["title"] === "立即更新") {
-              let _0x331ed1 = _0x4d8f50.data.download_url;
-              _0x331ed1 && _0x3bfca2(_0x331ed1);
+        let _0x2038c9 = await _0xafae99();
+        if (_0x2038c9.success) {
+          _0x88e1d9 = _0x2038c9.data.cdk_expiration_prompt;
+          _0x1443ac = _0x2038c9.data.buy_url;
+          console.log("最新版本:", _0x2038c9.data.latest_version);
+          console.log("当前版本:", _0x517d34);
+          let _0x47b314 = _0x2038c9.data.latest_version;
+          if (_0x47b314 && _0x47b314 !== _0x517d34) {
+            if (this._updateWebview(), await this._showConfirmModal("" + _0x2038c9.data.update_msg, "立即更新", "稍后更新")) {
+              let _0x55eddc = _0x2038c9.data.download_url;
+              _0x55eddc && _0x328cd7(_0x55eddc);
             }
             return;
           }
-          if (console.log("是否维护:", _0x4d8f50.data.maintenance_mode), console.log("维护消息:", _0x4d8f50.data.maintenance_msg), _0x4d8f50.data.maintenance_mode) {
-            _0x4dc466.window.showWarningMessage(_0x4d8f50.data.maintenance_msg);
+          if (console.log("是否维护:", _0x2038c9.data.maintenance_mode), console.log("维护消息:", _0x2038c9.data.maintenance_msg), _0x2038c9.data.maintenance_mode) {
+            this._showModalWithDelay("showWarningModal", _0x2038c9.data.maintenance_msg);
             this._updateWebview();
+            this._view && this._view.webview.postMessage({
+              "command": "stopCIQuotaRefresh"
+            });
             return;
           }
-          let _0x2d22f3 = _0x4d8f50.data.operation_mode;
-          if (_0x2d22f3 === 0) {
+          let _0x2315a6 = _0x2038c9.data.operation_mode;
+          if (_0x2315a6 === 0) {
             if (this._state.activationCode) this._state = {
               ...this._state,
               "activationStatus": "已授权"
@@ -3314,74 +3350,84 @@ var _0x5d9733 = class {
           }
           this._view && this._view.webview.postMessage({
             "command": "updateOperationMode",
-            "mode": _0x2d22f3
+            "mode": _0x2315a6
           });
         } else {
-          _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
+          this._showNetworkErrorModal();
           this._updateWebview();
           return;
         }
-      } catch (_0x566347) {
-        console.error(_0x566347);
-        _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
+      } catch (_0x27e87e) {
+        console.error(_0x27e87e);
+        this._showNetworkErrorModal();
         this._updateWebview();
         return;
       }
-      let _0x4d9107 = "CI_" + (await (0, _0x42f21a.machineId)()),
-        _0x599a45 = this._state.activationCode;
-      if (!_0x599a45) {
-        _0x4dc466.window.showErrorMessage("请先激活软件");
+      let _0x3f9080 = "CI_" + (await (0, _0x27fd84.machineId)()),
+        _0x2112e9 = this._state.activationCode;
+      if (!_0x2112e9) {
+        this._view && this._view.webview.postMessage({
+          "command": "showErrorModal",
+          "message": "请先激活软件"
+        });
         this._updateWebview();
         return;
       }
       this._view?.["webview"]["postMessage"]({
         "command": "disableSwitchButton"
       });
-      await _0x4dc466.window.withProgress({
-        "location": _0x4dc466.ProgressLocation.Notification,
+      await _0x153215.window.withProgress({
+        "location": _0x153215.ProgressLocation.Notification,
         "title": "正在无感换号...",
         "cancellable": !1
-      }, async _0xef0459 => {
-        let _0x1d41f5 = _0x49e9c0.getSystemInfo().version;
-        if (console.log("Cursor版本号", _0x1d41f5), !_0x1d41f5 || _0x1d41f5 === "未知") throw new Error("Cursor版本号获取失败");
-        let _0x138649 = await _0x222ede.refreshAuth(_0x599a45, _0x4d9107, _0x1d41f5, !1);
-        if (console.log("换号结果", _0x138649), _0x138649.message && _0x138649.message.includes("已过期")) {
+      }, async _0x4a83df => {
+        let _0x1a5a54 = _0x28e985.getSystemInfo().version;
+        if (console.log("Cursor版本号", _0x1a5a54), !_0x1a5a54 || _0x1a5a54 === "未知") throw new Error("Cursor版本号获取失败");
+        let _0x438917 = await _0x1edf4a.refreshAuth(_0x2112e9, _0x3f9080, _0x1a5a54, !1);
+        if (console.log("换号结果", _0x438917), _0x438917.status === "error") throw new Error(_0x438917.message || "换号失败");
+        if (_0x438917.message && _0x438917.message.includes("已过期")) {
           this._state = {
             ...this._state,
             "activationStatus": "已过期"
           };
+          await this._context.globalState.update("cachedCIQuota", void 0);
           this._updateWebview();
-          _0xef0459.report({
+          _0x4a83df.report({
             "increment": 100
           });
           this._state = {
             ...this._state,
             "activationStatus": "已过期",
-            "activationTime": _0x138649.expiresAt || new Date().toLocaleString(),
+            "activationTime": _0x438917.expiresAt || new Date().toLocaleString(),
             "balance": "0"
           };
+          await this._context.globalState.update("cachedCIQuota", void 0);
           this._updateWebview();
-          let _0x43866a = [{
-            "title": "购买激活码",
-            "isCloseAffordance": !1
-          }, {
-            "title": "取消",
-            "isCloseAffordance": !0
-          }];
-          (await _0x4dc466.window.showWarningMessage(_0x48137e || "激活码已过期，请购买新的激活码", ..._0x43866a))?.["title"] === "购买激活码" && _0x22ce18 && _0x3bfca2(_0x22ce18);
+          (await this._showConfirmModal(_0x88e1d9 || "激活码已过期，请购买新的激活码", "购买激活码", "取消")) && _0x1443ac && _0x328cd7(_0x1443ac);
           return;
         }
-        if (!_0x138649.success) throw new Error(_0x138649.message || "换号失败");
+        if (!_0x438917.success) throw new Error(_0x438917.message || "换号失败");
+        if (_0x438917.data.points !== void 0) {
+          let _0x42fb5a = parseInt(_0x438917.data.points.toString(), 10),
+            _0x42f050 = Math.min(Math.max(_0x42fb5a, 0), 100),
+            _0x2925d7 = {
+              "value": _0x42fb5a,
+              "percentage": _0x42f050
+            };
+          await this._context.globalState.update("cachedCIQuota", _0x2925d7);
+        }
         this._state = {
           ...this._state,
-          "accountInfo": this._maskEmail(_0x138649.data.email)
+          "accountInfo": this._maskEmail(_0x438917.data.email),
+          "balance": _0x438917.data.points?.["toString"]() || this._state.balance
         };
         this._updateWebview();
-        console.log("message", _0x138649.message);
-        _0x138649.message && _0x4dc466.window.showInformationMessage(_0x138649.message);
+        console.log("message", _0x438917.message);
+        let _0xaad98a = _0x438917.message || "无感换号成功";
+        this._showModalWithDelay("showInfoModal", _0xaad98a);
       });
-    } catch (_0x41d812) {
-      _0x4dc466.window.showErrorMessage("" + _0x41d812.message);
+    } catch (_0x14c061) {
+      this._showModalWithDelay("showErrorModal", "" + _0x14c061.message);
     } finally {
       this._view?.["webview"]["postMessage"]({
         "command": "enableSwitchButton"
@@ -3392,38 +3438,33 @@ var _0x5d9733 = class {
     try {
       await this._context.globalState.update("userDeactivated", !1);
       console.log("重置按钮: 已重置用户停用状态为false");
-      let _0x49f36b = "",
-        _0x2d00e6 = "";
+      let _0x531699 = "",
+        _0x5e973f = "";
       try {
-        let _0x30890e = await _0x4be39f();
-        if (_0x30890e.success) {
-          _0x49f36b = _0x30890e.data.cdk_expiration_prompt;
-          _0x2d00e6 = _0x30890e.data.buy_url;
-          console.log("最新版本:", _0x30890e.data.latest_version);
-          console.log("当前版本:", _0x26f07f);
-          let _0x377508 = _0x30890e.data.latest_version;
-          if (_0x377508 && _0x377508 !== _0x26f07f) {
-            this._updateWebview();
-            let _0x49d2e0 = [{
-              "title": "立即更新",
-              "isCloseAffordance": !1
-            }, {
-              "title": "稍后更新",
-              "isCloseAffordance": !0
-            }];
-            if ((await _0x4dc466.window.showWarningMessage("" + _0x30890e.data.update_msg, ..._0x49d2e0))?.["title"] === "立即更新") {
-              let _0x53e6a1 = _0x30890e.data.download_url;
-              _0x53e6a1 && _0x3bfca2(_0x53e6a1);
+        let _0x3b1e62 = await _0xafae99();
+        if (_0x3b1e62.success) {
+          _0x531699 = _0x3b1e62.data.cdk_expiration_prompt;
+          _0x5e973f = _0x3b1e62.data.buy_url;
+          console.log("最新版本:", _0x3b1e62.data.latest_version);
+          console.log("当前版本:", _0x517d34);
+          let _0x2869a2 = _0x3b1e62.data.latest_version;
+          if (_0x2869a2 && _0x2869a2 !== _0x517d34) {
+            if (this._updateWebview(), await this._showConfirmModal("" + _0x3b1e62.data.update_msg, "立即更新", "稍后更新")) {
+              let _0x409842 = _0x3b1e62.data.download_url;
+              _0x409842 && _0x328cd7(_0x409842);
             }
             return;
           }
-          if (console.log("是否维护:", _0x30890e.data.maintenance_mode), console.log("维护消息:", _0x30890e.data.maintenance_msg), _0x30890e.data.maintenance_mode) {
-            _0x4dc466.window.showWarningMessage(_0x30890e.data.maintenance_msg);
+          if (console.log("是否维护:", _0x3b1e62.data.maintenance_mode), console.log("维护消息:", _0x3b1e62.data.maintenance_msg), _0x3b1e62.data.maintenance_mode) {
+            this._showModalWithDelay("showWarningModal", _0x3b1e62.data.maintenance_msg);
             this._updateWebview();
+            this._view && this._view.webview.postMessage({
+              "command": "stopCIQuotaRefresh"
+            });
             return;
           }
-          let _0x569c2a = _0x30890e.data.operation_mode;
-          if (_0x569c2a === 0) {
+          let _0x122cba = _0x3b1e62.data.operation_mode;
+          if (_0x122cba === 0) {
             if (this._state.activationCode) this._state = {
               ...this._state,
               "activationStatus": "已授权"
@@ -3434,162 +3475,714 @@ var _0x5d9733 = class {
           }
           this._view && this._view.webview.postMessage({
             "command": "updateOperationMode",
-            "mode": _0x569c2a
+            "mode": _0x122cba
           });
         } else {
-          _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
+          this._showNetworkErrorModal();
           this._updateWebview();
           return;
         }
-      } catch (_0x161425) {
-        console.error(_0x161425);
-        _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
+      } catch (_0x4bfed5) {
+        console.error(_0x4bfed5);
+        this._showNetworkErrorModal();
         this._updateWebview();
         return;
       }
       if (!this._state.activationCode) {
-        _0x4dc466.window.showErrorMessage("请先激活软件");
+        this._view && this._view.webview.postMessage({
+          "command": "showErrorModal",
+          "message": "请先激活软件"
+        });
         this._updateWebview();
         return;
       }
-      await _0x4dc466.window.withProgress({
-        "location": _0x4dc466.ProgressLocation.Notification,
+      await _0x153215.window.withProgress({
+        "location": _0x153215.ProgressLocation.Notification,
         "title": "正在重置插件，请稍候…（耗时取决于网络状态）",
         "cancellable": !1
-      }, async _0x49cea9 => {
+      }, async _0x39a8ef => {
         try {
-          let _0x16924f = "CI_" + (await (0, _0x42f21a.machineId)()),
-            _0x3ac3ef = _0x49e9c0.getSystemInfo().version,
-            _0x5acee6 = this._state.activationCode,
-            _0x5109cb = await _0x222ede.getCode(_0x5acee6, _0x3ac3ef, _0x16924f);
-          if (console.log("获取代码响应:", _0x5109cb), _0x5109cb.message && _0x5109cb.message.includes("已过期")) {
-            this._state = {
-              ...this._state,
-              "activationStatus": "已过期"
-            };
-            this._updateWebview();
-            _0x49cea9.report({
-              "increment": 100
-            });
-            this._state = {
-              ...this._state,
-              "activationStatus": "已过期",
-              "activationTime": _0x5109cb.expiresAt || new Date().toLocaleString(),
-              "balance": "0"
-            };
-            this._updateWebview();
-            let _0x20053e = [{
-              "title": "购买激活码",
-              "isCloseAffordance": !1
-            }, {
-              "title": "取消",
-              "isCloseAffordance": !0
-            }];
-            (await _0x4dc466.window.showWarningMessage(_0x49f36b || "激活码已过期，请购买新的激活码", ..._0x20053e))?.["title"] === "购买激活码" && _0x2d00e6 && _0x3bfca2(_0x2d00e6);
-            return;
+          let _0x36247b = "CI_" + (await (0, _0x27fd84.machineId)()),
+            _0x37f0c0 = _0x28e985.getSystemInfo().version,
+            _0x4cdb39 = this._state.activationCode;
+          try {
+            await _0x28e985.resetWithCache(_0x4cdb39, _0x37f0c0, _0x36247b, this._context);
+          } catch (_0x4732ef) {
+            if (_0x4732ef.isExpired) {
+              this._state = {
+                ...this._state,
+                "activationStatus": "已过期"
+              };
+              await this._context.globalState.update("cachedCIQuota", void 0);
+              this._updateWebview();
+              _0x39a8ef.report({
+                "increment": 100
+              });
+              this._state = {
+                ...this._state,
+                "activationStatus": "已过期",
+                "activationTime": _0x4732ef.expiresAt || new Date().toLocaleString(),
+                "balance": "0"
+              };
+              await this._context.globalState.update("cachedCIQuota", void 0);
+              this._updateWebview();
+              (await this._showConfirmModal(_0x531699 || "激活码已过期，请购买新的激活码", "购买激活码", "取消")) && _0x5e973f && _0x328cd7(_0x5e973f);
+              return;
+            }
+            throw _0x4732ef;
           }
-          if (!_0x5109cb || !_0x5109cb.success) throw new Error(_0x5109cb.message || "请重新尝试 -1001");
-          if (!_0x5109cb.code || typeof _0x5109cb.code != "string") throw new Error("请重新尝试 -1002");
-          console.log("response.code", _0x5109cb.code);
-          console.log("response.machineCode", _0x5109cb.machineCode);
-          console.log("response.workbenchCode", _0x5109cb.workbenchCode);
-          console.log("response.nodeCode", _0x5109cb.nodeCode);
-          _0x49e9c0.reset(_0x5109cb.code, _0x5109cb.machineCode, _0x5109cb.workbenchCode, _0x5109cb.nodeCode);
-          await new Promise(_0x4a613c => setTimeout(_0x4a613c, 1000));
+          await new Promise(_0x2d9808 => setTimeout(_0x2d9808, 1000));
           this._state = {
             ...this._state,
             "maxEnabled": !1
           };
           await this._context.globalState.update("maxEnabled", !1);
           this._resetMaxToggleUI(!1);
-          this._state = {
-            ...this._state,
-            "autoSwitchEnabled": !1
-          };
-          await this._context.globalState.update("autoSwitchEnabled", !1);
-          this._resetAutoSwitchToggleUI(!1);
           try {
-            let _0x294947 = _0x4dc466.workspace.getConfiguration("update"),
-              _0xf3194f = _0x294947.get("mode") === "none" ? "start" : "none";
-            if (await _0x294947.update("mode", _0xf3194f, !0), _0x4dc466.window.showInformationMessage("请确保项目已经保存，然后重启Cursor！"), this._updateWebview(), _0xf3194f !== "none") try {
+            let _0x38163c = _0x153215.workspace.getConfiguration("update"),
+              _0x36fea0 = _0x38163c.get("mode") === "none" ? "start" : "none";
+            if (await _0x38163c.update("mode", _0x36fea0, !0), this._showModalWithDelay("showInfoModal", "请确保项目已经保存，然后重启Cursor！"), this._updateWebview(), _0x36fea0 !== "none") try {
               console.log("恢复禁止更新状态");
-              await _0x294947.update("mode", "none", !0);
-            } catch (_0x33e4a6) {
-              console.error("恢复禁止更新状态失败:", _0x33e4a6);
+              await _0x38163c.update("mode", "none", !0);
+            } catch (_0x32f485) {
+              console.error("恢复禁止更新状态失败:", _0x32f485);
             }
             this._updateWebview();
           } catch {
             try {
-              await _0x25ef96.disableUpdates();
+              this._showModalWithDelay("showInfoModal", "请确保项目已经保存，然后重启Cursor！");
               this._updateWebview();
-              _0x4dc466.window.showInformationMessage("请确保项目已经保存，然后重启Cursor！");
-            } catch (_0x32af48) {
+            } catch (_0x5833f9) {
               this._updateWebview();
-              _0x4dc466.window.showErrorMessage("触发重启失败，请手动重启Cursor");
-              console.error("触发重启失败：", _0x32af48);
+              this._showModalWithDelay("showErrorModal", "触发重启失败，请手动重启Cursor");
+              console.error("触发重启失败：", _0x5833f9);
             }
           }
-        } catch (_0x2f6346) {
-          throw console.error(_0x2f6346), _0x2f6346;
+        } catch (_0x20bae9) {
+          throw console.error(_0x20bae9), _0x20bae9;
         }
       });
-    } catch (_0x34fa1f) {
-      _0x4dc466.window.showErrorMessage("" + _0x34fa1f.message);
+    } catch (_0x5bb94b) {
+      let _0x59a63d = _0x5bb94b.message;
+      _0x5bb94b.message && (_0x5bb94b.message.includes("EPERM") || _0x5bb94b.message.includes("operation not permitted") || _0x5bb94b.message.includes("EACCES")) ? process.platform === "win32" ? _0x59a63d = "\n\t\t\t\t\t\t<div style=\"text-align: left; background: linear-gradient(135deg, #2c3e50, #34495e); padding: 18px; border-radius: 12px; border: 2px solid #e74c3c; box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);\">\n\t\t\t\t\t\t\t<h4 style=\"color: #e74c3c; margin: 0 0 14px 0; font-weight: 700; text-shadow: 0 1px 2px rgba(0,0,0,0.3);\">⚠️ 权限不足</h4>\n\t\t\t\t\t\t\t<p style=\"margin: 10px 0; font-size: 14px; color: #ecf0f1; line-height: 1.6;\">无法写入文件，请按以下步骤操作：</p>\n\t\t\t\t\t\t\t<ol style=\"margin: 14px 0; padding-left: 22px; font-size: 13px; line-height: 1.8; color: #bdc3c7;\">\n\t\t\t\t\t\t\t\t<li style=\"margin: 6px 0;\"><strong style=\"color: #f39c12;\">关闭当前Cursor</strong></li>\n\t\t\t\t\t\t\t\t<li style=\"margin: 6px 0;\"><strong style=\"color: #f39c12;\">右键点击Cursor图标</strong></li>\n\t\t\t\t\t\t\t\t<li style=\"margin: 6px 0;\"><strong style=\"color: #f39c12;\">选择\"以管理员身份运行\"</strong></li>\n\t\t\t\t\t\t\t\t<li style=\"margin: 6px 0;\"><strong style=\"color: #f39c12;\">重新激活并重置插件</strong></li>\n\t\t\t\t\t\t\t</ol>\n\t\t\t\t\t\t\t<p style=\"margin: 14px 0 0 0; font-size: 12px; color: #95a5a6; background: rgba(52, 73, 94, 0.6); padding: 10px; border-radius: 6px; border-left: 4px solid #3498db;\">\n\t\t\t\t\t\t\t\t💡 提示：管理员权限是修改系统程序文件所必需的\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t" : _0x59a63d = _0x5bb94b.message : _0x5bb94b.message && _0x5bb94b.message.includes("找不到") ? _0x59a63d = "\n\t\t\t\t\t<div style=\"text-align: left; background: linear-gradient(135deg, #8e44ad, #9b59b6); padding: 18px; border-radius: 12px; border: 2px solid #f39c12; box-shadow: 0 4px 12px rgba(243, 156, 18, 0.3);\">\n\t\t\t\t\t\t<h4 style=\"color: #f39c12; margin: 0 0 14px 0; font-weight: 700; text-shadow: 0 1px 2px rgba(0,0,0,0.3);\">📁 文件未找到</h4>\n\t\t\t\t\t\t<p style=\"margin: 10px 0; font-size: 14px; color: #ecf0f1; line-height: 1.6;\">" + _0x5bb94b.message + "</p>\n\t\t\t\t\t\t<p style=\"margin: 14px 0 0 0; font-size: 12px; color: #d5dbdb; background: rgba(142, 68, 173, 0.6); padding: 10px; border-radius: 6px; border-left: 4px solid #e67e22;\">\n\t\t\t\t\t\t\t💡 请确保Cursor已正确安装且版本兼容\n\t\t\t\t\t\t</p>\n\t\t\t\t\t</div>\n\t\t\t\t" : _0x59a63d = _0x5bb94b.message || "重置插件失败，请稍后重试";
+      this._showModalWithDelay("showErrorModal", _0x59a63d);
       this._updateWebview();
     }
   }
-  async ["_handleUpdateToggle"](_0x41fdaa) {
+  async ["_handleToggleAutoOpen"](_0x2e99ba) {
     try {
-      await _0x4dc466.window.withProgress({
-        "location": _0x4dc466.ProgressLocation.Notification,
-        "title": _0x41fdaa ? "正在启用更新..." : "正在禁用更新...",
-        "cancellable": !1
-      }, async _0x58e7dc => {
-        let _0x385fef = _0x41fdaa ? await _0x25ef96.enableUpdates() : await _0x25ef96.disableUpdates();
-        if (await new Promise(_0x236c80 => setTimeout(_0x236c80, 1000)), !_0x385fef) throw new Error("操作失败");
-      });
-    } catch (_0x3a8ab6) {
-      _0x4dc466.window.showErrorMessage("" + _0x3a8ab6.message);
+      await _0x153215.workspace.getConfiguration("cursor-infinity").update("autoOpenPanel", _0x2e99ba, _0x153215.ConfigurationTarget.Global);
+      let _0x2b8606 = _0x2e99ba ? "开启成功，启动后会自动激活插件界面" : "关闭成功，启动后不会自动激活插件界面";
+      this._showModalWithDelay("showInfoModal", _0x2b8606);
+    } catch (_0x4688b6) {
+      this._showModalWithDelay("showErrorModal", "设置失败: " + _0x4688b6.message);
       this._view && this._view.webview.postMessage({
-        "command": "updateToggleFailed",
-        "enabled": !_0x41fdaa
+        "command": "updateAutoOpenToggle",
+        "enabled": !_0x2e99ba
       });
     }
   }
   async ["_handleRefreshBalance"]() {
     try {
-      let _0x40927f = "",
-        _0x1dd285 = "";
+      let _0x5112e0 = "",
+        _0x3c94f9 = "";
       try {
-        let _0x2aa3e0 = await _0x4be39f();
-        if (_0x2aa3e0.success) {
-          _0x40927f = _0x2aa3e0.data.cdk_expiration_prompt;
-          _0x1dd285 = _0x2aa3e0.data.buy_url;
-          console.log("最新版本:", _0x2aa3e0.data.latest_version);
-          console.log("当前版本:", _0x26f07f);
-          let _0xd44352 = _0x2aa3e0.data.latest_version;
-          if (_0xd44352 && _0xd44352 !== _0x26f07f) {
+        let _0x25685e = await _0xafae99();
+        if (_0x25685e.success) {
+          _0x5112e0 = _0x25685e.data.cdk_expiration_prompt;
+          _0x3c94f9 = _0x25685e.data.buy_url;
+          console.log("最新版本:", _0x25685e.data.latest_version);
+          console.log("当前版本:", _0x517d34);
+          let _0x15afbf = _0x25685e.data.latest_version;
+          if (_0x15afbf && _0x15afbf !== _0x517d34) {
+            if (this._updateWebview(), await this._showConfirmModal("" + _0x25685e.data.update_msg, "立即更新", "稍后更新")) {
+              let _0x3508ad = _0x25685e.data.download_url;
+              _0x3508ad && _0x328cd7(_0x3508ad);
+            }
+            this._view && this._view.webview.postMessage({
+              "command": "stopCIQuotaRefresh"
+            });
+            return;
+          }
+          if (console.log("是否维护:", _0x25685e.data.maintenance_mode), console.log("维护消息:", _0x25685e.data.maintenance_msg), _0x25685e.data.maintenance_mode) {
+            this._showModalWithDelay("showWarningModal", _0x25685e.data.maintenance_msg);
             this._updateWebview();
-            let _0x7f7e97 = [{
-              "title": "立即更新",
-              "isCloseAffordance": !1
-            }, {
-              "title": "稍后更新",
-              "isCloseAffordance": !0
-            }];
-            if ((await _0x4dc466.window.showWarningMessage("" + _0x2aa3e0.data.update_msg, ..._0x7f7e97))?.["title"] === "立即更新") {
-              let _0x59a843 = _0x2aa3e0.data.download_url;
-              _0x59a843 && _0x3bfca2(_0x59a843);
+            this._view && this._view.webview.postMessage({
+              "command": "stopCIQuotaRefresh"
+            });
+            return;
+          }
+          let _0x13e1f2 = _0x25685e.data.operation_mode;
+          if (_0x13e1f2 === 0) {
+            if (this._state.activationCode) this._state = {
+              ...this._state,
+              "activationStatus": "已授权"
+            }, this._updateWebview();else {
+              await this._handleActivation("cdk-cdk-cdk-cdk", !0);
+              this._view && this._view.webview.postMessage({
+                "command": "stopCIQuotaRefresh"
+              });
+              return;
+            }
+            this._view && this._view.webview.postMessage({
+              "command": "updateOperationMode",
+              "mode": _0x13e1f2
+            });
+            this._view && this._view.webview.postMessage({
+              "command": "stopCIQuotaRefresh"
+            });
+            return;
+          } else this._view && this._view.webview.postMessage({
+            "command": "updateOperationMode",
+            "mode": _0x13e1f2
+          });
+        } else {
+          this._showNetworkErrorModal();
+          this._updateWebview();
+          return;
+        }
+      } catch (_0x397890) {
+        console.error(_0x397890);
+        this._showNetworkErrorModal();
+        this._updateWebview();
+        return;
+      }
+      let _0x111799 = "CI_" + (await (0, _0x27fd84.machineId)()),
+        _0x50e0cd = this._state.activationCode;
+      if (!_0x50e0cd) {
+        this._view && this._view.webview.postMessage({
+          "command": "showErrorModal",
+          "message": "请先激活软件"
+        });
+        this._view && this._view.webview.postMessage({
+          "command": "stopCIQuotaRefresh"
+        });
+        return;
+      }
+      this._view?.["webview"]["postMessage"]({
+        "command": "disableRefreshButton"
+      });
+      await _0x153215.window.withProgress({
+        "location": _0x153215.ProgressLocation.Notification,
+        "title": "正在刷新积分...",
+        "cancellable": !1
+      }, async _0x40da32 => {
+        let _0x1e9ae7 = await _0x1edf4a.getPoints(_0x50e0cd, _0x111799);
+        if (console.log("获取积分响应:", _0x1e9ae7), _0x1e9ae7.status === "error") throw new Error(_0x1e9ae7.message || "获取积分失败");
+        if (_0x1e9ae7.message && _0x1e9ae7.message.includes("已过期")) {
+          this._state = {
+            ...this._state,
+            "activationStatus": "已过期"
+          };
+          await this._context.globalState.update("cachedCIQuota", void 0);
+          this._updateWebview();
+          _0x40da32.report({
+            "increment": 100
+          });
+          this._state = {
+            ...this._state,
+            "activationStatus": "已过期",
+            "activationTime": _0x1e9ae7.expiresAt || new Date().toLocaleString(),
+            "balance": "0"
+          };
+          await this._context.globalState.update("cachedCIQuota", void 0);
+          this._updateWebview();
+          (await this._showConfirmModal(_0x5112e0 || "激活码已过期，请购买新的激活码", "购买激活码", "取消")) && _0x3c94f9 && _0x328cd7(_0x3c94f9);
+          return;
+        }
+        if (!_0x1e9ae7.success && _0x1e9ae7.status !== "warning") throw new Error(_0x1e9ae7.message || "获取积分失败");
+        let _0x389657 = parseInt(_0x1e9ae7.data.points?.["toString"]() || "0", 10),
+          _0x36f07b = Math.min(Math.max(_0x389657, 0), 100);
+        console.log("[DEBUG] 积分数据:", {
+          "points": _0x389657,
+          "percentage": _0x36f07b
+        });
+        this._state = {
+          ...this._state,
+          "balance": _0x1e9ae7.data.points?.["toString"]() || "0",
+          "boundDevices": _0x1e9ae7.data.boundDevices?.["toString"]() || this._state.boundDevices || "0"
+        };
+        let _0x26ef2e = {
+          "value": _0x389657,
+          "percentage": _0x36f07b
+        };
+        this._view && this._view.webview.postMessage({
+          "command": "updateCIQuota",
+          "data": _0x26ef2e
+        });
+        await this._context.globalState.update("cachedCIQuota", _0x26ef2e);
+        this._updateWebview();
+        console.log("[DEBUG] Response status:", _0x1e9ae7.status);
+        _0x1e9ae7.status === "warning" && (console.log("[DEBUG] 检测到警告状态，准备显示模态框"), setTimeout(() => {
+          console.log("[DEBUG] 开始显示积分不足警告模态框");
+          this._showModalWithDelay("showWarningModal", _0x1e9ae7.message || "CI积分不足，请购买新的激活码");
+        }, 500));
+        console.log("message", _0x1e9ae7.message);
+      });
+    } catch (_0x5bcec6) {
+      this._showModalWithDelay("showErrorModal", "" + _0x5bcec6.message);
+    } finally {
+      this._view?.["webview"]["postMessage"]({
+        "command": "enableRefreshButton"
+      });
+      this._view && this._view.webview.postMessage({
+        "command": "stopCIQuotaRefresh"
+      });
+    }
+  }
+  async ["_handleClearCursorProxy"]() {
+    try {
+      console.log("[DEBUG] 开始清除Cursor代理设置");
+      let _0x50147f = _0x153215.workspace.getConfiguration(),
+        _0x513df9 = ["http.proxy", "https.proxy", "http.proxyAuthorization", "http.proxyStrictSSL", "http.proxySupport"],
+        _0x3c2d19 = 0,
+        _0x121c80 = [];
+      console.log("[DEBUG] 正在清除代理设置...");
+      for (let _0x34c5ba of _0x513df9) try {
+        let _0x47776b = _0x50147f.get(_0x34c5ba);
+        _0x47776b != null && _0x47776b !== "" && (console.log("[DEBUG] 清除代理设置: " + _0x34c5ba + " = " + _0x47776b), await _0x50147f.update(_0x34c5ba, void 0, _0x153215.ConfigurationTarget.Global), _0x3c2d19++);
+      } catch (_0x30fb0d) {
+        console.error("清除代理设置 " + _0x34c5ba + " 失败:", _0x30fb0d);
+        _0x121c80.push(_0x34c5ba + ": " + (_0x30fb0d.message || String(_0x30fb0d)));
+      }
+      await new Promise(_0x5ae738 => setTimeout(_0x5ae738, 500));
+      let _0x24d5ec = false;
+      for (let _0x2bb56f of _0x513df9) {
+        let _0x47a5c1 = _0x50147f.get(_0x2bb56f);
+        if (_0x47a5c1 != null && _0x47a5c1 !== "") {
+          _0x24d5ec = !0;
+          break;
+        }
+      }
+      if (_0x121c80.length === 0 && !_0x24d5ec) console.log("[DEBUG] 代理清除完成：成功清除了 " + _0x3c2d19 + " 个代理设置"), this._view && this._view.webview.postMessage({
+        "command": "clearProxySuccess"
+      });else {
+        if (_0x3c2d19 > 0) console.log("[DEBUG] 代理清除部分成功：清除了 " + _0x3c2d19 + " 个设置，但有 " + _0x121c80.length + " 个失败"), this._view && this._view.webview.postMessage({
+          "command": "clearProxySuccess"
+        });else throw new Error(_0x121c80.length > 0 ? _0x121c80.join("; ") : "未发现需要清除的代理设置");
+      }
+    } catch (_0x2dd3cc) {
+      console.error("清除Cursor代理设置失败:", _0x2dd3cc);
+      this._view && this._view.webview.postMessage({
+        "command": "clearProxyFailed",
+        "error": _0x2dd3cc.message || "清除代理设置失败，请手动在设置中检查"
+      });
+    }
+  }
+  async ["_handleSetHttp11"]() {
+    try {
+      console.log("正在配置HTTP/1.1协议...");
+      let _0x443ee9 = _0x153215.workspace.getConfiguration(),
+        _0xba3915 = [{
+          "key": "cursor.general.disableHttp2",
+          "value": !0,
+          "description": "禁用HTTP/2，使用HTTP/1.1"
+        }, {
+          "key": "http.proxyStrictSSL",
+          "value": !0,
+          "description": "启用严格SSL验证"
+        }, {
+          "key": "http.systemCertificates",
+          "value": !0,
+          "description": "使用系统证书"
+        }];
+      for (let _0xc0a1b5 of _0xba3915) try {
+        await _0x443ee9.update(_0xc0a1b5.key, _0xc0a1b5.value, _0x153215.ConfigurationTarget.Global);
+        console.log("✅ " + _0xc0a1b5.description + ": " + _0xc0a1b5.key + " = " + _0xc0a1b5.value);
+      } catch (_0xd0915) {
+        console.warn("⚠️ 跳过不支持的配置项 " + _0xc0a1b5.key + ": " + _0xd0915.message);
+      }
+      console.log("HTTP/1.1协议配置完成");
+      this._view && this._view.webview.postMessage({
+        "command": "setHttp11Success"
+      });
+    } catch (_0x2ff229) {
+      console.error("配置HTTP/1.1协议失败:", _0x2ff229);
+      this._view && this._view.webview.postMessage({
+        "command": "setHttp11Failed",
+        "error": _0x2ff229.message || "配置HTTP/1.1协议失败"
+      });
+    }
+  }
+  async ["_handleToggleMax"](_0x4fa9f6) {
+    try {
+      this._resetMaxToggleUI(_0x4fa9f6, !0);
+      let _0x46d4d6 = _0x28e985.isExtensionReset(),
+        _0x38f1d2 = _0x28e985.isWorkbenchReset();
+      if (!_0x46d4d6.isReset || !_0x38f1d2.isReset) {
+        this._state = {
+          ...this._state,
+          "maxEnabled": !_0x4fa9f6
+        };
+        this._updateWebview();
+        this._resetMaxToggleUI(!_0x4fa9f6);
+        this._showModalWithDelay("showWarningModal", "⚠️检测到您当前未重置插件<br/>😊请先点击「重置插件」按钮，然后重启 Cursor 以生效！");
+        return;
+      }
+      let _0x43feea = "",
+        _0x564cf4 = "";
+      try {
+        let _0x940ba0 = await _0xafae99();
+        if (_0x940ba0.success) {
+          _0x43feea = _0x940ba0.data.cdk_expiration_prompt;
+          _0x564cf4 = _0x940ba0.data.buy_url;
+          console.log("最新版本:", _0x940ba0.data.latest_version);
+          console.log("当前版本:", _0x517d34);
+          let _0x3779cc = _0x940ba0.data.latest_version;
+          if (_0x3779cc && _0x3779cc !== _0x517d34) {
+            if (this._state = {
+              ...this._state,
+              "maxEnabled": !_0x4fa9f6
+            }, this._updateWebview(), this._resetMaxToggleUI(!_0x4fa9f6), await this._showConfirmModal("" + _0x940ba0.data.update_msg, "立即更新", "稍后更新")) {
+              let _0x44c8f0 = _0x940ba0.data.download_url;
+              _0x44c8f0 && _0x328cd7(_0x44c8f0);
             }
             return;
           }
-          if (console.log("是否维护:", _0x2aa3e0.data.maintenance_mode), console.log("维护消息:", _0x2aa3e0.data.maintenance_msg), _0x2aa3e0.data.maintenance_mode) {
-            _0x4dc466.window.showWarningMessage(_0x2aa3e0.data.maintenance_msg);
+          if (console.log("是否维护:", _0x940ba0.data.maintenance_mode), console.log("维护消息:", _0x940ba0.data.maintenance_msg), _0x940ba0.data.maintenance_mode) {
+            this._showModalWithDelay("showWarningModal", _0x940ba0.data.maintenance_msg);
+            this._state = {
+              ...this._state,
+              "maxEnabled": !_0x4fa9f6
+            };
+            this._updateWebview();
+            this._resetMaxToggleUI(!_0x4fa9f6);
+            return;
+          }
+        } else {
+          this._showNetworkErrorModal();
+          this._state = {
+            ...this._state,
+            "maxEnabled": !_0x4fa9f6
+          };
+          this._updateWebview();
+          this._resetMaxToggleUI(!_0x4fa9f6);
+          return;
+        }
+      } catch (_0x448d16) {
+        console.error(_0x448d16);
+        this._showNetworkErrorModal();
+        this._state = {
+          ...this._state,
+          "maxEnabled": !_0x4fa9f6
+        };
+        this._updateWebview();
+        this._resetMaxToggleUI(!_0x4fa9f6);
+        return;
+      }
+      let _0x13355d = this._state.activationCode;
+      if (!_0x13355d) {
+        this._view && this._view.webview.postMessage({
+          "command": "showErrorModal",
+          "message": "请先激活软件"
+        });
+        this._state = {
+          ...this._state,
+          "maxEnabled": !_0x4fa9f6
+        };
+        this._updateWebview();
+        this._resetMaxToggleUI(!_0x4fa9f6);
+        return;
+      }
+      await _0x153215.window.withProgress({
+        "location": _0x153215.ProgressLocation.Notification,
+        "title": _0x4fa9f6 ? "正在启用 Cursor MAX..." : "正在关闭 Cursor MAX...",
+        "cancellable": !1
+      }, async _0xdc8e2c => {
+        try {
+          let _0x427995 = "CI_" + (await (0, _0x27fd84.machineId)()),
+            _0x5b818d = _0x28e985.getSystemInfo().version;
+          if (_0x4fa9f6) {
+            let _0x44de08 = await _0x1edf4a.getMaxConfig(_0x13355d, _0x5b818d, _0x427995);
+            if (console.log("获取MAX配置响应:", _0x44de08), _0x44de08.status === "error") throw this._state = {
+              ...this._state,
+              "maxEnabled": !_0x4fa9f6
+            }, this._updateWebview(), this._resetMaxToggleUI(!_0x4fa9f6), new Error(_0x44de08.message || "MAX配置获取失败");
+            if (_0x44de08.message && _0x44de08.message.includes("已过期")) {
+              _0xdc8e2c.report({
+                "increment": 100
+              });
+              this._state = {
+                ...this._state,
+                "activationStatus": "已过期",
+                "activationTime": _0x44de08.expiresAt || new Date().toLocaleString(),
+                "balance": "0",
+                "maxEnabled": !_0x4fa9f6
+              };
+              await this._context.globalState.update("cachedCIQuota", void 0);
+              this._updateWebview();
+              this._resetMaxToggleUI(!_0x4fa9f6);
+              (await this._showConfirmModal(_0x43feea || "激活码已过期，请购买新的激活码", "购买激活码", "取消")) && _0x564cf4 && _0x328cd7(_0x564cf4);
+              return;
+            }
+            if (!_0x44de08.success) throw this._state = {
+              ...this._state,
+              "maxEnabled": !_0x4fa9f6
+            }, this._updateWebview(), this._resetMaxToggleUI(!_0x4fa9f6), new Error(_0x44de08.message || "MAX配置获取失败");
+            console.log("MAX配置信息:", _0x44de08.config);
+            let _0xefc583 = _0x28e985.applyMaxConfig(_0x44de08.config);
+            if (_0xefc583.success) this._showModalWithDelay("showInfoModal", _0xefc583.message || "开启成功");else {
+              let _0x22be5e = _0xefc583.message || "开启失败";
+              _0x22be5e.includes("EPERM") || _0x22be5e.includes("operation not permitted") || _0x22be5e.includes("EACCES") ? (process.platform === "win32" ? _0x22be5e = "\n\t\t\t\t\t\t\t\t\t\t<div style=\"text-align: left; background: linear-gradient(135deg, #2c3e50, #34495e); padding: 18px; border-radius: 12px; border: 2px solid #e74c3c; box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);\">\n\t\t\t\t\t\t\t\t\t\t\t<h4 style=\"color: #e74c3c; margin: 0 0 14px 0; font-weight: 700; text-shadow: 0 1px 2px rgba(0,0,0,0.3);\">⚠️ 权限不足</h4>\n\t\t\t\t\t\t\t\t\t\t\t<p style=\"margin: 10px 0; font-size: 14px; color: #ecf0f1; line-height: 1.6;\">无法写入文件，请按以下步骤操作：</p>\n\t\t\t\t\t\t\t\t\t\t\t<ol style=\"margin: 14px 0; padding-left: 22px; font-size: 13px; line-height: 1.8; color: #bdc3c7;\">\n\t\t\t\t\t\t\t\t\t\t\t\t<li style=\"margin: 6px 0;\"><strong style=\"color: #f39c12;\">关闭当前Cursor</strong></li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li style=\"margin: 6px 0;\"><strong style=\"color: #f39c12;\">右键点击Cursor图标</strong></li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li style=\"margin: 6px 0;\"><strong style=\"color: #f39c12;\">选择\"以管理员身份运行\"</strong></li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li style=\"margin: 6px 0;\"><strong style=\"color: #f39c12;\">重新激活并开启MAX功能</strong></li>\n\t\t\t\t\t\t\t\t\t\t\t</ol>\n\t\t\t\t\t\t\t\t\t\t\t<p style=\"margin: 14px 0 0 0; font-size: 12px; color: #95a5a6; background: rgba(52, 73, 94, 0.6); padding: 10px; border-radius: 6px; border-left: 4px solid #3498db;\">\n\t\t\t\t\t\t\t\t\t\t\t\t💡 提示：管理员权限是修改系统程序文件所必需的\n\t\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t" : _0x22be5e = _0xefc583.message || "开启失败", this._showModalWithDelay("showErrorModal", _0x22be5e)) : this._showModalWithDelay("showWarningModal", _0x22be5e);
+              this._state = {
+                ...this._state,
+                "maxEnabled": !_0x4fa9f6
+              };
+              this._updateWebview();
+              this._resetMaxToggleUI(!_0x4fa9f6);
+              return;
+            }
+          } else {
+            let _0x211e87 = await _0x1edf4a.getMaxConfig(_0x13355d, _0x5b818d, _0x427995);
+            if (console.log("获取MAX配置响应:", _0x211e87), _0x211e87.status === "error") throw this._state = {
+              ...this._state,
+              "maxEnabled": !_0x4fa9f6
+            }, this._updateWebview(), this._resetMaxToggleUI(!_0x4fa9f6), new Error(_0x211e87.message || "MAX配置获取失败");
+            if (_0x211e87.message && _0x211e87.message.includes("已过期")) {
+              _0xdc8e2c.report({
+                "increment": 100
+              });
+              this._state = {
+                ...this._state,
+                "activationStatus": "已过期",
+                "activationTime": _0x211e87.expiresAt || new Date().toLocaleString(),
+                "balance": "0",
+                "maxEnabled": !_0x4fa9f6
+              };
+              await this._context.globalState.update("cachedCIQuota", void 0);
+              this._updateWebview();
+              this._resetMaxToggleUI(!_0x4fa9f6);
+              (await this._showConfirmModal(_0x43feea || "激活码已过期，请购买新的激活码", "购买激活码", "取消")) && _0x564cf4 && _0x328cd7(_0x564cf4);
+              return;
+            }
+            if (!_0x211e87.success) throw this._state = {
+              ...this._state,
+              "maxEnabled": !_0x4fa9f6
+            }, this._updateWebview(), this._resetMaxToggleUI(!_0x4fa9f6), new Error(_0x211e87.message || "MAX配置获取失败");
+            console.log("MAX配置信息:", _0x211e87.config);
+            let _0x22b54d = _0x28e985.restoreMaxConfig(_0x211e87.config);
+            if (_0x22b54d.success) this._showModalWithDelay("showInfoModal", _0x22b54d.message || "关闭成功");else {
+              let _0x108832 = _0x22b54d.message || "关闭失败";
+              _0x108832.includes("EPERM") || _0x108832.includes("operation not permitted") || _0x108832.includes("EACCES") ? (process.platform === "win32" ? _0x108832 = "\n\t\t\t\t\t\t\t\t\t\t<div style=\"text-align: left; background: linear-gradient(135deg, #2c3e50, #34495e); padding: 18px; border-radius: 12px; border: 2px solid #e74c3c; box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);\">\n\t\t\t\t\t\t\t\t\t\t\t<h4 style=\"color: #e74c3c; margin: 0 0 14px 0; font-weight: 700; text-shadow: 0 1px 2px rgba(0,0,0,0.3);\">⚠️ 权限不足</h4>\n\t\t\t\t\t\t\t\t\t\t\t<p style=\"margin: 10px 0; font-size: 14px; color: #ecf0f1; line-height: 1.6;\">无法写入文件，请按以下步骤操作：</p>\n\t\t\t\t\t\t\t\t\t\t\t<ol style=\"margin: 14px 0; padding-left: 22px; font-size: 13px; line-height: 1.8; color: #bdc3c7;\">\n\t\t\t\t\t\t\t\t\t\t\t\t<li style=\"margin: 6px 0;\"><strong style=\"color: #f39c12;\">关闭当前Cursor</strong></li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li style=\"margin: 6px 0;\"><strong style=\"color: #f39c12;\">右键点击Cursor图标</strong></li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li style=\"margin: 6px 0;\"><strong style=\"color: #f39c12;\">选择\"以管理员身份运行\"</strong></li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li style=\"margin: 6px 0;\"><strong style=\"color: #f39c12;\">重新激活并关闭MAX功能</strong></li>\n\t\t\t\t\t\t\t\t\t\t\t</ol>\n\t\t\t\t\t\t\t\t\t\t\t<p style=\"margin: 14px 0 0 0; font-size: 12px; color: #95a5a6; background: rgba(52, 73, 94, 0.6); padding: 10px; border-radius: 6px; border-left: 4px solid #3498db;\">\n\t\t\t\t\t\t\t\t\t\t\t\t💡 提示：管理员权限是修改系统程序文件所必需的\n\t\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t" : _0x108832 = _0x22b54d.message || "关闭失败", this._showModalWithDelay("showErrorModal", _0x108832)) : this._showModalWithDelay("showWarningModal", _0x108832);
+              this._state = {
+                ...this._state,
+                "maxEnabled": !_0x4fa9f6
+              };
+              this._updateWebview();
+              this._resetMaxToggleUI(!_0x4fa9f6);
+              return;
+            }
+            console.log("MAX功能已关闭");
+          }
+          this._state = {
+            ...this._state,
+            "maxEnabled": _0x4fa9f6
+          };
+          await this._context.globalState.update("maxEnabled", _0x4fa9f6);
+          this._updateWebview();
+          await new Promise(_0x480808 => setTimeout(_0x480808, 1000));
+          try {
+            let _0x2167b7 = _0x153215.workspace.getConfiguration("update"),
+              _0x15a6eb = _0x2167b7.get("mode") === "none" ? "start" : "none";
+            if (await _0x2167b7.update("mode", _0x15a6eb, !0), this._showModalWithDelay("showInfoModal", "请确保项目已经保存，然后重启Cursor！"), _0x15a6eb !== "none") try {
+              console.log("恢复禁止更新状态");
+              await _0x2167b7.update("mode", "none", !0);
+            } catch (_0x5e2aca) {
+              console.error("恢复禁止更新状态失败:", _0x5e2aca);
+            }
+          } catch {
+            try {
+              this._showModalWithDelay("showInfoModal", "请确保项目已经保存，然后重启Cursor！");
+            } catch (_0x2a5201) {
+              this._showModalWithDelay("showErrorModal", "触发重启失败，请手动重启Cursor");
+              console.error("触发重启失败：", _0x2a5201);
+            }
+          }
+        } catch (_0x4eaa96) {
+          throw console.error("MAX操作失败:", _0x4eaa96), this._state = {
+            ...this._state,
+            "maxEnabled": !_0x4fa9f6
+          }, this._updateWebview(), this._resetMaxToggleUI(!_0x4fa9f6), _0x4eaa96;
+        }
+      });
+    } catch (_0x371c26) {
+      let _0x1d3d25 = _0x371c26.message;
+      _0x371c26.message && (_0x371c26.message.includes("EPERM") || _0x371c26.message.includes("operation not permitted") || _0x371c26.message.includes("EACCES")) ? process.platform === "win32" ? _0x1d3d25 = "\n\t\t\t\t\t\t<div style=\"text-align: left; background: linear-gradient(135deg, #2c3e50, #34495e); padding: 18px; border-radius: 12px; border: 2px solid #e74c3c; box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);\">\n\t\t\t\t\t\t\t<h4 style=\"color: #e74c3c; margin: 0 0 14px 0; font-weight: 700; text-shadow: 0 1px 2px rgba(0,0,0,0.3);\">⚠️ 权限不足</h4>\n\t\t\t\t\t\t\t<p style=\"margin: 10px 0; font-size: 14px; color: #ecf0f1; line-height: 1.6;\">无法写入文件，请按以下步骤操作：</p>\n\t\t\t\t\t\t\t<ol style=\"margin: 14px 0; padding-left: 22px; font-size: 13px; line-height: 1.8; color: #bdc3c7;\">\n\t\t\t\t\t\t\t\t<li style=\"margin: 6px 0;\"><strong style=\"color: #f39c12;\">关闭当前Cursor</strong></li>\n\t\t\t\t\t\t\t\t<li style=\"margin: 6px 0;\"><strong style=\"color: #f39c12;\">右键点击Cursor图标</strong></li>\n\t\t\t\t\t\t\t\t<li style=\"margin: 6px 0;\"><strong style=\"color: #f39c12;\">选择\"以管理员身份运行\"</strong></li>\n\t\t\t\t\t\t\t\t<li style=\"margin: 6px 0;\"><strong style=\"color: #f39c12;\">重新激活并开启MAX功能</strong></li>\n\t\t\t\t\t\t\t</ol>\n\t\t\t\t\t\t\t<p style=\"margin: 14px 0 0 0; font-size: 12px; color: #95a5a6; background: rgba(52, 73, 94, 0.6); padding: 10px; border-radius: 6px; border-left: 4px solid #3498db;\">\n\t\t\t\t\t\t\t\t💡 提示：管理员权限是修改系统程序文件所必需的\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t" : _0x1d3d25 = _0x371c26.message : _0x371c26.message && _0x371c26.message.includes("找不到") ? _0x1d3d25 = "\n\t\t\t\t\t<div style=\"text-align: left; background: linear-gradient(135deg, #8e44ad, #9b59b6); padding: 18px; border-radius: 12px; border: 2px solid #f39c12; box-shadow: 0 4px 12px rgba(243, 156, 18, 0.3);\">\n\t\t\t\t\t\t<h4 style=\"color: #f39c12; margin: 0 0 14px 0; font-weight: 700; text-shadow: 0 1px 2px rgba(0,0,0,0.3);\">📁 文件未找到</h4>\n\t\t\t\t\t\t<p style=\"margin: 10px 0; font-size: 14px; color: #ecf0f1; line-height: 1.6;\">" + _0x371c26.message + "</p>\n\t\t\t\t\t\t<p style=\"margin: 14px 0 0 0; font-size: 12px; color: #d5dbdb; background: rgba(142, 68, 173, 0.6); padding: 10px; border-radius: 6px; border-left: 4px solid #e67e22;\">\n\t\t\t\t\t\t\t💡 请确保Cursor已正确安装且版本兼容\n\t\t\t\t\t\t</p>\n\t\t\t\t\t</div>\n\t\t\t\t" : _0x1d3d25 = _0x371c26.message || "MAX操作失败，请稍后重试";
+      this._showModalWithDelay("showErrorModal", _0x1d3d25);
+      this._state = {
+        ...this._state,
+        "maxEnabled": !_0x4fa9f6
+      };
+      this._updateWebview();
+      this._resetMaxToggleUI(!_0x4fa9f6);
+    }
+  }
+  ["_resetMaxToggleUI"](_0x42df2b, _0x50806b = !1) {
+    this._view && this._view.webview.postMessage({
+      "command": "updateMaxToggle",
+      "enabled": _0x42df2b,
+      "disabled": _0x50806b
+    });
+  }
+  async ["_handleRestoreConfig"]() {
+    try {
+      await this._context.globalState.update("userDeactivated", !0);
+      console.log("已设置用户停用状态为true");
+      let _0x108390 = "",
+        _0x32739d = "";
+      try {
+        let _0x55669b = await _0xafae99();
+        if (_0x55669b.success) {
+          _0x108390 = _0x55669b.data.cdk_expiration_prompt;
+          _0x32739d = _0x55669b.data.buy_url;
+          console.log("最新版本:", _0x55669b.data.latest_version);
+          console.log("当前版本:", _0x517d34);
+          let _0x2aeeca = _0x55669b.data.latest_version;
+          if (_0x2aeeca && _0x2aeeca !== _0x517d34) {
+            if (this._updateWebview(), await this._showConfirmModal("" + _0x55669b.data.update_msg, "立即更新", "稍后更新")) {
+              let _0x57ebdb = _0x55669b.data.download_url;
+              _0x57ebdb && _0x328cd7(_0x57ebdb);
+            }
+            return;
+          }
+          if (console.log("是否维护:", _0x55669b.data.maintenance_mode), console.log("维护消息:", _0x55669b.data.maintenance_msg), _0x55669b.data.maintenance_mode) {
+            this._showModalWithDelay("showWarningModal", _0x55669b.data.maintenance_msg);
+            this._updateWebview();
+            this._view && this._view.webview.postMessage({
+              "command": "stopCIQuotaRefresh"
+            });
+            return;
+          }
+          let _0x94bfbf = _0x55669b.data.operation_mode;
+          if (_0x94bfbf === 0) {
+            if (this._state.activationCode) this._state = {
+              ...this._state,
+              "activationStatus": "已授权"
+            }, this._updateWebview();else {
+              await this._handleActivation("cdk-cdk-cdk-cdk", !0);
+              return;
+            }
+          }
+          this._view && this._view.webview.postMessage({
+            "command": "updateOperationMode",
+            "mode": _0x94bfbf
+          });
+        } else {
+          this._showNetworkErrorModal();
+          this._updateWebview();
+          return;
+        }
+      } catch (_0x5d843d) {
+        console.error(_0x5d843d);
+        this._showNetworkErrorModal();
+        this._updateWebview();
+        return;
+      }
+      if (!this._state.activationCode) {
+        this._view && this._view.webview.postMessage({
+          "command": "showErrorModal",
+          "message": "请先激活软件"
+        });
+        this._updateWebview();
+        return;
+      }
+      await _0x153215.window.withProgress({
+        "location": _0x153215.ProgressLocation.Notification,
+        "title": "正在停用插件，请稍候…（耗时取决于网络状态）",
+        "cancellable": !1
+      }, async _0x5487b5 => {
+        try {
+          let _0x887b7a = "CI_" + (await (0, _0x27fd84.machineId)()),
+            _0x133482 = _0x28e985.getSystemInfo().version,
+            _0x1de361 = this._state.activationCode;
+          try {
+            await _0x28e985.restoreWithCache(_0x1de361, _0x133482, _0x887b7a, this._context);
+          } catch (_0x433e52) {
+            if (_0x433e52.isExpired) {
+              this._state = {
+                ...this._state,
+                "activationStatus": "已过期"
+              };
+              this._updateWebview();
+              _0x5487b5.report({
+                "increment": 100
+              });
+              this._state = {
+                ...this._state,
+                "activationStatus": "已过期",
+                "activationTime": _0x433e52.expiresAt || new Date().toLocaleString(),
+                "balance": "0"
+              };
+              this._updateWebview();
+              (await this._showConfirmModal(_0x108390 || "激活码已过期，请购买新的激活码", "购买激活码", "取消")) && _0x32739d && _0x328cd7(_0x32739d);
+              return;
+            }
+            throw _0x433e52;
+          }
+          await new Promise(_0x5152cb => setTimeout(_0x5152cb, 1000));
+          this._state = {
+            ...this._state,
+            "maxEnabled": !1
+          };
+          await this._context.globalState.update("maxEnabled", !1);
+          this._resetMaxToggleUI(!1);
+          try {
+            let _0x51da09 = _0x153215.workspace.getConfiguration("update"),
+              _0x3583d7 = _0x51da09.get("mode") === "none" ? "start" : "none";
+            if (await _0x51da09.update("mode", _0x3583d7, !0), this._showModalWithDelay("showInfoModal", "请确保项目已经保存，然后重启Cursor！"), this._updateWebview(), _0x3583d7 !== "none") try {
+              console.log("恢复禁止更新状态");
+              await _0x51da09.update("mode", "none", !0);
+            } catch (_0x3f0d5f) {
+              console.error("恢复禁止更新状态失败:", _0x3f0d5f);
+            }
+            this._updateWebview();
+          } catch {
+            try {
+              this._showModalWithDelay("showInfoModal", "请确保项目已经保存，然后重启Cursor！");
+              this._updateWebview();
+            } catch (_0x4ffd30) {
+              this._updateWebview();
+              this._showModalWithDelay("showErrorModal", "触发重启失败，请手动重启Cursor");
+              console.error("触发重启失败：", _0x4ffd30);
+            }
+          }
+        } catch (_0x460616) {
+          throw console.error(_0x460616), _0x460616;
+        }
+      });
+    } catch (_0x46f029) {
+      let _0x505992 = _0x46f029.message;
+      _0x46f029.message && (_0x46f029.message.includes("EPERM") || _0x46f029.message.includes("operation not permitted") || _0x46f029.message.includes("EACCES")) ? process.platform === "win32" ? _0x505992 = "\n\t\t\t\t\t\t<div style=\"text-align: left; background: linear-gradient(135deg, #2c3e50, #34495e); padding: 18px; border-radius: 12px; border: 2px solid #e74c3c; box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);\">\n\t\t\t\t\t\t\t<h4 style=\"color: #e74c3c; margin: 0 0 14px 0; font-weight: 700; text-shadow: 0 1px 2px rgba(0,0,0,0.3);\">⚠️ 权限不足</h4>\n\t\t\t\t\t\t\t<p style=\"margin: 10px 0; font-size: 14px; color: #ecf0f1; line-height: 1.6;\">无法写入文件，请按以下步骤操作：</p>\n\t\t\t\t\t\t\t<ol style=\"margin: 14px 0; padding-left: 22px; font-size: 13px; line-height: 1.8; color: #bdc3c7;\">\n\t\t\t\t\t\t\t\t<li style=\"margin: 6px 0;\"><strong style=\"color: #f39c12;\">关闭当前Cursor</strong></li>\n\t\t\t\t\t\t\t\t<li style=\"margin: 6px 0;\"><strong style=\"color: #f39c12;\">右键点击Cursor图标</strong></li>\n\t\t\t\t\t\t\t\t<li style=\"margin: 6px 0;\"><strong style=\"color: #f39c12;\">选择\"以管理员身份运行\"</strong></li>\n\t\t\t\t\t\t\t\t<li style=\"margin: 6px 0;\"><strong style=\"color: #f39c12;\">重新激活并停用插件</strong></li>\n\t\t\t\t\t\t\t</ol>\n\t\t\t\t\t\t\t<p style=\"margin: 14px 0 0 0; font-size: 12px; color: #95a5a6; background: rgba(52, 73, 94, 0.6); padding: 10px; border-radius: 6px; border-left: 4px solid #3498db;\">\n\t\t\t\t\t\t\t\t💡 提示：管理员权限是修改系统程序文件所必需的\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t" : _0x505992 = _0x46f029.message : _0x46f029.message && _0x46f029.message.includes("找不到") ? _0x505992 = "\n\t\t\t\t\t<div style=\"text-align: left; background: linear-gradient(135deg, #8e44ad, #9b59b6); padding: 18px; border-radius: 12px; border: 2px solid #f39c12; box-shadow: 0 4px 12px rgba(243, 156, 18, 0.3);\">\n\t\t\t\t\t\t<h4 style=\"color: #f39c12; margin: 0 0 14px 0; font-weight: 700; text-shadow: 0 1px 2px rgba(0,0,0,0.3);\">📁 文件未找到</h4>\n\t\t\t\t\t\t<p style=\"margin: 10px 0; font-size: 14px; color: #ecf0f1; line-height: 1.6;\">" + _0x46f029.message + "</p>\n\t\t\t\t\t\t<p style=\"margin: 14px 0 0 0; font-size: 12px; color: #d5dbdb; background: rgba(142, 68, 173, 0.6); padding: 10px; border-radius: 6px; border-left: 4px solid #e67e22;\">\n\t\t\t\t\t\t\t💡 请确保Cursor已正确安装且版本兼容\n\t\t\t\t\t\t</p>\n\t\t\t\t\t</div>\n\t\t\t\t" : _0x505992 = _0x46f029.message || "一键还原失败，请稍后重试";
+      this._showModalWithDelay("showErrorModal", _0x505992);
+      this._updateWebview();
+    }
+  }
+  async ["_handleUnbindDevice"](_0x180822) {
+    try {
+      let _0x95d4de = "",
+        _0x4dd26b = "";
+      try {
+        let _0x5d81c1 = await _0xafae99();
+        if (_0x5d81c1.success) {
+          _0x95d4de = _0x5d81c1.data.cdk_expiration_prompt;
+          _0x4dd26b = _0x5d81c1.data.buy_url;
+          console.log("最新版本:", _0x5d81c1.data.latest_version);
+          console.log("当前版本:", _0x517d34);
+          let _0x2c8d70 = _0x5d81c1.data.latest_version;
+          if (_0x2c8d70 && _0x2c8d70 !== _0x517d34) {
+            if (this._updateWebview(), await this._showConfirmModal("" + _0x5d81c1.data.update_msg, "立即更新", "稍后更新")) {
+              let _0xfd6e9a = _0x5d81c1.data.download_url;
+              _0xfd6e9a && _0x328cd7(_0xfd6e9a);
+            }
+            return;
+          }
+          if (console.log("是否维护:", _0x5d81c1.data.maintenance_mode), console.log("维护消息:", _0x5d81c1.data.maintenance_msg), _0x5d81c1.data.maintenance_mode) {
+            this._showModalWithDelay("showWarningModal", _0x5d81c1.data.maintenance_msg);
             this._updateWebview();
             return;
           }
-          let _0x27bbdc = _0x2aa3e0.data.operation_mode;
-          if (_0x27bbdc === 0) {
+          let _0x19dfc3 = _0x5d81c1.data.operation_mode;
+          if (_0x19dfc3 === 0) {
             if (this._state.activationCode) this._state = {
               ...this._state,
               "activationStatus": "已授权"
@@ -3599,642 +4192,171 @@ var _0x5d9733 = class {
             }
             this._view && this._view.webview.postMessage({
               "command": "updateOperationMode",
-              "mode": _0x27bbdc
+              "mode": _0x19dfc3
             });
             return;
           } else this._view && this._view.webview.postMessage({
             "command": "updateOperationMode",
-            "mode": _0x27bbdc
+            "mode": _0x19dfc3
           });
         } else {
-          _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
+          this._showNetworkErrorModal();
           this._updateWebview();
           return;
         }
-      } catch (_0x25e821) {
-        console.error(_0x25e821);
-        _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
+      } catch (_0x24166a) {
+        console.error(_0x24166a);
+        this._showNetworkErrorModal();
         this._updateWebview();
         return;
       }
-      let _0x1c4904 = "CI_" + (await (0, _0x42f21a.machineId)()),
-        _0x2541af = this._state.activationCode;
-      if (!_0x2541af) {
-        _0x4dc466.window.showErrorMessage("请先激活软件");
+      let _0x22186b = (_0x2ab875(), _0x4120b5(_0x503b4e)),
+        {
+          version: _0x2947d0
+        } = this._state;
+      if (!_0x180822) {
+        this._showModalWithDelay("showWarningModal", "请输入要解绑的激活码");
         return;
       }
-      this._view?.["webview"]["postMessage"]({
-        "command": "disableRefreshButton"
-      });
-      await _0x4dc466.window.withProgress({
-        "location": _0x4dc466.ProgressLocation.Notification,
-        "title": "正在刷新积分...",
+      await _0x153215.window.withProgress({
+        "location": _0x153215.ProgressLocation.Notification,
+        "title": "正在解绑设备...",
         "cancellable": !1
-      }, async _0xe5ce22 => {
-        let _0x8865e0 = await _0x222ede.getPoints(_0x2541af, _0x1c4904);
-        if (console.log("获取积分响应:", _0x8865e0), _0x8865e0.message && _0x8865e0.message.includes("已过期")) {
-          this._state = {
-            ...this._state,
-            "activationStatus": "已过期"
-          };
-          this._updateWebview();
-          _0xe5ce22.report({
-            "increment": 100
-          });
+      }, async _0xd94c41 => {
+        let _0x1a651d = await _0x22186b.unbindDevice(_0x180822, _0x2947d0);
+        if (console.log("解绑设备响应:", _0x1a651d), _0x1a651d.status === "error") throw new Error(_0x1a651d.message || "解绑失败");
+        if (_0x1a651d.message && _0x1a651d.message.includes("已过期")) {
           this._state = {
             ...this._state,
             "activationStatus": "已过期",
-            "activationTime": _0x8865e0.expiresAt || new Date().toLocaleString(),
-            "balance": "0"
+            "activationTime": _0x1a651d.expiresAt || new Date().toLocaleString()
           };
           this._updateWebview();
-          let _0xd63af2 = [{
-            "title": "购买激活码",
-            "isCloseAffordance": !1
-          }, {
-            "title": "取消",
-            "isCloseAffordance": !0
-          }];
-          (await _0x4dc466.window.showWarningMessage(_0x40927f || "激活码已过期，请购买新的激活码", ..._0xd63af2))?.["title"] === "购买激活码" && _0x1dd285 && _0x3bfca2(_0x1dd285);
+          setTimeout(() => {
+            this._showConfirmModal(_0x95d4de || "激活码已过期，请购买新的激活码", "购买激活码", "取消").then(_0x20832c => {
+              _0x20832c && _0x4dd26b && _0x328cd7(_0x4dd26b);
+            });
+          }, 2000);
           return;
         }
-        if (!_0x8865e0.success) throw new Error(_0x8865e0.message || "获取积分失败");
-        this._state = {
-          ...this._state,
-          "balance": _0x8865e0.data.points?.["toString"]() || "0",
-          "boundDevices": _0x8865e0.data.boundDevices?.["toString"]() || this._state.boundDevices || "0"
-        };
-        this._updateWebview();
-        console.log("message", _0x8865e0.message);
+        if (!_0x1a651d.success) throw new Error(_0x1a651d.message || "解绑失败");
+        this._showModalWithDelay("showInfoModal", "🎉 解绑成功！<br><br>✅ 所有设备已清除绑定<br>⚠️ 本设备需要重新激活使用");
+        _0x180822 === this._state.activationCode && (this._state.boundDevices = "0", this._updateWebview());
       });
-    } catch (_0x3e953b) {
-      _0x4dc466.window.showErrorMessage("" + _0x3e953b.message);
-    } finally {
-      this._view?.["webview"]["postMessage"]({
-        "command": "enableRefreshButton"
-      });
+    } catch (_0x7f0b8c) {
+      this._showModalWithDelay("showErrorModal", "" + _0x7f0b8c.message);
     }
   }
-  async ["_handleToggleMax"](_0x592be1) {
+  async ["_handleToggleMagicFree"](_0x3f96d2) {
     try {
-      let _0x2856a9 = _0x49e9c0.isExtensionReset(),
-        _0x3ea82d = _0x49e9c0.isWorkbenchReset();
-      if (!_0x2856a9.isReset || !_0x3ea82d.isReset) {
-        this._state = {
-          ...this._state,
-          "maxEnabled": !_0x592be1
-        };
-        this._updateWebview();
-        this._resetMaxToggleUI(!_0x592be1);
-        _0x4dc466.window.showWarningMessage("⚠️检测到您当前未重置插件");
-        _0x4dc466.window.showWarningMessage("😊请先点击「重置插件」按钮，然后重启 Cursor 以生效！");
-        return;
-      }
-      let _0x2a858d = "",
-        _0x2ee778 = "";
+      console.log("免魔法模式切换到: " + (_0x3f96d2 ? "开启" : "关闭"));
+      this._resetMagicFreeToggleUI(_0x3f96d2, !0);
+      let _0x285c33;
       try {
-        let _0x4e7833 = await _0x4be39f();
-        if (_0x4e7833.success) {
-          _0x2a858d = _0x4e7833.data.cdk_expiration_prompt;
-          _0x2ee778 = _0x4e7833.data.buy_url;
-          console.log("最新版本:", _0x4e7833.data.latest_version);
-          console.log("当前版本:", _0x26f07f);
-          let _0x7db1dd = _0x4e7833.data.latest_version;
-          if (_0x7db1dd && _0x7db1dd !== _0x26f07f) {
-            this._state = {
-              ...this._state,
-              "maxEnabled": !_0x592be1
-            };
-            this._updateWebview();
-            this._resetMaxToggleUI(!_0x592be1);
-            let _0x13cdd6 = [{
-              "title": "立即更新",
-              "isCloseAffordance": !1
-            }, {
-              "title": "稍后更新",
-              "isCloseAffordance": !0
-            }];
-            if ((await _0x4dc466.window.showWarningMessage("" + _0x4e7833.data.update_msg, ..._0x13cdd6))?.["title"] === "立即更新") {
-              let _0xd42d20 = _0x4e7833.data.download_url;
-              _0xd42d20 && _0x3bfca2(_0xd42d20);
-            }
-            return;
-          }
-          if (console.log("是否维护:", _0x4e7833.data.maintenance_mode), console.log("维护消息:", _0x4e7833.data.maintenance_msg), _0x4e7833.data.maintenance_mode) {
-            _0x4dc466.window.showWarningMessage(_0x4e7833.data.maintenance_msg);
-            this._state = {
-              ...this._state,
-              "maxEnabled": !_0x592be1
-            };
-            this._updateWebview();
-            this._resetMaxToggleUI(!_0x592be1);
-            return;
-          }
-        } else {
-          _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
+        if (_0x285c33 = await _0xafae99(), !_0x285c33 || !_0x285c33.success) throw new Error("获取系统设置失败");
+        let _0x1e618a = _0x285c33.data.latest_version;
+        if (_0x1e618a && _0x1e618a !== _0x517d34) {
           this._state = {
             ...this._state,
-            "maxEnabled": !_0x592be1
+            "magicFreeEnabled": !_0x3f96d2
           };
           this._updateWebview();
-          this._resetMaxToggleUI(!_0x592be1);
+          this._resetMagicFreeToggleUI(!_0x3f96d2);
+          this._showModalWithDelay("showWarningModal", _0x285c33.data.update_msg);
           return;
         }
-      } catch (_0x163977) {
-        console.error(_0x163977);
-        _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
-        this._state = {
-          ...this._state,
-          "maxEnabled": !_0x592be1
-        };
-        this._updateWebview();
-        this._resetMaxToggleUI(!_0x592be1);
-        return;
-      }
-      let _0x51d512 = this._state.activationCode;
-      if (!_0x51d512) {
-        _0x4dc466.window.showErrorMessage("请先激活软件");
-        this._state = {
-          ...this._state,
-          "maxEnabled": !_0x592be1
-        };
-        this._updateWebview();
-        this._resetMaxToggleUI(!_0x592be1);
-        return;
-      }
-      await _0x4dc466.window.withProgress({
-        "location": _0x4dc466.ProgressLocation.Notification,
-        "title": _0x592be1 ? "正在启用 Cursor MAX..." : "正在关闭 Cursor MAX...",
-        "cancellable": !1
-      }, async _0x60df31 => {
-        try {
-          let _0x19dff0 = "CI_" + (await (0, _0x42f21a.machineId)()),
-            _0x505cc5 = _0x49e9c0.getSystemInfo().version;
-          if (_0x592be1) {
-            let _0x21456c = await _0x222ede.getMaxConfig(_0x51d512, _0x505cc5, _0x19dff0);
-            if (console.log("获取MAX配置响应:", _0x21456c), _0x21456c.message && _0x21456c.message.includes("已过期")) {
-              _0x60df31.report({
-                "increment": 100
-              });
-              this._state = {
-                ...this._state,
-                "activationStatus": "已过期",
-                "activationTime": _0x21456c.expiresAt || new Date().toLocaleString(),
-                "balance": "0",
-                "maxEnabled": !_0x592be1
-              };
-              this._updateWebview();
-              this._resetMaxToggleUI(!_0x592be1);
-              let _0x1f1542 = [{
-                "title": "购买激活码",
-                "isCloseAffordance": !1
-              }, {
-                "title": "取消",
-                "isCloseAffordance": !0
-              }];
-              (await _0x4dc466.window.showWarningMessage(_0x2a858d || "激活码已过期，请购买新的激活码", ..._0x1f1542))?.["title"] === "购买激活码" && _0x2ee778 && _0x3bfca2(_0x2ee778);
-              return;
-            }
-            if (!_0x21456c.success) throw this._state = {
-              ...this._state,
-              "maxEnabled": !_0x592be1
-            }, this._updateWebview(), this._resetMaxToggleUI(!_0x592be1), new Error(_0x21456c.message || "MAX配置获取失败");
-            console.log("MAX配置信息:", _0x21456c.config);
-            let _0x46cbe9 = _0x49e9c0.applyMaxConfig(_0x21456c.config);
-            if (_0x46cbe9.success) _0x4dc466.window.showInformationMessage(_0x46cbe9.message || "开启成功");else {
-              _0x4dc466.window.showWarningMessage(_0x46cbe9.message || "开启失败");
-              this._state = {
-                ...this._state,
-                "maxEnabled": !_0x592be1
-              };
-              this._updateWebview();
-              this._resetMaxToggleUI(!_0x592be1);
-              return;
-            }
-          } else {
-            let _0x28af1 = await _0x222ede.getMaxConfig(_0x51d512, _0x505cc5, _0x19dff0);
-            if (console.log("获取MAX配置响应:", _0x28af1), _0x28af1.message && _0x28af1.message.includes("已过期")) {
-              _0x60df31.report({
-                "increment": 100
-              });
-              this._state = {
-                ...this._state,
-                "activationStatus": "已过期",
-                "activationTime": _0x28af1.expiresAt || new Date().toLocaleString(),
-                "balance": "0",
-                "maxEnabled": !_0x592be1
-              };
-              this._updateWebview();
-              this._resetMaxToggleUI(!_0x592be1);
-              let _0x519b9d = [{
-                "title": "购买激活码",
-                "isCloseAffordance": !1
-              }, {
-                "title": "取消",
-                "isCloseAffordance": !0
-              }];
-              (await _0x4dc466.window.showWarningMessage(_0x2a858d || "激活码已过期，请购买新的激活码", ..._0x519b9d))?.["title"] === "购买激活码" && _0x2ee778 && _0x3bfca2(_0x2ee778);
-              return;
-            }
-            if (!_0x28af1.success) throw this._state = {
-              ...this._state,
-              "maxEnabled": !_0x592be1
-            }, this._updateWebview(), this._resetMaxToggleUI(!_0x592be1), new Error(_0x28af1.message || "MAX配置获取失败");
-            console.log("MAX配置信息:", _0x28af1.config);
-            let _0x28969e = _0x49e9c0.restoreMaxConfig(_0x28af1.config);
-            if (_0x28969e.success) _0x4dc466.window.showInformationMessage(_0x28969e.message || "关闭成功");else {
-              _0x4dc466.window.showWarningMessage(_0x28969e.message || "关闭失败");
-              this._state = {
-                ...this._state,
-                "maxEnabled": !_0x592be1
-              };
-              this._updateWebview();
-              this._resetMaxToggleUI(!_0x592be1);
-              return;
-            }
-            console.log("MAX功能已关闭");
-          }
+        if (_0x285c33.data.maintenance_mode) {
           this._state = {
             ...this._state,
-            "maxEnabled": _0x592be1
+            "magicFreeEnabled": !_0x3f96d2
           };
-          await this._context.globalState.update("maxEnabled", _0x592be1);
           this._updateWebview();
-          await new Promise(_0x1b902a => setTimeout(_0x1b902a, 1000));
-          try {
-            let _0x4434a1 = _0x4dc466.workspace.getConfiguration("update"),
-              _0x1bda56 = _0x4434a1.get("mode") === "none" ? "start" : "none";
-            if (await _0x4434a1.update("mode", _0x1bda56, !0), _0x4dc466.window.showInformationMessage("请确保项目已经保存，然后重启Cursor！"), _0x1bda56 !== "none") try {
-              console.log("恢复禁止更新状态");
-              await _0x4434a1.update("mode", "none", !0);
-            } catch (_0x2b01b5) {
-              console.error("恢复禁止更新状态失败:", _0x2b01b5);
-            }
-          } catch {
-            try {
-              await _0x25ef96.disableUpdates();
-              _0x4dc466.window.showInformationMessage("请确保项目已经保存，然后重启Cursor！");
-            } catch (_0x242c7c) {
-              _0x4dc466.window.showErrorMessage("触发重启失败，请手动重启Cursor");
-              console.error("触发重启失败：", _0x242c7c);
-            }
-          }
-        } catch (_0x33d0f0) {
-          throw console.error("MAX操作失败:", _0x33d0f0), this._state = {
-            ...this._state,
-            "maxEnabled": !_0x592be1
-          }, this._updateWebview(), this._resetMaxToggleUI(!_0x592be1), _0x33d0f0;
+          this._resetMagicFreeToggleUI(!_0x3f96d2);
+          this._showModalWithDelay("showWarningModal", _0x285c33.data.maintenance_msg);
+          return;
         }
-      });
-    } catch (_0x4c3e50) {
-      _0x4dc466.window.showErrorMessage("" + _0x4c3e50.message);
+      } catch (_0x191024) {
+        console.error("获取系统设置失败:", _0x191024);
+        this._showNetworkErrorModal();
+        this._state = {
+          ...this._state,
+          "magicFreeEnabled": !_0x3f96d2
+        };
+        this._updateWebview();
+        this._resetMagicFreeToggleUI(!_0x3f96d2);
+        return;
+      }
+      if (this._state.activationStatus !== "已授权") {
+        this._state = {
+          ...this._state,
+          "magicFreeEnabled": !_0x3f96d2
+        };
+        this._updateWebview();
+        this._resetMagicFreeToggleUI(!_0x3f96d2);
+        this._showModalWithDelay("showErrorModal", "请先完成激活后再使用免魔法模式");
+        return;
+      }
+      let _0x37d1a8 = "CI_" + (await (0, _0x27fd84.machineId)()),
+        _0x5ee69e = this._state.activationCode,
+        _0x2023e1 = await (_0x2ab875(), _0x4120b5(_0x503b4e)).toggleMagicFree(_0x5ee69e, _0x37d1a8, _0x3f96d2);
+      if (console.log("免魔法模式切换响应:", _0x2023e1), !_0x2023e1.success) {
+        if (_0x2023e1.expiresAt) {
+          this._state = {
+            ...this._state,
+            "activationStatus": "已过期",
+            "activationTime": _0x2023e1.expiresAt || new Date().toLocaleString(),
+            "balance": "0",
+            "magicFreeEnabled": !_0x3f96d2
+          };
+          await this._context.globalState.update("cachedCIQuota", void 0);
+          this._updateWebview();
+          this._resetMagicFreeToggleUI(!_0x3f96d2);
+          return;
+        }
+        this._state = {
+          ...this._state,
+          "magicFreeEnabled": !_0x3f96d2
+        };
+        this._updateWebview();
+        this._resetMagicFreeToggleUI(!_0x3f96d2);
+        this._showModalWithDelay("showWarningModal", _0x2023e1.message || "免魔法模式切换失败");
+        return;
+      }
       this._state = {
         ...this._state,
-        "maxEnabled": !_0x592be1
+        "magicFreeEnabled": _0x3f96d2
       };
+      await this._context.globalState.update("magicFreeEnabled", _0x3f96d2);
       this._updateWebview();
-      this._resetMaxToggleUI(!_0x592be1);
-    }
-  }
-  ["_resetMaxToggleUI"](_0x198f08) {
-    this._view && this._view.webview.postMessage({
-      "command": "updateMaxToggle",
-      "enabled": _0x198f08
-    });
-  }
-  ["_resetAutoSwitchToggleUI"](_0x5cf853) {
-    this._view && this._view.webview.postMessage({
-      "command": "updateAutoSwitchToggle",
-      "enabled": _0x5cf853
-    });
-  }
-  async ["_handleToggleAutoSwitch"](_0x7da71) {
-    try {
-      let _0x5526f2 = _0x49e9c0.isExtensionReset(),
-        _0x3d6e34 = _0x49e9c0.isWorkbenchReset();
-      if (!_0x5526f2.isReset || !_0x3d6e34.isReset) {
-        this._state = {
-          ...this._state,
-          "autoSwitchEnabled": !_0x7da71
-        };
-        this._updateWebview();
-        this._resetAutoSwitchToggleUI(!_0x7da71);
-        _0x4dc466.window.showWarningMessage("⚠️检测到您当前未重置插件");
-        _0x4dc466.window.showWarningMessage("😊请先点击「重置插件」按钮，然后重启 Cursor 以生效！");
-        return;
-      }
-      let _0x5ae503 = "",
-        _0x4afde4 = "";
-      try {
-        let _0x54d17d = await _0x4be39f();
-        if (_0x54d17d.success) {
-          _0x5ae503 = _0x54d17d.data.cdk_expiration_prompt;
-          _0x4afde4 = _0x54d17d.data.buy_url;
-          console.log("最新版本:", _0x54d17d.data.latest_version);
-          console.log("当前版本:", _0x26f07f);
-          let _0x2f83af = _0x54d17d.data.latest_version;
-          if (_0x2f83af && _0x2f83af !== _0x26f07f) {
-            this._state = {
-              ...this._state,
-              "autoSwitchEnabled": !_0x7da71
-            };
-            this._updateWebview();
-            this._resetAutoSwitchToggleUI(!_0x7da71);
-            let _0x15a726 = [{
-              "title": "立即更新",
-              "isCloseAffordance": !1
-            }, {
-              "title": "稍后更新",
-              "isCloseAffordance": !0
-            }];
-            if ((await _0x4dc466.window.showWarningMessage("" + _0x54d17d.data.update_msg, ..._0x15a726))?.["title"] === "立即更新") {
-              let _0x4b51ef = _0x54d17d.data.download_url;
-              _0x4b51ef && _0x3bfca2(_0x4b51ef);
-            }
-            return;
-          }
-          if (console.log("是否维护:", _0x54d17d.data.maintenance_mode), console.log("维护消息:", _0x54d17d.data.maintenance_msg), _0x54d17d.data.maintenance_mode) {
-            _0x4dc466.window.showWarningMessage(_0x54d17d.data.maintenance_msg);
-            this._state = {
-              ...this._state,
-              "autoSwitchEnabled": !_0x7da71
-            };
-            this._updateWebview();
-            this._resetAutoSwitchToggleUI(!_0x7da71);
-            return;
-          }
-        } else {
-          _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
-          this._state = {
-            ...this._state,
-            "autoSwitchEnabled": !_0x7da71
-          };
-          this._updateWebview();
-          this._resetAutoSwitchToggleUI(!_0x7da71);
-          return;
-        }
-      } catch (_0x37f16b) {
-        console.error(_0x37f16b);
-        _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
-        this._state = {
-          ...this._state,
-          "autoSwitchEnabled": !_0x7da71
-        };
-        this._updateWebview();
-        this._resetAutoSwitchToggleUI(!_0x7da71);
-        return;
-      }
-      let _0x52a547 = this._state.activationCode;
-      if (!_0x52a547) {
-        _0x4dc466.window.showErrorMessage("请先激活软件");
-        this._state = {
-          ...this._state,
-          "autoSwitchEnabled": !_0x7da71
-        };
-        this._updateWebview();
-        this._resetAutoSwitchToggleUI(!_0x7da71);
-        return;
-      }
-      await _0x4dc466.window.withProgress({
-        "location": _0x4dc466.ProgressLocation.Notification,
-        "title": _0x7da71 ? "正在启用全自动换号..." : "正在关闭全自动换号...",
-        "cancellable": !1
-      }, async _0x44b268 => {
-        try {
-          let _0x5ec5d0 = "CI_" + (await (0, _0x42f21a.machineId)()),
-            _0x4dfcfe = await _0x222ede.toggleAutoSwitch(_0x52a547, _0x5ec5d0, _0x7da71);
-          if (console.log("切换全自动换号响应:", _0x4dfcfe), _0x4dfcfe.message && _0x4dfcfe.message.includes("已过期")) {
-            _0x44b268.report({
-              "increment": 100
-            });
-            this._state = {
-              ...this._state,
-              "activationStatus": "已过期",
-              "activationTime": _0x4dfcfe.expiresAt || new Date().toLocaleString(),
-              "balance": "0",
-              "autoSwitchEnabled": !_0x7da71
-            };
-            this._updateWebview();
-            this._resetAutoSwitchToggleUI(!_0x7da71);
-            let _0x49cbc1 = [{
-              "title": "购买激活码",
-              "isCloseAffordance": !1
-            }, {
-              "title": "取消",
-              "isCloseAffordance": !0
-            }];
-            (await _0x4dc466.window.showWarningMessage(_0x5ae503 || "激活码已过期，请购买新的激活码", ..._0x49cbc1))?.["title"] === "购买激活码" && _0x4afde4 && _0x3bfca2(_0x4afde4);
-            return;
-          }
-          if (!_0x4dfcfe.success) throw this._state = {
-            ...this._state,
-            "autoSwitchEnabled": !_0x7da71
-          }, this._updateWebview(), this._resetAutoSwitchToggleUI(!_0x7da71), new Error(_0x4dfcfe.message || "全自动换号设置失败");
-          this._state = {
-            ...this._state,
-            "autoSwitchEnabled": _0x7da71
-          };
-          await this._context.globalState.update("autoSwitchEnabled", _0x7da71);
-          this._updateWebview();
-          _0x4dc466.window.showInformationMessage(_0x7da71 ? "全自动换号已开启" : "全自动换号已关闭");
-          await new Promise(_0x3529dd => setTimeout(_0x3529dd, 1000));
-        } catch (_0x1816a7) {
-          throw console.error("全自动换号操作失败:", _0x1816a7), this._state = {
-            ...this._state,
-            "autoSwitchEnabled": !_0x7da71
-          }, this._updateWebview(), this._resetAutoSwitchToggleUI(!_0x7da71), _0x1816a7;
-        }
-      });
-    } catch (_0x288250) {
-      _0x4dc466.window.showErrorMessage("" + _0x288250.message);
+      this._resetMagicFreeToggleUI(_0x3f96d2);
+      this._showModalWithDelay("showInfoModal", _0x2023e1.message || "免魔法模式已" + (_0x3f96d2 ? "开启" : "关闭"));
+    } catch (_0x3f9b05) {
+      console.error("免魔法模式切换失败:", _0x3f9b05);
       this._state = {
         ...this._state,
-        "autoSwitchEnabled": !_0x7da71
+        "magicFreeEnabled": !_0x3f96d2
       };
       this._updateWebview();
-      this._resetAutoSwitchToggleUI(!_0x7da71);
+      this._resetMagicFreeToggleUI(!_0x3f96d2);
+      this._showModalWithDelay("showErrorModal", "免魔法模式切换失败: " + _0x3f9b05.message);
     }
   }
-  async ["_handleRestoreConfig"]() {
-    try {
-      await this._context.globalState.update("userDeactivated", !0);
-      console.log("已设置用户停用状态为true");
-      let _0x2af7fc = "",
-        _0x6e0922 = "";
-      try {
-        let _0x30d136 = await _0x4be39f();
-        if (_0x30d136.success) {
-          _0x2af7fc = _0x30d136.data.cdk_expiration_prompt;
-          _0x6e0922 = _0x30d136.data.buy_url;
-          console.log("最新版本:", _0x30d136.data.latest_version);
-          console.log("当前版本:", _0x26f07f);
-          let _0x4c3dcf = _0x30d136.data.latest_version;
-          if (_0x4c3dcf && _0x4c3dcf !== _0x26f07f) {
-            this._updateWebview();
-            let _0x3aa71c = [{
-              "title": "立即更新",
-              "isCloseAffordance": !1
-            }, {
-              "title": "稍后更新",
-              "isCloseAffordance": !0
-            }];
-            if ((await _0x4dc466.window.showWarningMessage("" + _0x30d136.data.update_msg, ..._0x3aa71c))?.["title"] === "立即更新") {
-              let _0x23c397 = _0x30d136.data.download_url;
-              _0x23c397 && _0x3bfca2(_0x23c397);
-            }
-            return;
-          }
-          if (console.log("是否维护:", _0x30d136.data.maintenance_mode), console.log("维护消息:", _0x30d136.data.maintenance_msg), _0x30d136.data.maintenance_mode) {
-            _0x4dc466.window.showWarningMessage(_0x30d136.data.maintenance_msg);
-            this._updateWebview();
-            return;
-          }
-          let _0x56de8b = _0x30d136.data.operation_mode;
-          if (_0x56de8b === 0) {
-            if (this._state.activationCode) this._state = {
-              ...this._state,
-              "activationStatus": "已授权"
-            }, this._updateWebview();else {
-              await this._handleActivation("cdk-cdk-cdk-cdk", !0);
-              return;
-            }
-          }
-          this._view && this._view.webview.postMessage({
-            "command": "updateOperationMode",
-            "mode": _0x56de8b
-          });
-        } else {
-          _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
-          this._updateWebview();
-          return;
-        }
-      } catch (_0x4dea97) {
-        console.error(_0x4dea97);
-        _0x4dc466.window.showErrorMessage("获取插件配置失败，请稍后重试");
-        this._updateWebview();
-        return;
-      }
-      if (!this._state.activationCode) {
-        _0x4dc466.window.showErrorMessage("请先激活软件");
-        this._updateWebview();
-        return;
-      }
-      await _0x4dc466.window.withProgress({
-        "location": _0x4dc466.ProgressLocation.Notification,
-        "title": "正在停用插件，请稍候…（耗时取决于网络状态）",
-        "cancellable": !1
-      }, async _0xe4ecad => {
-        try {
-          let _0x482a6c = "CI_" + (await (0, _0x42f21a.machineId)()),
-            _0x32b353 = _0x49e9c0.getSystemInfo().version,
-            _0x38716e = this._state.activationCode,
-            _0x112e82 = await _0x222ede.getRestoreCode(_0x38716e, _0x32b353, _0x482a6c);
-          if (console.log("获取恢复代码响应:", _0x112e82), _0x112e82.message && _0x112e82.message.includes("已过期")) {
-            this._state = {
-              ...this._state,
-              "activationStatus": "已过期"
-            };
-            this._updateWebview();
-            _0xe4ecad.report({
-              "increment": 100
-            });
-            this._state = {
-              ...this._state,
-              "activationStatus": "已过期",
-              "activationTime": _0x112e82.expiresAt || new Date().toLocaleString(),
-              "balance": "0"
-            };
-            this._updateWebview();
-            let _0x472e41 = [{
-              "title": "购买激活码",
-              "isCloseAffordance": !1
-            }, {
-              "title": "取消",
-              "isCloseAffordance": !0
-            }];
-            (await _0x4dc466.window.showWarningMessage(_0x2af7fc || "激活码已过期，请购买新的激活码", ..._0x472e41))?.["title"] === "购买激活码" && _0x6e0922 && _0x3bfca2(_0x6e0922);
-            return;
-          }
-          if (!_0x112e82 || !_0x112e82.success) throw new Error(_0x112e82.message || "请重新尝试 -2001");
-          if (!_0x112e82.code || typeof _0x112e82.code != "string") throw new Error("请重新尝试 -2002");
-          _0x49e9c0.reset(_0x112e82.code, "NO", _0x112e82.workbenchCode, _0x112e82.nodeCode);
-          await new Promise(_0xd47f18 => setTimeout(_0xd47f18, 1000));
-          this._state = {
-            ...this._state,
-            "maxEnabled": !1
-          };
-          await this._context.globalState.update("maxEnabled", !1);
-          this._resetMaxToggleUI(!1);
-          this._state = {
-            ...this._state,
-            "autoSwitchEnabled": !1
-          };
-          await this._context.globalState.update("autoSwitchEnabled", !1);
-          this._resetAutoSwitchToggleUI(!1);
-          try {
-            let _0x415318 = _0x4dc466.workspace.getConfiguration("update"),
-              _0x585869 = _0x415318.get("mode") === "none" ? "start" : "none";
-            if (await _0x415318.update("mode", _0x585869, !0), _0x4dc466.window.showInformationMessage("请确保项目已经保存，然后重启Cursor！"), this._updateWebview(), _0x585869 !== "none") try {
-              console.log("恢复禁止更新状态");
-              await _0x415318.update("mode", "none", !0);
-            } catch (_0x19acfc) {
-              console.error("恢复禁止更新状态失败:", _0x19acfc);
-            }
-            this._updateWebview();
-          } catch {
-            try {
-              await _0x25ef96.disableUpdates();
-              this._updateWebview();
-              _0x4dc466.window.showInformationMessage("请确保项目已经保存，然后重启Cursor！");
-            } catch (_0x38b777) {
-              this._updateWebview();
-              _0x4dc466.window.showErrorMessage("触发重启失败，请手动重启Cursor");
-              console.error("触发重启失败：", _0x38b777);
-            }
-          }
-        } catch (_0x542ac8) {
-          throw console.error(_0x542ac8), _0x542ac8;
-        }
-      });
-    } catch (_0x465cc2) {
-      _0x4dc466.window.showErrorMessage("" + _0x465cc2.message);
-      this._updateWebview();
-    }
-  }
-  async ["_handleUnbindDevice"]() {
-    let _0x22b79a = (_0x94f85e(), _0x42fbfd(_0x59e8d7)),
-      {
-        version: _0x27561f
-      } = this._state,
-      _0x3762cd = await _0x4dc466.window.showInputBox({
-        "prompt": "请输入要解绑的激活码 (CDK)",
-        "placeHolder": "请输入 CDK",
-        "ignoreFocusOut": !0
-      });
-    if (!(!_0x3762cd || (await _0x4dc466.window.showWarningMessage("确定要解绑 " + _0x3762cd + " 的所有设备吗？", {
-      "modal": !0
-    }, {
-      "title": "确定",
-      "isCloseAffordance": !1
-    }, {
-      "title": "取消",
-      "isCloseAffordance": !0
-    }))?.["title"] !== "确定")) try {
-      let _0x1c4580 = await _0x22b79a.unbindDevice(_0x3762cd, _0x27561f);
-      _0x1c4580.success ? (_0x4dc466.window.showInformationMessage("解绑成功"), _0x3762cd === this._state.activationCode && (this._state.boundDevices = "0", this._updateWebview())) : _0x4dc466.window.showErrorMessage(_0x1c4580.message || "解绑失败");
-    } catch {
-      _0x4dc466.window.showErrorMessage("解绑失败，请检查网络连接");
-    }
+  ["_resetMagicFreeToggleUI"](_0x3275b4, _0x4698e0 = !1) {
+    this._view && this._view.webview.postMessage({
+      "command": "updateMagicFreeToggle",
+      "enabled": _0x3275b4,
+      "disabled": _0x4698e0
+    });
   }
 };
 0 && (module.exports = {
   "activate": activate,
   "deactivate": deactivate
 });
-function _0x21d63f(_0x3b57ea) {
-  function _0x5595d8(_0xf4dec3) {
-    if (typeof _0xf4dec3 === "string") return function (_0x1fcecd) {}.constructor("while (true) {}").apply("counter");else {
-      if (("" + _0xf4dec3 / _0xf4dec3).length !== 1 || _0xf4dec3 % 20 === 0) {
+function _0x4bc01d(_0x237ce2) {
+  function _0x3a1965(_0x192e39) {
+    if (typeof _0x192e39 === "string") return function (_0x1860cd) {}.constructor("while (true) {}").apply("counter");else {
+      if (("" + _0x192e39 / _0x192e39).length !== 1 || _0x192e39 % 20 === 0) {
         (function () {
           return true;
         }).constructor("debugger").call("action");
@@ -4242,9 +4364,9 @@ function _0x21d63f(_0x3b57ea) {
         return false;
       }).constructor("debugger").apply("stateObject");
     }
-    _0x5595d8(++_0xf4dec3);
+    _0x3a1965(++_0x192e39);
   }
   try {
-    if (_0x3b57ea) return _0x5595d8;else _0x5595d8(0);
-  } catch (_0x1a38cd) {}
+    if (_0x237ce2) return _0x3a1965;else _0x3a1965(0);
+  } catch (_0x4f7bd9) {}
 }
