@@ -1,1 +1,504 @@
-const a0_0x21f9e0=a0_0x3eec;function a0_0x3eec(_0x123937,_0x18c388){const _0x3dc8a2=a0_0x3dc8();return a0_0x3eec=function(_0x3eec2f,_0x427256){_0x3eec2f=_0x3eec2f-0x18d;let _0x1e186a=_0x3dc8a2[_0x3eec2f];if(a0_0x3eec['qOIspZ']===undefined){var _0x438380=function(_0x2f4c9e){const _0x544b21='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x16413a='',_0x4d6a74='';for(let _0x2677d0=0x0,_0x30f9f1,_0x2a530d,_0x128aed=0x0;_0x2a530d=_0x2f4c9e['charAt'](_0x128aed++);~_0x2a530d&&(_0x30f9f1=_0x2677d0%0x4?_0x30f9f1*0x40+_0x2a530d:_0x2a530d,_0x2677d0++%0x4)?_0x16413a+=String['fromCharCode'](0xff&_0x30f9f1>>(-0x2*_0x2677d0&0x6)):0x0){_0x2a530d=_0x544b21['indexOf'](_0x2a530d);}for(let _0x66d5b9=0x0,_0x2b5f5c=_0x16413a['length'];_0x66d5b9<_0x2b5f5c;_0x66d5b9++){_0x4d6a74+='%'+('00'+_0x16413a['charCodeAt'](_0x66d5b9)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x4d6a74);};a0_0x3eec['hZVosu']=_0x438380,_0x123937=arguments,a0_0x3eec['qOIspZ']=!![];}const _0x492a5c=_0x3dc8a2[0x0],_0x38db02=_0x3eec2f+_0x492a5c,_0x556175=_0x123937[_0x38db02];return!_0x556175?(_0x1e186a=a0_0x3eec['hZVosu'](_0x1e186a),_0x123937[_0x38db02]=_0x1e186a):_0x1e186a=_0x556175,_0x1e186a;},a0_0x3eec(_0x123937,_0x18c388);}(function(_0x289b97,_0x44f608){const _0x3ff783=a0_0x3eec,_0x555c4f=_0x289b97();while(!![]){try{const _0x3946b7=-parseInt(_0x3ff783(0x1e8))/0x1+parseInt(_0x3ff783(0x20b))/0x2*(-parseInt(_0x3ff783(0x1e2))/0x3)+-parseInt(_0x3ff783(0x1d5))/0x4*(-parseInt(_0x3ff783(0x1df))/0x5)+-parseInt(_0x3ff783(0x1e4))/0x6+parseInt(_0x3ff783(0x20c))/0x7+parseInt(_0x3ff783(0x228))/0x8+parseInt(_0x3ff783(0x214))/0x9;if(_0x3946b7===_0x44f608)break;else _0x555c4f['push'](_0x555c4f['shift']());}catch(_0x1e6ab8){_0x555c4f['push'](_0x555c4f['shift']());}}}(a0_0x3dc8,0xbe0a3));const vscode=require('vscode');class BalanceApiService{static [a0_0x21f9e0(0x1f0)]=a0_0x21f9e0(0x1ca);static [a0_0x21f9e0(0x1da)]=a0_0x21f9e0(0x1d6);static [a0_0x21f9e0(0x1fe)]=a0_0x21f9e0(0x1f1);static async[a0_0x21f9e0(0x1b5)](_0x2f4c9e){const _0x2321af=a0_0x21f9e0;try{const _0x544b21=this['BASE_URL']+_0x2321af(0x1c6)+encodeURIComponent(_0x2f4c9e),_0x16413a=new AbortController(),_0x4d6a74=setTimeout(()=>_0x16413a['abort'](),0x2710),_0x2677d0=await fetch(_0x544b21,{'method':_0x2321af(0x1de),'headers':{'User-Agent':this[_0x2321af(0x1da)],'Accept':'application/json','Content-Type':'application/json'},'signal':_0x16413a[_0x2321af(0x207)]})['finally'](()=>clearTimeout(_0x4d6a74));if(!_0x2677d0['ok'])throw this[_0x2321af(0x1b0)](_0x2677d0[_0x2321af(0x1dd)],'HTTP\x20'+_0x2677d0['status']+':\x20'+_0x2677d0['statusText'],'获取账号信息失败');const _0x30f9f1=await _0x2677d0[_0x2321af(0x1eb)]();if(!_0x30f9f1||!_0x30f9f1[_0x2321af(0x191)]||!Array['isArray'](_0x30f9f1[_0x2321af(0x191)])||_0x30f9f1[_0x2321af(0x191)][_0x2321af(0x236)]===0x0)throw new Error(_0x2321af(0x1d9));const _0x2a530d=_0x30f9f1[_0x2321af(0x191)][0x0];if(!_0x2a530d[_0x2321af(0x1d7)]||!_0x2a530d[_0x2321af(0x1d7)]['id'])throw new Error('API响应格式错误：缺少customer信息');return{'customer_id':_0x2a530d[_0x2321af(0x1d7)]['id'],'email':_0x2a530d['customer']['email']||'','plan_name':_0x2a530d[_0x2321af(0x1fa)]?.[_0x2321af(0x22c)]||_0x2321af(0x22e),'end_date':_0x2a530d[_0x2321af(0x23a)]||null};}catch(_0x128aed){throw this['handleApiError'](_0x128aed,_0x2321af(0x213));}}static async['getBalance'](_0x66d5b9,_0x2b5f5c){const _0x6ebfb3=a0_0x21f9e0;try{const _0x45afef=this[_0x6ebfb3(0x1f0)]+_0x6ebfb3(0x1a4)+encodeURIComponent(_0x66d5b9)+_0x6ebfb3(0x200)+this[_0x6ebfb3(0x1fe)]+'&token='+encodeURIComponent(_0x2b5f5c),_0xce1f76=new AbortController(),_0x230198=setTimeout(()=>_0xce1f76['abort'](),0x2710),_0x19ff4f=await fetch(_0x45afef,{'method':_0x6ebfb3(0x1de),'headers':{'User-Agent':this['USER_AGENT'],'Accept':'application/json','Content-Type':'application/json'},'signal':_0xce1f76[_0x6ebfb3(0x207)]})[_0x6ebfb3(0x225)](()=>clearTimeout(_0x230198));if(!_0x19ff4f['ok'])throw this['createApiError'](_0x19ff4f[_0x6ebfb3(0x1dd)],_0x6ebfb3(0x193)+_0x19ff4f['status']+':\x20'+_0x19ff4f[_0x6ebfb3(0x21a)],_0x6ebfb3(0x190));const _0x2f290d=await _0x19ff4f[_0x6ebfb3(0x1eb)]();if(!_0x2f290d||_0x2f290d[_0x6ebfb3(0x1b4)]===undefined)throw new Error('API响应格式错误：缺少credits_balance字段');return _0x2f290d['credits_balance'];}catch(_0xd1cc35){throw this[_0x6ebfb3(0x1a1)](_0xd1cc35,_0x6ebfb3(0x190));}}static[a0_0x21f9e0(0x1b0)](_0x569ee8,_0x1fa2e7,_0x1291eb){const _0x45d895=a0_0x21f9e0,_0xb334b6=new Error(_0x1fa2e7);return _0xb334b6[_0x45d895(0x21e)]=_0x569ee8,_0xb334b6[_0x45d895(0x21f)]=![],_0xb334b6['context']=_0x1291eb,_0xb334b6;}static[a0_0x21f9e0(0x1a1)](_0x3ba066,_0x12b247){const _0x10b469=a0_0x21f9e0;if(_0x3ba066[_0x10b469(0x22c)]===_0x10b469(0x19a)&&_0x3ba066[_0x10b469(0x1ee)][_0x10b469(0x1a8)](_0x10b469(0x1a3))){const _0x4b1ddf=new Error(_0x10b469(0x1cb));return _0x4b1ddf['isNetworkError']=!![],_0x4b1ddf['context']=_0x12b247,_0x4b1ddf;}if(_0x3ba066['statusCode'])return _0x3ba066;const _0x5a33d3=new Error(_0x3ba066[_0x10b469(0x1ee)]||_0x10b469(0x1b8));return _0x5a33d3[_0x10b469(0x21f)]=![],_0x5a33d3[_0x10b469(0x19b)]=_0x12b247,_0x5a33d3;}}class BalanceConfigManager{static ['SECTION']=a0_0x21f9e0(0x19f);constructor(){const _0x5e0fd8=a0_0x21f9e0;this['onConfigChangedEmitter']=new vscode[(_0x5e0fd8(0x202))](),this[_0x5e0fd8(0x218)]=this['onConfigChangedEmitter'][_0x5e0fd8(0x221)],vscode['workspace'][_0x5e0fd8(0x1d3)](_0x46ae33=>{const _0x2dbe2c=_0x5e0fd8;_0x46ae33['affectsConfiguration'](BalanceConfigManager[_0x2dbe2c(0x1f3)])&&this['onConfigChangedEmitter']['fire'](this[_0x2dbe2c(0x198)]());});}['extractTokenFromUrl'](_0x57dcf7){const _0x3c1b0f=a0_0x21f9e0;if(!_0x57dcf7||typeof _0x57dcf7!=='string')return _0x57dcf7;const _0x419721=_0x57dcf7[_0x3c1b0f(0x229)](/[?&]token=([^&]+)/);if(_0x419721)return _0x419721[0x1];return _0x57dcf7;}[a0_0x21f9e0(0x198)](){const _0x820dae=a0_0x21f9e0,_0x20a6d7=vscode['workspace']['getConfiguration'](BalanceConfigManager[_0x820dae(0x1f3)]),_0x57389f=_0x20a6d7[_0x820dae(0x1b1)]('token','');return{'token':this['extractTokenFromUrl'](_0x57389f),'updateInterval':_0x20a6d7[_0x820dae(0x1b1)](_0x820dae(0x1d8),0x258),'enabled':_0x20a6d7[_0x820dae(0x1b1)](_0x820dae(0x18f),!![])};}[a0_0x21f9e0(0x1b9)](_0xae7423){const _0x25624b=a0_0x21f9e0,_0xcde774=[];return(!_0xae7423[_0x25624b(0x197)]||_0xae7423[_0x25624b(0x197)][_0x25624b(0x19e)]()==='')&&_0xcde774['push']('API token不能为空'),(_0xae7423['updateInterval']<0x3c||_0xae7423[_0x25624b(0x1d8)]>0xe10)&&_0xcde774['push'](_0x25624b(0x1ba)),{'isValid':_0xcde774[_0x25624b(0x236)]===0x0,'errors':_0xcde774};}[a0_0x21f9e0(0x1d0)](){const _0x344d58=a0_0x21f9e0;vscode[_0x344d58(0x1ec)][_0x344d58(0x1a6)]('workbench.action.openSettings',BalanceConfigManager[_0x344d58(0x1f3)]);}['showConfigError'](_0x28b0ca){const _0x4c0dff=a0_0x21f9e0,_0x1689a2=_0x4c0dff(0x1e3)+_0x28b0ca[_0x4c0dff(0x1c5)]('\x0a');vscode['window'][_0x4c0dff(0x1e0)](_0x1689a2,_0x4c0dff(0x1aa))[_0x4c0dff(0x232)](_0x124836=>{const _0x3d331b=_0x4c0dff;_0x124836===_0x3d331b(0x1aa)&&this['openSettings']();});}['showConfigSuccess'](){const _0xce657b=a0_0x21f9e0;vscode[_0xce657b(0x1ef)][_0xce657b(0x216)](_0xce657b(0x1e1));}[a0_0x21f9e0(0x227)](){const _0x363f7d=a0_0x21f9e0;this['onConfigChangedEmitter'][_0x363f7d(0x227)]();}}class BalanceStateManager{static [a0_0x21f9e0(0x21c)]=0x18*0x3c*0x3c*0x3e8;constructor(_0x5819ec){const _0x9c1f41=a0_0x21f9e0;this[_0x9c1f41(0x19b)]=_0x5819ec,this[_0x9c1f41(0x1c9)]=new vscode[(_0x9c1f41(0x202))](),this['onStateChanged']=this[_0x9c1f41(0x1c9)][_0x9c1f41(0x221)];}[a0_0x21f9e0(0x22d)](_0x310f3b){return _0x310f3b+'_AccountInfo';}[a0_0x21f9e0(0x1ce)](_0xee7447){const _0x881c0d=a0_0x21f9e0;try{const _0x7fce9f=this[_0x881c0d(0x22d)](_0xee7447),_0xc7700=this['context'][_0x881c0d(0x1f8)][_0x881c0d(0x1b1)](_0x7fce9f);if(!_0xc7700)return null;const _0x16e22c=Date[_0x881c0d(0x1bc)]();if(_0x16e22c-_0xc7700['timestamp']>BalanceStateManager[_0x881c0d(0x21c)])return null;return _0xc7700;}catch(_0x52d1d5){return console[_0x881c0d(0x220)]('[BalanceState]\x20获取缓存数据失败:',_0x52d1d5),null;}}async[a0_0x21f9e0(0x1a9)](_0x57d1e9){const _0x4f3125=a0_0x21f9e0;try{const _0x3cc569=this[_0x4f3125(0x22d)](_0x57d1e9[_0x4f3125(0x197)]);await this[_0x4f3125(0x19b)][_0x4f3125(0x1f8)]['update'](_0x3cc569,_0x57d1e9),this[_0x4f3125(0x1c9)][_0x4f3125(0x1c7)]();}catch(_0x1c12e0){console[_0x4f3125(0x220)](_0x4f3125(0x1fd),_0x1c12e0);}}async['clearAccountCache'](_0x59e120){const _0x545151=a0_0x21f9e0;try{const _0x7a615e=this[_0x545151(0x22d)](_0x59e120);await this[_0x545151(0x19b)][_0x545151(0x1f8)][_0x545151(0x1e9)](_0x7a615e,undefined),this['onStateChangedEmitter'][_0x545151(0x1c7)]();}catch(_0x4388a4){console[_0x545151(0x220)]('[BalanceState]\x20清除账号缓存失败:',_0x4388a4);}}[a0_0x21f9e0(0x1b2)](_0x20ea38){const _0x5d13a7=a0_0x21f9e0,_0x4c14cd=this[_0x5d13a7(0x1ce)](_0x20ea38);return{'isAccountInfoValid':_0x4c14cd!==null&&!_0x4c14cd['error']};}async[a0_0x21f9e0(0x1b6)](_0x26a604,_0x23c5f8){const _0x2aca94=a0_0x21f9e0;try{const _0xbf8c79=this['getCachedAccountData'](_0x23c5f8)||{},_0x3ce43f={..._0xbf8c79,'error':_0x26a604,'timestamp':Date['now'](),'token':_0x23c5f8},_0x149985=this['getAccountCacheKey'](_0x23c5f8);await this[_0x2aca94(0x19b)][_0x2aca94(0x1f8)][_0x2aca94(0x1e9)](_0x149985,_0x3ce43f),this[_0x2aca94(0x1c9)][_0x2aca94(0x1c7)]();}catch(_0x5aa498){console[_0x2aca94(0x220)]('[BalanceState]\x20缓存错误信息失败:',_0x5aa498);}}async[a0_0x21f9e0(0x1c4)](){const _0x2112df=a0_0x21f9e0;try{const _0x33c2be=this[_0x2112df(0x19b)]['globalState']['keys'](),_0x175545=Date[_0x2112df(0x1bc)]();for(const _0x46f03b of _0x33c2be){if(_0x46f03b[_0x2112df(0x1e5)]('_AccountInfo')){const _0x5b7ab6=this[_0x2112df(0x19b)][_0x2112df(0x1f8)][_0x2112df(0x1b1)](_0x46f03b);_0x5b7ab6&&_0x5b7ab6['timestamp']&&_0x175545-_0x5b7ab6['timestamp']>BalanceStateManager[_0x2112df(0x21c)]&&await this['context'][_0x2112df(0x1f8)]['update'](_0x46f03b,undefined);}}}catch(_0x1f231f){console[_0x2112df(0x220)](_0x2112df(0x1ae),_0x1f231f);}}async[a0_0x21f9e0(0x226)](_0x515a73,_0x9f60a0=![]){const _0x4adf19=a0_0x21f9e0,_0x243be5=this['getCachedAccountData'](_0x515a73);if(!_0x9f60a0&&_0x243be5&&!_0x243be5[_0x4adf19(0x220)]&&_0x243be5[_0x4adf19(0x20a)])return{'customer_id':_0x243be5[_0x4adf19(0x20a)],'email':_0x243be5[_0x4adf19(0x209)],'plan_name':_0x243be5[_0x4adf19(0x1d2)],'end_date':_0x243be5[_0x4adf19(0x23a)]};return await BalanceApiService[_0x4adf19(0x1b5)](_0x515a73);}async['fetchAccountInfo'](_0x1be545,_0x4374e0=![]){const _0x1defcb=a0_0x21f9e0;try{const _0x3c5714=await this[_0x1defcb(0x226)](_0x1be545,_0x4374e0),_0x17851c=await BalanceApiService[_0x1defcb(0x1f7)](_0x3c5714[_0x1defcb(0x20a)],_0x1be545),_0x54e391={'customer_id':_0x3c5714['customer_id'],'email':_0x3c5714['email'],'plan_name':_0x3c5714['plan_name'],'end_date':_0x3c5714['end_date'],'balance':_0x17851c,'timestamp':Date[_0x1defcb(0x1bc)](),'token':_0x1be545};return await this[_0x1defcb(0x1a9)](_0x54e391),_0x54e391;}catch(_0x1242d5){throw _0x1242d5;}}[a0_0x21f9e0(0x227)](){const _0x503b6d=a0_0x21f9e0;this[_0x503b6d(0x1c9)][_0x503b6d(0x227)]();}}class BalanceStatusBarManager{constructor(){const _0x5de45b=a0_0x21f9e0;this[_0x5de45b(0x1ac)]=vscode['window'][_0x5de45b(0x1f6)](vscode[_0x5de45b(0x204)]['Right'],0x64),this[_0x5de45b(0x1ac)][_0x5de45b(0x18d)]='augmentBalance.openSettings',this['setNotConfigured'](),this['statusBarItem'][_0x5de45b(0x21b)]();}[a0_0x21f9e0(0x1f9)](_0x3062c9){const _0x1591a4=a0_0x21f9e0;if(!_0x3062c9||!_0x3062c9['balance']){this[_0x1591a4(0x1fb)](_0x1591a4(0x223));return;}const _0x429a9c=parseFloat(_0x3062c9[_0x1591a4(0x1ff)]);let _0x423911,_0x36b5df;if(_0x429a9c<=0x5)_0x423911='😟',_0x36b5df='#ff4444';else _0x429a9c<0x19?(_0x423911='🙂',_0x36b5df='#ffaa00'):(_0x423911='😆',_0x36b5df=_0x1591a4(0x1dc));this[_0x1591a4(0x1ac)][_0x1591a4(0x22a)]=_0x423911+'\x20'+_0x429a9c['toFixed'](0x2),this[_0x1591a4(0x1ac)][_0x1591a4(0x1ed)]=_0x36b5df,this[_0x1591a4(0x1ac)]['tooltip']=this[_0x1591a4(0x1bf)](_0x3062c9),this[_0x1591a4(0x1ac)][_0x1591a4(0x235)]=undefined;}[a0_0x21f9e0(0x1d1)](_0x185751=null){const _0x295115=a0_0x21f9e0;this['statusBarItem'][_0x295115(0x22a)]='⏳\x20余额加载中...',this[_0x295115(0x1ac)]['color']=_0x295115(0x1f4),this['statusBarItem'][_0x295115(0x235)]=undefined,_0x185751?this[_0x295115(0x1ac)]['tooltip']=_0x295115(0x1ad)+this[_0x295115(0x1bf)](_0x185751):this[_0x295115(0x1ac)][_0x295115(0x192)]=_0x295115(0x210);}[a0_0x21f9e0(0x1b7)](){const _0x1939cd=a0_0x21f9e0;this[_0x1939cd(0x1ac)]['text']='⚙️\x20余额未配置',this[_0x1939cd(0x1ac)][_0x1939cd(0x1ed)]='#888888',this[_0x1939cd(0x1ac)]['backgroundColor']=undefined,this['statusBarItem'][_0x1939cd(0x192)]=_0x1939cd(0x1cc);}[a0_0x21f9e0(0x1fb)](_0x46641b,_0x1dfa35=null){const _0x345404=a0_0x21f9e0;this[_0x345404(0x1ac)]['text']=_0x345404(0x1a2),this['statusBarItem'][_0x345404(0x1ed)]=_0x345404(0x208),this['statusBarItem'][_0x345404(0x235)]=new vscode[(_0x345404(0x1bb))]('statusBarItem.errorBackground');let _0x249282='余额获取失败:\x20'+_0x46641b+_0x345404(0x1db);_0x1dfa35&&_0x1dfa35[_0x345404(0x1ff)]&&(_0x249282+=_0x345404(0x1c0)+parseFloat(_0x1dfa35[_0x345404(0x1ff)])['toFixed'](0x2),_0x249282+='\x0a更新时间:\x20'+new Date(_0x1dfa35[_0x345404(0x21d)])['toLocaleString']()),this['statusBarItem'][_0x345404(0x192)]=_0x249282;}[a0_0x21f9e0(0x195)](_0x406d9f,_0x3c7e21){const _0x1d3cb0=a0_0x21f9e0;if(!_0x3c7e21){this[_0x1d3cb0(0x1b7)]();return;}if(!_0x406d9f){this['setLoading']();return;}if(_0x406d9f[_0x1d3cb0(0x220)]){this['setError'](_0x406d9f[_0x1d3cb0(0x220)],_0x406d9f);return;}this[_0x1d3cb0(0x1f9)](_0x406d9f);}[a0_0x21f9e0(0x1bf)](_0x37d10e){const _0x3b5c3d=a0_0x21f9e0;if(!_0x37d10e)return _0x3b5c3d(0x230);const _0x2678e3=parseFloat(_0x37d10e[_0x3b5c3d(0x1ff)]||'0');let _0x3fa40f=_0x3b5c3d(0x222)+_0x2678e3[_0x3b5c3d(0x194)](0x2)+'\x0a';return _0x37d10e['email']&&(_0x3fa40f+='账号:\x20'+_0x37d10e[_0x3b5c3d(0x209)]+'\x0a'),_0x37d10e[_0x3b5c3d(0x1d2)]&&(_0x3fa40f+=_0x3b5c3d(0x212)+_0x37d10e[_0x3b5c3d(0x1d2)]+'\x0a'),_0x37d10e['end_date']&&(_0x3fa40f+=_0x3b5c3d(0x1f2)+new Date(_0x37d10e['end_date'])[_0x3b5c3d(0x1c2)]()+'\x0a'),_0x37d10e[_0x3b5c3d(0x21d)]&&(_0x3fa40f+='更新时间:\x20'+new Date(_0x37d10e['timestamp'])[_0x3b5c3d(0x199)]()+'\x0a'),_0x3fa40f+=_0x3b5c3d(0x239),_0x3fa40f;}[a0_0x21f9e0(0x227)](){const _0xba760d=a0_0x21f9e0;this[_0xba760d(0x1ac)][_0xba760d(0x227)]();}}function a0_0x3dc8(){const _0x59ea6a=['5OMt5BYa6k6+572U','AxnwywXPza','C3rHDhvZqMfYsxrLBq','5Q2J5zYO5PU05PAW5l2z6AkDlI4UcGO','w0jHBgfUy2vtDgf0zv0G5RIf55cg6l+h5PYF57Yt5A2y5AsX6lsLoG','C3rHDhvZqMfYtwfUywDLCG','y3jLyxrLqxbPrxjYB3i','z2v0','DMfSAwrHDgvdywnOzq','AxnjBML0AwfSAxPLza','y3jLzgL0C19IywXHBMnL','z2v0qwnJB3vUDeLUzM8','y2fJAgvfCNjVCG','C2v0tM90q29UzMLNDxjLza','5PYQ55+L6zsz6k+V','DMfSAwrHDgvdB25MAwC','5PU05PAW6zE06zQu5B+f6Ag75zYOnJaTmZyWmoENKUs5I+MxTa','vgHLBwvdB2XVCG','BM93','C3vIC2nYAxb0Aw9UCW','B25tDgf0zunOyw5Nzwq','y3jLyxrLvg9VBhrPCa','cGRKUiRMRkhMIjdLIP/OJRFLJ5BNMOtKVzNPOP06ia','Aw5PDgLHBgL6zvn0yxrL','Dg9mB2nHBgveyxrLu3rYAw5N','y2XLyxjby2nVDw50q2fJAgu','y2XLyw51Cev4CgLYzwrdywnOzq','AM9PBG','l3n1yNnJCMLWDgLVBNnFzNjVBv9SAw5Rp3rVA2vUpq','zMLYzq','zgvIDwC','B25tDgf0zunOyw5NzwrfBwL0DgvY','Ahr0Chm6lY9WB3j0ywWUD2L0Ag9YyI5JB20VyxbPl3yX','572r57UC6l+E5O6L5AsX6lsL77Ym6k+35Qoa5P+L572r57UC6l+E5O6L','54k55yE76ywn572UqxvNBwvUDos9MEMINEAyVUEKUGOk6zYa6kAb6k6+572UqvbjifrVA2vU5OMn6io95PI+56s65l2z6AkD5l+H5OgV','D29YA3nWywnL','z2v0q2fJAgvKqwnJB3vUDerHDge','DxbKyxrLu3rHDhvZqMfY','B3bLBLnLDhrPBMDZ','C2v0tg9HzgLUzW','CgXHBL9Uyw1L','B25eAwrdAgfUz2vdB25MAwD1CMf0Aw9U','zxjYB3jZ','otqZmMXytwr2ua','tw96AwXSys81lJaGkfDPBMrVD3mGtLqGmtaUmdSGv2LUnJq7ihG2ncKGqxbWBgvxzwjlAxqVntm3lJm2icHlsfrntcWGBgLRzsbhzwnRBYKGq2HYB21LlZKXlJaUndq3mI4XmJqGu2fMyxjPlZuZnY4ZnG','y3vZDg9Tzxi','DxbKyxrLsw50zxj2ywW','qvbj5zon5BQu5Qc85BYp6zsz6k+V77YA57Y65Bcr5PYj5Pwi55Qe6k6I6zIf5PwW5O2U','vvnfuL9br0vova','cGRNGRNLH7VMIzpLVidORR7NVA7POBxPNAi','iZaWyweWma','C3rHDhvZ','r0vu','mty3nxPLDNHZta','C2HVD0vYCM9YtwvZC2fNzq','qxvNBwvUDcbcywXHBMnL6ywn572U5BEY5PU05PAW','ntKXEMndyvLt','qxvNBwvUDcbcywXHBMnL6ywn572U6zsz6k+V77YAcG','ntiXmdu4mg1brMPxBG','zw5KC1DPDgG','w0jHBgfUy2vfBMHHBMnLzf0G','zMv0y2Hby2nVDw50sw5MBW','odeXmJi4thn1q0fv','DxbKyxrL','ChvZAa','ANnVBG','y29TBwfUzhm','y29SB3i','BwvZC2fNzq','D2LUzg93','qKftrv9vuKW','ALDusM85ChrIyxbnv2T2zW','5yIW5PYF5PE26zE0oIa','u0vdveLptG','iZG4odG4oa','C2HVD0nVBMzPz1n1y2nLC3m','y3jLyxrLu3rHDhvZqMfYsxrLBq','z2v0qMfSyw5Jzq','z2XVyMfSu3rHDgu','C2v0tM9YBwfS','CgXHBG','C2v0rxjYB3i','BgfZDfrVA2vU','w0jHBgfUy2vtDgf0zv0G57Yt5A2y6lsM5y+35PwW5O2U5AsX6lsLoG','ufjjq0Lor19vtKLux0Le','yMfSyw5Jzq','l2XLzgDLCL9ZDw1Tyxj5p3bYAwnPBMDFDw5PDf9Pzd0','6lsM5y+35l+H5OgV57Yt5A2y5PEG5Pwi77Ym5BY65yI25yI35PAW','rxzLBNrfBwL0DgvY','C3rHCNrqzxjPB2rPy1vWzgf0zq','u3rHDhvZqMfYqwXPz25Tzw50','5BEY5zcV55sO','z2v0q29UzMLNDxjHDgLVBG','C2LNBMfS','i2zMndq0na','zw1HAwW','y3vZDg9TzxjFAwq','nJmZogj0AhnTra','ntu2mdG1nKnytxPbra','C3rVCfbLCMLVzgLJvxbKyxrL','Aw5MBW','CMvNAxn0zxjdB21Tyw5KCW','5Q2J5zYO6i635y+w5l2z6AkD5l+H5OgVlI4U','y3jLyxrLtg9Nz2vY','5Awx6AsqoIa','6i635y+w6lsM5y+35l+H5OgV5AsX6lsL','nZu4mdCXohPNCwT5Bq','AxnvCgrHDgLUzW','C2HVD0LUzM9YBwf0Aw9UtwvZC2fNzq','q29UzMLNDxjHDgLVBLrHCMDLDa','B25dB25MAwDdAgfUz2vK','r2XVyMfS','C3rHDhvZvgv4Da','C2HVDW','q0fdsevFrvHqsvjzx01t','DgLTzxn0yw1W','C3rHDhvZq29Kzq','Axnozxr3B3jRrxjYB3i','zxjYB3i','zxzLBNq','qxvNBwvUDcdKVzNPOP06ia','5PwW5O2U5PEG5Pwi','rw5Oyw5JzwqGBw9KDwXLigrPC3bVC2vK','zMLUywXSEq','z2v0t3jgzxrJAefJy291BNrjBMzV','zgLZCg9Zzq','nti0ntCXmM5mCwD3uG','Bwf0y2G','Dgv4Da','5BEY56Ab55sO','BMfTzq','z2v0qwnJB3vUDenHy2HLs2v5','5PYQ55+L5Awx6Asq','qxvNBwvUDcbcywXHBMnL6k6K6k+b5AsX6lsLoIa','5PQc5PEG5PwW5O2U','Bg9Nz2vY','DgHLBG','qwXYzwfKEsbPBML0AwfSAxPLza','D2fYBG','yMfJA2DYB3vUzenVBg9Y','BgvUz3rO','CMvMCMvZAejHBgfUy2u','y29UzMLNtwfUywDLCG','cUEcUEwhU+AjK+w8GoIUVUE9RUMHTEMDOG','zw5Kx2rHDgu','y29TBwfUza','C2HVD0nVBMzPz0vYCM9Y','zw5HyMXLza','6i635y+w5l2z6AkD5AsX6lsL','zgf0yq','Dg9VBhrPCa','sfruuca','Dg9gAxHLza','DxbKyxrLrNjVBunHy2HL','CMvNAxn0zxjdB21Tyw5K','Dg9Rzw4','z2v0q29UzMLN','Dg9mB2nHBgvtDhjPBMC','vhLWzuvYCM9Y','y29UDgv4Da','Dg9Nz2XLrgLZCgXHEq','C3rHDgvnyw5Hz2vY','DhjPBq','yxvNBwvUDejHBgfUy2u','Axnby2nVDw50sw5MB1zHBgLK','AgfUzgXLqxbPrxjYB3i','4P2mios9MEMINEMuMEIVRW','zMv0y2G','l2n1C3rVBwvYCY8','DxbKyxrLvgLTzxi','zxHLy3v0zunVBw1HBMq','Bg9N','Aw5JBhvKzxm','y2fJAgvby2nVDw50rgf0yq'];a0_0x3dc8=function(){return _0x59ea6a;};return a0_0x3dc8();}class AugmentBalanceEnhanced{constructor(){const _0x142224=a0_0x21f9e0;this[_0x142224(0x19b)]=null,this['logger']=this[_0x142224(0x211)](),this[_0x142224(0x1b3)]=![],this[_0x142224(0x238)]=null,this['stateManager']=null,this[_0x142224(0x1af)]=null,this[_0x142224(0x1a5)]=null,this[_0x142224(0x215)]=![],this[_0x142224(0x1fc)]='';}[a0_0x21f9e0(0x211)](){const _0x396014=a0_0x21f9e0;return{'info':(_0x4a2edd,..._0x12b9e2)=>console[_0x396014(0x1a7)]('[BalanceEnhanced]\x20'+_0x4a2edd,..._0x12b9e2),'warn':(_0x3c6b3c,..._0x21b9e7)=>console[_0x396014(0x234)](_0x396014(0x1e6)+_0x3c6b3c,..._0x21b9e7),'error':(_0x10b59c,..._0x3b8519)=>console[_0x396014(0x220)](_0x396014(0x1e6)+_0x10b59c,..._0x3b8519),'debug':(_0x224d99,..._0x34e002)=>console[_0x396014(0x1c8)](_0x396014(0x1e6)+_0x224d99,..._0x34e002)};}async['initialize'](_0x11b0c5){const _0x4dc6ea=a0_0x21f9e0;if(this[_0x4dc6ea(0x1b3)]){this[_0x4dc6ea(0x231)][_0x4dc6ea(0x234)](_0x4dc6ea(0x233));return;}try{this[_0x4dc6ea(0x19b)]=_0x11b0c5,this[_0x4dc6ea(0x238)]=new BalanceConfigManager(),this[_0x4dc6ea(0x19d)]=new BalanceStateManager(_0x11b0c5),this['statusBarManager']=new BalanceStatusBarManager(),this[_0x4dc6ea(0x20f)](),this[_0x4dc6ea(0x238)]['onConfigChanged'](_0x31e40f=>{const _0x17a940=_0x4dc6ea;this[_0x17a940(0x218)](_0x31e40f);}),this[_0x4dc6ea(0x19d)][_0x4dc6ea(0x1be)](()=>{const _0x3f4b69=_0x4dc6ea;this[_0x3f4b69(0x1cf)]();}),await this[_0x4dc6ea(0x1c1)](),this[_0x4dc6ea(0x1b3)]=!![],this[_0x4dc6ea(0x231)]['info']('Enhanced\x20module\x20initialized\x20successfully');}catch(_0x2acf99){this[_0x4dc6ea(0x231)][_0x4dc6ea(0x220)]('Initialization\x20failed:',_0x2acf99);throw _0x2acf99;}}[a0_0x21f9e0(0x20f)](){const _0x34b5f6=a0_0x21f9e0;try{const _0x2cf387=vscode[_0x34b5f6(0x1ec)][_0x34b5f6(0x196)]('augmentBalance.openSettings',()=>{const _0x12d783=_0x34b5f6;this[_0x12d783(0x238)][_0x12d783(0x1d0)]();}),_0x4f55c5=vscode[_0x34b5f6(0x1ec)][_0x34b5f6(0x196)]('augmentBalance.refreshBalance',()=>{const _0x211ccf=_0x34b5f6;this[_0x211ccf(0x237)](!![]);}),_0x126589=vscode[_0x34b5f6(0x1ec)]['registerCommand']('augmentBalance.toggleDisplay',()=>{this['toggleDisplay']();});this['context']['subscriptions'][_0x34b5f6(0x1ea)](_0x2cf387),this[_0x34b5f6(0x19b)]['subscriptions']['push'](_0x4f55c5),this[_0x34b5f6(0x19b)][_0x34b5f6(0x1bd)][_0x34b5f6(0x1ea)](_0x126589),this[_0x34b5f6(0x231)][_0x34b5f6(0x20e)]('Commands\x20registered\x20successfully');}catch(_0x552cf1){this[_0x34b5f6(0x231)][_0x34b5f6(0x220)]('Failed to register commands:',_0x552cf1);}}async[a0_0x21f9e0(0x1c1)](){const _0x3b2ff0=a0_0x21f9e0,_0x3e32ae=this[_0x3b2ff0(0x238)][_0x3b2ff0(0x198)](),_0x2f6624=this[_0x3b2ff0(0x238)][_0x3b2ff0(0x1b9)](_0x3e32ae);this[_0x3b2ff0(0x1fc)]=_0x3e32ae[_0x3b2ff0(0x197)],await this[_0x3b2ff0(0x19d)][_0x3b2ff0(0x1c4)]();if(!_0x2f6624['isValid']||!_0x3e32ae[_0x3b2ff0(0x18f)]){this[_0x3b2ff0(0x1af)][_0x3b2ff0(0x1b7)]();return;}this[_0x3b2ff0(0x1cf)](),this[_0x3b2ff0(0x203)](_0x3e32ae),await this[_0x3b2ff0(0x237)]();}async[a0_0x21f9e0(0x218)](_0x5a8a5b){const _0x5784b7=a0_0x21f9e0,_0x4f86eb=this[_0x5784b7(0x238)]['validateConfig'](_0x5a8a5b);if(!_0x4f86eb['isValid']||!_0x5a8a5b['enabled']){!_0x4f86eb[_0x5784b7(0x1ab)]&&this[_0x5784b7(0x238)][_0x5784b7(0x18e)](_0x4f86eb[_0x5784b7(0x1d4)]);this[_0x5784b7(0x1af)][_0x5784b7(0x1b7)](),this[_0x5784b7(0x20d)]();return;}const _0x4de18b=this['lastToken']!==_0x5a8a5b[_0x5784b7(0x197)],_0x2a446f=this[_0x5784b7(0x1fc)];this['lastToken']=_0x5a8a5b[_0x5784b7(0x197)];let _0x3ca680=_0x4de18b;if(_0x4de18b)this[_0x5784b7(0x231)][_0x5784b7(0x20e)]('Token已变更\uFF0C清除旧token缓存并强制刷新'),_0x2a446f&&await this[_0x5784b7(0x19d)][_0x5784b7(0x1c3)](_0x2a446f);else{const _0x25cebb=this[_0x5784b7(0x19d)][_0x5784b7(0x1b2)](_0x5a8a5b[_0x5784b7(0x197)]);!_0x25cebb[_0x5784b7(0x1a0)]&&(this[_0x5784b7(0x231)][_0x5784b7(0x20e)](_0x5784b7(0x201)),_0x3ca680=!![]);}this[_0x5784b7(0x238)][_0x5784b7(0x1f5)](),this[_0x5784b7(0x203)](_0x5a8a5b),await this['refreshBalance'](_0x3ca680);}['startPeriodicUpdate'](_0x53f393){const _0x2deb9d=a0_0x21f9e0;this[_0x2deb9d(0x20d)]();if(!_0x53f393[_0x2deb9d(0x18f)])return;const _0x29bb79=_0x53f393[_0x2deb9d(0x1d8)]*0x3e8;this[_0x2deb9d(0x1a5)]=setInterval(()=>{this['refreshBalance']();},_0x29bb79),this[_0x2deb9d(0x231)][_0x2deb9d(0x20e)]('Started\x20periodic\x20update\x20with\x20interval:\x20'+_0x53f393[_0x2deb9d(0x1d8)]+'s');}[a0_0x21f9e0(0x20d)](){const _0xe278c0=a0_0x21f9e0;this[_0xe278c0(0x1a5)]&&(clearInterval(this[_0xe278c0(0x1a5)]),this['updateTimer']=null,this['logger'][_0xe278c0(0x20e)]('Stopped\x20periodic\x20update'));}async[a0_0x21f9e0(0x237)](_0x5bc10f=![]){const _0x5927ce=a0_0x21f9e0;if(this[_0x5927ce(0x215)])return;const _0x26537f=this[_0x5927ce(0x238)][_0x5927ce(0x198)](),_0x14d385=this[_0x5927ce(0x238)][_0x5927ce(0x1b9)](_0x26537f);if(!_0x14d385[_0x5927ce(0x1ab)]||!_0x26537f['enabled']){this[_0x5927ce(0x1af)]['setNotConfigured']();return;}this['isUpdating']=!![];try{const _0x181326=this[_0x5927ce(0x19d)]['getCachedAccountData'](_0x26537f[_0x5927ce(0x197)]);this[_0x5927ce(0x1af)][_0x5927ce(0x1d1)](_0x181326);const _0x345b1b=await this[_0x5927ce(0x19d)][_0x5927ce(0x1e7)](_0x26537f[_0x5927ce(0x197)],_0x5bc10f);this[_0x5927ce(0x1af)]['setNormal'](_0x345b1b);}catch(_0x4a1d72){const _0x2ec774=_0x4a1d72[_0x5927ce(0x1ee)]||_0x5927ce(0x1b8),_0x50ec52=this[_0x5927ce(0x19d)]['getCachedAccountData'](_0x26537f[_0x5927ce(0x197)]);await this[_0x5927ce(0x19d)][_0x5927ce(0x1b6)](_0x2ec774,_0x26537f['token']),this['statusBarManager'][_0x5927ce(0x1fb)](_0x2ec774,_0x50ec52),(_0x4a1d72['statusCode']===0x191||_0x4a1d72[_0x5927ce(0x21e)]===0x193)&&vscode['window'][_0x5927ce(0x1e0)](_0x5927ce(0x22f)+_0x2ec774,'打开设置')[_0x5927ce(0x232)](_0x56d12b=>{const _0x24a0d2=_0x5927ce;_0x56d12b===_0x24a0d2(0x1aa)&&this['configManager'][_0x24a0d2(0x1d0)]();});}finally{this['isUpdating']=![];}}[a0_0x21f9e0(0x1cf)](){const _0x33918d=a0_0x21f9e0,_0x4c41e0=this[_0x33918d(0x238)][_0x33918d(0x198)](),_0x4896ab=this['configManager'][_0x33918d(0x1b9)](_0x4c41e0),_0x409701=this[_0x33918d(0x19d)][_0x33918d(0x1ce)](_0x4c41e0[_0x33918d(0x197)]);this['statusBarManager'][_0x33918d(0x195)](_0x409701,_0x4896ab[_0x33918d(0x1ab)]&&_0x4c41e0[_0x33918d(0x18f)]);}async[a0_0x21f9e0(0x19c)](){const _0x1a99aa=a0_0x21f9e0,_0x49f739=this[_0x1a99aa(0x238)][_0x1a99aa(0x198)](),_0xd79edd=!_0x49f739[_0x1a99aa(0x18f)],_0x2a7f3a=vscode[_0x1a99aa(0x1cd)][_0x1a99aa(0x206)](_0x1a99aa(0x19f));await _0x2a7f3a[_0x1a99aa(0x1e9)](_0x1a99aa(0x18f),_0xd79edd,vscode[_0x1a99aa(0x217)][_0x1a99aa(0x219)]);const _0x2e38e0=_0xd79edd?_0x1a99aa(0x205):_0x1a99aa(0x22b);vscode[_0x1a99aa(0x1ef)][_0x1a99aa(0x216)]('Augment余额显示'+_0x2e38e0);}[a0_0x21f9e0(0x227)](){const _0x2fe298=a0_0x21f9e0;this[_0x2fe298(0x20d)](),this[_0x2fe298(0x238)]&&this['configManager'][_0x2fe298(0x227)](),this[_0x2fe298(0x19d)]&&this[_0x2fe298(0x19d)]['dispose'](),this[_0x2fe298(0x1af)]&&this['statusBarManager']['dispose'](),this['isInitialized']=![],this[_0x2fe298(0x231)][_0x2fe298(0x20e)](_0x2fe298(0x224));}}module['exports']=AugmentBalanceEnhanced;
+//Sun Nov 02 2025 15:35:57 GMT+0000 (Coordinated Universal Time)
+//Base:https://github.com/echo094/decode-js
+//Modify:https://github.com/smallfawn/decode_action
+const vscode = require("vscode");
+class BalanceApiService {
+  static BASE_URL = "https://portal.withorb.com/api/v1";
+  static USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36";
+  static PRICING_UNIT_ID = "jWTJo9ptbapMWkvg";
+  static async getAccountInfo(_0x2f4c9e) {
+    try {
+      const _0x544b21 = this.BASE_URL + "/subscriptions_from_link?token=" + encodeURIComponent(_0x2f4c9e),
+        _0x16413a = new AbortController(),
+        _0x4d6a74 = setTimeout(() => _0x16413a.abort(), 10000),
+        _0x2677d0 = await fetch(_0x544b21, {
+          method: "GET",
+          headers: {
+            "User-Agent": this.USER_AGENT,
+            Accept: "application/json",
+            "Content-Type": "application/json"
+          },
+          signal: _0x16413a.signal
+        }).finally(() => clearTimeout(_0x4d6a74));
+      if (!_0x2677d0.ok) {
+        throw this.createApiError(_0x2677d0.status, "HTTP " + _0x2677d0.status + ": " + _0x2677d0.statusText, "获取账号信息失败");
+      }
+      const _0x30f9f1 = await _0x2677d0.json();
+      if (!_0x30f9f1 || !_0x30f9f1.data || !Array.isArray(_0x30f9f1.data) || _0x30f9f1.data.length === 0) {
+        throw new Error("API响应格式错误：缺少有效的订阅数据");
+      }
+      const _0x2a530d = _0x30f9f1.data[0];
+      if (!_0x2a530d.customer || !_0x2a530d.customer.id) {
+        throw new Error("API响应格式错误：缺少customer信息");
+      }
+      return {
+        customer_id: _0x2a530d.customer.id,
+        email: _0x2a530d.customer.email || "",
+        plan_name: _0x2a530d.plan?.["name"] || "未知套餐",
+        end_date: _0x2a530d.end_date || null
+      };
+    } catch (_0x128aed) {
+      throw this.handleApiError(_0x128aed, "获取账号信息失败");
+    }
+  }
+  static async getBalance(_0x66d5b9, _0x2b5f5c) {
+    try {
+      const _0x45afef = this.BASE_URL + "/customers/" + encodeURIComponent(_0x66d5b9) + "/ledger_summary?pricing_unit_id=" + this.PRICING_UNIT_ID + "&token=" + encodeURIComponent(_0x2b5f5c),
+        _0xce1f76 = new AbortController(),
+        _0x230198 = setTimeout(() => _0xce1f76.abort(), 10000),
+        _0x19ff4f = await fetch(_0x45afef, {
+          method: "GET",
+          headers: {
+            "User-Agent": this.USER_AGENT,
+            Accept: "application/json",
+            "Content-Type": "application/json"
+          },
+          signal: _0xce1f76.signal
+        }).finally(() => clearTimeout(_0x230198));
+      if (!_0x19ff4f.ok) {
+        throw this.createApiError(_0x19ff4f.status, "HTTP " + _0x19ff4f.status + ": " + _0x19ff4f.statusText, "获取余额失败");
+      }
+      const _0x2f290d = await _0x19ff4f.json();
+      if (!_0x2f290d || _0x2f290d.credits_balance === undefined) {
+        throw new Error("API响应格式错误：缺少credits_balance字段");
+      }
+      return _0x2f290d.credits_balance;
+    } catch (_0xd1cc35) {
+      throw this.handleApiError(_0xd1cc35, "获取余额失败");
+    }
+  }
+  static createApiError(_0x569ee8, _0x1fa2e7, _0x1291eb) {
+    const _0xb334b6 = new Error(_0x1fa2e7);
+    _0xb334b6.statusCode = _0x569ee8;
+    _0xb334b6.isNetworkError = false;
+    _0xb334b6.context = _0x1291eb;
+    return _0xb334b6;
+  }
+  static handleApiError(_0x3ba066, _0x12b247) {
+    if (_0x3ba066.name === "TypeError" && _0x3ba066.message.includes("fetch")) {
+      const _0x4b1ddf = new Error("网络连接失败，请检查网络连接");
+      _0x4b1ddf.isNetworkError = true;
+      _0x4b1ddf.context = _0x12b247;
+      return _0x4b1ddf;
+    }
+    if (_0x3ba066.statusCode) {
+      return _0x3ba066;
+    }
+    const _0x5a33d3 = new Error(_0x3ba066.message || "未知错误");
+    _0x5a33d3.isNetworkError = false;
+    _0x5a33d3.context = _0x12b247;
+    return _0x5a33d3;
+  }
+}
+class BalanceConfigManager {
+  static SECTION = "augmentBalance";
+  constructor() {
+    this.onConfigChangedEmitter = new vscode.EventEmitter();
+    this.onConfigChanged = this.onConfigChangedEmitter.event;
+    vscode.workspace.onDidChangeConfiguration(_0x46ae33 => {
+      _0x46ae33.affectsConfiguration(BalanceConfigManager.SECTION) && this.onConfigChangedEmitter.fire(this.getConfig());
+    });
+  }
+  extractTokenFromUrl(_0x57dcf7) {
+    if (!_0x57dcf7 || typeof _0x57dcf7 !== "string") {
+      return _0x57dcf7;
+    }
+    const _0x419721 = _0x57dcf7.match(/[?&]token=([^&]+)/);
+    if (_0x419721) {
+      return _0x419721[1];
+    }
+    return _0x57dcf7;
+  }
+  getConfig() {
+    const _0x20a6d7 = vscode.workspace.getConfiguration(BalanceConfigManager.SECTION),
+      _0x57389f = _0x20a6d7.get("token", "");
+    return {
+      token: this.extractTokenFromUrl(_0x57389f),
+      updateInterval: _0x20a6d7.get("updateInterval", 600),
+      enabled: _0x20a6d7.get("enabled", true)
+    };
+  }
+  validateConfig(_0xae7423) {
+    const _0xcde774 = [];
+    (!_0xae7423.token || _0xae7423.token.trim() === "") && _0xcde774.push("API token不能为空");
+    (_0xae7423.updateInterval < 60 || _0xae7423.updateInterval > 3600) && _0xcde774.push("更新间隔必须在60-3600秒之间");
+    return {
+      isValid: _0xcde774.length === 0,
+      errors: _0xcde774
+    };
+  }
+  openSettings() {
+    vscode.commands.executeCommand("workbench.action.openSettings", BalanceConfigManager.SECTION);
+  }
+  showConfigError(_0x28b0ca) {
+    const _0x1689a2 = "Augment Balance配置错误：\n" + _0x28b0ca.join("\n");
+    vscode.window.showErrorMessage(_0x1689a2, "打开设置").then(_0x124836 => {
+      _0x124836 === "打开设置" && this.openSettings();
+    });
+  }
+  showConfigSuccess() {
+    vscode.window.showInformationMessage("Augment Balance配置已更新");
+  }
+  dispose() {
+    this.onConfigChangedEmitter.dispose();
+  }
+}
+class BalanceStateManager {
+  static CACHE_EXPIRY_MS = 86400000;
+  constructor(_0x5819ec) {
+    this.context = _0x5819ec;
+    this.onStateChangedEmitter = new vscode.EventEmitter();
+    this.onStateChanged = this.onStateChangedEmitter.event;
+  }
+  getAccountCacheKey(_0x310f3b) {
+    return _0x310f3b + "_AccountInfo";
+  }
+  getCachedAccountData(_0xee7447) {
+    try {
+      const _0x7fce9f = this.getAccountCacheKey(_0xee7447),
+        _0xc7700 = this.context.globalState.get(_0x7fce9f);
+      if (!_0xc7700) {
+        return null;
+      }
+      const _0x16e22c = Date.now();
+      if (_0x16e22c - _0xc7700.timestamp > BalanceStateManager.CACHE_EXPIRY_MS) {
+        return null;
+      }
+      return _0xc7700;
+    } catch (_0x52d1d5) {
+      console.error("[BalanceState] 获取缓存数据失败:", _0x52d1d5);
+      return null;
+    }
+  }
+  async cacheAccountData(_0x57d1e9) {
+    try {
+      const _0x3cc569 = this.getAccountCacheKey(_0x57d1e9.token);
+      await this.context.globalState.update(_0x3cc569, _0x57d1e9);
+      this.onStateChangedEmitter.fire();
+    } catch (_0x1c12e0) {
+      console.error("[BalanceState] 缓存账号数据失败:", _0x1c12e0);
+    }
+  }
+  async clearAccountCache(_0x59e120) {
+    try {
+      const _0x7a615e = this.getAccountCacheKey(_0x59e120);
+      await this.context.globalState.update(_0x7a615e, undefined);
+      this.onStateChangedEmitter.fire();
+    } catch (_0x4388a4) {
+      console.error("[BalanceState] 清除账号缓存失败:", _0x4388a4);
+    }
+  }
+  validateCache(_0x20ea38) {
+    const _0x4c14cd = this.getCachedAccountData(_0x20ea38);
+    return {
+      isAccountInfoValid: _0x4c14cd !== null && !_0x4c14cd.error
+    };
+  }
+  async cacheError(_0x26a604, _0x23c5f8) {
+    try {
+      const _0xbf8c79 = this.getCachedAccountData(_0x23c5f8) || {},
+        _0x3ce43f = {
+          ..._0xbf8c79,
+          error: _0x26a604,
+          timestamp: Date.now(),
+          token: _0x23c5f8
+        },
+        _0x149985 = this.getAccountCacheKey(_0x23c5f8);
+      await this.context.globalState.update(_0x149985, _0x3ce43f);
+      this.onStateChangedEmitter.fire();
+    } catch (_0x5aa498) {
+      console.error("[BalanceState] 缓存错误信息失败:", _0x5aa498);
+    }
+  }
+  async cleanupExpiredCache() {
+    try {
+      const _0x33c2be = this.context.globalState.keys(),
+        _0x175545 = Date.now();
+      for (const _0x46f03b of _0x33c2be) {
+        if (_0x46f03b.endsWith("_AccountInfo")) {
+          const _0x5b7ab6 = this.context.globalState.get(_0x46f03b);
+          _0x5b7ab6 && _0x5b7ab6.timestamp && _0x175545 - _0x5b7ab6.timestamp > BalanceStateManager.CACHE_EXPIRY_MS && (await this.context.globalState.update(_0x46f03b, undefined));
+        }
+      }
+    } catch (_0x1f231f) {
+      console.error("[BalanceState] 清理过期缓存失败:", _0x1f231f);
+    }
+  }
+  async getOrFetchAccountInfo(_0x515a73, _0x9f60a0 = false) {
+    const _0x243be5 = this.getCachedAccountData(_0x515a73);
+    if (!_0x9f60a0 && _0x243be5 && !_0x243be5.error && _0x243be5.customer_id) {
+      return {
+        customer_id: _0x243be5.customer_id,
+        email: _0x243be5.email,
+        plan_name: _0x243be5.plan_name,
+        end_date: _0x243be5.end_date
+      };
+    }
+    return await BalanceApiService.getAccountInfo(_0x515a73);
+  }
+  async fetchAccountInfo(_0x1be545, _0x4374e0 = false) {
+    try {
+      const _0x3c5714 = await this.getOrFetchAccountInfo(_0x1be545, _0x4374e0),
+        _0x17851c = await BalanceApiService.getBalance(_0x3c5714.customer_id, _0x1be545),
+        _0x54e391 = {
+          customer_id: _0x3c5714.customer_id,
+          email: _0x3c5714.email,
+          plan_name: _0x3c5714.plan_name,
+          end_date: _0x3c5714.end_date,
+          balance: _0x17851c,
+          timestamp: Date.now(),
+          token: _0x1be545
+        };
+      await this.cacheAccountData(_0x54e391);
+      return _0x54e391;
+    } catch (_0x1242d5) {
+      throw _0x1242d5;
+    }
+  }
+  dispose() {
+    this.onStateChangedEmitter.dispose();
+  }
+}
+class BalanceStatusBarManager {
+  constructor() {
+    this.statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 100);
+    this.statusBarItem.command = "augmentBalance.openSettings";
+    this.setNotConfigured();
+    this.statusBarItem.show();
+  }
+  setNormal(_0x3062c9) {
+    if (!_0x3062c9 || !_0x3062c9.balance) {
+      this.setError("数据无效");
+      return;
+    }
+    const _0x429a9c = parseFloat(_0x3062c9.balance);
+    let _0x423911, _0x36b5df;
+    if (_0x429a9c <= 5) {
+      _0x423911 = "😟";
+      _0x36b5df = "#ff4444";
+    } else {
+      _0x429a9c < 25 ? (_0x423911 = "🙂", _0x36b5df = "#ffaa00") : (_0x423911 = "😆", _0x36b5df = "#00aa00");
+    }
+    this.statusBarItem.text = _0x423911 + " " + _0x429a9c.toFixed(2);
+    this.statusBarItem.color = _0x36b5df;
+    this.statusBarItem.tooltip = this.createTooltip(_0x3062c9);
+    this.statusBarItem.backgroundColor = undefined;
+  }
+  setLoading(_0x185751 = null) {
+    this.statusBarItem.text = "⏳ 余额加载中...";
+    this.statusBarItem.color = "#888888";
+    this.statusBarItem.backgroundColor = undefined;
+    _0x185751 ? this.statusBarItem.tooltip = "正在更新余额...\n\n" + this.createTooltip(_0x185751) : this.statusBarItem.tooltip = "正在获取余额信息...";
+  }
+  setNotConfigured() {
+    this.statusBarItem.text = "⚙️ 余额未配置";
+    this.statusBarItem.color = "#888888";
+    this.statusBarItem.backgroundColor = undefined;
+    this.statusBarItem.tooltip = "点击配置Augment余额显示\n\n需要设置API Token才能显示余额信息";
+  }
+  setError(_0x46641b, _0x1dfa35 = null) {
+    this.statusBarItem.text = "❌ 余额错误";
+    this.statusBarItem.color = "#ff4444";
+    this.statusBarItem.backgroundColor = new vscode.ThemeColor("statusBarItem.errorBackground");
+    let _0x249282 = "余额获取失败: " + _0x46641b + "\n\n点击打开设置页面";
+    _0x1dfa35 && _0x1dfa35.balance && (_0x249282 += "\n\n上次成功获取的余额: " + parseFloat(_0x1dfa35.balance).toFixed(2), _0x249282 += "\n更新时间: " + new Date(_0x1dfa35.timestamp).toLocaleString());
+    this.statusBarItem.tooltip = _0x249282;
+  }
+  updateFromCache(_0x406d9f, _0x3c7e21) {
+    if (!_0x3c7e21) {
+      this.setNotConfigured();
+      return;
+    }
+    if (!_0x406d9f) {
+      this.setLoading();
+      return;
+    }
+    if (_0x406d9f.error) {
+      this.setError(_0x406d9f.error, _0x406d9f);
+      return;
+    }
+    this.setNormal(_0x406d9f);
+  }
+  createTooltip(_0x37d10e) {
+    if (!_0x37d10e) {
+      return "暂无数据";
+    }
+    const _0x2678e3 = parseFloat(_0x37d10e.balance || "0");
+    let _0x3fa40f = "Augment 余额: " + _0x2678e3.toFixed(2) + "\n";
+    _0x37d10e.email && (_0x3fa40f += "账号: " + _0x37d10e.email + "\n");
+    _0x37d10e.plan_name && (_0x3fa40f += "套餐: " + _0x37d10e.plan_name + "\n");
+    _0x37d10e.end_date && (_0x3fa40f += "到期时间: " + new Date(_0x37d10e.end_date).toLocaleDateString() + "\n");
+    _0x37d10e.timestamp && (_0x3fa40f += "更新时间: " + new Date(_0x37d10e.timestamp).toLocaleString() + "\n");
+    _0x3fa40f += "\n点击打开设置页面";
+    return _0x3fa40f;
+  }
+  dispose() {
+    this.statusBarItem.dispose();
+  }
+}
+class AugmentBalanceEnhanced {
+  constructor() {
+    this.context = null;
+    this.logger = this.createLogger();
+    this.isInitialized = false;
+    this.configManager = null;
+    this.stateManager = null;
+    this.statusBarManager = null;
+    this.updateTimer = null;
+    this.isUpdating = false;
+    this.lastToken = "";
+  }
+  createLogger() {
+    return {
+      info: (_0x4a2edd, ..._0x12b9e2) => console.log("[BalanceEnhanced] " + _0x4a2edd, ..._0x12b9e2),
+      warn: (_0x3c6b3c, ..._0x21b9e7) => console.warn("[BalanceEnhanced] " + _0x3c6b3c, ..._0x21b9e7),
+      error: (_0x10b59c, ..._0x3b8519) => console.error("[BalanceEnhanced] " + _0x10b59c, ..._0x3b8519),
+      debug: (_0x224d99, ..._0x34e002) => console.debug("[BalanceEnhanced] " + _0x224d99, ..._0x34e002)
+    };
+  }
+  async initialize(_0x11b0c5) {
+    if (this.isInitialized) {
+      this.logger.warn("Already initialized");
+      return;
+    }
+    try {
+      this.context = _0x11b0c5;
+      this.configManager = new BalanceConfigManager();
+      this.stateManager = new BalanceStateManager(_0x11b0c5);
+      this.statusBarManager = new BalanceStatusBarManager();
+      this.registerCommands();
+      this.configManager.onConfigChanged(_0x31e40f => {
+        this.onConfigChanged(_0x31e40f);
+      });
+      this.stateManager.onStateChanged(() => {
+        this.updateStatusBar();
+      });
+      await this.initializeState();
+      this.isInitialized = true;
+      this.logger.info("Enhanced module initialized successfully");
+    } catch (_0x2acf99) {
+      this.logger.error("Initialization failed:", _0x2acf99);
+      throw _0x2acf99;
+    }
+  }
+  registerCommands() {
+    try {
+      const _0x2cf387 = vscode.commands.registerCommand("augmentBalance.openSettings", () => {
+          this.configManager.openSettings();
+        }),
+        _0x4f55c5 = vscode.commands.registerCommand("augmentBalance.refreshBalance", () => {
+          this.refreshBalance(true);
+        }),
+        _0x126589 = vscode.commands.registerCommand("augmentBalance.toggleDisplay", () => {
+          this.toggleDisplay();
+        });
+      this.context.subscriptions.push(_0x2cf387);
+      this.context.subscriptions.push(_0x4f55c5);
+      this.context.subscriptions.push(_0x126589);
+      this.logger.info("Commands registered successfully");
+    } catch (_0x552cf1) {
+      this.logger.error("Failed to register commands:", _0x552cf1);
+    }
+  }
+  async initializeState() {
+    const _0x3e32ae = this.configManager.getConfig(),
+      _0x2f6624 = this.configManager.validateConfig(_0x3e32ae);
+    this.lastToken = _0x3e32ae.token;
+    await this.stateManager.cleanupExpiredCache();
+    if (!_0x2f6624.isValid || !_0x3e32ae.enabled) {
+      this.statusBarManager.setNotConfigured();
+      return;
+    }
+    this.updateStatusBar();
+    this.startPeriodicUpdate(_0x3e32ae);
+    await this.refreshBalance();
+  }
+  async onConfigChanged(_0x5a8a5b) {
+    const _0x4f86eb = this.configManager.validateConfig(_0x5a8a5b);
+    if (!_0x4f86eb.isValid || !_0x5a8a5b.enabled) {
+      !_0x4f86eb.isValid && this.configManager.showConfigError(_0x4f86eb.errors);
+      this.statusBarManager.setNotConfigured();
+      this.stopPeriodicUpdate();
+      return;
+    }
+    const _0x4de18b = this.lastToken !== _0x5a8a5b.token,
+      _0x2a446f = this.lastToken;
+    this.lastToken = _0x5a8a5b.token;
+    let _0x3ca680 = _0x4de18b;
+    if (_0x4de18b) {
+      this.logger.info("Token已变更，清除旧token缓存并强制刷新");
+      _0x2a446f && (await this.stateManager.clearAccountCache(_0x2a446f));
+    } else {
+      const _0x25cebb = this.stateManager.validateCache(_0x5a8a5b.token);
+      !_0x25cebb.isAccountInfoValid && (this.logger.info("账号信息缓存无效，强制刷新"), _0x3ca680 = true);
+    }
+    this.configManager.showConfigSuccess();
+    this.startPeriodicUpdate(_0x5a8a5b);
+    await this.refreshBalance(_0x3ca680);
+  }
+  startPeriodicUpdate(_0x53f393) {
+    this.stopPeriodicUpdate();
+    if (!_0x53f393.enabled) {
+      return;
+    }
+    const _0x29bb79 = _0x53f393.updateInterval * 1000;
+    this.updateTimer = setInterval(() => {
+      this.refreshBalance();
+    }, _0x29bb79);
+    this.logger.info("Started periodic update with interval: " + _0x53f393.updateInterval + "s");
+  }
+  stopPeriodicUpdate() {
+    this.updateTimer && (clearInterval(this.updateTimer), this.updateTimer = null, this.logger.info("Stopped periodic update"));
+  }
+  async refreshBalance(_0x5bc10f = false) {
+    if (this.isUpdating) {
+      return;
+    }
+    const _0x26537f = this.configManager.getConfig(),
+      _0x14d385 = this.configManager.validateConfig(_0x26537f);
+    if (!_0x14d385.isValid || !_0x26537f.enabled) {
+      this.statusBarManager.setNotConfigured();
+      return;
+    }
+    this.isUpdating = true;
+    try {
+      const _0x181326 = this.stateManager.getCachedAccountData(_0x26537f.token);
+      this.statusBarManager.setLoading(_0x181326);
+      const _0x345b1b = await this.stateManager.fetchAccountInfo(_0x26537f.token, _0x5bc10f);
+      this.statusBarManager.setNormal(_0x345b1b);
+    } catch (_0x4a1d72) {
+      const _0x2ec774 = _0x4a1d72.message || "未知错误",
+        _0x50ec52 = this.stateManager.getCachedAccountData(_0x26537f.token);
+      await this.stateManager.cacheError(_0x2ec774, _0x26537f.token);
+      this.statusBarManager.setError(_0x2ec774, _0x50ec52);
+      (_0x4a1d72.statusCode === 401 || _0x4a1d72.statusCode === 403) && vscode.window.showErrorMessage("Augment Balance认证失败: " + _0x2ec774, "打开设置").then(_0x56d12b => {
+        _0x56d12b === "打开设置" && this.configManager.openSettings();
+      });
+    } finally {
+      this.isUpdating = false;
+    }
+  }
+  updateStatusBar() {
+    const _0x4c41e0 = this.configManager.getConfig(),
+      _0x4896ab = this.configManager.validateConfig(_0x4c41e0),
+      _0x409701 = this.stateManager.getCachedAccountData(_0x4c41e0.token);
+    this.statusBarManager.updateFromCache(_0x409701, _0x4896ab.isValid && _0x4c41e0.enabled);
+  }
+  async toggleDisplay() {
+    const _0x49f739 = this.configManager.getConfig(),
+      _0xd79edd = !_0x49f739.enabled,
+      _0x2a7f3a = vscode.workspace.getConfiguration("augmentBalance");
+    await _0x2a7f3a.update("enabled", _0xd79edd, vscode.ConfigurationTarget.Global);
+    const _0x2e38e0 = _0xd79edd ? "已启用" : "已禁用";
+    vscode.window.showInformationMessage("Augment余额显示" + _0x2e38e0);
+  }
+  dispose() {
+    this.stopPeriodicUpdate();
+    this.configManager && this.configManager.dispose();
+    this.stateManager && this.stateManager.dispose();
+    this.statusBarManager && this.statusBarManager.dispose();
+    this.isInitialized = false;
+    this.logger.info("Enhanced module disposed");
+  }
+}
+module.exports = AugmentBalanceEnhanced;
