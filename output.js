@@ -1,3 +1,6 @@
+//Sun Nov 02 2025 15:42:23 GMT+0000 (Coordinated Universal Time)
+//Base:https://github.com/echo094/decode-js
+//Modify:https://github.com/smallfawn/decode_action
 //Sun Nov 02 2025 15:35:57 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
@@ -21,24 +24,24 @@ class BalanceApiService {
           signal: _0x16413a.signal
         }).finally(() => clearTimeout(_0x4d6a74));
       if (!_0x2677d0.ok) {
-        throw this.createApiError(_0x2677d0.status, "HTTP " + _0x2677d0.status + ": " + _0x2677d0.statusText, "获取账号信息失败");
+        throw this.createApiError(_0x2677d0.status, "HTTP " + _0x2677d0.status + ": " + _0x2677d0.statusText, "\u83B7\u53D6\u8D26\u53F7\u4FE1\u606F\u5931\u8D25");
       }
       const _0x30f9f1 = await _0x2677d0.json();
       if (!_0x30f9f1 || !_0x30f9f1.data || !Array.isArray(_0x30f9f1.data) || _0x30f9f1.data.length === 0) {
-        throw new Error("API响应格式错误：缺少有效的订阅数据");
+        throw new Error("API\u54CD\u5E94\u683C\u5F0F\u9519\u8BEF\uFF1A\u7F3A\u5C11\u6709\u6548\u7684\u8BA2\u9605\u6570\u636E");
       }
       const _0x2a530d = _0x30f9f1.data[0];
       if (!_0x2a530d.customer || !_0x2a530d.customer.id) {
-        throw new Error("API响应格式错误：缺少customer信息");
+        throw new Error("API\u54CD\u5E94\u683C\u5F0F\u9519\u8BEF\uFF1A\u7F3A\u5C11customer\u4FE1\u606F");
       }
       return {
         customer_id: _0x2a530d.customer.id,
         email: _0x2a530d.customer.email || "",
-        plan_name: _0x2a530d.plan?.["name"] || "未知套餐",
+        plan_name: _0x2a530d.plan?.["name"] || "\u672A\u77E5\u5957\u9910",
         end_date: _0x2a530d.end_date || null
       };
     } catch (_0x128aed) {
-      throw this.handleApiError(_0x128aed, "获取账号信息失败");
+      throw this.handleApiError(_0x128aed, "\u83B7\u53D6\u8D26\u53F7\u4FE1\u606F\u5931\u8D25");
     }
   }
   static async getBalance(_0x66d5b9, _0x2b5f5c) {
@@ -56,15 +59,15 @@ class BalanceApiService {
           signal: _0xce1f76.signal
         }).finally(() => clearTimeout(_0x230198));
       if (!_0x19ff4f.ok) {
-        throw this.createApiError(_0x19ff4f.status, "HTTP " + _0x19ff4f.status + ": " + _0x19ff4f.statusText, "获取余额失败");
+        throw this.createApiError(_0x19ff4f.status, "HTTP " + _0x19ff4f.status + ": " + _0x19ff4f.statusText, "\u83B7\u53D6\u4F59\u989D\u5931\u8D25");
       }
       const _0x2f290d = await _0x19ff4f.json();
       if (!_0x2f290d || _0x2f290d.credits_balance === undefined) {
-        throw new Error("API响应格式错误：缺少credits_balance字段");
+        throw new Error("API\u54CD\u5E94\u683C\u5F0F\u9519\u8BEF\uFF1A\u7F3A\u5C11credits_balance\u5B57\u6BB5");
       }
       return _0x2f290d.credits_balance;
     } catch (_0xd1cc35) {
-      throw this.handleApiError(_0xd1cc35, "获取余额失败");
+      throw this.handleApiError(_0xd1cc35, "\u83B7\u53D6\u4F59\u989D\u5931\u8D25");
     }
   }
   static createApiError(_0x569ee8, _0x1fa2e7, _0x1291eb) {
@@ -76,7 +79,7 @@ class BalanceApiService {
   }
   static handleApiError(_0x3ba066, _0x12b247) {
     if (_0x3ba066.name === "TypeError" && _0x3ba066.message.includes("fetch")) {
-      const _0x4b1ddf = new Error("网络连接失败，请检查网络连接");
+      const _0x4b1ddf = new Error("\u7F51\u7EDC\u8FDE\u63A5\u5931\u8D25\uFF0C\u8BF7\u68C0\u67E5\u7F51\u7EDC\u8FDE\u63A5");
       _0x4b1ddf.isNetworkError = true;
       _0x4b1ddf.context = _0x12b247;
       return _0x4b1ddf;
@@ -84,7 +87,7 @@ class BalanceApiService {
     if (_0x3ba066.statusCode) {
       return _0x3ba066;
     }
-    const _0x5a33d3 = new Error(_0x3ba066.message || "未知错误");
+    const _0x5a33d3 = new Error(_0x3ba066.message || "\u672A\u77E5\u9519\u8BEF");
     _0x5a33d3.isNetworkError = false;
     _0x5a33d3.context = _0x12b247;
     return _0x5a33d3;
@@ -120,8 +123,8 @@ class BalanceConfigManager {
   }
   validateConfig(_0xae7423) {
     const _0xcde774 = [];
-    (!_0xae7423.token || _0xae7423.token.trim() === "") && _0xcde774.push("API token不能为空");
-    (_0xae7423.updateInterval < 60 || _0xae7423.updateInterval > 3600) && _0xcde774.push("更新间隔必须在60-3600秒之间");
+    (!_0xae7423.token || _0xae7423.token.trim() === "") && _0xcde774.push("API token\u4E0D\u80FD\u4E3A\u7A7A");
+    (_0xae7423.updateInterval < 60 || _0xae7423.updateInterval > 3600) && _0xcde774.push("\u66F4\u65B0\u95F4\u9694\u5FC5\u987B\u572860-3600\u79D2\u4E4B\u95F4");
     return {
       isValid: _0xcde774.length === 0,
       errors: _0xcde774
@@ -131,13 +134,13 @@ class BalanceConfigManager {
     vscode.commands.executeCommand("workbench.action.openSettings", BalanceConfigManager.SECTION);
   }
   showConfigError(_0x28b0ca) {
-    const _0x1689a2 = "Augment Balance配置错误：\n" + _0x28b0ca.join("\n");
-    vscode.window.showErrorMessage(_0x1689a2, "打开设置").then(_0x124836 => {
-      _0x124836 === "打开设置" && this.openSettings();
+    const _0x1689a2 = "Augment Balance\u914D\u7F6E\u9519\u8BEF\uFF1A\n" + _0x28b0ca.join("\n");
+    vscode.window.showErrorMessage(_0x1689a2, "\u6253\u5F00\u8BBE\u7F6E").then(_0x124836 => {
+      _0x124836 === "\u6253\u5F00\u8BBE\u7F6E" && this.openSettings();
     });
   }
   showConfigSuccess() {
-    vscode.window.showInformationMessage("Augment Balance配置已更新");
+    vscode.window.showInformationMessage("Augment Balance\u914D\u7F6E\u5DF2\u66F4\u65B0");
   }
   dispose() {
     this.onConfigChangedEmitter.dispose();
@@ -166,7 +169,7 @@ class BalanceStateManager {
       }
       return _0xc7700;
     } catch (_0x52d1d5) {
-      console.error("[BalanceState] 获取缓存数据失败:", _0x52d1d5);
+      console.error("[BalanceState] \u83B7\u53D6\u7F13\u5B58\u6570\u636E\u5931\u8D25:", _0x52d1d5);
       return null;
     }
   }
@@ -176,7 +179,7 @@ class BalanceStateManager {
       await this.context.globalState.update(_0x3cc569, _0x57d1e9);
       this.onStateChangedEmitter.fire();
     } catch (_0x1c12e0) {
-      console.error("[BalanceState] 缓存账号数据失败:", _0x1c12e0);
+      console.error("[BalanceState] \u7F13\u5B58\u8D26\u53F7\u6570\u636E\u5931\u8D25:", _0x1c12e0);
     }
   }
   async clearAccountCache(_0x59e120) {
@@ -185,7 +188,7 @@ class BalanceStateManager {
       await this.context.globalState.update(_0x7a615e, undefined);
       this.onStateChangedEmitter.fire();
     } catch (_0x4388a4) {
-      console.error("[BalanceState] 清除账号缓存失败:", _0x4388a4);
+      console.error("[BalanceState] \u6E05\u9664\u8D26\u53F7\u7F13\u5B58\u5931\u8D25:", _0x4388a4);
     }
   }
   validateCache(_0x20ea38) {
@@ -207,7 +210,7 @@ class BalanceStateManager {
       await this.context.globalState.update(_0x149985, _0x3ce43f);
       this.onStateChangedEmitter.fire();
     } catch (_0x5aa498) {
-      console.error("[BalanceState] 缓存错误信息失败:", _0x5aa498);
+      console.error("[BalanceState] \u7F13\u5B58\u9519\u8BEF\u4FE1\u606F\u5931\u8D25:", _0x5aa498);
     }
   }
   async cleanupExpiredCache() {
@@ -221,7 +224,7 @@ class BalanceStateManager {
         }
       }
     } catch (_0x1f231f) {
-      console.error("[BalanceState] 清理过期缓存失败:", _0x1f231f);
+      console.error("[BalanceState] \u6E05\u7406\u8FC7\u671F\u7F13\u5B58\u5931\u8D25:", _0x1f231f);
     }
   }
   async getOrFetchAccountInfo(_0x515a73, _0x9f60a0 = false) {
@@ -268,16 +271,16 @@ class BalanceStatusBarManager {
   }
   setNormal(_0x3062c9) {
     if (!_0x3062c9 || !_0x3062c9.balance) {
-      this.setError("数据无效");
+      this.setError("\u6570\u636E\u65E0\u6548");
       return;
     }
     const _0x429a9c = parseFloat(_0x3062c9.balance);
     let _0x423911, _0x36b5df;
     if (_0x429a9c <= 5) {
-      _0x423911 = "😟";
+      _0x423911 = "\uD83D\uDE1F";
       _0x36b5df = "#ff4444";
     } else {
-      _0x429a9c < 25 ? (_0x423911 = "🙂", _0x36b5df = "#ffaa00") : (_0x423911 = "😆", _0x36b5df = "#00aa00");
+      _0x429a9c < 25 ? (_0x423911 = "\uD83D\uDE42", _0x36b5df = "#ffaa00") : (_0x423911 = "\uD83D\uDE06", _0x36b5df = "#00aa00");
     }
     this.statusBarItem.text = _0x423911 + " " + _0x429a9c.toFixed(2);
     this.statusBarItem.color = _0x36b5df;
@@ -285,23 +288,23 @@ class BalanceStatusBarManager {
     this.statusBarItem.backgroundColor = undefined;
   }
   setLoading(_0x185751 = null) {
-    this.statusBarItem.text = "⏳ 余额加载中...";
+    this.statusBarItem.text = "\u23F3 \u4F59\u989D\u52A0\u8F7D\u4E2D...";
     this.statusBarItem.color = "#888888";
     this.statusBarItem.backgroundColor = undefined;
-    _0x185751 ? this.statusBarItem.tooltip = "正在更新余额...\n\n" + this.createTooltip(_0x185751) : this.statusBarItem.tooltip = "正在获取余额信息...";
+    _0x185751 ? this.statusBarItem.tooltip = "\u6B63\u5728\u66F4\u65B0\u4F59\u989D...\n\n" + this.createTooltip(_0x185751) : this.statusBarItem.tooltip = "\u6B63\u5728\u83B7\u53D6\u4F59\u989D\u4FE1\u606F...";
   }
   setNotConfigured() {
-    this.statusBarItem.text = "⚙️ 余额未配置";
+    this.statusBarItem.text = "\u2699\uFE0F \u4F59\u989D\u672A\u914D\u7F6E";
     this.statusBarItem.color = "#888888";
     this.statusBarItem.backgroundColor = undefined;
-    this.statusBarItem.tooltip = "点击配置Augment余额显示\n\n需要设置API Token才能显示余额信息";
+    this.statusBarItem.tooltip = "\u70B9\u51FB\u914D\u7F6EAugment\u4F59\u989D\u663E\u793A\n\n\u9700\u8981\u8BBE\u7F6EAPI Token\u624D\u80FD\u663E\u793A\u4F59\u989D\u4FE1\u606F";
   }
   setError(_0x46641b, _0x1dfa35 = null) {
-    this.statusBarItem.text = "❌ 余额错误";
+    this.statusBarItem.text = "\u274C \u4F59\u989D\u9519\u8BEF";
     this.statusBarItem.color = "#ff4444";
     this.statusBarItem.backgroundColor = new vscode.ThemeColor("statusBarItem.errorBackground");
-    let _0x249282 = "余额获取失败: " + _0x46641b + "\n\n点击打开设置页面";
-    _0x1dfa35 && _0x1dfa35.balance && (_0x249282 += "\n\n上次成功获取的余额: " + parseFloat(_0x1dfa35.balance).toFixed(2), _0x249282 += "\n更新时间: " + new Date(_0x1dfa35.timestamp).toLocaleString());
+    let _0x249282 = "\u4F59\u989D\u83B7\u53D6\u5931\u8D25: " + _0x46641b + "\n\n\u70B9\u51FB\u6253\u5F00\u8BBE\u7F6E\u9875\u9762";
+    _0x1dfa35 && _0x1dfa35.balance && (_0x249282 += "\n\n\u4E0A\u6B21\u6210\u529F\u83B7\u53D6\u7684\u4F59\u989D: " + parseFloat(_0x1dfa35.balance).toFixed(2), _0x249282 += "\n\u66F4\u65B0\u65F6\u95F4: " + new Date(_0x1dfa35.timestamp).toLocaleString());
     this.statusBarItem.tooltip = _0x249282;
   }
   updateFromCache(_0x406d9f, _0x3c7e21) {
@@ -321,15 +324,15 @@ class BalanceStatusBarManager {
   }
   createTooltip(_0x37d10e) {
     if (!_0x37d10e) {
-      return "暂无数据";
+      return "\u6682\u65E0\u6570\u636E";
     }
     const _0x2678e3 = parseFloat(_0x37d10e.balance || "0");
-    let _0x3fa40f = "Augment 余额: " + _0x2678e3.toFixed(2) + "\n";
-    _0x37d10e.email && (_0x3fa40f += "账号: " + _0x37d10e.email + "\n");
-    _0x37d10e.plan_name && (_0x3fa40f += "套餐: " + _0x37d10e.plan_name + "\n");
-    _0x37d10e.end_date && (_0x3fa40f += "到期时间: " + new Date(_0x37d10e.end_date).toLocaleDateString() + "\n");
-    _0x37d10e.timestamp && (_0x3fa40f += "更新时间: " + new Date(_0x37d10e.timestamp).toLocaleString() + "\n");
-    _0x3fa40f += "\n点击打开设置页面";
+    let _0x3fa40f = "Augment \u4F59\u989D: " + _0x2678e3.toFixed(2) + "\n";
+    _0x37d10e.email && (_0x3fa40f += "\u8D26\u53F7: " + _0x37d10e.email + "\n");
+    _0x37d10e.plan_name && (_0x3fa40f += "\u5957\u9910: " + _0x37d10e.plan_name + "\n");
+    _0x37d10e.end_date && (_0x3fa40f += "\u5230\u671F\u65F6\u95F4: " + new Date(_0x37d10e.end_date).toLocaleDateString() + "\n");
+    _0x37d10e.timestamp && (_0x3fa40f += "\u66F4\u65B0\u65F6\u95F4: " + new Date(_0x37d10e.timestamp).toLocaleString() + "\n");
+    _0x3fa40f += "\n\u70B9\u51FB\u6253\u5F00\u8BBE\u7F6E\u9875\u9762";
     return _0x3fa40f;
   }
   dispose() {
@@ -426,11 +429,11 @@ class AugmentBalanceEnhanced {
     this.lastToken = _0x5a8a5b.token;
     let _0x3ca680 = _0x4de18b;
     if (_0x4de18b) {
-      this.logger.info("Token已变更，清除旧token缓存并强制刷新");
+      this.logger.info("Token\u5DF2\u53D8\u66F4\uFF0C\u6E05\u9664\u65E7token\u7F13\u5B58\u5E76\u5F3A\u5236\u5237\u65B0");
       _0x2a446f && (await this.stateManager.clearAccountCache(_0x2a446f));
     } else {
       const _0x25cebb = this.stateManager.validateCache(_0x5a8a5b.token);
-      !_0x25cebb.isAccountInfoValid && (this.logger.info("账号信息缓存无效，强制刷新"), _0x3ca680 = true);
+      !_0x25cebb.isAccountInfoValid && (this.logger.info("\u8D26\u53F7\u4FE1\u606F\u7F13\u5B58\u65E0\u6548\uFF0C\u5F3A\u5236\u5237\u65B0"), _0x3ca680 = true);
     }
     this.configManager.showConfigSuccess();
     this.startPeriodicUpdate(_0x5a8a5b);
@@ -467,12 +470,12 @@ class AugmentBalanceEnhanced {
       const _0x345b1b = await this.stateManager.fetchAccountInfo(_0x26537f.token, _0x5bc10f);
       this.statusBarManager.setNormal(_0x345b1b);
     } catch (_0x4a1d72) {
-      const _0x2ec774 = _0x4a1d72.message || "未知错误",
+      const _0x2ec774 = _0x4a1d72.message || "\u672A\u77E5\u9519\u8BEF",
         _0x50ec52 = this.stateManager.getCachedAccountData(_0x26537f.token);
       await this.stateManager.cacheError(_0x2ec774, _0x26537f.token);
       this.statusBarManager.setError(_0x2ec774, _0x50ec52);
-      (_0x4a1d72.statusCode === 401 || _0x4a1d72.statusCode === 403) && vscode.window.showErrorMessage("Augment Balance认证失败: " + _0x2ec774, "打开设置").then(_0x56d12b => {
-        _0x56d12b === "打开设置" && this.configManager.openSettings();
+      (_0x4a1d72.statusCode === 401 || _0x4a1d72.statusCode === 403) && vscode.window.showErrorMessage("Augment Balance\u8BA4\u8BC1\u5931\u8D25: " + _0x2ec774, "\u6253\u5F00\u8BBE\u7F6E").then(_0x56d12b => {
+        _0x56d12b === "\u6253\u5F00\u8BBE\u7F6E" && this.configManager.openSettings();
       });
     } finally {
       this.isUpdating = false;
@@ -489,8 +492,8 @@ class AugmentBalanceEnhanced {
       _0xd79edd = !_0x49f739.enabled,
       _0x2a7f3a = vscode.workspace.getConfiguration("augmentBalance");
     await _0x2a7f3a.update("enabled", _0xd79edd, vscode.ConfigurationTarget.Global);
-    const _0x2e38e0 = _0xd79edd ? "已启用" : "已禁用";
-    vscode.window.showInformationMessage("Augment余额显示" + _0x2e38e0);
+    const _0x2e38e0 = _0xd79edd ? "\u5DF2\u542F\u7528" : "\u5DF2\u7981\u7528";
+    vscode.window.showInformationMessage("Augment\u4F59\u989D\u663E\u793A" + _0x2e38e0);
   }
   dispose() {
     this.stopPeriodicUpdate();
