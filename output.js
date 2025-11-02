@@ -1,507 +1,661 @@
-//Sun Nov 02 2025 15:42:23 GMT+0000 (Coordinated Universal Time)
-//Base:https://github.com/echo094/decode-js
-//Modify:https://github.com/smallfawn/decode_action
-//Sun Nov 02 2025 15:35:57 GMT+0000 (Coordinated Universal Time)
+//Sun Nov 02 2025 15:49:25 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
 const vscode = require("vscode");
-class BalanceApiService {
-  static BASE_URL = "https://portal.withorb.com/api/v1";
-  static USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36";
-  static PRICING_UNIT_ID = "jWTJo9ptbapMWkvg";
-  static async getAccountInfo(_0x2f4c9e) {
-    try {
-      const _0x544b21 = this.BASE_URL + "/subscriptions_from_link?token=" + encodeURIComponent(_0x2f4c9e),
-        _0x16413a = new AbortController(),
-        _0x4d6a74 = setTimeout(() => _0x16413a.abort(), 10000),
-        _0x2677d0 = await fetch(_0x544b21, {
-          method: "GET",
-          headers: {
-            "User-Agent": this.USER_AGENT,
-            Accept: "application/json",
-            "Content-Type": "application/json"
-          },
-          signal: _0x16413a.signal
-        }).finally(() => clearTimeout(_0x4d6a74));
-      if (!_0x2677d0.ok) {
-        throw this.createApiError(_0x2677d0.status, "HTTP " + _0x2677d0.status + ": " + _0x2677d0.statusText, "\u83B7\u53D6\u8D26\u53F7\u4FE1\u606F\u5931\u8D25");
-      }
-      const _0x30f9f1 = await _0x2677d0.json();
-      if (!_0x30f9f1 || !_0x30f9f1.data || !Array.isArray(_0x30f9f1.data) || _0x30f9f1.data.length === 0) {
-        throw new Error("API\u54CD\u5E94\u683C\u5F0F\u9519\u8BEF\uFF1A\u7F3A\u5C11\u6709\u6548\u7684\u8BA2\u9605\u6570\u636E");
-      }
-      const _0x2a530d = _0x30f9f1.data[0];
-      if (!_0x2a530d.customer || !_0x2a530d.customer.id) {
-        throw new Error("API\u54CD\u5E94\u683C\u5F0F\u9519\u8BEF\uFF1A\u7F3A\u5C11customer\u4FE1\u606F");
-      }
-      return {
-        customer_id: _0x2a530d.customer.id,
-        email: _0x2a530d.customer.email || "",
-        plan_name: _0x2a530d.plan?.["name"] || "\u672A\u77E5\u5957\u9910",
-        end_date: _0x2a530d.end_date || null
-      };
-    } catch (_0x128aed) {
-      throw this.handleApiError(_0x128aed, "\u83B7\u53D6\u8D26\u53F7\u4FE1\u606F\u5931\u8D25");
-    }
-  }
-  static async getBalance(_0x66d5b9, _0x2b5f5c) {
-    try {
-      const _0x45afef = this.BASE_URL + "/customers/" + encodeURIComponent(_0x66d5b9) + "/ledger_summary?pricing_unit_id=" + this.PRICING_UNIT_ID + "&token=" + encodeURIComponent(_0x2b5f5c),
-        _0xce1f76 = new AbortController(),
-        _0x230198 = setTimeout(() => _0xce1f76.abort(), 10000),
-        _0x19ff4f = await fetch(_0x45afef, {
-          method: "GET",
-          headers: {
-            "User-Agent": this.USER_AGENT,
-            Accept: "application/json",
-            "Content-Type": "application/json"
-          },
-          signal: _0xce1f76.signal
-        }).finally(() => clearTimeout(_0x230198));
-      if (!_0x19ff4f.ok) {
-        throw this.createApiError(_0x19ff4f.status, "HTTP " + _0x19ff4f.status + ": " + _0x19ff4f.statusText, "\u83B7\u53D6\u4F59\u989D\u5931\u8D25");
-      }
-      const _0x2f290d = await _0x19ff4f.json();
-      if (!_0x2f290d || _0x2f290d.credits_balance === undefined) {
-        throw new Error("API\u54CD\u5E94\u683C\u5F0F\u9519\u8BEF\uFF1A\u7F3A\u5C11credits_balance\u5B57\u6BB5");
-      }
-      return _0x2f290d.credits_balance;
-    } catch (_0xd1cc35) {
-      throw this.handleApiError(_0xd1cc35, "\u83B7\u53D6\u4F59\u989D\u5931\u8D25");
-    }
-  }
-  static createApiError(_0x569ee8, _0x1fa2e7, _0x1291eb) {
-    const _0xb334b6 = new Error(_0x1fa2e7);
-    _0xb334b6.statusCode = _0x569ee8;
-    _0xb334b6.isNetworkError = false;
-    _0xb334b6.context = _0x1291eb;
-    return _0xb334b6;
-  }
-  static handleApiError(_0x3ba066, _0x12b247) {
-    if (_0x3ba066.name === "TypeError" && _0x3ba066.message.includes("fetch")) {
-      const _0x4b1ddf = new Error("\u7F51\u7EDC\u8FDE\u63A5\u5931\u8D25\uFF0C\u8BF7\u68C0\u67E5\u7F51\u7EDC\u8FDE\u63A5");
-      _0x4b1ddf.isNetworkError = true;
-      _0x4b1ddf.context = _0x12b247;
-      return _0x4b1ddf;
-    }
-    if (_0x3ba066.statusCode) {
-      return _0x3ba066;
-    }
-    const _0x5a33d3 = new Error(_0x3ba066.message || "\u672A\u77E5\u9519\u8BEF");
-    _0x5a33d3.isNetworkError = false;
-    _0x5a33d3.context = _0x12b247;
-    return _0x5a33d3;
-  }
-}
-class BalanceConfigManager {
-  static SECTION = "augmentBalance";
-  constructor() {
-    this.onConfigChangedEmitter = new vscode.EventEmitter();
-    this.onConfigChanged = this.onConfigChangedEmitter.event;
-    vscode.workspace.onDidChangeConfiguration(_0x46ae33 => {
-      _0x46ae33.affectsConfiguration(BalanceConfigManager.SECTION) && this.onConfigChangedEmitter.fire(this.getConfig());
-    });
-  }
-  extractTokenFromUrl(_0x57dcf7) {
-    if (!_0x57dcf7 || typeof _0x57dcf7 !== "string") {
-      return _0x57dcf7;
-    }
-    const _0x419721 = _0x57dcf7.match(/[?&]token=([^&]+)/);
-    if (_0x419721) {
-      return _0x419721[1];
-    }
-    return _0x57dcf7;
-  }
-  getConfig() {
-    const _0x20a6d7 = vscode.workspace.getConfiguration(BalanceConfigManager.SECTION),
-      _0x57389f = _0x20a6d7.get("token", "");
-    return {
-      token: this.extractTokenFromUrl(_0x57389f),
-      updateInterval: _0x20a6d7.get("updateInterval", 600),
-      enabled: _0x20a6d7.get("enabled", true)
-    };
-  }
-  validateConfig(_0xae7423) {
-    const _0xcde774 = [];
-    (!_0xae7423.token || _0xae7423.token.trim() === "") && _0xcde774.push("API token\u4E0D\u80FD\u4E3A\u7A7A");
-    (_0xae7423.updateInterval < 60 || _0xae7423.updateInterval > 3600) && _0xcde774.push("\u66F4\u65B0\u95F4\u9694\u5FC5\u987B\u572860-3600\u79D2\u4E4B\u95F4");
-    return {
-      isValid: _0xcde774.length === 0,
-      errors: _0xcde774
-    };
-  }
-  openSettings() {
-    vscode.commands.executeCommand("workbench.action.openSettings", BalanceConfigManager.SECTION);
-  }
-  showConfigError(_0x28b0ca) {
-    const _0x1689a2 = "Augment Balance\u914D\u7F6E\u9519\u8BEF\uFF1A\n" + _0x28b0ca.join("\n");
-    vscode.window.showErrorMessage(_0x1689a2, "\u6253\u5F00\u8BBE\u7F6E").then(_0x124836 => {
-      _0x124836 === "\u6253\u5F00\u8BBE\u7F6E" && this.openSettings();
-    });
-  }
-  showConfigSuccess() {
-    vscode.window.showInformationMessage("Augment Balance\u914D\u7F6E\u5DF2\u66F4\u65B0");
-  }
-  dispose() {
-    this.onConfigChangedEmitter.dispose();
-  }
-}
-class BalanceStateManager {
-  static CACHE_EXPIRY_MS = 86400000;
-  constructor(_0x5819ec) {
-    this.context = _0x5819ec;
-    this.onStateChangedEmitter = new vscode.EventEmitter();
-    this.onStateChanged = this.onStateChangedEmitter.event;
-  }
-  getAccountCacheKey(_0x310f3b) {
-    return _0x310f3b + "_AccountInfo";
-  }
-  getCachedAccountData(_0xee7447) {
-    try {
-      const _0x7fce9f = this.getAccountCacheKey(_0xee7447),
-        _0xc7700 = this.context.globalState.get(_0x7fce9f);
-      if (!_0xc7700) {
-        return null;
-      }
-      const _0x16e22c = Date.now();
-      if (_0x16e22c - _0xc7700.timestamp > BalanceStateManager.CACHE_EXPIRY_MS) {
-        return null;
-      }
-      return _0xc7700;
-    } catch (_0x52d1d5) {
-      console.error("[BalanceState] \u83B7\u53D6\u7F13\u5B58\u6570\u636E\u5931\u8D25:", _0x52d1d5);
-      return null;
-    }
-  }
-  async cacheAccountData(_0x57d1e9) {
-    try {
-      const _0x3cc569 = this.getAccountCacheKey(_0x57d1e9.token);
-      await this.context.globalState.update(_0x3cc569, _0x57d1e9);
-      this.onStateChangedEmitter.fire();
-    } catch (_0x1c12e0) {
-      console.error("[BalanceState] \u7F13\u5B58\u8D26\u53F7\u6570\u636E\u5931\u8D25:", _0x1c12e0);
-    }
-  }
-  async clearAccountCache(_0x59e120) {
-    try {
-      const _0x7a615e = this.getAccountCacheKey(_0x59e120);
-      await this.context.globalState.update(_0x7a615e, undefined);
-      this.onStateChangedEmitter.fire();
-    } catch (_0x4388a4) {
-      console.error("[BalanceState] \u6E05\u9664\u8D26\u53F7\u7F13\u5B58\u5931\u8D25:", _0x4388a4);
-    }
-  }
-  validateCache(_0x20ea38) {
-    const _0x4c14cd = this.getCachedAccountData(_0x20ea38);
-    return {
-      isAccountInfoValid: _0x4c14cd !== null && !_0x4c14cd.error
-    };
-  }
-  async cacheError(_0x26a604, _0x23c5f8) {
-    try {
-      const _0xbf8c79 = this.getCachedAccountData(_0x23c5f8) || {},
-        _0x3ce43f = {
-          ..._0xbf8c79,
-          error: _0x26a604,
-          timestamp: Date.now(),
-          token: _0x23c5f8
-        },
-        _0x149985 = this.getAccountCacheKey(_0x23c5f8);
-      await this.context.globalState.update(_0x149985, _0x3ce43f);
-      this.onStateChangedEmitter.fire();
-    } catch (_0x5aa498) {
-      console.error("[BalanceState] \u7F13\u5B58\u9519\u8BEF\u4FE1\u606F\u5931\u8D25:", _0x5aa498);
-    }
-  }
-  async cleanupExpiredCache() {
-    try {
-      const _0x33c2be = this.context.globalState.keys(),
-        _0x175545 = Date.now();
-      for (const _0x46f03b of _0x33c2be) {
-        if (_0x46f03b.endsWith("_AccountInfo")) {
-          const _0x5b7ab6 = this.context.globalState.get(_0x46f03b);
-          _0x5b7ab6 && _0x5b7ab6.timestamp && _0x175545 - _0x5b7ab6.timestamp > BalanceStateManager.CACHE_EXPIRY_MS && (await this.context.globalState.update(_0x46f03b, undefined));
-        }
-      }
-    } catch (_0x1f231f) {
-      console.error("[BalanceState] \u6E05\u7406\u8FC7\u671F\u7F13\u5B58\u5931\u8D25:", _0x1f231f);
-    }
-  }
-  async getOrFetchAccountInfo(_0x515a73, _0x9f60a0 = false) {
-    const _0x243be5 = this.getCachedAccountData(_0x515a73);
-    if (!_0x9f60a0 && _0x243be5 && !_0x243be5.error && _0x243be5.customer_id) {
-      return {
-        customer_id: _0x243be5.customer_id,
-        email: _0x243be5.email,
-        plan_name: _0x243be5.plan_name,
-        end_date: _0x243be5.end_date
-      };
-    }
-    return await BalanceApiService.getAccountInfo(_0x515a73);
-  }
-  async fetchAccountInfo(_0x1be545, _0x4374e0 = false) {
-    try {
-      const _0x3c5714 = await this.getOrFetchAccountInfo(_0x1be545, _0x4374e0),
-        _0x17851c = await BalanceApiService.getBalance(_0x3c5714.customer_id, _0x1be545),
-        _0x54e391 = {
-          customer_id: _0x3c5714.customer_id,
-          email: _0x3c5714.email,
-          plan_name: _0x3c5714.plan_name,
-          end_date: _0x3c5714.end_date,
-          balance: _0x17851c,
-          timestamp: Date.now(),
-          token: _0x1be545
-        };
-      await this.cacheAccountData(_0x54e391);
-      return _0x54e391;
-    } catch (_0x1242d5) {
-      throw _0x1242d5;
-    }
-  }
-  dispose() {
-    this.onStateChangedEmitter.dispose();
-  }
-}
-class BalanceStatusBarManager {
-  constructor() {
-    this.statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 100);
-    this.statusBarItem.command = "augmentBalance.openSettings";
-    this.setNotConfigured();
-    this.statusBarItem.show();
-  }
-  setNormal(_0x3062c9) {
-    if (!_0x3062c9 || !_0x3062c9.balance) {
-      this.setError("\u6570\u636E\u65E0\u6548");
-      return;
-    }
-    const _0x429a9c = parseFloat(_0x3062c9.balance);
-    let _0x423911, _0x36b5df;
-    if (_0x429a9c <= 5) {
-      _0x423911 = "\uD83D\uDE1F";
-      _0x36b5df = "#ff4444";
-    } else {
-      _0x429a9c < 25 ? (_0x423911 = "\uD83D\uDE42", _0x36b5df = "#ffaa00") : (_0x423911 = "\uD83D\uDE06", _0x36b5df = "#00aa00");
-    }
-    this.statusBarItem.text = _0x423911 + " " + _0x429a9c.toFixed(2);
-    this.statusBarItem.color = _0x36b5df;
-    this.statusBarItem.tooltip = this.createTooltip(_0x3062c9);
-    this.statusBarItem.backgroundColor = undefined;
-  }
-  setLoading(_0x185751 = null) {
-    this.statusBarItem.text = "\u23F3 \u4F59\u989D\u52A0\u8F7D\u4E2D...";
-    this.statusBarItem.color = "#888888";
-    this.statusBarItem.backgroundColor = undefined;
-    _0x185751 ? this.statusBarItem.tooltip = "\u6B63\u5728\u66F4\u65B0\u4F59\u989D...\n\n" + this.createTooltip(_0x185751) : this.statusBarItem.tooltip = "\u6B63\u5728\u83B7\u53D6\u4F59\u989D\u4FE1\u606F...";
-  }
-  setNotConfigured() {
-    this.statusBarItem.text = "\u2699\uFE0F \u4F59\u989D\u672A\u914D\u7F6E";
-    this.statusBarItem.color = "#888888";
-    this.statusBarItem.backgroundColor = undefined;
-    this.statusBarItem.tooltip = "\u70B9\u51FB\u914D\u7F6EAugment\u4F59\u989D\u663E\u793A\n\n\u9700\u8981\u8BBE\u7F6EAPI Token\u624D\u80FD\u663E\u793A\u4F59\u989D\u4FE1\u606F";
-  }
-  setError(_0x46641b, _0x1dfa35 = null) {
-    this.statusBarItem.text = "\u274C \u4F59\u989D\u9519\u8BEF";
-    this.statusBarItem.color = "#ff4444";
-    this.statusBarItem.backgroundColor = new vscode.ThemeColor("statusBarItem.errorBackground");
-    let _0x249282 = "\u4F59\u989D\u83B7\u53D6\u5931\u8D25: " + _0x46641b + "\n\n\u70B9\u51FB\u6253\u5F00\u8BBE\u7F6E\u9875\u9762";
-    _0x1dfa35 && _0x1dfa35.balance && (_0x249282 += "\n\n\u4E0A\u6B21\u6210\u529F\u83B7\u53D6\u7684\u4F59\u989D: " + parseFloat(_0x1dfa35.balance).toFixed(2), _0x249282 += "\n\u66F4\u65B0\u65F6\u95F4: " + new Date(_0x1dfa35.timestamp).toLocaleString());
-    this.statusBarItem.tooltip = _0x249282;
-  }
-  updateFromCache(_0x406d9f, _0x3c7e21) {
-    if (!_0x3c7e21) {
-      this.setNotConfigured();
-      return;
-    }
-    if (!_0x406d9f) {
-      this.setLoading();
-      return;
-    }
-    if (_0x406d9f.error) {
-      this.setError(_0x406d9f.error, _0x406d9f);
-      return;
-    }
-    this.setNormal(_0x406d9f);
-  }
-  createTooltip(_0x37d10e) {
-    if (!_0x37d10e) {
-      return "\u6682\u65E0\u6570\u636E";
-    }
-    const _0x2678e3 = parseFloat(_0x37d10e.balance || "0");
-    let _0x3fa40f = "Augment \u4F59\u989D: " + _0x2678e3.toFixed(2) + "\n";
-    _0x37d10e.email && (_0x3fa40f += "\u8D26\u53F7: " + _0x37d10e.email + "\n");
-    _0x37d10e.plan_name && (_0x3fa40f += "\u5957\u9910: " + _0x37d10e.plan_name + "\n");
-    _0x37d10e.end_date && (_0x3fa40f += "\u5230\u671F\u65F6\u95F4: " + new Date(_0x37d10e.end_date).toLocaleDateString() + "\n");
-    _0x37d10e.timestamp && (_0x3fa40f += "\u66F4\u65B0\u65F6\u95F4: " + new Date(_0x37d10e.timestamp).toLocaleString() + "\n");
-    _0x3fa40f += "\n\u70B9\u51FB\u6253\u5F00\u8BBE\u7F6E\u9875\u9762";
-    return _0x3fa40f;
-  }
-  dispose() {
-    this.statusBarItem.dispose();
-  }
-}
-class AugmentBalanceEnhanced {
+class AugmentTokenLoginEnhanced {
   constructor() {
     this.context = null;
     this.logger = this.createLogger();
     this.isInitialized = false;
-    this.configManager = null;
-    this.stateManager = null;
-    this.statusBarManager = null;
-    this.updateTimer = null;
-    this.isUpdating = false;
-    this.lastToken = "";
   }
   createLogger() {
     return {
-      info: (_0x4a2edd, ..._0x12b9e2) => console.log("[BalanceEnhanced] " + _0x4a2edd, ..._0x12b9e2),
-      warn: (_0x3c6b3c, ..._0x21b9e7) => console.warn("[BalanceEnhanced] " + _0x3c6b3c, ..._0x21b9e7),
-      error: (_0x10b59c, ..._0x3b8519) => console.error("[BalanceEnhanced] " + _0x10b59c, ..._0x3b8519),
-      debug: (_0x224d99, ..._0x34e002) => console.debug("[BalanceEnhanced] " + _0x224d99, ..._0x34e002)
+      info: (_0x2db7f9, ..._0x4ad004) => console.log("[TokenLogin] " + _0x2db7f9, ..._0x4ad004),
+      warn: (_0x2d0edc, ..._0x247c47) => console.warn("[TokenLogin] " + _0x2d0edc, ..._0x247c47),
+      error: (_0x38031d, ..._0x1b0c7e) => console.error("[TokenLogin] " + _0x38031d, ..._0x1b0c7e),
+      debug: (_0x411f58, ..._0x529747) => console.debug("[TokenLogin] " + _0x411f58, ..._0x529747)
     };
   }
-  async initialize(_0x11b0c5) {
+  registerDeepLinkHandler() {
+    try {
+      const _0x4469f8 = vscode.window.registerUriHandler({
+        handleUri: async _0x609f9a => {
+          try {
+            const _0x3c9e95 = new URLSearchParams(_0x609f9a && _0x609f9a.query || ""),
+              _0x2696f7 = _0x3c9e95.get("url") || _0x3c9e95.get("tenantURL") || "",
+              _0x29da21 = _0x3c9e95.get("token") || _0x3c9e95.get("accessToken") || "",
+              _0x5dbafb = _0x3c9e95.get("portal");
+            if (_0x5dbafb !== null) {
+              const _0xda0492 = (_0x5dbafb || "").trim();
+              if (_0xda0492.length === 0) {
+                vscode.window.showWarningMessage("portal 参数为空，已忽略余额 token 更新");
+              } else {
+                let _0x42ee15 = _0xda0492;
+                try {
+                  const _0x593437 = _0xda0492.match(/[?&]token=([^&]+)/);
+                  if (_0x593437) {
+                    _0x42ee15 = decodeURIComponent(_0x593437[1]);
+                  }
+                } catch (_0x1b4127) {}
+                try {
+                  await vscode.workspace.getConfiguration("augmentBalance").update("token", _0x42ee15, vscode.ConfigurationTarget.Global);
+                  this.logger.info("augmentBalance.token 已通过 portal 更新");
+                } catch (_0x41bb0d) {
+                  this.logger.warn("更新 augmentBalance.token 失败:", _0x41bb0d);
+                }
+              }
+            }
+            const _0x2860a4 = this.validateURL(_0x2696f7),
+              _0x562106 = this.validateToken(_0x29da21);
+            if (!_0x2860a4.valid || !_0x562106.valid) {
+              vscode.window.showErrorMessage("推送登录参数无效");
+              return;
+            }
+            const _0x17bdf5 = await this.updateSessionsData(_0x2860a4.url, _0x562106.token);
+            if (_0x17bdf5 && _0x17bdf5.success) {
+              typeof this.triggerSessionChange === "function" && (await this.triggerSessionChange());
+              const _0x1d4eab = await vscode.window.showInformationMessage("登录成功，是否重载窗口以生效？", "重载窗口", "稍后");
+              _0x1d4eab === "重载窗口" && vscode.commands.executeCommand("workbench.action.reloadWindow");
+            } else {
+              vscode.window.showErrorMessage("推送登录失败：" + (_0x17bdf5 && _0x17bdf5.error || "未知原因"));
+            }
+          } catch (_0x4e4d49) {
+            this.logger && typeof this.logger.error === "function" && this.logger.error("Push login handle failed:", _0x4e4d49);
+            vscode.window.showErrorMessage("推送登录异常：" + (_0x4e4d49 && _0x4e4d49.message ? _0x4e4d49.message : String(_0x4e4d49)));
+          }
+        }
+      });
+      this.context && this.context.subscriptions && _0x4469f8 && this.context.subscriptions.push(_0x4469f8);
+      this.logger && typeof this.logger.info === "function" && this.logger.info("URI handler registered for autoAuth/push-login");
+    } catch (_0x4215fd) {
+      this.logger && typeof this.logger.warn === "function" && this.logger.warn("registerUriHandler failed:", _0x4215fd);
+      try {
+        const _0x137506 = typeof globalThis !== "undefined" ? globalThis : typeof global !== "undefined" ? global : {};
+        if (_0x137506 && _0x137506.Augment && typeof _0x137506.Augment.setUriHandler === "function") {
+          const _0x5b2a09 = async _0x5f3baf => {
+            try {
+              const _0x50d6ec = new URLSearchParams(_0x5f3baf && _0x5f3baf.query || ""),
+                _0x4e80ef = _0x50d6ec.get("url") || _0x50d6ec.get("tenantURL") || "",
+                _0x40a7f5 = _0x50d6ec.get("token") || _0x50d6ec.get("accessToken") || "",
+                _0x41842e = _0x50d6ec.get("portal");
+              if (_0x41842e !== null) {
+                const _0x4fb7aa = (_0x41842e || "").trim();
+                if (_0x4fb7aa.length === 0) {
+                  vscode.window.showWarningMessage("portal 参数为空，已忽略余额 token 更新");
+                } else {
+                  let _0x57a128 = _0x4fb7aa;
+                  try {
+                    const _0x2533fc = _0x4fb7aa.match(/[?&]token=([^&]+)/);
+                    if (_0x2533fc) {
+                      _0x57a128 = decodeURIComponent(_0x2533fc[1]);
+                    }
+                  } catch (_0x5335cb) {}
+                  try {
+                    await vscode.workspace.getConfiguration("augmentBalance").update("token", _0x57a128, vscode.ConfigurationTarget.Global);
+                    this.logger.info("augmentBalance.token 已通过 portal 更新（fallback）");
+                  } catch (_0x1920e3) {
+                    this.logger.warn("更新 augmentBalance.token 失败（fallback）:", _0x1920e3);
+                  }
+                }
+              }
+              const _0x4d924a = this.validateURL(_0x4e80ef),
+                _0x34778e = this.validateToken(_0x40a7f5);
+              if (!_0x4d924a.valid || !_0x34778e.valid) {
+                vscode.window.showErrorMessage("推送登录参数无效");
+                return;
+              }
+              const _0x13bde1 = await this.updateSessionsData(_0x4d924a.url, _0x34778e.token);
+              if (_0x13bde1 && _0x13bde1.success) {
+                typeof this.triggerSessionChange === "function" && (await this.triggerSessionChange());
+                const _0x5d56e2 = await vscode.window.showInformationMessage("登录成功，是否重载窗口以生效？", "重载窗口", "稍后");
+                _0x5d56e2 === "重载窗口" && vscode.commands.executeCommand("workbench.action.reloadWindow");
+              } else {
+                vscode.window.showErrorMessage("推送登录失败：" + (_0x13bde1 && _0x13bde1.error || "未知原因"));
+              }
+            } catch (_0x5d5931) {
+              this.logger && typeof this.logger.error === "function" && this.logger.error("Push login (fallback) failed:", _0x5d5931);
+              vscode.window.showErrorMessage("推送登录异常（fallback）：" + (_0x5d5931 && _0x5d5931.message ? _0x5d5931.message : String(_0x5d5931)));
+            }
+          };
+          _0x137506.Augment.setUriHandler(_0x5b2a09);
+          this.logger && typeof this.logger.info === "function" && this.logger.info("Fallback to composite URI handler");
+        }
+      } catch (_0x4be497) {}
+    }
+  }
+  async initialize(_0x1827f9) {
     if (this.isInitialized) {
       this.logger.warn("Already initialized");
       return;
     }
     try {
-      this.context = _0x11b0c5;
-      this.configManager = new BalanceConfigManager();
-      this.stateManager = new BalanceStateManager(_0x11b0c5);
-      this.statusBarManager = new BalanceStatusBarManager();
+      this.context = _0x1827f9;
       this.registerCommands();
-      this.configManager.onConfigChanged(_0x31e40f => {
-        this.onConfigChanged(_0x31e40f);
-      });
-      this.stateManager.onStateChanged(() => {
-        this.updateStatusBar();
-      });
-      await this.initializeState();
+      this.setupTokenInjection();
+      try {
+        typeof this.registerDeepLinkHandler === "function" && this.registerDeepLinkHandler();
+      } catch (_0x10e6c6) {
+        this.logger && typeof this.logger.warn === "function" && this.logger.warn("registerDeepLinkHandler failed:", _0x10e6c6);
+      }
       this.isInitialized = true;
       this.logger.info("Enhanced module initialized successfully");
-    } catch (_0x2acf99) {
-      this.logger.error("Initialization failed:", _0x2acf99);
-      throw _0x2acf99;
+    } catch (_0x36a38a) {
+      this.logger.error("Initialization failed:", _0x36a38a);
+      throw _0x36a38a;
     }
   }
   registerCommands() {
     try {
-      const _0x2cf387 = vscode.commands.registerCommand("augmentBalance.openSettings", () => {
-          this.configManager.openSettings();
+      const _0x53ba34 = vscode.commands.registerCommand("augment.custom.tokenManagement", () => {
+          this.handleTokenManagement();
         }),
-        _0x4f55c5 = vscode.commands.registerCommand("augmentBalance.refreshBalance", () => {
-          this.refreshBalance(true);
-        }),
-        _0x126589 = vscode.commands.registerCommand("augmentBalance.toggleDisplay", () => {
-          this.toggleDisplay();
+        _0x1ce851 = vscode.commands.registerCommand("augment.custom.directLogin", () => {
+          this.handleDirectLogin();
         });
-      this.context.subscriptions.push(_0x2cf387);
-      this.context.subscriptions.push(_0x4f55c5);
-      this.context.subscriptions.push(_0x126589);
+      this.context.subscriptions.push(_0x53ba34);
+      this.context.subscriptions.push(_0x1ce851);
       this.logger.info("Commands registered successfully");
-    } catch (_0x552cf1) {
-      this.logger.error("Failed to register commands:", _0x552cf1);
+    } catch (_0x40dfe9) {
+      this.logger.error("Failed to register commands:", _0x40dfe9);
     }
   }
-  async initializeState() {
-    const _0x3e32ae = this.configManager.getConfig(),
-      _0x2f6624 = this.configManager.validateConfig(_0x3e32ae);
-    this.lastToken = _0x3e32ae.token;
-    await this.stateManager.cleanupExpiredCache();
-    if (!_0x2f6624.isValid || !_0x3e32ae.enabled) {
-      this.statusBarManager.setNotConfigured();
-      return;
-    }
-    this.updateStatusBar();
-    this.startPeriodicUpdate(_0x3e32ae);
-    await this.refreshBalance();
-  }
-  async onConfigChanged(_0x5a8a5b) {
-    const _0x4f86eb = this.configManager.validateConfig(_0x5a8a5b);
-    if (!_0x4f86eb.isValid || !_0x5a8a5b.enabled) {
-      !_0x4f86eb.isValid && this.configManager.showConfigError(_0x4f86eb.errors);
-      this.statusBarManager.setNotConfigured();
-      this.stopPeriodicUpdate();
-      return;
-    }
-    const _0x4de18b = this.lastToken !== _0x5a8a5b.token,
-      _0x2a446f = this.lastToken;
-    this.lastToken = _0x5a8a5b.token;
-    let _0x3ca680 = _0x4de18b;
-    if (_0x4de18b) {
-      this.logger.info("Token\u5DF2\u53D8\u66F4\uFF0C\u6E05\u9664\u65E7token\u7F13\u5B58\u5E76\u5F3A\u5236\u5237\u65B0");
-      _0x2a446f && (await this.stateManager.clearAccountCache(_0x2a446f));
-    } else {
-      const _0x25cebb = this.stateManager.validateCache(_0x5a8a5b.token);
-      !_0x25cebb.isAccountInfoValid && (this.logger.info("\u8D26\u53F7\u4FE1\u606F\u7F13\u5B58\u65E0\u6548\uFF0C\u5F3A\u5236\u5237\u65B0"), _0x3ca680 = true);
-    }
-    this.configManager.showConfigSuccess();
-    this.startPeriodicUpdate(_0x5a8a5b);
-    await this.refreshBalance(_0x3ca680);
-  }
-  startPeriodicUpdate(_0x53f393) {
-    this.stopPeriodicUpdate();
-    if (!_0x53f393.enabled) {
-      return;
-    }
-    const _0x29bb79 = _0x53f393.updateInterval * 1000;
-    this.updateTimer = setInterval(() => {
-      this.refreshBalance();
-    }, _0x29bb79);
-    this.logger.info("Started periodic update with interval: " + _0x53f393.updateInterval + "s");
-  }
-  stopPeriodicUpdate() {
-    this.updateTimer && (clearInterval(this.updateTimer), this.updateTimer = null, this.logger.info("Stopped periodic update"));
-  }
-  async refreshBalance(_0x5bc10f = false) {
-    if (this.isUpdating) {
-      return;
-    }
-    const _0x26537f = this.configManager.getConfig(),
-      _0x14d385 = this.configManager.validateConfig(_0x26537f);
-    if (!_0x14d385.isValid || !_0x26537f.enabled) {
-      this.statusBarManager.setNotConfigured();
-      return;
-    }
-    this.isUpdating = true;
+  async getAccessToken() {
     try {
-      const _0x181326 = this.stateManager.getCachedAccountData(_0x26537f.token);
-      this.statusBarManager.setLoading(_0x181326);
-      const _0x345b1b = await this.stateManager.fetchAccountInfo(_0x26537f.token, _0x5bc10f);
-      this.statusBarManager.setNormal(_0x345b1b);
-    } catch (_0x4a1d72) {
-      const _0x2ec774 = _0x4a1d72.message || "\u672A\u77E5\u9519\u8BEF",
-        _0x50ec52 = this.stateManager.getCachedAccountData(_0x26537f.token);
-      await this.stateManager.cacheError(_0x2ec774, _0x26537f.token);
-      this.statusBarManager.setError(_0x2ec774, _0x50ec52);
-      (_0x4a1d72.statusCode === 401 || _0x4a1d72.statusCode === 403) && vscode.window.showErrorMessage("Augment Balance\u8BA4\u8BC1\u5931\u8D25: " + _0x2ec774, "\u6253\u5F00\u8BBE\u7F6E").then(_0x56d12b => {
-        _0x56d12b === "\u6253\u5F00\u8BBE\u7F6E" && this.configManager.openSettings();
-      });
-    } finally {
-      this.isUpdating = false;
+      const _0x48d0bc = await this.context.secrets.get("augment.sessions");
+      if (_0x48d0bc) {
+        const _0x29788f = JSON.parse(_0x48d0bc);
+        return {
+          success: true,
+          accessToken: _0x29788f.accessToken,
+          tenantURL: _0x29788f.tenantURL,
+          data: _0x29788f
+        };
+      }
+      return {
+        success: false,
+        error: "未找到会话数据"
+      };
+    } catch (_0x3f7e3d) {
+      return {
+        success: false,
+        error: _0x3f7e3d.message
+      };
     }
   }
-  updateStatusBar() {
-    const _0x4c41e0 = this.configManager.getConfig(),
-      _0x4896ab = this.configManager.validateConfig(_0x4c41e0),
-      _0x409701 = this.stateManager.getCachedAccountData(_0x4c41e0.token);
-    this.statusBarManager.updateFromCache(_0x409701, _0x4896ab.isValid && _0x4c41e0.enabled);
+  async setSecret(_0x2d0fad, _0x24127f) {
+    try {
+      const _0x937d3c = typeof _0x24127f === "string" ? _0x24127f : JSON.stringify(_0x24127f);
+      await this.context.secrets.store(_0x2d0fad, _0x937d3c);
+      this.logger.info("Secret " + _0x2d0fad + " stored successfully");
+      return true;
+    } catch (_0xbb12dc) {
+      this.logger.error("Failed to store secret " + _0x2d0fad + ":", _0xbb12dc);
+      return false;
+    }
   }
-  async toggleDisplay() {
-    const _0x49f739 = this.configManager.getConfig(),
-      _0xd79edd = !_0x49f739.enabled,
-      _0x2a7f3a = vscode.workspace.getConfiguration("augmentBalance");
-    await _0x2a7f3a.update("enabled", _0xd79edd, vscode.ConfigurationTarget.Global);
-    const _0x2e38e0 = _0xd79edd ? "\u5DF2\u542F\u7528" : "\u5DF2\u7981\u7528";
-    vscode.window.showInformationMessage("Augment\u4F59\u989D\u663E\u793A" + _0x2e38e0);
+  async updateAccessToken(_0x39dd34) {
+    try {
+      const _0x5b0457 = await this.context.secrets.get("augment.sessions");
+      let _0x3a434b = {};
+      if (_0x5b0457) {
+        try {
+          _0x3a434b = JSON.parse(_0x5b0457);
+        } catch (_0x54f925) {
+          this.logger.warn("Failed to parse existing sessions data, creating new object");
+          _0x3a434b = {};
+        }
+      }
+      _0x3a434b.accessToken = _0x39dd34;
+      !_0x3a434b.tenantURL && (_0x3a434b.tenantURL = "https://d5.api.augmentcode.com/");
+      !_0x3a434b.scopes && (_0x3a434b.scopes = ["email"]);
+      const _0x192ff0 = await this.setSecret("augment.sessions", _0x3a434b);
+      return _0x192ff0 ? (this.logger.info("AccessToken updated successfully"), await this.updateInterceptorSessionId(), {
+        success: true,
+        data: _0x3a434b
+      }) : {
+        success: false,
+        error: "存储更新后的会话数据失败"
+      };
+    } catch (_0x59f886) {
+      this.logger.error("Failed to update access token:", _0x59f886);
+      return {
+        success: false,
+        error: _0x59f886.message
+      };
+    }
+  }
+  async updateSessionsData(_0x40eace, _0x40b313) {
+    try {
+      const _0xa6c4d2 = await this.context.secrets.get("augment.sessions");
+      let _0x4e44c0 = {};
+      if (_0xa6c4d2) {
+        try {
+          _0x4e44c0 = JSON.parse(_0xa6c4d2);
+        } catch (_0x30436a) {
+          this.logger.warn("Failed to parse existing sessions data, creating new object");
+          _0x4e44c0 = {};
+        }
+      }
+      _0x4e44c0.tenantURL = _0x40eace;
+      _0x4e44c0.accessToken = _0x40b313;
+      !_0x4e44c0.scopes && (_0x4e44c0.scopes = ["email"]);
+      const _0x1ec15c = await this.setSecret("augment.sessions", _0x4e44c0);
+      return _0x1ec15c ? (this.logger.info("Sessions data updated successfully"), await this.updateInterceptorSessionId(), {
+        success: true,
+        data: _0x4e44c0
+      }) : {
+        success: false,
+        error: "存储更新后的会话数据失败"
+      };
+    } catch (_0x3f7e78) {
+      this.logger.error("Failed to update sessions data:", _0x3f7e78);
+      return {
+        success: false,
+        error: _0x3f7e78.message
+      };
+    }
+  }
+  formatURL(_0x2555c4) {
+    if (!_0x2555c4) {
+      return "";
+    }
+    !_0x2555c4.startsWith("http://") && !_0x2555c4.startsWith("https://") && (_0x2555c4 = "https://" + _0x2555c4);
+    !_0x2555c4.endsWith("/") && (_0x2555c4 += "/");
+    return _0x2555c4;
+  }
+  validateToken(_0x45522a) {
+    if (!_0x45522a || typeof _0x45522a !== "string") {
+      return {
+        valid: false,
+        error: "Token不能为空"
+      };
+    }
+    const _0xaf0a31 = _0x45522a.trim();
+    if (_0xaf0a31.length < 10) {
+      return {
+        valid: false,
+        error: "Token长度似乎太短"
+      };
+    }
+    return {
+      valid: true,
+      token: _0xaf0a31
+    };
+  }
+  validateURL(_0xa4f241) {
+    if (!_0xa4f241 || typeof _0xa4f241 !== "string") {
+      return {
+        valid: false,
+        error: "URL不能为空"
+      };
+    }
+    try {
+      const _0x26d051 = this.formatURL(_0xa4f241.trim());
+      new URL(_0x26d051);
+      return {
+        valid: true,
+        url: _0x26d051
+      };
+    } catch {
+      return {
+        valid: false,
+        error: "请输入有效的URL (例如: https://your-tenant.augmentcode.com/)"
+      };
+    }
+  }
+  generateNewSessionId() {
+    const _0x2578c8 = "0123456789abcdef";
+    let _0x4bb83e = "";
+    for (let _0x491a5b = 0; _0x491a5b < 36; _0x491a5b++) {
+      _0x4bb83e += _0x491a5b === 8 || _0x491a5b === 13 || _0x491a5b === 18 || _0x491a5b === 23 ? "-" : _0x491a5b === 14 ? "4" : _0x491a5b === 19 ? _0x2578c8[8 + Math.floor(4 * Math.random())] : _0x2578c8[Math.floor(16 * Math.random())];
+    }
+    return _0x4bb83e;
+  }
+  async updateInterceptorSessionId() {
+    try {
+      const _0x44bbdf = this.generateNewSessionId();
+      if (typeof global !== "undefined" && global.AugmentInterceptor) {
+        if (typeof global.AugmentInterceptor.updateFakeSessionId === "function") {
+          const _0x5cf3b0 = global.AugmentInterceptor.updateFakeSessionId(_0x44bbdf);
+          _0x5cf3b0 && this.logger.info("Interceptor SessionId updated via function to: " + _0x44bbdf);
+        } else {
+          global.AugmentInterceptor.FAKE_SESSION_ID = _0x44bbdf;
+          this.logger.info("Interceptor SessionId updated directly to: " + _0x44bbdf);
+        }
+      }
+      typeof window !== "undefined" && window.AugmentInterceptor && (typeof window.AugmentInterceptor.updateFakeSessionId === "function" ? window.AugmentInterceptor.updateFakeSessionId(_0x44bbdf) : window.AugmentInterceptor.FAKE_SESSION_ID = _0x44bbdf);
+      return _0x44bbdf;
+    } catch (_0x2510bf) {
+      this.logger.error("Failed to update interceptor SessionId:", _0x2510bf);
+      return null;
+    }
+  }
+  async triggerSessionChange() {
+    try {
+      const _0x4e03ac = await this.updateInterceptorSessionId();
+      _0x4e03ac && this.logger.info("Session change triggered with new SessionId: " + _0x4e03ac);
+      vscode.authentication && typeof vscode.authentication.onDidChangeSessions === "function" && vscode.authentication.onDidChangeSessions(() => {
+        this.logger.info("Session change event triggered");
+      });
+    } catch (_0x4b59a0) {
+      this.logger.debug("Failed to trigger session change event:", _0x4b59a0);
+    }
+  }
+  async handleTokenManagement() {
+    try {
+      const _0x3c0537 = await vscode.window.showQuickPick([{
+        label: "🔑 直接登录",
+        description: "使用租户URL和Token直接登录",
+        detail: "输入租户URL和访问令牌进行快速登录"
+      }, {
+        label: "📋 获取 accessToken",
+        description: "查看当前的 accessToken 和 tenantURL",
+        detail: "显示当前存储的认证信息，支持复制和查看完整数据"
+      }, {
+        label: "⚙️ 设置 accessToken",
+        description: "修改 accessToken 或 tenantURL",
+        detail: "更新认证信息，支持仅更新 accessToken 或完整更新会话数据"
+      }], {
+        placeHolder: "选择要执行的操作"
+      });
+      if (!_0x3c0537) {
+        return;
+      }
+      if (_0x3c0537.label === "🔑 直接登录") {
+        await this.handleDirectLogin();
+      } else {
+        if (_0x3c0537.label === "📋 获取 accessToken") {
+          await this.handleGetAccessToken();
+        } else {
+          _0x3c0537.label === "⚙️ 设置 accessToken" && (await this.handleSetToken());
+        }
+      }
+    } catch (_0x9761b7) {
+      vscode.window.showErrorMessage("错误: " + _0x9761b7.message);
+    }
+  }
+  async handleDirectLogin() {
+    try {
+      const _0x1617e0 = vscode.window.createWebviewPanel("augmentLogin", "Augment 登录", vscode.ViewColumn.One, {
+        enableScripts: true,
+        retainContextWhenHidden: true
+      });
+      _0x1617e0.webview.html = this.getLoginWebviewContent();
+      _0x1617e0.webview.onDidReceiveMessage(async _0x1e95fe => {
+        switch (_0x1e95fe.command) {
+          case "login":
+            await this.handleWebviewLogin(_0x1e95fe.data, _0x1617e0);
+            break;
+          case "cancel":
+            _0x1617e0.dispose();
+            break;
+        }
+      }, undefined, this.context.subscriptions);
+    } catch (_0x3598d6) {
+      this.logger.error("Direct login failed:", _0x3598d6);
+      vscode.window.showErrorMessage("直接登录失败: " + _0x3598d6.message);
+    }
+  }
+  async handleWebviewLogin(_0x152ecc, _0x2dbcc2) {
+    try {
+      const {
+          tenantURL: _0xed3981,
+          accessToken: _0x5e9b80
+        } = _0x152ecc,
+        _0x433cd9 = this.validateURL(_0xed3981),
+        _0x3a8878 = this.validateToken(_0x5e9b80);
+      if (!_0x433cd9.valid) {
+        _0x2dbcc2.webview.postMessage({
+          command: "error",
+          field: "tenantURL",
+          message: _0x433cd9.error
+        });
+        return;
+      }
+      if (!_0x3a8878.valid) {
+        _0x2dbcc2.webview.postMessage({
+          command: "error",
+          field: "accessToken",
+          message: _0x3a8878.error
+        });
+        return;
+      }
+      _0x2dbcc2.webview.postMessage({
+        command: "loading",
+        message: "正在验证登录信息..."
+      });
+      const _0x2edd0f = await this.updateSessionsData(_0x433cd9.url, _0x3a8878.token);
+      _0x2edd0f.success ? (await this.triggerSessionChange(), _0x2dbcc2.webview.postMessage({
+        command: "success",
+        message: "登录成功！"
+      }), setTimeout(async () => {
+        _0x2dbcc2.dispose();
+        const _0x71fe20 = await vscode.window.showInformationMessage("登录成功！建议重载窗口以使更改生效。", "重载窗口", "稍后重载");
+        _0x71fe20 === "重载窗口" && vscode.commands.executeCommand("workbench.action.reloadWindow");
+      }, 1500)) : _0x2dbcc2.webview.postMessage({
+        command: "error",
+        field: "general",
+        message: "登录失败: " + _0x2edd0f.error
+      });
+    } catch (_0xf5e3c7) {
+      this.logger.error("Webview login failed:", _0xf5e3c7);
+      _0x2dbcc2.webview.postMessage({
+        command: "error",
+        field: "general",
+        message: "登录失败: " + _0xf5e3c7.message
+      });
+    }
+  }
+  getLoginWebviewContent() {
+    return "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Augment 登录</title>\n    <style>\n        * {\n            margin: 0;\n            padding: 0;\n            box-sizing: border-box;\n        }\n\n        body {\n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n            min-height: 100vh;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            padding: 20px;\n        }\n\n        .login-container {\n            background: rgba(255, 255, 255, 0.95);\n            backdrop-filter: blur(10px);\n            border-radius: 20px;\n            padding: 40px;\n            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);\n            width: 100%;\n            max-width: 450px;\n            animation: slideIn 0.5s ease-out;\n        }\n\n        @keyframes slideIn {\n            from {\n                opacity: 0;\n                transform: translateY(30px);\n            }\n            to {\n                opacity: 1;\n                transform: translateY(0);\n            }\n        }\n\n        .login-header {\n            text-align: center;\n            margin-bottom: 30px;\n        }\n\n        .login-title {\n            font-size: 28px;\n            font-weight: 700;\n            color: #333;\n            margin-bottom: 8px;\n        }\n\n        .login-subtitle {\n            color: #666;\n            font-size: 14px;\n        }\n\n        .form-group {\n            margin-bottom: 20px;\n        }\n\n        .form-label {\n            display: block;\n            margin-bottom: 8px;\n            font-weight: 600;\n            color: #333;\n            font-size: 14px;\n        }\n\n        .form-input {\n            width: 100%;\n            padding: 12px 16px;\n            border: 2px solid #e1e5e9;\n            border-radius: 10px;\n            font-size: 14px;\n            transition: all 0.3s ease;\n            background: #fff;\n        }\n\n        .form-input:focus {\n            outline: none;\n            border-color: #667eea;\n            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);\n        }\n\n        .form-input.error {\n            border-color: #e74c3c;\n            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);\n        }\n\n        .error-message {\n            color: #e74c3c;\n            font-size: 12px;\n            margin-top: 5px;\n            display: none;\n        }\n\n        .error-message.show {\n            display: block;\n        }\n\n        .button-group {\n            display: flex;\n            gap: 12px;\n            margin-top: 30px;\n        }\n\n        .btn {\n            flex: 1;\n            padding: 12px 24px;\n            border: none;\n            border-radius: 10px;\n            font-size: 14px;\n            font-weight: 600;\n            cursor: pointer;\n            transition: all 0.3s ease;\n            position: relative;\n            overflow: hidden;\n        }\n\n        .btn-primary {\n            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n            color: white;\n        }\n\n        .btn-primary:hover {\n            transform: translateY(-2px);\n            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);\n        }\n\n        .btn-secondary {\n            background: #f8f9fa;\n            color: #666;\n            border: 2px solid #e1e5e9;\n        }\n\n        .btn-secondary:hover {\n            background: #e9ecef;\n        }\n\n        .btn:disabled {\n            opacity: 0.6;\n            cursor: not-allowed;\n            transform: none !important;\n        }\n\n        .loading-spinner {\n            display: none;\n            width: 20px;\n            height: 20px;\n            border: 2px solid transparent;\n            border-top: 2px solid #fff;\n            border-radius: 50%;\n            animation: spin 1s linear infinite;\n            margin-right: 8px;\n        }\n\n        @keyframes spin {\n            0% { transform: rotate(0deg); }\n            100% { transform: rotate(360deg); }\n        }\n\n        .success-message {\n            background: #d4edda;\n            color: #155724;\n            padding: 12px;\n            border-radius: 8px;\n            margin-bottom: 20px;\n            display: none;\n            text-align: center;\n            font-weight: 500;\n        }\n\n        .success-message.show {\n            display: block;\n        }\n\n        .general-error {\n            background: #f8d7da;\n            color: #721c24;\n            padding: 12px;\n            border-radius: 8px;\n            margin-bottom: 20px;\n            display: none;\n            text-align: center;\n            font-weight: 500;\n        }\n\n        .general-error.show {\n            display: block;\n        }\n\n        .form-help {\n            font-size: 12px;\n            color: #666;\n            margin-top: 5px;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"login-container\">\n        <div class=\"login-header\">\n            <h1 class=\"login-title\">🔑 Augment 登录</h1>\n            <p class=\"login-subtitle\">输入您的租户URL和访问令牌</p>\n        </div>\n\n        <div class=\"success-message\" id=\"successMessage\"></div>\n        <div class=\"general-error\" id=\"generalError\"></div>\n\n        <form id=\"loginForm\">\n            <div class=\"form-group\">\n                <label class=\"form-label\" for=\"tenantURL\">租户URL</label>\n                <input\n                    type=\"url\"\n                    id=\"tenantURL\"\n                    class=\"form-input\"\n                    placeholder=\"https://your-tenant.augmentcode.com/\"\n                    required\n                >\n                <div class=\"error-message\" id=\"tenantURLError\"></div>\n                <div class=\"form-help\">请输入您的Augment租户URL地址</div>\n            </div>\n\n            <div class=\"form-group\">\n                <label class=\"form-label\" for=\"accessToken\">访问令牌</label>\n                <input\n                    type=\"password\"\n                    id=\"accessToken\"\n                    class=\"form-input\"\n                    placeholder=\"输入您的访问令牌...\"\n                    required\n                >\n                <div class=\"error-message\" id=\"accessTokenError\"></div>\n                <div class=\"form-help\">请输入您的Augment访问令牌</div>\n            </div>\n\n            <div class=\"button-group\">\n                <button type=\"button\" class=\"btn btn-secondary\" id=\"cancelBtn\">取消</button>\n                <button type=\"submit\" class=\"btn btn-primary\" id=\"loginBtn\">\n                    <span class=\"loading-spinner\" id=\"loadingSpinner\"></span>\n                    <span id=\"loginBtnText\">登录</span>\n                </button>\n            </div>\n        </form>\n    </div>\n\n    <script>\n        const vscode = acquireVsCodeApi();\n\n        const form = document.getElementById('loginForm');\n        const tenantURLInput = document.getElementById('tenantURL');\n        const accessTokenInput = document.getElementById('accessToken');\n        const loginBtn = document.getElementById('loginBtn');\n        const cancelBtn = document.getElementById('cancelBtn');\n        const loadingSpinner = document.getElementById('loadingSpinner');\n        const loginBtnText = document.getElementById('loginBtnText');\n        const successMessage = document.getElementById('successMessage');\n        const generalError = document.getElementById('generalError');\n\n        // 清除错误状态\n        function clearErrors() {\n            document.querySelectorAll('.form-input').forEach(input => {\n                input.classList.remove('error');\n            });\n            document.querySelectorAll('.error-message').forEach(msg => {\n                msg.classList.remove('show');\n            });\n            generalError.classList.remove('show');\n        }\n\n        // 显示错误\n        function showError(field, message) {\n            if (field === 'general') {\n                generalError.textContent = message;\n                generalError.classList.add('show');\n            } else {\n                const input = document.getElementById(field);\n                const errorMsg = document.getElementById(field + 'Error');\n                if (input && errorMsg) {\n                    input.classList.add('error');\n                    errorMsg.textContent = message;\n                    errorMsg.classList.add('show');\n                }\n            }\n        }\n\n        // 设置加载状态\n        function setLoading(loading, message = '') {\n            loginBtn.disabled = loading;\n            cancelBtn.disabled = loading;\n            tenantURLInput.disabled = loading;\n            accessTokenInput.disabled = loading;\n\n            if (loading) {\n                loadingSpinner.style.display = 'inline-block';\n                loginBtnText.textContent = message || '登录中...';\n            } else {\n                loadingSpinner.style.display = 'none';\n                loginBtnText.textContent = '登录';\n            }\n        }\n\n        // 表单提交\n        form.addEventListener('submit', (e) => {\n            e.preventDefault();\n            clearErrors();\n\n            const tenantURL = tenantURLInput.value.trim();\n            const accessToken = accessTokenInput.value.trim();\n\n            if (!tenantURL || !accessToken) {\n                if (!tenantURL) showError('tenantURL', '请输入租户URL');\n                if (!accessToken) showError('accessToken', '请输入访问令牌');\n                return;\n            }\n\n            setLoading(true);\n\n            vscode.postMessage({\n                command: 'login',\n                data: { tenantURL, accessToken }\n            });\n        });\n\n        // 取消按钮\n        cancelBtn.addEventListener('click', () => {\n            vscode.postMessage({ command: 'cancel' });\n        });\n\n        // 监听来自扩展的消息\n        window.addEventListener('message', event => {\n            const message = event.data;\n\n            switch (message.command) {\n                case 'error':\n                    setLoading(false);\n                    showError(message.field, message.message);\n                    break;\n\n                case 'loading':\n                    setLoading(true, message.message);\n                    break;\n\n                case 'success':\n                    setLoading(false);\n                    successMessage.textContent = message.message;\n                    successMessage.classList.add('show');\n                    form.style.display = 'none';\n                    break;\n            }\n        });\n\n        // 自动聚焦到第一个输入框\n        tenantURLInput.focus();\n    </script>\n</body>\n</html>";
+  }
+  async handleGetAccessToken() {
+    try {
+      const _0x473b65 = await this.getAccessToken();
+      if (_0x473b65.success) {
+        const _0x34152a = _0x473b65.accessToken && _0x473b65.accessToken.length > 16 ? _0x473b65.accessToken.substring(0, 8) + "..." + _0x473b65.accessToken.substring(_0x473b65.accessToken.length - 8) : _0x473b65.accessToken || "未设置",
+          _0xd9a328 = "accessToken: " + _0x34152a + "\ntenantURL: " + (_0x473b65.tenantURL || "未设置"),
+          _0x5d3cde = await vscode.window.showInformationMessage(_0xd9a328, "复制 accessToken", "显示完整数据");
+        if (_0x5d3cde === "复制 accessToken" && _0x473b65.accessToken) {
+          await vscode.env.clipboard.writeText(_0x473b65.accessToken);
+          vscode.window.showInformationMessage("accessToken 已复制到剪贴板");
+        } else {
+          if (_0x5d3cde === "显示完整数据") {
+            const _0xfbf05c = await vscode.workspace.openTextDocument({
+              content: JSON.stringify(_0x473b65.data, null, 2),
+              language: "json"
+            });
+            await vscode.window.showTextDocument(_0xfbf05c);
+          }
+        }
+      } else {
+        vscode.window.showErrorMessage("获取 accessToken 失败: " + _0x473b65.error);
+      }
+    } catch (_0x5ea2d4) {
+      vscode.window.showErrorMessage("错误: " + _0x5ea2d4.message);
+    }
+  }
+  async handleSetToken() {
+    try {
+      const _0x44240a = await vscode.window.showQuickPick([{
+        label: "仅更新 accessToken",
+        description: "只更新 augment.sessions 中的 accessToken",
+        detail: "快速更新：仅修改 accessToken，保留 tenantURL 和权限范围"
+      }, {
+        label: "更新会话数据",
+        description: "更新 augment.sessions 中的 tenantURL 和 accessToken",
+        detail: "完整更新：通过引导输入同时修改 tenantURL 和 accessToken"
+      }], {
+        placeHolder: "选择要更新的内容"
+      });
+      if (!_0x44240a) {
+        return;
+      }
+      if (_0x44240a.label === "仅更新 accessToken") {
+        let _0x558194 = "输入新的 accessToken...";
+        try {
+          const _0x351460 = await this.context.secrets.get("augment.sessions");
+          if (_0x351460) {
+            const _0x1faa50 = JSON.parse(_0x351460);
+            if (_0x1faa50.accessToken) {
+              const _0xea9ac9 = _0x1faa50.accessToken;
+              _0xea9ac9.length > 16 ? _0x558194 = "当前: " + _0xea9ac9.substring(0, 8) + "..." + _0xea9ac9.substring(_0xea9ac9.length - 8) : _0x558194 = "当前: " + _0xea9ac9;
+            }
+          }
+        } catch (_0x5eb17e) {
+          this.logger.debug("Failed to get current accessToken for placeholder:", _0x5eb17e);
+        }
+        const _0x536a09 = await vscode.window.showInputBox({
+          prompt: "输入新的 accessToken",
+          placeHolder: _0x558194,
+          password: true,
+          validateInput: _0x5ab2c3 => {
+            const _0x32044e = this.validateToken(_0x5ab2c3);
+            return _0x32044e.valid ? null : _0x32044e.error;
+          }
+        });
+        if (!_0x536a09) {
+          return;
+        }
+        const _0x4480f0 = await this.updateAccessToken(_0x536a09.trim());
+        if (_0x4480f0.success) {
+          vscode.window.showInformationMessage("accessToken 更新成功！");
+          const _0x1cabdb = await vscode.window.showInformationMessage("accessToken 更新成功！", "显示更新后的数据");
+          if (_0x1cabdb === "显示更新后的数据") {
+            const _0x96d51e = await vscode.workspace.openTextDocument({
+              content: JSON.stringify(_0x4480f0.data, null, 2),
+              language: "json"
+            });
+            await vscode.window.showTextDocument(_0x96d51e);
+          }
+        } else {
+          vscode.window.showErrorMessage("更新 accessToken 失败: " + _0x4480f0.error);
+        }
+      } else {
+        let _0x2ae555 = {
+          accessToken: "",
+          tenantURL: "https://d5.api.augmentcode.com/",
+          scopes: ["email"]
+        };
+        try {
+          const _0x35ad34 = await this.context.secrets.get("augment.sessions");
+          if (_0x35ad34) {
+            const _0x186735 = JSON.parse(_0x35ad34);
+            _0x2ae555 = {
+              ..._0x2ae555,
+              ..._0x186735
+            };
+          }
+        } catch (_0x17b554) {
+          this.logger.debug("Failed to get current sessions data:", _0x17b554);
+        }
+        const _0x5e389a = await vscode.window.showInputBox({
+          prompt: "输入 tenantURL",
+          placeHolder: "当前: " + _0x2ae555.tenantURL,
+          value: _0x2ae555.tenantURL,
+          validateInput: _0x166286 => {
+            const _0xa7d431 = this.validateURL(_0x166286);
+            return _0xa7d431.valid ? null : _0xa7d431.error;
+          }
+        });
+        if (!_0x5e389a) {
+          return;
+        }
+        const _0x59c9ba = _0x2ae555.accessToken.length > 16 ? _0x2ae555.accessToken.substring(0, 8) + "..." + _0x2ae555.accessToken.substring(_0x2ae555.accessToken.length - 8) : _0x2ae555.accessToken,
+          _0x4b255a = await vscode.window.showInputBox({
+            prompt: "输入 accessToken",
+            placeHolder: "当前: " + _0x59c9ba,
+            password: true,
+            validateInput: _0x562ca2 => {
+              const _0x2ffb63 = this.validateToken(_0x562ca2);
+              return _0x2ffb63.valid ? null : _0x2ffb63.error;
+            }
+          });
+        if (!_0x4b255a) {
+          return;
+        }
+        const _0x3bcac3 = this.validateURL(_0x5e389a),
+          _0x43007b = this.validateToken(_0x4b255a);
+        if (!_0x3bcac3.valid || !_0x43007b.valid) {
+          vscode.window.showErrorMessage("输入验证失败，请重试");
+          return;
+        }
+        const _0x150375 = await this.updateSessionsData(_0x3bcac3.url, _0x43007b.token);
+        if (_0x150375.success) {
+          vscode.window.showInformationMessage("会话数据更新成功！");
+          const _0x26efd8 = await vscode.window.showInformationMessage("会话数据更新成功！", "显示更新后的数据");
+          if (_0x26efd8 === "显示更新后的数据") {
+            const _0x12509b = await vscode.workspace.openTextDocument({
+              content: JSON.stringify(_0x150375.data, null, 2),
+              language: "json"
+            });
+            await vscode.window.showTextDocument(_0x12509b);
+          }
+        } else {
+          vscode.window.showErrorMessage("更新会话数据失败: " + _0x150375.error);
+        }
+      }
+    } catch (_0x5571a3) {
+      vscode.window.showErrorMessage("错误: " + _0x5571a3.message);
+    }
+  }
+  setupTokenInjection() {
+    try {
+      typeof window !== "undefined" && window.fetch ? (this.setupFetchInterception(), this.logger.info("Token injection setup completed for browser environment")) : this.logger.info("Not in browser environment, skipping token injection setup");
+    } catch (_0x528409) {
+      this.logger.error("Failed to setup token injection:", _0x528409);
+    }
+  }
+  setupFetchInterception() {
+    const _0x3b5147 = window.fetch,
+      _0x366bad = this;
+    window.fetch = async function (_0x41250b, _0x5e9963 = {}) {
+      try {
+        const _0x437a7d = await _0x366bad.injectTokenToRequest(_0x41250b, _0x5e9963);
+        return _0x3b5147.call(this, _0x41250b, _0x437a7d);
+      } catch (_0x16788f) {
+        _0x366bad.logger.error("Token injection failed for fetch request:", _0x16788f);
+        return _0x3b5147.call(this, _0x41250b, _0x5e9963);
+      }
+    };
+    this.logger.info("Fetch API interception setup completed");
+  }
+  async injectTokenToRequest(_0x3e8cc2, _0x2a021b = {}) {
+    try {
+      const _0x336f70 = await this.getAccessToken();
+      if (!_0x336f70.success || !_0x336f70.accessToken) {
+        return _0x2a021b;
+      }
+      if (this.isAugmentRequest(_0x3e8cc2, _0x336f70.tenantURL)) {
+        const _0x35f0b1 = _0x2a021b.headers || {},
+          _0x3f7116 = Object.keys(_0x35f0b1).some(_0x1e4b4b => _0x1e4b4b.toLowerCase() === "authorization");
+        !_0x3f7116 && (_0x35f0b1.Authorization = "Bearer " + _0x336f70.accessToken, this.logger.info("Token injected to request:", _0x3e8cc2));
+        return {
+          ..._0x2a021b,
+          headers: _0x35f0b1
+        };
+      }
+      return _0x2a021b;
+    } catch (_0x199076) {
+      this.logger.error("Failed to inject token to request:", _0x199076);
+      return _0x2a021b;
+    }
+  }
+  isAugmentRequest(_0x46b6a5, _0x5cb094) {
+    if (!_0x46b6a5 || !_0x5cb094) {
+      return false;
+    }
+    try {
+      const _0x371aac = new URL(_0x46b6a5),
+        _0x4a9dfc = new URL(_0x5cb094);
+      return _0x371aac.hostname === _0x4a9dfc.hostname;
+    } catch (_0x4c1c6d) {
+      return _0x46b6a5.includes("augmentcode.com") || _0x46b6a5.includes("api.augment") || _0x5cb094 && _0x46b6a5.includes(_0x5cb094.replace(/https?:\/\//, ""));
+    }
   }
   dispose() {
-    this.stopPeriodicUpdate();
-    this.configManager && this.configManager.dispose();
-    this.stateManager && this.stateManager.dispose();
-    this.statusBarManager && this.statusBarManager.dispose();
     this.isInitialized = false;
     this.logger.info("Enhanced module disposed");
   }
 }
-module.exports = AugmentBalanceEnhanced;
+module.exports = AugmentTokenLoginEnhanced;
